@@ -68,3 +68,85 @@ python 02_scrape_details.py --part 4 --total-parts 4
 - Frontend + Backend: **Railway** (GitHub 레포 연결, push 시 자동 배포)
 - 정적 JSON만 있으면 되는 MVP라면 Vercel도 가능하지만,
   Python 백엔드(FastAPI)까지 같이 띄울 계획이라 Railway 추천
+
+---
+
+## 데이터 구조 (Data Schemas)
+
+### 1. 상상대로 서울 자유제안 데이터 (`data/processed/상상대로_서울_출산육아_필터링.csv`)
+
+| 컬럼명 | 타입 | 설명 | 비고 |
+|---|---|---|---|
+| `SN` | Float/Int | 제안 고유 번호 (ID) | Primary Key |
+| `TITLE` | String | 제안 제목 | 키워드 필터링 대상 |
+| `CONTENT` | String | 제안 본문 또는 본문 URL | 상세 스크래핑 시 본문 텍스트 채움 |
+| `VOTE_SCORE` | Float | 제안 공감/득표 점수 | 수요 강도(Urgency) 측정 지표 |
+| `REG_DATE` | String | 등록 일시 (`YYYY-MM-DD HH:MM:SS`) | 시계열 트렌드 분석용 |
+| `VISIOIN_TXT` | String | 서울시 비전/분류 카테고리 | 예: 여성, 주택, 교통 등 |
+| `USER_COMMENT_CNT` | Int | 댓글 수 | 관심도 지표 |
+| `VOTE_CNT` | Int | 찬성 표수 | |
+| `VOTE_DIS_CNT` | Int | 반대 표수 | |
+| `REPLY_YN` | String | 서울시 공식 답변 여부 (`Y` / `N`) | **정책 공백(Gap) 탐지 핵심 필드** |
+
+### 2. 자치구별 합계출산율 및 연령별 출산율 (`data/processed/합계출산율_및_모의_연령별_출산율_20260720153003.csv`)
+
+| 컬럼명 | 타입 | 설명 |
+|---|---|---|
+| `자치구별(1)` | String | 25개 자치구명 (예: 종로구, 성동구, 강남구 등) |
+| `합계출산율` | Float | 가임여성 1명당 예상 평균 출생아 수 (2024 기준 서울 평균 0.581) |
+| `15-19세` ~ `45-49세` | Float | 모(母)의 연령대별 출산율 (여자인구 1천명당 명) |
+
+### 3. 자치구별 출산순위별 출생 통계 (`data/processed/출산순위별_출생_20260720154514.csv`)
+
+| 컬럼명 | 타입 | 설명 |
+|---|---|---|
+| `자치구별(2)` | String | 25개 자치구명 |
+| `계` | Int | 해당 자치구 총 출생아 수 |
+| `1아` / `2아` / `3아 이상` | Int | 첫째 / 둘째 / 셋째 이상 출생아 수 (성별 구분 포함) |
+
+### 4. 자치구별 보육시설 현황 (`data/processed/보육시설_현황(정원규모별_구별)_20260720154435.csv`)
+
+| 컬럼명 | 타입 | 설명 |
+|---|---|---|
+| `자치구별(2)` | String | 25개 자치구명 |
+| `소계` | Int | 구별 총 보육시설(어린이집 등) 개수 |
+| `20명 이하` ~ `300명 초과` | Int | 정원 규모별 보육시설 분포 개수 |
+
+### 5. 보조 데이터: 국민권익위 공개제안 API (`OpenProposalService2`)
+
+- **End Point**: `https://apis.data.go.kr/1140100/OpenProposalService2/getOpenProposalList`
+- **주요 필드**: `title`(제안제목), `content`(제안내용), `regDate`(등록일), `category`(분류)
+
+### 6. 대시보드 최종 파이프라인 출력 JSON (`data/final/dashboard_data.json`)
+
+```json
+{
+  "summary": {
+    "total_proposals": 269,
+    "unanswered_proposals": 210,
+    "avg_fertility_rate": 0.581
+  },
+  "districts": [
+    {
+      "district_name": "성동구",
+      "fertility_rate": 0.714,
+      "total_births": 1666,
+      "first_child_births": 1202,
+      "daycare_centers": 133,
+      "proposal_count": 18,
+      "top_keywords": ["돌봄", "키즈카페", "임신"]
+    }
+  ],
+  "proposals": [
+    {
+      "sn": "202286",
+      "title": "저출산 고령화 문제에 관한 제안",
+      "vote_score": 0.0,
+      "reply_yn": "N",
+      "category": "임신·출산·건강",
+      "matched_department": "저출생담당관"
+    }
+  ]
+}
+```
+
