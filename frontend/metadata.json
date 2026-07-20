@@ -1,0 +1,6 @@
+{
+  "name": "서울시 출산·양육 정책 수요 분석 대시보드",
+  "description": "서울시 출산·양육 정책 담당자를 위한 시민 제안 분석 및 정책 공백 발굴 대시보드",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
