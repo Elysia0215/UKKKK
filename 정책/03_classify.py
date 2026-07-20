@@ -11,6 +11,7 @@ from pathlib import Path
 
 from category_keywords import CATEGORY_KEYWORDS
 from department_keywords import DEPARTMENT_KEYWORDS, CATEGORY_TO_DEFAULT_DEPARTMENT
+from negative_keywords import has_negative_signal
 
 IN_PATH = Path("../data/processed/상상대로_서울_출산육아_본문포함.csv")
 OUT_PATH = Path("../data/processed/상상대로_서울_출산육아_분류완료.csv")
@@ -42,6 +43,7 @@ def classify_row(row: pd.Series) -> pd.Series:
     return pd.Series({
         "category": category,
         "department": departments[:3],
+        "negative_signal": has_negative_signal(text),  # 배기련 외(2021) 부정어 매칭 여부
     })
 
 
