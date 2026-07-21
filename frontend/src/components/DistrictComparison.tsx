@@ -153,7 +153,7 @@ export const DistrictComparison: React.FC<Props> = ({
             >
               <Download className="w-3.5 h-3.5" /> 통계 CSV
             </button>
-            {/* 배경 오버레이 기능 제거: 더 이상 버튼으로 배경을 토글하지 않습니다. */}
+            {/* 배경 오버레이 기능 제거: 더 이상 버튼/이미지를 렌더링하지 않습니다. */}
           </div>
         </div>
 
