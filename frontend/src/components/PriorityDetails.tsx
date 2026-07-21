@@ -86,6 +86,20 @@ export const PriorityDetails: React.FC<Props> = ({
     }
   }, [initialCategory, initialSubCategory, initialClusterId]);
 
+  const handleToggleMultiSelectMode = () => {
+    const nextMode = !isMultiSelectMode;
+    setIsMultiSelectMode(nextMode);
+
+    // 다중 선택 모드를 켰다가 끄면(OFF), 2개 이상 중복 선택되어 있던 필터들을 '전체'로 즉시 초기화
+    if (!nextMode) {
+      if (selectedYears.length > 1) setSelectedYears(['전체']);
+      if (selectedFlows.length > 1) setSelectedFlows(['전체']);
+      if (selectedCategories.length > 1) setSelectedCategories(['전체']);
+      if (selectedSubCategories.length > 1) setSelectedSubCategories(['전체']);
+      if (selectedDepts.length > 1) setSelectedDepts(['전체']);
+    }
+  };
+
   const toggleFilterItem = (
     currentList: string[],
     setList: React.Dispatch<React.SetStateAction<string[]>>,
@@ -500,7 +514,7 @@ export const PriorityDetails: React.FC<Props> = ({
               </div>
 
               <button
-                onClick={() => setIsMultiSelectMode(!isMultiSelectMode)}
+                onClick={handleToggleMultiSelectMode}
                 className={`text-xs px-3 py-1.5 rounded-lg border font-bold transition flex items-center gap-1.5 cursor-pointer ${
                   isMultiSelectMode
                     ? 'bg-purple-600 text-white border-purple-700 shadow-xs'
