@@ -11,6 +11,7 @@ import { SEOUL_DISTRICTS } from '../data/mockData';
 import { districtStats } from '../data/mockData';
 import { districtMapLayout } from '../data/seoul_districts_geo';
 import { exportToCsv } from '../utils/exportCsv';
+import SeoulMap from './SeoulMap';
 
 interface Props {
   proposals: PolicyProposal[];
@@ -158,64 +159,9 @@ export const DistrictComparison: React.FC<Props> = ({
         </div>
 
         <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-4">
-            <svg viewBox="0 0 560 380" className="w-full h-[340px]">
-              <rect x="12" y="12" width="536" height="356" rx="24" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="2" />
-              <text x="28" y="38" fontSize="13" fontWeight="700" fill="#0f172a">서울 자치구 제안 분포 지도</text>
-              <text x="28" y="56" fontSize="11" fill="#64748b">색이 진할수록 제안 건수가 많습니다.</text>
-
-              <path
-                d="M 104 88 L 176 72 L 230 78 L 286 100 L 332 90 L 404 96 L 456 116 L 492 150 L 488 214 L 446 250 L 392 272 L 336 284 L 286 268 L 232 258 L 176 248 L 126 224 L 98 184 L 104 138 Z"
-                fill="#f8fafc"
-                stroke="#94a3b8"
-                strokeWidth="2"
-                opacity="0.95"
-              />
-              <path
-                d="M 122 118 L 176 112 L 206 136 L 196 168 L 144 176 L 118 148 Z"
-                fill="#eef2ff"
-                stroke="#cbd5e1"
-                strokeWidth="1.2"
-                opacity="0.8"
-              />
-              <path
-                d="M 318 112 L 376 108 L 410 132 L 396 166 L 338 170 L 314 140 Z"
-                fill="#f8fafc"
-                stroke="#cbd5e1"
-                strokeWidth="1.2"
-                opacity="0.8"
-              />
-              {/* 배경 오버레이 제거: 이미지는 더 이상 렌더링되지 않습니다. */}
-              {adjustedDistrictMapData.map(item => (
-                <g
-                  key={item.name}
-                  onClick={() => onSelectDistrict(item.name)}
-                  onKeyDown={(event) => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault();
-                      onSelectDistrict(item.name);
-                    }
-                  }}
-                  tabIndex={0}
-                  role="button"
-                  className="cursor-pointer outline-none"
-                >
-                  <path
-                    d={item.d}
-                    fill={item.fill}
-                    stroke={selectedDistrict === item.name ? '#dc2626' : '#64748b'}
-                    strokeWidth={selectedDistrict === item.name ? 3 : 1.2}
-                  />
-                  <text x={item._labelX ?? item.labelX} y={item._labelY ?? item.labelY} fontSize="10" fontWeight="700" fill="#0f172a">
-                    {item.name}
-                  </text>
-                  <text x={item._labelX ?? item.labelX} y={(item._labelY ?? item.labelY) + 14} fontSize="9" fill={item.count > 0 ? '#0f766e' : '#64748b'}>
-                    {item.count > 0 ? `${item.count}건` : '데이터 없음'}
-                  </text>
-                </g>
-              ))}
-            </svg>
-          </div>
+            <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-4">
+              <SeoulMap mapData={adjustedDistrictMapData} selectedDistrict={selectedDistrict} onSelectDistrict={onSelectDistrict} />
+            </div>
 
           <div className="space-y-3">
             <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4">

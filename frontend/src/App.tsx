@@ -8,255 +8,206 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { 
-  LayoutDashboard, 
-  MapPin, 
-  BarChart3, 
-  AlertOctagon, 
-  Building2, 
-  HelpCircle,
-  FileSpreadsheet,
-  TrendingUp,
-  Download
-} from 'lucide-react';
-import { mockProposals } from './data/mockData';
-import { DashboardStats } from './types';
-import { DashboardOverview } from './components/DashboardOverview';
-import { DistrictComparison } from './components/DistrictComparison';
-import { CategoryDemand } from './components/CategoryDemand';
-import { PriorityDetails } from './components/PriorityDetails';
-import { ClusterVolumeMap } from './components/ClusterVolumeMap';
-
-import { exportToCsv } from './utils/exportCsv';
+import { useState } from 'react';
+import { Baby, Home, Sparkles, FileText, CheckCircle, TrendingUp, TrendingDown } from 'lucide-react';
+import { SEOUL_DISTRICTS_DATA, DistrictData } from './data/seoulData';
+import { SeoulMap } from './components/SeoulMap';
+import { StatCharts } from './components/StatCharts';
+import { PolicyExplorer } from './components/PolicyExplorer';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<number>(0);
-  const [selectedDistrict, setSelectedDistrict] = useState<string | null>(null);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedDistrict, setSelectedDistrict] = useState<DistrictData>(
+    SEOUL_DISTRICTS_DATA.find((d) => d.name === '송파구') || SEOUL_DISTRICTS_DATA[0]
+  );
+  const [colorMetric, setColorMetric] = useState<'proposals' | 'births' | 'daycare' | 'fertility' | 'demandScore'>('fertility');
+  const [showBackground, setShowBackground] = useState(true);
+  const [sortBy, setSortBy] = useState<'name' | 'value'>('value');
 
-  // 실시간 통계 연산
-  const stats = useMemo<DashboardStats>(() => {
-    const totalCount = mockProposals.length;
-    const totalVoteScore = mockProposals.reduce((sum, p) => sum + p.vote_score, 0);
-    const avgVoteScore = totalCount > 0 ? totalVoteScore / totalCount : 0;
-    const unansweredCount = mockProposals.filter(p => p.reply_yn === 'N').length;
-    const unansweredRate = totalCount > 0 ? (unansweredCount / totalCount) * 100 : 0;
-
-    return {
-      totalCount,
-      avgVoteScore,
-      unansweredCount,
-      unansweredRate
-    };
-  }, []);
-
-  // 탭 네비게이션 및 카테고리/지역 즉시 이동 연동
-  const handleNavigateToTab = (tabIndex: number) => {
-    setActiveTab(tabIndex);
-  };
-
-  const handleSelectCategoryFromOverview = (category: string) => {
-    setSelectedCategory(category);
-    setActiveTab(2); // 키워드/수요 분석 탭으로 이동
-  };
-
-  const handleSelectDistrictFromOverview = (district: string | null) => {
-    setSelectedDistrict(district);
-    setActiveTab(1); // 지역별 비교 탭으로 이동
-  };
-
-  // 엑셀/CSV 데이터 내보내기
-  const handleExportData = () => {
-    const exportData = mockProposals.map(p => ({
-      '제안ID': p.id,
-      '카테고리': p.category,
-      '제안제목': p.title,
-      '제안본문내용': p.content,
-      '등록일자': p.reg_date,
-      '공감수': p.vote_score,
-      '댓글수': p.comment_cnt,
-      '답변여부': p.reply_yn === 'Y' ? '답변완료' : '미답변',
-      '자치구': p.district,
-      '담당부서': Array.isArray(p.department) ? p.department.join('; ') : p.department,
-      '원문URL': p.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${p.id.replace('PROP-', '')}`
-    }));
-
-    exportToCsv(`서울시_출산정책_전체제안데이터_426건_${new Date().toISOString().split('T')[0]}.csv`, exportData);
-  };
+  const totalProposals = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.proposals, 0);
+  const totalBirths = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.births2024, 0);
+  const totalDaycare = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.daycare2025, 0);
+  const avgFertility = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.fertilityRate, 0) / SEOUL_DISTRICTS_DATA.length;
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans">
-      {/* 서울시 시그니처 상단 헤더 */}
-      <header className="bg-[#0A2351] text-white px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md sticky top-0 z-40">
-        <div className="flex items-center space-x-4">
-          <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center flex-shrink-0">
-            <div className="w-5 h-5 border-2 border-[#0A2351] rounded-sm"></div>
+      <header className="bg-white border-b border-slate-100 px-6 py-4 sticky top-0 z-30 shadow-sm">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="bg-indigo-600 text-white p-2.5 rounded-xl shadow-md shadow-indigo-100">
+              <Baby className="w-5 h-5" />
+            </div>
+            <div>
+              <h1 className="text-base font-bold text-slate-900 tracking-tight flex items-center gap-2">
+                서울시 자치구별 출산·보육 정책 수요분석 맞춤형 대시보드
+                <span className="text-[10px] bg-emerald-50 text-emerald-600 px-2 py-0.5 rounded-full font-mono font-bold animate-pulse">
+                  PUBLIC DATA LIVE
+                </span>
+              </h1>
+              <p className="text-xs text-slate-500 mt-1">
+                지오메트릭 벡터 맵과 공공 통계를 결합하여 서울시 자치구별 정책 인사이트를 제공합니다.
+              </p>
+            </div>
           </div>
-          <div>
-            <h1 className="text-lg font-bold leading-tight flex items-center gap-2">
-              서울시 출산·양육 정책 수요 분석 시스템
-              <span className="text-[10px] bg-blue-600 text-white px-1.5 py-0.5 rounded font-bold">MVP</span>
-            </h1>
-            <p className="text-xs text-slate-300">Seoul Maternity & Childcare Policy Dashboard v1.0</p>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-4 text-xs">
-          <span className="bg-blue-600 px-3 py-1 rounded text-xs font-semibold flex items-center gap-1">
-            <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
-            실시간 분석 중
-          </span>
-          <span className="opacity-70 font-mono">2026.07.19 23:10 기준</span>
-          <button
-            onClick={handleExportData}
-            className="text-xs bg-slate-800/80 text-white border border-slate-700 hover:bg-slate-700 font-bold px-3 py-1 rounded flex items-center gap-1.5 transition"
-          >
-            <Download className="w-3.5 h-3.5" />
-            <span>보고서 다운로드</span>
-          </button>
         </div>
       </header>
 
-      {/* 메인 내비게이션 탭 */}
-      <div className="bg-white border-b border-slate-200 shadow-2xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-          <nav className="flex space-x-2 overflow-x-auto" aria-label="Tabs">
-            <button
-              onClick={() => setActiveTab(0)}
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
-                activeTab === 0
-                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
-              }`}
-            >
-              <LayoutDashboard className="w-4 h-4" />
-              정책 수요 개요
-            </button>
+      <main className="flex-1 max-w-7xl mx-auto p-4 md:p-6 space-y-6">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between gap-3">
+            <div>
+              <p className="text-[11px] text-slate-500 uppercase tracking-[0.18em] font-semibold">서울시 연간 총 출생아 수</p>
+              <p className="mt-3 text-2xl font-extrabold text-slate-900">{totalBirths.toLocaleString()}</p>
+              <p className="text-xs text-slate-400">명 / 2024</p>
+            </div>
+            <div className="bg-purple-50 text-purple-600 p-3 rounded-2xl">
+              <Sparkles className="w-6 h-6" />
+            </div>
+          </div>
 
-            <button
-              onClick={() => setActiveTab(1)}
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
-                activeTab === 1
-                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
-              }`}
-            >
-              <MapPin className="w-4 h-4" />
-              지역별 비교
-              {selectedDistrict && (
-                <span className="w-1.5 h-1.5 bg-rose-500 rounded-full animate-ping" />
-              )}
-            </button>
+          <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between gap-3">
+            <div>
+              <p className="text-[11px] text-slate-500 uppercase tracking-[0.18em] font-semibold">서울시 총 보육시설 수</p>
+              <p className="mt-3 text-2xl font-extrabold text-slate-900">{totalDaycare.toLocaleString()}</p>
+              <p className="text-xs text-slate-400">개소 / 2025</p>
+            </div>
+            <div className="bg-amber-50 text-amber-600 p-3 rounded-2xl">
+              <Home className="w-6 h-6" />
+            </div>
+          </div>
 
-            <button
-              onClick={() => setActiveTab(2)}
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
-                activeTab === 2
-                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
-              }`}
-            >
-              <BarChart3 className="w-4 h-4" />
-              키워드·수요 강도 분석
-            </button>
+          <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between gap-3">
+            <div>
+              <p className="text-[11px] text-slate-500 uppercase tracking-[0.18em] font-semibold">서울시 평균 합계출산율</p>
+              <p className="mt-3 text-2xl font-extrabold text-slate-900">{avgFertility.toFixed(3)}</p>
+              <p className="text-xs text-slate-400">자치구별 평균</p>
+            </div>
+            <div className="bg-emerald-50 text-emerald-600 p-3 rounded-2xl">
+              <TrendingUp className="w-6 h-6" />
+            </div>
+          </div>
 
-            <button
-              onClick={() => setActiveTab(3)}
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
-                activeTab === 3
-                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
-              }`}
-            >
-              <AlertOctagon className="w-4 h-4 text-rose-500" />
-              정책 우선순위 상세
-              <span className="bg-rose-100 text-rose-700 text-[10px] font-black px-1.5 py-0.2 rounded-full ml-1">
-                {mockProposals.filter(p => p.reply_yn === 'N' && p.vote_score >= 150).length}
-              </span>
-            </button>
+          <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex items-center justify-between gap-3">
+            <div>
+              <p className="text-[11px] text-slate-500 uppercase tracking-[0.18em] font-semibold">누적 시민 제안 건수</p>
+              <p className="mt-3 text-2xl font-extrabold text-slate-900">{totalProposals}</p>
+              <p className="text-xs text-slate-400">서울시 정책 제안</p>
+            </div>
+            <div className="bg-slate-100 text-slate-900 p-3 rounded-2xl">
+              <FileText className="w-6 h-6" />
+            </div>
+          </div>
+        </section>
 
-            <button
-              onClick={() => setActiveTab(4)}
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
-                activeTab === 4
-                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
-              }`}
-            >
-              <TrendingUp className="w-4 h-4 text-emerald-500" />
-              군집 볼륨 분석 (클러스터 맵)
-            </button>
-          </nav>
-        </div>
-      </div>
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <div className="lg:col-span-5 flex flex-col gap-5">
+            <div className="bg-white rounded-3xl border border-slate-100 shadow-sm p-5">
+              <div className="flex items-center justify-between gap-4 mb-4">
+                <div>
+                  <p className="text-xs text-slate-500 uppercase tracking-[0.2em] font-semibold">메트릭 필터</p>
+                  <h2 className="text-lg font-bold text-slate-900 mt-2">지도 기반 정책 수요 시각화</h2>
+                </div>
+                <span className="text-[11px] text-slate-400 font-mono">INDIGO SLATE THEME</span>
+              </div>
 
-      {/* 메인 본문 콘텐츠 */}
-      <main className="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -5 }}
-            transition={{ duration: 0.15 }}
-          >
-            {activeTab === 0 && (
-              <DashboardOverview 
-                proposals={mockProposals}
-                stats={stats}
-                onNavigateToTab={handleNavigateToTab}
-                onSelectCategory={handleSelectCategoryFromOverview}
-              />
-            )}
+              <div className="grid grid-cols-2 gap-2">
+                {[
+                  { id: 'fertility', label: '합계출산율' },
+                  { id: 'births', label: '출생아 수' },
+                  { id: 'daycare', label: '보육시설 수' },
+                  { id: 'demandScore', label: '정책 수요 점수' },
+                ].map((item) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => setColorMetric(item.id as any)}
+                    className={`rounded-2xl border px-3 py-2 text-sm font-semibold transition ${
+                      colorMetric === item.id
+                        ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-100'
+                        : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
 
-            {activeTab === 1 && (
-              <DistrictComparison 
-                proposals={mockProposals}
+              <div className="flex items-center justify-between gap-3 mt-4 text-xs text-slate-500">
+                <label className="inline-flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={showBackground}
+                    onChange={(event) => setShowBackground(event.target.checked)}
+                    className="h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                  />
+                  배경 레이어 표시
+                </label>
+                <button
+                  type="button"
+                  onClick={() => setSortBy(sortBy === 'name' ? 'value' : 'name')}
+                  className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-slate-600 hover:bg-slate-100"
+                >
+                  정렬: {sortBy === 'name' ? '자치구명' : '수치 순'}
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden">
+              <SeoulMap
                 selectedDistrict={selectedDistrict}
                 onSelectDistrict={setSelectedDistrict}
+                colorMetric={colorMetric}
+                showBackground={showBackground}
+                sortBy={sortBy}
               />
-            )}
+            </div>
+          </div>
 
-            {activeTab === 2 && (
-              <CategoryDemand 
-                proposals={mockProposals}
-                selectedCategory={selectedCategory}
-                onSelectCategory={setSelectedCategory}
-              />
-            )}
+          <div className="lg:col-span-7 flex flex-col gap-6">
+            <div className="bg-indigo-950 text-white rounded-[36px] p-6 shadow-xl border border-indigo-900 overflow-hidden relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 opacity-90"></div>
+              <div className="relative z-10">
+                <span className="text-[11px] uppercase text-indigo-300 tracking-[0.3em] font-bold">Selected district</span>
+                <h2 className="text-3xl font-black text-white mt-4">{selectedDistrict.name}</h2>
+                <p className="mt-3 text-sm text-slate-300 max-w-2xl">
+                  선택된 자치구의 핵심 지표를 집중 분석합니다. 출생아 수, 보육시설 현황, 정책 수요점수까지 한눈에 확인할 수 있습니다.
+                </p>
+                <div className="mt-6 grid grid-cols-2 gap-3">
+                  <div className="rounded-3xl bg-white/10 border border-white/10 p-4">
+                    <p className="text-[10px] uppercase text-slate-300 tracking-[0.25em]">출생아 수</p>
+                    <p className="mt-3 text-2xl font-bold">{selectedDistrict.births2024.toLocaleString()}</p>
+                    <p className="text-xs text-slate-400">명 / 2024</p>
+                  </div>
+                  <div className="rounded-3xl bg-white/10 border border-white/10 p-4">
+                    <p className="text-[10px] uppercase text-slate-300 tracking-[0.25em]">보육시설</p>
+                    <p className="mt-3 text-2xl font-bold">{selectedDistrict.daycare2025.toLocaleString()}</p>
+                    <p className="text-xs text-slate-400">개소 / 2025</p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute right-6 top-6 bg-white/10 border border-white/10 rounded-3xl px-4 py-3 text-right">
+                <p className="text-[9px] uppercase tracking-[0.35em] text-slate-300">정책 수요 지수</p>
+                <p className="mt-2 text-2xl font-bold text-emerald-300">{selectedDistrict.demandScore}</p>
+                <p className="text-[11px] text-slate-300">합계출산율 {selectedDistrict.fertilityRate.toFixed(3)}</p>
+              </div>
+            </div>
 
-            {activeTab === 3 && (
-              <PriorityDetails 
-                proposals={mockProposals}
+            <div className="h-[480px]">
+              <StatCharts
+                selectedDistrict={selectedDistrict}
+                onSelectDistrict={setSelectedDistrict}
+                colorMetric={colorMetric}
               />
-            )}
+            </div>
 
-            {activeTab === 4 && (
-              <ClusterVolumeMap
-                proposals={mockProposals}
-                onSelectCluster={() => setActiveTab(3)}
-              />
-            )}
-          </motion.div>
-        </AnimatePresence>
+            <div className="h-[680px]">
+              <PolicyExplorer selectedDistrict={selectedDistrict} />
+            </div>
+          </div>
+        </section>
       </main>
 
-      {/* 하단 업무용 푸터 */}
-      <footer className="bg-white border-t border-slate-200 px-6 py-3 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 mt-auto">
-        <div className="flex items-center space-x-2">
-          <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="font-semibold text-slate-700">시스템 연동 상태:</span>
-          <span>상상대로서울 민원제안 실시간 모니터링 중</span>
-          <span className="text-slate-300">|</span>
-          <span className="text-slate-400">데이터 수집 주기: 15분</span>
-        </div>
-        <div className="flex items-center space-x-4 mt-2 md:mt-0">
-          <span className="text-slate-400">여성가족실 양육정책 분석관 전용</span>
-          <span className="inline-block w-2 h-2 rounded-full bg-blue-600" />
-          <span className="font-semibold text-slate-700">Admin 접속 중</span>
-        </div>
+      <footer className="bg-white border-t border-slate-100 py-6 text-center text-xs text-slate-400 font-mono">
+        <p>© 2026 서울시 출산·보육 정책 수요 분석 대시보드</p>
       </footer>
     </div>
   );
