@@ -399,7 +399,7 @@ export const DistrictComparison: React.FC<Props> = ({
                     </div>
 
                     <h5 className="text-sm font-bold text-slate-800 mb-1.5">{prop.title}</h5>
-                    <p className="text-xs text-slate-600 leading-relaxed mb-3">{prop.content}</p>
+                    <p className="text-xs text-slate-600 leading-relaxed mb-3 whitespace-pre-line">{prop.content}</p>
 
                     <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-100">
                       <div className="flex items-center gap-2">

@@ -886,7 +886,7 @@ export const PriorityDetails: React.FC<Props> = ({
                                 </div>
 
                                 <h5 className="text-sm font-bold text-slate-800 mb-1.5">{item.title}</h5>
-                                <p className="text-xs text-slate-600 leading-relaxed mb-3">{item.content}</p>
+                                <p className="text-xs text-slate-600 leading-relaxed mb-3 whitespace-pre-line">{item.content}</p>
 
                                  {/* 몽땅정보 현행 정책 대조 뱃지 (전략 1) */}
                                 {(() => {
@@ -1061,7 +1061,7 @@ export const PriorityDetails: React.FC<Props> = ({
                   </div>
 
                   <h5 className="text-sm font-bold text-slate-900 mb-1.5">{item.title}</h5>
-                  <p className="text-xs text-slate-600 leading-relaxed mb-3">{item.content}</p>
+                  <p className="text-xs text-slate-600 leading-relaxed mb-3 whitespace-pre-line">{item.content}</p>
 
                   {/* 몽땅정보 연관 기존 사업 & 부서 랭킹 정보 */}
                   <div className="bg-slate-50 p-3 rounded-lg border border-slate-100 my-2.5 space-y-2 text-xs">

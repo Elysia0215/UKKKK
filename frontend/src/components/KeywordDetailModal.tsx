@@ -86,7 +86,7 @@ export const KeywordDetailModal: React.FC<Props> = ({ isOpen, keyword, proposals
                   </div>
 
                   <h4 className="font-bold text-sm text-slate-900">{item.title}</h4>
-                  <p className="text-xs text-slate-600 bg-white p-3 rounded-lg border border-slate-100 leading-relaxed line-clamp-3">
+                  <p className="text-xs text-slate-600 bg-white p-3 rounded-lg border border-slate-100 leading-relaxed line-clamp-3 whitespace-pre-line">
                     {item.content}
                   </p>
 

@@ -497,7 +497,7 @@ export const DashboardOverview: React.FC<Props> = ({
                   <span className="text-[10px] text-slate-500 font-bold font-mono bg-slate-100 px-1.5 py-0.5 rounded">{gap.district} · {gap.category}</span>
                 </div>
                 <h5 className="text-xs font-bold text-slate-900 line-clamp-1 mb-1">{gap.title}</h5>
-                <p className="text-[11px] text-slate-600 line-clamp-2 leading-relaxed">{gap.content}</p>
+                <p className="text-[11px] text-slate-600 line-clamp-2 leading-relaxed whitespace-pre-line">{gap.content}</p>
               </div>
               <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap gap-1">
                 {gap.department.map(dept => (
