@@ -70,11 +70,15 @@ export const DistrictComparison: React.FC<Props> = ({
       const stat = districtStats.find(entry => entry.district === item.name);
       const isSelected = selectedDistrict === item.name;
       const normalized = districtEntry.count / maxCount;
-      const fill = isSelected
-        ? '#ef4444'
-        : districtEntry.count > 0
-          ? `rgba(14, 116, 144, ${0.22 + normalized * 0.58})`
-          : '#f1f5f9';
+
+      let fill = '#f1f5f9';
+      if (isSelected) {
+        fill = '#0A2351';
+      } else if (districtEntry.count > 0) {
+        // 서울시 시그니처 블루 계열 그라데이션
+        const opacity = 0.35 + normalized * 0.55;
+        fill = `rgba(37, 99, 235, ${opacity})`;
+      }
 
       return {
         ...item,
@@ -83,39 +87,10 @@ export const DistrictComparison: React.FC<Props> = ({
         births: stat?.births_total ?? 0,
         childcare: stat?.childcare_facility_count ?? 0,
         fill,
+        isSelected,
       };
     });
   }, [districtData, selectedDistrict]);
-
-  // Adjust label positions to reduce simple overlaps (naive vertical shift)
-  const adjustedDistrictMapData = useMemo(() => {
-    const items = districtMapData.map(i => ({ ...i, labelX: (i as any).labelX ?? 0, labelY: (i as any).labelY ?? 0 }));
-    const placed: Array<{ x: number; y: number; w: number; h: number }> = [];
-    const approxCharWidth = 6; // px per character, rough
-    items.forEach(item => {
-      const text = item.name + (item.count > 0 ? ` ${item.count}건` : '');
-      const w = Math.min(120, Math.max(40, text.length * approxCharWidth));
-      const h = 14;
-      let x = item.labelX - Math.floor(w / 2);
-      let y = item.labelY - Math.floor(h / 2);
-
-      // shift down until no overlap or max attempts
-      let attempts = 0;
-      const maxAttempts = 10;
-      while (attempts < maxAttempts) {
-        const overlap = placed.some(r => {
-          return !(x + w < r.x || x > r.x + r.w || y + h < r.y || y > r.y + r.h);
-        });
-        if (!overlap) break;
-        y += h + 2;
-        attempts += 1;
-      }
-      placed.push({ x, y, w, h });
-      item._labelX = x + Math.floor(w / 2);
-      item._labelY = y + Math.floor(h / 2);
-    });
-    return items;
-  }, [districtMapData]);
 
   const selectedDistrictDetail = districtData.find(item => item.name === selectedDistrict);
   const selectedDistrictStat = districtStats.find(stat => stat.district === selectedDistrict);
@@ -132,16 +107,16 @@ export const DistrictComparison: React.FC<Props> = ({
           <div>
             <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
               <MapPin className="text-emerald-600 w-5 h-5" />
-              서울시 자치구 지도에서 제안 분포를 바로 확인하세요
+              서울시 행정구역 지도 (실제 25개 자치구 경계 시각화)
             </h4>
             <p className="text-xs text-slate-500 mt-1">
-              지도를 클릭하면 해당 자치구의 시민제안 건수와 공공데이터 기반 통계를 바로 확인할 수 있습니다.
+              실제 행정구역 지도를 클릭하여 각 자치구의 정밀 제안 현황과 공공 통계(출생아수, 보육시설수)를 확인하세요.
             </p>
           </div>
           <div className="flex items-center gap-2">
             <button
               onClick={() => setSortOrder(prev => prev === 'desc' ? 'asc' : 'desc')}
-              className="text-xs bg-slate-100 text-slate-700 hover:bg-slate-200 px-3 py-1.5 rounded-lg border border-slate-200/80 font-bold flex items-center gap-1 transition"
+              className="text-xs bg-slate-100 text-slate-700 hover:bg-slate-200 px-3 py-1.5 rounded-lg border border-slate-200/80 font-bold flex items-center gap-1 transition cursor-pointer"
             >
               <ArrowUpDown className="w-3.5 h-3.5" />
               {sortOrder === 'desc' ? '건수 높은 순' : '건수 낮은 순'}
@@ -153,68 +128,78 @@ export const DistrictComparison: React.FC<Props> = ({
             >
               <Download className="w-3.5 h-3.5" /> 통계 CSV
             </button>
-            {/* 배경 이미지 오버레이 토글 제거 - 배경 보기 기능 비활성화 요청에 따른 삭제 */}
           </div>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-4">
-            <svg viewBox="0 0 560 380" className="w-full h-[340px]">
-              <rect x="12" y="12" width="536" height="356" rx="24" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="2" />
-              <text x="28" y="38" fontSize="13" fontWeight="700" fill="#0f172a">서울 자치구 제안 분포 지도</text>
-              <text x="28" y="56" fontSize="11" fill="#64748b">색이 진할수록 제안 건수가 많습니다.</text>
+        <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+          {/* 실제 서울시 25개 자치구 행정경계 GeoJSON SVG 지도 */}
+          <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-3 relative flex items-center justify-center">
+            <svg viewBox="0 0 800 550" className="w-full h-[400px] select-none">
+              <defs>
+                <filter id="mapShadow" x="-10%" y="-10%" width="120%" height="120%">
+                  <feDropShadow dx="0" dy="2" stdDeviation="3" floodOpacity="0.12" />
+                </filter>
+              </defs>
 
-              <path
-                d="M 104 88 L 176 72 L 230 78 L 286 100 L 332 90 L 404 96 L 456 116 L 492 150 L 488 214 L 446 250 L 392 272 L 336 284 L 286 268 L 232 258 L 176 248 L 126 224 L 98 184 L 104 138 Z"
-                fill="#f8fafc"
-                stroke="#94a3b8"
-                strokeWidth="2"
-                opacity="0.95"
-              />
-              <path
-                d="M 122 118 L 176 112 L 206 136 L 196 168 L 144 176 L 118 148 Z"
-                fill="#eef2ff"
-                stroke="#cbd5e1"
-                strokeWidth="1.2"
-                opacity="0.8"
-              />
-              <path
-                d="M 318 112 L 376 108 L 410 132 L 396 166 L 338 170 L 314 140 Z"
-                fill="#f8fafc"
-                stroke="#cbd5e1"
-                strokeWidth="1.2"
-                opacity="0.8"
-              />
-              {/* 배경 오버레이 제거: 이미지는 더 이상 렌더링되지 않습니다. */}
-              {adjustedDistrictMapData.map(item => (
+              {districtMapData.map(item => (
                 <g
                   key={item.name}
-                  onClick={() => onSelectDistrict(item.name)}
-                  onKeyDown={(event) => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault();
-                      onSelectDistrict(item.name);
-                    }
-                  }}
-                  tabIndex={0}
+                  onClick={() => onSelectDistrict(item.isSelected ? null : item.name)}
+                  className="cursor-pointer group transition-all duration-200"
                   role="button"
-                  className="cursor-pointer outline-none"
+                  tabIndex={0}
                 >
                   <path
                     d={item.d}
                     fill={item.fill}
-                    stroke={selectedDistrict === item.name ? '#dc2626' : '#64748b'}
-                    strokeWidth={selectedDistrict === item.name ? 3 : 1.2}
+                    stroke={item.isSelected ? '#ef4444' : '#475569'}
+                    strokeWidth={item.isSelected ? 3 : 1.2}
+                    filter={item.isSelected ? 'url(#mapShadow)' : undefined}
+                    className="transition-all duration-150 group-hover:fill-[#1e40af] group-hover:stroke-blue-400 group-hover:opacity-90"
                   />
-                  <text x={item._labelX ?? item.labelX} y={item._labelY ?? item.labelY} fontSize="10" fontWeight="700" fill="#0f172a">
+                  
+                  {/* 자치구 이름 & 건수 라벨 */}
+                  <text
+                    x={item.labelX}
+                    y={item.labelY - 5}
+                    textAnchor="middle"
+                    dominantBaseline="middle"
+                    className={`text-[11px] font-black pointer-events-none ${
+                      item.isSelected ? 'fill-white' : item.count > 0 ? 'fill-slate-900' : 'fill-slate-400'
+                    }`}
+                  >
                     {item.name}
                   </text>
-                  <text x={item._labelX ?? item.labelX} y={(item._labelY ?? item.labelY) + 14} fontSize="9" fill={item.count > 0 ? '#0f766e' : '#64748b'}>
-                    {item.count > 0 ? `${item.count}건` : '데이터 없음'}
+                  <text
+                    x={item.labelX}
+                    y={item.labelY + 9}
+                    textAnchor="middle"
+                    dominantBaseline="middle"
+                    className={`text-[10px] font-bold pointer-events-none ${
+                      item.isSelected ? 'fill-amber-300' : item.count > 0 ? 'fill-blue-700' : 'fill-slate-400'
+                    }`}
+                  >
+                    {item.count > 0 ? `${item.count}건` : '0건'}
                   </text>
                 </g>
               ))}
             </svg>
+
+            {/* 범례 표시 */}
+            <div className="absolute bottom-3 left-4 bg-white/90 backdrop-blur-xs px-3 py-1.5 rounded-lg border border-slate-200 text-[10px] text-slate-600 font-bold flex items-center gap-3">
+              <span className="flex items-center gap-1">
+                <span className="w-2.5 h-2.5 rounded-xs bg-[#f1f5f9] border border-slate-300" /> 데이터 없음
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2.5 h-2.5 rounded-xs bg-[#60a5fa]" /> 제안 적음
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2.5 h-2.5 rounded-xs bg-[#1d4ed8]" /> 제안 많음
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="w-2.5 h-2.5 rounded-xs bg-[#0A2351] border border-red-500" /> 선택됨
+              </span>
+            </div>
           </div>
 
           <div className="space-y-3">
