@@ -36,8 +36,20 @@ export const CategoryDemand: React.FC<Props> = ({
 }) => {
   const [selectedProposalId, setSelectedProposalId] = useState<string | null>(null);
   const [selectedKeywordModal, setSelectedKeywordModal] = useState<string | null>(null);
+  const [selectedKeywordYear, setSelectedKeywordYear] = useState<string>('전체');
 
-  const topKeywords30 = useMemo(() => extractTopKeywords(proposals, 30), [proposals]);
+  // 연도별 필터링된 제안 목록
+  const keywordFilteredProposals = useMemo(() => {
+    if (selectedKeywordYear === '전체') return proposals;
+    if (selectedKeywordYear === '2026') return proposals.filter(p => p.reg_date?.startsWith('2026'));
+    if (selectedKeywordYear === '2025') return proposals.filter(p => p.reg_date?.startsWith('2025'));
+    if (selectedKeywordYear === '2024') return proposals.filter(p => p.reg_date?.startsWith('2024'));
+    if (selectedKeywordYear === '2023') return proposals.filter(p => p.reg_date?.startsWith('2023'));
+    if (selectedKeywordYear === '2022이전') return proposals.filter(p => p.reg_date && p.reg_date < '2023');
+    return proposals;
+  }, [proposals, selectedKeywordYear]);
+
+  const topKeywords30 = useMemo(() => extractTopKeywords(keywordFilteredProposals, 30), [keywordFilteredProposals]);
 
   // 카테고리별 통계 데이터 가공 (8개 생애주기 대분류 동적 수집)
   const categoryChartData = useMemo(() => {
@@ -82,12 +94,28 @@ export const CategoryDemand: React.FC<Props> = ({
     <div className="space-y-6">
       {/* 전체 출산·육아 핵심 키워드 태그 클라우드 (TOP 30 대형 뷰) */}
       <div className="bg-gradient-to-r from-slate-900 to-[#0A2351] text-white p-6 rounded-2xl shadow-md space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
           <div className="flex items-center gap-2">
             <Tag className="w-5 h-5 text-yellow-400" />
-            <h3 className="text-base font-black">전체 정책 키워드 태그 탐색기 (TOP 30 대형 뷰)</h3>
+            <h3 className="text-base font-black">연도별 핵심 정책 키워드 탐색기 (TOP 30)</h3>
           </div>
-          <span className="text-xs text-blue-200 font-mono">태그 클릭 시 426건 중 관련 제안 원문 팝업</span>
+          {/* 연도 선택 필터 칩 */}
+          <div className="flex flex-wrap items-center gap-1.5 bg-white/10 p-1 rounded-xl border border-white/15">
+            <span className="text-[10px] font-bold text-slate-300 pl-1 pr-0.5">📅 연도:</span>
+            {['전체', '2026', '2025', '2024', '2023', '2022이전'].map(y => (
+              <button
+                key={y}
+                onClick={() => setSelectedKeywordYear(y)}
+                className={`text-[11px] px-2 py-0.5 rounded-lg font-extrabold transition cursor-pointer ${
+                  selectedKeywordYear === y
+                    ? y === '2026' ? 'bg-emerald-500 text-white shadow-xs' : 'bg-yellow-400 text-slate-950 shadow-xs'
+                    : 'bg-white/10 text-slate-200 hover:bg-white/20'
+                }`}
+              >
+                {y === '2026' ? '🔥 2026 최신' : y === '2022이전' ? '2022이전' : `${y}년`}
+              </button>
+            ))}
+          </div>
         </div>
         <div className="flex flex-wrap gap-2 pt-1">
           {topKeywords30.map((item, idx) => (

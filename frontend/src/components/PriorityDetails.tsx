@@ -68,6 +68,7 @@ export const PriorityDetails: React.FC<Props> = ({
   const [selectedMicroCategory, setSelectedMicroCategory] = useState<string>('전체');
   const [selectedDepts, setSelectedDepts] = useState<string[]>(['전체']);
   const [onlyShowGaps, setOnlyShowGaps] = useState(false); // '정책 공백(미답변+고공감)'만 보기 토글
+  const [onlyShow2026Gaps, setOnlyShow2026Gaps] = useState(false); // '2026 최신 정책 공백'만 보기 토글
   const [viewMode, setViewMode] = useState<'list' | 'group'>('group'); // 그룹 보기 vs 개별 리스트 보기
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
   const [activeBatchGroup, setActiveBatchGroup] = useState<ProposalGroup | null>(null);
@@ -113,6 +114,7 @@ export const PriorityDetails: React.FC<Props> = ({
     setSelectedDepts(['전체']);
     setSearchTerm('');
     setOnlyShowGaps(false);
+    setOnlyShow2026Gaps(false);
     setSortBy('date_desc');
   };
 
@@ -214,7 +216,8 @@ export const PriorityDetails: React.FC<Props> = ({
       const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
       const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
       const matchesGap = !onlyShowGaps || (p.reply_yn === 'N' && p.vote_score >= 150);
-      return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap;
+      const matches2026Gap = !onlyShow2026Gaps || (p.reg_date?.startsWith('2026') && p.reply_yn === 'N' && p.vote_score >= 150);
+      return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap && matches2026Gap;
     }).sort((a, b) => {
       if (sortBy === 'date_desc') return (b.reg_date || '').localeCompare(a.reg_date || '');
       if (sortBy === 'date_asc') return (a.reg_date || '').localeCompare(b.reg_date || '');
@@ -222,7 +225,7 @@ export const PriorityDetails: React.FC<Props> = ({
       if (sortBy === 'comment_desc') return b.comment_cnt - a.comment_cnt;
       return 0;
     });
-  }, [proposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, sortBy]);
+  }, [proposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, onlyShow2026Gaps, sortBy]);
 
   // 그룹 보기 필터 결과 (그룹 구성원 필터 후 빈 그룹 배제)
   const filteredGroupedProposals = useMemo(() => {
@@ -244,7 +247,8 @@ export const PriorityDetails: React.FC<Props> = ({
         const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
         const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
         const matchesGap = !onlyShowGaps || (p.reply_yn === 'N' && p.vote_score >= 150);
-        return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap;
+        const matches2026Gap = !onlyShow2026Gaps || (p.reg_date?.startsWith('2026') && p.reply_yn === 'N' && p.vote_score >= 150);
+        return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap && matches2026Gap;
       }).sort((a, b) => {
         if (sortBy === 'date_desc') return (b.reg_date || '').localeCompare(a.reg_date || '');
         if (sortBy === 'date_asc') return (a.reg_date || '').localeCompare(b.reg_date || '');
@@ -265,7 +269,7 @@ export const PriorityDetails: React.FC<Props> = ({
         unansweredCount
       };
     }).filter((g): g is ProposalGroup => g !== null);
-  }, [groupedProposals, searchTerm, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps]);
+  }, [groupedProposals, searchTerm, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, onlyShow2026Gaps]);
 
   const toggleGroup = (groupId: string) => {
     setExpandedGroups(prev => ({
@@ -411,7 +415,13 @@ export const PriorityDetails: React.FC<Props> = ({
       '연동 권익위 민원수': p.related_civil_requests || 0
     }));
 
-    exportToCsv(`서울시_출산정책_제안데이터_426건_${new Date().toISOString().split('T')[0]}.csv`, exportData);
+    const yearTag = selectedYears.includes('전체') ? '전체연도' : selectedYears.join('_');
+    const sortTag = sortBy === 'date_desc' ? '등록일최신순' : sortBy === 'date_asc' ? '등록일과거순' : sortBy === 'vote_desc' ? '공감높은순' : '댓글많은순';
+    const gapTag = onlyShow2026Gaps ? '_2026최신공백' : onlyShowGaps ? '_정책공백' : '';
+    const dateStr = new Date().toISOString().split('T')[0];
+    const filename = `서울시_출산육아_제안목록_${yearTag}_${sortTag}${gapTag}_${listToExport.length}건_${dateStr}.csv`;
+
+    exportToCsv(filename, exportData);
   };
 
   return (
@@ -434,20 +444,38 @@ export const PriorityDetails: React.FC<Props> = ({
             <button
               onClick={handleExportProposals}
               className="flex items-center gap-1.5 px-3 py-2 text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition shadow-xs cursor-pointer"
-              title="현재 필터링된 제안 데이터 (426건) 엑셀/CSV로 다운로드"
+              title="선택된 연도 및 정렬 조건으로 맞춤 CSV 파일 다운로드"
             >
-              <Download className="w-3.5 h-3.5" /> 426건 데이터 엑셀/CSV 다운로드
+              <Download className="w-3.5 h-3.5" /> 맞춤 CSV 다운로드
             </button>
-            {/* 정책 공백 핫필터 */}
+            {/* 2026 최신 정책 공백 핫필터 */}
             <button
-              onClick={() => setOnlyShowGaps(!onlyShowGaps)}
-              className={`text-xs font-bold px-3 py-2 rounded-lg border flex items-center gap-1.5 transition ${onlyShowGaps
+              onClick={() => {
+                setOnlyShow2026Gaps(!onlyShow2026Gaps);
+                if (!onlyShow2026Gaps) setOnlyShowGaps(false);
+              }}
+              className={`text-xs font-bold px-3 py-2 rounded-lg border flex items-center gap-1.5 transition cursor-pointer ${onlyShow2026Gaps
+                  ? 'bg-emerald-600 text-white border-emerald-700 ring-2 ring-emerald-300 shadow-xs'
+                  : 'bg-emerald-50 text-emerald-800 border-emerald-200 hover:bg-emerald-100 shadow-2xs'
+                }`}
+              title="2026년 등록 제안 중 미답변(검토중) 및 공감 150표 이상 민원 선별"
+            >
+              <span>🔥 2026 최신 정책 공백</span>
+            </button>
+
+            {/* 일반 정책 공백 핫필터 */}
+            <button
+              onClick={() => {
+                setOnlyShowGaps(!onlyShowGaps);
+                if (!onlyShowGaps) setOnlyShow2026Gaps(false);
+              }}
+              className={`text-xs font-bold px-3 py-2 rounded-lg border flex items-center gap-1.5 transition cursor-pointer ${onlyShowGaps
                   ? 'bg-rose-50 text-rose-700 border-rose-300 ring-2 ring-rose-200/50 shadow-2xs'
                   : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 shadow-2xs'
                 }`}
             >
               <AlertTriangle className={`w-4 h-4 ${onlyShowGaps ? 'text-rose-600' : 'text-slate-400'}`} />
-              정책 공백만 선별 (공감 150표 이상 + 미답변)
+              전체 정책 공백 (150표↑ 미답변)
             </button>
 
             {/* 보기 모드 변경 & 다중선택 토글 & 정렬 */}
@@ -479,7 +507,7 @@ export const PriorityDetails: React.FC<Props> = ({
                 <span>{isMultiSelectMode ? '☑️ 다중 선택 ON' : '☐ 다중 선택 OFF'}</span>
               </button>
 
-              {(selectedYears[0] !== '전체' || selectedFlows[0] !== '전체' || selectedCategories[0] !== '전체' || selectedSubCategories[0] !== '전체' || selectedDepts[0] !== '전체' || searchTerm || onlyShowGaps || sortBy !== 'date_desc') && (
+              {(selectedYears[0] !== '전체' || selectedFlows[0] !== '전체' || selectedCategories[0] !== '전체' || selectedSubCategories[0] !== '전체' || selectedDepts[0] !== '전체' || searchTerm || onlyShowGaps || onlyShow2026Gaps || sortBy !== 'date_desc') && (
                 <button
                   onClick={handleResetFilters}
                   className="text-xs px-2.5 py-1.5 rounded-lg border border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100 font-bold transition flex items-center gap-1 cursor-pointer"

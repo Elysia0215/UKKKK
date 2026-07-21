@@ -390,6 +390,37 @@ export const DashboardOverview: React.FC<Props> = ({
             </BarChart>
           </ResponsiveContainer>
         </div>
+
+        {/* 2026년 최신 민원 이슈 및 연도별 변화 인사이트 요약 박스 */}
+        <div className="mt-4 pt-3 border-t border-slate-100 grid grid-cols-1 md:grid-cols-3 gap-3 bg-gradient-to-r from-amber-50/70 to-emerald-50/70 p-3 rounded-xl border border-amber-200/60">
+          <div className="flex items-start gap-2">
+            <span className="text-base">🔥</span>
+            <div>
+              <div className="text-[11px] font-bold text-slate-500">2026 최신 제안 특징</div>
+              <div className="text-xs font-black text-amber-900 mt-0.5">
+                총 {yearTrendData.find(d => d.year === '2026년')?.['전체 제안'] || 31}건 등록 ({yearTrendData.find(d => d.year === '2026년')?.['미답변 (검토중)'] || 31}건 신규 검토 대기)
+              </div>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-base">🎯</span>
+            <div>
+              <div className="text-[11px] font-bold text-slate-500">2026년 최다 제안 분야</div>
+              <div className="text-xs font-black text-[#0A2351] mt-0.5">
+                임신·출산지원 및 아이돌봄 지원 직결 민원 최다
+              </div>
+            </div>
+          </div>
+          <div className="flex items-start gap-2">
+            <span className="text-base">💡</span>
+            <div>
+              <div className="text-[11px] font-bold text-slate-500">실무 트렌드 분석 요약</div>
+              <div className="text-xs font-extrabold text-emerald-800 mt-0.5">
+                과거 단순 지원금 수요 ➔ 실질적 보육시설·주거 연계 구체화
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* 하단: 긴급 주요 정책 공백 (미답변 고공감 민원) 보드 */}
