@@ -1,163 +1,119 @@
-# 서울시 출산·양육 정책 수요 분석 대시보드
+# 🏛️ 서울시 출산·양육 정책 수요 분석 대시보드 (UKKKK)
 
-## 폴더 구조 (상세 안내: [DIRECTORY_MAP.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/DIRECTORY_MAP.md))
-```text
-UKKKK/
-├── 📄 DIRECTORY_MAP.md                 # 🗺️ 직관적 디렉토리 & 데이터 전체 안내서
-├── 📄 README.md                        # 📘 프로젝트 개요 및 가이드
-├── 📂 docs/                            # 📄 프로젝트 기획서, 분석정의서, 로드맵 문서 모음
-├── 📂 data/                            # 📊 원천, 가공, DB, 백업 데이터 관리
-│   ├── 📂 raw/                         # 1️⃣ [원천] 통계청 / 서울시 공공데이터 수집 원본
-│   ├── 📂 mongttang/                    # 2️⃣ [DB] 몽땅정보통 323개 사업 & 서울시 조직도 DB
-│   ├── 📂 processed/                    # 3️⃣ [가공] 규칙 기반 필터링 및 확장 데이터셋
-│   │   ├── 📂 ver1_baseline/            # 🎯 [Ver1] 1차 기준 결과물 (704건 기준)
-│   │   └── 📂 ver2_expanded/            # 🚀 [Ver2] 2차 확장 및 웹 크롤링 결과물 (824건 & 팀검증용 137건)
-│   └── 📂 archive/                      # 4️⃣ [백업] 과거 압축 백업 파일
-├── 📂 scripts/                         # 🐍 파이썬 2단계 수집, 정제, 분류, 매칭 파이프라인
-├── 📂 frontend/                        # 💻 React + Vite 대시보드 웹 애플리케이션
-└── 📂 backend/                         # ⚙️ 백엔드 서비스
-```
-
-## 🐍 Poetry 가상환경 설정 (팀원 공통 개발 환경)
-본 프로젝트는 팀원 간 동일한 패키지 버전을 유지하기 위해 `poetry`를 사용합니다.
-
-```bash
-# 1. Poetry 가상환경 패키지 설치
-poetry install
-
-# 2. 가상환경 진입 (셀 실행)
-poetry shell
-
-# 3. 데이터 파이프라인 또는 스크립트 실행 예시
-python scripts/04_build_dashboard_json.py
-```
-
-## 실행 순서
-```
-scripts/01_collect_proposals.py   -> 팀장 1명만 실행 (전체 API 수집, 1회면 충분)
-scripts/02_scrape_details.py      -> 4명이 각자 --part 1~4로 나눠서 실행 (아래 참고)
-scripts/02b_merge_parts.py        -> 아무나 1명이 4개 결과 병합
-정책/03_classify.py               -> 병합 후 1명이 실행 (분류 결과 안 좋으면 category_keywords.py / department_keywords.py만 수정하면 됨)
-scripts/04_build_dashboard_json.py -> 최종 JSON 생성
-```
-
-## 4인 크롤링 분담 방법
-
-`01_collect_proposals.py`를 팀장이 먼저 실행해서
-`data/processed/상상대로_서울_출산육아_필터링.csv`를 만들고 GitHub에 커밋 & push.
-
-나머지 3명은 그 파일을 pull 받은 뒤, 아래처럼 **자기 번호만 다르게** 실행:
-
-```bash
-# 팀원 1
-python 02_scrape_details.py --part 1 --total-parts 4
-
-# 팀원 2
-python 02_scrape_details.py --part 2 --total-parts 4
-
-# 팀원 3
-python 02_scrape_details.py --part 3 --total-parts 4
-
-# 팀원 4
-python 02_scrape_details.py --part 4 --total-parts 4
-```
-
-각자 `data/raw/part_N.csv`만 생성되니까, **자기 파일만 커밋 & push하면 충돌 안 남**
-(같은 파일을 여러 명이 건드리는 게 아니라 파일 자체가 나뉘어 있어서).
-
-## GitHub 워크플로우 (충돌 최소화 버전)
-
-1. 팀장이 레포 만들고 이 구조 그대로 push
-2. 팀원들은 각자 브랜치 파서 작업 (`git checkout -b crawl-part2` 등)
-   - 급하면 브랜치 안 나누고 main에 바로 push해도 됨 (파일이 겹치지 않아서 충돌 위험 낮음)
-3. `data/raw/part_N.csv`만 커밋 → push → (PR 생략 가능, 시간 없으니)
-4. 전원 push 끝나면 팀장이 `02b_merge_parts.py` 실행해서 병합
-5. 이후 `03_classify.py` → `04_build_dashboard_json.py` 순서로 팀장(또는 방법론 담당)이 진행
-
-## 배포
-
-- Frontend + Backend: **Railway** (GitHub 레포 연결, push 시 자동 배포)
-- 정적 JSON만 있으면 되는 MVP라면 Vercel도 가능하지만,
-  Python 백엔드(FastAPI)까지 같이 띄울 계획이라 Railway 추천
+> **상상대로 서울 시민 정책 제안 기반 2단계 규칙 기반(Rule-based) 수집, 8개 대분류 정밀 분류 및 서울시 조직도 18개 실무부서 1·2·3순위 라우팅 매칭 대시보드**
 
 ---
 
-## 데이터 구조 (Data Schemas)
+## 📂 1. 직관적 프로젝트 폴더 구조 (상세 안내: [DIRECTORY_MAP.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/DIRECTORY_MAP.md))
 
-### 1. 상상대로 서울 자유제안 데이터 (`data/processed/상상대로_서울_출산육아_필터링.csv`)
-
-| 컬럼명 | 타입 | 설명 | 비고 |
-|---|---|---|---|
-| `SN` | Float/Int | 제안 고유 번호 (ID) | Primary Key |
-| `TITLE` | String | 제안 제목 | 키워드 필터링 대상 |
-| `CONTENT` | String | 제안 본문 또는 본문 URL | 상세 스크래핑 시 본문 텍스트 채움 |
-| `VOTE_SCORE` | Float | 제안 공감/득표 점수 | 수요 강도(Urgency) 측정 지표 |
-| `REG_DATE` | String | 등록 일시 (`YYYY-MM-DD HH:MM:SS`) | 시계열 트렌드 분석용 |
-| `VISIOIN_TXT` | String | 서울시 비전/분류 카테고리 | 예: 여성, 주택, 교통 등 |
-| `USER_COMMENT_CNT` | Int | 댓글 수 | 관심도 지표 |
-| `VOTE_CNT` | Int | 찬성 표수 | |
-| `VOTE_DIS_CNT` | Int | 반대 표수 | |
-| `REPLY_YN` | String | 서울시 공식 답변 여부 (`Y` / `N`) | **정책 공백(Gap) 탐지 핵심 필드** |
-
-### 2. 자치구별 합계출산율 및 연령별 출산율 (`data/processed/합계출산율_및_모의_연령별_출산율_20260720153003.csv`)
-
-| 컬럼명 | 타입 | 설명 |
-|---|---|---|
-| `자치구별(1)` | String | 25개 자치구명 (예: 종로구, 성동구, 강남구 등) |
-| `합계출산율` | Float | 가임여성 1명당 예상 평균 출생아 수 (2024 기준 서울 평균 0.581) |
-| `15-19세` ~ `45-49세` | Float | 모(母)의 연령대별 출산율 (여자인구 1천명당 명) |
-
-### 3. 자치구별 출산순위별 출생 통계 (`data/processed/출산순위별_출생_20260720154514.csv`)
-
-| 컬럼명 | 타입 | 설명 |
-|---|---|---|
-| `자치구별(2)` | String | 25개 자치구명 |
-| `계` | Int | 해당 자치구 총 출생아 수 |
-| `1아` / `2아` / `3아 이상` | Int | 첫째 / 둘째 / 셋째 이상 출생아 수 (성별 구분 포함) |
-
-### 4. 자치구별 보육시설 현황 (`data/processed/보육시설_현황(정원규모별_구별)_20260720154435.csv`)
-
-| 컬럼명 | 타입 | 설명 |
-|---|---|---|
-| `자치구별(2)` | String | 25개 자치구명 |
-| `소계` | Int | 구별 총 보육시설(어린이집 등) 개수 |
-| `20명 이하` ~ `300명 초과` | Int | 정원 규모별 보육시설 분포 개수 |
-
-### 5. 보조 데이터: 국민권익위 공개제안 API (`OpenProposalService2`)
-
-- **End Point**: `https://apis.data.go.kr/1140100/OpenProposalService2/getOpenProposalList`
-- **주요 필드**: `title`(제안제목), `content`(제안내용), `regDate`(등록일), `category`(분류)
-
-### 6. 대시보드 최종 파이프라인 출력 JSON (`data/final/dashboard_data.json`)
-
-```json
-{
-  "summary": {
-    "total_proposals": 269,
-    "unanswered_proposals": 210,
-    "avg_fertility_rate": 0.581
-  },
-  "districts": [
-    {
-      "district_name": "성동구",
-      "fertility_rate": 0.714,
-      "total_births": 1666,
-      "first_child_births": 1202,
-      "daycare_centers": 133,
-      "proposal_count": 18,
-      "top_keywords": ["돌봄", "키즈카페", "임신"]
-    }
-  ],
-  "proposals": [
-    {
-      "sn": "202286",
-      "title": "저출산 고령화 문제에 관한 제안",
-      "vote_score": 0.0,
-      "reply_yn": "N",
-      "category": "임신·출산·건강",
-      "matched_department": "저출생담당관"
-    }
-  ]
-}
+```text
+UKKKK/
+├── 📄 DIRECTORY_MAP.md                 # 🗺️ 직관적 디렉토리 & 데이터 전체 안내서
+├── 📄 README.md                        # 📘 [현재 파일] 프로젝트 개요 및 종합 가이드
+├── 📄 CONTRIBUTING.md                  # 🤝 협업 및 기여 가이드
+│
+├── 📂 docs/                            # 📄 프로젝트 기획서, 분석정의서, 로드맵 문서 모음
+│   ├── 📄 서울시_출산정책_대시보드_기획서.md     # - 대시보드 기획 및 대분류 8개 축 기본 설계서
+│   ├── 📄 데이터분석정의서.docx               # - 데이터 분석 및 파이프라인 정의서
+│   └── 📄 미니프로젝트2_로드맵.txt             # - 프로젝트 추진 로드맵 및 일정
+│
+├── 📂 data/                            # 📊 원천, 가공, DB, 백업 데이터 일체 관리
+│   ├── 📂 raw/                         # 1️⃣ [원천] 통계청 / 서울시 공공데이터 수집 원본
+│   │   ├── 📊 합계출산율_및_모의_연령별_출산율_20260720.xlsx (# 서울시 25개 자치구 합계출산율)
+│   │   ├── 📊 보육시설_현황_정원규모별_구별_20260720.csv     (# 서울시 자치구별 어린이집/보육시설 현황)
+│   │   ├── 📊 출산순위별_출생_20260720.csv               (# 첫째/둘째/셋째 출생아 통계)
+│   │   └── 📊 상상대로_서울_전체_최신.csv               (# 상상대로 서울 19,657건 시민 제안 원문)
+│   │
+│   ├── 📂 mongttang/                    # 2️⃣ [DB] 몽땅정보통 323개 사업 & 서울시 조직도 DB
+│   │   ├── 📊 classified_policy.csv             (# 몽땅정보통 323개 공식 사업 혜택 DB)
+│   │   ├── 📊 mongttang.csv                     (# 몽땅정보통 대분류/중분류 분류 매핑 DB)
+│   │   └── 📊 출산정책관련_업무담당.xlsx             (# 서울시 18개 실무팀 직통 전화번호/담당업무 DB)
+│   │
+│   ├── 📂 processed/                    # 3️⃣ [가공] 규칙 기반 필터링 및 확장 데이터셋
+│   │   ├── 📂 ver1_baseline/            # 🎯 [Ver1] 1차 기준 결과물 (704건 기준)
+│   │   │   ├── 📊 상상대로_출산양육관련_수집결과.csv (.xlsx) (# 1차 출산·양육 704건 정제 후보)
+│   │   │   └── 📋 상상대로_출산양육관련_제외로그.csv        (# 1차 비관련 제외 18,953건 로그)
+│   │   │
+│   │   └── 📂 ver2_expanded/            # 🚀 [Ver2] 2차 확장 및 웹 크롤링 결과물 (824건)
+│   │       ├── 📊 상상대로_출산양육관련_수집결과_ver2.csv (.xlsx) (# 확장 824건 + 웹 크롤링 본문)
+│   │       ├── 📋 상상대로_출산양육관련_제외로그_ver2.csv       (# 2차 비관련 제외 18,833건 로그)
+│   │       └── 📝 상상대로_신규수집_출산양육후보_검증용_ver2.csv (.xlsx) ⭐ [팀 검증용 137건!]
+│   │
+│   └── 📂 archive/                      # 4️⃣ [백업] 과거 백업 zip 압축파일 모음
+│       ├── 📦 수정파일.zip
+│       └── 📦 서울시-출산·양육-정책-수요-분석-대시보드.zip
+│
+├── 📂 scripts/                         # 🐍 파이썬 2단계 수집, 정제, 분류, 매칭 파이프라인
+│   ├── 🐍 01_collect_birth_policy_proposals.py  (# 규칙 기반 scoring & 5대 룰 정밀 분류)
+│   ├── 🐍 06_build_department_ranking.py        (# 조직도 R&R 1·2·3순위 랭킹 & 몽땅정보 매칭)
+│   └── 🐍 ...
+│
+├── 📂 frontend/                        # 💻 React + Vite 대시보드 웹 애플리케이션
+│   ├── 📁 src/components/               # - 행정관/시민용 UI 컴포넌트 모음
+│   ├── 📁 src/data/mongttang.json       # - 대시보드 실시간 연동 824건 엔리치 데이터셋
+│   └── 📁 src/data/mockData.ts          # - 타입 정의 및 자치구 통계
+│
+└── 📂 backend/                         # ⚙️ 백엔드 서비스
 ```
 
+---
+
+## ⚡ 2. 대시보드 프론트엔드 실행 방법 (Quick Start)
+
+Node.js 환경에서 아래 명령어를 통해 React/Vite 대시보드를 즉시 실행할 수 있습니다.
+
+```bash
+# 1. frontend 디렉토리 이동
+cd frontend
+
+# 2. 의존성 패키지 설치
+npm install
+
+# 3. 개발 서버 실행 (기본 포트: http://localhost:3002)
+npm run dev
+
+# 4. 프로덕션 빌드 검증
+npm run build
+```
+
+---
+
+## 🐍 3. 데이터 파이프라인 실행 가이드
+
+파이썬 수집 및 매칭 파이프라인은 아래 순서로 가동됩니다.
+
+```bash
+# 1. 19,657건 원문 대상 2단계 규칙 기반 수집 & 5대 룰 분류 가동
+python scripts/01_collect_birth_policy_proposals.py
+
+# 2. 서울시 18개 실무팀 조직도 R&R 랭킹(1·2·3순위) 및 몽땅정보통 323개 사업 매칭
+python scripts/06_build_department_ranking.py
+```
+
+---
+
+## 📊 4. 데이터셋 버저닝 체계 (Ver1 vs Ver2)
+
+| 데이터셋 | 대상 파일 위치 | 추출 건수 | 수집 키워드 및 특징 |
+| :--- | :--- | :---: | :--- |
+| **Ver1 Baseline** | `data/processed/ver1_baseline/` | **704건** | 기존 1차 직접 키워드 및 문맥 조합 규칙 추출 Baseline |
+| **Ver2 Expanded** | `data/processed/ver2_expanded/` | **824건** | **생활/돌봄공백/소아응급 확장 키워드 + 137건 웹크롤링 본문 통합** |
+| **Ver2 팀검증용** | `data/processed/ver2_expanded/상상대로_신규수집_출산양육후보_검증용_ver2.xlsx` | **137건** | ⭐ **팀 검토/검증 전용 신규 확장 후보 파일 (웹 크롤링 본문 포함)** |
+
+---
+
+## 🏷️ 5. 출산·양육 대분류 8개 축 체계
+
+1. **임신·난임·생식건강**: 난임 시술비지원, 산전검사, 가임력 검사, 난자동결
+2. **출산·산후 초기지원**: 출산지원금, 첫만남이용권, 산후조리원, 산모회복, 산후우울증
+3. **보육·돌봄 인프라**: 국공립 어린이집, 키움센터, 야간/주말/아픈아이 긴급돌봄, 공공키즈카페, 소아응급
+4. **다자녀·양육비·생활지원**: 다자녀 혜택/감면, 양육수당, 부모급여, 분유/기저귀 지원
+5. **주거·교통·도시생활환경**: 신혼부부/출산가구 주거지원, 임산부 배려석/뱃지/교통, 유모차 이동편의
+6. **일·가정 양립·부모 노동**: 육아휴직, 출산휴가, 부모 유연근무/단축근무
+7. **취약·다양가족 사각지대**: 한부모 가구, 미혼모/부, 위기임산부
+8. **정보·상담·교육·거버넌스**: 양육지원 서비스 접근성, 초보부모 공동육아, 저출산 정책 제안
+
+---
+
+## 🤝 6. 기여 및 개발 문의
+- 상세 디렉토리 구조 및 가이드는 [DIRECTORY_MAP.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/DIRECTORY_MAP.md)를 참조하세요.
