@@ -3,7 +3,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export type PolicyCategory = '임신' | '출산' | '보육' | '다자녀' | '위기임산부' | '다문화' | '기타';
+export type PolicyCategory = 
+  | '임신·난임·생식건강'
+  | '출산·산후 초기지원'
+  | '보육·돌봄 인프라'
+  | '다자녀·양육비·생활지원'
+  | '주거·교통·도시생활환경'
+  | '일·가정 양립·부모 노동'
+  | '취약·다양가족 사각지대'
+  | '정보·상담·교육·거버넌스'
+  | '임신' | '출산' | '보육' | '다자녀' | '위기임산부' | '다문화' | '기타';
 
 export type DepartmentName = 
   | '저출생사업1팀'
@@ -13,7 +22,8 @@ export type DepartmentName =
   | '가족지원팀'
   | '아동보호팀'
   | '다문화지원팀'
-  | '미지정';
+  | '미지정'
+  | string;
 
 export interface DepartmentRanking {
   rank: number;
@@ -44,6 +54,10 @@ export interface PolicyProposal {
   reply_yn: 'Y' | 'N';
   district: string;
   category: PolicyCategory;
+  category_raw?: string;
+  sub_category?: string;
+  micro_category?: string;
+  policy_flow?: string;
   department: DepartmentName[];
   url: string;
   source?: string;

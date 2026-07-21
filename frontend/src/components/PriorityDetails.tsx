@@ -144,7 +144,13 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
     }));
   };
 
-  const categories: string[] = ['전체', '임신', '출산', '보육', '다자녀', '위기임산부', '다문화'];
+  const categories: string[] = useMemo(() => {
+    const set = new Set<string>();
+    proposals.forEach(p => {
+      if (p.category) set.add(p.category);
+    });
+    return ['전체', ...Array.from(set)];
+  }, [proposals]);
   const departments: string[] = [
     '전체',
     '저출생사업1팀',

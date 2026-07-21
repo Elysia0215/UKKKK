@@ -39,29 +39,24 @@ export const CategoryDemand: React.FC<Props> = ({
 
   const topKeywords30 = useMemo(() => extractTopKeywords(proposals, 30), [proposals]);
 
-  // 카테고리별 통계 데이터 가공
+  // 카테고리별 통계 데이터 가공 (8개 생애주기 대분류 동적 수집)
   const categoryChartData = useMemo(() => {
-    const stats: Record<string, { count: number; totalVote: number }> = {
-      '임신': { count: 0, totalVote: 0 },
-      '출산': { count: 0, totalVote: 0 },
-      '보육': { count: 0, totalVote: 0 },
-      '다자녀': { count: 0, totalVote: 0 },
-      '위기임산부': { count: 0, totalVote: 0 },
-      '다문화': { count: 0, totalVote: 0 },
-    };
+    const stats: Record<string, { count: number; totalVote: number }> = {};
 
     proposals.forEach(p => {
-      if (stats[p.category]) {
-        stats[p.category].count += 1;
-        stats[p.category].totalVote += p.vote_score;
+      const cat = p.category || '기타';
+      if (!stats[cat]) {
+        stats[cat] = { count: 0, totalVote: 0 };
       }
+      stats[cat].count += 1;
+      stats[cat].totalVote += p.vote_score;
     });
 
     return Object.entries(stats).map(([name, val]) => ({
       name,
       count: val.count,
       avgVote: val.count > 0 ? Math.round(val.totalVote / val.count) : 0
-    }));
+    })).sort((a, b) => b.count - a.count);
   }, [proposals]);
 
   // 공감수 최고순 제안 5건
