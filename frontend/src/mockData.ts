@@ -6848,25 +6848,38 @@ export const mockProposals: Proposal[] = [
   }
 ];
 
-export function getDepartmentStats() {
+export function getDepartmentStats(proposalsList: Proposal[] = mockProposals) {
+  const targetProposals = (proposalsList && proposalsList.length > 0) ? proposalsList : mockProposals;
   const stats: Record<string, { total: number; unanswered: number }> = {};
-  mockProposals.forEach(p => {
-    p.department.forEach(dept => {
-      if (!stats[dept]) {
-        stats[dept] = { total: 0, unanswered: 0 };
-      }
-      stats[dept].total += 1;
-      if (p.reply_yn === 'N') {
-        stats[dept].unanswered += 1;
-      }
-    });
+  targetProposals.forEach(p => {
+    if (Array.isArray(p.department)) {
+      p.department.forEach(dept => {
+        if (!stats[dept]) {
+          stats[dept] = { total: 0, unanswered: 0 };
+        }
+        stats[dept].total += 1;
+        if (p.reply_yn === 'N') {
+          stats[dept].unanswered += 1;
+        }
+      });
+    }
   });
-  return stats;
+
+  return Object.entries(stats).map(([name, val]) => ({
+    name,
+    total: val.total,
+    unanswered: val.unanswered,
+    rate: val.total > 0 ? Math.round((val.unanswered / val.total) * 100) : 0
+  })).sort((a, b) => b.total - a.total);
 }
 
 export function extractTopKeywords(proposals: Proposal[], limit = 10) {
   const wordCounts: Record<string, number> = {};
-  const stopWords = new Set(["제안", "서울시", "사업", "지원", "운영", "관련", "개선", "대한", "위한", "추진", "서울"]);
+  const stopWords = new Set([
+    "제안", "서울시", "사업", "지원", "운영", "관련", "개선", "대한", "위한", "추진", "서울",
+    "생각", "경우", "때문", "관내", "확대", "필요", "요청", "내용", "현황", "문제점", "기대효과",
+    "제안요지", "대상", "제공", "이용", "사용", "방법", "문제", "기준", "시설", "정책", "서울형"
+  ]);
   
   proposals.forEach(p => {
     const text = p.title + " " + p.content;
