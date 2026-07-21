@@ -31,8 +31,9 @@ export interface DepartmentRanking {
   dept_name: string;
   full_dept: string;
   phone: string;
-  location: string;
+  location?: string;
   duty_summary: string;
+  matching_reason?: string;
 }
 
 export interface MatchedPolicy {
@@ -58,6 +59,7 @@ export interface PolicyProposal {
   sub_category?: string;
   micro_category?: string;
   policy_flow?: string;
+  matching_method?: string;
   department: DepartmentName[];
   url: string;
   source?: string;

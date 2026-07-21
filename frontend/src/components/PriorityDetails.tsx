@@ -445,7 +445,7 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                                               ? 'bg-blue-600 text-white shadow-2xs'
                                               : 'bg-slate-200 text-slate-700'
                                           }`}
-                                          title={`${rank.full_dept} (☎ ${rank.phone}) - ${rank.duty_summary}`}
+                                          title={`${rank.full_dept} (☎ ${rank.phone})\n• 업무: ${rank.duty_summary}\n• 근거: ${rank.matching_reason || '규칙기반 키워드 매칭'}`}
                                         >
                                           <Building2 className="w-2.5 h-2.5" />
                                           [{rank.role_type}] {rank.dept_name} {rank.phone && `(☎ ${rank.phone})`}

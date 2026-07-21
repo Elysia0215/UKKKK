@@ -1,4 +1,4 @@
-// 100% 출산·육아 정밀 데이터 426건 (새로운 8개 대분류/중분류/생애주기 매핑 완료)
+// 100% 규칙기반 설명가능 부서 매칭근거 포함 426건 mockData
 import { PolicyProposal, DistrictStat, DashboardStats } from '../types';
 
 export type { PolicyProposal as Proposal };
@@ -194,29 +194,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 17: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 저출산"
       }
     ],
     "matched_policies": [
@@ -264,7 +264,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "출산지원금·수당 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-202259",
@@ -292,27 +293,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "phone": "02-2133-5025",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리",
+        "matching_reason": "점수 22: 주거비, 전세, 주택, 주거"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 주거안정, 아파트, 다자녀"
       }
     ],
     "matched_policies": [
@@ -344,7 +345,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "공공임대·매입임대 개선",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-202224",
@@ -369,29 +371,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등 ○ 주거안정 지원사업 전수조사 실시(지원) ○ 직원 책임보험 운영(행정종합배상공제) ○ 순직 유가족, 재직중 사망직원 지원, 부조급여 및 기타 재해보상제도 ○ 대여학자금 상환 원천징수 고지 및 정산 ○ 다자녀 출산직원 지원(임신·...",
+        "matching_reason": "점수 12: 공무원, 다자녀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 개선, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 쉼터, 서울시"
       }
     ],
     "matched_policies": [
@@ -439,7 +441,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "신청·서류·기준 개선",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-202117",
@@ -466,26 +469,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족지원팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
         "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ...",
+        "matching_reason": "점수 9: 서울시, 가족지원팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "결혼문화팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 결혼문화팀",
-        "phone": "02-2133-6550",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 9층",
-        "duty_summary": "ㅇ 더 아름다운 결혼식 업무 총괄 관리"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 가족지원팀"
       }
     ],
     "matched_policies": [
@@ -517,7 +520,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 주차·공공요금 감면",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201815",
@@ -546,26 +550,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 32: 난임, 시술비, 건강임신지원팀, 지원사업, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 18: 서울시, 지원사업, 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 저출생사업, 지원사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -613,7 +617,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201727",
@@ -637,20 +642,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 13: 자치구, 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 자치구, 돌봄사업팀"
       },
       {
         "rank": 3,
@@ -658,8 +663,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       }
     ],
     "matched_policies": [
@@ -707,7 +712,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "야간·주말·긴급보육",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201726",
@@ -731,20 +737,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 12: 서울형, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
@@ -752,8 +758,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       }
     ],
     "matched_policies": [
@@ -801,7 +807,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "신청·서류·행정기준 개선",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201705",
@@ -828,26 +835,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 야간·주말·긴급보육 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 야간·주말·긴급보육 기반 후보"
       }
     ],
     "matched_policies": [
@@ -895,7 +902,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "야간·주말·긴급보육",
     "micro_category": "야간·주말·긴급보육",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201656",
@@ -920,29 +928,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "○ 시의회 및 국회 관련 업무 ○ 대한노인회 서울시 연합회 운영·지원 ○ 어버이날, 노인의 날 등 행사 ○ 효행 유공자 등 포상 및 시장 표창 ○ 저출산·고령사회 기본계획 수립(보건복지부) ○ 어르신 정보몽땅 홈페이지 구축·운영 ○ 바인더(시설통계 포함)",
+        "matching_reason": "점수 11: 서울시"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 자치구, 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -990,7 +998,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "지역 간 혜택 형평성",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201636",
@@ -1014,36 +1023,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리 - 전산 용역 계획 수립 및 예산 편성 및 집행 - 정보센터 운영 시스템 유지관리업체 관리 ○한의약 난임 치료지원 사업(서울형) 추진에 관한 사항 - 한의약 난임 치료 지원사업 계획수립 및 평가 - 한의약 난임 치료 지원단 운영, 자치구 예...",
+        "matching_reason": "점수 12: 전산, 자치구, 서울시"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 자치구, 가족건강팀"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "출생축하·신생아 초기지원",
     "micro_category": "출산정책 소급·기준 개선",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201635",
@@ -1069,29 +1079,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 24: 저출생사업, 개선, 개선방안, 서비스, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저소득층"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       }
     ],
     "matched_policies": [
@@ -1123,7 +1133,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "저소득·차상위·입양",
     "micro_category": "저소득·차상위 사각지대",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201617",
@@ -1150,26 +1161,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -1217,7 +1228,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201586",
@@ -1246,26 +1258,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 17: 난임, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 임산부"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -1313,7 +1325,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "임산부 건강검사·배려",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201566",
@@ -1340,8 +1353,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
@@ -1349,17 +1362,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 11: 시스템"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 아이돌봄"
       }
     ],
     "matched_policies": [
@@ -1407,7 +1420,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "아이돌봄서비스 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201550",
@@ -1433,29 +1447,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 17: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 저출산, 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 자치구, 건강임신지원팀, 저출산, 건강임신지원"
       }
     ],
     "matched_policies": [
@@ -1503,7 +1517,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "출산정책 소급·기준 개선",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201541",
@@ -1527,29 +1542,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       }
     ],
     "matched_policies": [
@@ -1597,7 +1612,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "신청·서류·기준 개선",
     "micro_category": "신청·서류·행정기준 개선",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201539",
@@ -1621,20 +1637,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
@@ -1642,8 +1658,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -1691,7 +1707,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201521",
@@ -1715,29 +1732,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "결혼문화팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 결혼문화팀",
-        "phone": "02-2133-6550",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 9층",
-        "duty_summary": "ㅇ 더 아름다운 결혼식 업무 총괄 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "상담팀",
+        "full_dept": "서울특별시 아동복지센터 상담팀",
+        "phone": "02-2040-4232",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 유기, 활성화"
       }
     ],
     "matched_policies": [
@@ -1785,7 +1802,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "위기임산부 보호·상담",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201278",
@@ -1810,11 +1828,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 12: 개선, 개선방안, 서비스"
       },
       {
         "rank": 2,
@@ -1822,17 +1840,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "",
+        "matching_reason": "점수 6: 서비스, 서울시, 건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       }
     ],
     "matched_policies": [
@@ -1864,7 +1882,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201115",
@@ -1890,29 +1909,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "○ 시의회 및 국회 관련 업무 ○ 대한노인회 서울시 연합회 운영·지원 ○ 어버이날, 노인의 날 등 행사 ○ 효행 유공자 등 포상 및 시장 표창 ○ 저출산·고령사회 기본계획 수립(보건복지부) ○ 어르신 정보몽땅 홈페이지 구축·운영 ○ 바인더(시설통계 포함)",
+        "matching_reason": "점수 29: 저출산·고령사회, 저출산, 고령사회, 서울시"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 22: 저출생사업, 개선, 서비스, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 6: 서비스, 서울시, 건강팀"
       }
     ],
     "matched_policies": [
@@ -1960,7 +1979,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201102",
@@ -1985,29 +2005,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 10: 개선, 서비스"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 6: 서비스, 서울시, 건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       }
     ],
     "matched_policies": [
@@ -2039,7 +2059,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201086",
@@ -2066,26 +2087,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       }
     ],
     "matched_policies": [
@@ -2133,7 +2154,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "신청·서류·기준 개선",
     "micro_category": "신청·서류·행정기준 개선",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-200951",
@@ -2160,33 +2182,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진 - 서울 아기 건강 첫걸음 사업계획 수립 및 예산 집행, 평가 - 민간 위탁기관(사업지원단) 운영에 관한 사항 - 영유아 건강간호사 인력 관리 및 실적관리 ○ 생애 초기 건강관리사업 운영 - 생애 초기 건강관리사업 공모 사업계획 수립 ○ 35세 이...",
+        "matching_reason": "점수 18: 가족건강팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 출산가구"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 가족건강팀"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "출산지원금·장려금",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-200449",
@@ -2213,26 +2236,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 야간·주말·긴급보육 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 야간·주말·긴급보육 기반 후보"
       }
     ],
     "matched_policies": [
@@ -2280,7 +2303,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "신청·서류·기준 개선",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-200312",
@@ -2305,29 +2329,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진 - 1인 자영업자 등 임산부 출산급여, 배우자 출산휴가급여 지원 - 사업계획수립, 사회보장협의, 시스템 관리, 자치구 교육, 홍보 등 ㅇ 소상공인 민간 아이돌봄서비스 지원사업 추진 - 사업계획수립, 관계기관 협의, 홍보활성화 등",
+        "matching_reason": "점수 21: 아이돌봄서비스"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 아이돌봄, 서비스"
       }
     ],
     "matched_policies": [
@@ -2375,7 +2399,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "산모·신생아 도우미",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-200093",
@@ -2399,29 +2424,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 13: 교육기관, 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -2469,7 +2494,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "신청·서류·기준 개선",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-200064",
@@ -2494,29 +2520,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 4: 서울시, 건강팀"
       }
     ],
     "matched_policies": [
@@ -2564,7 +2590,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "정보 통합 플랫폼·앱",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-200040",
@@ -2588,29 +2615,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "상담팀",
-        "full_dept": "서울특별시 아동복지센터 상담팀",
-        "phone": "02-2040-4232",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       }
     ],
     "matched_policies": [
@@ -2658,7 +2685,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-200023",
@@ -2686,27 +2714,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 22: 저출생사업, 개선, 개선방안, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 주택"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       }
     ],
     "matched_policies": [
@@ -2738,7 +2766,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "출생축하 물품·꾸러미",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199926",
@@ -2766,17 +2795,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 31: 저출생사업, 산후조리, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 산후조리·도우미 기반 후보"
       },
       {
         "rank": 3,
@@ -2784,15 +2813,16 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 10: 신생아"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "산후조리·도우미",
     "micro_category": "산후조리·산모 회복 지원",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199700",
@@ -2818,29 +2848,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 전세, 주택"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 저출산, 서울시"
       }
     ],
     "matched_policies": [
@@ -2872,7 +2902,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "공공시설·생활편의",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199587",
@@ -2901,33 +2932,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리",
+        "matching_reason": "점수 57: 무주택, 주거비, 월세, 전세, 주택, 주거, 자녀출산 무주택가구"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 44: 저출생사업, 무주택, 출산가구, 지원사업, 자녀출산, 무주택가구, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 건강임신지원팀, 지원사업에, 지원사업, 해당하지, 건강임신지원"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "무주택 출산가구 주거비",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199547",
@@ -2954,34 +2986,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 42: 저출생사업, 무주택, 출산가구, 자녀출산, 무주택가구, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 40: 무주택, 주거비, 월세, 주택, 주거, 자녀출산, 무주택가구"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 2: 출산가구"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "무주택 출산가구 주거비",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199206",
@@ -3005,29 +3038,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 13: 영유아, 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 직원, 재직중"
       }
     ],
     "matched_policies": [
@@ -3075,7 +3108,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199143",
@@ -3104,26 +3138,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 64: 난임, 시술비, 심리상담센터, 임산부 심리상담, 임신 전 건강관리, 건강임신지원팀, 건강관리"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 22: 저출생사업, 산후조리, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 서울시, 시술비"
       }
     ],
     "matched_policies": [
@@ -3171,7 +3205,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199139",
@@ -3195,20 +3230,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
@@ -3216,8 +3251,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -3265,7 +3300,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199120",
@@ -3289,29 +3325,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       }
     ],
     "matched_policies": [
@@ -3359,7 +3395,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "출산정책 소급·기준 개선",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199065",
@@ -3386,26 +3423,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -3453,7 +3490,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "초등 방과후·늘봄",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199064",
@@ -3477,29 +3515,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -3547,7 +3585,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199063",
@@ -3574,17 +3613,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 교육기관"
       },
       {
         "rank": 3,
@@ -3592,8 +3631,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -3641,7 +3680,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "초등 방과후·늘봄",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199044",
@@ -3668,26 +3708,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족지원팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
         "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ...",
+        "matching_reason": "점수 11: 직원에, 서울시, 가족지원팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 직원, 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 개선"
       }
     ],
     "matched_policies": [
@@ -3719,7 +3759,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "지역 간 혜택 형평성",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198980",
@@ -3743,36 +3784,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진 - 서울 아기 건강 첫걸음 사업계획 수립 및 예산 집행, 평가 - 민간 위탁기관(사업지원단) 운영에 관한 사항 - 영유아 건강간호사 인력 관리 및 실적관리 ○ 생애 초기 건강관리사업 운영 - 생애 초기 건강관리사업 공모 사업계획 수립 ○ 35세 이...",
+        "matching_reason": "점수 18: 가족건강팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 가족건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 개선, 개선방안"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "출산지원금·장려금",
     "micro_category": "출산지원금·수당 확대",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198885",
@@ -3801,26 +3843,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 17: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 저출산"
       }
     ],
     "matched_policies": [
@@ -3868,7 +3910,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "유치원·방과후 과정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198826",
@@ -3897,17 +3940,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 19: 저출생사업, 개선, 서비스, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
@@ -3915,8 +3958,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "고령사회정책팀",
         "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
         "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "duty_summary": "",
+        "matching_reason": "점수 5: 저출산"
       }
     ],
     "matched_policies": [
@@ -3964,7 +4007,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "한부모·미혼모/부",
     "micro_category": "신청·서류·행정기준 개선",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198705",
@@ -3989,36 +4033,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 4: 서울시, 건강팀"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198624",
@@ -4047,8 +4092,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 19: 저출생사업, 개선, 서비스, 저출생사업1팀"
       },
       {
         "rank": 2,
@@ -4056,8 +4101,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "duty_summary": "",
+        "matching_reason": "점수 13: 어린이집, 청소년"
       },
       {
         "rank": 3,
@@ -4065,8 +4110,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "",
+        "matching_reason": "점수 8: 서비스, 서울시, 건강팀, 프로그램"
       }
     ],
     "matched_policies": [
@@ -4114,7 +4159,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "서울런·교육비 지원",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198485",
@@ -4140,34 +4186,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 22: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 서울시, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 임산부"
       }
     ],
     "matched_policies": [],
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "유전자·난임 검사 지원",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198406",
@@ -4194,8 +4241,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족지원팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
         "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ...",
+        "matching_reason": "점수 9: 서울시, 가족지원팀"
       },
       {
         "rank": 2,
@@ -4203,17 +4250,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "장애인가족지원팀",
         "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
         "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "duty_summary": "",
+        "matching_reason": "점수 7: 가족지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       }
     ],
     "matched_policies": [
@@ -4245,7 +4292,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 주차·공공요금 감면",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198295",
@@ -4273,27 +4321,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 저출산, 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       }
     ],
     "matched_policies": [
@@ -4325,7 +4373,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198288",
@@ -4351,29 +4400,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ...",
+        "matching_reason": "점수 17: 위기임산부, 한부모"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -4421,7 +4470,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "위기임산부",
     "sub_category": "한부모·미혼모/부",
     "micro_category": "다자녀 생활·문화비 지원",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198269",
@@ -4445,29 +4495,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       }
     ],
     "matched_policies": [
@@ -4515,7 +4565,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "한부모·미혼모/부",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198265",
@@ -4541,29 +4592,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 저출산, 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       }
     ],
     "matched_policies": [
@@ -4595,7 +4646,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198243",
@@ -4619,29 +4671,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 가족지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 가족지원팀"
       }
     ],
     "matched_policies": [
@@ -4673,7 +4725,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198192",
@@ -4702,26 +4755,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 저출산, 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       }
     ],
     "matched_policies": [
@@ -4753,7 +4806,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198151",
@@ -4782,26 +4836,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 저출산"
       }
     ],
     "matched_policies": [
@@ -4833,7 +4887,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "서울런·교육비 지원",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198137",
@@ -4860,17 +4915,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 30: 아이돌봄, 지원사업, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 아이돌봄, 지원사업"
       },
       {
         "rank": 3,
@@ -4878,8 +4933,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 11: 지원사업"
       }
     ],
     "matched_policies": [
@@ -4927,7 +4982,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198127",
@@ -4956,33 +5012,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 23: 난임, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 6: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "임신",
     "sub_category": "임산부 건강검사·배려",
     "micro_category": "임산부 건강검사·배려",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198104",
@@ -5009,8 +5066,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
@@ -5018,17 +5075,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 12: 아이돌봄, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -5076,7 +5133,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "신청·서류·행정기준 개선",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198050",
@@ -5100,20 +5158,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진 - 서울 아기 건강 첫걸음 사업계획 수립 및 예산 집행, 평가 - 민간 위탁기관(사업지원단) 운영에 관한 사항 - 영유아 건강간호사 인력 관리 및 실적관리 ○ 생애 초기 건강관리사업 운영 - 생애 초기 건강관리사업 공모 사업계획 수립 ○ 35세 이...",
+        "matching_reason": "점수 13: 임산부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 난임"
       },
       {
         "rank": 3,
@@ -5121,8 +5179,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "duty_summary": "",
+        "matching_reason": "점수 10: 임산부"
       }
     ],
     "matched_policies": [
@@ -5170,7 +5228,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "기타",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197942",
@@ -5197,8 +5256,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 30: 아이돌봄, 서울형, 돌봄사업팀"
       },
       {
         "rank": 2,
@@ -5206,17 +5265,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 10: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -5264,7 +5323,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "조부모 돌봄비 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197913",
@@ -5292,26 +5352,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 21: 아이돌봄"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -5359,7 +5419,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197853",
@@ -5385,36 +5446,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 31: 저출생사업, 산후조리, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 영유아"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 신생아, 영유아"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "산후조리·도우미",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197727",
@@ -5440,36 +5502,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리",
+        "matching_reason": "점수 55: 무주택, 주거비, 월세, 전세, 주택, 주거, 자녀출산 무주택가구"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 47: 저출생사업, 무주택, 출산가구, 개선, 자녀출산, 무주택가구, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 저출산, 서울시"
       }
     ],
     "matched_policies": [],
     "category_raw": "다자녀",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "무주택 출산가구 주거비",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197702",
@@ -5493,29 +5556,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 가족지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 가족지원팀"
       }
     ],
     "matched_policies": [
@@ -5547,7 +5610,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197602",
@@ -5576,17 +5640,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리",
+        "matching_reason": "점수 41: 무주택, 주거비, 월세, 전세, 주택, 주거"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 38: 저출생사업, 무주택, 출산가구, 저출생사업1팀"
       },
       {
         "rank": 3,
@@ -5594,15 +5658,16 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저소득층"
       }
     ],
     "matched_policies": [],
     "category_raw": "다자녀",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "무주택 출산가구 주거비",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197507",
@@ -5631,33 +5696,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리",
+        "matching_reason": "점수 43: 무주택, 주거비, 월세, 전세, 주택, 주거, 자녀출산"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 40: 저출생사업, 무주택, 출산가구, 자녀출산, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저소득층"
       }
     ],
     "matched_policies": [],
     "category_raw": "다자녀",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "무주택 출산가구 주거비",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197491",
@@ -5682,20 +5748,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 17: 저소득층"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 3,
@@ -5703,15 +5769,16 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "저소득·차상위·입양",
     "micro_category": "저소득·차상위 사각지대",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197236",
@@ -5735,20 +5802,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
@@ -5756,8 +5823,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -5805,7 +5872,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197233",
@@ -5831,29 +5899,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 17: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 저출산, 서울시"
       }
     ],
     "matched_policies": [
@@ -5901,7 +5969,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "유모차 대중교통 접근성",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197063",
@@ -5925,11 +5994,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 산후조리, 개선"
       },
       {
         "rank": 2,
@@ -5937,17 +6006,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "duty_summary": "",
+        "matching_reason": "점수 13: 관리를, 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       }
     ],
     "matched_policies": [
@@ -5971,7 +6040,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "산후조리·산모 회복 지원",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197030",
@@ -5998,26 +6068,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 아이돌봄서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 19: 아이돌봄, 개선, 서비스, 민간아이돌봄서비스"
       }
     ],
     "matched_policies": [
@@ -6065,7 +6135,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "조부모 돌봄비 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196911",
@@ -6089,36 +6160,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진 - 서울 아기 건강 첫걸음 사업계획 수립 및 예산 집행, 평가 - 민간 위탁기관(사업지원단) 운영에 관한 사항 - 영유아 건강간호사 인력 관리 및 실적관리 ○ 생애 초기 건강관리사업 운영 - 생애 초기 건강관리사업 공모 사업계획 수립 ○ 35세 이...",
+        "matching_reason": "점수 20: 영유아, 가족건강팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 영유아, 가족건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "육아휴직·출산휴가",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196831",
@@ -6146,9 +6218,9 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 24: 저출생사업, 아이돌봄, 서비스, 저출생사업1팀"
       },
       {
         "rank": 2,
@@ -6156,17 +6228,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "",
+        "matching_reason": "점수 21: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 임산부"
       }
     ],
     "matched_policies": [
@@ -6214,7 +6286,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "정보 통합·앱·플랫폼",
     "micro_category": "정보 통합 플랫폼·앱",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196793",
@@ -6241,26 +6314,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 30: 아이돌봄, 서울형, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "상담팀",
-        "full_dept": "서울특별시 아동복지센터 상담팀",
-        "phone": "02-2040-4232",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -6308,7 +6381,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196601",
@@ -6333,29 +6407,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 다자녀·양육비·생활지원 / 다자녀 기준·혜택 기반 후보"
       }
     ],
     "matched_policies": [
@@ -6387,7 +6461,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "서울런·교육비 지원",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196561",
@@ -6415,27 +6490,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 40: 저출생사업, 무주택, 출산가구, 무주택가구, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 38: 무주택, 주거비, 월세, 주택, 주거, 무주택가구"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 2: 출산가구"
       }
     ],
     "matched_policies": [
@@ -6467,7 +6542,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "무주택 출산가구 주거비",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196496",
@@ -6494,9 +6570,9 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 21: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
@@ -6504,24 +6580,25 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "",
+        "matching_reason": "점수 12: 산전, 서울시, 건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 서울시"
       }
     ],
     "matched_policies": [],
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "정보 통합 플랫폼·앱",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196484",
@@ -6549,33 +6626,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 13: 자치구, 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 개선방안"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 자치구"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "신청·서류·행정기준 개선",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196336",
@@ -6603,34 +6681,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 주택, 주거"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 아파트, 다자녀"
       }
     ],
     "matched_policies": [],
     "category_raw": "다자녀",
     "sub_category": "지역 간 혜택 형평성",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196279",
@@ -6659,26 +6738,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진 - 1인 자영업자 등 임산부 출산급여, 배우자 출산휴가급여 지원 - 사업계획수립, 사회보장협의, 시스템 관리, 자치구 교육, 홍보 등 ㅇ 소상공인 민간 아이돌봄서비스 지원사업 추진 - 사업계획수립, 관계기관 협의, 홍보활성화 등",
+        "matching_reason": "점수 33: 민간 아이돌봄, 아이돌봄서비스, 시스템"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 31: 저출생사업, 아이돌봄, 개선, 서비스, 저출생사업1팀, 수요자"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 아이돌봄"
       }
     ],
     "matched_policies": [
@@ -6726,7 +6805,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "한부모·미혼모/부",
     "micro_category": "신청·서류·행정기준 개선",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196273",
@@ -6752,36 +6832,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 주거비, 주거"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 아파트, 다자녀"
       }
     ],
     "matched_policies": [],
     "category_raw": "다자녀",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "다자녀 생활·문화비 지원",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196265",
@@ -6807,29 +6888,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 22: 저출생사업, 아이돌봄, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -6877,7 +6958,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "근로시간 단축",
     "micro_category": "근로시간 단축·맞벌이",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196238",
@@ -6902,36 +6984,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196215",
@@ -6956,36 +7039,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "공공시설·생활편의",
     "micro_category": "공공시설·생활편의",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196096",
@@ -7014,33 +7098,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리",
+        "matching_reason": "점수 50: 무주택, 주거비, 월세, 주택, 주거, 자녀출산 무주택가구, 자녀출산"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 42: 저출생사업, 무주택, 출산가구, 자녀출산, 무주택가구, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 입양"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "무주택 출산가구 주거비",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196094",
@@ -7068,27 +7153,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 40: 저출생사업, 무주택, 산후조리, 자녀출산, 무주택가구, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 36: 무주택, 주거비, 주택, 주거, 자녀출산 무주택가구, 자녀출산, 무주택가구"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 자치구"
       }
     ],
     "matched_policies": [
@@ -7112,7 +7197,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "출산",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "출산정책 소급·기준 개선",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196093",
@@ -7139,34 +7225,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 40: 저출생사업, 무주택, 출산가구, 자녀출산, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 38: 무주택, 주거비, 월세, 주택, 주거, 자녀출산"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 저출산, 서울시"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "출산정책 소급·기준 개선",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195893",
@@ -7192,29 +7279,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 주거비, 주거"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 저출산, 서울시"
       }
     ],
     "matched_policies": [
@@ -7246,7 +7333,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195827",
@@ -7275,26 +7363,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 17: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 저출산, 서울시"
       }
     ],
     "matched_policies": [
@@ -7342,7 +7430,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195730",
@@ -7366,29 +7455,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       }
     ],
     "matched_policies": [
@@ -7436,7 +7525,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195711",
@@ -7460,36 +7550,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리 - 전산 용역 계획 수립 및 예산 편성 및 집행 - 정보센터 운영 시스템 유지관리업체 관리 ○한의약 난임 치료지원 사업(서울형) 추진에 관한 사항 - 한의약 난임 치료 지원사업 계획수립 및 평가 - 한의약 난임 치료 지원단 운영, 자치구 예...",
+        "matching_reason": "점수 25: 정보센터, 서울시, 서울형"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 서울시, 홈페이지"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 프로젝트"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "정보 통합·앱·플랫폼",
     "micro_category": "정보 통합 플랫폼·앱",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195684",
@@ -7513,29 +7604,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -7583,7 +7674,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195676",
@@ -7610,26 +7702,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족지원팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
         "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ...",
+        "matching_reason": "점수 9: 서울시, 가족지원팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 가족지원팀"
       }
     ],
     "matched_policies": [
@@ -7661,7 +7753,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195671",
@@ -7690,26 +7783,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 저출산, 고령사회"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 6: 건강임신지원팀, 저출산, 건강임신지원"
       }
     ],
     "matched_policies": [
@@ -7741,7 +7834,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195665",
@@ -7768,33 +7862,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진 - 서울 아기 건강 첫걸음 사업계획 수립 및 예산 집행, 평가 - 민간 위탁기관(사업지원단) 운영에 관한 사항 - 영유아 건강간호사 인력 관리 및 실적관리 ○ 생애 초기 건강관리사업 운영 - 생애 초기 건강관리사업 공모 사업계획 수립 ○ 35세 이...",
+        "matching_reason": "점수 18: 가족건강팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 가족건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "출산지원금·장려금",
     "micro_category": "입양·다양가족 기준",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195663",
@@ -7821,34 +7916,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "출산지원금·장려금",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195661",
@@ -7873,36 +7969,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 직원, 산후, 건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "출산지원금·장려금",
     "micro_category": "출산정책 소급·기준 개선",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195657",
@@ -7926,29 +8023,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ...",
+        "matching_reason": "점수 9: 서울시, 가족지원팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 가족지원팀"
       }
     ],
     "matched_policies": [
@@ -7980,7 +8077,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195558",
@@ -8004,36 +8102,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 자영업, 개선, 자영업자"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 자영업, 자영업자"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 가족지원팀"
       }
     ],
     "matched_policies": [],
     "category_raw": "다자녀",
     "sub_category": "육아휴직·출산휴가",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195496",
@@ -8057,36 +8156,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진 - 서울 아기 건강 첫걸음 사업계획 수립 및 예산 집행, 평가 - 민간 위탁기관(사업지원단) 운영에 관한 사항 - 영유아 건강간호사 인력 관리 및 실적관리 ○ 생애 초기 건강관리사업 운영 - 생애 초기 건강관리사업 공모 사업계획 수립 ○ 35세 이...",
+        "matching_reason": "점수 18: 가족건강팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 가족건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "결혼문화팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 결혼문화팀",
-        "phone": "02-2133-6550",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 9층",
-        "duty_summary": "ㅇ 더 아름다운 결혼식 업무 총괄 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195464",
@@ -8114,27 +8214,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 저출산"
       }
     ],
     "matched_policies": [
@@ -8166,7 +8266,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195458",
@@ -8193,34 +8294,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "육아휴직·출산휴가",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195098",
@@ -8244,29 +8346,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -8314,7 +8416,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194899",
@@ -8340,36 +8443,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 17: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 저출산"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194881",
@@ -8395,36 +8499,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 17: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 저출산"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194877",
@@ -8451,8 +8556,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 15: 관리를, 영유아, 어린이집"
       },
       {
         "rank": 2,
@@ -8460,17 +8565,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -8518,7 +8623,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194854",
@@ -8547,17 +8653,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 17: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
@@ -8565,8 +8671,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "",
+        "matching_reason": "점수 7: 산후, 건강팀"
       }
     ],
     "matched_policies": [
@@ -8614,7 +8720,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194750",
@@ -8640,29 +8747,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 22: 저출생사업, 산후조리, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 서울시, 시술비"
       }
     ],
     "matched_policies": [
@@ -8686,7 +8793,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "산후조리·도우미",
     "micro_category": "산후조리·산모 회복 지원",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194732",
@@ -8710,36 +8818,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194719",
@@ -8764,29 +8873,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 다자녀·양육비·생활지원 / 다자녀 기준·혜택 기반 후보"
       }
     ],
     "matched_policies": [
@@ -8818,7 +8927,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "공공임대·매입임대 개선",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194713",
@@ -8843,29 +8953,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 4: 서울시, 건강팀"
       }
     ],
     "matched_policies": [
@@ -8897,7 +9007,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194667",
@@ -8926,33 +9037,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 저출산"
       }
     ],
     "matched_policies": [],
     "category_raw": "다자녀",
     "sub_category": "교육비·서울런",
     "micro_category": "서울런·교육비 지원",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194610",
@@ -8979,8 +9091,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 22: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
@@ -8988,17 +9100,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 15: 임산부, 임신부"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       }
     ],
     "matched_policies": [
@@ -9046,7 +9158,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "임산부 건강검사·배려",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194484",
@@ -9072,36 +9185,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 저출산, 서울시"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "유모차 대중교통 접근성",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194469",
@@ -9125,29 +9239,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 19: 산후조리"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 18: 가족건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 17: 신생아, 가족건강팀"
       }
     ],
     "matched_policies": [
@@ -9195,7 +9309,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "출산",
     "sub_category": "산후조리·도우미",
     "micro_category": "산후조리·산모 회복 지원",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194363",
@@ -9223,33 +9338,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "출생축하·신생아 초기지원",
     "micro_category": "출산정책 소급·기준 개선",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194360",
@@ -9275,29 +9391,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 14: 등하원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 저출산, 서울시"
       }
     ],
     "matched_policies": [
@@ -9345,7 +9461,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "다문화·외국인",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194332",
@@ -9370,11 +9487,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 19: 산후조리"
       },
       {
         "rank": 2,
@@ -9382,17 +9499,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "duty_summary": "",
+        "matching_reason": "점수 13: 청소년"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 신생아, 수급권자"
       }
     ],
     "matched_policies": [
@@ -9440,7 +9557,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "출산",
     "sub_category": "한부모·미혼모/부",
     "micro_category": "서울런·교육비 지원",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194324",
@@ -9465,29 +9583,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 31: 저출생사업, 산후조리, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 신생아, 출산가정"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 산후조리·도우미 기반 후보"
       }
     ],
     "matched_policies": [
@@ -9511,7 +9629,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "출산",
     "sub_category": "산후조리·도우미",
     "micro_category": "산후조리·산모 회복 지원",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194273",
@@ -9538,34 +9657,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "육아휴직·출산휴가",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194248",
@@ -9594,17 +9714,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "다문화지원팀",
         "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
         "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등) ㅇ 다문화가족 건강지원 서비스 강화에 관한 사항 ㅇ 다문화가족 시간제 아이돌봄 거점센터 운영 ㅇ 다문화가족 자녀 방문학습 지원사업 운영 ㅇ 다문화아동 외국어 교육 지원 사업 ㅇ FC 서울 축구교실, 다문화가족 국민주택 특별공급",
+        "matching_reason": "점수 19: 다문화, 외국인"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 취약·다양가족 사각지대 / 다문화·외국인 기반 후보"
       },
       {
         "rank": 3,
@@ -9612,8 +9732,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "장애인가족지원팀",
         "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
         "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "duty_summary": "",
+        "matching_reason": "점수 3: 취약·다양가족 사각지대 / 다문화·외국인 기반 후보"
       }
     ],
     "matched_policies": [
@@ -9645,7 +9765,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다문화",
     "sub_category": "다문화·외국인",
     "micro_category": "서울런·교육비 지원",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194167",
@@ -9670,29 +9791,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 다자녀·양육비·생활지원 / 다자녀 기준·혜택 기반 후보"
       }
     ],
     "matched_policies": [
@@ -9724,7 +9845,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194164",
@@ -9752,17 +9874,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 3,
@@ -9770,15 +9892,16 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "",
+        "matching_reason": "점수 4: 서울시, 건강팀"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194163",
@@ -9804,27 +9927,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 38: 저출생사업, 산후조리, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 산후조리·도우미 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -9848,7 +9971,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "출산",
     "sub_category": "산후조리·도우미",
     "micro_category": "산후조리·산모 회복 지원",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194145",
@@ -9873,36 +9997,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 공무원, 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 주택"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194144",
@@ -9930,17 +10055,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 3,
@@ -9948,8 +10073,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "",
+        "matching_reason": "점수 4: 서울시, 건강팀"
       }
     ],
     "matched_policies": [
@@ -9997,7 +10122,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194129",
@@ -10021,36 +10147,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 24: 난임, 시술비"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 가족건강팀"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194046",
@@ -10075,36 +10202,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "무주택·월세·주거비",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193970",
@@ -10128,11 +10256,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 2,
@@ -10140,17 +10268,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "장애인가족지원팀",
         "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
         "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "duty_summary": "",
+        "matching_reason": "점수 7: 가족지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 가족지원팀"
       }
     ],
     "matched_policies": [
@@ -10182,7 +10310,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193884",
@@ -10208,34 +10337,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 서울시, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 서울시"
       }
     ],
     "matched_policies": [],
     "category_raw": "임신",
     "sub_category": "임산부 건강검사·배려",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193853",
@@ -10260,36 +10390,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 12: 자영업, 개선, 자영업자"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 자영업, 자영업자"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193727",
@@ -10315,34 +10446,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 22: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 17: 시스템, 서울시, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 임산부, 임신부"
       }
     ],
     "matched_policies": [],
     "category_raw": "임신",
     "sub_category": "임산부 건강검사·배려",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193695",
@@ -10367,11 +10499,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
@@ -10379,8 +10511,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 11: 시스템"
       },
       {
         "rank": 3,
@@ -10388,15 +10520,16 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "",
+        "matching_reason": "점수 11: 산후, 서울시, 건강팀, 프로그램"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "공공시설·생활편의",
     "micro_category": "공공시설·생활편의",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193669",
@@ -10423,33 +10556,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진 - 서울 아기 건강 첫걸음 사업계획 수립 및 예산 집행, 평가 - 민간 위탁기관(사업지원단) 운영에 관한 사항 - 영유아 건강간호사 인력 관리 및 실적관리 ○ 생애 초기 건강관리사업 운영 - 생애 초기 건강관리사업 공모 사업계획 수립 ○ 35세 이...",
+        "matching_reason": "점수 18: 가족건강팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 가족건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "공공시설·생활편의",
     "micro_category": "출산정책 소급·기준 개선",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193598",
@@ -10477,27 +10611,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 17: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 영유아, 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 직원, 서울시, 건강팀"
       }
     ],
     "matched_policies": [
@@ -10545,7 +10679,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193589",
@@ -10569,29 +10704,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "결혼문화팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 결혼문화팀",
-        "phone": "02-2133-6550",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 9층",
-        "duty_summary": "ㅇ 더 아름다운 결혼식 업무 총괄 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       }
     ],
     "matched_policies": [
@@ -10639,7 +10774,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193306",
@@ -10663,36 +10799,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진 - 서울 아기 건강 첫걸음 사업계획 수립 및 예산 집행, 평가 - 민간 위탁기관(사업지원단) 운영에 관한 사항 - 영유아 건강간호사 인력 관리 및 실적관리 ○ 생애 초기 건강관리사업 운영 - 생애 초기 건강관리사업 공모 사업계획 수립 ○ 35세 이...",
+        "matching_reason": "점수 18: 가족건강팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 가족건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "출생축하·신생아 초기지원",
     "micro_category": "출생축하·신생아 초기지원",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193159",
@@ -10719,26 +10856,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -10786,7 +10923,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "상담·매칭",
     "micro_category": "상담·매칭",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193131",
@@ -10812,29 +10950,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "○ 시의회 및 국회 관련 업무 ○ 대한노인회 서울시 연합회 운영·지원 ○ 어버이날, 노인의 날 등 행사 ○ 효행 유공자 등 포상 및 시장 표창 ○ 저출산·고령사회 기본계획 수립(보건복지부) ○ 어르신 정보몽땅 홈페이지 구축·운영 ○ 바인더(시설통계 포함)",
+        "matching_reason": "점수 29: 저출산, 고령사회, 기본계획, 보건복지부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 24: 저출생사업, 개선, 서비스, 저출생사업1팀, 수요자"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 서비스, 시간제"
       }
     ],
     "matched_policies": [
@@ -10882,7 +11020,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "육아휴직·출산휴가",
     "micro_category": "다자녀 생활·문화비 지원",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193097",
@@ -10908,27 +11047,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 37: 난임, 시술비, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -10976,7 +11115,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-192909",
@@ -11003,8 +11143,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족지원팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
         "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ...",
+        "matching_reason": "점수 9: 서울시, 가족지원팀"
       },
       {
         "rank": 2,
@@ -11012,17 +11152,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "장애인가족지원팀",
         "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
         "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "duty_summary": "",
+        "matching_reason": "점수 7: 가족지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       }
     ],
     "matched_policies": [
@@ -11054,7 +11194,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "유모차 대중교통 접근성",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-192871",
@@ -11078,20 +11219,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
@@ -11099,8 +11240,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -11148,7 +11289,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-192865",
@@ -11172,29 +11314,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       }
     ],
     "matched_policies": [
@@ -11242,7 +11384,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-192326",
@@ -11267,29 +11410,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 산후, 건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       }
     ],
     "matched_policies": [
@@ -11337,7 +11480,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-192106",
@@ -11361,36 +11505,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "유전자·난임 검사 지원",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191846",
@@ -11415,29 +11560,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 쉼터"
       }
     ],
     "matched_policies": [
@@ -11485,7 +11630,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "상담·매칭",
     "micro_category": "상담·심리·매칭",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191836",
@@ -11509,29 +11655,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 23: 어린이집 영유아, 영유아, 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       }
     ],
     "matched_policies": [
@@ -11579,7 +11725,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191657",
@@ -11603,29 +11750,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업 ○ 여성장애인 교육 지원 ○ 장애인 출산비용 지원 ○ 장애인 공동주택 특별공급 기관추천 및 신청시스템 운영(누리집 등록) ○ 상담지원관 운영 및 관리",
+        "matching_reason": "점수 14: 장애인, 가족지원팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 서울시, 가족지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 개선"
       }
     ],
     "matched_policies": [
@@ -11657,7 +11804,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191470",
@@ -11684,34 +11832,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "출산지원금·장려금",
     "micro_category": "출산지원금·장려금",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191363",
@@ -11735,36 +11884,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191294",
@@ -11791,27 +11941,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 31: 저출생사업, 소상공인, 개선, 서비스, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 소상공인"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       }
     ],
     "matched_policies": [
@@ -11859,7 +12009,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191232",
@@ -11884,20 +12035,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 19: 산후조리"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 기저귀"
       },
       {
         "rank": 3,
@@ -11905,15 +12056,16 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 10: 신생아"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "산후조리·도우미",
     "micro_category": "산모·신생아 도우미",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191195",
@@ -11939,29 +12091,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 33: 저출생사업, 산후조리, 서비스, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출산, 어르신"
       }
     ],
     "matched_policies": [
@@ -12009,7 +12161,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "산후조리·도우미",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191054",
@@ -12036,9 +12189,9 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "phone": "02-2133-9485",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진 - 서울 아기 건강 첫걸음 사업계획 수립 및 예산 집행, 평가 - 민간 위탁기관(사업지원단) 운영에 관한 사항 - 영유아 건강간호사 인력 관리 및 실적관리 ○ 생애 초기 건강관리사업 운영 - 생애 초기 건강관리사업 공모 사업계획 수립 ○ 35세 이...",
+        "matching_reason": "점수 18: 신생아, 임산부"
       },
       {
         "rank": 2,
@@ -12046,17 +12199,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "",
+        "matching_reason": "점수 15: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 임산부"
       }
     ],
     "matched_policies": [
@@ -12104,7 +12257,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "임산부 건강검사·배려",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191053",
@@ -12132,33 +12286,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 13: 영유아, 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 월세"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191049",
@@ -12183,29 +12338,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 종사자, 홈페이지"
       }
     ],
     "matched_policies": [
@@ -12253,7 +12408,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "정보 통합 플랫폼·앱",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-190968",
@@ -12277,29 +12433,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -12347,7 +12503,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-190902",
@@ -12371,36 +12528,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 13: 영유아, 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-190681",
@@ -12424,36 +12582,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-190633",
@@ -12479,36 +12638,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 23: 난임, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 산전, 서울시, 건강팀, 프로그램"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [],
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-190617",
@@ -12532,36 +12692,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-190545",
@@ -12590,26 +12751,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 29: 저출생사업, 아이돌봄, 개선, 서비스, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 아이돌봄서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 아이돌봄"
       }
     ],
     "matched_policies": [
@@ -12657,7 +12818,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "아이돌봄서비스 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-190426",
@@ -12681,29 +12843,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 직원, 서울시"
       }
     ],
     "matched_policies": [
@@ -12751,7 +12913,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-190358",
@@ -12775,36 +12938,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "신청·서류·기준 개선",
     "micro_category": "위기임산부 보호·상담",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-190352",
@@ -12828,29 +12992,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       }
     ],
     "matched_policies": [
@@ -12898,7 +13062,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189934",
@@ -12922,36 +13087,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189861",
@@ -12976,29 +13142,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 10: 개선, 자녀출산"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 4: 서울시, 건강팀"
       }
     ],
     "matched_policies": [
@@ -13030,7 +13196,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189652",
@@ -13057,26 +13224,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진 - 서울 아기 건강 첫걸음 사업계획 수립 및 예산 집행, 평가 - 민간 위탁기관(사업지원단) 운영에 관한 사항 - 영유아 건강간호사 인력 관리 및 실적관리 ○ 생애 초기 건강관리사업 운영 - 생애 초기 건강관리사업 공모 사업계획 수립 ○ 35세 이...",
+        "matching_reason": "점수 20: 임산부, 가족건강팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 임산부, 가족건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 임산부"
       }
     ],
     "matched_policies": [
@@ -13124,7 +13291,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "출산",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189401",
@@ -13148,36 +13316,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189236",
@@ -13205,26 +13374,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리 - 전산 용역 계획 수립 및 예산 편성 및 집행 - 정보센터 운영 시스템 유지관리업체 관리 ○한의약 난임 치료지원 사업(서울형) 추진에 관한 사항 - 한의약 난임 치료 지원사업 계획수립 및 평가 - 한의약 난임 치료 지원단 운영, 자치구 예...",
+        "matching_reason": "점수 20: 정보센터, 서울시"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 임산부"
       }
     ],
     "matched_policies": [
@@ -13272,7 +13441,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "정보 통합·앱·플랫폼",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189218",
@@ -13296,29 +13466,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -13366,7 +13536,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189200",
@@ -13390,29 +13561,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 13: 영유아, 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 전세"
       }
     ],
     "matched_policies": [
@@ -13460,7 +13631,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189155",
@@ -13484,29 +13656,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -13554,7 +13726,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189150",
@@ -13578,29 +13751,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 직원, 서울시"
       }
     ],
     "matched_policies": [
@@ -13648,7 +13821,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189149",
@@ -13672,29 +13846,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 15: 자치구, 영유아, 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 자치구, 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 직원, 서울시"
       }
     ],
     "matched_policies": [
@@ -13742,7 +13916,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189148",
@@ -13766,29 +13941,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 공무원"
       }
     ],
     "matched_policies": [
@@ -13836,7 +14011,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189145",
@@ -13860,29 +14036,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -13930,7 +14106,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "유전자·난임 검사 지원",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189144",
@@ -13955,36 +14132,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등) ㅇ 다문화가족 건강지원 서비스 강화에 관한 사항 ㅇ 다문화가족 시간제 아이돌봄 거점센터 운영 ㅇ 다문화가족 자녀 방문학습 지원사업 운영 ㅇ 다문화아동 외국어 교육 지원 사업 ㅇ FC 서울 축구교실, 다문화가족 국민주택 특별공급",
+        "matching_reason": "점수 19: 다문화, 외국인"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 취약·다양가족 사각지대 / 다문화·외국인 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 취약·다양가족 사각지대 / 다문화·외국인 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "다문화",
     "sub_category": "다문화·외국인",
     "micro_category": "출산지원금·수당 확대",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189075",
@@ -14009,36 +14187,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "성평등·인식개선 교육",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189067",
@@ -14062,36 +14241,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "신청·서류·행정기준 개선",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-188884",
@@ -14115,29 +14295,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -14185,7 +14365,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-188854",
@@ -14213,34 +14394,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5025",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리",
+        "matching_reason": "점수 12: 주거비, 주거"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-188801",
@@ -14267,33 +14449,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 12: 서울형, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-188788",
@@ -14320,8 +14503,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 22: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
@@ -14329,17 +14512,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 15: 임산부, 임신부"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       }
     ],
     "matched_policies": [
@@ -14387,7 +14570,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "임산부 건강검사·배려",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-188675",
@@ -14412,20 +14596,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 17: 난임, 건강임신지원팀, 인식개선, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 임산부"
       },
       {
         "rank": 3,
@@ -14433,8 +14617,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "",
+        "matching_reason": "점수 10: 직원, 건강팀"
       }
     ],
     "matched_policies": [
@@ -14482,7 +14666,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "육아휴직·출산휴가",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-188468",
@@ -14506,29 +14691,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등 ○ 주거안정 지원사업 전수조사 실시(지원) ○ 직원 책임보험 운영(행정종합배상공제) ○ 순직 유가족, 재직중 사망직원 지원, 부조급여 및 기타 재해보상제도 ○ 대여학자금 상환 원천징수 고지 및 정산 ○ 다자녀 출산직원 지원(임신·...",
+        "matching_reason": "점수 12: 공무원, 직원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       }
     ],
     "matched_policies": [
@@ -14576,7 +14761,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-188264",
@@ -14600,29 +14786,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -14670,7 +14856,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-188170",
@@ -14694,36 +14881,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-187957",
@@ -14748,29 +14936,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 쉼터, 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 영유아, 어린이집"
       }
     ],
     "matched_policies": [
@@ -14818,7 +15006,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "한부모·미혼모/부",
     "micro_category": "초등 방과후·늘봄",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-187873",
@@ -14846,26 +15035,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 서울시, 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 서울시, 시술비, 건강팀"
       }
     ],
     "matched_policies": [
@@ -14913,7 +15102,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-187774",
@@ -14937,36 +15127,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "유치원·방과후 과정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-187760",
@@ -14990,36 +15181,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-187366",
@@ -15046,26 +15238,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 어린이집"
       }
     ],
     "matched_policies": [
@@ -15113,7 +15305,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "야간·주말·긴급보육",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-187052",
@@ -15140,8 +15333,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "장애인가족지원팀",
         "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
         "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업 ○ 여성장애인 교육 지원 ○ 장애인 출산비용 지원 ○ 장애인 공동주택 특별공급 기관추천 및 신청시스템 운영(누리집 등록) ○ 상담지원관 운영 및 관리",
+        "matching_reason": "점수 9: 공동주택, 가족지원팀"
       },
       {
         "rank": 2,
@@ -15149,17 +15342,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족지원팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
         "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 9: 서울시, 가족지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 개선"
       }
     ],
     "matched_policies": [
@@ -15191,7 +15384,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "공공임대·매입임대 개선",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-186586",
@@ -15215,29 +15409,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       }
     ],
     "matched_policies": [
@@ -15285,7 +15479,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "경력단절·자립",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-186461",
@@ -15309,36 +15504,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-186221",
@@ -15365,34 +15561,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "출생축하·신생아 초기지원",
     "micro_category": "위기임산부 보호·상담",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-186176",
@@ -15419,8 +15616,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 24: 난임, 건강임신지원팀, 운영에, 건강임신지원"
       },
       {
         "rank": 2,
@@ -15428,24 +15625,25 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 17: 임산부, 운영에, 임신부"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       }
     ],
     "matched_policies": [],
     "category_raw": "임신",
     "sub_category": "임산부 건강검사·배려",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-185985",
@@ -15469,36 +15667,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-185793",
@@ -15522,36 +15721,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-185569",
@@ -15575,36 +15775,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-185295",
@@ -15628,20 +15829,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진 - 서울 아기 건강 첫걸음 사업계획 수립 및 예산 집행, 평가 - 민간 위탁기관(사업지원단) 운영에 관한 사항 - 영유아 건강간호사 인력 관리 및 실적관리 ○ 생애 초기 건강관리사업 운영 - 생애 초기 건강관리사업 공모 사업계획 수립 ○ 35세 이...",
+        "matching_reason": "점수 18: 가족건강팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 가족건강팀"
       },
       {
         "rank": 3,
@@ -15649,15 +15850,16 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "육아휴직·출산휴가",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-185291",
@@ -15683,27 +15885,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 38: 저출생사업, 산후조리, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 산후조리·도우미 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -15727,7 +15929,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "출산",
     "sub_category": "산후조리·도우미",
     "micro_category": "산후조리·산모 회복 지원",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-185286",
@@ -15753,34 +15956,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "phone": "02-2133-9491",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리 - 전산 용역 계획 수립 및 예산 편성 및 집행 - 정보센터 운영 시스템 유지관리업체 관리 ○한의약 난임 치료지원 사업(서울형) 추진에 관한 사항 - 한의약 난임 치료 지원사업 계획수립 및 평가 - 한의약 난임 치료 지원단 운영, 자치구 예...",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 상담·매칭 기반 후보"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 상담·매칭 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 상담·매칭 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "공공 유모차·생활편의",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-185280",
@@ -15804,36 +16008,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진 - 서울 아기 건강 첫걸음 사업계획 수립 및 예산 집행, 평가 - 민간 위탁기관(사업지원단) 운영에 관한 사항 - 영유아 건강간호사 인력 관리 및 실적관리 ○ 생애 초기 건강관리사업 운영 - 생애 초기 건강관리사업 공모 사업계획 수립 ○ 35세 이...",
+        "matching_reason": "점수 18: 가족건강팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 가족건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "조부모 돌봄비 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-185277",
@@ -15857,36 +16062,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 21: 아이돌봄"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "조부모 돌봄비 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-185272",
@@ -15910,36 +16116,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 21: 아이돌봄"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "조부모 돌봄비 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-185243",
@@ -15963,36 +16170,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-185220",
@@ -16016,36 +16224,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진 - 1인 자영업자 등 임산부 출산급여, 배우자 출산휴가급여 지원 - 사업계획수립, 사회보장협의, 시스템 관리, 자치구 교육, 홍보 등 ㅇ 소상공인 민간 아이돌봄서비스 지원사업 추진 - 사업계획수립, 관계기관 협의, 홍보활성화 등",
+        "matching_reason": "점수 9: 일·가정 양립·부모 노동 / 육아휴직·출산휴가 기반 후보"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 일·가정 양립·부모 노동 / 육아휴직·출산휴가 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "결혼문화팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 결혼문화팀",
-        "phone": "02-2133-6550",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 9층",
-        "duty_summary": "ㅇ 더 아름다운 결혼식 업무 총괄 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "육아휴직·출산휴가",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184852",
@@ -16072,26 +16281,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 15: 등하원, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 주거"
       }
     ],
     "matched_policies": [
@@ -16139,7 +16348,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184604",
@@ -16164,36 +16374,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등) ㅇ 다문화가족 건강지원 서비스 강화에 관한 사항 ㅇ 다문화가족 시간제 아이돌봄 거점센터 운영 ㅇ 다문화가족 자녀 방문학습 지원사업 운영 ㅇ 다문화아동 외국어 교육 지원 사업 ㅇ FC 서울 축구교실, 다문화가족 국민주택 특별공급",
+        "matching_reason": "점수 19: 다문화, 외국인"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 4: 서울시, 건강팀"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "위기임산부",
     "micro_category": "위기임산부 보호·상담",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184573",
@@ -16217,36 +16428,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "육아휴직·출산휴가",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184570",
@@ -16270,20 +16482,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리",
+        "matching_reason": "점수 8: 주거"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 주거·교통·도시생활환경 / 유모차·교통 접근성 기반 후보"
       },
       {
         "rank": 3,
@@ -16291,15 +16503,16 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 0: 주거·교통·도시생활환경 / 유모차·교통 접근성 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "유모차·교통 접근성",
     "micro_category": "유모차 대중교통 접근성",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184569",
@@ -16323,36 +16536,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리 - 전산 용역 계획 수립 및 예산 편성 및 집행 - 정보센터 운영 시스템 유지관리업체 관리 ○한의약 난임 치료지원 사업(서울형) 추진에 관한 사항 - 한의약 난임 치료 지원사업 계획수립 및 평가 - 한의약 난임 치료 지원단 운영, 자치구 예...",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 상담·매칭 기반 후보"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 상담·매칭 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 상담·매칭 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "위기임산부",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184568",
@@ -16378,34 +16592,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "phone": "02-2133-9491",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리 - 전산 용역 계획 수립 및 예산 편성 및 집행 - 정보센터 운영 시스템 유지관리업체 관리 ○한의약 난임 치료지원 사업(서울형) 추진에 관한 사항 - 한의약 난임 치료 지원사업 계획수립 및 평가 - 한의약 난임 치료 지원단 운영, 자치구 예...",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 상담·매칭 기반 후보"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 상담·매칭 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 상담·매칭 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "상담·매칭",
     "micro_category": "상담·심리·매칭",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184567",
@@ -16429,36 +16644,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리 - 전산 용역 계획 수립 및 예산 편성 및 집행 - 정보센터 운영 시스템 유지관리업체 관리 ○한의약 난임 치료지원 사업(서울형) 추진에 관한 사항 - 한의약 난임 치료 지원사업 계획수립 및 평가 - 한의약 난임 치료 지원단 운영, 자치구 예...",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 상담·매칭 기반 후보"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 상담·매칭 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 상담·매칭 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "부모교육·아빠교육",
     "micro_category": "부모교육·아빠 육아교육",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184566",
@@ -16484,34 +16700,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "phone": "02-2133-9491",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리 - 전산 용역 계획 수립 및 예산 편성 및 집행 - 정보센터 운영 시스템 유지관리업체 관리 ○한의약 난임 치료지원 사업(서울형) 추진에 관한 사항 - 한의약 난임 치료 지원사업 계획수립 및 평가 - 한의약 난임 치료 지원단 운영, 자치구 예...",
+        "matching_reason": "점수 21: 정보센터"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 정보 통합·앱·플랫폼 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 정보 통합·앱·플랫폼 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "지역 간 혜택 형평성",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184408",
@@ -16535,36 +16752,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 21: 아이돌봄"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 아이돌봄, 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "정보 통합·앱·플랫폼",
     "micro_category": "출산지원금·수당 확대",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184404",
@@ -16589,29 +16807,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 4: 서울시, 건강팀"
       }
     ],
     "matched_policies": [
@@ -16643,7 +16861,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184312",
@@ -16667,36 +16886,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등 ○ 주거안정 지원사업 전수조사 실시(지원) ○ 직원 책임보험 운영(행정종합배상공제) ○ 순직 유가족, 재직중 사망직원 지원, 부조급여 및 기타 재해보상제도 ○ 대여학자금 상환 원천징수 고지 및 정산 ○ 다자녀 출산직원 지원(임신·...",
+        "matching_reason": "점수 16: 직원, 재직중"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 직원, 건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 일·가정 양립·부모 노동 / 육아휴직·출산휴가 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "육아휴직·출산휴가",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184170",
@@ -16720,29 +16940,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 주택, 주거"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       }
     ],
     "matched_policies": [
@@ -16790,7 +17010,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "상담·매칭",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184161",
@@ -16815,29 +17036,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 다자녀·양육비·생활지원 / 다자녀 기준·혜택 기반 후보"
       }
     ],
     "matched_policies": [
@@ -16869,7 +17090,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 주차·공공요금 감면",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183929",
@@ -16894,36 +17116,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "출산지원금·장려금",
     "micro_category": "성평등·인식개선 교육",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183782",
@@ -16950,33 +17173,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183631",
@@ -17004,34 +17228,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 45: 저출생사업, 무주택, 출산가구, 개선, 개선방안, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 41: 무주택, 주거비, 월세, 전세, 주택, 주거"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 임대아파트, 아파트, 다자녀"
       }
     ],
     "matched_policies": [],
     "category_raw": "다자녀",
     "sub_category": "무주택·월세·주거비",
     "micro_category": "무주택 출산가구 주거비",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183623",
@@ -17059,8 +17284,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영 - 만성질환(고혈압, 당뇨, 비만, 이상지질혈증)관리 프로그램 - 건강상담 및 진료예약 서비스 등 - 종합건강검진 예약관리시스템 - 종합건강검진 통계·분석 - 산전·산후 방문관리서비스 - 수면관리 프로그램 - 금연 프로그램 ○ 직원 대사증후군(혈압,...",
+        "matching_reason": "점수 14: 건강검진, 서울시, 건강팀"
       },
       {
         "rank": 2,
@@ -17068,17 +17293,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 어르신, 서울시"
       }
     ],
     "matched_policies": [
@@ -17126,7 +17351,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183353",
@@ -17155,26 +17381,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 저출산"
       }
     ],
     "matched_policies": [
@@ -17206,7 +17432,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183127",
@@ -17231,29 +17458,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진 - 서울 아기 건강 첫걸음 사업계획 수립 및 예산 집행, 평가 - 민간 위탁기관(사업지원단) 운영에 관한 사항 - 영유아 건강간호사 인력 관리 및 실적관리 ○ 생애 초기 건강관리사업 운영 - 생애 초기 건강관리사업 공모 사업계획 수립 ○ 35세 이...",
+        "matching_reason": "점수 17: 임산부, 임신부, 모자보건"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 임산부, 모자보건"
       }
     ],
     "matched_policies": [
@@ -17301,7 +17528,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182901",
@@ -17325,36 +17553,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 어르신"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "산모·신생아 도우미",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182871",
@@ -17378,36 +17607,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "○ 시의회 및 국회 관련 업무 ○ 대한노인회 서울시 연합회 운영·지원 ○ 어버이날, 노인의 날 등 행사 ○ 효행 유공자 등 포상 및 시장 표창 ○ 저출산·고령사회 기본계획 수립(보건복지부) ○ 어르신 정보몽땅 홈페이지 구축·운영 ○ 바인더(시설통계 포함)",
+        "matching_reason": "점수 9: 정보·상담·교육·거버넌스 / 신청·서류·기준 개선 기반 후보"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "상담팀",
-        "full_dept": "서울특별시 아동복지센터 상담팀",
-        "phone": "02-2040-4232",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 신청·서류·기준 개선 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182870",
@@ -17431,29 +17661,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       }
     ],
     "matched_policies": [
@@ -17501,7 +17731,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182865",
@@ -17527,34 +17758,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 인식개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 부모교육·아빠교육 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "부모교육·아빠교육",
     "micro_category": "부모교육·아빠 육아교육",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182859",
@@ -17581,34 +17813,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 21: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 6: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 건강팀"
       }
     ],
     "matched_policies": [],
     "category_raw": "임신",
     "sub_category": "임산부 건강검사·배려",
     "micro_category": "임산부 건강검사·배려",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182858",
@@ -17632,36 +17865,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 인식개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 정보·상담·교육·거버넌스 / 부모교육·아빠교육 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "부모교육·아빠교육",
     "micro_category": "부모교육·아빠 육아교육",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182856",
@@ -17688,26 +17922,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 아이돌봄서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 아이돌봄, 서비스"
       }
     ],
     "matched_policies": [
@@ -17755,7 +17989,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "야간·주말·긴급보육",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182827",
@@ -17780,36 +18015,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 31: 저출생사업, 산후조리, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 산후조리·도우미 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 신생아"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "산후조리·도우미",
     "micro_category": "산모·신생아 도우미",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182764",
@@ -17833,29 +18069,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       }
     ],
     "matched_policies": [
@@ -17903,7 +18139,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182746",
@@ -17929,29 +18166,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 17: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 보조인력, 영유아, 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 저출산"
       }
     ],
     "matched_policies": [
@@ -17999,7 +18236,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "산모·신생아 도우미",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182675",
@@ -18026,33 +18264,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 22: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 임산부, 임신부"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       }
     ],
     "matched_policies": [],
     "category_raw": "임신",
     "sub_category": "임산부 건강검사·배려",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182496",
@@ -18079,34 +18318,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-181948",
@@ -18135,26 +18375,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 31: 저출생사업, 산후조리, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 산후조리·도우미 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 신생아"
       }
     ],
     "matched_policies": [
@@ -18178,7 +18418,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "출산",
     "sub_category": "산후조리·도우미",
     "micro_category": "산후조리·산모 회복 지원",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-181936",
@@ -18205,27 +18446,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 17: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 영유아, 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 어린이집·유치원 기반 후보"
       }
     ],
     "matched_policies": [
@@ -18273,7 +18514,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-181875",
@@ -18297,36 +18539,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 13: 자치구, 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 자치구, 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 시스템, 자치구"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-181849",
@@ -18350,36 +18593,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "유모차 대중교통 접근성",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-181847",
@@ -18403,36 +18647,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-181473",
@@ -18457,29 +18702,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 4: 서울시, 홈페이지"
       }
     ],
     "matched_policies": [
@@ -18511,7 +18756,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-181437",
@@ -18538,8 +18784,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
@@ -18547,17 +18793,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 21: 아이돌봄서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 아이돌봄, 서비스"
       }
     ],
     "matched_policies": [
@@ -18605,7 +18851,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "초등 방과후·늘봄",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-181306",
@@ -18629,29 +18876,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "결혼문화팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 결혼문화팀",
-        "phone": "02-2133-6550",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 9층",
-        "duty_summary": "ㅇ 더 아름다운 결혼식 업무 총괄 관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -18699,7 +18946,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180894",
@@ -18724,29 +18972,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진 - 1인 자영업자 등 임산부 출산급여, 배우자 출산휴가급여 지원 - 사업계획수립, 사회보장협의, 시스템 관리, 자치구 교육, 홍보 등 ㅇ 소상공인 민간 아이돌봄서비스 지원사업 추진 - 사업계획수립, 관계기관 협의, 홍보활성화 등",
+        "matching_reason": "점수 21: 아이돌봄서비스"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 17: 아이돌봄, 개선, 서비스"
       }
     ],
     "matched_policies": [
@@ -18794,7 +19042,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "출산정책 소급·기준 개선",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180806",
@@ -18822,34 +19071,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 출산가정"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "출산",
     "sub_category": "출산지원금·장려금",
     "micro_category": "신청·서류·행정기준 개선",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180667",
@@ -18873,29 +19123,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업 ○ 여성장애인 교육 지원 ○ 장애인 출산비용 지원 ○ 장애인 공동주택 특별공급 기관추천 및 신청시스템 운영(누리집 등록) ○ 상담지원관 운영 및 관리",
+        "matching_reason": "점수 14: 장애인, 가족지원팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 서울시, 가족지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 개선"
       }
     ],
     "matched_policies": [
@@ -18927,7 +19177,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180655",
@@ -18953,29 +19204,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 20: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 저출산, 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       }
     ],
     "matched_policies": [
@@ -19007,7 +19258,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180628",
@@ -19031,29 +19283,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ...",
+        "matching_reason": "점수 9: 서울시, 가족지원팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 가족지원팀"
       }
     ],
     "matched_policies": [
@@ -19085,7 +19337,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180493",
@@ -19112,26 +19365,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진 - 서울 아기 건강 첫걸음 사업계획 수립 및 예산 집행, 평가 - 민간 위탁기관(사업지원단) 운영에 관한 사항 - 영유아 건강간호사 인력 관리 및 실적관리 ○ 생애 초기 건강관리사업 운영 - 생애 초기 건강관리사업 공모 사업계획 수립 ○ 35세 이...",
+        "matching_reason": "점수 9: 임산부, 가족건강팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 임산부, 가족건강팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 주거"
       }
     ],
     "matched_policies": [
@@ -19179,7 +19432,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "출산",
     "sub_category": "유모차·교통 접근성",
     "micro_category": "유모차 대중교통 접근성",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180489",
@@ -19207,33 +19461,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 21: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 건강팀, 프로그램"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 6: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "임신",
     "sub_category": "임산부 건강검사·배려",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180472",
@@ -19259,27 +19514,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 24: 난임, 자치구, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 17: 자치구, 서울시, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 17: 임산부, 의료비, 임신부"
       }
     ],
     "matched_policies": [
@@ -19327,7 +19582,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180440",
@@ -19352,36 +19608,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 15: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 임산부, 임신부"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 임산부"
       }
     ],
     "matched_policies": [],
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "유전자·난임 검사 지원",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180406",
@@ -19406,36 +19663,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 어린이집·유치원 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "조부모 돌봄비 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180363",
@@ -19459,36 +19717,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180324",
@@ -19514,29 +19773,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 15: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 출산·산후 초기지원 / 출산지원금·장려금 기반 후보"
       }
     ],
     "matched_policies": [
@@ -19568,7 +19827,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "출산",
     "sub_category": "한부모·미혼모/부",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180319",
@@ -19592,36 +19852,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "결혼문화팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 결혼문화팀",
-        "phone": "02-2133-6550",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 9층",
-        "duty_summary": "ㅇ 더 아름다운 결혼식 업무 총괄 관리"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 장애인"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180125",
@@ -19648,33 +19909,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "초등 방과후·늘봄",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180104",
@@ -19703,26 +19965,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 22: 저출생사업, 개선, 개선방안, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 저출산, 서울시, 홈페이지"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       }
     ],
     "matched_policies": [
@@ -19754,7 +20016,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 인정 기준 완화",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180063",
@@ -19778,29 +20041,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -19848,7 +20111,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-179976",
@@ -19875,8 +20139,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
@@ -19884,8 +20148,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       },
       {
         "rank": 3,
@@ -19893,8 +20157,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "생활지원팀",
         "full_dept": "서울특별시 아동복지센터 생활지원팀",
         "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 야간·주말·긴급보육 기반 후보"
       }
     ],
     "matched_policies": [
@@ -19942,7 +20206,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "야간·주말·긴급보육",
     "micro_category": "야간·주말·긴급보육",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-179899",
@@ -19970,26 +20235,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 어린이집·유치원 기반 후보"
       }
     ],
     "matched_policies": [
@@ -20037,7 +20302,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "육아휴직·출산휴가",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-179862",
@@ -20062,29 +20328,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 13: 영유아, 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 4: 서울시, 건강팀"
       }
     ],
     "matched_policies": [
@@ -20132,7 +20398,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-202347",
@@ -20157,29 +20424,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 4: 서비스, 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -20227,7 +20494,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201935",
@@ -20254,26 +20522,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 건강검진, 서비스, 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       }
     ],
     "matched_policies": [
@@ -20321,7 +20589,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "신청·서류·기준 개선",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201933",
@@ -20347,11 +20616,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 지원사업, 건강임신지원"
       },
       {
         "rank": 2,
@@ -20359,24 +20628,25 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "duty_summary": "",
+        "matching_reason": "점수 18: 서울시, 지원사업, 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 주거비, 주거, 지원사업"
       }
     ],
     "matched_policies": [],
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201714",
@@ -20403,26 +20673,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 17: 아이돌봄, 개선, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 시스템"
       }
     ],
     "matched_policies": [
@@ -20470,7 +20740,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "신청·서류·기준 개선",
     "micro_category": "신청·서류·행정기준 개선",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201704",
@@ -20497,8 +20768,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
@@ -20506,17 +20777,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 17: 아이돌봄, 개선, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -20564,7 +20835,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "신청·서류·기준 개선",
     "micro_category": "신청·서류·행정기준 개선",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201651",
@@ -20589,29 +20861,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 어린이집·유치원 기반 후보"
       }
     ],
     "matched_policies": [
@@ -20659,7 +20931,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "신청·서류·행정기준 개선",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201642",
@@ -20686,17 +20959,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 33: 아이돌봄, 등하원, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 아이돌봄"
       },
       {
         "rank": 3,
@@ -20704,8 +20977,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -20753,7 +21026,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "조부모 돌봄비 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201604",
@@ -20777,29 +21051,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 장애인"
       }
     ],
     "matched_policies": [
@@ -20847,7 +21121,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "아이돌봄·조부모·베이비시터",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201545",
@@ -20874,26 +21149,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 야간·주말·긴급보육 기반 후보"
       }
     ],
     "matched_policies": [
@@ -20941,7 +21216,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "야간·주말·긴급보육",
     "micro_category": "야간·주말·긴급보육",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201543",
@@ -20968,26 +21244,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -21035,7 +21311,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "신청·서류·행정기준 개선",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201540",
@@ -21062,8 +21339,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
@@ -21071,17 +21348,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 12: 아이돌봄, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -21129,7 +21406,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "초등 방과후·늘봄",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-201497",
@@ -21157,26 +21435,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 32: 난임, 시술비, 건강임신지원팀, 지원사업, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 지원사업, 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 지원사업"
       }
     ],
     "matched_policies": [
@@ -21224,7 +21502,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-200910",
@@ -21248,29 +21527,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "상담팀",
-        "full_dept": "서울특별시 아동복지센터 상담팀",
-        "phone": "02-2040-4232",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 어르신, 서울시"
       }
     ],
     "matched_policies": [
@@ -21318,7 +21597,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "정보 통합·앱·플랫폼",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-200710",
@@ -21342,36 +21622,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리",
+        "matching_reason": "점수 8: 주거"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 어르신"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 주거·교통·도시생활환경 / 유모차·교통 접근성 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "유모차·교통 접근성",
     "micro_category": "유모차 대중교통 접근성",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-200103",
@@ -21396,29 +21677,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 21: 산후조리, 서비스"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 임산부, 청소년"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 아이돌보미, 종사자"
       }
     ],
     "matched_policies": [
@@ -21466,7 +21747,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "산후조리·도우미",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199841",
@@ -21493,27 +21775,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 서울시, 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 서울시, 시술비, 건강팀"
       }
     ],
     "matched_policies": [
@@ -21561,7 +21843,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199734",
@@ -21586,11 +21869,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
@@ -21598,17 +21881,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 신생아"
       }
     ],
     "matched_policies": [
@@ -21656,7 +21939,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199648",
@@ -21681,29 +21965,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리 - 전산 용역 계획 수립 및 예산 편성 및 집행 - 정보센터 운영 시스템 유지관리업체 관리 ○한의약 난임 치료지원 사업(서울형) 추진에 관한 사항 - 한의약 난임 치료 지원사업 계획수립 및 평가 - 한의약 난임 치료 지원단 운영, 자치구 예...",
+        "matching_reason": "점수 23: 정보센터, 시스템"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "상담팀",
-        "full_dept": "서울특별시 아동복지센터 상담팀",
-        "phone": "02-2040-4232",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 아동보호"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 위기임산부"
       }
     ],
     "matched_policies": [
@@ -21751,7 +22035,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "위기임산부",
     "sub_category": "위기임산부",
     "micro_category": "정보 통합 플랫폼·앱",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-199074",
@@ -21775,29 +22060,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -21845,7 +22130,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "조부모 돌봄비 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198717",
@@ -21869,29 +22155,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -21939,7 +22225,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "신청·서류·기준 개선",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198631",
@@ -21966,26 +22253,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 39: 난임, 시술비, 건강임신지원팀, 지원사업, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 25: 서울시, 지원사업, 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 서울시, 시술비"
       }
     ],
     "matched_policies": [
@@ -22033,7 +22320,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "상담·심리·매칭",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198579",
@@ -22060,8 +22348,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
@@ -22069,17 +22357,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 직원"
       }
     ],
     "matched_policies": [
@@ -22127,7 +22415,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "서울런·교육비 지원",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198383",
@@ -22154,8 +22443,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
@@ -22163,17 +22452,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -22221,7 +22510,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "초등 방과후·늘봄",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198216",
@@ -22249,8 +22539,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족지원팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
         "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ...",
+        "matching_reason": "점수 26: 위기임산부, 한부모"
       },
       {
         "rank": 2,
@@ -22258,17 +22548,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "장애인가족지원팀",
         "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
         "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "duty_summary": "",
+        "matching_reason": "점수 10: 장애인"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "상담팀",
+        "full_dept": "서울특별시 아동복지센터 상담팀",
+        "phone": "02-2040-4232",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 취약·다양가족 사각지대 / 위기임산부 기반 후보"
       }
     ],
     "matched_policies": [
@@ -22316,7 +22606,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "위기임산부",
     "sub_category": "한부모·미혼모/부",
     "micro_category": "한부모·미혼모/부 지원",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198207",
@@ -22340,36 +22631,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ...",
+        "matching_reason": "점수 33: 위기임산부, 한부모, 가족지원팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 가족지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 취약·다양가족 사각지대 / 한부모·미혼모/부 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "위기임산부",
     "sub_category": "한부모·미혼모/부",
     "micro_category": "한부모·미혼모/부 지원",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198073",
@@ -22396,8 +22688,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
@@ -22405,17 +22697,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -22463,7 +22755,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "초등 방과후·늘봄",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-198072",
@@ -22487,29 +22780,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       }
     ],
     "matched_policies": [
@@ -22557,7 +22850,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "초등 방과후·늘봄",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197859",
@@ -22584,26 +22878,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 33: 아이돌봄, 등하원, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -22651,7 +22945,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197585",
@@ -22675,20 +22970,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
@@ -22696,8 +22991,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       }
     ],
     "matched_policies": [
@@ -22745,7 +23040,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "유치원·방과후 과정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-197374",
@@ -22772,26 +23068,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 35: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 23: 서울시, 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 서울시, 시술비"
       }
     ],
     "matched_policies": [
@@ -22839,7 +23135,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196679",
@@ -22863,36 +23160,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 19: 산후조리"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 산후조리·도우미 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 신생아"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "공공시설·생활편의",
     "micro_category": "공공 유모차·생활편의",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196543",
@@ -22921,26 +23219,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 32: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 서울시, 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -22988,7 +23286,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "유전자·난임 검사 지원",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-196482",
@@ -23012,20 +23311,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리",
+        "matching_reason": "점수 8: 주거"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 주거·교통·도시생활환경 / 유모차·교통 접근성 기반 후보"
       },
       {
         "rank": 3,
@@ -23033,15 +23332,16 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 0: 주거·교통·도시생활환경 / 유모차·교통 접근성 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "유모차·교통 접근성",
     "micro_category": "유모차 대중교통 접근성",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195595",
@@ -23068,26 +23368,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -23135,7 +23435,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "초등 방과후·늘봄",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195492",
@@ -23159,36 +23460,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리",
+        "matching_reason": "점수 8: 주거"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 주거·교통·도시생활환경 / 유모차·교통 접근성 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 0: 주거·교통·도시생활환경 / 유모차·교통 접근성 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "유모차·교통 접근성",
     "micro_category": "유모차 대중교통 접근성",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-195248",
@@ -23214,27 +23516,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 35: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 23: 서울시, 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 서울시, 시술비"
       }
     ],
     "matched_policies": [
@@ -23282,7 +23584,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "유전자·난임 검사 지원",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194883",
@@ -23311,26 +23614,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 32: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 17: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       }
     ],
     "matched_policies": [
@@ -23378,7 +23681,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194882",
@@ -23405,26 +23709,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 37: 난임, 시술비, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -23472,7 +23776,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194853",
@@ -23499,8 +23804,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
@@ -23508,17 +23813,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 12: 아이돌봄, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -23566,7 +23871,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "공공임대·매입임대 개선",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194792",
@@ -23594,26 +23900,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 서울시, 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 서울시, 시술비"
       }
     ],
     "matched_policies": [
@@ -23661,7 +23967,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194620",
@@ -23688,8 +23995,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족지원팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
         "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ...",
+        "matching_reason": "점수 17: 쉼터, 서울시, 가족지원팀"
       },
       {
         "rank": 2,
@@ -23697,24 +24004,25 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "장애인가족지원팀",
         "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
         "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "duty_summary": "",
+        "matching_reason": "점수 16: 가족지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "결혼문화팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 결혼문화팀",
-        "phone": "02-2133-6550",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 9층",
-        "duty_summary": "ㅇ 더 아름다운 결혼식 업무 총괄 관리"
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 입양"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "공공시설·생활편의",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194515",
@@ -23743,17 +24051,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 40: 난임부부 시술비, 난임, 시술비, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 서울시, 시술비"
       },
       {
         "rank": 3,
@@ -23761,8 +24069,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "",
+        "matching_reason": "점수 9: 서울시, 시술비, 건강팀"
       }
     ],
     "matched_policies": [
@@ -23810,7 +24118,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194436",
@@ -23838,27 +24147,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 서울시, 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 서울시, 시술비, 건강팀"
       }
     ],
     "matched_policies": [
@@ -23906,7 +24215,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194240",
@@ -23933,26 +24243,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -24000,7 +24310,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "키움센터·방학돌봄",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194182",
@@ -24029,26 +24340,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 32: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 17: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 서울시, 시술비"
       }
     ],
     "matched_policies": [
@@ -24096,7 +24407,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194170",
@@ -24123,17 +24435,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 37: 난임, 시술비, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 23: 서울시, 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
@@ -24141,8 +24453,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "",
+        "matching_reason": "점수 7: 서울시, 시술비"
       }
     ],
     "matched_policies": [
@@ -24190,7 +24502,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194132",
@@ -24215,36 +24528,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 21: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 신생아"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 서울시"
       }
     ],
     "matched_policies": [],
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "공공 유모차·생활편의",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-194088",
@@ -24272,17 +24586,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
@@ -24290,8 +24604,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "",
+        "matching_reason": "점수 10: 산전, 시술비"
       }
     ],
     "matched_policies": [
@@ -24339,7 +24653,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193932",
@@ -24363,29 +24678,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "상담팀",
-        "full_dept": "서울특별시 아동복지센터 상담팀",
-        "phone": "02-2040-4232",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       }
     ],
     "matched_policies": [
@@ -24433,7 +24748,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "상담·매칭",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193929",
@@ -24462,17 +24778,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
@@ -24480,8 +24796,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -24529,7 +24845,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193780",
@@ -24553,29 +24870,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 서비스"
       }
     ],
     "matched_policies": [
@@ -24623,7 +24940,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193454",
@@ -24647,36 +24965,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리",
+        "matching_reason": "점수 8: 주거"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 주거·교통·도시생활환경 / 유모차·교통 접근성 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 0: 주거·교통·도시생활환경 / 유모차·교통 접근성 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "유모차·교통 접근성",
     "micro_category": "유모차 대중교통 접근성",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193260",
@@ -24703,26 +25022,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 아이돌봄, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -24770,7 +25089,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "정보 통합·앱·플랫폼",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193257",
@@ -24798,26 +25118,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 산전, 시술비, 건강팀"
       }
     ],
     "matched_policies": [
@@ -24865,7 +25185,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193241",
@@ -24894,17 +25215,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
@@ -24912,8 +25233,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "",
+        "matching_reason": "점수 7: 시술비, 건강팀"
       }
     ],
     "matched_policies": [
@@ -24961,7 +25282,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193205",
@@ -24989,17 +25311,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 32: 난임, 시술비, 건강임신지원팀, 해당하지, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
@@ -25007,8 +25329,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -25056,7 +25378,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193112",
@@ -25083,26 +25406,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -25150,7 +25473,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "조부모 돌봄비 확대",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-193089",
@@ -25177,26 +25501,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 4: 서비스, 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 야간·주말·긴급보육 기반 후보"
       }
     ],
     "matched_policies": [
@@ -25244,7 +25568,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "임산부 건강검사·배려",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-192998",
@@ -25273,26 +25598,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 32: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -25340,7 +25665,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-192984",
@@ -25369,26 +25695,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -25436,7 +25762,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-192978",
@@ -25461,29 +25788,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 쉼터, 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -25531,7 +25858,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "아이돌봄·조부모·베이비시터",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-192976",
@@ -25557,27 +25885,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 35: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 23: 서울시, 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 서울시, 시술비"
       }
     ],
     "matched_policies": [
@@ -25625,7 +25953,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-192699",
@@ -25651,27 +25980,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 서울시, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 서울시"
       }
     ],
     "matched_policies": [
@@ -25719,7 +26048,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-192686",
@@ -25745,11 +26075,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
@@ -25757,17 +26087,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -25815,7 +26145,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-192646",
@@ -25841,9 +26172,9 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "phone": "02-2133-9491",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리 - 전산 용역 계획 수립 및 예산 편성 및 집행 - 정보센터 운영 시스템 유지관리업체 관리 ○한의약 난임 치료지원 사업(서울형) 추진에 관한 사항 - 한의약 난임 치료 지원사업 계획수립 및 평가 - 한의약 난임 치료 지원단 운영, 자치구 예...",
+        "matching_reason": "점수 27: 정보센터, 시스템, 자치구, 서울시"
       },
       {
         "rank": 2,
@@ -25851,17 +26182,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "duty_summary": "",
+        "matching_reason": "점수 18: 저소득층, 자치구, 의료비, 청소년"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 자치구, 돌봄사업팀"
       }
     ],
     "matched_policies": [
@@ -25909,7 +26240,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "위기임산부",
     "micro_category": "위기임산부 보호·상담",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-192614",
@@ -25938,17 +26270,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
@@ -25956,8 +26288,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -26005,7 +26337,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-192565",
@@ -26032,8 +26365,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
@@ -26041,8 +26374,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       },
       {
         "rank": 3,
@@ -26050,8 +26383,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "생활지원팀",
         "full_dept": "서울특별시 아동복지센터 생활지원팀",
         "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -26099,7 +26432,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "키움센터·방학돌봄",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191849",
@@ -26126,17 +26460,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 저소득층"
       },
       {
         "rank": 3,
@@ -26144,8 +26478,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -26193,7 +26527,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "저소득·차상위·입양",
     "micro_category": "저소득·차상위 사각지대",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191757",
@@ -26220,26 +26555,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 17: 아이돌봄, 개선, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -26287,7 +26622,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "아이돌봄·조부모·베이비시터",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191603",
@@ -26311,29 +26647,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -26381,7 +26717,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "육아휴직·출산휴가",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191388",
@@ -26408,26 +26745,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 개선, 개선방안"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 청소년"
       }
     ],
     "matched_policies": [
@@ -26475,7 +26812,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "유치원·방과후 과정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-191311",
@@ -26502,26 +26840,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 장애인"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 4: 서비스, 서울시"
       }
     ],
     "matched_policies": [
@@ -26569,7 +26907,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "야간·주말·긴급보육",
     "micro_category": "출산정책 소급·기준 개선",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-190910",
@@ -26596,26 +26935,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 33: 아이돌봄, 등하원, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -26663,7 +27002,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "근로시간 단축·맞벌이",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-190853",
@@ -26690,26 +27030,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 아이돌봄, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -26757,7 +27097,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "신청·서류·기준 개선",
     "micro_category": "출산정책 소급·기준 개선",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189440",
@@ -26783,11 +27124,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
@@ -26795,17 +27136,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "duty_summary": "",
+        "matching_reason": "점수 18: 서울시, 서울형, 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 저출생사업, 서비스, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -26853,7 +27194,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189414",
@@ -26880,26 +27222,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 17: 아이돌봄, 개선, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 아이돌봄서비스"
       }
     ],
     "matched_policies": [
@@ -26947,7 +27289,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "키움센터·방학돌봄",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189408",
@@ -26973,34 +27316,35 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 24: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 위기임산부"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 임산부, 저출생사업1팀"
       }
     ],
     "matched_policies": [],
     "category_raw": "위기임산부",
     "sub_category": "부모교육·아빠교육",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-189255",
@@ -27025,11 +27369,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
@@ -27037,17 +27381,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "duty_summary": "",
+        "matching_reason": "점수 16: 서울시, 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 직원, 서비스, 서울시, 시술비, 건강팀"
       }
     ],
     "matched_policies": [
@@ -27095,7 +27439,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-188790",
@@ -27122,26 +27467,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "상담팀",
-        "full_dept": "서울특별시 아동복지센터 상담팀",
-        "phone": "02-2040-4232",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 주거"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 어린이집"
       }
     ],
     "matched_policies": [
@@ -27189,7 +27534,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-188566",
@@ -27216,26 +27562,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -27283,7 +27629,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "야간·주말·긴급보육",
     "micro_category": "보육교직원 처우·행정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-188552",
@@ -27310,8 +27657,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
@@ -27319,17 +27666,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
         "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -27377,7 +27724,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "키움센터·방학돌봄",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-188508",
@@ -27404,26 +27752,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -27471,7 +27819,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "유치원·방과후 과정",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-187148",
@@ -27500,26 +27849,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 32: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 서울시, 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -27567,7 +27916,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-187073",
@@ -27591,29 +27941,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -27661,7 +28011,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-186908",
@@ -27686,29 +28037,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 8: 개선"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 다자녀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 다자녀·양육비·생활지원 / 다자녀 기준·혜택 기반 후보"
       }
     ],
     "matched_policies": [
@@ -27756,7 +28107,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "다자녀 기준·혜택",
     "micro_category": "다자녀 생활·문화비 지원",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-186896",
@@ -27780,29 +28132,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 19: 산후조리"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 출산·산후 초기지원 / 산후조리·도우미 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 신생아"
       }
     ],
     "matched_policies": [
@@ -27850,7 +28202,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "출산",
     "sub_category": "산후조리·도우미",
     "micro_category": "산후조리·산모 회복 지원",
-    "policy_flow": "출산 직후"
+    "policy_flow": "출산 직후",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-186626",
@@ -27874,36 +28227,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리 - 전산 용역 계획 수립 및 예산 편성 및 집행 - 정보센터 운영 시스템 유지관리업체 관리 ○한의약 난임 치료지원 사업(서울형) 추진에 관한 사항 - 한의약 난임 치료 지원사업 계획수립 및 평가 - 한의약 난임 치료 지원단 운영, 자치구 예...",
+        "matching_reason": "점수 23: 정보센터, 서울시"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "결혼문화팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 결혼문화팀",
+        "phone": "02-2133-6550",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 서울시"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "지역 간 혜택 형평성",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-186290",
@@ -27932,26 +28286,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 44: 난임부부 시술비, 난임, 시술비, 건강임신지원팀, 지원사업, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 지원사업, 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 저출생사업, 지원사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -27999,7 +28353,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-185984",
@@ -28026,26 +28381,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 37: 난임, 시술비, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -28093,7 +28448,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "상담·심리·매칭",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-185646",
@@ -28118,20 +28474,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 22: 저소득층, 임산부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "",
+        "matching_reason": "점수 17: 난임, 건강임신지원팀, 프로젝트, 건강임신지원"
       },
       {
         "rank": 3,
@@ -28139,8 +28495,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강팀",
         "full_dept": "서울특별시 행정국 인력개발과 건강팀",
         "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "duty_summary": "",
+        "matching_reason": "점수 14: 산후, 서울시, 건강팀, 프로그램"
       }
     ],
     "matched_policies": [
@@ -28188,7 +28544,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "위기임산부",
     "micro_category": "산후조리·산모 회복 지원",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-185284",
@@ -28215,26 +28572,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 아이돌봄"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -28282,7 +28639,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "어린이집·유치원",
     "micro_category": "어린이집 운영·확충",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184577",
@@ -28306,29 +28664,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -28376,7 +28734,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "아이돌봄·조부모·베이비시터",
     "micro_category": "성평등·인식개선 교육",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184575",
@@ -28401,29 +28760,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 16: 기저귀, 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 쉼터"
       }
     ],
     "matched_policies": [
@@ -28471,7 +28830,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "육아휴직·출산휴가",
     "micro_category": "육아휴직·출산휴가 확대",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184571",
@@ -28495,29 +28855,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 13: 영유아, 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 건강검진"
       }
     ],
     "matched_policies": [
@@ -28565,7 +28925,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "부모교육·아빠교육",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184557",
@@ -28591,27 +28952,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 39: 난임, 시술비, 건강임신지원팀, 프로젝트, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 23: 서울시, 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 저소득층"
       }
     ],
     "matched_policies": [
@@ -28659,7 +29020,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184431",
@@ -28683,29 +29045,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 13: 어린이집, 청소년"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "상담팀",
-        "full_dept": "서울특별시 아동복지센터 상담팀",
-        "phone": "02-2040-4232",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 장애인"
       }
     ],
     "matched_policies": [
@@ -28753,7 +29115,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-184207",
@@ -28777,29 +29140,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "○ 시의회 및 국회 관련 업무 ○ 대한노인회 서울시 연합회 운영·지원 ○ 어버이날, 노인의 날 등 행사 ○ 효행 유공자 등 포상 및 시장 표창 ○ 저출산·고령사회 기본계획 수립(보건복지부) ○ 어르신 정보몽땅 홈페이지 구축·운영 ○ 바인더(시설통계 포함)",
+        "matching_reason": "점수 12: 고령사회, 서울시"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       }
     ],
     "matched_policies": [
@@ -28847,7 +29210,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "상담·매칭",
     "micro_category": "위기임산부 보호·상담",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183626",
@@ -28874,26 +29238,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 아이돌봄, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 보육·돌봄 인프라 / 아이돌봄·조부모·베이비시터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -28941,7 +29305,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "야간·주말·긴급보육",
     "micro_category": "야간·주말·긴급보육",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183550",
@@ -28967,27 +29332,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -29035,7 +29400,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183549",
@@ -29061,27 +29427,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -29129,7 +29495,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183490",
@@ -29155,27 +29522,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -29223,7 +29590,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183450",
@@ -29249,27 +29617,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 35: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -29317,7 +29685,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183446",
@@ -29343,27 +29712,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -29411,7 +29780,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183428",
@@ -29440,26 +29810,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 23: 난임, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 6: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -29507,7 +29877,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183419",
@@ -29533,27 +29904,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -29601,7 +29972,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183412",
@@ -29627,27 +29999,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -29695,7 +30067,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183409",
@@ -29721,27 +30094,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -29789,7 +30162,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183408",
@@ -29815,27 +30189,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 35: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -29883,7 +30257,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183407",
@@ -29909,27 +30284,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 35: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -29977,7 +30352,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183387",
@@ -30003,27 +30379,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -30071,7 +30447,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183374",
@@ -30097,27 +30474,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -30165,7 +30542,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183322",
@@ -30191,27 +30569,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -30259,7 +30637,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183292",
@@ -30286,26 +30665,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "duty_summary": "",
+        "matching_reason": "점수 4: 서비스, 시간제"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 야간·주말·긴급보육 기반 후보"
       }
     ],
     "matched_policies": [
@@ -30353,7 +30732,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "야간·주말·긴급보육",
     "micro_category": "야간·주말·긴급보육",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183275",
@@ -30379,27 +30759,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -30447,7 +30827,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183273",
@@ -30473,11 +30854,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
@@ -30485,17 +30866,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -30543,7 +30924,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183253",
@@ -30569,11 +30951,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
@@ -30581,17 +30963,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -30639,7 +31021,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183248",
@@ -30666,27 +31049,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 23: 난임, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 대기인원"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 6: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -30734,7 +31117,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183243",
@@ -30760,11 +31144,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
@@ -30772,17 +31156,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -30830,7 +31214,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183237",
@@ -30857,27 +31242,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -30925,7 +31310,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183223",
@@ -30951,27 +31337,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 35: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -31019,7 +31405,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183217",
@@ -31045,11 +31432,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
@@ -31057,17 +31444,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -31115,7 +31502,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183208",
@@ -31141,27 +31529,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 35: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -31209,7 +31597,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183203",
@@ -31235,27 +31624,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -31303,7 +31692,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183202",
@@ -31329,27 +31719,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -31397,7 +31787,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183197",
@@ -31423,27 +31814,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -31491,7 +31882,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183196",
@@ -31517,29 +31909,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 25: 난임, 건강임신지원팀, 저출산, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 서울시"
       }
     ],
     "matched_policies": [
@@ -31587,7 +31979,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183193",
@@ -31613,27 +32006,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 35: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "후생노무팀",
-        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
-        "phone": "02-2133-5772",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -31681,7 +32074,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183190",
@@ -31707,27 +32101,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -31775,7 +32169,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183187",
@@ -31802,27 +32197,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 시술비, 건강팀"
       }
     ],
     "matched_policies": [
@@ -31870,7 +32265,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183186",
@@ -31896,27 +32292,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -31964,7 +32360,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183174",
@@ -31990,11 +32387,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
@@ -32002,17 +32399,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -32060,7 +32457,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183171",
@@ -32086,27 +32484,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 35: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -32154,7 +32552,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183170",
@@ -32183,26 +32582,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 32: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -32250,7 +32649,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "출산",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183167",
@@ -32276,11 +32676,11 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
@@ -32288,17 +32688,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -32346,7 +32746,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183163",
@@ -32372,27 +32773,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 37: 난임, 시술비, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -32440,7 +32841,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183162",
@@ -32466,27 +32868,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 임신·난임·생식건강 / 난임 주사·보건소 접근성 기반 후보"
       }
     ],
     "matched_policies": [
@@ -32534,7 +32936,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183153",
@@ -32560,29 +32963,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 17: 저출생사업, 개선, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       }
     ],
     "matched_policies": [
@@ -32630,7 +33033,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술비·바우처 확대",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183140",
@@ -32656,27 +33060,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 35: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -32724,7 +33128,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183131",
@@ -32751,26 +33156,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 37: 난임, 시술비, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -32818,7 +33223,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183130",
@@ -32847,26 +33253,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 시술비, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 14: 시술비"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       }
     ],
     "matched_policies": [
@@ -32914,7 +33320,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183126",
@@ -32943,26 +33350,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 23: 난임, 건강임신지원팀, 저출산, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 산전, 건강팀"
       }
     ],
     "matched_policies": [
@@ -33010,7 +33417,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183124",
@@ -33035,20 +33443,20 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 21: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 임산부, 모자보건"
       },
       {
         "rank": 3,
@@ -33056,8 +33464,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "duty_summary": "",
+        "matching_reason": "점수 8: 서울시"
       }
     ],
     "matched_policies": [
@@ -33105,7 +33513,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183123",
@@ -33132,26 +33541,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 35: 난임, 시술비, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 23: 서울시, 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 서울시, 시술비"
       }
     ],
     "matched_policies": [
@@ -33199,7 +33608,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "상담·심리·매칭",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183122",
@@ -33226,17 +33636,17 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 30: 난임, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 13: 건강임신지원팀"
       },
       {
         "rank": 3,
@@ -33244,8 +33654,8 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족건강팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
         "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "duty_summary": "",
+        "matching_reason": "점수 7: 영유아"
       }
     ],
     "matched_policies": [
@@ -33293,7 +33703,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183121",
@@ -33320,26 +33731,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
         "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 28: 난임, 건강임신지원팀, 건강임신지원"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 15: 서울시, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 서울시"
       }
     ],
     "matched_policies": [
@@ -33387,7 +33798,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "상담·심리·매칭",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-183033",
@@ -33413,27 +33825,27 @@ export const mockProposals: PolicyProposal[] = [
         "role_type": "주관부서",
         "dept_name": "건강임신지원팀",
         "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 37: 난임, 시술비, 건강임신지원팀, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 21: 시술비, 건강임신지원팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시술비"
       }
     ],
     "matched_policies": [
@@ -33481,7 +33893,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 시술비·횟수·나이 제한",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182889",
@@ -33505,29 +33918,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 개선"
       }
     ],
     "matched_policies": [
@@ -33575,7 +33988,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "지역 간 혜택 형평성",
     "micro_category": "다자녀 지역 형평성",
-    "policy_flow": "양육기 생활지원"
+    "policy_flow": "양육기 생활지원",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182864",
@@ -33599,29 +34013,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 공무원"
       }
     ],
     "matched_policies": [
@@ -33669,7 +34083,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "육아휴직·출산휴가",
     "micro_category": "근로시간 단축·맞벌이",
-    "policy_flow": "부모 노동·돌봄 병행"
+    "policy_flow": "부모 노동·돌봄 병행",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182528",
@@ -33693,29 +34108,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 17: 저소득층, 청소년"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 주거"
       }
     ],
     "matched_policies": [
@@ -33763,7 +34178,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "다자녀",
     "sub_category": "저소득·차상위·입양",
     "micro_category": "난임 시술 제한 완화",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-182197",
@@ -33790,26 +34206,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 16: 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 보육·돌봄 인프라 / 초등돌봄·방과후·키움센터 기반 후보"
       }
     ],
     "matched_policies": [
@@ -33857,7 +34273,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "초등돌봄·방과후·키움센터",
     "micro_category": "정보 통합 플랫폼·앱",
-    "policy_flow": "영유아·초등 돌봄"
+    "policy_flow": "영유아·초등 돌봄",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-181983",
@@ -33881,29 +34298,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 어르신"
       }
     ],
     "matched_policies": [
@@ -33951,7 +34368,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "신청·서류·기준 개선",
     "micro_category": "출산정책 소급·기준 개선",
-    "policy_flow": "공통 행정·정보"
+    "policy_flow": "공통 행정·정보",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-181150",
@@ -33975,36 +34393,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9492",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○건강임신지원팀 서무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 10: 개선, 개선방안"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 주거"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 7: 장애인"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "유모차·교통 접근성",
     "micro_category": "유모차 대중교통 접근성",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180866",
@@ -34028,36 +34447,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진 ㅇ 1인 자영업자 등 출산가구 개선방안 및 성과분석 ㅇ 자녀출산 무주택가구 지원사업 수요자 분석 및 개선추진 ㅇ 서울형산후조리경비 지원사업 서비스 개선 추진 ㅇ 소상공인 민간아이돌봄서비스 사업개선 및 확대추진",
+        "matching_reason": "점수 10: 개선, 개선방안"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 어르신, 서울시"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
         "dept_name": "저출생사업1팀",
         "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5021",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+        "phone": "02-2133-5025",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 주거"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "유모차·교통 접근성",
     "micro_category": "유모차 대중교통 접근성",
-    "policy_flow": "도시생활 기반"
+    "policy_flow": "도시생활 기반",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180778",
@@ -34084,33 +34504,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "다문화지원팀",
         "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
         "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등) ㅇ 다문화가족 건강지원 서비스 강화에 관한 사항 ㅇ 다문화가족 시간제 아이돌봄 거점센터 운영 ㅇ 다문화가족 자녀 방문학습 지원사업 운영 ㅇ 다문화아동 외국어 교육 지원 사업 ㅇ FC 서울 축구교실, 다문화가족 국민주택 특별공급",
+        "matching_reason": "점수 28: 다문화, 외국인, 서비스, 다문화지원팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9486",
-        "location": "",
-        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 취약·다양가족 사각지대 / 다문화·외국인 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 3: 취약·다양가족 사각지대 / 다문화·외국인 기반 후보"
       }
     ],
     "matched_policies": [],
     "category_raw": "기타",
     "sub_category": "다문화·외국인",
     "micro_category": "공공 유모차·생활편의",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180569",
@@ -34134,29 +34555,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업 - 민간 위탁 사업 추진 및 평가 - 지원 대상 어린이집 선정·관리 - 예산편성·집행·정산, 실적 및 성과관리 ○ 산모·신생아 건강관리 지원 사업(전환형·서울형) 추진 - 사업계획 수립 및 평가, 예산편성 및 집행 - 인력 제공기관 질 관리를 위한 교...",
+        "matching_reason": "점수 11: 어린이집"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 돌봄사업팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "생활지원팀",
-        "full_dept": "서울특별시 아동복지센터 생활지원팀",
-        "phone": "02-2040-4251",
-        "location": "(06362) 서울특별시 강남구 광평로34길 124",
-        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 5: 시스템"
       }
     ],
     "matched_policies": [
@@ -34204,7 +34625,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "임산부 건강검사·배려",
     "micro_category": "임산부 배려·건강관리",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-180216",
@@ -34230,29 +34652,29 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5027",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "duty_summary": "○건강임신지원팀 서무 - 저출산 대응 전략, 지역보건의료계획, 중장기계획, BSC 관리 등 - 임신 전 건강관리사업 예산 및 사업실적 통계 등 지원 - 기타 타 직원에 해당하지 않는 사항 ○난임부부 시술비 지원사업에 관한 사항 - 사회보장협의, 조례 개정 등에 관한 사항 - 난임부부 시...",
+        "matching_reason": "점수 25: 난임, 건강임신지원팀, 저출산, 건강임신지원, 난임부부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "건강임신지원팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
-        "phone": "02-2133-9491",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 저출생사업, 저출생사업1팀"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "duty_summary": "",
+        "matching_reason": "점수 8: 서울시"
       }
     ],
     "matched_policies": [
@@ -34300,7 +34722,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "임신",
     "sub_category": "난임 주사·보건소 접근성",
     "micro_category": "난임 주사 보건소 허용",
-    "policy_flow": "임신 전·임신 중"
+    "policy_flow": "임신 전·임신 중",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-179980",
@@ -34327,26 +34750,26 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "돌봄사업팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
         "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진",
+        "matching_reason": "점수 28: 아이돌봄, 돌봄사업팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 아이돌봄, 서비스"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무"
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "duty_summary": "",
+        "matching_reason": "점수 11: 시스템"
       }
     ],
     "matched_policies": [
@@ -34394,7 +34817,8 @@ export const mockProposals: PolicyProposal[] = [
     "category_raw": "보육",
     "sub_category": "한부모·미혼모/부",
     "micro_category": "신청·서류·행정기준 개선",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-179977",
@@ -34421,33 +34845,34 @@ export const mockProposals: PolicyProposal[] = [
         "dept_name": "가족지원팀",
         "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
         "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ...",
+        "matching_reason": "점수 33: 위기임산부, 한부모, 가족지원팀"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "장애인가족지원팀",
-        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
-        "phone": "02-2133-9611",
-        "location": "서울특별시 중구 세종대로 110, 본청 2층",
-        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "duty_summary": "",
+        "matching_reason": "점수 12: 아이돌보미"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "duty_summary": "",
+        "matching_reason": "점수 10: 가족지원팀"
       }
     ],
     "matched_policies": [],
     "category_raw": "위기임산부",
     "sub_category": "한부모·미혼모/부",
     "micro_category": "야간근무 부모 돌봄",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   },
   {
     "id": "PROP-179973",
@@ -34471,36 +34896,37 @@ export const mockProposals: PolicyProposal[] = [
       {
         "rank": 1,
         "role_type": "주관부서",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ...",
+        "matching_reason": "점수 21: 위기임산부"
       },
       {
         "rank": 2,
         "role_type": "협조부서 (2순위)",
-        "dept_name": "가족건강팀",
-        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
-        "phone": "02-2133-9485",
-        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
-        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+        "dept_name": "상담팀",
+        "full_dept": "서울특별시 아동복지센터 상담팀",
+        "phone": "02-2040-4232",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 취약·다양가족 사각지대 / 위기임산부 기반 후보"
       },
       {
         "rank": 3,
         "role_type": "협조부서 (3순위)",
-        "dept_name": "담당부서",
-        "full_dept": "담당부서",
-        "phone": "전화번호",
-        "location": "부서위치",
-        "duty_summary": "담당업무"
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "duty_summary": "",
+        "matching_reason": "점수 9: 임산부, 가족건강팀"
       }
     ],
     "matched_policies": [],
     "category_raw": "위기임산부",
     "sub_category": "한부모·미혼모/부",
     "micro_category": "한부모·미혼모/부 지원",
-    "policy_flow": "사각지대 보호"
+    "policy_flow": "사각지대 보호",
+    "matching_method": "규칙기반 키워드 점수 + 대/중분류 부스트"
   }
 ];
 
