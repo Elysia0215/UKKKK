@@ -305,11 +305,11 @@ export const DashboardOverview: React.FC<Props> = ({
                     contentStyle={{ borderRadius: '6px', fontSize: '11px', fontWeight: 'bold' }}
                     formatter={(value: any, name: any) => [
                       `${value}건`, 
-                      name === 'answered' ? '답변 완료' : '미답변 (검토 중)'
+                      (name === '답변 완료' || name === 'answered') ? '답변 완료' : '미답변 (검토 중)'
                     ]}
                   />
-                  <Bar dataKey="answered" name="답변 완료" stackId="dept" fill="#cbd5e1" radius={[0, 0, 2, 2]} />
-                  <Bar dataKey="unanswered" name="미답변" stackId="dept" fill="#f43f5e" radius={[3, 3, 0, 0]} />
+                  <Bar dataKey="answered" name="답변 완료" stackId="dept" fill="#cbd5e1" barSize={14} radius={[0, 0, 2, 2]} />
+                  <Bar dataKey="unanswered" name="미답변" stackId="dept" fill="#f43f5e" barSize={14} radius={[3, 3, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
