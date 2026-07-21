@@ -9,6 +9,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Line, Compos
 import { PolicyCategory, PolicyProposal } from '../types';
 import { extractTopKeywords } from '../data/mockData';
 import { KeywordDetailModal } from './KeywordDetailModal';
+import { MultiTierCategoryFilter, FilterState } from './MultiTierCategoryFilter';
 import { 
   BarChart3, 
   ThumbsUp, 
@@ -37,6 +38,15 @@ export const CategoryDemand: React.FC<Props> = ({
   const [selectedProposalId, setSelectedProposalId] = useState<string | null>(null);
   const [selectedKeywordModal, setSelectedKeywordModal] = useState<string | null>(null);
   const [selectedKeywordYear, setSelectedKeywordYear] = useState<string>('전체');
+
+  const [filterState, setFilterState] = useState<FilterState>({
+    year: '전체년',
+    lifecycle: '전체',
+    category1: '전체',
+    category2: '전체',
+    category3: '전체',
+    department: '전체',
+  });
 
   // 연도별 필터링된 제안 목록
   const keywordFilteredProposals = useMemo(() => {
@@ -139,6 +149,13 @@ export const CategoryDemand: React.FC<Props> = ({
           ))}
         </div>
       </div>
+
+      {/* 5단계 다차원 분류체계 딥 필터링 (제안연도·생애주기·1차대분류·2차중분류·3차세분류·담당부서) */}
+      <MultiTierCategoryFilter
+        proposals={proposals}
+        filterState={filterState}
+        onFilterChange={setFilterState}
+      />
 
       {/* 2축 복합 분석 그래프 */}
       <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-sm transition">
