@@ -46,7 +46,8 @@ export const DashboardOverview: React.FC<Props> = ({
   onSelectCategory
 }) => {
   const [selectedKeywordModal, setSelectedKeywordModal] = React.useState<string | null>(null);
-  const topKeywords = extractTopKeywords(proposals, 10);
+  const [keywordLimit, setKeywordLimit] = React.useState<number>(10);
+  const topKeywords = extractTopKeywords(proposals, keywordLimit);
   const deptStats = getDepartmentStats(proposals);
 
   // 카테고리별 데이터 산출
@@ -131,15 +132,22 @@ export const DashboardOverview: React.FC<Props> = ({
 
       {/* 키워드 분석 및 카테고리 분포 */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        {/* 최근 급증 키워드 TOP 10 */}
+        {/* 최근 급증 키워드 TOP 10 / TOP 30 */}
         <div className="lg:col-span-5 bg-white p-6 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-sm transition">
           <div>
             <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-200/80">
               <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
                 <TrendingUp className="text-rose-500 w-5 h-5" />
-                최근 급증 키워드 TOP 10
+                최근 급증 키워드 TOP {keywordLimit}
               </h4>
-              <span className="text-[11px] bg-slate-100 text-slate-500 font-bold px-1.5 py-0.5 rounded font-mono">가중치 반영</span>
+              <div className="flex items-center gap-1.5">
+                <button
+                  onClick={() => setKeywordLimit(keywordLimit === 10 ? 30 : 10)}
+                  className="text-[10px] bg-blue-50 hover:bg-blue-100 text-blue-700 font-extrabold px-2 py-0.5 rounded border border-blue-200 cursor-pointer transition"
+                >
+                  {keywordLimit === 10 ? '🔍 TOP 30개까지 크게 보기' : '접기 (TOP 10)'}
+                </button>
+              </div>
             </div>
             <p className="text-xs text-slate-500 mb-4 leading-relaxed">
               시민들이 작성한 제안에서 핵심 단어를 정규화 추출한 빈도 순위입니다. (키워드 클릭 시 원문 견본 팝업)
@@ -158,7 +166,7 @@ export const DashboardOverview: React.FC<Props> = ({
                     <div className="flex justify-between items-center text-xs">
                       <div className="flex items-center gap-2">
                         <span className={`w-5 h-5 font-bold rounded text-[10px] flex items-center justify-center ${
-                          index < 3 ? 'bg-rose-500 text-white' : 'bg-[#0A2351] text-white'
+                          index < 3 ? 'bg-rose-500 text-white' : 'bg-[#0A2351]'
                         }`}>
                           {index + 1}
                         </span>
@@ -181,13 +189,18 @@ export const DashboardOverview: React.FC<Props> = ({
               })}
             </div>
           </div>
-          <div className="mt-4 pt-3 border-t border-slate-100 text-center">
+          <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#0A2351]">
             <button 
               onClick={() => setSelectedKeywordModal(topKeywords[0]?.keyword || '보육/돌봄')}
-              className="text-xs text-[#0A2351] font-bold hover:underline inline-flex items-center gap-1 cursor-pointer"
+              className="hover:underline inline-flex items-center gap-1 cursor-pointer"
             >
-              상세 연관 제안 및 원문 분석하기
-              <ChevronRight className="w-3 h-3" />
+              상세 원문 분석 ↗
+            </button>
+            <button 
+              onClick={() => onNavigateToTab(2)} // 3번 탭 (인덱스 2): 키워드 분석
+              className="bg-blue-50 hover:bg-blue-100 text-blue-800 px-2.5 py-1 rounded-md border border-blue-200 inline-flex items-center gap-1 cursor-pointer"
+            >
+              🏷️ 30개 태그 클라우드 대형 뷰 (3번 탭) ›
             </button>
           </div>
         </div>
