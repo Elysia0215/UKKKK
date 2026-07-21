@@ -189,9 +189,14 @@ export const DistrictComparison: React.FC<Props> = ({
                     y={item.labelY - 5}
                     textAnchor="middle"
                     dominantBaseline="middle"
-                    className={`text-[11px] font-black pointer-events-none ${
-                      item.isSelected ? 'fill-white' : item.count > 0 ? 'fill-slate-900' : 'fill-slate-400'
-                    }`}
+                    className="text-[11px] font-black pointer-events-none"
+                    fill={item.isSelected ? '#ffffff' : item.count > 0 ? '#0f172a' : '#475569'}
+                    style={{
+                      paintOrder: 'stroke fill',
+                      stroke: item.isSelected ? '#0A2351' : '#ffffff',
+                      strokeWidth: '2.5px',
+                      strokeLinejoin: 'round'
+                    }}
                   >
                     {item.name}
                   </text>
@@ -200,9 +205,14 @@ export const DistrictComparison: React.FC<Props> = ({
                     y={item.labelY + 9}
                     textAnchor="middle"
                     dominantBaseline="middle"
-                    className={`text-[10px] font-bold pointer-events-none ${
-                      item.isSelected ? 'fill-amber-300' : item.count > 0 ? 'fill-blue-700' : 'fill-slate-400'
-                    }`}
+                    className="text-[10px] font-black pointer-events-none"
+                    fill={item.isSelected ? '#fde047' : item.count > 0 ? '#1d4ed8' : '#64748b'}
+                    style={{
+                      paintOrder: 'stroke fill',
+                      stroke: item.isSelected ? '#0A2351' : '#ffffff',
+                      strokeWidth: '2px',
+                      strokeLinejoin: 'round'
+                    }}
                   >
                     {item.count > 0 ? `${item.count}건` : '0건'}
                   </text>
@@ -253,20 +263,6 @@ export const DistrictComparison: React.FC<Props> = ({
                   지도에서 자치구를 선택하면 제안 수, 출생아수, 보육시설수 요약이 여기에 표시됩니다.
                 </p>
               )}
-            </div>
-            <div className="rounded-xl border border-slate-200 bg-white p-4">
-              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">빠른 선택</p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {districtMapData.filter(item => item.count > 0).slice(0, 8).map(item => (
-                  <button
-                    key={item.name}
-                    onClick={() => onSelectDistrict(item.name)}
-                    className={`rounded-full border px-2.5 py-1 text-[11px] font-semibold transition ${selectedDistrict === item.name ? 'border-red-500 bg-red-50 text-red-700' : 'border-slate-200 text-slate-700 hover:bg-slate-50'}`}
-                  >
-                    {item.name}
-                  </button>
-                ))}
-              </div>
             </div>
           </div>
         </div>

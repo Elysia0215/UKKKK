@@ -163,6 +163,12 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
                   fontSize="10.5"
                   fontWeight="900"
                   fill={isSelected ? '#ffffff' : '#0f172a'}
+                  style={{
+                    paintOrder: 'stroke fill',
+                    stroke: isSelected ? '#0A2351' : '#ffffff',
+                    strokeWidth: '2.5px',
+                    strokeLinejoin: 'round'
+                  }}
                   className="pointer-events-none"
                 >
                   {boundary.name}
@@ -175,6 +181,12 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
                   fontSize="9.5"
                   fontWeight="900"
                   fill={isSelected ? '#fde047' : '#1e3a8a'}
+                  style={{
+                    paintOrder: 'stroke fill',
+                    stroke: isSelected ? '#0A2351' : '#ffffff',
+                    strokeWidth: '2px',
+                    strokeLinejoin: 'round'
+                  }}
                   className="pointer-events-none"
                 >
                   {metricText}
