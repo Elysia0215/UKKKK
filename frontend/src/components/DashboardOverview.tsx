@@ -172,7 +172,9 @@ export const DashboardOverview: React.FC<Props> = ({
                         </span>
                         <span className="font-bold text-slate-800 hover:text-blue-600">#{item.keyword}</span>
                       </div>
-                      <span className="text-[11px] text-slate-500 font-mono font-semibold">{item.count}회 감지 ↗</span>
+                      <span className="text-[11px] text-slate-500 font-mono font-semibold">
+                        <b className="text-blue-700 font-bold">{item.proposalCount}건</b> ({item.count}회 감지) ↗
+                      </span>
                     </div>
                     <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
                       <motion.div 

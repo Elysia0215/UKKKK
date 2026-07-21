@@ -1,4 +1,4 @@
-// 100% 출산·육아 정밀 데이터 426건 전용 mockData (몽땅정보 공식 URL https://umsa.seoul.go.kr/ 교정)
+// 100% 출산·육아 정밀 데이터 426건 전용 mockData (matched_policies 최대 5개 확장 반영)
 import { PolicyProposal, DistrictStat, DashboardStats } from './types';
 
 export type { PolicyProposal as Proposal };
@@ -235,6 +235,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -300,6 +324,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -370,6 +402,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 30
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 30
       }
     ]
   },
@@ -433,6 +489,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -504,6 +568,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -568,6 +656,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -636,6 +748,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -700,6 +836,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -767,6 +927,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -886,6 +1070,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -950,6 +1142,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -1020,6 +1236,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
+        "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "고위험 임산부 의료비 지원",
+        "summary": "19대 고위험 임신 질환 입원치료비 중 전액본인부담금 및 비급여 진료비 90% 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -1084,6 +1324,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -1154,6 +1418,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -1218,6 +1506,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -1286,6 +1598,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -1352,6 +1688,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -1416,6 +1776,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -1487,6 +1855,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 30
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 30
       }
     ]
   },
@@ -1554,6 +1946,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -1618,6 +2018,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -1735,6 +2159,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -1802,6 +2250,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -1866,6 +2338,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -1935,6 +2431,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -1999,6 +2519,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -2066,6 +2610,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -2184,6 +2736,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -2354,6 +2914,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -2422,6 +3006,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 60
+      },
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 엽산제, 철분제 지원",
+        "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -2486,6 +3094,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -2554,6 +3186,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -2618,6 +3274,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -2686,6 +3366,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -2752,6 +3456,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -2815,6 +3543,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -2935,6 +3671,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -3001,6 +3761,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -3121,6 +3905,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -3236,6 +4044,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -3301,6 +4117,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -3372,6 +4196,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "농식품바우처 취약계층 지원",
+        "summary": "(생계급여 수급가구 중 임산부,영유아,아동이 포함된 가구/농협하나로마트 등의 공급처에서 국내산 과일, 채소, 흰우유, 신선계란, 육류, 잡곡류, 두부류를 구매할 수 있는 농식품바우처 제공)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -3436,6 +4284,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -3506,6 +4378,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -3569,6 +4449,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -3640,6 +4528,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -3708,6 +4604,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -3772,6 +4676,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -3891,6 +4819,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -3957,6 +4909,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "맘편한 KTX?SRT 임산부 할인",
+        "summary": "KTX?SRT 철도요금 임산부 할인",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 50
+      },
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 엽산제, 철분제 지원",
+        "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 30
       }
     ]
   },
@@ -4021,6 +4997,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -4088,6 +5088,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -4255,6 +5279,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -4476,6 +5508,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -4542,6 +5598,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -4676,6 +5756,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -4793,6 +5897,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -4857,6 +5985,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -4926,6 +6078,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -4991,6 +6151,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -5213,6 +6381,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -5330,6 +6522,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -5669,6 +6885,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -5737,6 +6961,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -5801,6 +7049,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -5918,6 +7190,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -5981,6 +7277,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -6049,6 +7353,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -6267,6 +7579,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -6433,6 +7753,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -6547,6 +7875,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -6717,6 +8069,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -6783,6 +8159,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -6969,6 +8369,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -7033,6 +8441,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -7153,6 +8569,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
+        "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "고위험 임산부 의료비 지원",
+        "summary": "19대 고위험 임신 질환 입원치료비 중 전액본인부담금 및 비급여 진료비 90% 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -7270,6 +8710,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "과학문화 바우처 취약계층 지원",
+        "summary": "(6세 이상(2019.12.31 이전 출생자) 기초생활수급자, 차상위계층/과학문화 상품 및 서비스 이용하는 온라인 포인트 5만원 지급/과학문화바우처 홈페이지)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 산후조리경비 지원",
+        "policy_name": "서울형 산모 산후조리경비 지원",
+        "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "저소득층 기저귀조제분유 취약계층 지원 (사회서비스전자바우처)",
+        "summary": "(출산가정/ⓧ/(기저귀)만2세 미만의 영아를 둔 기초생활보장, 차상위,, 한부모가족 수급 가구 대상. (조제분유)아동복지시설, 공동생활가정, 입양아동, 한부모 아동 등(별도 확인)/남여/기저귀, 조제분유 구매비용)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "가족지원팀",
+        "score": 30
       }
     ]
   },
@@ -7388,6 +8852,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -7452,6 +8940,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": "서울형 산후조리경비 지원",
+        "policy_name": "서울형 산모 산후조리경비 지원",
+        "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -7640,6 +9152,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -7704,6 +9224,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -7940,6 +9468,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -8102,6 +9654,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -8420,6 +9980,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -8484,6 +10068,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -8601,6 +10209,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -8669,6 +10301,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "가족지원팀",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "농식품바우처 취약계층 지원",
+        "summary": "(생계급여 수급가구 중 임산부,영유아,아동이 포함된 가구/농협하나로마트 등의 공급처에서 국내산 과일, 채소, 흰우유, 신선계란, 육류, 잡곡류, 두부류를 구매할 수 있는 농식품바우처 제공)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -8732,6 +10388,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -8801,6 +10481,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -8865,6 +10553,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -8933,6 +10645,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -8997,6 +10733,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
+        "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
@@ -9116,6 +10876,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -9182,6 +10966,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -9245,6 +11053,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -9414,6 +11230,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -9532,6 +11372,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -9596,6 +11460,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
+        "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "고위험 임산부 의료비 지원",
+        "summary": "19대 고위험 임신 질환 입원치료비 중 전액본인부담금 및 비급여 진료비 90% 지원",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -9716,6 +11604,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -9780,6 +11692,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -10048,6 +11984,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -10112,6 +12072,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -10227,6 +12211,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -10345,6 +12353,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -10408,6 +12424,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "1인 자영업자?프리랜서 임산부 출산급여 지원",
         "summary": "‘임산부 출산급여’ 추가 지원 90만원 1인당 출산급여 240만원 보장 = <현행>고용보험 지원 150만원 + <신규> 서울시 추가지원 90만원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "농식품바우처 취약계층 지원",
+        "summary": "(생계급여 수급가구 중 임산부,영유아,아동이 포함된 가구/농협하나로마트 등의 공급처에서 국내산 과일, 채소, 흰우유, 신선계란, 육류, 잡곡류, 두부류를 구매할 수 있는 농식품바우처 제공)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 교통비 지원",
+        "summary": "○ 지원내용 : 임산부 1인당 교통비 바우처<b class='font-color-primary'> 70~100만원</b> 지급 ○ 지원방법 : 협약카드사(6개사 중 택1)의 임산부 본인명의 신용카드(또는 체크카드)에...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부교통비 지원",
+        "summary": "○ 지원내용 : 임산부 1인당 교통비 바우처<b class='font-color-primary'> 70~100만원</b> 지급 ○ 지원방법 : 협약카드사(6개사 중 택1)의 임산부 본인명의 신용카드(또는 체크카드)에...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 50
@@ -10527,6 +12567,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
+        "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "고위험 임산부 의료비 지원",
+        "summary": "19대 고위험 임신 질환 입원치료비 중 전액본인부담금 및 비급여 진료비 90% 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -10591,6 +12655,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -10659,6 +12747,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -10723,6 +12835,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -10791,6 +12927,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -10855,6 +13015,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -10923,6 +13107,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -10987,6 +13195,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -11204,6 +13436,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -11370,6 +13626,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
+        "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "고위험 임산부 의료비 지원",
+        "summary": "19대 고위험 임신 질환 입원치료비 중 전액본인부담금 및 비급여 진료비 90% 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -11434,6 +13714,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
+        "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "고위험 임산부 의료비 지원",
+        "summary": "19대 고위험 임신 질환 입원치료비 중 전액본인부담금 및 비급여 진료비 90% 지원",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -11503,6 +13807,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -11567,6 +13895,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -11685,6 +14037,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -11749,6 +14125,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
+        "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "고위험 임산부 의료비 지원",
+        "summary": "19대 고위험 임신 질환 입원치료비 중 전액본인부담금 및 비급여 진료비 90% 지원",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -11916,6 +14316,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -11979,6 +14403,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -12046,6 +14478,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -12818,6 +15274,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -13278,6 +15758,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -13393,6 +15881,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -13457,6 +15969,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -13677,6 +16197,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -13745,6 +16289,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -13809,6 +16361,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -13974,6 +16550,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -14190,6 +16790,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -14306,6 +16930,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -14372,6 +17020,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -14608,6 +17280,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -14822,6 +17518,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -14886,6 +17590,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -14954,6 +17682,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -15019,6 +17771,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -15138,6 +17914,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -15203,6 +17987,14 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
@@ -15272,6 +18064,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -15338,6 +18138,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 교통비 지원",
+        "summary": "○ 지원내용 : 임산부 1인당 교통비 바우처<b class='font-color-primary'> 70~100만원</b> 지급 ○ 지원방법 : 협약카드사(6개사 중 택1)의 임산부 본인명의 신용카드(또는 체크카드)에...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부교통비 지원",
+        "summary": "○ 지원내용 : 임산부 1인당 교통비 바우처<b class='font-color-primary'> 70~100만원</b> 지급 ○ 지원방법 : 협약카드사(6개사 중 택1)의 임산부 본인명의 신용카드(또는 체크카드)에...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 50
+      },
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 30
       }
     ]
   },
@@ -15451,6 +18275,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
+        "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "고위험 임산부 의료비 지원",
+        "summary": "19대 고위험 임신 질환 입원치료비 중 전액본인부담금 및 비급여 진료비 90% 지원",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -15671,6 +18519,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -15837,6 +18693,14 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
+        "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
       }
     ]
   },
@@ -15903,6 +18767,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -15967,6 +18855,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -16036,6 +18948,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -16101,6 +19037,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "그 밖의 연장형 보육료 등",
         "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
         "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "시간제보육",
+        "summary": "시간제 보육 이용(시간당 3,000원), 부모 본인부담 경감",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "휴일보육",
+        "summary": "일요일 및 공휴일(토요일 제외) 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/holidayList.do",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "거점형 야간보육",
+        "summary": "야간연장보육 필요한 타원아동에 대한 보육서비스 제공",
+        "apply_url": "https://iseoul.seoul.go.kr/portal/reservation/baseExtendList.do",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -16170,6 +19130,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -16234,6 +19218,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -16353,6 +19361,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -16417,6 +19449,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -16486,6 +19542,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -16550,6 +19630,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -16618,6 +19722,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -16682,6 +19810,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -16750,6 +19902,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -16814,6 +19990,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -16883,6 +20083,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -16947,6 +20171,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -17065,6 +20313,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -17129,6 +20401,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -17199,6 +20495,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -17264,6 +20584,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -17332,6 +20676,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -17398,6 +20766,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -17461,6 +20853,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -17530,6 +20946,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -17594,6 +21034,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -17661,6 +21125,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -17778,6 +21266,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -17842,6 +21354,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -17910,6 +21446,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -17974,6 +21534,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -18042,6 +21626,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 60
+      },
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 엽산제, 철분제 지원",
+        "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -18156,6 +21764,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -18274,6 +21906,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -18389,6 +22045,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -18454,6 +22134,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -18523,6 +22227,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -18589,6 +22317,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -18653,6 +22405,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -18773,6 +22549,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -18841,6 +22641,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -18905,6 +22729,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -18975,6 +22823,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -19038,6 +22910,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -19158,6 +23054,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -19222,6 +23142,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -19292,6 +23236,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -19356,6 +23324,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -19473,6 +23465,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -19537,6 +23553,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -19608,6 +23648,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -19672,6 +23736,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -19741,6 +23829,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -19805,6 +23917,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -19872,6 +24008,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -19943,6 +24103,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -20008,6 +24192,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -20076,6 +24284,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -20139,6 +24371,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -20210,6 +24466,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -20274,6 +24554,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -20344,6 +24648,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -20408,6 +24736,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -20476,6 +24828,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -20540,6 +24916,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -20608,6 +25008,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -20672,6 +25096,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -20740,6 +25188,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -20806,6 +25278,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -20870,6 +25366,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -20940,6 +25460,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -21004,6 +25548,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -21122,6 +25690,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -21186,6 +25778,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -21254,6 +25870,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -21320,6 +25960,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -21384,6 +26048,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -21454,6 +26142,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -21518,6 +26230,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -21587,6 +26323,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 30
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 30
       }
     ]
   },
@@ -21652,6 +26412,30 @@ export const mockProposals: PolicyProposal[] = [
         "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "가족건강팀",
+        "score": 30
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
         "score": 30
       }
     ]
@@ -21770,6 +26554,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -21833,6 +26641,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -21903,6 +26735,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": "서울형 산후조리경비 지원",
+        "policy_name": "서울형 산모 산후조리경비 지원",
+        "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
+        "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -21969,6 +26825,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -22033,6 +26913,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -22102,6 +27006,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -22168,6 +27096,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -22231,6 +27183,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -22300,6 +27276,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -22364,6 +27364,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -22432,6 +27456,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -22495,6 +27543,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -22564,6 +27636,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -22627,6 +27723,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -22696,6 +27816,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -22759,6 +27903,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -22830,6 +27998,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -22893,6 +28085,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -22962,6 +28178,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -23025,6 +28265,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -23094,6 +28358,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -23157,6 +28445,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -23226,6 +28538,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -23289,6 +28625,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -23358,6 +28718,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -23424,6 +28808,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -23487,6 +28895,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -23558,6 +28990,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -23626,6 +29082,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -23690,6 +29170,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -23761,6 +29265,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -23828,6 +29356,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -23891,6 +29443,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -23962,6 +29538,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -24025,6 +29625,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -24094,6 +29718,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -24160,6 +29808,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -24223,6 +29895,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -24294,6 +29990,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -24360,6 +30080,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -24423,6 +30167,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -24493,6 +30261,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -24556,6 +30348,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -24627,6 +30443,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -24690,6 +30530,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -24761,6 +30625,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 50
+      },
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 30
       }
     ]
   },
@@ -24826,6 +30714,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -24895,6 +30807,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -24958,6 +30894,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -25029,6 +30989,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -25095,6 +31079,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -25158,6 +31166,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -25229,6 +31261,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -25294,6 +31350,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -25364,6 +31444,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 60
+      },
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 엽산제, 철분제 지원",
+        "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -25427,6 +31531,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -25496,6 +31624,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -25559,6 +31711,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
@@ -25628,6 +31804,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -25692,6 +31892,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -25760,6 +31984,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -25824,6 +32072,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -25892,6 +32164,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -25956,6 +32252,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -26171,6 +32491,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://www.idolbom.go.kr/front/login",
         "dept_name": "돌봄사업팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "돌봄사업팀",
+        "score": 50
       }
     ]
   },
@@ -26239,6 +32583,30 @@ export const mockProposals: PolicyProposal[] = [
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 한의약 난임치료 지원",
+        "summary": "원인불명의 난임진단 부부에게  한의약 난임치료 첩약비용(3개월)의 본인부담금 90%(상한 1,200천원) 지원",
+        "apply_url": "https://seoul-agi.seoul.go.kr/infertility-treatment-support-application",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "난임부부 지원",
+        "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
+        "apply_url": "https://umsa.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
       }
     ]
   },
@@ -26303,6 +32671,30 @@ export const mockProposals: PolicyProposal[] = [
         "policy_name": "아픈아이 전담 아이돌봄서비스",
         "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
         "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아 전담 아이돌봄서비스",
+        "summary": "출산휴가, 육아휴직 후 복귀하는 맞벌이 가정을 지원하고자 영아 돌봄 교육을 이수한 전담 돌보미가 영아 이유식 먹이기, 젖병 소독 등 영아 특화 돌봄서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "영아종일제 아이돌봄 서비스",
+        "summary": "양육공백 가정에 아이돌보미가 찾아가 영아 이유식 먹이기, 젖병 소독, 기저귀 갈기, 목욕 등 돌봄 서비스 제공  ※ 정부지원 아이돌봄 서비스는 서울형 아이돌봄비(조부모 돌봄수당 등)와 별개의 사업   - 서울형 아이...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000024",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "초등돌봄 공적 인프라 확충",
+        "policy_name": "초등돌봄교실",
+        "summary": "돌봄, 교육 및 일부 급?간식비 지원",
+        "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 50
       }
@@ -26408,7 +32800,7 @@ export const mockProposals: PolicyProposal[] = [
   }
 ];
 
-export function extractTopKeywords(proposals: PolicyProposal[], limit = 30): { keyword: string; count: number }[] {
+export function extractTopKeywords(proposals: PolicyProposal[], limit = 30): { keyword: string; count: number; proposalCount: number }[] {
   const stopWords = new Set([
     '및', '위한', '대해', '있습니다', '수', '하는', '등', '있는', '너무', '없어서', '통해', '제도', '기준', '지원', '서울시', '혜택',
     '있도록', '합니다', '됩니다', '없습니다', '되어', '되는', '되고', '하고', '하며', '하여', '해서',
@@ -26419,13 +32811,15 @@ export function extractTopKeywords(proposals: PolicyProposal[], limit = 30): { k
     '아이', '정책', '경우', '생각', '때문', '관내', '확대', '필요', '요청', '내용', '현황', '문제점', '기대효과', '제안요지', '대상', '제공', '이용', '사용', '방법', '문제', '시설', '서울형',
     '가정', '저출산', '현재', '서비스', '제안', '사업', '운영', '추진', '개선', '자체', '이것', '이런', '문자', '가지', '의한', '지정', '대책', '방안', '실시', '구축', '설치', '배정', '관리',
     '이', '그', '저', '것', '수가', '들이', '에게', '으로서', '로서', '에는', '에서는', '분야', '상황', '정도', '부분',
+    '안녕하세요', '이상', '시간', '아니라', '있다', '필요한', '모든', '인해', '다른', '도움',
   ]);
 
   const frequencyMap: Record<string, number> = {};
+  const proposalIdMap: Record<string, Set<string>> = {};
 
   proposals.forEach(prop => {
     const text = (prop.title + ' ' + prop.content)
-      .replace(/[.,()[\]'":\-?!<ctrl42>?!·~、"'ㆍ%]/g, ' ');
+      .replace(/[.,()[\]'":\-?!？！·~、"'ㆍ%]/g, ' ');
     const words = text.split(/\s+/);
 
     words.forEach(word => {
@@ -26441,6 +32835,8 @@ export function extractTopKeywords(proposals: PolicyProposal[], limit = 30): { k
       if (normalized.length < 2) return;
       if (stopWords.has(normalized)) return;
 
+      if (normalized.includes('출산율') || normalized === '출산') normalized = '출산';
+      if (normalized === '보육') normalized = '보육/돌봄';
       if (normalized.includes('공공') || normalized.includes('국공립')) normalized = '공공시설';
       if (normalized.includes('산후조리')) normalized = '산후조리원';
       if (normalized.includes('다자녀') || normalized.includes('2자녀') || normalized.includes('3자녀')) normalized = '다자녀기준';
@@ -26455,11 +32851,19 @@ export function extractTopKeywords(proposals: PolicyProposal[], limit = 30): { k
       if (normalized.includes('익명') || normalized.includes('쉼터') || normalized.includes('위기')) normalized = '위기임산부익명';
 
       frequencyMap[normalized] = (frequencyMap[normalized] || 0) + 1;
+      if (!proposalIdMap[normalized]) {
+        proposalIdMap[normalized] = new Set();
+      }
+      proposalIdMap[normalized].add(prop.id);
     });
   });
 
   const sorted = Object.entries(frequencyMap)
-    .map(([keyword, count]) => ({ keyword, count }))
+    .map(([keyword, count]) => ({
+      keyword,
+      count,
+      proposalCount: proposalIdMap[keyword] ? proposalIdMap[keyword].size : 0
+    }))
     .sort((a, b) => b.count - a.count);
 
   return sorted.slice(0, limit);

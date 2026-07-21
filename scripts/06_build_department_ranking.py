@@ -130,7 +130,7 @@ def match_policies(proposal):
             })
             
     matched.sort(key=lambda x: x["score"], reverse=True)
-    return matched[:2]
+    return matched[:5]
 
 # Proposals 갱신
 for p in proposals:
