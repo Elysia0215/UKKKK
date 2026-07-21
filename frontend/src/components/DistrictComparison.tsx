@@ -6,6 +6,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MapPin, ThumbsUp, MessageSquare, HelpCircle, CheckCircle, ArrowUpDown, ExternalLink, Download } from 'lucide-react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, Legend, ComposedChart, Line } from 'recharts';
 import { PolicyProposal } from '../types';
 import { SEOUL_DISTRICTS } from '../data/mockData';
 import { districtStats } from '../data/mockData';
@@ -120,11 +121,40 @@ export const DistrictComparison: React.FC<Props> = ({
 
   const selectedDistrictDetail = districtData.find(item => item.name === selectedDistrict);
   const selectedDistrictStat = districtStats.find(stat => stat.district === selectedDistrict);
+  const selectedDistrictDemandIndex = selectedDistrictDetail
+    ? Number((selectedDistrictDetail.count * (1 + selectedDistrictDetail.avgVote / 100)).toFixed(1))
+    : 0;
+
+  const tooltipLabelMap: Record<string, string> = {
+    proposals: '제안 건수',
+    births: '출생아 수',
+    childcare: '보육시설 수',
+    demandIndex: '정책 수요지수',
+    tfr: '합계출산율',
+  };
+
+  const tooltipFormatter = (value: number | string, name: string) => [value, tooltipLabelMap[name] ?? name];
 
   const filteredProposals = useMemo(() => {
     if (!selectedDistrict) return [];
     return proposals.filter(p => p.district === selectedDistrict);
   }, [proposals, selectedDistrict]);
+
+  const chartData = useMemo(() => {
+    return districtData.map(item => {
+      const stat = districtStats.find(stat => stat.district === item.name);
+      const demandIndex = Number((item.count * (1 + item.avgVote / 100)).toFixed(1));
+      return {
+        name: item.name,
+        proposals: item.count,
+        births: stat?.births_total ?? 0,
+        childcare: stat?.childcare_facility_count ?? 0,
+        tfr: stat?.tfr ?? 0,
+        demandIndex,
+        selected: item.name === selectedDistrict,
+      };
+    }).sort((a, b) => b.proposals - a.proposals);
+  }, [districtData, selectedDistrict]);
 
   return (
     <div className="space-y-6">
@@ -183,6 +213,14 @@ export const DistrictComparison: React.FC<Props> = ({
                     <span>보육시설수(2025)</span>
                     <span className="font-bold text-slate-900">{selectedDistrictStat?.childcare_facility_count?.toLocaleString() ?? 'N/A'}개</span>
                   </div>
+                  <div className="flex items-center justify-between rounded-lg bg-white px-3 py-2 border border-slate-200">
+                    <span>합계출산율</span>
+                    <span className="font-bold text-slate-900">{selectedDistrictStat?.tfr?.toFixed(3) ?? 'N/A'}</span>
+                  </div>
+                  <div className="flex items-center justify-between rounded-lg bg-white px-3 py-2 border border-slate-200">
+                    <span>정책 수요지수</span>
+                    <span className="font-bold text-slate-900">{selectedDistrictDemandIndex}</span>
+                  </div>
                 </div>
               ) : (
                 <p className="mt-3 text-sm text-slate-500">
@@ -190,18 +228,67 @@ export const DistrictComparison: React.FC<Props> = ({
                 </p>
               )}
             </div>
-            <div className="rounded-xl border border-slate-200 bg-white p-4">
-              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">빠른 선택</p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {districtMapData.filter(item => item.count > 0).slice(0, 8).map(item => (
-                  <button
-                    key={item.name}
-                    onClick={() => onSelectDistrict(item.name)}
-                    className={`rounded-full border px-2.5 py-1 text-[11px] font-semibold transition ${selectedDistrict === item.name ? 'border-red-500 bg-red-50 text-red-700' : 'border-slate-200 text-slate-700 hover:bg-slate-50'}`}
-                  >
-                    {item.name}
-                  </button>
-                ))}
+            <div className="rounded-3xl border border-slate-200 bg-white p-4">
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-slate-500">자치구 제안 건수 비교</p>
+              <div className="h-[240px] mt-4">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={chartData} margin={{ top: 10, right: 8, left: -12, bottom: 40 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" vertical={false} />
+                    <XAxis dataKey="name" tickLine={false} axisLine={false} height={70} interval={0} angle={-35} textAnchor="end" tick={{ fontSize: 10, fill: '#64748b' }} />
+                    <YAxis tickLine={false} axisLine={false} tick={{ fontSize: 10, fill: '#64748b' }} />
+                    <Tooltip cursor={{ fill: 'rgba(15, 23, 42, 0.05)' }} formatter={tooltipFormatter} />
+                    <Bar dataKey="proposals" name="제안 건수" radius={[8, 8, 0, 0]} barSize={18} onClick={(event: any) => event?.activeLabel && onSelectDistrict(event.activeLabel)}>
+                      {chartData.map(item => (
+                        <Cell key={item.name} fill={item.selected ? '#dc2626' : '#6366f1'} />
+                      ))}
+                    </Bar>
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+            <div className="rounded-3xl border border-slate-200 bg-white p-4">
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-slate-500">출생아 수 · 보육시설 수 비교</p>
+              <div className="h-[240px] mt-4">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart data={chartData} margin={{ top: 10, right: 8, left: -12, bottom: 40 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" vertical={false} />
+                    <XAxis dataKey="name" tickLine={false} axisLine={false} height={80} interval={0} angle={-35} textAnchor="end" tickMargin={10} minTickGap={0} tick={{ fontSize: 10, fill: '#64748b' }} />
+                    <YAxis tickLine={false} axisLine={false} tick={{ fontSize: 10, fill: '#64748b' }} />
+                    <Tooltip cursor={{ fill: 'rgba(15, 23, 42, 0.05)' }} formatter={tooltipFormatter} />
+                    <Legend verticalAlign="top" wrapperStyle={{ fontSize: 11, paddingBottom: 8 }} />
+                    <Bar dataKey="births" name="출생아 수" radius={[8, 8, 0, 0]} barSize={14}>
+                      {chartData.map(item => (
+                        <Cell key={`births-${item.name}`} fill={item.selected ? '#065f46' : '#10b981'} />
+                      ))}
+                    </Bar>
+                    <Bar dataKey="childcare" name="보육시설 수" radius={[8, 8, 0, 0]} barSize={14}>
+                      {chartData.map(item => (
+                        <Cell key={`childcare-${item.name}`} fill={item.selected ? '#b45309' : '#f59e0b'} />
+                      ))}
+                    </Bar>
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+            <div className="rounded-3xl border border-slate-200 bg-white p-4">
+              <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-slate-500">합계출산율 · 정책 수요지수</p>
+              <div className="h-[260px] mt-4">
+                <ResponsiveContainer width="100%" height="100%">
+                  <ComposedChart data={chartData} margin={{ top: 10, right: 8, left: -12, bottom: 40 }}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" vertical={false} />
+                    <XAxis dataKey="name" tickLine={false} axisLine={false} height={80} interval={0} angle={-35} textAnchor="end" tickMargin={10} minTickGap={0} tick={{ fontSize: 10, fill: '#64748b' }} />
+                    <YAxis yAxisId="left" tickLine={false} axisLine={false} tick={{ fontSize: 10, fill: '#64748b' }} />
+                    <YAxis yAxisId="right" orientation="right" tickLine={false} axisLine={false} tick={{ fontSize: 10, fill: '#64748b' }} domain={[0, 1]} />
+                    <Tooltip cursor={{ fill: 'rgba(15, 23, 42, 0.05)' }} formatter={tooltipFormatter} />
+                    <Legend verticalAlign="top" wrapperStyle={{ fontSize: 11, paddingBottom: 8 }} />
+                    <Bar dataKey="demandIndex" name="정책 수요지수" yAxisId="left" radius={[8, 8, 0, 0]} barSize={14}>
+                      {chartData.map(item => (
+                        <Cell key={`demand-${item.name}`} fill={item.selected ? '#db2777' : '#8b5cf6'} />
+                      ))}
+                    </Bar>
+                    <Line type="monotone" dataKey="tfr" name="합계출산율" yAxisId="right" stroke="#0f766e" strokeWidth={3} dot={{ r: 2 }} activeDot={{ r: 5 }} />
+                  </ComposedChart>
+                </ResponsiveContainer>
               </div>
             </div>
           </div>
