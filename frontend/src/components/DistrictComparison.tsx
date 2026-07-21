@@ -144,13 +144,6 @@ export const DistrictComparison: React.FC<Props> = ({
           </div>
           <div className="flex items-center gap-2">
             <button
-              onClick={() => setSortOrder(prev => prev === 'desc' ? 'asc' : 'desc')}
-              className="text-xs bg-slate-100 text-slate-700 hover:bg-slate-200 px-3 py-1.5 rounded-lg border border-slate-200/80 font-bold flex items-center gap-1 transition cursor-pointer"
-            >
-              <ArrowUpDown className="w-3.5 h-3.5" />
-              {sortOrder === 'desc' ? '건수 높은 순' : '건수 낮은 순'}
-            </button>
-            <button
               onClick={handleExportDistrictStats}
               className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg transition shrink-0 cursor-pointer shadow-xs"
               title="25개 자치구별 출생 및 보육 통계 CSV 다운로드"
@@ -331,30 +324,48 @@ export const DistrictComparison: React.FC<Props> = ({
       </div>
 
       {/* 25개 자치구 퀵 필터 그리드 */}
-      <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
-        <p className="text-xs font-bold text-slate-700 mb-2.5">전체 자치구 퀵 선택</p>
+      <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2.5 border-b border-slate-100">
+          <div>
+            <p className="text-xs font-bold text-slate-800">전체 25개 자치구 정렬 퀵 선택</p>
+            <p className="text-[11px] text-slate-500">
+              현재 정렬 방식: <strong className="text-indigo-600 font-extrabold">{sortOrder === 'desc' ? '시민 제안건수 많은 순 (내림차순)' : '시민 제안건수 적은 순 (오름차순)'}</strong>
+            </p>
+          </div>
+          <button
+            onClick={() => setSortOrder(prev => prev === 'desc' ? 'asc' : 'desc')}
+            className="text-xs bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 px-3 py-1.5 rounded-lg font-extrabold flex items-center gap-1.5 transition cursor-pointer shadow-2xs self-start sm:self-auto"
+            title="아래 25개 자치구 칩 및 비교 차트의 정렬 순서를 내림차순/오름차순으로 전환합니다."
+          >
+            <ArrowUpDown className="w-3.5 h-3.5 text-indigo-600" />
+            <span>{sortOrder === 'desc' ? '건수 높은 순 (내림차순)' : '건수 낮은 순 (오름차순)'}</span>
+          </button>
+        </div>
+
         <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-9 lg:grid-cols-12 gap-1.5">
-          {SEOUL_DISTRICTS.map(dist => {
-            const hasData = proposals.some(p => p.district === dist);
-            const count = proposals.filter(p => p.district === dist).length;
+          {districtData.map(item => {
+            const dist = item.name;
+            const count = item.count;
+            const hasData = count > 0;
             const isSelected = selectedDistrict === dist;
             
             return (
               <button
                 key={dist}
                 onClick={() => onSelectDistrict(isSelected ? null : dist)}
-                className={`text-[11px] py-1.5 px-1 rounded-lg font-bold border transition duration-150 flex flex-col items-center justify-center ${
+                className={`text-[11px] py-1.5 px-1 rounded-lg font-bold border transition duration-150 flex flex-col items-center justify-center cursor-pointer ${
                   isSelected 
-                    ? 'bg-red-500 text-white border-red-600 shadow-sm' 
+                    ? 'bg-red-500 text-white border-red-600 shadow-sm ring-2 ring-red-200' 
                     : hasData 
-                      ? 'bg-slate-50 hover:bg-slate-100 text-slate-800 border-slate-200 hover:border-[#0A2351]' 
+                      ? 'bg-slate-50 hover:bg-indigo-50 text-slate-800 border-slate-200 hover:border-indigo-400' 
                       : 'bg-slate-100 text-slate-400 border-slate-200 cursor-not-allowed opacity-60'
                 }`}
                 disabled={!hasData}
+                title={`${dist}: 총 ${count}건 시민 제안`}
               >
                 <span>{dist}</span>
                 {hasData && (
-                  <span className={`text-[9px] mt-0.5 font-mono ${isSelected ? 'text-red-100' : 'text-slate-500'}`}>
+                  <span className={`text-[9px] mt-0.5 font-mono ${isSelected ? 'text-red-100 font-extrabold' : 'text-slate-500'}`}>
                     ({count}건)
                   </span>
                 )}
