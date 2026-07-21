@@ -106,11 +106,11 @@ export const CategoryDemand: React.FC<Props> = ({
                   ? 'bg-blue-600/80 hover:bg-blue-600 text-white border-blue-400 hover:scale-105'
                   : 'bg-white/10 hover:bg-white/20 text-blue-100 border-white/20 hover:scale-105'
               }`}
-              title={`'${item.keyword}' 관련 제안 원문 ${item.count}건 보기`}
+              title={`'${item.keyword}' 관련 본문 총 ${item.count}회 등장 (클릭하여 연관 제안 원문 보기)`}
             >
               <span>#{item.keyword}</span>
               <span className="text-[10px] bg-black/30 px-1.5 py-0.2 rounded-full font-mono font-normal">
-                {item.count}건
+                {item.count}회
               </span>
             </button>
           ))}
