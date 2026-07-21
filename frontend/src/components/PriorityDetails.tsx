@@ -329,16 +329,15 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                     className={`p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 cursor-pointer select-none transition ${hasGaps && !isSingle ? 'bg-rose-50/20 hover:bg-rose-50/50' : 'bg-slate-50/50 hover:bg-slate-100/30'
                       }`}
                   >
-                    <div className="flex items-start sm:items-center gap-3">
-                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${group.category === '출산' ? 'bg-pink-100 text-pink-700' :
-                          group.category === '보육' ? 'bg-indigo-100 text-indigo-700' :
-                            group.category === '다자녀' ? 'bg-purple-100 text-purple-700' :
-                              group.category === '위기임산부' ? 'bg-rose-100 text-rose-700 border border-rose-200' :
-                                group.category === '다문화' ? 'bg-orange-100 text-orange-700' :
-                                  'bg-blue-100 text-blue-700'
-                        }`}>
+                    <div className="flex items-start sm:items-center gap-2 flex-wrap">
+                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 border border-blue-200">
                         {group.category}
                       </span>
+                      {group.items[0]?.sub_category && (
+                        <span className="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200">
+                          {group.items[0].sub_category}
+                        </span>
+                      )}
                       <div>
                         <h4 className="text-sm font-bold text-slate-900 flex items-center gap-1.5">
                           {group.name}

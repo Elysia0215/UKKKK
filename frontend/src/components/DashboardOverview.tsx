@@ -56,12 +56,14 @@ export const DashboardOverview: React.FC<Props> = ({
     return acc;
   }, {} as Record<string, number>);
 
-  const pieData: { name: string; value: number }[] = Object.entries(categoryCount).map(([name, value]) => ({
-    name,
-    value: value as number
-  }));
+  const pieData: { name: string; value: number }[] = Object.entries(categoryCount)
+    .map(([name, value]) => ({
+      name: name || '기타',
+      value: value as number
+    }))
+    .sort((a, b) => b.value - a.value);
 
-  const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899'];
+  const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4', '#6366f1', '#64748b'];
 
   // 공감수가 높은 미답변 핵심 현안 (정책 공백 3건 간략 요약)
   const keyGaps = [...proposals]
