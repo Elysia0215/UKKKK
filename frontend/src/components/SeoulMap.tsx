@@ -115,7 +115,7 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
           {districtMapLayout.map((boundary) => {
             const district = SEOUL_DISTRICTS_DATA.find((item) => item.name === boundary.name);
             const isSelected = boundary.name === selectedDistrict.name;
-            const fill = district ? getFill(district) : '#f8fafc';
+            const fill = isSelected ? '#0A2351' : (district ? getFill(district) : '#f8fafc');
             const metricText = district ? formatMetricValue(district, colorMetric) : 'N/A';
 
             return (
@@ -125,7 +125,7 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
                 tabIndex={0}
                 role="button"
                 style={{
-                  opacity: selectedDistrict?.name ? (isSelected ? 1 : 0.25) : 1,
+                  opacity: selectedDistrict?.name ? (isSelected ? 1 : 0.6) : 1,
                   transition: 'opacity 0.25s ease-in-out'
                 }}
                 onClick={() => district && onSelectDistrict(district)}
@@ -161,7 +161,7 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
                   textAnchor="middle"
                   dominantBaseline="middle"
                   fontSize="10.5"
-                  fontWeight="800"
+                  fontWeight="900"
                   fill={isSelected ? '#ffffff' : '#0f172a'}
                   className="pointer-events-none"
                 >
@@ -173,8 +173,8 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
                   textAnchor="middle"
                   dominantBaseline="middle"
                   fontSize="9.5"
-                  fontWeight="800"
-                  fill={isSelected ? '#fbbf24' : '#2563eb'}
+                  fontWeight="900"
+                  fill={isSelected ? '#fde047' : '#1e3a8a'}
                   className="pointer-events-none"
                 >
                   {metricText}

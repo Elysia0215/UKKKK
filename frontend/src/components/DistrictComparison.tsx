@@ -178,7 +178,7 @@ export const DistrictComparison: React.FC<Props> = ({
                   role="button"
                   tabIndex={0}
                   style={{
-                    opacity: selectedDistrict ? (item.isSelected ? 1 : 0.25) : 1,
+                    opacity: selectedDistrict ? (item.isSelected ? 1 : 0.6) : 1,
                     transition: 'opacity 0.25s ease-in-out'
                   }}
                 >
