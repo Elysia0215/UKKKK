@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { PolicyProposal, DashboardStats } from '../types';
 import { extractTopKeywords, getDepartmentStats } from '../data/mockData';
+import { KeywordDetailModal } from './KeywordDetailModal';
 import { 
   BarChart, 
   Bar, 
@@ -44,7 +45,8 @@ export const DashboardOverview: React.FC<Props> = ({
   onNavigateToTab,
   onSelectCategory
 }) => {
-  const topKeywords = extractTopKeywords(proposals);
+  const [selectedKeywordModal, setSelectedKeywordModal] = React.useState<string | null>(null);
+  const topKeywords = extractTopKeywords(proposals, 10);
   const deptStats = getDepartmentStats(proposals);
 
   // 카테고리별 데이터 산출
@@ -68,124 +70,109 @@ export const DashboardOverview: React.FC<Props> = ({
 
   return (
     <div className="space-y-6">
-      {/* 요약 카드 */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between hover:shadow-md transition"
-        >
-          <div>
-            <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">전체 제안 수</p>
-            <h3 className="text-3xl font-black text-slate-900 mt-1">{stats.totalCount} <span className="text-sm font-normal text-slate-500">건</span></h3>
-            <p className="text-[11px] text-blue-600 font-bold mt-1.5 flex items-center gap-1">
-              <TrendingUp className="w-3.5 h-3.5" />
-              <span>전월 대비 +12% 증가</span>
-            </p>
+      {/* Top 4 KPI 요약 카드 */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* 총 수집 제안 */}
+        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition">
+          <div className="flex justify-between items-start mb-3">
+            <div>
+              <p className="text-xs text-slate-500 font-bold">총 분석 제안</p>
+              <h3 className="text-2xl font-black text-slate-900 mt-1 font-mono">{stats.totalCount.toLocaleString()} <span className="text-xs font-normal text-slate-500">건</span></h3>
+            </div>
+            <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center font-bold">
+              <FileText className="w-5 h-5" />
+            </div>
           </div>
-          <div className="p-3 bg-blue-50/80 text-blue-700 rounded-lg border border-blue-100">
-            <FileText className="w-6 h-6" />
-          </div>
-        </motion.div>
+          <p className="text-[11px] text-slate-400 font-medium">상상대로 서울 출산·육아 정밀 제안</p>
+        </div>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between hover:shadow-md transition"
-        >
-          <div>
-            <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">평균 공감수</p>
-            <h3 className="text-3xl font-black text-slate-900 mt-1">{stats.avgVoteScore.toFixed(1)} <span className="text-sm font-normal text-slate-500">표</span></h3>
-            <p className="text-[11px] text-emerald-600 font-bold mt-1.5 flex items-center gap-1">
-              <ThumbsUp className="w-3.5 h-3.5" />
-              <span>시민 참여도 상승 중</span>
-            </p>
+        {/* 평균 시민 공감수 */}
+        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition">
+          <div className="flex justify-between items-start mb-3">
+            <div>
+              <p className="text-xs text-slate-500 font-bold">평균 시민 공감도</p>
+              <h3 className="text-2xl font-black text-[#0A2351] mt-1 font-mono">{stats.avgVoteScore} <span className="text-xs font-normal text-slate-500">표</span></h3>
+            </div>
+            <div className="w-10 h-10 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center font-bold">
+              <ThumbsUp className="w-5 h-5" />
+            </div>
           </div>
-          <div className="p-3 bg-emerald-50/80 text-emerald-700 rounded-lg border border-emerald-100">
-            <ThumbsUp className="w-6 h-6" />
-          </div>
-        </motion.div>
+          <p className="text-[11px] text-slate-400 font-medium">제안당 평균 공감도 산출</p>
+        </div>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between hover:shadow-md transition"
-        >
-          <div>
-            <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">미답변 제안 수</p>
-            <h3 className="text-3xl font-black text-amber-600 mt-1">{stats.unansweredCount} <span className="text-sm font-normal text-slate-500">건</span></h3>
-            <p className="text-[11px] text-amber-600 font-bold mt-1.5 flex items-center gap-1">
-              <Clock className="w-3.5 h-3.5" />
-              <span>검토 및 부서 배정 완료</span>
-            </p>
+        {/* 총 댓글 수 */}
+        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition">
+          <div className="flex justify-between items-start mb-3">
+            <div>
+              <p className="text-xs text-slate-500 font-bold">미답변 행정 건수</p>
+              <h3 className="text-2xl font-black text-rose-600 mt-1 font-mono">{stats.unansweredCount.toLocaleString()} <span className="text-xs font-normal text-slate-500">건</span></h3>
+            </div>
+            <div className="w-10 h-10 bg-rose-50 text-rose-600 rounded-lg flex items-center justify-center font-bold">
+              <Clock className="w-5 h-5" />
+            </div>
           </div>
-          <div className="p-3 bg-amber-50/80 text-amber-700 rounded-lg border border-amber-100">
-            <Clock className="w-6 h-6" />
-          </div>
-        </motion.div>
+          <p className="text-[11px] text-rose-500 font-bold">전체 제안의 {stats.unansweredRate}% 검토 대기중</p>
+        </div>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex items-center justify-between hover:shadow-md transition"
-        >
-          <div>
-            <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider">미답변 비율</p>
-            <h3 className="text-3xl font-black text-rose-600 mt-1">{stats.unansweredRate.toFixed(1)}<span className="text-sm font-normal text-slate-500">%</span></h3>
-            <p className="text-[11px] text-rose-600 font-bold mt-1.5 flex items-center gap-1">
-              <AlertTriangle className="w-3.5 h-3.5" />
-              <span>우선 대응 및 답변 필요</span>
-            </p>
+        {/* 답변 완료율 */}
+        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition">
+          <div className="flex justify-between items-start mb-3">
+            <div>
+              <p className="text-xs text-slate-500 font-bold">행정 답변율</p>
+              <h3 className="text-2xl font-black text-emerald-600 mt-1 font-mono">{(100 - stats.unansweredRate).toFixed(1)} <span className="text-xs font-normal text-slate-500">%</span></h3>
+            </div>
+            <div className="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center font-bold">
+              <CheckCircle2 className="w-5 h-5" />
+            </div>
           </div>
-          <div className="p-3 bg-rose-50/80 text-rose-700 rounded-lg border border-rose-100">
-            <AlertTriangle className="w-6 h-6" />
-          </div>
-        </motion.div>
+          <p className="text-[11px] text-slate-400 font-medium">공식 수용 및 답변 처리 완료 비율</p>
+        </div>
       </div>
 
       {/* 키워드 분석 및 카테고리 분포 */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        {/* 최근 급증 키워드 TOP 5 */}
+        {/* 최근 급증 키워드 TOP 10 */}
         <div className="lg:col-span-5 bg-white p-6 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-sm transition">
           <div>
             <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-200/80">
               <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
                 <TrendingUp className="text-rose-500 w-5 h-5" />
-                최근 급증 키워드 TOP 5
+                최근 급증 키워드 TOP 10
               </h4>
               <span className="text-[11px] bg-slate-100 text-slate-500 font-bold px-1.5 py-0.5 rounded font-mono">가중치 반영</span>
             </div>
-            <p className="text-xs text-slate-500 mb-5 leading-relaxed">
-              시민들이 작성한 제안의 제목과 내용에서 핵심적인 양육/출산 단어를 추출하고 가중치를 연산하여 도출한 빈도 지표입니다.
+            <p className="text-xs text-slate-500 mb-4 leading-relaxed">
+              시민들이 작성한 제안에서 핵심 단어를 정규화 추출한 빈도 순위입니다. (키워드 클릭 시 원문 견본 팝업)
             </p>
-            <div className="space-y-4">
+            <div className="space-y-2.5 max-h-[360px] overflow-y-auto pr-1">
               {topKeywords.map((item, index) => {
                 const maxVal = topKeywords[0]?.count || 1;
                 const percentage = (item.count / maxVal) * 100;
                 return (
-                  <div key={item.keyword} className="space-y-1.5">
+                  <div
+                    key={item.keyword}
+                    onClick={() => setSelectedKeywordModal(item.keyword)}
+                    className="space-y-1 p-1.5 rounded-lg hover:bg-blue-50/70 border border-transparent hover:border-blue-200 cursor-pointer transition-all"
+                    title={`클릭하여 '${item.keyword}' 관련 제안 원문 보기`}
+                  >
                     <div className="flex justify-between items-center text-xs">
                       <div className="flex items-center gap-2">
-                        <span className="w-5 h-5 bg-[#0A2351] text-white font-bold rounded text-[10px] flex items-center justify-center">
+                        <span className={`w-5 h-5 font-bold rounded text-[10px] flex items-center justify-center ${
+                          index < 3 ? 'bg-rose-500 text-white' : 'bg-[#0A2351] text-white'
+                        }`}>
                           {index + 1}
                         </span>
-                        <span className="font-bold text-slate-800">{item.keyword}</span>
+                        <span className="font-bold text-slate-800 hover:text-blue-600">#{item.keyword}</span>
                       </div>
-                      <span className="text-[11px] text-slate-500 font-mono font-semibold">{item.count}회 감지</span>
+                      <span className="text-[11px] text-slate-500 font-mono font-semibold">{item.count}회 감지 ↗</span>
                     </div>
-                    <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+                    <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
                       <motion.div 
                         initial={{ width: 0 }}
                         animate={{ width: `${percentage}%` }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
                         className={`h-full rounded-full ${
-                          index === 0 ? 'bg-rose-500' :
-                          index === 1 ? 'bg-amber-500' :
-                          index === 2 ? 'bg-[#0A2351]' :
-                          'bg-slate-400'
+                          index < 3 ? 'bg-rose-500' : 'bg-[#0A2351]'
                         }`}
                       />
                     </div>
@@ -194,10 +181,10 @@ export const DashboardOverview: React.FC<Props> = ({
               })}
             </div>
           </div>
-          <div className="mt-6 pt-4 border-t border-slate-100 text-center">
+          <div className="mt-4 pt-3 border-t border-slate-100 text-center">
             <button 
-              onClick={() => onNavigateToTab(2)} // 3번 탭 (인덱스 2): 키워드 분석
-              className="text-xs text-[#0A2351] font-bold hover:underline inline-flex items-center gap-1"
+              onClick={() => setSelectedKeywordModal(topKeywords[0]?.keyword || '보육/돌봄')}
+              className="text-xs text-[#0A2351] font-bold hover:underline inline-flex items-center gap-1 cursor-pointer"
             >
               상세 연관 제안 및 원문 분석하기
               <ChevronRight className="w-3 h-3" />
@@ -357,6 +344,13 @@ export const DashboardOverview: React.FC<Props> = ({
           </div>
         </div>
       </div>
+
+      <KeywordDetailModal
+        isOpen={!!selectedKeywordModal}
+        keyword={selectedKeywordModal}
+        proposals={proposals}
+        onClose={() => setSelectedKeywordModal(null)}
+      />
     </div>
   );
 };

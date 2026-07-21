@@ -15,6 +15,25 @@ export type DepartmentName =
   | '다문화지원팀'
   | '미지정';
 
+export interface DepartmentRanking {
+  rank: number;
+  role_type: string;
+  dept_name: string;
+  full_dept: string;
+  phone: string;
+  location: string;
+  duty_summary: string;
+}
+
+export interface MatchedPolicy {
+  policy_id: string;
+  policy_name: string;
+  summary: string;
+  apply_url: string;
+  dept_name: string;
+  score: number;
+}
+
 export interface PolicyProposal {
   id: string;
   title: string;
@@ -31,6 +50,8 @@ export interface PolicyProposal {
   cluster_id: number;
   cluster_size: number;
   negative_signal?: boolean;
+  department_rankings?: DepartmentRanking[];
+  matched_policies?: MatchedPolicy[];
 }
 
 export interface DistrictStat {

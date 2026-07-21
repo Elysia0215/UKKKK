@@ -27,6 +27,7 @@ import { DashboardOverview } from './components/DashboardOverview';
 import { DistrictComparison } from './components/DistrictComparison';
 import { CategoryDemand } from './components/CategoryDemand';
 import { PriorityDetails } from './components/PriorityDetails';
+import { ClusterVolumeMap } from './components/ClusterVolumeMap';
 
 import { exportToCsv } from './utils/exportCsv';
 
@@ -175,6 +176,18 @@ export default function App() {
                 {mockProposals.filter(p => p.reply_yn === 'N' && p.vote_score >= 150).length}
               </span>
             </button>
+
+            <button
+              onClick={() => setActiveTab(4)}
+              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
+                activeTab === 4
+                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
+                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
+              }`}
+            >
+              <TrendingUp className="w-4 h-4 text-emerald-500" />
+              군집 볼륨 분석 (클러스터 맵)
+            </button>
           </nav>
         </div>
       </div>
@@ -217,6 +230,13 @@ export default function App() {
             {activeTab === 3 && (
               <PriorityDetails 
                 proposals={mockProposals}
+              />
+            )}
+
+            {activeTab === 4 && (
+              <ClusterVolumeMap
+                proposals={mockProposals}
+                onSelectCluster={() => setActiveTab(3)}
               />
             )}
           </motion.div>

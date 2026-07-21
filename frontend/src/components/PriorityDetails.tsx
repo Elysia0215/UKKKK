@@ -24,6 +24,7 @@ import {
   Download
 } from 'lucide-react';
 import { exportToCsv } from '../utils/exportCsv';
+import { BatchReplyModal } from './BatchReplyModal';
 
 interface Props {
   proposals: PolicyProposal[];
@@ -46,6 +47,7 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
   const [onlyShowGaps, setOnlyShowGaps] = useState(false); // '정책 공백(미답변+고공감)'만 보기 토글
   const [viewMode, setViewMode] = useState<'list' | 'group'>('group'); // 그룹 보기 vs 개별 리스트 보기
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
+  const [activeBatchGroup, setActiveBatchGroup] = useState<ProposalGroup | null>(null);
 
   const groupedProposals = useMemo(() => {
     const groups: ProposalGroup[] = [];
@@ -344,6 +346,18 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                     </div>
 
                     <div className="flex items-center gap-3 justify-end flex-shrink-0">
+                      {group.items.length > 1 && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveBatchGroup(group);
+                          }}
+                          className="text-[11px] font-extrabold bg-[#0A2351] hover:bg-blue-900 text-white px-2.5 py-1 rounded-md shadow-2xs transition flex items-center gap-1 cursor-pointer"
+                          title="클릭하여 이 유사 제안 묶음에 공식 공문 일괄 답변 처리"
+                        >
+                          🏛️ 원스톱 일괄 답변 ↗
+                        </button>
+                      )}
                       {group.unansweredCount > 0 && (
                         <span className="text-[10px] bg-rose-100 text-rose-700 border border-rose-200 font-bold px-2 py-0.5 rounded">
                           미답변 공백 {group.unansweredCount}건
@@ -412,6 +426,47 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
 
                                 <h5 className="text-sm font-bold text-slate-800 mb-1.5">{item.title}</h5>
                                 <p className="text-xs text-slate-600 leading-relaxed mb-3">{item.content}</p>
+
+                                {/* 몽땅정보 연관 기존 사업 & 부서 랭킹 정보 */}
+                                <div className="bg-slate-50 p-3 rounded-lg border border-slate-100 my-2.5 space-y-2 text-xs">
+                                  {item.department_rankings && item.department_rankings.length > 0 && (
+                                    <div className="flex flex-wrap items-center gap-2">
+                                      <span className="text-[10px] font-bold text-slate-400 uppercase">매칭 부서 R&R:</span>
+                                      {item.department_rankings.map(rank => (
+                                        <span
+                                          key={rank.dept_name}
+                                          className={`text-[10px] px-2 py-0.5 rounded flex items-center gap-1 font-bold ${
+                                            rank.rank === 1
+                                              ? 'bg-blue-600 text-white shadow-2xs'
+                                              : 'bg-slate-200 text-slate-700'
+                                          }`}
+                                          title={`${rank.full_dept} (☎ ${rank.phone}) - ${rank.duty_summary}`}
+                                        >
+                                          <Building2 className="w-2.5 h-2.5" />
+                                          [{rank.role_type}] {rank.dept_name} {rank.phone && `(☎ ${rank.phone})`}
+                                        </span>
+                                      ))}
+                                    </div>
+                                  )}
+
+                                  {item.matched_policies && item.matched_policies.length > 0 && (
+                                    <div className="flex flex-wrap items-center gap-2 pt-1.5 border-t border-slate-200/60">
+                                      <span className="text-[10px] font-bold text-emerald-700 uppercase">몽땅정보 연관혜택:</span>
+                                      {item.matched_policies.map(pol => (
+                                        <a
+                                          key={pol.policy_id}
+                                          href={pol.apply_url}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          className="text-[10px] bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded flex items-center gap-1 font-semibold transition"
+                                          title={pol.summary}
+                                        >
+                                          🎁 {pol.policy_name} ↗
+                                        </a>
+                                      ))}
+                                    </div>
+                                  )}
+                                </div>
 
                                 <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-100">
                                   <div className="flex items-center gap-2">
@@ -504,6 +559,47 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                   <h5 className="text-sm font-bold text-slate-900 mb-1.5">{item.title}</h5>
                   <p className="text-xs text-slate-600 leading-relaxed mb-3">{item.content}</p>
 
+                  {/* 몽땅정보 연관 기존 사업 & 부서 랭킹 정보 */}
+                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-100 my-2.5 space-y-2 text-xs">
+                    {item.department_rankings && item.department_rankings.length > 0 && (
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="text-[10px] font-bold text-slate-400 uppercase">매칭 부서 R&R:</span>
+                        {item.department_rankings.map(rank => (
+                          <span
+                            key={rank.dept_name}
+                            className={`text-[10px] px-2 py-0.5 rounded flex items-center gap-1 font-bold ${
+                              rank.rank === 1
+                                ? 'bg-blue-600 text-white shadow-2xs'
+                                : 'bg-slate-200 text-slate-700'
+                            }`}
+                            title={`${rank.full_dept} (☎ ${rank.phone}) - ${rank.duty_summary}`}
+                          >
+                            <Building2 className="w-2.5 h-2.5" />
+                            [{rank.role_type}] {rank.dept_name} {rank.phone && `(☎ ${rank.phone})`}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
+                    {item.matched_policies && item.matched_policies.length > 0 && (
+                      <div className="flex flex-wrap items-center gap-2 pt-1.5 border-t border-slate-200/60">
+                        <span className="text-[10px] font-bold text-emerald-700 uppercase">몽땅정보 연관혜택:</span>
+                        {item.matched_policies.map(pol => (
+                          <a
+                            key={pol.policy_id}
+                            href={pol.apply_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[10px] bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded flex items-center gap-1 font-semibold transition"
+                            title={pol.summary}
+                          >
+                            🎁 {pol.policy_name} ↗
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
                   <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-200/80">
                     <div className="flex items-center gap-2">
                       <span className="text-[10px] text-slate-400 font-bold uppercase">담당 유관팀</span>
@@ -547,6 +643,14 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
           )
         )}
       </div>
+
+      <BatchReplyModal
+        isOpen={!!activeBatchGroup}
+        clusterId={activeBatchGroup?.id || ''}
+        clusterName={activeBatchGroup?.name || ''}
+        items={activeBatchGroup?.items || []}
+        onClose={() => setActiveBatchGroup(null)}
+      />
     </div>
   );
 };

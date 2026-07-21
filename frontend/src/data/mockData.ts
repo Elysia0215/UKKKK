@@ -1,4 +1,4 @@
-// 100% 출산·육아 정밀 데이터 426건 전용 mockData (2026.07.21 최종 갱신)
+// 100% 출산·육아 정밀 데이터 426건 전용 mockData (부서 랭킹 Top3 + 몽땅정보 322건 융합)
 import { PolicyProposal, DistrictStat, DashboardStats } from '../types';
 
 export type { PolicyProposal as Proposal };
@@ -189,7 +189,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 237,
     "cluster_size": 1,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-202259",
@@ -210,7 +257,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 183,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-202224",
@@ -230,7 +324,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 317,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-202117",
@@ -249,7 +390,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 287,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-201815",
@@ -270,7 +458,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 55,
     "cluster_size": 2,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201727",
@@ -289,7 +524,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 56,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201726",
@@ -308,7 +590,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 56,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201705",
@@ -327,7 +656,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 345,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201656",
@@ -347,7 +723,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 295,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201636",
@@ -366,7 +789,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 331,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-201635",
@@ -387,7 +840,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 247,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-201617",
@@ -406,7 +906,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 0,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201586",
@@ -427,7 +974,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 289,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 엽산제, 철분제 지원",
+        "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201566",
@@ -446,7 +1040,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 195,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201550",
@@ -467,7 +1108,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 226,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201541",
@@ -486,7 +1174,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 197,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201539",
@@ -505,7 +1240,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 285,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201521",
@@ -524,7 +1306,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 191,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "결혼문화팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 결혼문화팀",
+        "phone": "02-2133-6550",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 9층",
+        "duty_summary": "ㅇ 더 아름다운 결혼식 업무 총괄 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201278",
@@ -544,7 +1373,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 270,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-201115",
@@ -565,7 +1441,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 319,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-201102",
@@ -585,7 +1508,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 198,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-201086",
@@ -604,7 +1574,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 304,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-200951",
@@ -623,7 +1640,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 219,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-200449",
@@ -642,7 +1689,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 255,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-200312",
@@ -662,7 +1756,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 9,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-200093",
@@ -681,7 +1822,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 348,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-200064",
@@ -701,7 +1889,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 337,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-200040",
@@ -720,7 +1955,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 232,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "상담팀",
+        "full_dept": "서울특별시 아동복지센터 상담팀",
+        "phone": "02-2040-4232",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-200023",
@@ -741,7 +2023,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 248,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-199926",
@@ -761,7 +2090,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 190,
     "cluster_size": 1,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-199700",
@@ -782,7 +2141,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 176,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-199587",
@@ -803,7 +2209,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 336,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-199547",
@@ -823,7 +2259,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 329,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-199206",
@@ -842,7 +2308,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 318,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-199143",
@@ -863,7 +2376,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 311,
     "cluster_size": 1,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 80
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "(권역)난임?임산부 심리상담센터 운영",
+        "summary": "심리상담 및 정서지원 서비스 제공",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 60
+      }
+    ]
   },
   {
     "id": "PROP-199139",
@@ -882,7 +2442,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 269,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-199120",
@@ -901,7 +2508,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 231,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-199065",
@@ -920,7 +2574,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 24,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-199064",
@@ -939,7 +2640,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 24,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-199063",
@@ -958,7 +2706,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 24,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-199044",
@@ -977,7 +2772,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 150,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-198980",
@@ -996,7 +2838,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 239,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-198885",
@@ -1017,7 +2889,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 5,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-198826",
@@ -1038,7 +2957,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 25,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-198705",
@@ -1058,7 +3024,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 1,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-198624",
@@ -1079,7 +3075,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 200,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-198485",
@@ -1098,7 +3141,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 215,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-198406",
@@ -1117,7 +3190,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 181,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-198295",
@@ -1138,7 +3258,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 210,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-198288",
@@ -1159,7 +3326,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 57,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "저소득층 기저귀조제분유 취약계층 지원 (사회서비스전자바우처)",
+        "summary": "(출산가정/ⓧ/(기저귀)만2세 미만의 영아를 둔 기초생활보장, 차상위,, 한부모가족 수급 가구 대상. (조제분유)아동복지시설, 공동생활가정, 입양아동, 한부모 아동 등(별도 확인)/남여/기저귀, 조제분유 구매비용)",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-198269",
@@ -1178,7 +3392,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 213,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-198265",
@@ -1199,7 +3460,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 150,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-198243",
@@ -1218,7 +3526,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 303,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-198192",
@@ -1239,7 +3594,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 332,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-198151",
@@ -1260,7 +3662,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 25,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-198137",
@@ -1279,7 +3728,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 78,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-198127",
@@ -1300,7 +3796,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 298,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-198104",
@@ -1319,7 +3845,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 9,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-198050",
@@ -1338,7 +3911,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 283,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 배려공간 조성",
+        "summary": "ㅇ 교통 약자인 임산부의 엘리베이터 안전사고 예방 및 배려문화 확산을 위해 엘리베이터 내?외부에 임산부 배려공간 조성(엠블럼 부착)   - 임산부를 위해 해당 공간을 비워두고 양보하는 사회 분위기 확산 유도 ㅇ 임산...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "(권역)난임?임산부 심리상담센터 운영",
+        "summary": "심리상담 및 정서지원 서비스 제공",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-197942",
@@ -1357,7 +3977,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 78,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-197913",
@@ -1377,7 +4044,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 29,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-197853",
@@ -1398,7 +4112,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 257,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-197727",
@@ -1419,7 +4163,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 242,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-197702",
@@ -1438,7 +4212,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 52,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-197602",
@@ -1459,7 +4280,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 264,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-197507",
@@ -1480,7 +4331,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 265,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-197491",
@@ -1500,7 +4381,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 249,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-197236",
@@ -1519,7 +4430,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 302,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-197233",
@@ -1540,7 +4498,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 267,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-197063",
@@ -1559,7 +4564,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 259,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 산후조리경비 지원",
+        "policy_name": "서울형 산모 산후조리경비 지원",
+        "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울형 산후조리경비 지원",
+        "summary": "출산에 소요되는 경제적 부담을 경감하고, 출산 이후 산모의 건강권을 확보하기 위하여 산후조리경비 지원  1. 지원금액 : 자녀 수에 따른 <b class='font-color-primary'>차등지원</b>     ...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-197030",
@@ -1578,7 +4630,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 7,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-196911",
@@ -1597,7 +4696,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 334,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-196831",
@@ -1618,7 +4747,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 278,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-196793",
@@ -1637,7 +4813,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 78,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "상담팀",
+        "full_dept": "서울특별시 아동복지센터 상담팀",
+        "phone": "02-2040-4232",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-196601",
@@ -1657,7 +4880,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 52,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-196561",
@@ -1678,7 +4948,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 330,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-196496",
@@ -1698,7 +5015,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 307,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-196484",
@@ -1718,7 +5065,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 320,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-196336",
@@ -1739,7 +5116,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 253,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-196279",
@@ -1760,7 +5167,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 159,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-196273",
@@ -1781,7 +5235,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 350,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-196265",
@@ -1802,7 +5286,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 297,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-196238",
@@ -1822,7 +5353,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 238,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-196215",
@@ -1842,7 +5403,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 291,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-196096",
@@ -1863,7 +5454,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 224,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-196094",
@@ -1884,7 +5505,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 58,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "서울형 산후조리경비 지원",
+        "summary": "출산에 소요되는 경제적 부담을 경감하고, 출산 이후 산모의 건강권을 확보하기 위하여 산후조리경비 지원  1. 지원금액 : 자녀 수에 따른 <b class='font-color-primary'>차등지원</b>     ...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 산후조리경비 지원",
+        "policy_name": "서울형 산모 산후조리경비 지원",
+        "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-196093",
@@ -1904,7 +5572,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 58,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-195893",
@@ -1925,7 +5623,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 177,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-195827",
@@ -1946,7 +5691,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 188,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-195730",
@@ -1965,7 +5757,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 250,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-195711",
@@ -1984,7 +5823,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 241,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-195684",
@@ -2003,7 +5872,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 246,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-195676",
@@ -2022,7 +5938,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 199,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-195671",
@@ -2043,7 +6006,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 284,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-195665",
@@ -2062,7 +6072,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 275,
     "cluster_size": 1,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-195663",
@@ -2082,7 +6122,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 273,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-195661",
@@ -2102,7 +6172,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 335,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-195657",
@@ -2121,7 +6221,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 123,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-195558",
@@ -2140,7 +6287,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 207,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-195496",
@@ -2159,7 +6336,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 315,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "결혼문화팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 결혼문화팀",
+        "phone": "02-2133-6550",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 9층",
+        "duty_summary": "ㅇ 더 아름다운 결혼식 업무 총괄 관리"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-195464",
@@ -2180,7 +6387,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 216,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-195458",
@@ -2200,7 +6454,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 321,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-195098",
@@ -2219,7 +6503,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 180,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194899",
@@ -2240,7 +6571,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 114,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-194881",
@@ -2261,7 +6622,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 114,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-194877",
@@ -2280,7 +6671,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 276,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194854",
@@ -2301,7 +6739,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 322,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194750",
@@ -2322,7 +6807,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 314,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 산후조리경비 지원",
+        "policy_name": "서울형 산모 산후조리경비 지원",
+        "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울형 산후조리경비 지원",
+        "summary": "출산에 소요되는 경제적 부담을 경감하고, 출산 이후 산모의 건강권을 확보하기 위하여 산후조리경비 지원  1. 지원금액 : 자녀 수에 따른 <b class='font-color-primary'>차등지원</b>     ...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-194732",
@@ -2341,7 +6873,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 29,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-194719",
@@ -2361,7 +6923,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 5,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-194713",
@@ -2381,7 +6990,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 254,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-194667",
@@ -2402,7 +7058,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 160,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-194610",
@@ -2421,7 +7107,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 36,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 엽산제, 철분제 지원",
+        "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194484",
@@ -2442,7 +7175,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 262,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-194469",
@@ -2461,7 +7224,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 266,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "농식품바우처 취약계층 지원",
+        "summary": "(생계급여 수급가구 중 임산부,영유아,아동이 포함된 가구/농협하나로마트 등의 공급처에서 국내산 과일, 채소, 흰우유, 신선계란, 육류, 잡곡류, 두부류를 구매할 수 있는 농식품바우처 제공)",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울형 산후조리경비 지원",
+        "summary": "출산에 소요되는 경제적 부담을 경감하고, 출산 이후 산모의 건강권을 확보하기 위하여 산후조리경비 지원  1. 지원금액 : 자녀 수에 따른 <b class='font-color-primary'>차등지원</b>     ...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194363",
@@ -2481,7 +7291,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 221,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-194360",
@@ -2502,7 +7342,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 204,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194332",
@@ -2522,7 +7409,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 316,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "서울형 산후조리경비 지원",
+        "summary": "출산에 소요되는 경제적 부담을 경감하고, 출산 이후 산모의 건강권을 확보하기 위하여 산후조리경비 지원  1. 지원금액 : 자녀 수에 따른 <b class='font-color-primary'>차등지원</b>     ...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-194324",
@@ -2542,7 +7476,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 349,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "서울형 산후조리경비 지원",
+        "summary": "출산에 소요되는 경제적 부담을 경감하고, 출산 이후 산모의 건강권을 확보하기 위하여 산후조리경비 지원  1. 지원금액 : 자녀 수에 따른 <b class='font-color-primary'>차등지원</b>     ...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 산후조리경비 지원",
+        "policy_name": "서울형 산모 산후조리경비 지원",
+        "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-194273",
@@ -2562,7 +7543,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 218,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-194248",
@@ -2583,7 +7594,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 57,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-194167",
@@ -2603,7 +7661,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 256,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-194164",
@@ -2623,7 +7728,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 15,
     "cluster_size": 3,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-194163",
@@ -2642,7 +7777,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 341,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "서울형 산후조리경비 지원",
+        "summary": "출산에 소요되는 경제적 부담을 경감하고, 출산 이후 산모의 건강권을 확보하기 위하여 산후조리경비 지원  1. 지원금액 : 자녀 수에 따른 <b class='font-color-primary'>차등지원</b>     ...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 산후조리경비 지원",
+        "policy_name": "서울형 산모 산후조리경비 지원",
+        "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-194145",
@@ -2662,7 +7844,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 279,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-194144",
@@ -2682,7 +7894,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 196,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194129",
@@ -2701,7 +7960,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 165,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-194046",
@@ -2721,7 +8010,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 127,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-193970",
@@ -2740,7 +8059,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 299,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-193884",
@@ -2759,7 +8125,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 251,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-193853",
@@ -2779,7 +8175,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 308,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-193727",
@@ -2798,7 +8224,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 343,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-193695",
@@ -2818,7 +8274,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 286,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-193669",
@@ -2837,7 +8323,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 313,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-193598",
@@ -2858,7 +8374,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 6,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-193589",
@@ -2877,7 +8440,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 294,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "결혼문화팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 결혼문화팀",
+        "phone": "02-2133-6550",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 9층",
+        "duty_summary": "ㅇ 더 아름다운 결혼식 업무 총괄 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-193306",
@@ -2896,7 +8506,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 141,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-193159",
@@ -2915,7 +8555,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 281,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-193131",
@@ -2936,7 +8623,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 280,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "저소득층 기저귀조제분유 취약계층 지원 (사회서비스전자바우처)",
+        "summary": "(출산가정/ⓧ/(기저귀)만2세 미만의 영아를 둔 기초생활보장, 차상위,, 한부모가족 수급 가구 대상. (조제분유)아동복지시설, 공동생활가정, 입양아동, 한부모 아동 등(별도 확인)/남여/기저귀, 조제분유 구매비용)",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족지원팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-193097",
@@ -2955,7 +8689,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 142,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-192909",
@@ -2974,7 +8755,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 206,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-192871",
@@ -2993,7 +8821,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 323,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-192865",
@@ -3012,7 +8887,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 282,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-192326",
@@ -3032,7 +8954,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 182,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 엽산제, 철분제 지원",
+        "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-192106",
@@ -3051,7 +9020,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 292,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-191846",
@@ -3071,7 +9070,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 305,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-191836",
@@ -3090,7 +9136,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 167,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-191657",
@@ -3109,7 +9202,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 277,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-191470",
@@ -3129,7 +9269,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 107,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-191363",
@@ -3148,7 +9318,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 306,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-191294",
@@ -3168,7 +9368,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 288,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-191232",
@@ -3188,7 +9435,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 74,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-191195",
@@ -3209,7 +9486,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 15,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-191054",
@@ -3229,7 +9553,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 268,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 엽산제, 철분제 지원",
+        "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-191053",
@@ -3249,7 +9620,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 8,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-191049",
@@ -3269,7 +9670,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 203,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-190968",
@@ -3288,7 +9736,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 228,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-190902",
@@ -3307,7 +9802,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 324,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-190681",
@@ -3326,7 +9851,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 244,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-190633",
@@ -3347,7 +9902,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 245,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-190617",
@@ -3366,7 +9951,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 8,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-190545",
@@ -3387,7 +10002,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 261,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-190426",
@@ -3406,7 +10068,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 340,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-190358",
@@ -3425,7 +10134,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 243,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-190352",
@@ -3444,7 +10183,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 240,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-189934",
@@ -3463,7 +10249,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 344,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-189861",
@@ -3483,7 +10299,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 21,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-189652",
@@ -3502,7 +10365,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 327,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "임산부 출산급여 지원",
+        "policy_name": "임산부 출산급여 지원",
+        "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "1인 자영업자?프리랜서 임산부 출산급여 지원",
+        "summary": "‘임산부 출산급여’ 추가 지원 90만원 1인당 출산급여 240만원 보장 = <현행>고용보험 지원 150만원 + <신규> 서울시 추가지원 90만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-189401",
@@ -3521,7 +10431,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 326,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-189236",
@@ -3541,7 +10481,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 325,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 엽산제, 철분제 지원",
+        "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-189218",
@@ -3560,7 +10547,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 205,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-189200",
@@ -3579,7 +10613,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 4,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-189155",
@@ -3598,7 +10679,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 161,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-189150",
@@ -3617,7 +10745,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 4,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-189149",
@@ -3636,7 +10811,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 162,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-189148",
@@ -3655,7 +10877,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 236,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-189145",
@@ -3674,7 +10943,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 4,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-189144",
@@ -3694,7 +11010,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 186,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-189075",
@@ -3714,7 +11060,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 234,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-189067",
@@ -3733,7 +11109,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 185,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-188884",
@@ -3752,7 +11158,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 178,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-188854",
@@ -3773,7 +11226,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 15,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-188801",
@@ -3792,7 +11275,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 124,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-188788",
@@ -3811,7 +11324,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 328,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 엽산제, 철분제 지원",
+        "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-188675",
@@ -3831,7 +11391,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 233,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 엽산제, 철분제 지원",
+        "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-188468",
@@ -3850,7 +11457,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 138,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-188264",
@@ -3869,7 +11523,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 187,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-188170",
@@ -3888,7 +11589,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 339,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-187957",
@@ -3908,7 +11639,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 152,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-187873",
@@ -3928,7 +11706,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 230,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 엽산제, 철분제 지원",
+        "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-187774",
@@ -3947,7 +11772,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 17,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-187760",
@@ -3966,7 +11821,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 17,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-187366",
@@ -3985,7 +11870,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 312,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-187052",
@@ -4004,7 +11936,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 184,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-186586",
@@ -4023,7 +12002,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 193,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-186461",
@@ -4042,7 +12068,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 91,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-186221",
@@ -4062,7 +12118,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 202,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-186176",
@@ -4081,7 +12167,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 36,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-185985",
@@ -4100,7 +12216,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 235,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-185793",
@@ -4119,7 +12265,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 309,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-185569",
@@ -4138,7 +12314,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 201,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-185295",
@@ -4157,7 +12363,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 61,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-185291",
@@ -4176,7 +12412,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 225,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "서울형 산후조리경비 지원",
+        "summary": "출산에 소요되는 경제적 부담을 경감하고, 출산 이후 산모의 건강권을 확보하기 위하여 산후조리경비 지원  1. 지원금액 : 자녀 수에 따른 <b class='font-color-primary'>차등지원</b>     ...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 산후조리경비 지원",
+        "policy_name": "서울형 산모 산후조리경비 지원",
+        "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-185286",
@@ -4195,7 +12478,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 229,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-185280",
@@ -4214,7 +12527,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 90,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-185277",
@@ -4233,7 +12576,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 296,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-185272",
@@ -4252,7 +12625,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 301,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-185243",
@@ -4271,7 +12674,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 351,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-185220",
@@ -4290,7 +12723,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 153,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-184852",
@@ -4309,7 +12772,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 169,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-184604",
@@ -4329,7 +12839,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 293,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-184573",
@@ -4348,7 +12888,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 290,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-184570",
@@ -4367,7 +12937,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 79,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-184569",
@@ -4386,7 +12986,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 194,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-184568",
@@ -4405,7 +13035,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 23,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-184567",
@@ -4424,7 +13084,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 23,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-184566",
@@ -4443,7 +13133,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 88,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-184408",
@@ -4462,7 +13182,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 12,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-184404",
@@ -4482,7 +13232,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 21,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-184312",
@@ -4501,7 +13298,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 300,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-184170",
@@ -4520,7 +13347,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 120,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-184161",
@@ -4540,7 +13414,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 258,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-183929",
@@ -4560,7 +13481,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 97,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-183782",
@@ -4579,7 +13530,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 189,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-183631",
@@ -4600,7 +13581,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 347,
     "cluster_size": 1,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-183623",
@@ -4620,7 +13631,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 74,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183353",
@@ -4641,7 +13699,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 217,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-183127",
@@ -4661,7 +13766,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 26,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-182901",
@@ -4680,7 +13832,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 174,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-182871",
@@ -4699,7 +13881,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 108,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-182870",
@@ -4718,7 +13930,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 338,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-182865",
@@ -4737,7 +13996,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 333,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-182859",
@@ -4757,7 +14046,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 121,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-182858",
@@ -4776,7 +14095,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 222,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-182856",
@@ -4795,7 +14144,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 158,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-182827",
@@ -4815,7 +14211,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 272,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-182764",
@@ -4834,7 +14260,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 65,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-182746",
@@ -4855,7 +14328,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 65,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-182675",
@@ -4874,7 +14394,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 118,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-182496",
@@ -4894,7 +14444,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 179,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-181948",
@@ -4915,7 +14495,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 143,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "서울형 산후조리경비 지원",
+        "summary": "출산에 소요되는 경제적 부담을 경감하고, 출산 이후 산모의 건강권을 확보하기 위하여 산후조리경비 지원  1. 지원금액 : 자녀 수에 따른 <b class='font-color-primary'>차등지원</b>     ...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 산후조리경비 지원",
+        "policy_name": "서울형 산모 산후조리경비 지원",
+        "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-181936",
@@ -4935,7 +14562,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 274,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-181875",
@@ -4954,7 +14628,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 96,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-181849",
@@ -4973,7 +14677,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 252,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-181847",
@@ -4992,7 +14726,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 211,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-181473",
@@ -5012,7 +14776,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 99,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-181437",
@@ -5031,7 +14842,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 133,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-181306",
@@ -5050,7 +14908,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 134,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "결혼문화팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 결혼문화팀",
+        "phone": "02-2133-6550",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 9층",
+        "duty_summary": "ㅇ 더 아름다운 결혼식 업무 총괄 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-180894",
@@ -5070,7 +14975,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 12,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-180806",
@@ -5091,7 +15043,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 139,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-180667",
@@ -5110,7 +15092,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 110,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-180655",
@@ -5131,7 +15160,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 166,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-180628",
@@ -5150,7 +15226,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 117,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-180493",
@@ -5169,7 +15292,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 271,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "임산부 출산급여 지원",
+        "policy_name": "임산부 출산급여 지원",
+        "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "1인 자영업자?프리랜서 임산부 출산급여 지원",
+        "summary": "‘임산부 출산급여’ 추가 지원 90만원 1인당 출산급여 240만원 보장 = <현행>고용보험 지원 150만원 + <신규> 서울시 추가지원 90만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-180489",
@@ -5189,7 +15359,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 122,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-180472",
@@ -5208,7 +15408,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 175,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 엽산제, 철분제 지원",
+        "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-180440",
@@ -5228,7 +15475,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 125,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-180406",
@@ -5248,7 +15525,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 119,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-180363",
@@ -5267,7 +15574,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 6,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-180324",
@@ -5288,7 +15625,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 87,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-180319",
@@ -5307,7 +15691,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 263,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "결혼문화팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 결혼문화팀",
+        "phone": "02-2133-6550",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 9층",
+        "duty_summary": "ㅇ 더 아름다운 결혼식 업무 총괄 관리"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-180125",
@@ -5326,7 +15740,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 147,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-180104",
@@ -5347,7 +15791,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 60,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 자동차 취득세 감면",
+        "summary": "자동차 취득세 최대 140만원 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-180063",
@@ -5366,7 +15857,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 342,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-179976",
@@ -5385,7 +15923,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 89,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-179899",
@@ -5405,7 +15990,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 102,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-179862",
@@ -5425,7 +16057,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 220,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "만0~5세 보육료",
+        "summary": "① 기본보육료(월별) 만0세반: 540,000원 만1세반: 475,000원 만2세반: 394,000원 만3~5세: 280,000원  ② 연장보육료(월별) 0세반: 3,000원 영아반: 2,000원 유아반: 1,000...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003250",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "그 밖의 연장형 보육료 등",
+        "summary": "① 야간연장보육  일반아동: 시간당 4,000원 장애아동: 시간당 5,000원 지원한도: 월 60시간  ② 야간12시간 및 24시간(월별)  만0세: (야간)540,000원, (24시간)810,000원 만1세반: (...",
+        "apply_url": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001147",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-202347",
@@ -5445,7 +16124,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 38,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201935",
@@ -5464,7 +16190,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 208,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201933",
@@ -5485,7 +16258,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 55,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-201714",
@@ -5504,7 +16307,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 136,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201704",
@@ -5523,7 +16373,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 38,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201651",
@@ -5543,7 +16440,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 149,
     "cluster_size": 1,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201642",
@@ -5562,7 +16506,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 135,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201604",
@@ -5581,7 +16572,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 346,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201545",
@@ -5600,7 +16638,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 137,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201543",
@@ -5619,7 +16704,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 113,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201540",
@@ -5638,7 +16770,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 113,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-201497",
@@ -5658,7 +16837,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 72,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-200910",
@@ -5677,7 +16903,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 115,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "상담팀",
+        "full_dept": "서울특별시 아동복지센터 상담팀",
+        "phone": "02-2040-4232",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-200710",
@@ -5696,7 +16969,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 223,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-200103",
@@ -5716,7 +17019,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 109,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-199841",
@@ -5736,7 +17086,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 18,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-199734",
@@ -5756,7 +17153,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 92,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-199648",
@@ -5776,7 +17220,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 170,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "상담팀",
+        "full_dept": "서울특별시 아동복지센터 상담팀",
+        "phone": "02-2040-4232",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-199074",
@@ -5795,7 +17286,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 310,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-198717",
@@ -5814,7 +17352,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 145,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-198631",
@@ -5833,7 +17418,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 28,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-198579",
@@ -5852,7 +17484,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 168,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-198383",
@@ -5871,7 +17550,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 192,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-198216",
@@ -5891,7 +17617,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 44,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-198207",
@@ -5910,7 +17683,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 173,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-198073",
@@ -5929,7 +17732,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 212,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-198072",
@@ -5948,7 +17798,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 14,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-197859",
@@ -5967,7 +17864,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 7,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-197585",
@@ -5986,7 +17930,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 148,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-197374",
@@ -6005,7 +17996,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 18,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 80
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "(권역)난임?임산부 심리상담센터 운영",
+        "summary": "심리상담 및 정서지원 서비스 제공",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 60
+      }
+    ]
   },
   {
     "id": "PROP-196679",
@@ -6024,7 +18062,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 45,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-196543",
@@ -6045,7 +18113,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 11,
     "cluster_size": 4,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-196482",
@@ -6064,7 +18179,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 154,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-195595",
@@ -6083,7 +18228,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 0,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-195492",
@@ -6102,7 +18294,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 67,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-195248",
@@ -6121,7 +18343,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 11,
     "cluster_size": 4,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194883",
@@ -6142,7 +18411,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 140,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194882",
@@ -6161,7 +18477,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 53,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194853",
@@ -6180,7 +18543,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 95,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194792",
@@ -6200,7 +18610,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 103,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194620",
@@ -6219,7 +18676,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 155,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-194515",
@@ -6240,7 +18727,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 19,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194436",
@@ -6261,7 +18795,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 3,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194240",
@@ -6280,7 +18861,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 32,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194182",
@@ -6301,7 +18929,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 3,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194170",
@@ -6320,7 +18995,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 72,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-194132",
@@ -6340,7 +19062,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 144,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-194088",
@@ -6360,7 +19112,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 28,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-193932",
@@ -6379,7 +19178,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 130,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "상담팀",
+        "full_dept": "서울특별시 아동복지센터 상담팀",
+        "phone": "02-2040-4232",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-193929",
@@ -6400,7 +19246,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 126,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-193780",
@@ -6419,7 +19312,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 112,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-193454",
@@ -6438,7 +19378,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 156,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-193260",
@@ -6457,7 +19427,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 80,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-193257",
@@ -6477,7 +19494,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 13,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-193241",
@@ -6498,7 +19562,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 28,
     "cluster_size": 3,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-193205",
@@ -6518,7 +19629,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 171,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-193112",
@@ -6537,7 +19695,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 9,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-193089",
@@ -6556,7 +19761,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 151,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-192998",
@@ -6577,7 +19829,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 19,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-192984",
@@ -6598,7 +19897,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 111,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-192978",
@@ -6618,7 +19964,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 83,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-192976",
@@ -6637,7 +20030,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 43,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-192699",
@@ -6656,7 +20096,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 116,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-192686",
@@ -6677,7 +20164,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 35,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-192646",
@@ -6696,7 +20230,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 128,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-192614",
@@ -6717,7 +20298,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 19,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-192565",
@@ -6736,7 +20364,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 77,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-191849",
@@ -6755,7 +20430,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 260,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-191757",
@@ -6774,7 +20496,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 93,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-191603",
@@ -6793,7 +20562,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 209,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-191388",
@@ -6812,7 +20628,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 132,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-191311",
@@ -6831,7 +20694,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 62,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-190910",
@@ -6850,7 +20760,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 1,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-190853",
@@ -6869,7 +20826,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 101,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-189440",
@@ -6890,7 +20894,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 11,
     "cluster_size": 4,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-189414",
@@ -6909,7 +20960,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 77,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-189408",
@@ -6928,7 +21026,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 68,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-189255",
@@ -6948,7 +21076,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 11,
     "cluster_size": 4,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-188790",
@@ -6967,7 +21142,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 14,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "상담팀",
+        "full_dept": "서울특별시 아동복지센터 상담팀",
+        "phone": "02-2040-4232",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-188566",
@@ -6986,7 +21208,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 84,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-188552",
@@ -7005,7 +21274,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 172,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-188508",
@@ -7024,7 +21340,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 32,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-187148",
@@ -7045,7 +21408,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 100,
     "cluster_size": 1,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-187073",
@@ -7064,7 +21474,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 69,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-186908",
@@ -7084,7 +21541,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 82,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "다자녀 가구 하수도사용료 감면",
+        "summary": "하수도 사용료 30% 감면",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 30
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-186896",
@@ -7103,7 +21607,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 98,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "서울형 산후조리경비 지원",
+        "summary": "출산에 소요되는 경제적 부담을 경감하고, 출산 이후 산모의 건강권을 확보하기 위하여 산후조리경비 지원  1. 지원금액 : 자녀 수에 따른 <b class='font-color-primary'>차등지원</b>     ...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 산후조리경비 지원",
+        "policy_name": "서울형 산모 산후조리경비 지원",
+        "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-186626",
@@ -7122,7 +21673,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 85,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-186290",
@@ -7143,7 +21724,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 30,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-185984",
@@ -7162,7 +21790,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 86,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-185646",
@@ -7182,7 +21857,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 54,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "35세 이상 산모 검사비 지원",
+        "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
+        "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "가족건강팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "임산부 엽산제, 철분제 지원",
+        "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-185284",
@@ -7201,7 +21923,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 63,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-184577",
@@ -7220,7 +21989,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 157,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-184575",
@@ -7240,7 +22056,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 70,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-184571",
@@ -7259,7 +22122,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 214,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-184557",
@@ -7278,7 +22188,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 39,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-184431",
@@ -7297,7 +22254,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 164,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "상담팀",
+        "full_dept": "서울특별시 아동복지센터 상담팀",
+        "phone": "02-2040-4232",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 자치구 아동보호전담요원 역량강화 교육 실시"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-184207",
@@ -7316,7 +22320,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 129,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183626",
@@ -7335,7 +22386,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 66,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183550",
@@ -7354,7 +22452,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 20,
     "cluster_size": 7,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183549",
@@ -7373,7 +22518,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 20,
     "cluster_size": 7,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183490",
@@ -7392,7 +22584,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 20,
     "cluster_size": 7,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183450",
@@ -7411,7 +22650,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 105,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183446",
@@ -7430,7 +22716,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 20,
     "cluster_size": 7,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183428",
@@ -7451,7 +22784,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 16,
     "cluster_size": 6,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183419",
@@ -7470,7 +22850,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 41,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183412",
@@ -7489,7 +22916,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 146,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183409",
@@ -7508,7 +22982,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 73,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183408",
@@ -7527,7 +23048,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 22,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183407",
@@ -7546,7 +23114,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 22,
     "cluster_size": 3,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183387",
@@ -7565,7 +23180,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 16,
     "cluster_size": 6,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183374",
@@ -7584,7 +23246,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 33,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183322",
@@ -7603,7 +23312,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 16,
     "cluster_size": 6,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183292",
@@ -7622,7 +23378,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 76,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183275",
@@ -7641,7 +23444,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 16,
     "cluster_size": 6,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183273",
@@ -7662,7 +23512,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 22,
     "cluster_size": 3,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183253",
@@ -7683,7 +23580,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 40,
     "cluster_size": 2,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183248",
@@ -7703,7 +23647,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 10,
     "cluster_size": 4,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183243",
@@ -7724,7 +23715,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 37,
     "cluster_size": 5,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183237",
@@ -7744,7 +23782,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 37,
     "cluster_size": 5,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183223",
@@ -7763,7 +23848,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 40,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183217",
@@ -7784,7 +23916,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 37,
     "cluster_size": 5,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183208",
@@ -7803,7 +23982,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 131,
     "cluster_size": 1,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183203",
@@ -7822,7 +24048,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 16,
     "cluster_size": 6,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183202",
@@ -7841,7 +24114,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 50,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183197",
@@ -7860,7 +24180,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 20,
     "cluster_size": 7,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183196",
@@ -7881,7 +24248,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 10,
     "cluster_size": 4,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183193",
@@ -7900,7 +24314,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 2,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183190",
@@ -7919,7 +24380,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 20,
     "cluster_size": 7,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183187",
@@ -7939,7 +24447,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 47,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183186",
@@ -7958,7 +24513,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 20,
     "cluster_size": 7,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183174",
@@ -7979,7 +24581,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 13,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183171",
@@ -7998,7 +24647,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 75,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183170",
@@ -8019,7 +24715,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 49,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "농식품바우처 취약계층 지원",
+        "summary": "(생계급여 수급가구 중 임산부,영유아,아동이 포함된 가구/농협하나로마트 등의 공급처에서 국내산 과일, 채소, 흰우유, 신선계란, 육류, 잡곡류, 두부류를 구매할 수 있는 농식품바우처 제공)",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "과학문화 바우처 취약계층 지원",
+        "summary": "(6세 이상(2019.12.31 이전 출생자) 기초생활수급자, 차상위계층/과학문화 상품 및 서비스 이용하는 온라인 포인트 5만원 지급/과학문화바우처 홈페이지)",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "저출생사업1팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183167",
@@ -8040,7 +24783,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 37,
     "cluster_size": 5,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183163",
@@ -8059,7 +24849,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 34,
     "cluster_size": 1,
-    "negative_signal": true
+    "negative_signal": true,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183162",
@@ -8078,7 +24915,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 16,
     "cluster_size": 6,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183153",
@@ -8099,7 +24983,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 42,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183140",
@@ -8118,7 +25049,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 37,
     "cluster_size": 5,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183131",
@@ -8137,7 +25115,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 94,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183130",
@@ -8158,7 +25183,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 35,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183126",
@@ -8179,7 +25251,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 64,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183124",
@@ -8199,7 +25318,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 26,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": " ",
+        "policy_name": "서울시 난임?임산부심리상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 80
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "(권역)난임?임산부 심리상담센터 운영",
+        "summary": "심리상담 및 정서지원 서비스 제공",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "기타부서",
+        "score": 60
+      }
+    ]
   },
   {
     "id": "PROP-183123",
@@ -8218,7 +25384,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 104,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183122",
@@ -8237,7 +25450,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 10,
     "cluster_size": 4,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183121",
@@ -8256,7 +25516,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 59,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-183033",
@@ -8275,7 +25582,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 2,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-182889",
@@ -8294,7 +25648,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 46,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5021",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 저출생사업1팀 업무총괄 및 사업별 현안업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-182864",
@@ -8313,7 +25714,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 163,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-182528",
@@ -8332,7 +25780,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 227,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9486",
+        "location": "",
+        "duty_summary": "○ 어린이집 영유아 방문건강관리사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 30
+      }
+    ]
   },
   {
     "id": "PROP-182197",
@@ -8351,7 +25846,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 0,
     "cluster_size": 3,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-181983",
@@ -8370,7 +25912,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 106,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5025",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-181150",
@@ -8389,7 +25978,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 27,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-180866",
@@ -8408,7 +26027,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 27,
     "cluster_size": 2,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-180778",
@@ -8427,7 +26076,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 48,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "다문화지원팀",
+        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
+        "phone": "02-2133-8696",
+        "location": "세종대로110 서울특별시청 8층",
+        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등)"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "후생노무팀",
+        "full_dept": "서울특별시 행정국 인력개발과 후생노무팀",
+        "phone": "02-2133-5772",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9492",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○건강임신지원팀 서무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-180569",
@@ -8446,7 +26125,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 31,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "생활지원팀",
+        "full_dept": "서울특별시 아동복지센터 생활지원팀",
+        "phone": "02-2040-4251",
+        "location": "(06362) 서울특별시 강남구 광평로34길 124",
+        "duty_summary": "ㅇ 아동복지관리시스템 운영 관리"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-180216",
@@ -8467,7 +26193,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 10,
     "cluster_size": 4,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강임신지원팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 건강임신지원팀",
+        "phone": "02-2133-9491",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○서울시 임신·출산 정보센터 운영 및 유지관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "저출생사업1팀",
+        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
+        "phone": "02-2133-5027",
+        "location": "서울 중구 세종대로 110. 9층",
+        "duty_summary": "ㅇ 1인 자영업자 등 출산가구 지원사업 추진"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 난임부부 시술비 지원",
+        "policy_name": "서울형 난임부부 시술비 지원",
+        "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      },
+      {
+        "policy_id": " ",
+        "policy_name": "서울권역 난임?우울증 상담센터 운영",
+        "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
+        "apply_url": "https://umttang.seoul.go.kr/",
+        "dept_name": "건강임신지원팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-179980",
@@ -8486,7 +26259,54 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 51,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "돌봄사업팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
+        "phone": "02-2133-6560",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "아동보호팀",
+        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
+        "phone": "02-2133-5303",
+        "location": "서울시청 9층",
+        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "고령사회정책팀",
+        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
+        "phone": "02-2133-7409",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
+        "duty_summary": "○ 시의회 및 국회 관련 업무"
+      }
+    ],
+    "matched_policies": [
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "병원동행 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      },
+      {
+        "policy_id": "서울형 틈새 아이돌봄 3종 서비스",
+        "policy_name": "아픈아이 전담 아이돌봄서비스",
+        "summary": "부모의 맞벌이 등으로 아픈 자녀의 병원 동행을 할 수 없는 경우 아이돌보미가 병원 동행 및 가정 내 돌봄 서비스 제공('23년은 5개구 시범운영 중 : 성동, 동대문, 강북, 강서, 서초)",
+        "apply_url": "https://www.idolbom.go.kr/front/login",
+        "dept_name": "돌봄사업팀",
+        "score": 50
+      }
+    ]
   },
   {
     "id": "PROP-179977",
@@ -8505,7 +26325,37 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 71,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "장애인가족지원팀",
+        "full_dept": "서울특별시 복지실 복지기획관 장애인자립지원과 장애인가족지원팀",
+        "phone": "02-2133-9611",
+        "location": "서울특별시 중구 세종대로 110, 본청 2층",
+        "duty_summary": "○ 장애인가정 홈헬퍼 지원사업"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "담당부서",
+        "full_dept": "담당부서",
+        "phone": "전화번호",
+        "location": "부서위치",
+        "duty_summary": "담당업무"
+      }
+    ],
+    "matched_policies": []
   },
   {
     "id": "PROP-179973",
@@ -8524,22 +26374,49 @@ export const mockProposals: PolicyProposal[] = [
     "source": "상상대로서울",
     "cluster_id": 81,
     "cluster_size": 1,
-    "negative_signal": false
+    "negative_signal": false,
+    "department_rankings": [
+      {
+        "rank": 1,
+        "role_type": "주관부서",
+        "dept_name": "건강팀",
+        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
+        "phone": "02-2133-5785",
+        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
+        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영"
+      },
+      {
+        "rank": 2,
+        "role_type": "협조부서 (2순위)",
+        "dept_name": "가족건강팀",
+        "full_dept": "서울특별시 시민건강국 건강관리과 가족건강팀",
+        "phone": "02-2133-9485",
+        "location": "(04520) 서울특별시 중구 세종대로 124 9층",
+        "duty_summary": "○ 서울 아기 건강 첫 걸음 사업 추진"
+      },
+      {
+        "rank": 3,
+        "role_type": "협조부서 (3순위)",
+        "dept_name": "가족지원팀",
+        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
+        "phone": "02-2133-6562",
+        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
+        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진"
+      }
+    ],
+    "matched_policies": []
   }
 ];
 
-export function extractTopKeywords(proposals: PolicyProposal[]): { keyword: string; count: number }[] {
+export function extractTopKeywords(proposals: PolicyProposal[], limit = 10): { keyword: string; count: number }[] {
   const stopWords = new Set([
-    // 기존
     '및', '위한', '대해', '있습니다', '수', '하는', '등', '있는', '너무', '없어서', '통해', '제도', '기준', '지원', '서울시', '출산', '육아', '보육', '혜택',
-    // 서술어/어미 (자주 누락되던 것들 - 보강)
     '있도록', '합니다', '됩니다', '없습니다', '되어', '되는', '되고', '하고', '하며', '하여', '해서',
     '같습니다', '같은', '많은', '적은', '없는', '많이', '적게', '이며', '이고', '라고', '한다', '했다', '한다면',
     '그리고', '또한', '이에', '이를', '이는', '그러나', '하지만', '이러한', '저희', '이렇게', '그렇게',
     '위해서', '때문에', '대한', '관련', '관련된', '인한', '따라', '따른', '통해서', '위하여',
-    // 추가된 어미
     '생각합니다', '것입니다',
-    // 흔한 지시어/불완전 조각
+    '아이', '정책', '경우', '생각', '때문', '관내', '확대', '필요', '요청', '내용', '현황', '문제점', '기대효과', '제안요지', '대상', '제공', '이용', '사용', '방법', '문제', '시설', '서울형',
     '이', '그', '저', '것', '수가', '들이', '에게', '으로서', '로서', '에는', '에서는',
   ]);
 
@@ -8582,7 +26459,7 @@ export function extractTopKeywords(proposals: PolicyProposal[]): { keyword: stri
     .map(([keyword, count]) => ({ keyword, count }))
     .sort((a, b) => b.count - a.count);
 
-  return sorted.slice(0, 5);
+  return sorted.slice(0, limit);
 }
 
 export function getDepartmentStats(proposals: PolicyProposal[]): { name: string; total: number; unanswered: number; rate: number }[] {
