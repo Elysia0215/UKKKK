@@ -52,16 +52,17 @@ export const DistrictComparison: React.FC<Props> = ({
   };
 
   const districtData = useMemo(() => {
-    const counts = SEOUL_DISTRICTS.reduce((acc, dist) => {
+    const allDistrictKeys = [...SEOUL_DISTRICTS, '미상'];
+    const counts = allDistrictKeys.reduce((acc, dist) => {
       acc[dist] = { count: 0, avgVote: 0, totalVote: 0 };
       return acc;
     }, {} as Record<string, { count: number; avgVote: number; totalVote: number }>);
 
     proposals.forEach(prop => {
-      if (counts[prop.district]) {
-        counts[prop.district].count += 1;
-        counts[prop.district].totalVote += prop.vote_score;
-      }
+      const isKnownDistrict = prop.district && SEOUL_DISTRICTS.includes(prop.district);
+      const distKey = isKnownDistrict ? prop.district : '미상';
+      counts[distKey].count += 1;
+      counts[distKey].totalVote += prop.vote_score;
     });
 
     return Object.entries(counts)
@@ -86,7 +87,6 @@ export const DistrictComparison: React.FC<Props> = ({
       if (isSelected) {
         fill = '#0A2351';
       } else if (districtEntry.count > 0) {
-        // 서울시 시그니처 블루 계열 그라데이션
         const opacity = 0.35 + normalized * 0.55;
         fill = `rgba(37, 99, 235, ${opacity})`;
       }
@@ -106,14 +106,19 @@ export const DistrictComparison: React.FC<Props> = ({
   const selectedDistrictDetail = districtData.find(item => item.name === selectedDistrict);
   const selectedDistrictStat = districtStats.find(stat => stat.district === selectedDistrict);
 
-  // 25개 자치구 제안 수량 vs 출생아수 & 보육시설수 비교 차트 데이터
+  // 자치구별 + 서울시 전체(미상) 시민 제안수 vs 출생아수 & 보육시설수 비교 차트 데이터
   const districtChartData = useMemo(() => {
-    return SEOUL_DISTRICTS.map(dist => {
-      const propCount = proposals.filter(p => p.district === dist).length;
+    const allKeys = [...SEOUL_DISTRICTS, '미상'];
+    return allKeys.map(dist => {
+      const isKnown = dist !== '미상';
+      const propCount = isKnown
+        ? proposals.filter(p => p.district === dist).length
+        : proposals.filter(p => !p.district || !SEOUL_DISTRICTS.includes(p.district) || p.district === '미상' || p.district === '서울시 전체').length;
+
       const stat = districtStats.find(s => s.district === dist);
       const facilityCount = stat?.childcare_facility_count ?? 0;
       return {
-        district: dist,
+        district: dist === '미상' ? '미상(서울시전체)' : dist,
         '시민 제안수': propCount,
         '출생아수(명)': stat?.births_total ?? 0,
         '보육시설수(개)': facilityCount,
@@ -125,6 +130,9 @@ export const DistrictComparison: React.FC<Props> = ({
 
   const filteredProposals = useMemo(() => {
     if (!selectedDistrict) return [];
+    if (selectedDistrict === '미상' || selectedDistrict === '서울시 전체(미상)') {
+      return proposals.filter(p => !p.district || !SEOUL_DISTRICTS.includes(p.district) || p.district === '미상' || p.district === '서울시 전체');
+    }
     return proposals.filter(p => p.district === selectedDistrict);
   }, [proposals, selectedDistrict]);
 
@@ -241,22 +249,36 @@ export const DistrictComparison: React.FC<Props> = ({
             <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4">
               <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">선택된 자치구</p>
               <h5 className="mt-2 text-base font-bold text-slate-900">
-                {selectedDistrict || '클릭해서 자치구를 선택하세요'}
+                {selectedDistrict === '미상' ? '📍 서울시 전체 (자치구 미지정 공통 제안)' : (selectedDistrict || '클릭해서 자치구를 선택하세요')}
               </h5>
               {selectedDistrict ? (
                 <div className="mt-3 space-y-2 text-sm text-slate-600">
                   <div className="flex items-center justify-between rounded-lg bg-white px-3 py-2 border border-slate-200">
                     <span>제안 건수</span>
-                    <span className="font-bold text-slate-900">{selectedDistrictDetail?.count ?? 0}건</span>
+                    <span className="font-bold text-slate-900">
+                      {selectedDistrictDetail?.count ?? 0}건
+                      <span className="text-[11px] font-normal text-slate-500 ml-1">
+                        (전체 {proposals.length}건 중 {Math.round(((selectedDistrictDetail?.count ?? 0) / (proposals.length || 1)) * 100)}%)
+                      </span>
+                    </span>
                   </div>
                   <div className="flex items-center justify-between rounded-lg bg-white px-3 py-2 border border-slate-200">
                     <span>출생아수(2024)</span>
-                    <span className="font-bold text-slate-900">{selectedDistrictStat?.births_total?.toLocaleString() ?? 'N/A'}명</span>
+                    <span className="font-bold text-slate-900">
+                      {selectedDistrict === '미상' ? '서울시 전체 39,400명' : (selectedDistrictStat?.births_total?.toLocaleString() ? `${selectedDistrictStat.births_total.toLocaleString()}명` : 'N/A')}
+                    </span>
                   </div>
                   <div className="flex items-center justify-between rounded-lg bg-white px-3 py-2 border border-slate-200">
                     <span>보육시설수(2025)</span>
-                    <span className="font-bold text-slate-900">{selectedDistrictStat?.childcare_facility_count?.toLocaleString() ?? 'N/A'}개</span>
+                    <span className="font-bold text-slate-900">
+                      {selectedDistrict === '미상' ? '서울시 전체 4,310개소' : (selectedDistrictStat?.childcare_facility_count?.toLocaleString() ? `${selectedDistrictStat.childcare_facility_count.toLocaleString()}개` : 'N/A')}
+                    </span>
                   </div>
+                  {selectedDistrict === '미상' && (
+                    <p className="mt-2 text-xs text-indigo-700 bg-indigo-50 border border-indigo-100 p-2 rounded-lg leading-relaxed">
+                      💡 특정 자치구에 한정되지 않고 서울시 전역을 대상으로 제출된 출생·보육 행정 정책 제안 {selectedDistrictDetail?.count ?? 0}건입니다.
+                    </p>
+                  )}
                 </div>
               ) : (
                 <p className="mt-3 text-sm text-slate-500">
@@ -322,8 +344,13 @@ export const DistrictComparison: React.FC<Props> = ({
       <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-3">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2.5 border-b border-slate-100">
           <div>
-            <p className="text-xs font-bold text-slate-800">전체 25개 자치구 정렬 퀵 선택</p>
-            <p className="text-[11px] text-slate-500">
+            <div className="flex items-center gap-2">
+              <p className="text-xs font-bold text-slate-800">25개 자치구 + 서울시 전체(미상) 퀵 선택</p>
+              <span className="text-[10px] font-extrabold bg-indigo-50 text-indigo-700 border border-indigo-200 px-2 py-0.5 rounded-full">
+                총 {proposals.length}건 100% 반영 완료
+              </span>
+            </div>
+            <p className="text-[11px] text-slate-500 mt-1">
               현재 정렬 방식: <strong className="text-indigo-600 font-extrabold">{sortOrder === 'desc' ? '시민 제안건수 많은 순 (내림차순)' : '시민 제안건수 적은 순 (오름차순)'}</strong>
             </p>
           </div>
