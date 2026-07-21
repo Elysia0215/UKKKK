@@ -29,8 +29,10 @@ import {
 import { exportToCsv } from '../utils/exportCsv';
 import { formatProposalContent } from '../utils/formatText';
 import rawMongttangData from '../data/mongttang.json';
+import civilRequestsData from '../data/civil_requests_all.json';
 import { MongttangPolicy } from '../types';
 import { BatchReplyModal } from './BatchReplyModal';
+import { CivilRequestDetailModal, CivilRequestItem } from './CivilRequestDetailModal';
 
 interface Props {
   proposals: PolicyProposal[];
@@ -160,6 +162,40 @@ export const PriorityDetails: React.FC<Props> = ({
       return (rawMongttangData as any).DATA as MongttangPolicy[];
     }
     return [];
+  }, []);
+
+  // 국민신문고 연관 민원 모달 상태
+  const [civilModalState, setCivilModalState] = useState<{
+    proposal: PolicyProposal;
+    requests: CivilRequestItem[];
+  } | null>(null);
+
+  // 시민 제안 ↔ 국민신문고 연관 민원 원문 매칭 함수
+  const getMatchingCivilRequests = useMemo(() => {
+    return (proposal: PolicyProposal): CivilRequestItem[] => {
+      const title = proposal.title || '';
+      const content = proposal.content || '';
+      const fullText = (title + ' ' + content).toLowerCase();
+
+      const matched = (civilRequestsData as CivilRequestItem[]).filter(req => {
+        const reqTitle = (req.title || '').toLowerCase();
+        const reqContent = (req.content || '').toLowerCase();
+
+        // 1. 핵심 키워드 매칭
+        const keywords = ['돌봄', '어린이집', '다자녀', '유모차', '산후조리', '난임', '임산부', '월세', '주거', '키움', '초등', '입양', '보육', '출산', '휴직', '바우처', '보건소', '조리원', '통학', '엘리베이터'];
+        const matches = keywords.filter(kw => fullText.includes(kw) && (reqTitle.includes(kw) || reqContent.includes(kw)));
+        if (matches.length >= 1) return true;
+
+        // 2. 카테고리 교차 매칭
+        if (proposal.category.includes('보육') && req.category === '보육') return true;
+        if (proposal.category.includes('임신') && req.category === '임신') return true;
+        if (proposal.category.includes('주거') && req.category === '주거') return true;
+
+        return false;
+      });
+
+      return matched.slice(0, 8);
+    };
   }, []);
 
   // 시민 제안 ↔ 몽땅정보 정책 매칭 함수
@@ -1002,6 +1038,34 @@ export const PriorityDetails: React.FC<Props> = ({
                                       ))}
                                     </div>
                                   )}
+
+                                  {(() => {
+                                    const reqs = getMatchingCivilRequests(item);
+                                    if (reqs.length > 0) {
+                                      return (
+                                        <div className="pt-1.5 border-t border-slate-200/60 flex items-center justify-between flex-wrap gap-1">
+                                          <div className="flex items-center gap-1.5">
+                                            <span className="text-[10px] font-bold text-indigo-700 uppercase">국민신문고 연관 민원:</span>
+                                            <span className="text-[10px] bg-indigo-50 text-indigo-800 border border-indigo-200 px-2 py-0.5 rounded font-bold">
+                                              실시간 접수 민원 {reqs.length}건 연동 완료
+                                            </span>
+                                          </div>
+                                          <button
+                                            type="button"
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              setCivilModalState({ proposal: item, requests: reqs });
+                                            }}
+                                            className="text-[10px] bg-indigo-600 hover:bg-indigo-700 text-white px-2.5 py-0.5 rounded-md font-extrabold transition flex items-center gap-1 cursor-pointer shadow-2xs"
+                                          >
+                                            <span>📩 국민신문고 민원 원문 보기 ({reqs.length}건)</span>
+                                            <ExternalLink className="w-2.5 h-2.5" />
+                                          </button>
+                                        </div>
+                                      );
+                                    }
+                                    return null;
+                                  })()}
                                 </div>
 
                                 <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-100">
@@ -1143,6 +1207,34 @@ export const PriorityDetails: React.FC<Props> = ({
                         ))}
                       </div>
                     )}
+
+                    {(() => {
+                      const reqs = getMatchingCivilRequests(item);
+                      if (reqs.length > 0) {
+                        return (
+                          <div className="pt-1.5 border-t border-slate-200/60 flex items-center justify-between flex-wrap gap-1">
+                            <div className="flex items-center gap-1.5">
+                              <span className="text-[10px] font-bold text-indigo-700 uppercase">국민신문고 연관 민원:</span>
+                              <span className="text-[10px] bg-indigo-50 text-indigo-800 border border-indigo-200 px-2 py-0.5 rounded font-bold">
+                                실시간 접수 민원 {reqs.length}건 매칭 완료
+                              </span>
+                            </div>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setCivilModalState({ proposal: item, requests: reqs });
+                              }}
+                              className="text-[10px] bg-indigo-600 hover:bg-indigo-700 text-white px-2.5 py-0.5 rounded-md font-extrabold transition flex items-center gap-1 cursor-pointer shadow-2xs"
+                            >
+                              <span>📩 국민신문고 민원 원문 보기 ({reqs.length}건)</span>
+                              <ExternalLink className="w-2.5 h-2.5" />
+                            </button>
+                          </div>
+                        );
+                      }
+                      return null;
+                    })()}
                   </div>
 
                   <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-200/80">
