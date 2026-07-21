@@ -4,12 +4,30 @@
  */
 
 /**
- * 시민 제안 본문 텍스트의 엔터(줄바꿈) 및 단락 구조를 복원하고 가독성을 높이는 포맷팅 유틸리티
+ * HTML Numeric Entity (&#x28; 등)를 일반 문자로 변환하는 유틸리티
+ */
+export function decodeHTMLEntities(text: string): string {
+  if (!text) return '';
+  return text
+    .replace(/&#x28;/gi, '(')
+    .replace(/&#x29;/gi, ')')
+    .replace(/&#x27;/gi, "'")
+    .replace(/&#x22;/gi, '"')
+    .replace(/&#x26;/gi, '&')
+    .replace(/&#xA;/gi, '\n')
+    .replace(/&#xD;/gi, '')
+    .replace(/&amp;/gi, '&')
+    .replace(/&lt;/gi, '<')
+    .replace(/&gt;/gi, '>');
+}
+
+/**
+ * 시민 제안 및 민원 본문 텍스트의 엔터(줄바꿈) 및 단락 구조를 복원하고 가독성을 높이는 포맷팅 유틸리티
  */
 export function formatProposalContent(content: string): string {
   if (!content) return '';
 
-  let formatted = content;
+  let formatted = decodeHTMLEntities(content);
 
   // 1. 이중/삼중 공백("  ")을 줄바꿈 \n\n 으로 복원
   formatted = formatted.replace(/ {2,}/g, '\n\n');

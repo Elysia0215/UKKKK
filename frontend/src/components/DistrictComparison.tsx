@@ -38,6 +38,7 @@ export const DistrictComparison: React.FC<Props> = ({
   onSelectDistrict
 }) => {
   const [sortOrder, setSortOrder] = useState<'desc' | 'asc'>('desc');
+  const [includeUnassigned, setIncludeUnassigned] = useState<boolean>(false);
   const [civilModalOpen, setCivilModalOpen] = useState(false);
   const [civilCategory, setCivilCategory] = useState('전체');
 
@@ -108,8 +109,8 @@ export const DistrictComparison: React.FC<Props> = ({
 
   // 자치구별 + 서울시 전체(미상) 시민 제안수 vs 출생아수 & 보육시설수 비교 차트 데이터
   const districtChartData = useMemo(() => {
-    const allKeys = [...SEOUL_DISTRICTS, '미상'];
-    return allKeys.map(dist => {
+    const keys = includeUnassigned ? [...SEOUL_DISTRICTS, '미상'] : SEOUL_DISTRICTS;
+    return keys.map(dist => {
       const isKnown = dist !== '미상';
       const propCount = isKnown
         ? proposals.filter(p => p.district === dist).length
@@ -126,7 +127,7 @@ export const DistrictComparison: React.FC<Props> = ({
         '합계출산율': stat?.tfr ?? stat?.fertility_rate ?? 0
       };
     }).sort((a, b) => (sortOrder === 'desc' ? b['시민 제안수'] - a['시민 제안수'] : a['시민 제안수'] - b['시민 제안수']));
-  }, [proposals, sortOrder]);
+  }, [proposals, sortOrder, includeUnassigned]);
 
   const filteredProposals = useMemo(() => {
     if (!selectedDistrict) return [];
@@ -296,7 +297,7 @@ export const DistrictComparison: React.FC<Props> = ({
 
       {/* 25개 자치구 시민 제안수 vs 출생아수 & 보육시설수 이중축 분석 차트 */}
       <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-200/80">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200/80">
           <div>
             <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
               <BarChart3 className="text-blue-600 w-5 h-5" />
@@ -305,6 +306,19 @@ export const DistrictComparison: React.FC<Props> = ({
             <p className="text-xs text-slate-500 mt-0.5">
               막대 그래프(좌측 축: 시민 제안 수량)와 꺾은선 그래프(우측 축: 총 출생아 수 / 보육시설 수 <strong className="text-emerald-700">x10 확대 시각화</strong>)를 통해 지역별 정책 사각지대 및 인프라 매칭 추세를 종합 검토할 수 있습니다.
             </p>
+          </div>
+          <div className="flex items-center gap-2 shrink-0">
+            <button
+              onClick={() => setIncludeUnassigned(prev => !prev)}
+              className={`text-xs px-3 py-1.5 rounded-lg font-bold border transition cursor-pointer flex items-center gap-1.5 ${
+                !includeUnassigned
+                  ? 'bg-blue-600 text-white border-blue-700 shadow-2xs hover:bg-blue-700'
+                  : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-300'
+              }`}
+              title="서울시 전체(미상) 건수 포함 여부를 조절하여 25개 자치구 간 그래프 스케일을 최적화합니다."
+            >
+              {!includeUnassigned ? '✓ 25개 자치구 전용 보기 (선명한 추세)' : '미상(서울시전체) 포함 중'}
+            </button>
           </div>
         </div>
 

@@ -181,7 +181,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -189,7 +189,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -197,7 +197,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -205,7 +205,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -213,7 +213,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -334,7 +334,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -342,7 +342,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -350,7 +350,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -358,7 +358,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -366,7 +366,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -380,7 +380,7 @@ export const mockProposals: PolicyProposal[] = [
     "vote_score": 0.0,
     "comment_cnt": 0,
     "reply_yn": "N",
-    "district": "미상",
+    "district": "광진구",
     "category_raw": "정보",
     "category": "정보·상담·교육·거버넌스",
     "sub_category": "정보 접근성",
@@ -519,7 +519,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -752,7 +752,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -760,7 +760,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -768,7 +768,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -776,7 +776,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -784,7 +784,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "주거급여 (맞춤형 급여) 취약계층 지원",
         "summary": "(소득인정액이 기준 중위소득 48% 이내의 가구/ 타인의 주택 등에 거주하면서 임대차 계약 등을 체결하고 임차료를 지불하는 자에게 지역별 기준임대료를 상한으로 실제 임차료(월임차료+보증금 환산액) 지원ㆍ3급지(광역시...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -905,7 +905,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -913,7 +913,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -921,7 +921,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -986,7 +986,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -994,7 +994,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -1002,7 +1002,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -1010,7 +1010,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -1018,7 +1018,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -1139,7 +1139,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -1147,7 +1147,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -1155,7 +1155,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -1163,7 +1163,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -1171,7 +1171,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -1236,7 +1236,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -1244,7 +1244,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -1252,7 +1252,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -1260,7 +1260,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -1274,7 +1274,7 @@ export const mockProposals: PolicyProposal[] = [
     "vote_score": 0.0,
     "comment_cnt": 0,
     "reply_yn": "N",
-    "district": "미상",
+    "district": "광진구",
     "category_raw": "다자녀",
     "category": "다자녀·양육비·생활지원",
     "sub_category": "다자녀 혜택",
@@ -1325,7 +1325,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -1333,7 +1333,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -1341,7 +1341,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -1406,7 +1406,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -1414,7 +1414,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -1422,7 +1422,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -1430,7 +1430,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -1438,7 +1438,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -1503,7 +1503,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -1511,7 +1511,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -1519,7 +1519,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -1527,7 +1527,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -1535,7 +1535,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -1656,7 +1656,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -1664,7 +1664,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -1672,7 +1672,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -1680,7 +1680,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -1913,7 +1913,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -1921,7 +1921,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -1929,7 +1929,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -1937,7 +1937,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -1945,7 +1945,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -2122,7 +2122,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -2130,7 +2130,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -2138,7 +2138,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -2146,7 +2146,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -2154,7 +2154,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -2510,7 +2510,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -2518,7 +2518,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -2526,7 +2526,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -2534,7 +2534,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -2542,7 +2542,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -2704,7 +2704,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -2712,7 +2712,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -2720,7 +2720,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -2728,7 +2728,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -2793,7 +2793,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -2801,7 +2801,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -2809,7 +2809,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -2874,7 +2874,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -2882,7 +2882,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -2890,7 +2890,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -2898,7 +2898,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -2906,7 +2906,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -2971,7 +2971,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -2979,7 +2979,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -2987,7 +2987,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -2995,7 +2995,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -3003,7 +3003,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -3221,7 +3221,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -3229,7 +3229,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -3237,7 +3237,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -3245,7 +3245,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -3253,7 +3253,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -3374,7 +3374,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -3382,7 +3382,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -3390,7 +3390,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -3398,7 +3398,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -3406,7 +3406,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -3503,7 +3503,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -3568,7 +3568,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -3576,7 +3576,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -3592,7 +3592,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -3697,7 +3697,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -3762,7 +3762,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -3770,7 +3770,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -3778,7 +3778,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -3786,7 +3786,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -3956,7 +3956,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -3964,7 +3964,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "주거급여 (맞춤형 급여) 취약계층 지원",
         "summary": "(소득인정액이 기준 중위소득 48% 이내의 가구/ 타인의 주택 등에 거주하면서 임대차 계약 등을 체결하고 임차료를 지불하는 자에게 지역별 기준임대료를 상한으로 실제 임차료(월임차료+보증금 환산액) 지원ㆍ3급지(광역시...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -4126,7 +4126,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -4134,7 +4134,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -4150,7 +4150,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -4158,7 +4158,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -4391,7 +4391,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -4399,7 +4399,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -4407,7 +4407,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -4415,7 +4415,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -4423,7 +4423,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -4544,7 +4544,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -4552,7 +4552,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -4560,7 +4560,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -4625,7 +4625,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -4633,7 +4633,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -4641,7 +4641,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -4649,7 +4649,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "저소득층 기저귀조제분유 취약계층 지원 (사회서비스전자바우처)",
         "summary": "(출산가정/ⓧ/(기저귀)만2세 미만의 영아를 둔 기초생활보장, 차상위,, 한부모가족 수급 가구 대상. (조제분유)아동복지시설, 공동생활가정, 입양아동, 한부모 아동 등(별도 확인)/남여/기저귀, 조제분유 구매비용)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족지원팀",
         "score": 30
       },
@@ -4657,7 +4657,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -4778,7 +4778,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -4786,7 +4786,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -4794,7 +4794,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -4802,7 +4802,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -4810,7 +4810,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -4875,7 +4875,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -4883,7 +4883,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -4891,7 +4891,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -4899,7 +4899,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -4907,7 +4907,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -4972,7 +4972,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -4980,7 +4980,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -4988,7 +4988,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -5053,7 +5053,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -5061,7 +5061,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -5069,7 +5069,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -5287,7 +5287,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -5295,7 +5295,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -5303,7 +5303,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -5311,7 +5311,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -5319,7 +5319,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -5384,7 +5384,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -5392,7 +5392,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -5400,7 +5400,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -5408,7 +5408,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -5416,7 +5416,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -5537,7 +5537,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -5545,7 +5545,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -5553,7 +5553,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -5561,7 +5561,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -5569,7 +5569,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -5634,7 +5634,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -5642,7 +5642,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -5650,7 +5650,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -5658,7 +5658,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -5666,7 +5666,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -5787,7 +5787,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -5795,7 +5795,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -5803,7 +5803,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -5811,7 +5811,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -5819,7 +5819,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -5884,7 +5884,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -5892,7 +5892,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -5900,7 +5900,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -5908,7 +5908,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -6029,7 +6029,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -6037,7 +6037,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -6045,7 +6045,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -6053,7 +6053,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -6327,7 +6327,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -6335,7 +6335,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -6343,7 +6343,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -6351,7 +6351,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -6448,7 +6448,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -6513,7 +6513,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -6521,7 +6521,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -6529,7 +6529,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -6537,7 +6537,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -6545,7 +6545,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -6610,7 +6610,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -6618,7 +6618,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -6626,7 +6626,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -6634,7 +6634,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -6642,7 +6642,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -6819,7 +6819,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -6827,7 +6827,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -6835,7 +6835,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -6843,7 +6843,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -6940,7 +6940,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -7190,7 +7190,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -7255,7 +7255,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -7263,7 +7263,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -7271,7 +7271,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -7279,7 +7279,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -7352,7 +7352,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -7360,7 +7360,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -7368,7 +7368,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -7545,7 +7545,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -7553,7 +7553,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -7569,7 +7569,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -7577,7 +7577,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -7754,7 +7754,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -7762,7 +7762,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -7778,7 +7778,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -7786,7 +7786,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -7907,7 +7907,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -7915,7 +7915,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -7923,7 +7923,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -7988,7 +7988,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -7996,7 +7996,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8004,7 +8004,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8012,7 +8012,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8020,7 +8020,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -8085,7 +8085,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -8093,7 +8093,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8101,7 +8101,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8109,7 +8109,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8117,7 +8117,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -8238,7 +8238,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -8246,7 +8246,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "주거급여 (맞춤형 급여) 취약계층 지원",
         "summary": "(소득인정액이 기준 중위소득 48% 이내의 가구/ 타인의 주택 등에 거주하면서 임대차 계약 등을 체결하고 임차료를 지불하는 자에게 지역별 기준임대료를 상한으로 실제 임차료(월임차료+보증금 환산액) 지원ㆍ3급지(광역시...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -8311,7 +8311,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -8319,7 +8319,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "주거급여 (맞춤형 급여) 취약계층 지원",
         "summary": "(소득인정액이 기준 중위소득 48% 이내의 가구/ 타인의 주택 등에 거주하면서 임대차 계약 등을 체결하고 임차료를 지불하는 자에게 지역별 기준임대료를 상한으로 실제 임차료(월임차료+보증금 환산액) 지원ㆍ3급지(광역시...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -8384,7 +8384,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -8392,7 +8392,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8400,7 +8400,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8408,7 +8408,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8416,7 +8416,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -8481,7 +8481,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -8489,7 +8489,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8497,7 +8497,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8505,7 +8505,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8513,7 +8513,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -8578,7 +8578,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -8586,7 +8586,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8594,7 +8594,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8602,7 +8602,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8610,7 +8610,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -8675,7 +8675,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -8683,7 +8683,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -8691,7 +8691,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -8699,7 +8699,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -8707,7 +8707,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -8828,7 +8828,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -8836,7 +8836,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8844,7 +8844,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8852,7 +8852,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -8860,7 +8860,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -9078,7 +9078,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -9086,7 +9086,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -9094,7 +9094,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -9102,7 +9102,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -9110,7 +9110,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -9175,7 +9175,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -9183,7 +9183,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -9191,7 +9191,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -9199,7 +9199,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -9320,7 +9320,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -9328,7 +9328,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -9344,7 +9344,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -9352,7 +9352,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -9417,7 +9417,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -9425,7 +9425,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -9441,7 +9441,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -9755,7 +9755,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -9820,7 +9820,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -9828,7 +9828,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -9836,7 +9836,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -9844,7 +9844,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -9852,7 +9852,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -10014,7 +10014,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -10022,7 +10022,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -10030,7 +10030,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -10038,7 +10038,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -10208,7 +10208,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -10216,7 +10216,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -10224,7 +10224,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -10345,7 +10345,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -10353,7 +10353,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -10361,7 +10361,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -10369,7 +10369,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -10377,7 +10377,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -10498,7 +10498,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -10506,7 +10506,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -10514,7 +10514,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -10579,7 +10579,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -10587,7 +10587,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -10595,7 +10595,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -10603,7 +10603,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -10611,7 +10611,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -10885,7 +10885,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -10893,7 +10893,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -10901,7 +10901,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -10909,7 +10909,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -10917,7 +10917,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -10982,7 +10982,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -10990,7 +10990,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -10998,7 +10998,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -11006,7 +11006,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -11014,7 +11014,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -11135,7 +11135,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -11143,7 +11143,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -11151,7 +11151,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -11159,7 +11159,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -11232,7 +11232,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -11240,7 +11240,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -11248,7 +11248,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -11256,7 +11256,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -11264,7 +11264,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -11329,7 +11329,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -11337,7 +11337,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -11345,7 +11345,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -11353,7 +11353,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -11361,7 +11361,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -11426,7 +11426,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -11434,7 +11434,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -11450,7 +11450,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -11458,7 +11458,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -11523,7 +11523,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -11531,7 +11531,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -11539,7 +11539,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -11828,7 +11828,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -11836,7 +11836,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -11844,7 +11844,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -11852,7 +11852,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -11860,7 +11860,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -12205,7 +12205,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -12213,7 +12213,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -12221,7 +12221,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -12342,7 +12342,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -12350,7 +12350,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -12358,7 +12358,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -12366,7 +12366,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -12374,7 +12374,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -12495,7 +12495,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -12503,7 +12503,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -12519,7 +12519,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -12592,7 +12592,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -12600,7 +12600,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -12608,7 +12608,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -12673,7 +12673,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -12681,7 +12681,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -12689,7 +12689,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -12697,7 +12697,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -12705,7 +12705,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -12770,7 +12770,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -12778,7 +12778,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -12786,7 +12786,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -12907,7 +12907,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -12915,7 +12915,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -12923,7 +12923,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -12931,7 +12931,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -12939,7 +12939,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -13060,7 +13060,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -13068,7 +13068,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -13076,7 +13076,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -13197,7 +13197,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -13205,7 +13205,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -13213,7 +13213,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -13221,7 +13221,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -13229,7 +13229,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -13326,7 +13326,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -13391,7 +13391,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -13399,7 +13399,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -13407,7 +13407,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -13415,7 +13415,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -13423,7 +13423,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -13520,7 +13520,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -13697,7 +13697,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -13705,7 +13705,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -13713,7 +13713,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -13721,7 +13721,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -13729,7 +13729,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -13882,7 +13882,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -13947,7 +13947,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -13955,7 +13955,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -13963,7 +13963,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -13971,7 +13971,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -13979,7 +13979,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -14044,7 +14044,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -14052,7 +14052,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -14060,7 +14060,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -14068,7 +14068,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -14076,7 +14076,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -14173,7 +14173,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -14294,7 +14294,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -14302,7 +14302,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -14310,7 +14310,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -14318,7 +14318,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -14326,7 +14326,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -14479,7 +14479,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -14712,7 +14712,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -14720,7 +14720,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -14728,7 +14728,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -14736,7 +14736,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -14744,7 +14744,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -14809,7 +14809,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -14817,7 +14817,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -14825,7 +14825,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -14946,7 +14946,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "저소득층 기저귀조제분유 취약계층 지원 (사회서비스전자바우처)",
         "summary": "(출산가정/ⓧ/(기저귀)만2세 미만의 영아를 둔 기초생활보장, 차상위,, 한부모가족 수급 가구 대상. (조제분유)아동복지시설, 공동생활가정, 입양아동, 한부모 아동 등(별도 확인)/남여/기저귀, 조제분유 구매비용)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족지원팀",
         "score": 30
       },
@@ -14954,7 +14954,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "농식품바우처 취약계층 지원",
         "summary": "(생계급여 수급가구 중 임산부,영유아,아동이 포함된 가구/농협하나로마트 등의 공급처에서 국내산 과일, 채소, 흰우유, 신선계란, 육류, 잡곡류, 두부류를 구매할 수 있는 농식품바우처 제공)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -14962,7 +14962,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "과학문화 바우처 취약계층 지원",
         "summary": "(6세 이상(2019.12.31 이전 출생자) 기초생활수급자, 차상위계층/과학문화 상품 및 서비스 이용하는 온라인 포인트 5만원 지급/과학문화바우처 홈페이지)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -14970,7 +14970,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "에너지바우처 취약계층 지원",
         "summary": "(「국민기초생활보장법」에 따른 기초생활보장급여 수급자 중 등록 장애인, 7세이하 영유아, 임신 중이거나 출산후 6개월 미만인 여성, (소년소녀가정) 보건복지부에서 정한 아동분야 사업 중 소년소녀가장 지원 대상에 해당...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -15035,7 +15035,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -15043,7 +15043,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15051,7 +15051,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15059,7 +15059,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15067,7 +15067,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -15132,7 +15132,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -15140,7 +15140,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -15148,7 +15148,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -15156,7 +15156,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -15221,7 +15221,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -15229,7 +15229,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "주거급여 (맞춤형 급여) 취약계층 지원",
         "summary": "(소득인정액이 기준 중위소득 48% 이내의 가구/ 타인의 주택 등에 거주하면서 임대차 계약 등을 체결하고 임차료를 지불하는 자에게 지역별 기준임대료를 상한으로 실제 임차료(월임차료+보증금 환산액) 지원ㆍ3급지(광역시...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -15326,7 +15326,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -15391,7 +15391,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -15399,7 +15399,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15407,7 +15407,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15415,7 +15415,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15423,7 +15423,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -15488,7 +15488,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -15496,7 +15496,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15504,7 +15504,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15512,7 +15512,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15520,7 +15520,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -15585,7 +15585,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -15593,7 +15593,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -15601,7 +15601,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -15609,7 +15609,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -15617,7 +15617,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -15682,7 +15682,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -15690,7 +15690,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "주거급여 (맞춤형 급여) 취약계층 지원",
         "summary": "(소득인정액이 기준 중위소득 48% 이내의 가구/ 타인의 주택 등에 거주하면서 임대차 계약 등을 체결하고 임차료를 지불하는 자에게 지역별 기준임대료를 상한으로 실제 임차료(월임차료+보증금 환산액) 지원ㆍ3급지(광역시...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -15755,7 +15755,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -15763,7 +15763,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -15771,7 +15771,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -15779,7 +15779,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -15787,7 +15787,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -15852,7 +15852,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15860,7 +15860,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15876,7 +15876,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15884,7 +15884,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -15949,7 +15949,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -15957,7 +15957,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15965,7 +15965,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15973,7 +15973,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -15981,7 +15981,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -16046,7 +16046,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -16054,7 +16054,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16062,7 +16062,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16070,7 +16070,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16078,7 +16078,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -16143,7 +16143,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -16151,7 +16151,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16159,7 +16159,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16167,7 +16167,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16175,7 +16175,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -16240,7 +16240,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -16248,7 +16248,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16256,7 +16256,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16264,7 +16264,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16272,7 +16272,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -16449,7 +16449,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -16457,7 +16457,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16465,7 +16465,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16473,7 +16473,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16481,7 +16481,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -16546,7 +16546,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -16554,7 +16554,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16562,7 +16562,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16570,7 +16570,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -16578,7 +16578,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -16699,7 +16699,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -16707,7 +16707,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -16715,7 +16715,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -16723,7 +16723,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -16852,7 +16852,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -16860,7 +16860,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -16868,7 +16868,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -16876,7 +16876,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -16941,7 +16941,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -16949,7 +16949,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -16957,7 +16957,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -16965,7 +16965,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -16973,7 +16973,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -17038,7 +17038,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -17046,7 +17046,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -17054,7 +17054,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 산후조리경비 지원",
         "policy_name": "서울형 산모 산후조리경비 지원",
         "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -17062,7 +17062,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -17070,7 +17070,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -17167,7 +17167,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -17288,7 +17288,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -17296,7 +17296,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -17304,7 +17304,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -17312,7 +17312,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -17320,7 +17320,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -17441,7 +17441,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -17449,7 +17449,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -17457,7 +17457,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -17465,7 +17465,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -17473,7 +17473,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -17599,7 +17599,7 @@ export const mockProposals: PolicyProposal[] = [
     "vote_score": 19.0,
     "comment_cnt": 5,
     "reply_yn": "N",
-    "district": "미상",
+    "district": "동작구",
     "category_raw": "정보",
     "category": "정보·상담·교육·거버넌스",
     "sub_category": "정보 접근성",
@@ -17655,7 +17655,7 @@ export const mockProposals: PolicyProposal[] = [
     "vote_score": 67.0,
     "comment_cnt": 5,
     "reply_yn": "Y",
-    "district": "미상",
+    "district": "강서구",
     "category_raw": "보육",
     "category": "보육·돌봄 인프라",
     "sub_category": "어린이집·유치원",
@@ -17762,7 +17762,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -17770,7 +17770,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -17778,7 +17778,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -17786,7 +17786,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -17794,7 +17794,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -17891,7 +17891,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -17956,7 +17956,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -17964,7 +17964,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -17972,7 +17972,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -17980,7 +17980,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -17988,7 +17988,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -18221,7 +18221,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -18229,7 +18229,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -18237,7 +18237,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -18245,7 +18245,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -18310,7 +18310,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -18318,7 +18318,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -18326,7 +18326,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -18334,7 +18334,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -18342,7 +18342,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -18407,7 +18407,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -18415,7 +18415,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -18423,7 +18423,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -18431,7 +18431,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -18439,7 +18439,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -18504,7 +18504,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -18512,7 +18512,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "주거급여 (맞춤형 급여) 취약계층 지원",
         "summary": "(소득인정액이 기준 중위소득 48% 이내의 가구/ 타인의 주택 등에 거주하면서 임대차 계약 등을 체결하고 임차료를 지불하는 자에게 지역별 기준임대료를 상한으로 실제 임차료(월임차료+보증금 환산액) 지원ㆍ3급지(광역시...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -18577,7 +18577,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -18585,7 +18585,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -18601,7 +18601,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -18609,7 +18609,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -18674,7 +18674,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -18682,7 +18682,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -18690,7 +18690,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -18698,7 +18698,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -18706,7 +18706,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -18771,7 +18771,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -18779,7 +18779,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -18787,7 +18787,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -18795,7 +18795,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -18803,7 +18803,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -19036,7 +19036,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -19044,7 +19044,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -19052,7 +19052,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -19060,7 +19060,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -19189,7 +19189,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -19197,7 +19197,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -19205,7 +19205,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -19213,7 +19213,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -19221,7 +19221,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -19286,7 +19286,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -19294,7 +19294,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -19302,7 +19302,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -19310,7 +19310,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -19318,7 +19318,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -19439,7 +19439,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -19447,7 +19447,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -19455,7 +19455,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -19463,7 +19463,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -19471,7 +19471,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -19648,7 +19648,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -19656,7 +19656,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -19664,7 +19664,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -19672,7 +19672,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -19680,7 +19680,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -19833,7 +19833,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -19898,7 +19898,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -19906,7 +19906,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -19914,7 +19914,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -19922,7 +19922,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -19930,7 +19930,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -20027,7 +20027,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -20204,7 +20204,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -20212,7 +20212,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -20220,7 +20220,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -20228,7 +20228,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -20236,7 +20236,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -20357,7 +20357,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -20365,7 +20365,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -20373,7 +20373,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -20381,7 +20381,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -20389,7 +20389,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -20454,7 +20454,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -20462,7 +20462,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "주거급여 (맞춤형 급여) 취약계층 지원",
         "summary": "(소득인정액이 기준 중위소득 48% 이내의 가구/ 타인의 주택 등에 거주하면서 임대차 계약 등을 체결하고 임차료를 지불하는 자에게 지역별 기준임대료를 상한으로 실제 임차료(월임차료+보증금 환산액) 지원ㆍ3급지(광역시...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -20527,7 +20527,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -20535,7 +20535,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "주거급여 (맞춤형 급여) 취약계층 지원",
         "summary": "(소득인정액이 기준 중위소득 48% 이내의 가구/ 타인의 주택 등에 거주하면서 임대차 계약 등을 체결하고 임차료를 지불하는 자에게 지역별 기준임대료를 상한으로 실제 임차료(월임차료+보증금 환산액) 지원ㆍ3급지(광역시...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -20600,7 +20600,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -20608,7 +20608,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "주거급여 (맞춤형 급여) 취약계층 지원",
         "summary": "(소득인정액이 기준 중위소득 48% 이내의 가구/ 타인의 주택 등에 거주하면서 임대차 계약 등을 체결하고 임차료를 지불하는 자에게 지역별 기준임대료를 상한으로 실제 임차료(월임차료+보증금 환산액) 지원ㆍ3급지(광역시...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -20673,7 +20673,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -20681,7 +20681,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -20689,7 +20689,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -20810,7 +20810,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -20818,7 +20818,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -20826,7 +20826,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -20834,7 +20834,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -20842,7 +20842,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -21019,7 +21019,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -21027,7 +21027,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -21043,7 +21043,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -21228,7 +21228,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -21236,7 +21236,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -21244,7 +21244,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -21252,7 +21252,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -21260,7 +21260,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -21325,7 +21325,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -21333,7 +21333,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -21341,7 +21341,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -21574,7 +21574,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -21582,7 +21582,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -21590,7 +21590,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -21598,7 +21598,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -21606,7 +21606,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -21671,7 +21671,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -21679,7 +21679,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -21687,7 +21687,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -21695,7 +21695,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -21703,7 +21703,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -21800,7 +21800,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -21865,7 +21865,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -21873,7 +21873,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -21881,7 +21881,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -21889,7 +21889,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -22010,7 +22010,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -22018,7 +22018,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -22026,7 +22026,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -22034,7 +22034,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -22099,7 +22099,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -22107,7 +22107,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -22115,7 +22115,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -22123,7 +22123,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -22131,7 +22131,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -22308,7 +22308,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -22316,7 +22316,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -22324,7 +22324,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -22445,7 +22445,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -22453,7 +22453,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -22461,7 +22461,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -22469,7 +22469,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -22477,7 +22477,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -22598,7 +22598,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -22606,7 +22606,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -22614,7 +22614,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -22622,7 +22622,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -22630,7 +22630,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -22695,7 +22695,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -22703,7 +22703,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -22719,7 +22719,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -22727,7 +22727,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -22792,7 +22792,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -22800,7 +22800,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -22808,7 +22808,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -22816,7 +22816,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -22824,7 +22824,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -22889,7 +22889,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -22897,7 +22897,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -22905,7 +22905,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -22913,7 +22913,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -22921,7 +22921,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -23042,7 +23042,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -23050,7 +23050,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -23058,7 +23058,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -23066,7 +23066,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -23074,7 +23074,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -23195,7 +23195,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -23203,7 +23203,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -23211,7 +23211,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -23219,7 +23219,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -23340,7 +23340,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -23348,7 +23348,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -23356,7 +23356,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -23364,7 +23364,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -23437,7 +23437,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -23445,7 +23445,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -23453,7 +23453,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -23461,7 +23461,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -23638,7 +23638,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -23646,7 +23646,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -23654,7 +23654,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -23662,7 +23662,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -23670,7 +23670,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -23735,7 +23735,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -23743,7 +23743,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -23751,7 +23751,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -23759,7 +23759,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -23767,7 +23767,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -23832,7 +23832,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -23840,7 +23840,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -23848,7 +23848,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -23856,7 +23856,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -24089,7 +24089,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -24097,7 +24097,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -24113,7 +24113,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -24121,7 +24121,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -24186,7 +24186,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -24194,7 +24194,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -24210,7 +24210,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -24218,7 +24218,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -24283,7 +24283,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -24291,7 +24291,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -24299,7 +24299,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -24307,7 +24307,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -24315,7 +24315,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -24380,7 +24380,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -24388,7 +24388,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -24396,7 +24396,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -24404,7 +24404,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -24645,7 +24645,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -24653,7 +24653,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -24661,7 +24661,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -24669,7 +24669,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -24677,7 +24677,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -24742,7 +24742,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -24750,7 +24750,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -24766,7 +24766,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -24774,7 +24774,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -24895,7 +24895,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -24903,7 +24903,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -24911,7 +24911,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -24919,7 +24919,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -24984,7 +24984,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 산후조리경비 지원",
         "policy_name": "서울형 산모 산후조리경비 지원",
         "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -24992,7 +24992,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 산후조리경비 지원",
         "summary": "출산에 소요되는 경제적 부담을 경감하고, 출산 이후 산모의 건강권을 확보하기 위하여 산후조리경비 지원  1. 지원금액 : 자녀 수에 따른 <b class='font-color-primary'>차등지원</b>     ...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       }
@@ -25057,7 +25057,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -25065,7 +25065,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -25073,7 +25073,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -25081,7 +25081,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -25154,7 +25154,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -25162,7 +25162,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -25170,7 +25170,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -25178,7 +25178,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -25186,7 +25186,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -25251,7 +25251,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -25259,7 +25259,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -25267,7 +25267,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -25332,7 +25332,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -25340,7 +25340,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -25348,7 +25348,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -25413,7 +25413,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -25421,7 +25421,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -25429,7 +25429,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -25437,7 +25437,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -25445,7 +25445,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -25678,7 +25678,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -25686,7 +25686,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -25694,7 +25694,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -25702,7 +25702,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -25710,7 +25710,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -25724,7 +25724,7 @@ export const mockProposals: PolicyProposal[] = [
     "vote_score": 0.0,
     "comment_cnt": 0,
     "reply_yn": "N",
-    "district": "미상",
+    "district": "강북구",
     "category_raw": "출산",
     "category": "출산·산후 초기지원",
     "sub_category": "산모 회복·건강관리",
@@ -25831,7 +25831,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -25839,7 +25839,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -25847,7 +25847,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -25855,7 +25855,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -25863,7 +25863,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -25984,7 +25984,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -25992,7 +25992,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -26000,7 +26000,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -26008,7 +26008,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -26016,7 +26016,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -26081,7 +26081,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -26089,7 +26089,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -26097,7 +26097,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -26105,7 +26105,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -26170,7 +26170,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -26178,7 +26178,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -26194,7 +26194,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -26202,7 +26202,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -26267,7 +26267,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -26275,7 +26275,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -26283,7 +26283,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -26291,7 +26291,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -26299,7 +26299,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -26420,7 +26420,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 산후조리경비 지원",
         "policy_name": "서울형 산모 산후조리경비 지원",
         "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -26428,7 +26428,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 산후조리경비 지원",
         "summary": "출산에 소요되는 경제적 부담을 경감하고, 출산 이후 산모의 건강권을 확보하기 위하여 산후조리경비 지원  1. 지원금액 : 자녀 수에 따른 <b class='font-color-primary'>차등지원</b>     ...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       }
@@ -26493,7 +26493,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -26501,7 +26501,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -26517,7 +26517,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -26525,7 +26525,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -26590,7 +26590,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -26598,7 +26598,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -26606,7 +26606,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -26614,7 +26614,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -26903,7 +26903,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -26911,7 +26911,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -26919,7 +26919,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -27152,7 +27152,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -27160,7 +27160,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -27168,7 +27168,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -27265,7 +27265,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -27386,7 +27386,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -27394,7 +27394,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -27410,7 +27410,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -27418,7 +27418,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -27483,7 +27483,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -27491,7 +27491,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -27507,7 +27507,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -27515,7 +27515,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -27580,7 +27580,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -27588,7 +27588,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -27596,7 +27596,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -27661,7 +27661,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -27669,7 +27669,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -27677,7 +27677,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -27685,7 +27685,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -27693,7 +27693,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -27758,7 +27758,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 산후조리경비 지원",
         "policy_name": "서울형 산모 산후조리경비 지원",
         "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -27766,7 +27766,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -27774,7 +27774,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -27782,7 +27782,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 산후조리경비 지원",
         "summary": "출산에 소요되는 경제적 부담을 경감하고, 출산 이후 산모의 건강권을 확보하기 위하여 산후조리경비 지원  1. 지원금액 : 자녀 수에 따른 <b class='font-color-primary'>차등지원</b>     ...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -27790,7 +27790,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -27855,7 +27855,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -27863,7 +27863,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -27871,7 +27871,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -27879,7 +27879,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -27887,7 +27887,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -27952,7 +27952,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -27960,7 +27960,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -27968,7 +27968,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -27976,7 +27976,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -27984,7 +27984,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -28054,7 +28054,7 @@ export const mockProposals: PolicyProposal[] = [
     "vote_score": 1.0,
     "comment_cnt": 0,
     "reply_yn": "N",
-    "district": "미상",
+    "district": "강북구",
     "category_raw": "출산",
     "category": "출산·산후 초기지원",
     "sub_category": "산모 회복·건강관리",
@@ -28161,7 +28161,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -28169,7 +28169,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -28177,7 +28177,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -28185,7 +28185,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -28193,7 +28193,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -28258,7 +28258,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -28266,7 +28266,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -28282,7 +28282,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -28290,7 +28290,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -28467,7 +28467,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -28475,7 +28475,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -28483,7 +28483,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -28491,7 +28491,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -28499,7 +28499,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -28564,7 +28564,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -28572,7 +28572,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -28580,7 +28580,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -28588,7 +28588,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -28596,7 +28596,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -28661,7 +28661,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -28669,7 +28669,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -28685,7 +28685,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -28693,7 +28693,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -28758,7 +28758,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -28766,7 +28766,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -28774,7 +28774,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -28782,7 +28782,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -28790,7 +28790,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -28911,7 +28911,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -28919,7 +28919,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -28927,7 +28927,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -28935,7 +28935,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -29008,7 +29008,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -29016,7 +29016,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -29024,7 +29024,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -29032,7 +29032,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -29097,7 +29097,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -29105,7 +29105,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -29113,7 +29113,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -29121,7 +29121,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -29129,7 +29129,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -29250,7 +29250,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -29258,7 +29258,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -29266,7 +29266,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -29274,7 +29274,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -29282,7 +29282,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -29515,7 +29515,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -29523,7 +29523,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -29531,7 +29531,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -29539,7 +29539,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -29612,7 +29612,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -29620,7 +29620,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -29628,7 +29628,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -29636,7 +29636,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -29709,7 +29709,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -29717,7 +29717,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -29725,7 +29725,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -29733,7 +29733,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -29741,7 +29741,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -29806,7 +29806,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -29814,7 +29814,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -29822,7 +29822,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -29830,7 +29830,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -29951,7 +29951,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -29959,7 +29959,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -29967,7 +29967,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -29975,7 +29975,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -29983,7 +29983,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -30048,7 +30048,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -30056,7 +30056,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30064,7 +30064,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30072,7 +30072,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30080,7 +30080,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -30145,7 +30145,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -30153,7 +30153,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -30161,7 +30161,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -30169,7 +30169,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -30177,7 +30177,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -30242,7 +30242,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -30250,7 +30250,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30258,7 +30258,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30266,7 +30266,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30274,7 +30274,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -30339,7 +30339,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30347,7 +30347,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30363,7 +30363,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30371,7 +30371,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -30436,7 +30436,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30444,7 +30444,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30460,7 +30460,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30468,7 +30468,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -30533,7 +30533,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30541,7 +30541,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30557,7 +30557,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30565,7 +30565,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -30783,7 +30783,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -30791,7 +30791,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30799,7 +30799,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30807,7 +30807,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30815,7 +30815,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -30880,7 +30880,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30888,7 +30888,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30904,7 +30904,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -30912,7 +30912,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -31033,7 +31033,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -31041,7 +31041,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31049,7 +31049,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31057,7 +31057,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31065,7 +31065,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -31130,7 +31130,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -31138,7 +31138,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -31146,7 +31146,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -31154,7 +31154,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -31219,7 +31219,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31227,7 +31227,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31243,7 +31243,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31251,7 +31251,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -31316,7 +31316,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31324,7 +31324,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31340,7 +31340,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31348,7 +31348,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -31413,7 +31413,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -31421,7 +31421,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31429,7 +31429,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31437,7 +31437,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31445,7 +31445,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -31510,7 +31510,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31518,7 +31518,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31534,7 +31534,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31542,7 +31542,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -31607,7 +31607,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -31615,7 +31615,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -31623,7 +31623,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -31688,7 +31688,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -31696,7 +31696,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31704,7 +31704,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31712,7 +31712,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31720,7 +31720,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -31882,7 +31882,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -31890,7 +31890,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31898,7 +31898,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31906,7 +31906,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -31914,7 +31914,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -31979,7 +31979,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -31987,7 +31987,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -31995,7 +31995,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -32003,7 +32003,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -32076,7 +32076,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -32084,7 +32084,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32092,7 +32092,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32100,7 +32100,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32108,7 +32108,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -32173,7 +32173,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -32181,7 +32181,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32189,7 +32189,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32197,7 +32197,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32205,7 +32205,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -32270,7 +32270,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -32278,7 +32278,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -32286,7 +32286,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -32294,7 +32294,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -32359,7 +32359,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32367,7 +32367,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32383,7 +32383,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32391,7 +32391,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -32456,7 +32456,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32464,7 +32464,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32480,7 +32480,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32488,7 +32488,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -32609,7 +32609,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32617,7 +32617,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32633,7 +32633,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -32641,7 +32641,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -32986,7 +32986,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -32994,7 +32994,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -33002,7 +33002,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -33010,7 +33010,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -33075,7 +33075,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -33083,7 +33083,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -33091,7 +33091,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -33099,7 +33099,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -33172,7 +33172,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -33180,7 +33180,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -33188,7 +33188,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -33196,7 +33196,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -33261,7 +33261,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -33269,7 +33269,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -33277,7 +33277,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -33285,7 +33285,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -33406,7 +33406,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -33414,7 +33414,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -33430,7 +33430,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -33503,7 +33503,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -33511,7 +33511,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -33519,7 +33519,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -33527,7 +33527,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -33535,7 +33535,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -33768,7 +33768,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -33776,7 +33776,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -33784,7 +33784,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -33792,7 +33792,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -33913,7 +33913,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -33921,7 +33921,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -33929,7 +33929,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -33937,7 +33937,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -33945,7 +33945,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -34010,7 +34010,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -34018,7 +34018,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34026,7 +34026,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34034,7 +34034,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34042,7 +34042,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -34107,7 +34107,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -34115,7 +34115,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -34123,7 +34123,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -34131,7 +34131,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -34139,7 +34139,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -34204,7 +34204,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "저소득층 기저귀조제분유 취약계층 지원 (사회서비스전자바우처)",
         "summary": "(출산가정/ⓧ/(기저귀)만2세 미만의 영아를 둔 기초생활보장, 차상위,, 한부모가족 수급 가구 대상. (조제분유)아동복지시설, 공동생활가정, 입양아동, 한부모 아동 등(별도 확인)/남여/기저귀, 조제분유 구매비용)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족지원팀",
         "score": 30
       },
@@ -34212,7 +34212,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "농식품바우처 취약계층 지원",
         "summary": "(생계급여 수급가구 중 임산부,영유아,아동이 포함된 가구/농협하나로마트 등의 공급처에서 국내산 과일, 채소, 흰우유, 신선계란, 육류, 잡곡류, 두부류를 구매할 수 있는 농식품바우처 제공)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -34220,7 +34220,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "과학문화 바우처 취약계층 지원",
         "summary": "(6세 이상(2019.12.31 이전 출생자) 기초생활수급자, 차상위계층/과학문화 상품 및 서비스 이용하는 온라인 포인트 5만원 지급/과학문화바우처 홈페이지)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -34228,7 +34228,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "에너지바우처 취약계층 지원",
         "summary": "(「국민기초생활보장법」에 따른 기초생활보장급여 수급자 중 등록 장애인, 7세이하 영유아, 임신 중이거나 출산후 6개월 미만인 여성, (소년소녀가정) 보건복지부에서 정한 아동분야 사업 중 소년소녀가장 지원 대상에 해당...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -34293,7 +34293,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -34301,7 +34301,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34309,7 +34309,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34317,7 +34317,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34325,7 +34325,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -34390,7 +34390,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -34398,7 +34398,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34406,7 +34406,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34414,7 +34414,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34422,7 +34422,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -34487,7 +34487,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -34495,7 +34495,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34503,7 +34503,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34511,7 +34511,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34519,7 +34519,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -34584,7 +34584,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -34592,7 +34592,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34600,7 +34600,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34608,7 +34608,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34616,7 +34616,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -34681,7 +34681,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -34689,7 +34689,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34697,7 +34697,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34705,7 +34705,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34713,7 +34713,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -34834,7 +34834,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -34842,7 +34842,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34850,7 +34850,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34858,7 +34858,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -34866,7 +34866,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -35131,7 +35131,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -35196,7 +35196,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -35204,7 +35204,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -35212,7 +35212,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -35220,7 +35220,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -35390,7 +35390,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -35398,7 +35398,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -35406,7 +35406,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -35414,7 +35414,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -35422,7 +35422,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -35543,7 +35543,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -35551,7 +35551,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -35559,7 +35559,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -35567,7 +35567,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -35575,7 +35575,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -35696,7 +35696,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -35704,7 +35704,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -35712,7 +35712,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -35720,7 +35720,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -35728,7 +35728,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -35793,7 +35793,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -35801,7 +35801,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -35809,7 +35809,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -35817,7 +35817,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -35890,7 +35890,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -35898,7 +35898,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -35906,7 +35906,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -35914,7 +35914,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -35987,7 +35987,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -35995,7 +35995,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36003,7 +36003,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36011,7 +36011,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36084,7 +36084,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -36092,7 +36092,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -36100,7 +36100,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -36108,7 +36108,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -36116,7 +36116,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -36181,7 +36181,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36189,7 +36189,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36197,7 +36197,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36205,7 +36205,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36278,7 +36278,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -36286,7 +36286,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "주거급여 (맞춤형 급여) 취약계층 지원",
         "summary": "(소득인정액이 기준 중위소득 48% 이내의 가구/ 타인의 주택 등에 거주하면서 임대차 계약 등을 체결하고 임차료를 지불하는 자에게 지역별 기준임대료를 상한으로 실제 임차료(월임차료+보증금 환산액) 지원ㆍ3급지(광역시...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -36519,7 +36519,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36527,7 +36527,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36535,7 +36535,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36543,7 +36543,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36840,7 +36840,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36848,7 +36848,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36856,7 +36856,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36864,7 +36864,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -36969,7 +36969,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -37187,7 +37187,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -37195,7 +37195,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -37203,7 +37203,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -37211,7 +37211,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -37219,7 +37219,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -37284,7 +37284,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -37292,7 +37292,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -37300,7 +37300,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -37308,7 +37308,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -37381,7 +37381,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -37389,7 +37389,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -37397,7 +37397,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -37405,7 +37405,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -37534,7 +37534,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -37542,7 +37542,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -37550,7 +37550,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -37558,7 +37558,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -37566,7 +37566,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -37631,7 +37631,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -37639,7 +37639,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -37647,7 +37647,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -37655,7 +37655,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -37720,7 +37720,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -37728,7 +37728,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -37736,7 +37736,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -37744,7 +37744,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -37752,7 +37752,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -38041,7 +38041,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -38049,7 +38049,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38057,7 +38057,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38065,7 +38065,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38073,7 +38073,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -38138,7 +38138,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -38146,7 +38146,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -38154,7 +38154,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -38162,7 +38162,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -38235,7 +38235,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -38243,7 +38243,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -38251,7 +38251,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -38316,7 +38316,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -38324,7 +38324,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -38332,7 +38332,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -38340,7 +38340,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -38405,7 +38405,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -38413,7 +38413,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38421,7 +38421,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38429,7 +38429,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38437,7 +38437,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -38502,7 +38502,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -38510,7 +38510,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38518,7 +38518,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38526,7 +38526,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38534,7 +38534,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -38599,7 +38599,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -38607,7 +38607,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38615,7 +38615,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38623,7 +38623,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38631,7 +38631,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -38808,7 +38808,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -38816,7 +38816,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38824,7 +38824,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38832,7 +38832,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38840,7 +38840,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -38905,7 +38905,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38913,7 +38913,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38929,7 +38929,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -38937,7 +38937,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -39034,7 +39034,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -39155,7 +39155,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -39163,7 +39163,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -39171,7 +39171,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -39179,7 +39179,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -39252,7 +39252,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -39260,7 +39260,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -39268,7 +39268,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -39276,7 +39276,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -39284,7 +39284,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -39349,7 +39349,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -39357,7 +39357,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -39373,7 +39373,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -39381,7 +39381,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -39502,7 +39502,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -39510,7 +39510,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -39518,7 +39518,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -39526,7 +39526,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -39534,7 +39534,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -39793,7 +39793,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -39801,7 +39801,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -39809,7 +39809,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -39817,7 +39817,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -40076,7 +40076,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -40084,7 +40084,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -40092,7 +40092,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -40100,7 +40100,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -40423,7 +40423,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -40431,7 +40431,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -40439,7 +40439,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -40447,7 +40447,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -40455,7 +40455,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -40576,7 +40576,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -40584,7 +40584,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -40592,7 +40592,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -40600,7 +40600,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -40673,7 +40673,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -40681,7 +40681,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -40689,7 +40689,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -40697,7 +40697,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -40705,7 +40705,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -40770,7 +40770,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -40778,7 +40778,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -40786,7 +40786,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -40794,7 +40794,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -40979,7 +40979,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -40987,7 +40987,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -40995,7 +40995,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -41003,7 +41003,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -41011,7 +41011,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -41076,7 +41076,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -41084,7 +41084,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -41092,7 +41092,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -41100,7 +41100,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -41173,7 +41173,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -41181,7 +41181,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -41189,7 +41189,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -41197,7 +41197,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -41205,7 +41205,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -41326,7 +41326,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -41334,7 +41334,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -41342,7 +41342,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -41350,7 +41350,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -41358,7 +41358,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -41372,7 +41372,7 @@ export const mockProposals: PolicyProposal[] = [
     "vote_score": 1.0,
     "comment_cnt": 0,
     "reply_yn": "N",
-    "district": "미상",
+    "district": "광진구",
     "category_raw": "임신",
     "category": "임신·난임·생식건강",
     "sub_category": "임산부 건강·배려",
@@ -41423,7 +41423,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -41431,7 +41431,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -41439,7 +41439,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -41447,7 +41447,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -41455,7 +41455,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -41520,7 +41520,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -41528,7 +41528,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -41536,7 +41536,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -41544,7 +41544,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -41552,7 +41552,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -41617,7 +41617,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -41625,7 +41625,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -41633,7 +41633,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -41641,7 +41641,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -41649,7 +41649,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -41714,7 +41714,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -41722,7 +41722,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -41730,7 +41730,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -41738,7 +41738,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -41746,7 +41746,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -41811,7 +41811,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -41819,7 +41819,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -41827,7 +41827,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -41835,7 +41835,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -41843,7 +41843,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -41908,7 +41908,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -41916,7 +41916,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -41924,7 +41924,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -41932,7 +41932,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -42005,7 +42005,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -42013,7 +42013,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42021,7 +42021,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42029,7 +42029,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42037,7 +42037,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -42102,7 +42102,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -42110,7 +42110,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42118,7 +42118,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42126,7 +42126,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42134,7 +42134,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -42408,7 +42408,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -42416,7 +42416,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -42424,7 +42424,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -42432,7 +42432,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -42505,7 +42505,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -42513,7 +42513,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42521,7 +42521,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42529,7 +42529,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42537,7 +42537,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -42658,7 +42658,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -42666,7 +42666,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42674,7 +42674,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42682,7 +42682,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42690,7 +42690,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -42755,7 +42755,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -42763,7 +42763,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42771,7 +42771,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42779,7 +42779,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42787,7 +42787,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -42852,7 +42852,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -42860,7 +42860,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42868,7 +42868,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42876,7 +42876,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42884,7 +42884,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -42949,7 +42949,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -42957,7 +42957,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42965,7 +42965,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42973,7 +42973,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -42981,7 +42981,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -43046,7 +43046,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -43054,7 +43054,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -43062,7 +43062,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -43070,7 +43070,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -43143,7 +43143,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -43151,7 +43151,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -43159,7 +43159,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -43167,7 +43167,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -43296,7 +43296,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -43304,7 +43304,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43312,7 +43312,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43320,7 +43320,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43328,7 +43328,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -43393,7 +43393,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -43401,7 +43401,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -43409,7 +43409,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -43417,7 +43417,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -43425,7 +43425,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -43490,7 +43490,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -43498,7 +43498,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43506,7 +43506,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43514,7 +43514,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43522,7 +43522,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -43587,7 +43587,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -43595,7 +43595,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43603,7 +43603,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43611,7 +43611,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43619,7 +43619,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -43684,7 +43684,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -43692,7 +43692,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43700,7 +43700,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43708,7 +43708,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43716,7 +43716,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -43893,7 +43893,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -43901,7 +43901,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43909,7 +43909,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43917,7 +43917,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -43925,7 +43925,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -44046,7 +44046,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -44054,7 +44054,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -44070,7 +44070,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -44078,7 +44078,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -44143,7 +44143,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -44151,7 +44151,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -44159,7 +44159,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -44167,7 +44167,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -44175,7 +44175,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -44240,7 +44240,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -44248,7 +44248,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -44256,7 +44256,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -44321,7 +44321,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -44329,7 +44329,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -44337,7 +44337,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -44345,7 +44345,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -44498,7 +44498,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -44675,7 +44675,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -44683,7 +44683,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -44691,7 +44691,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -44699,7 +44699,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -44707,7 +44707,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -44828,7 +44828,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -44836,7 +44836,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -44844,7 +44844,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -44852,7 +44852,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -45029,7 +45029,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -45037,7 +45037,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -45045,7 +45045,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -45053,7 +45053,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -45061,7 +45061,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -45223,7 +45223,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -45231,7 +45231,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -45239,7 +45239,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -45247,7 +45247,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -45255,7 +45255,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -45432,7 +45432,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -45440,7 +45440,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -45448,7 +45448,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -45456,7 +45456,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -45529,7 +45529,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -45537,7 +45537,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -45545,7 +45545,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -45553,7 +45553,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -45561,7 +45561,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -45682,7 +45682,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -45690,7 +45690,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -45706,7 +45706,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -45714,7 +45714,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -45779,7 +45779,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -45787,7 +45787,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -45795,7 +45795,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -45803,7 +45803,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -45811,7 +45811,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -45825,7 +45825,7 @@ export const mockProposals: PolicyProposal[] = [
     "vote_score": 550.0,
     "comment_cnt": 560,
     "reply_yn": "N",
-    "district": "미상",
+    "district": "동대문구",
     "category_raw": "보육",
     "category": "보육·돌봄 인프라",
     "sub_category": "어린이집·유치원",
@@ -45932,7 +45932,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -45940,7 +45940,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -45948,7 +45948,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -45956,7 +45956,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -45964,7 +45964,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -46029,7 +46029,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -46037,7 +46037,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46045,7 +46045,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46053,7 +46053,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46061,7 +46061,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -46182,7 +46182,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -46190,7 +46190,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46198,7 +46198,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46206,7 +46206,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46214,7 +46214,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -46228,7 +46228,7 @@ export const mockProposals: PolicyProposal[] = [
     "vote_score": 0.0,
     "comment_cnt": 0,
     "reply_yn": "N",
-    "district": "미상",
+    "district": "강북구",
     "category_raw": "보육",
     "category": "보육·돌봄 인프라",
     "sub_category": "아동 놀이·체험공간",
@@ -46335,7 +46335,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -46343,7 +46343,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -46351,7 +46351,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -46359,7 +46359,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -46432,7 +46432,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46440,7 +46440,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46456,7 +46456,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46464,7 +46464,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -46585,7 +46585,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -46593,7 +46593,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46601,7 +46601,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46609,7 +46609,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46617,7 +46617,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -46682,7 +46682,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -46690,7 +46690,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46698,7 +46698,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46706,7 +46706,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46714,7 +46714,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -46779,7 +46779,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -46787,7 +46787,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46795,7 +46795,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46803,7 +46803,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46811,7 +46811,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -46876,7 +46876,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -46884,7 +46884,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -46892,7 +46892,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -46900,7 +46900,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -46973,7 +46973,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -46981,7 +46981,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46989,7 +46989,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -46997,7 +46997,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -47005,7 +47005,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -47070,7 +47070,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -47078,7 +47078,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -47086,7 +47086,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -47094,7 +47094,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -47102,7 +47102,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -47167,7 +47167,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -47175,7 +47175,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -47183,7 +47183,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -47191,7 +47191,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -47199,7 +47199,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -47264,7 +47264,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -47272,7 +47272,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -47280,7 +47280,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -47288,7 +47288,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -47417,7 +47417,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -47425,7 +47425,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -47433,7 +47433,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -47441,7 +47441,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -47449,7 +47449,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -47514,7 +47514,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "저소득층 기저귀조제분유 취약계층 지원 (사회서비스전자바우처)",
         "summary": "(출산가정/ⓧ/(기저귀)만2세 미만의 영아를 둔 기초생활보장, 차상위,, 한부모가족 수급 가구 대상. (조제분유)아동복지시설, 공동생활가정, 입양아동, 한부모 아동 등(별도 확인)/남여/기저귀, 조제분유 구매비용)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족지원팀",
         "score": 30
       },
@@ -47522,7 +47522,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "농식품바우처 취약계층 지원",
         "summary": "(생계급여 수급가구 중 임산부,영유아,아동이 포함된 가구/농협하나로마트 등의 공급처에서 국내산 과일, 채소, 흰우유, 신선계란, 육류, 잡곡류, 두부류를 구매할 수 있는 농식품바우처 제공)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -47530,7 +47530,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "과학문화 바우처 취약계층 지원",
         "summary": "(6세 이상(2019.12.31 이전 출생자) 기초생활수급자, 차상위계층/과학문화 상품 및 서비스 이용하는 온라인 포인트 5만원 지급/과학문화바우처 홈페이지)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -47538,7 +47538,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "에너지바우처 취약계층 지원",
         "summary": "(「국민기초생활보장법」에 따른 기초생활보장급여 수급자 중 등록 장애인, 7세이하 영유아, 임신 중이거나 출산후 6개월 미만인 여성, (소년소녀가정) 보건복지부에서 정한 아동분야 사업 중 소년소녀가장 지원 대상에 해당...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -47603,7 +47603,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -47611,7 +47611,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -47619,7 +47619,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -47627,7 +47627,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -47804,7 +47804,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -47812,7 +47812,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -47820,7 +47820,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -47828,7 +47828,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -47836,7 +47836,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -47901,7 +47901,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 산후조리경비 지원",
         "policy_name": "서울형 산모 산후조리경비 지원",
         "summary": "산모 1인당 산후조리경비 100만원 산모 본인 명의 신용(체크)카드에 100만원 바우처 포인트 지급   ※ 단태아 100만원, 쌍태아 200만원, 삼태아 300만원 출산일로부터 60일 이내 신청   ※ ‘23. 7....",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -47909,7 +47909,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 산후조리경비 지원",
         "summary": "출산에 소요되는 경제적 부담을 경감하고, 출산 이후 산모의 건강권을 확보하기 위하여 산후조리경비 지원  1. 지원금액 : 자녀 수에 따른 <b class='font-color-primary'>차등지원</b>     ...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       }
@@ -48062,7 +48062,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -48127,7 +48127,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -48135,7 +48135,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -48143,7 +48143,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -48151,7 +48151,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -48159,7 +48159,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -48224,7 +48224,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -48232,7 +48232,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -48240,7 +48240,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -48248,7 +48248,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -48256,7 +48256,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -48321,7 +48321,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -48329,7 +48329,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -48337,7 +48337,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -48345,7 +48345,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -48353,7 +48353,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -48418,7 +48418,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -48426,7 +48426,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48434,7 +48434,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48442,7 +48442,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48450,7 +48450,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -48515,7 +48515,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -48523,7 +48523,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -48531,7 +48531,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -48539,7 +48539,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -48668,7 +48668,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -48676,7 +48676,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48684,7 +48684,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48692,7 +48692,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48700,7 +48700,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -48765,7 +48765,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -48773,7 +48773,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48781,7 +48781,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48789,7 +48789,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48797,7 +48797,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -48862,7 +48862,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -48870,7 +48870,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48878,7 +48878,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48886,7 +48886,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48894,7 +48894,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -48959,7 +48959,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -48967,7 +48967,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48975,7 +48975,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48983,7 +48983,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -48991,7 +48991,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -49056,7 +49056,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -49064,7 +49064,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49072,7 +49072,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49080,7 +49080,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49088,7 +49088,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -49153,7 +49153,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -49161,7 +49161,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49169,7 +49169,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49177,7 +49177,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49185,7 +49185,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -49642,7 +49642,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -49650,7 +49650,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -49658,7 +49658,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -49666,7 +49666,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -49739,7 +49739,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -49747,7 +49747,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49755,7 +49755,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49763,7 +49763,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49771,7 +49771,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -49836,7 +49836,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -49844,7 +49844,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49852,7 +49852,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49860,7 +49860,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49868,7 +49868,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -49933,7 +49933,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -49941,7 +49941,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49949,7 +49949,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49957,7 +49957,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -49965,7 +49965,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -50030,7 +50030,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -50038,7 +50038,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50046,7 +50046,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50054,7 +50054,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50062,7 +50062,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -50127,7 +50127,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -50135,7 +50135,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50143,7 +50143,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50151,7 +50151,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50159,7 +50159,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -50224,7 +50224,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -50232,7 +50232,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -50240,7 +50240,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -50248,7 +50248,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -50369,7 +50369,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -50377,7 +50377,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50385,7 +50385,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50393,7 +50393,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50401,7 +50401,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -50802,7 +50802,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50810,7 +50810,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50826,7 +50826,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50834,7 +50834,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -50899,7 +50899,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -50907,7 +50907,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50915,7 +50915,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50923,7 +50923,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -50931,7 +50931,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -50996,7 +50996,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -51004,7 +51004,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51012,7 +51012,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51020,7 +51020,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51028,7 +51028,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -51093,7 +51093,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -51101,7 +51101,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51109,7 +51109,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51117,7 +51117,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51125,7 +51125,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -51190,7 +51190,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -51198,7 +51198,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51206,7 +51206,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51214,7 +51214,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51222,7 +51222,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -51343,7 +51343,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -51351,7 +51351,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51359,7 +51359,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51367,7 +51367,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51375,7 +51375,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -51440,7 +51440,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -51448,7 +51448,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51456,7 +51456,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51464,7 +51464,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -51472,7 +51472,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -51593,7 +51593,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -51601,7 +51601,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -51609,7 +51609,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -51617,7 +51617,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -51625,7 +51625,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -51746,7 +51746,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -51754,7 +51754,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -51762,7 +51762,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -51770,7 +51770,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -51778,7 +51778,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -51996,7 +51996,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -52004,7 +52004,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52012,7 +52012,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52020,7 +52020,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52028,7 +52028,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -52093,7 +52093,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -52101,7 +52101,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -52109,7 +52109,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -52174,7 +52174,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -52182,7 +52182,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52190,7 +52190,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52198,7 +52198,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52206,7 +52206,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -52495,7 +52495,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -52503,7 +52503,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52511,7 +52511,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52519,7 +52519,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52527,7 +52527,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -52592,7 +52592,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -52600,7 +52600,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52608,7 +52608,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52616,7 +52616,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52624,7 +52624,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -52689,7 +52689,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -52697,7 +52697,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -52705,7 +52705,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -52713,7 +52713,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -52842,7 +52842,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -52850,7 +52850,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52858,7 +52858,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52866,7 +52866,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -52874,7 +52874,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -52939,7 +52939,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -52947,7 +52947,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -52955,7 +52955,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -52963,7 +52963,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -52971,7 +52971,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -53133,7 +53133,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -53141,7 +53141,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53149,7 +53149,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53157,7 +53157,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53165,7 +53165,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -53230,7 +53230,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53238,7 +53238,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53254,7 +53254,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53262,7 +53262,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -53327,7 +53327,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53335,7 +53335,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53351,7 +53351,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53359,7 +53359,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -53424,7 +53424,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53432,7 +53432,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53448,7 +53448,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53456,7 +53456,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -53521,7 +53521,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -53529,7 +53529,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53537,7 +53537,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53545,7 +53545,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53553,7 +53553,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -53618,7 +53618,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53626,7 +53626,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53642,7 +53642,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53650,7 +53650,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -53715,7 +53715,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53723,7 +53723,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53739,7 +53739,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53747,7 +53747,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -53812,7 +53812,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53820,7 +53820,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53836,7 +53836,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53844,7 +53844,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -53909,7 +53909,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53917,7 +53917,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53933,7 +53933,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -53941,7 +53941,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -54006,7 +54006,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54014,7 +54014,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54030,7 +54030,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54038,7 +54038,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -54103,7 +54103,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54111,7 +54111,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54127,7 +54127,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54135,7 +54135,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -54200,7 +54200,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54208,7 +54208,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54224,7 +54224,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54232,7 +54232,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -54297,7 +54297,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54305,7 +54305,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54321,7 +54321,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54329,7 +54329,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -54394,7 +54394,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54402,7 +54402,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54418,7 +54418,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54426,7 +54426,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -54491,7 +54491,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54499,7 +54499,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54515,7 +54515,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54523,7 +54523,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -54588,7 +54588,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -54596,7 +54596,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -54604,7 +54604,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -54612,7 +54612,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -54620,7 +54620,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -54685,7 +54685,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -54693,7 +54693,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54701,7 +54701,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54709,7 +54709,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54717,7 +54717,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -54782,7 +54782,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54790,7 +54790,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54806,7 +54806,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54814,7 +54814,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -54879,7 +54879,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54887,7 +54887,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54903,7 +54903,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54911,7 +54911,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -54976,7 +54976,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -54984,7 +54984,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55000,7 +55000,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55008,7 +55008,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -55073,7 +55073,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55081,7 +55081,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55097,7 +55097,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55105,7 +55105,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -55170,7 +55170,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55178,7 +55178,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55194,7 +55194,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55202,7 +55202,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -55267,7 +55267,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55275,7 +55275,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55291,7 +55291,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55299,7 +55299,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -55364,7 +55364,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55372,7 +55372,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55388,7 +55388,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55396,7 +55396,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -55461,7 +55461,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55469,7 +55469,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55485,7 +55485,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55493,7 +55493,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -55558,7 +55558,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55566,7 +55566,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55582,7 +55582,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55590,7 +55590,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -55655,7 +55655,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55663,7 +55663,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55679,7 +55679,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55687,7 +55687,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -55752,7 +55752,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55760,7 +55760,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55776,7 +55776,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55784,7 +55784,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -55849,7 +55849,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55857,7 +55857,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55873,7 +55873,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55881,7 +55881,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -55946,7 +55946,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55954,7 +55954,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55970,7 +55970,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -55978,7 +55978,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -56043,7 +56043,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56051,7 +56051,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56067,7 +56067,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56075,7 +56075,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -56140,7 +56140,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56148,7 +56148,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56164,7 +56164,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56172,7 +56172,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -56237,7 +56237,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56245,7 +56245,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56261,7 +56261,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56269,7 +56269,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -56334,7 +56334,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56342,7 +56342,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56358,7 +56358,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56366,7 +56366,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -56431,7 +56431,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56439,7 +56439,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56455,7 +56455,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56463,7 +56463,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -56528,7 +56528,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56536,7 +56536,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56552,7 +56552,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56560,7 +56560,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -56625,7 +56625,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56633,7 +56633,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56649,7 +56649,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56657,7 +56657,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -56722,7 +56722,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56730,7 +56730,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56746,7 +56746,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56754,7 +56754,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -56819,7 +56819,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56827,7 +56827,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56843,7 +56843,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56851,7 +56851,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -56916,7 +56916,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56924,7 +56924,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56940,7 +56940,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -56948,7 +56948,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -57013,7 +57013,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57021,7 +57021,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57037,7 +57037,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57045,7 +57045,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -57110,7 +57110,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -57118,7 +57118,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57126,7 +57126,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57134,7 +57134,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57142,7 +57142,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -57207,7 +57207,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57215,7 +57215,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57231,7 +57231,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57239,7 +57239,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -57304,7 +57304,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57312,7 +57312,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57328,7 +57328,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57336,7 +57336,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -57401,7 +57401,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57409,7 +57409,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57425,7 +57425,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57433,7 +57433,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -57498,7 +57498,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57506,7 +57506,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57522,7 +57522,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57530,7 +57530,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -57651,7 +57651,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57659,7 +57659,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57675,7 +57675,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57683,7 +57683,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -57748,7 +57748,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57756,7 +57756,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57772,7 +57772,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57780,7 +57780,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -57845,7 +57845,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57853,7 +57853,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57869,7 +57869,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57877,7 +57877,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -57942,7 +57942,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57950,7 +57950,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57966,7 +57966,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -57974,7 +57974,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -58039,7 +58039,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58047,7 +58047,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58063,7 +58063,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58071,7 +58071,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -58136,7 +58136,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58144,7 +58144,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58160,7 +58160,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58168,7 +58168,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -58233,7 +58233,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -58241,7 +58241,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -58249,7 +58249,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -58257,7 +58257,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -58265,7 +58265,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -58330,7 +58330,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -58338,7 +58338,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58346,7 +58346,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58354,7 +58354,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58362,7 +58362,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -58427,7 +58427,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -58435,7 +58435,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58443,7 +58443,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58451,7 +58451,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58459,7 +58459,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -58524,7 +58524,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58532,7 +58532,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58548,7 +58548,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -58556,7 +58556,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -58677,7 +58677,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -58685,7 +58685,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -58693,7 +58693,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -58701,7 +58701,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -58709,7 +58709,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -58774,7 +58774,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -58782,7 +58782,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -58790,7 +58790,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -58798,7 +58798,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -58806,7 +58806,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -58871,7 +58871,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -58879,7 +58879,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -58887,7 +58887,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -58895,7 +58895,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -59457,7 +59457,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -59465,7 +59465,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -59473,7 +59473,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -59481,7 +59481,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -59489,7 +59489,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -59554,7 +59554,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -59562,7 +59562,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -59570,7 +59570,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -59578,7 +59578,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -59586,7 +59586,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -59651,7 +59651,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -59659,7 +59659,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -59667,7 +59667,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -59675,7 +59675,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -59683,7 +59683,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -59957,7 +59957,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -59965,7 +59965,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -59973,7 +59973,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -59981,7 +59981,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -59989,7 +59989,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -60054,7 +60054,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -60062,7 +60062,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -60070,7 +60070,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -60078,7 +60078,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -60086,7 +60086,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -60151,7 +60151,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -60159,7 +60159,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -60167,7 +60167,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -60175,7 +60175,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -60183,7 +60183,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -60248,7 +60248,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -60256,7 +60256,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -60264,7 +60264,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -60272,7 +60272,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -60280,7 +60280,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -60401,7 +60401,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -60409,7 +60409,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -60417,7 +60417,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -60425,7 +60425,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -60433,7 +60433,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -60498,7 +60498,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -60506,7 +60506,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -60514,7 +60514,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -60522,7 +60522,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -60587,7 +60587,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -60595,7 +60595,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -60603,7 +60603,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -60611,7 +60611,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -60619,7 +60619,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -60684,7 +60684,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -60692,7 +60692,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -60700,7 +60700,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -60708,7 +60708,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -60773,7 +60773,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -60781,7 +60781,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -60789,7 +60789,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -60797,7 +60797,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -60862,7 +60862,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -60870,7 +60870,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -60878,7 +60878,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -60886,7 +60886,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -60894,7 +60894,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -61295,7 +61295,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -61303,7 +61303,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -61311,7 +61311,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -61319,7 +61319,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -61327,7 +61327,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -61392,7 +61392,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61400,7 +61400,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61416,7 +61416,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61545,7 +61545,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61553,7 +61553,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61561,7 +61561,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61569,7 +61569,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61642,7 +61642,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61650,7 +61650,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61658,7 +61658,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61666,7 +61666,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61739,7 +61739,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61747,7 +61747,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61755,7 +61755,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61763,7 +61763,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -61836,7 +61836,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -61844,7 +61844,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -61852,7 +61852,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -61860,7 +61860,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -61868,7 +61868,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -61933,7 +61933,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -61941,7 +61941,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -61949,7 +61949,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -61957,7 +61957,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -61965,7 +61965,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -62086,7 +62086,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -62094,7 +62094,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -62102,7 +62102,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -62110,7 +62110,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -62118,7 +62118,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -62215,7 +62215,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -62657,7 +62657,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -62665,7 +62665,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -62673,7 +62673,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -62681,7 +62681,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -62689,7 +62689,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -62810,7 +62810,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -62818,7 +62818,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -62826,7 +62826,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -62834,7 +62834,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -62842,7 +62842,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -62963,7 +62963,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -62971,7 +62971,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -62979,7 +62979,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -62987,7 +62987,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -62995,7 +62995,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -63148,7 +63148,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "초등돌봄 공적 인프라 확충",
         "policy_name": "초등돌봄교실",
         "summary": "돌봄, 교육 및 일부 급?간식비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       }
@@ -63605,7 +63605,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -63613,7 +63613,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -63621,7 +63621,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -63629,7 +63629,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -63637,7 +63637,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -63702,7 +63702,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -63710,7 +63710,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -63718,7 +63718,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -63783,7 +63783,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -63791,7 +63791,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -63799,7 +63799,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -63976,7 +63976,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -63984,7 +63984,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -63992,7 +63992,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -64000,7 +64000,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -64008,7 +64008,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -64129,7 +64129,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -64137,7 +64137,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -64145,7 +64145,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -64153,7 +64153,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -64161,7 +64161,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -64450,7 +64450,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -64458,7 +64458,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -64466,7 +64466,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -64474,7 +64474,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -64482,7 +64482,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -64496,7 +64496,7 @@ export const mockProposals: PolicyProposal[] = [
     "vote_score": 10.0,
     "comment_cnt": 1,
     "reply_yn": "N",
-    "district": "미상",
+    "district": "강북구",
     "category_raw": "보육",
     "category": "보육·돌봄 인프라",
     "sub_category": "아동 놀이·체험공간",
@@ -64659,7 +64659,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -64667,7 +64667,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -64675,7 +64675,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -64683,7 +64683,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -64804,7 +64804,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -64812,7 +64812,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -64820,7 +64820,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -64828,7 +64828,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -64836,7 +64836,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -64901,7 +64901,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -64909,7 +64909,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -64917,7 +64917,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -64925,7 +64925,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -64933,7 +64933,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -64998,7 +64998,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -65006,7 +65006,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -65014,7 +65014,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -65022,7 +65022,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -65151,7 +65151,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -65159,7 +65159,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -65167,7 +65167,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -65175,7 +65175,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -65183,7 +65183,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -65248,7 +65248,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -65256,7 +65256,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -65264,7 +65264,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -65272,7 +65272,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -65280,7 +65280,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -65345,7 +65345,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "어린이집 영유아 방문건강관리 서비스 지원",
         "summary": "어린이집으로 방문건강간호사가 찾아가서 건강관리 및 건강교육서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -65353,7 +65353,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형어린이집",
         "summary": "공인평가를 통하여 우수한 민간 어린이집을 선정하고 인건비 및 운영비를 지원함으로써 향상된 보육서비스를 안정적으로 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -65361,7 +65361,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집(사업종료)",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -65369,7 +65369,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울형 0세 전담반 어린이집",
         "summary": "12개월 미만의 영아 보육에 적합한 ‘0세 전담반’  어린이집 100개반 선정 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "돌봄사업팀",
         "score": 30
       },
@@ -65498,7 +65498,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "서울형 난임부부 시술비 지원",
         "policy_name": "서울형 난임부부 시술비 지원",
         "summary": "난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원 - 횟수 : 총 25회(누적) - 지원금액: 시술별 1회당 최대 30만원~110만원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -65506,7 +65506,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울권역 난임?우울증 상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -65522,7 +65522,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -65530,7 +65530,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "난임부부 지원",
         "summary": "o 난임시술 비용의 본인부담액에 대한 시술별 지원상한액 지원      -(횟수) 출산당 총25회 (보조생식술 시작일이 '24.11.1.일 이후부터)      -(지원금액) 시술별 1회당 최대 30만원~110만원  o...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       }
@@ -65595,7 +65595,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -65603,7 +65603,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -65611,7 +65611,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -65619,7 +65619,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -65627,7 +65627,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -65748,7 +65748,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -65756,7 +65756,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -65764,7 +65764,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -65772,7 +65772,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -65780,7 +65780,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -65957,7 +65957,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 하수도사용료 감면",
         "summary": "하수도 사용료 30% 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -65965,7 +65965,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀 가구 자동차 취득세 감면",
         "summary": "자동차 취득세 최대 140만원 감면",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -65973,7 +65973,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "다자녀가구 자동차 취득세 취약계층 감면",
         "summary": "(만18세 미만의 자녀 2명 이상을 양육하는 자(가족관계등록부 기준, 양자 및 배우자 자녀 포함/2027년 12월 31일까지 취득세 감면)",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       }
@@ -66135,7 +66135,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -66143,7 +66143,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -66151,7 +66151,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -66159,7 +66159,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -66167,7 +66167,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -66232,7 +66232,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -66240,7 +66240,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -66248,7 +66248,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -66256,7 +66256,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -66264,7 +66264,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -66329,7 +66329,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -66337,7 +66337,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -66345,7 +66345,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -66353,7 +66353,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -66361,7 +66361,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -66538,7 +66538,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -66546,7 +66546,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -66554,7 +66554,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -66562,7 +66562,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -66570,7 +66570,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -66803,7 +66803,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -66811,7 +66811,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -66819,7 +66819,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -66827,7 +66827,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -66835,7 +66835,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -66900,7 +66900,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
         "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "다문화지원팀",
         "score": 30
       },
@@ -66908,7 +66908,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "자녀출산 무주택가구 주거비 지원",
         "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -66916,7 +66916,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼희망타운",
         "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "기타부서",
         "score": 30
       },
@@ -66924,7 +66924,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 전용 주택 구입 자금 대출",
         "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       },
@@ -66932,7 +66932,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "신혼부부 임차보증금 이자 지원",
         "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -67094,7 +67094,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -67102,7 +67102,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -67110,7 +67110,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -67118,7 +67118,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -67126,7 +67126,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }
@@ -67191,7 +67191,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "35세 이상 산모 검사비 지원",
         "policy_name": "35세 이상 임산부 외래 진료 및 검사비 지원",
         "summary": "의료비 부담이 큰 35세 이상 산모 대상 외래진료 및 검사에 소요되는 비용을 소득과 무관하게 최대 50만원까지 지원 (24년 3월 사회보장제도 신설 협의 완료, 24년 8월까지 사업추진을 위한  사전절차 진행 예정으...",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "가족건강팀",
         "score": 30
       },
@@ -67199,7 +67199,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "임산부 엽산제, 철분제 지원",
         "summary": "지원내용 (엽산제) 임신 전후 3개월까지 엽산제 지원  (철분제) 임신 16주부터 철분제 5개월분  신청방법 주소지 보건소에 방문하거나 온라인(정부24)으로 신청",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -67207,7 +67207,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "서울시 난임?임산부심리상담센터 운영",
         "summary": "난임부부, 유산?사산 경험부부, 임산부 및 양육모의 정서적 안정을 위해 전담 상담사가 등록부터 종결까지 1:1 상담 및 다양한 프로그램을 운영",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -67215,7 +67215,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": " ",
         "policy_name": "맘편한 임신 원스톱서비스(임산부?출산전 제공)",
         "summary": "임산부 엽산제?철분제 지급 등 임신 전?중 통합 서비스 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "건강임신지원팀",
         "score": 30
       },
@@ -67223,7 +67223,7 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
+        "apply_url": "https://umppa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
       }

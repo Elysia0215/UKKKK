@@ -79,7 +79,10 @@ export default function App() {
   }, []);
 
   // 탭 네비게이션 및 카테고리/지역 즉시 이동 연동
-  const handleNavigateToTab = (tabIndex: number) => {
+  const handleNavigateToTab = (tabIndex: number, category?: string) => {
+    if (category) {
+      setSelectedCategory(category);
+    }
     setActiveTab(tabIndex);
   };
 
@@ -125,19 +128,23 @@ export default function App() {
       '원문URL': p.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${p.id.replace('PROP-', '')}`
     }));
 
-    exportToCsv(`서울시_출산정책_전체제안데이터_426건_${new Date().toISOString().split('T')[0]}.csv`, exportData);
+    exportToCsv(`서울시_출산정책_전체제안데이터_${mockProposals.length}건_${new Date().toISOString().split('T')[0]}.csv`, exportData);
   };
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans">
       {/* 서울시 시그니처 상단 헤더 */}
       <header className="bg-[#0A2351] text-white px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md sticky top-0 z-40">
-        <div className="flex items-center space-x-4">
-          <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+        <div 
+          onClick={() => handleTabClick(0)} 
+          className="flex items-center space-x-4 cursor-pointer group hover:opacity-95 transition"
+          title="클릭 시 홈 대시보드(정책 수요 개요)로 이동"
+        >
+          <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
             <div className="w-5 h-5 border-2 border-[#0A2351] rounded-sm"></div>
           </div>
           <div>
-            <h1 className="text-lg font-bold leading-tight flex items-center gap-2">
+            <h1 className="text-lg font-bold leading-tight flex items-center gap-2 group-hover:text-blue-200 transition">
               서울시 출산·양육 정책 수요 분석 시스템
               <span className="text-[10px] bg-blue-600 text-white px-1.5 py-0.5 rounded font-bold">MVP</span>
             </h1>

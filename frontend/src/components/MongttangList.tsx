@@ -14,6 +14,7 @@ import {
   Layers
 } from 'lucide-react';
 import rawMongttangData from '../data/mongttang.json';
+import classifiedPolicyData from '../data/classified_policy.json';
 import summaryData from '../data/dashboard_summary.json';
 import { MongttangPolicy } from '../types';
 
@@ -26,9 +27,29 @@ export const MongttangList: React.FC = () => {
 
   // JSON 데이터 및 대분류/중분류 카테고리 통합/가공
   const policies: MongttangPolicy[] = useMemo(() => {
+    let rawList: any[] = [];
     if (rawMongttangData && Array.isArray((rawMongttangData as any).DATA)) {
-      const list = (rawMongttangData as any).DATA as MongttangPolicy[];
-      return list.map(p => {
+      rawList = (rawMongttangData as any).DATA;
+    } else if (Array.isArray(classifiedPolicyData)) {
+      rawList = classifiedPolicyData;
+    }
+
+    const list: MongttangPolicy[] = rawList.map((item: any) => ({
+      id: item.id || item['사업명'],
+      biz_nm: item.biz_nm || item['사업명'] || '',
+      biz_lclsf_nm: item.biz_lclsf_nm || item['사업대분류명'] || item.Category || '기타',
+      biz_mclsf_nm: item.biz_mclsf_nm || item['사업중분류명'] || '',
+      biz_sclsf_nm: item.biz_sclsf_nm || item['사업소분류명'] || '',
+      biz_cn: item.biz_cn || item['사업내용'] || '',
+      utztn_trpr_cn: item.utztn_trpr_cn || item['이용대상내용'] || '',
+      utztn_mthd_cn: item.utztn_mthd_cn || item['이용방법내용'] || '',
+      aref_cn: item.aref_cn || item['문의처내용'] || '',
+      aply_site_addr: item.aply_site_addr || item['신청하기사이트주소'] || '',
+      deviw_site_addr: item.deviw_site_addr || item['자세히보기사이트주소'] || '',
+      trgt_rgn: item.trgt_rgn || item['대상지역'] || ''
+    }));
+
+    return list.map(p => {
         let displayCategory = p.biz_lclsf_nm || '기타';
         const mclsf = p.biz_mclsf_nm || '';
         const bizNm = p.biz_nm || '';
@@ -112,8 +133,6 @@ export const MongttangList: React.FC = () => {
           displaySubCategory
         };
       });
-    }
-    return [];
   }, []);
 
   // 대분류 목록 추출 (건수 많은 순서 내림차순 정렬)

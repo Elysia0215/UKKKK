@@ -38,7 +38,7 @@ import {
 interface Props {
   proposals: PolicyProposal[];
   stats: DashboardStats;
-  onNavigateToTab: (tabIndex: number) => void;
+  onNavigateToTab: (tabIndex: number, category?: string) => void;
   onSelectCategory: (category: string) => void;
 }
 
@@ -56,6 +56,7 @@ export const DashboardOverview: React.FC<Props> = ({
   const deptStatsProcessed = React.useMemo(() => {
     return deptStats.map(d => ({
       ...d,
+      name: d.dept || '미지정',
       answered: Math.max(0, d.total - d.unanswered)
     }));
   }, [deptStats]);
@@ -185,13 +186,18 @@ export const DashboardOverview: React.FC<Props> = ({
                 const maxVal = topKeywords[0]?.count || 1;
                 const percentage = (item.count / maxVal) * 100;
                 return (
-                  <div key={item.keyword} className="space-y-1">
+                  <div 
+                    key={item.keyword} 
+                    onClick={() => setSelectedKeywordModal(item.keyword)}
+                    className="space-y-1 p-1 rounded-md hover:bg-blue-50/70 border border-transparent hover:border-blue-100 transition cursor-pointer group"
+                    title={`'${item.keyword}' 키워드 연관 제안 원문 모달 보기`}
+                  >
                     <div className="flex justify-between items-center text-xs">
                       <div className="flex items-center gap-1.5">
-                        <span className="w-4 h-4 bg-[#0A2351] text-white font-bold rounded text-[9px] flex items-center justify-center">
+                        <span className="w-4 h-4 bg-[#0A2351] text-white font-bold rounded text-[9px] flex items-center justify-center group-hover:bg-blue-600 transition">
                           {index + 1}
                         </span>
-                        <span className="font-bold text-slate-800 text-xs">{item.keyword}</span>
+                        <span className="font-bold text-slate-800 text-xs group-hover:text-blue-700 transition">{item.keyword}</span>
                       </div>
                       <span className="text-[10px] text-slate-500 font-mono font-semibold">{item.count}회</span>
                     </div>
@@ -376,7 +382,7 @@ export const DashboardOverview: React.FC<Props> = ({
                 <span className="text-[10px] bg-amber-400 text-slate-950 font-black px-2 py-0.5 rounded-full">실무자 전용</span>
               </h4>
               <p className="text-xs text-blue-200 mt-0.5">
-                상상대로 서울 426건 시민 민원의 시기별 이슈 변화, 정책 공백 및 2026년 최신 동향 요약 보고서
+                상상대로 서울 {proposals.length.toLocaleString()}건 시민 민원의 시기별 이슈 변화, 정책 공백 및 2026년 최신 동향 요약 보고서
               </p>
             </div>
           </div>
@@ -486,8 +492,9 @@ export const DashboardOverview: React.FC<Props> = ({
           {keyGaps.map(gap => (
             <div 
               key={gap.id}
-              onClick={() => onNavigateToTab(3)}
+              onClick={() => onNavigateToTab(3, gap.category)}
               className="bg-white p-3.5 rounded-xl border border-rose-100 hover:border-rose-300 hover:shadow-md cursor-pointer transition flex flex-col justify-between"
+              title={`클릭 시 '${gap.category}' 카테고리로 필터링된 정책 우선순위 상세로 이동`}
             >
               <div>
                 <div className="flex justify-between items-start gap-2 mb-1.5">
@@ -559,7 +566,7 @@ export const DashboardOverview: React.FC<Props> = ({
                   <span>📌</span> Executive Summary (핵심 결론)
                 </h4>
                 <p className="text-xs text-amber-900 leading-relaxed">
-                  2018년부터 2026년까지 수집된 <strong>상상대로 서울 출산·육아 제안 426건</strong> 분석 결과, 시민들의 요구는 과거 <strong>'단순 일회성 지원금 확대'</strong>에서 최근 <strong>'실질적 구립 보육인프라 정원 확대, 양육자 유급휴가, 출산 연계 주거 우대'</strong>로 정밀화되고 있습니다.
+                  2018년부터 2026년까지 수집된 <strong>상상대로 서울 출산·육아 제안 {proposals.length.toLocaleString()}건</strong> 분석 결과, 시민들의 요구는 과거 <strong>'단순 일회성 지원금 확대'</strong>에서 최근 <strong>'실질적 구립 보육인프라 정원 확대, 양육자 유급휴가, 출산 연계 주거 우대'</strong>로 정밀화되고 있습니다.
                 </p>
               </div>
 

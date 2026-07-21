@@ -1,8 +1,18 @@
 import json
 import pandas as pd
 from pathlib import Path
+import importlib.util
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+collect_script_path = BASE_DIR / "scripts" / "01_collect_birth_policy_proposals.py"
+
+spec = importlib.util.spec_from_file_location("collect_module", collect_script_path)
+collect_module = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(collect_module)
+
+classify_birth_policy_category = collect_module.classify_birth_policy_category
+check_birth_policy_candidate = collect_module.check_birth_policy_candidate
+
 SEOUL_CSV = BASE_DIR / "data" / "processed" / "국민신문고_서울관련_제안.csv"
 NATION_CSV = BASE_DIR / "data" / "processed" / "국민신문고_전국_제안_303건.csv"
 OUT_JSON = BASE_DIR / "frontend" / "src" / "data" / "civil_requests_all.json"
@@ -32,6 +42,8 @@ for _, row in df_nation.iterrows():
     if not content or content == "nan":
         content = f"[{anc_name}] {title}\n\n본 민원은 국민신문고를 통해 접수된 실시간 시민 제안/민원 안건입니다. 처리기관({anc_name})에서 공식 검토 및 답변이 진행되었습니다."
 
+    cat, sub_cat, micro_cat = classify_birth_policy_category(title, content)
+
     items.append({
         "id": f"1AB-{peti_no}" if not peti_no.startswith("1AB") else peti_no,
         "peti_no": peti_no,
@@ -39,7 +51,9 @@ for _, row in df_nation.iterrows():
         "content": content,
         "reg_date": reg_date,
         "status": status,
-        "category": "보육" if any(k in title for k in ["보육", "육아", "어린이집", "키움", "돌봄"]) else "주거" if any(k in title for k in ["오피스텔", "주택", "월세", "임대"]) else "임신" if any(k in title for k in ["임신", "난임", "산후"]) else "출산",
+        "category": cat,
+        "sub_category": sub_cat,
+        "micro_category": micro_cat,
         "dept": anc_name,
         "is_seoul": "서울" in anc_name,
         "url": "https://www.epeople.go.kr/nep/pttn/gnrlPttn/pttnSgstnLst.npaid"
@@ -52,4 +66,4 @@ with open(OUT_JSON, "w", encoding="utf-8") as f:
 with open(FINAL_JSON, "w", encoding="utf-8") as f:
     json.dump(items, f, ensure_ascii=False, indent=2)
 
-print(f"Successfully enriched civil requests: {len(items)} items saved to {OUT_JSON}")
+print(f"Successfully enriched civil requests with 8 primary categories: {len(items)} items saved to {OUT_JSON}")

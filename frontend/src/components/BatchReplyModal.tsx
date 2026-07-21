@@ -67,7 +67,10 @@ export const BatchReplyModal: React.FC<Props> = ({
 
 2. 연계 정책 및 지원 서비스:
 ${matchedPolicies.length > 0 
-  ? matchedPolicies.map(m => `- ${m.policy_name}: ${m.summary} (신청: ${m.apply_url})`).join('\n')
+  ? matchedPolicies.map(m => {
+      const url = (!m.apply_url || m.apply_url.trim() === '.' || !m.apply_url.startsWith('http')) ? 'https://umppa.seoul.go.kr/' : m.apply_url.trim();
+      return `- ${m.policy_name}: ${m.summary} (신청: ${url})`;
+    }).join('\n')
   : '- 서울시 임신 사전건강관리 및 아기 건강 첫걸음 지원사업 연계 지원중'}
 
 3. 향후 조치 계획:
@@ -237,7 +240,7 @@ ${matchedPolicies.length > 0
                             </button>
                           </div>
 
-                          {/* 본문 펼침 영역 (whitespace-pre-line + formatProposalContent 적용) */}
+                          {/* 본문 펼침 영역 (whitespace-pre-line + formatProposalContent 적용 + 원문 URL 검증 링크) */}
                           {isExpanded && (
                             <div className="p-3 pt-0 border-t border-slate-100 bg-slate-50/80 rounded-b-xl space-y-2 text-xs">
                               <div className="font-bold text-slate-700 text-[11px] flex items-center justify-between">
@@ -246,6 +249,19 @@ ${matchedPolicies.length > 0
                               </div>
                               <div className="bg-white p-3 rounded-lg border border-slate-200 text-slate-700 leading-relaxed whitespace-pre-line max-h-[180px] overflow-y-auto font-sans shadow-2xs">
                                 {formatProposalContent(it.content)}
+                              </div>
+                              <div className="flex justify-between items-center pt-1.5 border-t border-slate-200/60 text-xs">
+                                <span className="text-[11px] text-slate-500 font-mono">제안번호: {it.id}</span>
+                                <a
+                                  href={it.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${it.id.replace('PROP-', '')}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-blue-600 hover:text-blue-800 font-bold flex items-center gap-1 hover:underline bg-blue-50 px-2.5 py-1 rounded border border-blue-100 transition-colors cursor-pointer"
+                                  title="실제 상상대로 서울 포털의 원문 게시글을 즉시 열람하여 검증합니다."
+                                >
+                                  <ExternalLink className="w-3.5 h-3.5" />
+                                  <span>상상대로 서울 원문 URL 직접 확인 ↗</span>
+                                </a>
                               </div>
                             </div>
                           )}

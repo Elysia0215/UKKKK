@@ -29,6 +29,7 @@ import {
 import { exportToCsv } from '../utils/exportCsv';
 import { formatProposalContent } from '../utils/formatText';
 import rawMongttangData from '../data/mongttang.json';
+import classifiedPolicyData from '../data/classified_policy.json';
 import civilRequestsData from '../data/civil_requests_all.json';
 import { MongttangPolicy } from '../types';
 import { BatchReplyModal } from './BatchReplyModal';
@@ -158,11 +159,40 @@ export const PriorityDetails: React.FC<Props> = ({
 
   // 몽땅정보 현행 정책 목록
   const mongttangPolicies: MongttangPolicy[] = useMemo(() => {
+    let rawList: any[] = [];
     if (rawMongttangData && Array.isArray((rawMongttangData as any).DATA)) {
-      return (rawMongttangData as any).DATA as MongttangPolicy[];
+      rawList = (rawMongttangData as any).DATA;
+    } else if (Array.isArray(classifiedPolicyData)) {
+      rawList = classifiedPolicyData;
     }
-    return [];
+
+    return rawList.map((item: any) => ({
+      id: item.id || item['사업명'],
+      biz_nm: item.biz_nm || item['사업명'] || '',
+      biz_lclsf_nm: item.biz_lclsf_nm || item['사업대분류명'] || item.Category || '기타',
+      biz_mclsf_nm: item.biz_mclsf_nm || item['사업중분류명'] || '',
+      biz_sclsf_nm: item.biz_sclsf_nm || item['사업소분류명'] || '',
+      biz_cn: item.biz_cn || item['사업내용'] || '',
+      utztn_trpr_cn: item.utztn_trpr_cn || item['이용대상내용'] || '',
+      utztn_mthd_cn: item.utztn_mthd_cn || item['이용방법내용'] || '',
+      aref_cn: item.aref_cn || item['문의처내용'] || '',
+      aply_site_addr: item.aply_site_addr || item['신청하기사이트주소'] || '',
+      deviw_site_addr: item.deviw_site_addr || item['자세히보기사이트주소'] || '',
+      trgt_rgn: item.trgt_rgn || item['대상지역'] || ''
+    }));
   }, []);
+
+  // 몽땅정보통 링크 검증 및 헬퍼
+  const formatPolicyLink = (url?: string) => {
+    if (!url || url.trim() === '.' || url.trim() === '' || url.trim() === 'null' || url.trim() === 'undefined') {
+      return 'https://umppa.seoul.go.kr/';
+    }
+    const trimmed = url.trim();
+    if (trimmed.startsWith('http://') || trimmed.startsWith('https://')) {
+      return trimmed;
+    }
+    return `https://${trimmed}`;
+  };
 
   // 국민신문고 연관 민원 모달 상태
   const [civilModalState, setCivilModalState] = useState<{
@@ -170,31 +200,46 @@ export const PriorityDetails: React.FC<Props> = ({
     requests: CivilRequestItem[];
   } | null>(null);
 
-  // 시민 제안 ↔ 국민신문고 연관 민원 원문 매칭 함수
+  // 시민 제안 ↔ 국민신문고 연관 민원 정밀 교차 매칭 함수
   const getMatchingCivilRequests = useMemo(() => {
+    const topicKeywords = [
+      '신혼부부', '신혼', '주거', '임차보증금', '전세', '이자지원', '주택', '임대', '뱃지', '스마트', 
+      '키움센터', '키즈카페', '신생아', '특례대출', '난임', '시술비', '산후조리', '산모', '유모차', 
+      '엘리베이터', '다자녀', '하수도', '취득세', '자동차', '어린이집', '초등', '늘봄', '아동급식', 
+      '급식카드', '임산부', '배려석', '지하철', '입양', '위기임산부', '휴직', '육아휴직', '아빠', 
+      '바우처', '결혼', '살림비', '통학', '어린이', '돌봄', '보육', '양육', '출산', '가족', '지원'
+    ];
+
     return (proposal: PolicyProposal): CivilRequestItem[] => {
       const title = proposal.title || '';
       const content = proposal.content || '';
       const fullText = (title + ' ' + content).toLowerCase();
+      const pSub = proposal.sub_category || '';
+      const pMicro = proposal.micro_category || '';
 
-      const matched = (civilRequestsData as CivilRequestItem[]).filter(req => {
+      let matched = (civilRequestsData as CivilRequestItem[]).filter(req => {
         const reqTitle = (req.title || '').toLowerCase();
         const reqContent = (req.content || '').toLowerCase();
+        const reqFull = reqTitle + ' ' + reqContent;
+        const cSub = req.sub_category || '';
+        const cMicro = req.micro_category || '';
 
-        // 1. 핵심 키워드 매칭
-        const keywords = ['돌봄', '어린이집', '다자녀', '유모차', '산후조리', '난임', '임산부', '월세', '주거', '키움', '초등', '입양', '보육', '출산', '휴직', '바우처', '보건소', '조리원', '통학', '엘리베이터'];
-        const matches = keywords.filter(kw => fullText.includes(kw) && (reqTitle.includes(kw) || reqContent.includes(kw)));
-        if (matches.length >= 1) return true;
+        const subMatch = (pMicro && pMicro === cMicro) || (pSub && pSub === cSub);
+        const kwMatches = topicKeywords.filter(kw => fullText.includes(kw) && reqFull.includes(kw));
 
-        // 2. 카테고리 교차 매칭
-        if (proposal.category.includes('보육') && req.category === '보육') return true;
-        if (proposal.category.includes('임신') && req.category === '임신') return true;
-        if (proposal.category.includes('주거') && req.category === '주거') return true;
-
+        if (subMatch && kwMatches.length >= 1) return true;
+        if (kwMatches.length >= 2) return true;
         return false;
       });
 
-      return matched.slice(0, 8);
+      // 만약 1차 정밀 매칭 결과가 0건이면, 카테고리 대분류 기반으로 최소 4~8건 매칭 보완
+      if (matched.length === 0 && proposal.category) {
+        matched = (civilRequestsData as CivilRequestItem[]).filter(req => {
+          return req.category && (proposal.category === req.category || proposal.category.includes(req.category.split('·')[0]));
+        }).slice(0, 8);
+      }
+
+      return matched;
     };
   }, []);
 
@@ -387,7 +432,7 @@ export const PriorityDetails: React.FC<Props> = ({
     return ['전체', ...Array.from(set)];
   }, [proposals]);
 
-  // 1순위 주관부서 동적 목록 (단순 합산 시 426건 1:1 매칭)
+  // 1순위 주관부서 동적 목록
   const departments: string[] = useMemo(() => {
     const set = new Set<string>();
     proposals.forEach(p => {
@@ -1031,7 +1076,7 @@ export const PriorityDetails: React.FC<Props> = ({
                                       {item.matched_policies.map(pol => (
                                         <a
                                           key={pol.policy_id}
-                                          href={pol.apply_url}
+                                          href={formatPolicyLink(pol.apply_url)}
                                           target="_blank"
                                           rel="noopener noreferrer"
                                           className="text-[10px] bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded flex items-center gap-1 font-semibold transition"
@@ -1200,7 +1245,7 @@ export const PriorityDetails: React.FC<Props> = ({
                         {item.matched_policies.map(pol => (
                           <a
                             key={pol.policy_id}
-                            href={pol.apply_url}
+                            href={formatPolicyLink(pol.apply_url)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-[10px] bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded flex items-center gap-1 font-semibold transition"
@@ -1291,6 +1336,13 @@ export const PriorityDetails: React.FC<Props> = ({
         clusterName={activeBatchGroup?.name || ''}
         items={activeBatchGroup?.items || []}
         onClose={() => setActiveBatchGroup(null)}
+      />
+
+      <CivilRequestDetailModal
+        isOpen={!!civilModalState}
+        proposal={civilModalState?.proposal || null}
+        relatedCivilRequests={civilModalState?.requests || []}
+        onClose={() => setCivilModalState(null)}
       />
     </div>
   );

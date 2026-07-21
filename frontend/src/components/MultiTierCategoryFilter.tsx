@@ -240,11 +240,12 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
     }
   };
 
-  // 1차 대분류 클릭 핸들러 (생애주기 동기화 및 2차 중분류 좁힘)
+  // 1차 대분류 클릭 핸들러 (전체 선택 시 생애주기도 함께 '전체'로 동기화 리셋)
   const handleCat1Click = (cat: string) => {
     if (cat === '전체' || filterState.category1 === cat) {
       onFilterChange({
         ...filterState,
+        lifecycle: '전체',
         category1: '전체',
         category2: '전체',
         category3: '전체',
@@ -326,7 +327,8 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
           <span>제안 연도</span>
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1">
-          {Object.entries(yearCounts).map(([yr, count]) => {
+          {['전체년', '2026', '2025', '2024', '2023', '2022이전'].map((yr) => {
+            const count = yearCounts[yr] || 0;
             const isSelected = filterState.year === yr;
             return (
               <button
