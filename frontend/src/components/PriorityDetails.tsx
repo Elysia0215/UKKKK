@@ -500,7 +500,34 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="text-xs text-slate-400 font-mono">{item.reg_date}</span>
-                                <div className="flex items-center gap-3 text-xs text-slate-500 font-mono font-bold">
+                      {item.reply_yn === 'Y' ? (
+                        <span className="text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-100 px-2 py-0.5 rounded flex items-center gap-1 font-bold">
+                          <CheckCircle className="w-3 h-3" /> 답변완료
+                        </span>
+                      ) : (
+                        <span className="text-[10px] bg-amber-50 text-amber-700 border border-amber-100 px-2 py-0.5 rounded flex items-center gap-1 font-bold">
+                          <HelpCircle className="w-3 h-3" /> 미답변 검토중
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  <h5 className="text-sm font-bold text-slate-900 mb-1.5">{item.title}</h5>
+                  <p className="text-xs text-slate-600 leading-relaxed mb-3">{item.content}</p>
+
+                  <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-200/80">
+                    <div className="flex items-center gap-2">
+                      <span className="text-[10px] text-slate-400 font-bold uppercase">담당 유관팀</span>
+                      <div className="flex flex-wrap gap-1">
+                        {item.department.map(dept => (
+                          <span key={dept} className="text-[10px] bg-slate-50 border border-slate-200 text-slate-600 px-2 py-0.5 rounded flex items-center gap-1 font-semibold">
+                            <Building2 className="w-2.5 h-2.5 text-slate-400" />
+                            {dept}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3 text-xs text-slate-500 font-mono font-bold">
                       {item.related_civil_requests && (
                         <button
                           onClick={() => { setCivilCategory(item.category); setCivilModalOpen(true); }}
