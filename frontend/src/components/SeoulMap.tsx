@@ -124,6 +124,10 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
                 className="cursor-pointer"
                 tabIndex={0}
                 role="button"
+                style={{
+                  opacity: selectedDistrict?.name ? (isSelected ? 1 : 0.25) : 1,
+                  transition: 'opacity 0.25s ease-in-out'
+                }}
                 onClick={() => district && onSelectDistrict(district)}
                 onKeyDown={(event) => {
                   if (district && (event.key === 'Enter' || event.key === ' ')) {

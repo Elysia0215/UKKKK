@@ -177,6 +177,10 @@ export const DistrictComparison: React.FC<Props> = ({
                   className="cursor-pointer group transition-all duration-200"
                   role="button"
                   tabIndex={0}
+                  style={{
+                    opacity: selectedDistrict ? (item.isSelected ? 1 : 0.25) : 1,
+                    transition: 'opacity 0.25s ease-in-out'
+                  }}
                 >
                   <path
                     d={item.d}
