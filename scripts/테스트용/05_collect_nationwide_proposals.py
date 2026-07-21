@@ -27,45 +27,34 @@ KEYWORDS = [
     "다태아", "쌍둥이", "모유수유", "산후우울", "유모차",
 ]
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-OUT_PATH = BASE_DIR / "data" / "processed" / "국민신문고_서울관련_제안.csv"
+OUT_PATH = Path("../data/processed/국민신문고_서울관련_제안.csv")
 
 
-def fetch_list(keyword: str, max_pages: int = 5, per_page: int = 100) -> list[dict]:
-    results = []
-    for page in range(1, max_pages + 1):
-        params = {
-            "serviceKey": SERVICE_KEY,
-            "keyword": keyword,
-            "searchType": "title",
-            "firstIndex": page,
-            "recordCountPerPage": per_page,
-        }
-        try:
-            res = requests.get(LIST_URL, params=params, headers=HEADERS, timeout=10)
-            res.raise_for_status()
-            data = res.json()
-            items = data.get("resultList", []) or data.get("response", {}).get("body", {}).get("items", []) or []
-            if not items:
-                break
-            results.extend(items)
-            time.sleep(0.1)
-        except Exception as e:
-            print(f"Fetch list error ({keyword} page {page}): {e}")
-            break
-    return results
+def fetch_list(keyword: str, page: int = 1, per_page: int = 100) -> list[dict]:
+    params = {
+        "serviceKey": SERVICE_KEY,
+        "keyword": keyword,
+        "searchType": "title",
+        "firstIndex": page,
+        "recordCountPerPage": per_page,
+    }
+    res = requests.get(LIST_URL, params=params, headers=HEADERS, timeout=15)
+    res.raise_for_status()
+    data = res.json()
+    return data.get("resultList", []) or []
 
 
 def fetch_detail(peti_no: str) -> str | None:
     params = {"serviceKey": SERVICE_KEY, "petiNo": peti_no}
     try:
-        res = requests.get(ITEM_URL, params=params, headers=HEADERS, timeout=10)
+        res = requests.get(ITEM_URL, params=params, headers=HEADERS, timeout=15)
         res.raise_for_status()
         data = res.json()
-        item = data.get("resultData") or data.get("result") or data.get("item") or data.get("response", {}).get("body", {}).get("item", {})
-        content = item.get("content") or item.get("improveIdea") or item.get("contents") or item.get("petiCntn")
-        return content
-    except Exception as e:
+        # 실측 검증 완료: 응답은 data['resultData'] 아래에 위치
+        # 본문은 content, 없으면 improveIdea(개선 아이디어) 필드에 담김
+        item = data.get("resultData") or {}
+        return item.get("content") or item.get("improveIdea")
+    except Exception:
         return None
 
 
@@ -73,12 +62,12 @@ if __name__ == "__main__":
     all_rows = []
     for kw in KEYWORDS:
         try:
-            rows = fetch_list(kw, max_pages=5)
-            print(f"'{kw}' 검색 (페이지 1~5): {len(rows)}건")
+            rows = fetch_list(kw)
+            print(f"'{kw}' 검색: {len(rows)}건")
             all_rows.extend(rows)
         except Exception as e:
             print(f"'{kw}' 검색 실패: {e}")
-        time.sleep(0.2)
+        time.sleep(0.3)
 
     df = pd.DataFrame(all_rows).drop_duplicates(subset="petiNo")
     print(f"\n전체 수집(중복제거): {len(df)}건")

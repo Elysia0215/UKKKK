@@ -37,6 +37,8 @@ EPEOPLE_CIVIL_STATS = {
     "기타": 150
 }
 
+EPEOPLE_PATH = BASE_DIR / "data" / "processed" / "국민신문고_서울관련_제안.csv"
+
 def build_proposals(path: Path) -> list:
     df = pd.read_csv(path)
     proposals = []
@@ -68,6 +70,40 @@ def build_proposals(path: Path) -> list:
             "related_civil_requests": EPEOPLE_CIVIL_STATS.get(cat, 200),
             "negative_signal": bool(row.get("negative_signal", False)),
         })
+
+    # 진짜 국민신문고 서울관련 수집 6건 결합
+    if EPEOPLE_PATH.exists():
+        epeople_df = pd.read_csv(EPEOPLE_PATH)
+        for _, row in epeople_df.iterrows():
+            peti_no = str(row.get("petiNo", ""))
+            if not peti_no:
+                continue
+            title = str(row.get("title", ""))
+            content = str(row.get("content") or title)
+            reg_date = normalize_reg_date(str(row.get("regDate", "")))
+            status_name = str(row.get("statusName", ""))
+            anc_name = str(row.get("ancName", "서울특별시"))
+            
+            district = anc_name.replace("서울특별시", "").strip() or "미상"
+            reply_yn = "Y" if "완료" in status_name else "N"
+
+            proposals.append({
+                "id": f"EPEO-{peti_no}",
+                "title": title,
+                "content": content,
+                "reg_date": reg_date,
+                "vote_score": 0,
+                "comment_cnt": 0,
+                "reply_yn": reply_yn,
+                "district": district,
+                "category": "보육" if "보육" in title or "육아" in title else "기타",
+                "department": ["미지정"],
+                "url": "https://www.epeople.go.kr/nep/pttn/gnrlPttn/pttnSgstnLst.npaid",
+                "source": "국민신문고",
+                "related_civil_requests": 1,
+                "negative_signal": False
+            })
+
     return proposals
 
 
