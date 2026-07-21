@@ -12,7 +12,7 @@ import pandas as pd
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-IN_PATH = BASE_DIR / "data" / "processed" / "상상대로_서울_출산육아_분류완료.csv"
+IN_PATH = BASE_DIR / "data" / "processed" / "상상대로_서울_출산육아_분류완료_v2.csv"
 OUT_DIR = BASE_DIR / "data" / "final"
 
 SEOUL_DISTRICTS = ['종로구', '중구', '용산구', '성동구', '광진구', '동대문구', '중랑구',
@@ -26,18 +26,6 @@ IDEA_BASE_URL = "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn={}"
 def normalize_reg_date(raw: str) -> str:
     return str(raw).split(" ")[0]
 
-
-EPEOPLE_CIVIL_STATS = {
-    "보육": 1240,
-    "임신": 680,
-    "출산": 920,
-    "다자녀": 510,
-    "위기임산부": 130,
-    "다문화": 90,
-    "기타": 150
-}
-
-EPEOPLE_PATH = BASE_DIR / "data" / "processed" / "국민신문고_서울관련_제안.csv"
 
 def build_proposals(path: Path) -> list:
     df = pd.read_csv(path)
@@ -67,7 +55,8 @@ def build_proposals(path: Path) -> list:
             "department": department,
             "url": IDEA_BASE_URL.format(sn),
             "source": "상상대로서울",
-            "related_civil_requests": EPEOPLE_CIVIL_STATS.get(cat, 200),
+            "cluster_id": int(row.get("cluster_id", -1)),
+            "cluster_size": int(row.get("cluster_size", 1)),
             "negative_signal": bool(row.get("negative_signal", False)),
         })
     return proposals

@@ -346,9 +346,9 @@ export const MongttangList: React.FC = () => {
                 className="bg-white rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-md transition duration-200 flex flex-col justify-between p-4 cursor-pointer group"
                 onClick={() => setSelectedPolicy(policy)}
               >
-                <div className="space-y-2.5">
-                  {/* 상단 뱃지 */}
-                  <div className="flex items-center justify-between gap-2">
+                <div className="space-y-2.5 flex-grow">
+                  {/* 상단 뱃지 (대분류 + 중분류 나란히 배치) */}
+                  <div className="flex items-center gap-1.5 flex-wrap">
                     <span className="bg-blue-50 text-blue-700 font-bold border border-blue-200 text-[11px] px-2.5 py-0.5 rounded-md">
                       {policy.displayCategory || policy.biz_lclsf_nm || '전체'}
                     </span>
@@ -364,31 +364,28 @@ export const MongttangList: React.FC = () => {
                     {policy.biz_nm}
                   </h3>
 
-                  {/* 사업 내용 요약 */}
-                  <p className="text-xs text-slate-600 line-clamp-3 leading-relaxed">
-                    {policy.biz_cn}
-                  </p>
+                  {/* 중앙: 지원대상 강조 표시 (사업상세 대신) */}
+                  <div className="bg-slate-50 border border-slate-200/80 rounded-lg p-2.5 text-xs text-slate-700">
+                    <div className="flex items-start gap-1.5">
+                      <span className="font-black text-blue-600 shrink-0">🎯 지원대상:</span>
+                      <span className="line-clamp-3 leading-relaxed text-slate-800 font-medium">
+                        {policy.utztn_trpr_cn || '서울시 해당 시민 대상 (상세내용 참조)'}
+                      </span>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-slate-100 space-y-2 text-xs">
-                  {/* 지원 대상 */}
-                  {policy.utztn_trpr_cn && (
-                    <div className="flex items-start gap-1.5 text-slate-600">
-                      <Users className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
-                      <span className="line-clamp-1">{policy.utztn_trpr_cn}</span>
-                    </div>
-                  )}
-
+                <div className="mt-3 pt-2.5 border-t border-slate-100 space-y-1.5 text-xs">
                   {/* 문의처 */}
                   {policy.aref_cn && (
                     <div className="flex items-center gap-1.5 text-slate-500 text-[11px]">
                       <Phone className="w-3 h-3 text-slate-400 shrink-0" />
-                      <span className="truncate">{policy.aref_cn}</span>
+                      <span className="truncate">문의: {policy.aref_cn}</span>
                     </div>
                   )}
 
                   {/* 상세 보기 버튼 */}
-                  <div className="flex items-center justify-between pt-1 text-blue-600 font-bold text-xs group-hover:translate-x-0.5 transition">
+                  <div className="flex items-center justify-between pt-0.5 text-blue-600 font-bold text-xs group-hover:translate-x-0.5 transition">
                     <span>상세 내용 보기</span>
                     <ChevronRight className="w-4 h-4" />
                   </div>
@@ -442,54 +439,86 @@ export const MongttangList: React.FC = () => {
               </button>
             </div>
 
-            {/* 모달 본문 정보 */}
-            <div className="space-y-4 text-xs text-slate-700">
-              {/* 주요 상세 내용 */}
-              <div className="bg-slate-50 rounded-xl p-4 border border-slate-200 space-y-1.5">
-                <h4 className="font-bold text-slate-900 flex items-center gap-1.5 text-sm">
-                  <Bookmark className="w-4 h-4 text-blue-600" />
-                  사업 상세 내용
-                </h4>
-                <p className="text-slate-700 leading-relaxed whitespace-pre-wrap">
-                  {selectedPolicy.biz_cn}
-                </p>
+            {/* 모달 본문 정보 - 고가독성 박스 패키지 */}
+            <div className="space-y-4 text-xs sm:text-sm text-slate-800">
+              {/* 1. 사업 상세 내용 (블루/인디고 테마) */}
+              <div className="bg-gradient-to-br from-slate-50 to-blue-50/40 rounded-xl p-4 border border-blue-100 shadow-2xs space-y-2">
+                <div className="flex items-center gap-2 border-b border-blue-100/80 pb-2">
+                  <span className="bg-blue-600 text-white p-1 rounded-md">
+                    <FileText className="w-3.5 h-3.5" />
+                  </span>
+                  <h4 className="font-black text-slate-900 text-sm">사업 상세 내용</h4>
+                </div>
+                <div className="pt-1 leading-relaxed">
+                  {(() => {
+                    const raw = selectedPolicy.biz_cn;
+                    if (!raw) return <p className="text-slate-500">상세내용이 없습니다.</p>;
+                    const lines = raw.split(/\r\n|\n/).map(l => l.trim()).filter(l => l.length > 0);
+                    if (lines.length <= 1 && !raw.includes('-') && !raw.includes('•')) {
+                      return <p className="text-xs sm:text-sm text-slate-800 leading-relaxed font-medium">{raw}</p>;
+                    }
+                    return (
+                      <ul className="space-y-1.5 text-xs sm:text-sm text-slate-800 leading-relaxed">
+                        {lines.map((line, i) => {
+                          const cleanLine = line.replace(/^[\-\•\*\s\d\.\(\)]+/, '').trim();
+                          return (
+                            <li key={i} className="flex items-start gap-2">
+                              <span className="text-blue-500 font-bold shrink-0 mt-0.5">•</span>
+                              <span className="font-medium">{cleanLine || line}</span>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    );
+                  })()}
+                </div>
               </div>
 
-              {/* 이용 대상 및 신청 방법 */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {selectedPolicy.utztn_trpr_cn && (
-                  <div className="bg-blue-50/60 rounded-xl p-3.5 border border-blue-100 space-y-1">
-                    <span className="font-bold text-blue-900 flex items-center gap-1 text-xs">
-                      <Users className="w-3.5 h-3.5 text-blue-600" />
-                      지원 대상
-                    </span>
-                    <p className="text-slate-800 leading-normal">{selectedPolicy.utztn_trpr_cn}</p>
+              {/* 2. 지원 대상 & 신청/이용 방법 (2열 대칭 카드) */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+                {/* 지원 대상 (에메랄드 테마) */}
+                <div className="bg-emerald-50/50 rounded-xl p-4 border border-emerald-100/80 space-y-2 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-1.5 border-b border-emerald-200/50 pb-2 mb-2">
+                      <span className="bg-emerald-600 text-white p-1 rounded-md">
+                        <Users className="w-3.5 h-3.5" />
+                      </span>
+                      <h4 className="font-black text-emerald-950 text-sm">지원 대상</h4>
+                    </div>
+                    <p className="text-xs sm:text-sm font-medium text-emerald-950 leading-relaxed">
+                      {selectedPolicy.utztn_trpr_cn || '해당 서울시민 대상 (상세 사이트 참조)'}
+                    </p>
                   </div>
-                )}
+                </div>
 
-                {selectedPolicy.utztn_mthd_cn && (
-                  <div className="bg-emerald-50/60 rounded-xl p-3.5 border border-emerald-100 space-y-1">
-                    <span className="font-bold text-emerald-900 flex items-center gap-1 text-xs">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                      신청 / 이용 방법
-                    </span>
-                    <p className="text-slate-800 leading-normal">{selectedPolicy.utztn_mthd_cn}</p>
+                {/* 신청 / 이용 방법 (인디고/퍼플 테마) */}
+                <div className="bg-indigo-50/50 rounded-xl p-4 border border-indigo-100/80 space-y-2 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-1.5 border-b border-indigo-200/50 pb-2 mb-2">
+                      <span className="bg-indigo-600 text-white p-1 rounded-md">
+                        <CheckCircle2 className="w-3.5 h-3.5" />
+                      </span>
+                      <h4 className="font-black text-indigo-950 text-sm">신청 / 이용 방법</h4>
+                    </div>
+                    <p className="text-xs sm:text-sm font-medium text-indigo-950 leading-relaxed">
+                      {selectedPolicy.utztn_mthd_cn || '몽땅정보만능키 등 온라인/오프라인 신청'}
+                    </p>
                   </div>
-                )}
+                </div>
               </div>
 
-              {/* 기타 정보: 대상지역, 문의처 */}
-              <div className="space-y-2 border-t border-slate-100 pt-3 text-slate-600">
+              {/* 3. 하단 안내 뱃지: 문의처 & 지원지역 */}
+              <div className="bg-amber-50/60 border border-amber-200/70 rounded-xl p-3.5 flex flex-wrap items-center justify-between gap-3 text-xs text-amber-950">
                 {selectedPolicy.aref_cn && (
-                  <div className="flex items-center gap-2">
-                    <Phone className="w-3.5 h-3.5 text-slate-400" />
-                    <span><strong>문의처:</strong> {selectedPolicy.aref_cn}</span>
+                  <div className="flex items-center gap-2 font-semibold">
+                    <Phone className="w-4 h-4 text-amber-700 shrink-0" />
+                    <span><strong className="font-black text-amber-900">문의처:</strong> {selectedPolicy.aref_cn}</span>
                   </div>
                 )}
                 {selectedPolicy.trgt_rgn && (
-                  <div className="flex items-start gap-2">
-                    <Building2 className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
-                    <span><strong>지원 지역:</strong> {selectedPolicy.trgt_rgn}</span>
+                  <div className="flex items-center gap-2 font-semibold">
+                    <Building2 className="w-4 h-4 text-amber-700 shrink-0" />
+                    <span><strong className="font-black text-amber-900">지원 지역:</strong> {selectedPolicy.trgt_rgn}</span>
                   </div>
                 )}
               </div>

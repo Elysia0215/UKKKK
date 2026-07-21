@@ -1,21 +1,7 @@
-// 100% 출산·육아 정밀 데이터 426건 전용 mockData (2026.07.21 자동 생성)
+// 100% 출산·육아 정밀 데이터 426건 전용 mockData (2026.07.21 최종 갱신)
+import { PolicyProposal, DistrictStat, DashboardStats } from '../types';
 
-export interface Proposal {
-  id: string;
-  title: string;
-  content: string;
-  reg_date: string;
-  vote_score: number;
-  comment_cnt: number;
-  reply_yn: string;
-  district: string;
-  category: string;
-  department: string[];
-  url?: string;
-  source?: string;
-  related_civil_requests?: number;
-  negative_signal?: boolean;
-}
+export type { PolicyProposal as Proposal };
 
 export interface CivilRequest {
   id: string;
@@ -29,29 +15,13 @@ export interface CivilRequest {
 
 export const mockCivilRequests: CivilRequest[] = [];
 
-export interface DistrictStat {
-  district?: string;
-  district_name?: string;
-  tfr?: number | null;
-  fertility_rate?: number;
-  births_total?: number | null;
-  total_births?: number;
-  first_child_births?: number;
-  second_child_births?: number;
-  third_child_births?: number;
-  childcare_facility_count?: number | null;
-  daycare_centers?: number;
-  daycare_capacity?: number;
-  proposal_count?: number;
-}
-
 export const SEOUL_DISTRICTS = [
   "종로구", "중구", "용산구", "성동구", "광진구", "동대문구", "중랑구", "성북구",
   "강북구", "도봉구", "노원구", "은평구", "서대문구", "마포구", "양천구", "강서구",
   "구로구", "금천구", "영등포구", "동작구", "관악구", "서초구", "강남구", "송파구", "강동구"
 ];
 
-export const mockDashboardStats = {
+export const mockDashboardStats: DashboardStats = {
   "totalCount": 426,
   "avgVoteScore": 43.4,
   "unansweredCount": 382,
@@ -211,7 +181,7 @@ export const districtStats: DistrictStat[] = [
   }
 ];
 
-export const mockProposals: Proposal[] = [
+export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202286",
     "title": "저출산 고령화 문제에 관한 제안",
@@ -229,7 +199,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202286",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 237,
+    "cluster_size": 1,
     "negative_signal": true
   },
   {
@@ -249,7 +220,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202259",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 183,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -268,7 +240,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202224",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 317,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -286,7 +259,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202117",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 287,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -306,7 +280,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201815",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 55,
+    "cluster_size": 2,
     "negative_signal": true
   },
   {
@@ -324,7 +299,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201727",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 56,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -342,7 +318,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201726",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 56,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -360,7 +337,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201705",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 345,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -379,7 +357,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201656",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 295,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -397,7 +376,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201636",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 331,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -417,7 +397,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201635",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 247,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -435,7 +416,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201617",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 0,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -455,7 +437,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201586",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 289,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -473,7 +456,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201566",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 195,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -493,7 +477,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201550",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 226,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -511,7 +496,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201541",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 197,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -529,7 +515,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201539",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 285,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -547,7 +534,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201521",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 191,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -566,7 +554,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201278",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 270,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -586,7 +575,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201115",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 319,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -605,7 +595,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201102",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 198,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -623,7 +614,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201086",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 304,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -641,7 +633,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200951",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 219,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -659,7 +652,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200449",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 255,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -678,7 +672,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200312",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 9,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -696,7 +691,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200093",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 348,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -715,7 +711,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200064",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 337,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -733,7 +730,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200040",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 232,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -753,7 +751,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200023",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 248,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -772,7 +771,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199926",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 190,
+    "cluster_size": 1,
     "negative_signal": true
   },
   {
@@ -792,7 +792,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199700",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 176,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -812,7 +813,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199587",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 336,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -831,7 +833,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199547",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 329,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -849,7 +852,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199206",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 318,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -869,7 +873,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199143",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 311,
+    "cluster_size": 1,
     "negative_signal": true
   },
   {
@@ -887,7 +892,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199139",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 269,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -905,7 +911,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199120",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 231,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -923,7 +930,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199065",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 24,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -941,7 +949,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199064",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 24,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -959,7 +968,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199063",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 24,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -977,7 +987,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199044",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 150,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -995,7 +1006,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198980",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 239,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1015,7 +1027,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198885",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 5,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -1035,7 +1048,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198826",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 25,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -1054,7 +1068,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198705",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 1,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -1074,7 +1089,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198624",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 200,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1092,7 +1108,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198485",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 215,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1110,7 +1127,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198406",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 181,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1130,7 +1148,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198295",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 210,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1150,7 +1169,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198288",
     "source": "상상대로서울",
-    "related_civil_requests": 130,
+    "cluster_id": 57,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -1168,7 +1188,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198269",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 213,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1188,7 +1209,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198265",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 150,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -1206,7 +1228,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198243",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 303,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1226,7 +1249,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198192",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 332,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1246,7 +1270,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198151",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 25,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -1264,7 +1289,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198137",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 78,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -1284,7 +1310,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198127",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 298,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1302,7 +1329,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198104",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 9,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -1320,7 +1348,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198050",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 283,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1338,7 +1367,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197942",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 78,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -1357,7 +1387,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197913",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 29,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -1377,7 +1408,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197853",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 257,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1397,7 +1429,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197727",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 242,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1415,7 +1448,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197702",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 52,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -1435,7 +1469,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197602",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 264,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1455,7 +1490,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197507",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 265,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1474,7 +1510,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197491",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 249,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1492,7 +1529,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197236",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 302,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1512,7 +1550,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197233",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 267,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1530,7 +1569,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197063",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 259,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1548,7 +1588,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197030",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 7,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -1566,7 +1607,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196911",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 334,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1586,7 +1628,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196831",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 278,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1604,7 +1647,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196793",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 78,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -1623,7 +1667,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196601",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 52,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -1643,7 +1688,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196561",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 330,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1662,7 +1708,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196496",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 307,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1681,7 +1728,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196484",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 320,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1701,7 +1749,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196336",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 253,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1721,7 +1770,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196279",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 159,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1741,7 +1791,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196273",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 350,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1761,7 +1812,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196265",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 297,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1780,7 +1832,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196238",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 238,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1799,7 +1852,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196215",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 291,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1819,7 +1873,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196096",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 224,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1839,7 +1894,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196094",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 58,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -1858,7 +1914,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196093",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 58,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -1878,7 +1935,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195893",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 177,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1898,7 +1956,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195827",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 188,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1916,7 +1975,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195730",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 250,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1934,7 +1994,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195711",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 241,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1952,7 +2013,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195684",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 246,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1970,7 +2032,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195676",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 199,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -1990,7 +2053,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195671",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 284,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2008,7 +2072,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195665",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 275,
+    "cluster_size": 1,
     "negative_signal": true
   },
   {
@@ -2027,7 +2092,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195663",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 273,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2046,7 +2112,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195661",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 335,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2064,7 +2131,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195657",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 123,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2082,7 +2150,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195558",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 207,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2100,7 +2169,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195496",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 315,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2120,7 +2190,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195464",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 216,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2139,7 +2210,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195458",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 321,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2157,7 +2229,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195098",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 180,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2177,7 +2250,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194899",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 114,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -2197,7 +2271,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194881",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 114,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -2215,7 +2290,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194877",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 276,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2235,7 +2311,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194854",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 322,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2255,7 +2332,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194750",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 314,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2273,7 +2351,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194732",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 29,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -2292,7 +2371,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194719",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 5,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -2311,7 +2391,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194713",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 254,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2331,7 +2412,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194667",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 160,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2349,7 +2431,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194610",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 36,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -2369,7 +2452,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194484",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 262,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2387,7 +2471,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194469",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 266,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2406,7 +2491,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194363",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 221,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2426,7 +2512,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194360",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 204,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2445,7 +2532,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194332",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 316,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2464,7 +2552,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194324",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 349,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2483,7 +2572,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194273",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 218,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2503,7 +2593,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194248",
     "source": "상상대로서울",
-    "related_civil_requests": 90,
+    "cluster_id": 57,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -2522,7 +2613,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194167",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 256,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2541,7 +2633,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194164",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 15,
+    "cluster_size": 3,
     "negative_signal": true
   },
   {
@@ -2559,7 +2652,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194163",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 341,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2578,7 +2672,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194145",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 279,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2597,7 +2692,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194144",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 196,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2615,7 +2711,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194129",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 165,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2634,7 +2731,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194046",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 127,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2652,7 +2750,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193970",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 299,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2670,7 +2769,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193884",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 251,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2689,7 +2789,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193853",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 308,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2707,7 +2808,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193727",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 343,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2726,7 +2828,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193695",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 286,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2744,7 +2847,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193669",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 313,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2764,7 +2868,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193598",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 6,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -2782,7 +2887,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193589",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 294,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2800,7 +2906,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193306",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 141,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2818,7 +2925,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193159",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 281,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2838,7 +2946,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193131",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 280,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2856,7 +2965,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193097",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 142,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2874,7 +2984,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192909",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 206,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2892,7 +3003,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192871",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 323,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2910,7 +3022,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192865",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 282,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2929,7 +3042,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192326",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 182,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2947,7 +3061,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192106",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 292,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2966,7 +3081,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191846",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 305,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -2984,7 +3100,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191836",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 167,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3002,7 +3119,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191657",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 277,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3021,7 +3139,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191470",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 107,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3039,7 +3158,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191363",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 306,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3058,7 +3178,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191294",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 288,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3077,7 +3198,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191232",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 74,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -3097,7 +3219,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191195",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 15,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -3116,7 +3239,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191054",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 268,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3135,7 +3259,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191053",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 8,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -3154,7 +3279,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191049",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 203,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3172,7 +3298,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190968",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 228,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3190,7 +3317,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190902",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 324,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3208,7 +3336,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190681",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 244,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3228,7 +3357,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190633",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 245,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3246,7 +3376,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190617",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 8,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -3266,7 +3397,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190545",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 261,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3284,7 +3416,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190426",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 340,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3302,7 +3435,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190358",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 243,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3320,7 +3454,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190352",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 240,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3338,7 +3473,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189934",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 344,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3357,7 +3493,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189861",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 21,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -3375,7 +3512,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189652",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 327,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3393,7 +3531,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189401",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 326,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3412,7 +3551,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189236",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 325,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3430,7 +3570,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189218",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 205,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3448,7 +3589,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189200",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 4,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -3466,7 +3608,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189155",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 161,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3484,7 +3627,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189150",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 4,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -3502,7 +3646,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189149",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 162,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3520,7 +3665,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189148",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 236,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3538,7 +3684,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189145",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 4,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -3557,7 +3704,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189144",
     "source": "상상대로서울",
-    "related_civil_requests": 90,
+    "cluster_id": 186,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3576,7 +3724,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189075",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 234,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3594,7 +3743,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189067",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 185,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3612,7 +3762,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188884",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 178,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3632,7 +3783,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188854",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 15,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -3650,7 +3802,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188801",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 124,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3668,7 +3821,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188788",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 328,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3687,7 +3841,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188675",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 233,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3705,7 +3860,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188468",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 138,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3723,7 +3879,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188264",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 187,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3741,7 +3898,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188170",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 339,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3760,7 +3918,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187957",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 152,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3779,7 +3938,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187873",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 230,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3797,7 +3957,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187774",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 17,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -3815,7 +3976,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187760",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 17,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -3833,7 +3995,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187366",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 312,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3851,7 +4014,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187052",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 184,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3869,7 +4033,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186586",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 193,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3887,7 +4052,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186461",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 91,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3906,7 +4072,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186221",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 202,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3924,7 +4091,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186176",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 36,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -3942,7 +4110,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185985",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 235,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3960,7 +4129,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185793",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 309,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3978,7 +4148,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185569",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 201,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -3996,7 +4167,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185295",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 61,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4014,7 +4186,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185291",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 225,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4032,7 +4205,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185286",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 229,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4050,7 +4224,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185280",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 90,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4068,7 +4243,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185277",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 296,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4086,7 +4262,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185272",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 301,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4104,7 +4281,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185243",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 351,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4122,7 +4300,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185220",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 153,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4140,7 +4319,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184852",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 169,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4159,7 +4339,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184604",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 293,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4177,7 +4358,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184573",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 290,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4195,7 +4377,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184570",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 79,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4213,7 +4396,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184569",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 194,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4231,7 +4415,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184568",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 23,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -4249,7 +4434,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184567",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 23,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -4267,7 +4453,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184566",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 88,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4285,7 +4472,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184408",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 12,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -4304,7 +4492,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184404",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 21,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -4322,7 +4511,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184312",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 300,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4340,7 +4530,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184170",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 120,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4359,7 +4550,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184161",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 258,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4378,7 +4570,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183929",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 97,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4396,7 +4589,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183782",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 189,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4416,7 +4610,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183631",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 347,
+    "cluster_size": 1,
     "negative_signal": true
   },
   {
@@ -4435,7 +4630,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183623",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 74,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -4455,7 +4651,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183353",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 217,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4474,7 +4671,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183127",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 26,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -4492,7 +4690,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182901",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 174,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4510,7 +4709,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182871",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 108,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4528,7 +4728,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182870",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 338,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4546,7 +4747,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182865",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 333,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4565,7 +4767,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182859",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 121,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4583,7 +4786,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182858",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 222,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4601,7 +4805,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182856",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 158,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4620,7 +4825,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182827",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 272,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4638,7 +4844,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182764",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 65,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -4658,7 +4865,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182746",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 65,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -4676,7 +4884,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182675",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 118,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4695,7 +4904,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182496",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 179,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4715,7 +4925,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181948",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 143,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4734,7 +4945,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181936",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 274,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4752,7 +4964,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181875",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 96,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4770,7 +4983,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181849",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 252,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4788,7 +5002,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181847",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 211,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4807,7 +5022,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181473",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 99,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4825,7 +5041,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181437",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 133,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4843,7 +5060,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181306",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 134,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4862,7 +5080,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180894",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 12,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -4882,7 +5101,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180806",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 139,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4900,7 +5120,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180667",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 110,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4920,7 +5141,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180655",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 166,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4938,7 +5160,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180628",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 117,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4956,7 +5179,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180493",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 271,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4975,7 +5199,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180489",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 122,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -4993,7 +5218,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180472",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 175,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5012,7 +5238,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180440",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 125,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5031,7 +5258,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180406",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 119,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5049,7 +5277,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180363",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 6,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -5069,7 +5298,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180324",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 87,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5087,7 +5317,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180319",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 263,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5105,7 +5336,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180125",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 147,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5125,7 +5357,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180104",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 60,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5143,7 +5376,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180063",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 342,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5161,7 +5395,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179976",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 89,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5180,7 +5415,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179899",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 102,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5199,7 +5435,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179862",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 220,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5218,7 +5455,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202347",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 38,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -5236,7 +5474,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201935",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 208,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5256,7 +5495,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201933",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 55,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -5274,7 +5514,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201714",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 136,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5292,7 +5533,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201704",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 38,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -5311,7 +5553,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201651",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 149,
+    "cluster_size": 1,
     "negative_signal": true
   },
   {
@@ -5329,7 +5572,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201642",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 135,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5347,7 +5591,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201604",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 346,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5365,7 +5610,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201545",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 137,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5383,7 +5629,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201543",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 113,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -5401,7 +5648,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201540",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 113,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -5420,7 +5668,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201497",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 72,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -5438,7 +5687,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200910",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 115,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5456,7 +5706,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200710",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 223,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5475,7 +5726,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200103",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 109,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5494,7 +5746,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199841",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 18,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -5513,7 +5766,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199734",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 92,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5532,7 +5786,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199648",
     "source": "상상대로서울",
-    "related_civil_requests": 130,
+    "cluster_id": 170,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5550,7 +5805,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199074",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 310,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5568,7 +5824,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198717",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 145,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5586,7 +5843,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198631",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 28,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -5604,7 +5862,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198579",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 168,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5622,7 +5881,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198383",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 192,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5641,7 +5901,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198216",
     "source": "상상대로서울",
-    "related_civil_requests": 130,
+    "cluster_id": 44,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5659,7 +5920,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198207",
     "source": "상상대로서울",
-    "related_civil_requests": 130,
+    "cluster_id": 173,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5677,7 +5939,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198073",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 212,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5695,7 +5958,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198072",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 14,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -5713,7 +5977,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197859",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 7,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -5731,7 +5996,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197585",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 148,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5749,7 +6015,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197374",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 18,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -5767,7 +6034,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196679",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 45,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5787,7 +6055,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196543",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 11,
+    "cluster_size": 4,
     "negative_signal": false
   },
   {
@@ -5805,7 +6074,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196482",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 154,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5823,7 +6093,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195595",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 0,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -5841,7 +6112,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195492",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 67,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5859,7 +6131,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195248",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 11,
+    "cluster_size": 4,
     "negative_signal": false
   },
   {
@@ -5879,7 +6152,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194883",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 140,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5897,7 +6171,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194882",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 53,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5915,7 +6190,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194853",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 95,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5934,7 +6210,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194792",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 103,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5952,7 +6229,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194620",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 155,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -5972,7 +6250,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194515",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 19,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -5992,7 +6271,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194436",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 3,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -6010,7 +6290,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194240",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 32,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -6030,7 +6311,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194182",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 3,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -6048,7 +6330,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194170",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 72,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -6067,7 +6350,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194132",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 144,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6086,7 +6370,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194088",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 28,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -6104,7 +6389,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193932",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 130,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6124,7 +6410,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193929",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 126,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6142,7 +6429,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193780",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 112,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6160,7 +6448,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193454",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 156,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6178,7 +6467,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193260",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 80,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6197,7 +6487,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193257",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 13,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -6217,7 +6508,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193241",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 28,
+    "cluster_size": 3,
     "negative_signal": true
   },
   {
@@ -6236,7 +6528,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193205",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 171,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6254,7 +6547,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193112",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 9,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -6272,7 +6566,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193089",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 151,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6292,7 +6587,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192998",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 19,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -6312,7 +6608,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192984",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 111,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6331,7 +6628,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192978",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 83,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6349,7 +6647,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192976",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 43,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6367,7 +6666,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192699",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 116,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6387,7 +6687,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192686",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 35,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -6405,7 +6706,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192646",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 128,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6425,7 +6727,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192614",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 19,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -6443,7 +6746,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192565",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 77,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -6461,7 +6765,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191849",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 260,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6479,7 +6784,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191757",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 93,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6497,7 +6803,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191603",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 209,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6515,7 +6822,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191388",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 132,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6533,7 +6841,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191311",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 62,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6551,7 +6860,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190910",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 1,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -6569,7 +6879,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190853",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 101,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6589,7 +6900,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189440",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 11,
+    "cluster_size": 4,
     "negative_signal": false
   },
   {
@@ -6607,7 +6919,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189414",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 77,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -6625,7 +6938,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189408",
     "source": "상상대로서울",
-    "related_civil_requests": 130,
+    "cluster_id": 68,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6644,7 +6958,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189255",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 11,
+    "cluster_size": 4,
     "negative_signal": false
   },
   {
@@ -6662,7 +6977,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188790",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 14,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -6680,7 +6996,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188566",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 84,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6698,7 +7015,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188552",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 172,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6716,7 +7034,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188508",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 32,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -6736,7 +7055,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187148",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 100,
+    "cluster_size": 1,
     "negative_signal": true
   },
   {
@@ -6754,7 +7074,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187073",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 69,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6773,7 +7094,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186908",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 82,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6791,7 +7113,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186896",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 98,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6809,7 +7132,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186626",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 85,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6829,7 +7153,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186290",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 30,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6847,7 +7172,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185984",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 86,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6866,7 +7192,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185646",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 54,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6884,7 +7211,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185284",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 63,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6902,7 +7230,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184577",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 157,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6921,7 +7250,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184575",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 70,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6939,7 +7269,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184571",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 214,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6957,7 +7288,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184557",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 39,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6975,7 +7307,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184431",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 164,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -6993,7 +7326,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184207",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 129,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7011,7 +7345,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183626",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 66,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7029,7 +7364,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183550",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 20,
+    "cluster_size": 7,
     "negative_signal": false
   },
   {
@@ -7047,7 +7383,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183549",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 20,
+    "cluster_size": 7,
     "negative_signal": false
   },
   {
@@ -7065,7 +7402,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183490",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 20,
+    "cluster_size": 7,
     "negative_signal": false
   },
   {
@@ -7083,7 +7421,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183450",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 105,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7101,7 +7440,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183446",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 20,
+    "cluster_size": 7,
     "negative_signal": false
   },
   {
@@ -7121,7 +7461,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183428",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 16,
+    "cluster_size": 6,
     "negative_signal": false
   },
   {
@@ -7139,7 +7480,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183419",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 41,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7157,7 +7499,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183412",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 146,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7175,7 +7518,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183409",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 73,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7193,7 +7537,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183408",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 22,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -7211,7 +7556,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183407",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 22,
+    "cluster_size": 3,
     "negative_signal": true
   },
   {
@@ -7229,7 +7575,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183387",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 16,
+    "cluster_size": 6,
     "negative_signal": false
   },
   {
@@ -7247,7 +7594,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183374",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 33,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7265,7 +7613,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183322",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 16,
+    "cluster_size": 6,
     "negative_signal": false
   },
   {
@@ -7283,7 +7632,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183292",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 76,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7301,7 +7651,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183275",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 16,
+    "cluster_size": 6,
     "negative_signal": false
   },
   {
@@ -7321,7 +7672,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183273",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 22,
+    "cluster_size": 3,
     "negative_signal": true
   },
   {
@@ -7341,7 +7693,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183253",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 40,
+    "cluster_size": 2,
     "negative_signal": true
   },
   {
@@ -7360,7 +7713,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183248",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 10,
+    "cluster_size": 4,
     "negative_signal": false
   },
   {
@@ -7380,7 +7734,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183243",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 37,
+    "cluster_size": 5,
     "negative_signal": true
   },
   {
@@ -7399,7 +7754,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183237",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 37,
+    "cluster_size": 5,
     "negative_signal": false
   },
   {
@@ -7417,7 +7773,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183223",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 40,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -7437,7 +7794,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183217",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 37,
+    "cluster_size": 5,
     "negative_signal": true
   },
   {
@@ -7455,7 +7813,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183208",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 131,
+    "cluster_size": 1,
     "negative_signal": true
   },
   {
@@ -7473,7 +7832,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183203",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 16,
+    "cluster_size": 6,
     "negative_signal": true
   },
   {
@@ -7491,7 +7851,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183202",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 50,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7509,7 +7870,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183197",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 20,
+    "cluster_size": 7,
     "negative_signal": false
   },
   {
@@ -7529,7 +7891,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183196",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 10,
+    "cluster_size": 4,
     "negative_signal": false
   },
   {
@@ -7547,7 +7910,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183193",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 2,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -7565,7 +7929,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183190",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 20,
+    "cluster_size": 7,
     "negative_signal": false
   },
   {
@@ -7584,7 +7949,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183187",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 47,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7602,7 +7968,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183186",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 20,
+    "cluster_size": 7,
     "negative_signal": false
   },
   {
@@ -7622,7 +7989,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183174",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 13,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -7640,7 +8008,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183171",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 75,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7660,7 +8029,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183170",
     "source": "상상대로서울",
-    "related_civil_requests": 920,
+    "cluster_id": 49,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7680,7 +8050,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183167",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 37,
+    "cluster_size": 5,
     "negative_signal": false
   },
   {
@@ -7698,7 +8069,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183163",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 34,
+    "cluster_size": 1,
     "negative_signal": true
   },
   {
@@ -7716,7 +8088,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183162",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 16,
+    "cluster_size": 6,
     "negative_signal": false
   },
   {
@@ -7736,7 +8109,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183153",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 42,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7754,7 +8128,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183140",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 37,
+    "cluster_size": 5,
     "negative_signal": false
   },
   {
@@ -7772,7 +8147,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183131",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 94,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7792,7 +8168,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183130",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 35,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -7812,7 +8189,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183126",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 64,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7831,7 +8209,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183124",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 26,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -7849,7 +8228,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183123",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 104,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7867,7 +8247,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183122",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 10,
+    "cluster_size": 4,
     "negative_signal": false
   },
   {
@@ -7885,7 +8266,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183121",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 59,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7903,7 +8285,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183033",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 2,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -7921,7 +8304,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182889",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 46,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7939,7 +8323,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182864",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 163,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7957,7 +8342,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182528",
     "source": "상상대로서울",
-    "related_civil_requests": 510,
+    "cluster_id": 227,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -7975,7 +8361,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182197",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 0,
+    "cluster_size": 3,
     "negative_signal": false
   },
   {
@@ -7993,7 +8380,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181983",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 106,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -8011,7 +8399,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181150",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 27,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -8029,7 +8418,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180866",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 27,
+    "cluster_size": 2,
     "negative_signal": false
   },
   {
@@ -8047,7 +8437,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180778",
     "source": "상상대로서울",
-    "related_civil_requests": 150,
+    "cluster_id": 48,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -8065,7 +8456,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180569",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 31,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -8085,7 +8477,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180216",
     "source": "상상대로서울",
-    "related_civil_requests": 680,
+    "cluster_id": 10,
+    "cluster_size": 4,
     "negative_signal": false
   },
   {
@@ -8103,7 +8496,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179980",
     "source": "상상대로서울",
-    "related_civil_requests": 1240,
+    "cluster_id": 51,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -8121,7 +8515,8 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179977",
     "source": "상상대로서울",
-    "related_civil_requests": 130,
+    "cluster_id": 71,
+    "cluster_size": 1,
     "negative_signal": false
   },
   {
@@ -8139,15 +8534,72 @@ export const mockProposals: Proposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179973",
     "source": "상상대로서울",
-    "related_civil_requests": 130,
+    "cluster_id": 81,
+    "cluster_size": 1,
     "negative_signal": false
   }
 ];
 
-export function getDepartmentStats(proposalsList: Proposal[] = mockProposals) {
-  const targetProposals = (proposalsList && proposalsList.length > 0) ? proposalsList : mockProposals;
+export function extractTopKeywords(proposals: PolicyProposal[]): { keyword: string; count: number }[] {
+  const stopWords = new Set([
+    // 기존
+    '및', '위한', '대해', '있습니다', '수', '하는', '등', '있는', '너무', '없어서', '통해', '제도', '기준', '지원', '서울시', '출산', '육아', '보육', '혜택',
+    // 서술어/어미 (자주 누락되던 것들 - 보강)
+    '있도록', '합니다', '됩니다', '없습니다', '되어', '되는', '되고', '하고', '하며', '하여', '해서',
+    '같습니다', '같은', '많은', '적은', '없는', '많이', '적게', '이며', '이고', '라고', '한다', '했다', '한다면',
+    '그리고', '또한', '이에', '이를', '이는', '그러나', '하지만', '이러한', '저희', '이렇게', '그렇게',
+    '위해서', '때문에', '대한', '관련', '관련된', '인한', '따라', '따른', '통해서', '위하여',
+    // 추가된 어미
+    '생각합니다', '것입니다',
+    // 흔한 지시어/불완전 조각
+    '이', '그', '저', '것', '수가', '들이', '에게', '으로서', '로서', '에는', '에서는',
+  ]);
+
+  const frequencyMap: Record<string, number> = {};
+
+  proposals.forEach(prop => {
+    const text = (prop.title + ' ' + prop.content)
+      .replace(/[.,()[\]'":\-?!？！·~、"'ㆍ%]/g, ' ');
+    const words = text.split(/\s+/);
+
+    words.forEach(word => {
+      let normalized = word.trim();
+      if (normalized.length < 2) return;
+
+      if (normalized.endsWith('을') || normalized.endsWith('를') || normalized.endsWith('이') || normalized.endsWith('가') || normalized.endsWith('은') || normalized.endsWith('는')) {
+        normalized = normalized.slice(0, -1);
+      } else if (normalized.endsWith('으로') || normalized.endsWith('에서') || normalized.endsWith('에게') || normalized.endsWith('과') || normalized.endsWith('와')) {
+        normalized = normalized.slice(0, -2);
+      }
+
+      if (normalized.length < 2) return;
+      if (stopWords.has(normalized)) return;
+
+      if (normalized.includes('공공') || normalized.includes('국공립')) normalized = '공공시설';
+      if (normalized.includes('산후조리')) normalized = '산후조리원';
+      if (normalized.includes('다자녀') || normalized.includes('2자녀') || normalized.includes('3자녀')) normalized = '다자녀기준';
+      if (normalized.includes('유모차')) normalized = '유모차대여';
+      if (normalized.includes('어린이집') || normalized.includes('돌봄') || normalized.includes('키즈카페')) normalized = '보육/돌봄';
+      if (normalized.includes('응급실') || normalized.includes('소아과') || normalized.includes('응급') || normalized.includes('진료')) normalized = '소아응급의료';
+      if (normalized.includes('미혼모') || normalized.includes('임산부') || normalized.includes('산모')) normalized = '임산부지원';
+      if (normalized.includes('도우미') || normalized.includes('베이비시터')) normalized = '돌봄인력';
+      if (normalized.includes('바우처') || normalized.includes('지원금') || normalized.includes('보조금') || normalized.includes('교통비')) normalized = '직접적바우처';
+      if (normalized.includes('예약') || normalized.includes('대기')) normalized = '예약/대기경증';
+
+      frequencyMap[normalized] = (frequencyMap[normalized] || 0) + 1;
+    });
+  });
+
+  const sorted = Object.entries(frequencyMap)
+    .map(([keyword, count]) => ({ keyword, count }))
+    .sort((a, b) => b.count - a.count);
+
+  return sorted.slice(0, 5);
+}
+
+export function getDepartmentStats(proposals: PolicyProposal[]): { name: string; total: number; unanswered: number; rate: number }[] {
   const stats: Record<string, { total: number; unanswered: number }> = {};
-  targetProposals.forEach(p => {
+  proposals.forEach(p => {
     if (Array.isArray(p.department)) {
       p.department.forEach(dept => {
         if (!stats[dept]) {
@@ -8167,28 +8619,4 @@ export function getDepartmentStats(proposalsList: Proposal[] = mockProposals) {
     unanswered: val.unanswered,
     rate: val.total > 0 ? Math.round((val.unanswered / val.total) * 100) : 0
   })).sort((a, b) => b.total - a.total);
-}
-
-export function extractTopKeywords(proposals: Proposal[], limit = 10) {
-  const wordCounts: Record<string, number> = {};
-  const stopWords = new Set([
-    "제안", "서울시", "사업", "지원", "운영", "관련", "개선", "대한", "위한", "추진", "서울",
-    "생각", "경우", "때문", "관내", "확대", "필요", "요청", "내용", "현황", "문제점", "기대효과",
-    "제안요지", "대상", "제공", "이용", "사용", "방법", "문제", "기준", "시설", "정책", "서울형"
-  ]);
-  
-  proposals.forEach(p => {
-    const text = p.title + " " + p.content;
-    const words = text.match(/[가-힣]{2,}/g) || [];
-    words.forEach(w => {
-      if (!stopWords.has(w)) {
-        wordCounts[w] = (wordCounts[w] || 0) + 1;
-      }
-    });
-  });
-
-  return Object.entries(wordCounts)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, limit)
-    .map(([keyword, count]) => ({ keyword, count }));
 }

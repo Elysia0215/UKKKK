@@ -15,16 +15,6 @@ export type DepartmentName =
   | '다문화지원팀'
   | '미지정';
 
-export interface CivilRequest {
-  id: string;
-  title: string;
-  content: string;
-  reg_date: string;
-  category: PolicyCategory;
-  dept: string;
-  url: string;
-}
-
 export interface PolicyProposal {
   id: string;
   title: string;
@@ -37,19 +27,23 @@ export interface PolicyProposal {
   category: PolicyCategory;
   department: DepartmentName[];
   url: string;
-  source?: '상상대로서울' | '국민권익위';
-  related_civil_requests?: number;
+  source?: string;
+  cluster_id: number;
+  cluster_size: number;
   negative_signal?: boolean;
 }
 
 export interface DistrictStat {
   district?: string;
-  tfr?: number | null;               // 합계출산율
-  births_total?: number | null;      // 실제 출생아수 (2024)
-  childcare_facility_count?: number | null; // 보육시설 수 (2025)
   district_name?: string;
+  tfr?: number | null;               // 합계출산율
   fertility_rate?: number;
+  births_total?: number | null;      // 실제 출생아수 (2024)
   total_births?: number;
+  first_child_births?: number;
+  second_child_births?: number;
+  third_child_births?: number;
+  childcare_facility_count?: number | null; // 보육시설 수 (2025)
   daycare_centers?: number;
   daycare_capacity?: number;
   proposal_count?: number;
