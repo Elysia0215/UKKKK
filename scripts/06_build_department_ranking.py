@@ -124,7 +124,7 @@ def match_policies(proposal):
                 "policy_id": pol.get("사업소분류명") or pol_title,
                 "policy_name": pol_title,
                 "summary": pol_content[:120] + ("..." if len(pol_content) > 120 else ""),
-                "apply_url": pol.get("신청하기사이트주소") if pol.get("신청하기사이트주소") != "." else "https://umttang.seoul.go.kr/",
+                "apply_url": pol.get("신청하기사이트주소") if (pol.get("신청하기사이트주소") and pol.get("신청하기사이트주소") != ".") else "https://umsa.seoul.go.kr/",
                 "dept_name": pol.get("Department", "담당팀"),
                 "score": score
             })
