@@ -75,18 +75,29 @@ export const districtStats: DistrictStat[] = [
 ];
 
 export function getDepartmentStats(proposals: PolicyProposal[]) {
-  const deptMap: Record<string, number> = {};
+  const deptMap: Record<string, { total: number; unanswered: number }> = {};
   proposals.forEach(p => {
     if (p.department && p.department.length > 0) {
       p.department.forEach(d => {
-        deptMap[d] = (deptMap[d] || 0) + 1;
+        if (!deptMap[d]) {
+          deptMap[d] = { total: 0, unanswered: 0 };
+        }
+        deptMap[d].total += 1;
+        if (p.reply_yn === 'N') {
+          deptMap[d].unanswered += 1;
+        }
       });
     }
   });
 
   return Object.entries(deptMap)
-    .map(([dept, count]) => ({ dept, count }))
-    .sort((a, b) => b.count - a.count);
+    .map(([dept, stats]) => ({
+      dept,
+      total: stats.total,
+      unanswered: stats.unanswered,
+      rate: stats.total > 0 ? Math.round((stats.unanswered / stats.total) * 1000) / 10 : 0
+    }))
+    .sort((a, b) => b.total - a.total);
 }
 
 export function extractTopKeywords(proposals: PolicyProposal[], count: number = 30): { keyword: string; count: number }[] {

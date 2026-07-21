@@ -56,6 +56,7 @@ export interface MatchedPolicy {
 }
 
 export interface PolicyProposal {
+  [key: string]: unknown;
   id: string;
   title: string;
   content: string;
@@ -69,6 +70,7 @@ export interface PolicyProposal {
   sub_category?: string;
   micro_category?: string;
   policy_flow?: string;
+  reliability?: string;
   matching_method?: string;
   department: DepartmentName[];
   url: string;
