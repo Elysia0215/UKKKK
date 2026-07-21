@@ -214,8 +214,8 @@ export default function App() {
             >
               <AlertOctagon className="w-4 h-4 text-rose-500" />
               정책 우선순위 상세
-              <span className="bg-rose-100 text-rose-700 text-[10px] font-black px-1.5 py-0.2 rounded-full ml-1">
-                {mockProposals.filter(p => p.reply_yn === 'N' && p.vote_score >= 150).length}
+              <span className="bg-rose-100 text-rose-700 text-[10px] font-black px-2 py-0.5 rounded-full ml-1 flex items-center gap-0.5">
+                <span>공백 {mockProposals.filter(p => p.reply_yn === 'N' && p.vote_score >= 150).length}건</span>
               </span>
             </button>
 

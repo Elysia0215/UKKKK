@@ -231,7 +231,7 @@ export const PriorityDetails: React.FC<Props> = ({
           id: `GROUP-SUB-${key}`,
           category: representative.category,
           keyword: key,
-          name: `[유사 제안 ${items.length}건 묶음] ${key} - ${representative.title}`,
+          name: `${key} - ${representative.title}`,
           items: items.sort((a, b) => b.vote_score - a.vote_score),
           unansweredCount,
           totalVotes,
@@ -872,13 +872,17 @@ export const PriorityDetails: React.FC<Props> = ({
                         </span>
                       )}
                       <div>
-                        <h4 className="text-sm font-bold text-slate-900 flex items-center gap-1.5">
-                          {group.name}
-                          {!isSingle && (
-                            <span className="text-xs text-slate-500 font-normal font-mono">
-                              ({group.items.length}건 묶음)
+                        <h4 className="text-sm font-bold text-slate-900 flex items-center gap-1.5 flex-wrap">
+                          {!isSingle ? (
+                            <span className="text-xs bg-blue-100 text-blue-800 font-extrabold px-2 py-0.5 rounded shadow-2xs">
+                              유사 제안 {group.items.length}건 묶음
+                            </span>
+                          ) : (
+                            <span className="text-xs bg-slate-100 text-slate-700 font-bold px-2 py-0.5 rounded">
+                              단독 제안
                             </span>
                           )}
+                          <span>{group.name}</span>
                         </h4>
                       </div>
                     </div>
