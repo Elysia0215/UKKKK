@@ -36,6 +36,8 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<number>(0);
   const [selectedDistrict, setSelectedDistrict] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedSubCategory, setSelectedSubCategory] = useState<string | null>(null);
+  const [selectedClusterId, setSelectedClusterId] = useState<number | null>(null);
 
   // 실시간 통계 연산
   const stats = useMemo<DashboardStats>(() => {
@@ -66,6 +68,13 @@ export default function App() {
   const handleSelectDistrictFromOverview = (district: string | null) => {
     setSelectedDistrict(district);
     setActiveTab(1); // 지역별 비교 탭으로 이동
+  };
+
+  const handleSelectCluster = (clusterId: number, category?: string, subCategory?: string) => {
+    if (category) setSelectedCategory(category);
+    if (subCategory) setSelectedSubCategory(subCategory);
+    setSelectedClusterId(clusterId);
+    setActiveTab(3); // 정책 우선순위 상세 탭으로 이동
   };
 
   // 엑셀/CSV 데이터 내보내기
@@ -246,6 +255,9 @@ export default function App() {
             {activeTab === 3 && (
               <PriorityDetails 
                 proposals={mockProposals}
+                initialCategory={selectedCategory || undefined}
+                initialSubCategory={selectedSubCategory || undefined}
+                initialClusterId={selectedClusterId || undefined}
               />
             )}
 
@@ -256,7 +268,7 @@ export default function App() {
             {activeTab === 5 && (
               <ClusterVolumeMap
                 proposals={mockProposals}
-                onSelectCluster={() => setActiveTab(3)}
+                onSelectCluster={handleSelectCluster}
               />
             )}
           </motion.div>

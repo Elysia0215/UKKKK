@@ -33,6 +33,9 @@ import { BatchReplyModal } from './BatchReplyModal';
 
 interface Props {
   proposals: PolicyProposal[];
+  initialCategory?: string;
+  initialSubCategory?: string;
+  initialClusterId?: number;
 }
 
 interface ProposalGroup {
@@ -45,18 +48,36 @@ interface ProposalGroup {
   totalVotes: number;
 }
 
-export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
+export const PriorityDetails: React.FC<Props> = ({ 
+  proposals,
+  initialCategory,
+  initialSubCategory,
+  initialClusterId
+}) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isMultiSelectMode, setIsMultiSelectMode] = useState<boolean>(false);
   const [selectedFlows, setSelectedFlows] = useState<string[]>(['전체']);
-  const [selectedCategories, setSelectedCategories] = useState<string[]>(['전체']);
-  const [selectedSubCategories, setSelectedSubCategories] = useState<string[]>(['전체']);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>(
+    initialCategory ? [initialCategory] : ['전체']
+  );
+  const [selectedSubCategories, setSelectedSubCategories] = useState<string[]>(
+    initialSubCategory ? [initialSubCategory] : ['전체']
+  );
   const [selectedMicroCategory, setSelectedMicroCategory] = useState<string>('전체');
   const [selectedDepts, setSelectedDepts] = useState<string[]>(['전체']);
   const [onlyShowGaps, setOnlyShowGaps] = useState(false); // '정책 공백(미답변+고공감)'만 보기 토글
   const [viewMode, setViewMode] = useState<'list' | 'group'>('group'); // 그룹 보기 vs 개별 리스트 보기
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
   const [activeBatchGroup, setActiveBatchGroup] = useState<ProposalGroup | null>(null);
+
+  React.useEffect(() => {
+    if (initialCategory) {
+      setSelectedCategories([initialCategory]);
+    }
+    if (initialSubCategory) {
+      setSelectedSubCategories([initialSubCategory]);
+    }
+  }, [initialCategory, initialSubCategory, initialClusterId]);
 
   const toggleFilterItem = (
     currentList: string[],

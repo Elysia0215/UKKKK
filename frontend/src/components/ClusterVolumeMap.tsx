@@ -6,13 +6,14 @@ import { Layers, AlertTriangle, Sparkles, TrendingUp, HelpCircle, ChevronDown, C
 
 interface Props {
   proposals: PolicyProposal[];
-  onSelectCluster?: (clusterId: number) => void;
+  onSelectCluster?: (clusterId: number, category?: string, subCategory?: string, searchKeyword?: string) => void;
 }
 
 interface ClusterVolumePoint {
   clusterId: number;
   clusterName: string;
   category: string;
+  subCategory?: string;
   volume: number;        // 제안 수 (Demand)
   totalVotes: number;    // 총 공감수
   unansweredCount: number; // 미답변 수
@@ -62,6 +63,7 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
         clusterId,
         clusterName: `[군집 #${clusterId}] ${representative.title}`,
         category: representative.category,
+        subCategory: representative.sub_category,
         volume,
         totalVotes,
         unansweredCount,
@@ -116,7 +118,7 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
           {topGapClusters.map((c, idx) => (
             <div
               key={c.clusterId}
-              onClick={() => onSelectCluster?.(c.clusterId)}
+              onClick={() => onSelectCluster?.(c.clusterId, c.category, c.subCategory, c.representativeTitle)}
               className="bg-white p-3.5 rounded-xl border border-rose-200 shadow-2xs hover:border-rose-400 cursor-pointer transition-all hover:scale-[1.01]"
             >
               <div className="flex justify-between items-center mb-1">
@@ -220,7 +222,7 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
                   return null;
                 }}
               />
-              <Scatter data={clusterData} onClick={(entry) => onSelectCluster?.(entry.clusterId)} cursor="pointer">
+              <Scatter data={clusterData} onClick={(entry) => onSelectCluster?.(entry.clusterId, entry.category, entry.subCategory, entry.representativeTitle)} cursor="pointer">
                 {clusterData.map((entry) => {
                   let fillColor = '#3B82F6';
                   if (entry.riskLevel === 'HIGH') fillColor = '#EF4444';
@@ -295,7 +297,7 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
                           <td className="p-2.5 text-right font-bold text-rose-600">{item.gapScore}</td>
                           <td className="p-2.5 text-center font-sans">
                             <button
-                              onClick={() => onSelectCluster?.(item.clusterId)}
+                              onClick={() => onSelectCluster?.(item.clusterId, item.category, item.subCategory, item.representativeTitle)}
                               className="text-[10px] bg-[#0A2351] text-white px-2 py-1 rounded hover:bg-blue-900 font-bold cursor-pointer"
                             >
                               제안 묶음 ↗
