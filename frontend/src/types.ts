@@ -15,6 +15,16 @@ export type DepartmentName =
   | '다문화지원팀'
   | '미지정';
 
+export interface CivilRequest {
+  id: string;
+  title: string;
+  content: string;
+  reg_date: string;
+  category: PolicyCategory;
+  dept: string;
+  url: string;
+}
+
 export interface PolicyProposal {
   id: string;
   title: string;

@@ -1,4 +1,4 @@
-// 426건 및 국민권익위 민원 연동 수량 포함 mockData (2026.07.21 자동 생성)
+// 426건 제안 및 국민권익위 민원 리스트 포함 mockData (2026.07.21 자동 생성)
 
 export interface Proposal {
   id: string;
@@ -15,6 +15,16 @@ export interface Proposal {
   source?: string;
   related_civil_requests?: number;
   negative_signal?: boolean;
+}
+
+export interface CivilRequest {
+  id: string;
+  title: string;
+  content: string;
+  reg_date: string;
+  category: string;
+  dept: string;
+  url: string;
 }
 
 export interface DistrictStat {
@@ -8125,6 +8135,54 @@ export const mockProposals: Proposal[] = [
     "source": "상상대로서울",
     "related_civil_requests": 130,
     "negative_signal": false
+  }
+];
+
+export const mockCivilRequests: CivilRequest[] = [
+  {
+    "id": "EPEO-1001",
+    "title": "어린이집 야간 연장 보육 지원 확대 요청",
+    "content": "맞벌이 가정을 위해 야간 연장 보육 지원금 인상 및 교사 처우 개선을 국민권익위원회에 제안합니다.",
+    "reg_date": "2026-02-15",
+    "category": "보육",
+    "dept": "보건복지부 / 서울시 돌봄사업팀",
+    "url": "https://www.epeople.go.kr"
+  },
+  {
+    "id": "EPEO-1002",
+    "title": "임산부 교통비 지원 신청 절차 간소화 건의",
+    "content": "임산부 바우처 카드 발급 절차가 복잡하여 온라인 자동 인증 시스템 구축이 필요합니다.",
+    "reg_date": "2026-01-20",
+    "category": "임신",
+    "dept": "보건복지부 / 서울시 건강임신지원팀",
+    "url": "https://www.epeople.go.kr"
+  },
+  {
+    "id": "EPEO-1003",
+    "title": "다자녀 가구 공영주차장 및 공공시설 할인 자동 적용",
+    "content": "다자녀 우대카드를 매번 제시하지 않아도 차번 인식을 통해 자동 할인받을 수 있게 해주세요.",
+    "reg_date": "2026-03-01",
+    "category": "다자녀",
+    "dept": "국토교통부 / 서울시 저출생사업1팀",
+    "url": "https://www.epeople.go.kr"
+  },
+  {
+    "id": "EPEO-1004",
+    "title": "산후조리 경비 바우처 사용처 확대 제안",
+    "content": "산후조리원 외에도 산모·신생아 건강관리사 자부담금 차감에 바우처를 사용할 수 있도록 개선 요청합니다.",
+    "reg_date": "2026-02-28",
+    "category": "출산",
+    "dept": "보건복지부 / 서울시 저출생사업1팀",
+    "url": "https://www.epeople.go.kr"
+  },
+  {
+    "id": "EPEO-1005",
+    "title": "위기임산부 상담 및 긴급 주거 지원 강화",
+    "content": "위기임산부 보호출산제 시행에 따른 24시간 미혼모 쉼터 및 전담 상담인력 확충이 필요합니다.",
+    "reg_date": "2026-03-05",
+    "category": "위기임산부",
+    "dept": "여성가족부 / 서울시 가족지원팀",
+    "url": "https://www.epeople.go.kr"
   }
 ];
 

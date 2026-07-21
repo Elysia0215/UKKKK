@@ -22,6 +22,7 @@ import {
   FileSpreadsheet,
   ExternalLink
 } from 'lucide-react';
+import { CivilRequestModal } from './CivilRequestModal';
 
 interface Props {
   proposals: PolicyProposal[];
@@ -44,6 +45,8 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
   const [onlyShowGaps, setOnlyShowGaps] = useState(false); // '정책 공백(미답변+고공감)'만 보기 토글
   const [viewMode, setViewMode] = useState<'list' | 'group'>('group'); // 그룹 보기 vs 개별 리스트 보기
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
+  const [civilModalOpen, setCivilModalOpen] = useState(false);
+  const [civilCategory, setCivilCategory] = useState('전체');
 
   // 1. 유사 제안 그룹핑 로직 (같은 카테고리 + 비슷한 키워드 핵심 단어 매칭)
   const groupedProposals = useMemo(() => {
@@ -425,9 +428,13 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                                   </div>
                                   <div className="flex items-center gap-3 text-xs text-slate-500 font-mono">
                                     {item.related_civil_requests && (
-                                       <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200" title="국민권익위원회 전국 민원 데이터 연동 결과">
-                                         🏛️ 국민권익위 민원: 약 {item.related_civil_requests.toLocaleString()}건
-                                       </span>
+                                       <button
+                                         onClick={() => { setCivilCategory(item.category); setCivilModalOpen(true); }}
+                                         className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 cursor-pointer transition-all hover:scale-105"
+                                         title="클릭하여 국민권익위원회 연동 민원 리스트 보기"
+                                       >
+                                         🏛️ 국민권익위 민원: 약 {item.related_civil_requests.toLocaleString()}건 ↗
+                                       </button>
                                      )}
                                     <span className="flex items-center gap-1 text-slate-600 font-semibold">
                                       <ThumbsUp className="w-3.5 h-3.5 text-blue-500" /> 공감 {item.vote_score}
@@ -493,38 +500,15 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="text-xs text-slate-400 font-mono">{item.reg_date}</span>
-                      {item.reply_yn === 'Y' ? (
-                        <span className="text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-100 px-2 py-0.5 rounded flex items-center gap-1 font-bold">
-                          <CheckCircle className="w-3 h-3" /> 답변완료
-                        </span>
-                      ) : (
-                        <span className="text-[10px] bg-amber-50 text-amber-700 border border-amber-100 px-2 py-0.5 rounded flex items-center gap-1 font-bold">
-                          <HelpCircle className="w-3 h-3" /> 미답변 검토중
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  <h5 className="text-sm font-bold text-slate-900 mb-1.5">{item.title}</h5>
-                  <p className="text-xs text-slate-600 leading-relaxed mb-3">{item.content}</p>
-
-                  <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-200/80">
-                    <div className="flex items-center gap-2">
-                      <span className="text-[10px] text-slate-400 font-bold uppercase">담당 유관팀</span>
-                      <div className="flex flex-wrap gap-1">
-                        {item.department.map(dept => (
-                          <span key={dept} className="text-[10px] bg-slate-50 border border-slate-200 text-slate-600 px-2 py-0.5 rounded flex items-center gap-1 font-semibold">
-                            <Building2 className="w-2.5 h-2.5 text-slate-400" />
-                            {dept}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 text-xs text-slate-500 font-mono font-bold">
+                                <div className="flex items-center gap-3 text-xs text-slate-500 font-mono font-bold">
                       {item.related_civil_requests && (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200" title="국민권익위원회 전국 민원 데이터 연동 결과">
-                          🏛️ 권익위 민원: 약 {item.related_civil_requests.toLocaleString()}건
-                        </span>
+                        <button
+                          onClick={() => { setCivilCategory(item.category); setCivilModalOpen(true); }}
+                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 cursor-pointer transition-all hover:scale-105"
+                          title="클릭하여 국민권익위원회 연동 민원 리스트 보기"
+                        >
+                          🏛️ 권익위 민원: 약 {item.related_civil_requests.toLocaleString()}건 ↗
+                        </button>
                       )}
                       <span className="flex items-center gap-1 text-slate-600">
                         <ThumbsUp className="w-3.5 h-3.5 text-blue-500" /> 공감 {item.vote_score}표
@@ -556,6 +540,12 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
           )
         )}
       </div>
+
+      <CivilRequestModal
+        isOpen={civilModalOpen}
+        category={civilCategory}
+        onClose={() => setCivilModalOpen(false)}
+      />
     </div>
   );
 };

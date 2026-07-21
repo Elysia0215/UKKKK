@@ -11,6 +11,8 @@ import { SEOUL_DISTRICTS } from '../data/mockData';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, ComposedChart, Line, Legend } from 'recharts';
 import { districtStats } from '../data/mockData';
 
+import { CivilRequestModal } from './CivilRequestModal';
+
 interface Props {
   proposals: PolicyProposal[];
   selectedDistrict: string | null;
@@ -23,6 +25,8 @@ export const DistrictComparison: React.FC<Props> = ({
   onSelectDistrict
 }) => {
   const [sortOrder, setSortOrder] = useState<'desc' | 'asc'>('desc');
+  const [civilModalOpen, setCivilModalOpen] = useState(false);
+  const [civilCategory, setCivilCategory] = useState('전체');
 
   // 자치구별 데이터 계산
   const districtData = useMemo(() => {
@@ -280,9 +284,13 @@ export const DistrictComparison: React.FC<Props> = ({
                       </div>
                       <div className="flex items-center gap-3 text-xs text-slate-500 font-mono">
                         {prop.related_civil_requests && (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200" title="국민권익위원회 전국 민원 데이터 연동 결과">
-                            🏛️ 권익위 민원: 약 {prop.related_civil_requests.toLocaleString()}건
-                          </span>
+                          <button
+                            onClick={() => { setCivilCategory(prop.category); setCivilModalOpen(true); }}
+                            className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 cursor-pointer transition-all hover:scale-105"
+                            title="클릭하여 국민권익위원회 연동 민원 리스트 보기"
+                          >
+                            🏛️ 권익위 민원: 약 {prop.related_civil_requests.toLocaleString()}건 ↗
+                          </button>
                         )}
                         <span className="flex items-center gap-1 text-slate-600">
                           <ThumbsUp className="w-3.5 h-3.5 text-blue-500" /> 공감 {prop.vote_score}

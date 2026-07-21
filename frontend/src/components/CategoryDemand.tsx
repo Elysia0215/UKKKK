@@ -7,6 +7,7 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Line, ComposedChart } from 'recharts';
 import { PolicyCategory, PolicyProposal } from '../types';
+import { CivilRequestModal } from './CivilRequestModal';
 import { 
   BarChart3, 
   ThumbsUp, 
@@ -32,6 +33,8 @@ export const CategoryDemand: React.FC<Props> = ({
   onSelectCategory
 }) => {
   const [selectedProposalId, setSelectedProposalId] = useState<string | null>(null);
+  const [civilModalOpen, setCivilModalOpen] = useState(false);
+  const [civilCategory, setCivilCategory] = useState('전체');
 
   // 카테고리별 통계 데이터 가공
   const categoryChartData = useMemo(() => {
@@ -279,7 +282,13 @@ export const CategoryDemand: React.FC<Props> = ({
                   {activeProposal.related_civil_requests && (
                     <div className="flex items-center justify-between text-[11px] text-emerald-800 font-medium pt-1 border-t border-slate-200/60">
                       <span>🏛️ 국민권익위 연동 민원:</span>
-                      <span className="font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">약 {activeProposal.related_civil_requests.toLocaleString()}건</span>
+                      <button
+                        onClick={() => { setCivilCategory(activeProposal.category); setCivilModalOpen(true); }}
+                        className="font-bold bg-emerald-50 hover:bg-emerald-100 px-2 py-0.5 rounded border border-emerald-200 cursor-pointer transition-all hover:scale-105 text-emerald-800"
+                        title="클릭하여 국민권익위 민원 리스트 보기"
+                      >
+                        약 {activeProposal.related_civil_requests.toLocaleString()}건 ↗
+                      </button>
                     </div>
                   )}
                   <div className="flex items-center justify-between pt-1 border-t border-slate-200/60">
@@ -307,6 +316,12 @@ export const CategoryDemand: React.FC<Props> = ({
           </AnimatePresence>
         </div>
       </div>
+
+      <CivilRequestModal
+        isOpen={civilModalOpen}
+        category={civilCategory}
+        onClose={() => setCivilModalOpen(false)}
+      />
     </div>
   );
 };
