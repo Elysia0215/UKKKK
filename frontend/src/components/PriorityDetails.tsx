@@ -248,7 +248,7 @@ export const PriorityDetails: React.FC<Props> = ({
 
   // 그룹 보기 필터 결과 (그룹 구성원 필터 후 빈 그룹 배제)
   const filteredGroupedProposals = useMemo(() => {
-    return groupedProposals.map(g => {
+    const list = groupedProposals.map(g => {
       const filteredItems = g.items.filter(p => {
         const matchesSearch = p.title.includes(searchTerm) || p.content.includes(searchTerm);
         const matchesYear = selectedYears.includes('전체') || selectedYears.some(y => {
@@ -271,24 +271,37 @@ export const PriorityDetails: React.FC<Props> = ({
       }).sort((a, b) => {
         if (sortBy === 'date_desc') return (b.reg_date || '').localeCompare(a.reg_date || '');
         if (sortBy === 'date_asc') return (a.reg_date || '').localeCompare(b.reg_date || '');
-        if (sortBy === 'vote_desc') return b.vote_score - a.vote_score;
-        if (sortBy === 'comment_desc') return b.comment_cnt - a.comment_cnt;
+        if (sortBy === 'vote_desc') return (b.vote_score || 0) - (a.vote_score || 0);
+        if (sortBy === 'comment_desc') return (b.comment_cnt || 0) - (a.comment_cnt || 0);
         return 0;
       });
 
       if (filteredItems.length === 0) return null;
 
-      const totalVotes = filteredItems.reduce((acc, curr) => acc + curr.vote_score, 0);
+      const totalVotes = filteredItems.reduce((acc, curr) => acc + (curr.vote_score || 0), 0);
+      const totalComments = filteredItems.reduce((acc, curr) => acc + (curr.comment_cnt || 0), 0);
       const unansweredCount = filteredItems.filter(p => p.reply_yn === 'N').length;
 
       return {
         ...g,
         items: filteredItems,
         totalVotes,
+        totalComments,
         unansweredCount
       };
-    }).filter((g): g is ProposalGroup => g !== null);
-  }, [groupedProposals, searchTerm, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, onlyShow2026Gaps]);
+    }).filter((g): g is (ProposalGroup & { totalComments: number }) => g !== null);
+
+    // 그룹 수준에서 선택된 정렬 옵션(등록일 최신/과거, 공감순, 댓글순) 반영!
+    return list.sort((ga, gb) => {
+      const repA = ga.items[0];
+      const repB = gb.items[0];
+      if (sortBy === 'date_desc') return (repB?.reg_date || '').localeCompare(repA?.reg_date || '');
+      if (sortBy === 'date_asc') return (repA?.reg_date || '').localeCompare(repB?.reg_date || '');
+      if (sortBy === 'vote_desc') return gb.totalVotes - ga.totalVotes;
+      if (sortBy === 'comment_desc') return gb.totalComments - ga.totalComments;
+      return 0;
+    });
+  }, [groupedProposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, onlyShow2026Gaps, sortBy]);
 
   const toggleGroup = (groupId: string) => {
     setExpandedGroups(prev => ({
