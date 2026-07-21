@@ -16,7 +16,8 @@ import {
   Calendar, 
   Building2, 
   MessageSquare,
-  Sparkles
+  Sparkles,
+  ExternalLink
 } from 'lucide-react';
 
 interface Props {
@@ -261,18 +262,41 @@ export const CategoryDemand: React.FC<Props> = ({
                   </div>
                 </div>
 
-                {/* 답변상태 뱃지 */}
-                <div className="flex justify-between items-center bg-slate-100 p-2.5 px-3.5 rounded-xl text-xs text-slate-700 border border-slate-200">
-                  <span className="font-bold">공식 답변 등록 상태:</span>
-                  {activeProposal.reply_yn === 'Y' ? (
-                    <span className="text-[11px] bg-emerald-50 text-emerald-800 border border-emerald-200 px-2.5 py-0.5 rounded-lg font-bold">
-                      답변 완료
-                    </span>
-                  ) : (
-                    <span className="text-[11px] bg-rose-50 text-rose-800 border border-rose-200 px-2.5 py-0.5 rounded-lg font-bold">
-                      미답변 (검토 중)
-                    </span>
+                {/* 답변상태 뱃지 및 원문 URL */}
+                <div className="flex flex-col gap-2 bg-slate-100 p-3 rounded-xl text-xs text-slate-700 border border-slate-200">
+                  <div className="flex justify-between items-center">
+                    <span className="font-bold">공식 답변 등록 상태:</span>
+                    {activeProposal.reply_yn === 'Y' ? (
+                      <span className="text-[11px] bg-emerald-50 text-emerald-800 border border-emerald-200 px-2.5 py-0.5 rounded-lg font-bold">
+                        답변 완료
+                      </span>
+                    ) : (
+                      <span className="text-[11px] bg-rose-50 text-rose-800 border border-rose-200 px-2.5 py-0.5 rounded-lg font-bold">
+                        미답변 (검토 중)
+                      </span>
+                    )}
+                  </div>
+                  {activeProposal.related_civil_requests && (
+                    <div className="flex items-center justify-between text-[11px] text-emerald-800 font-medium pt-1 border-t border-slate-200/60">
+                      <span>🏛️ 국민권익위 연동 민원:</span>
+                      <span className="font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">약 {activeProposal.related_civil_requests.toLocaleString()}건</span>
+                    </div>
                   )}
+                  <div className="flex items-center justify-between pt-1 border-t border-slate-200/60">
+                    <span className="font-bold text-slate-500">원문 링크:</span>
+                    <a
+                      href={activeProposal.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${activeProposal.id.replace('PROP-', '')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline font-medium text-xs bg-white px-2.5 py-1 rounded-md border border-blue-200 transition-colors"
+                      title={activeProposal.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${activeProposal.id.replace('PROP-', '')}`}
+                    >
+                      <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+                      <span className="truncate max-w-[220px]">
+                        {activeProposal.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${activeProposal.id.replace('PROP-', '')}`}
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ) : (
