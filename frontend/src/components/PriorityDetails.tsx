@@ -434,9 +434,13 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                                       href={item.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${item.id.replace('PROP-', '')}`}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:underline font-bold"
+                                      className="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline font-medium text-xs bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100 transition-colors"
+                                      title={item.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${item.id.replace('PROP-', '')}`}
                                     >
-                                      원문 보기 <ExternalLink className="w-3 h-3" />
+                                      <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+                                      <span className="truncate max-w-[240px]">
+                                        {item.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${item.id.replace('PROP-', '')}`}
+                                      </span>
                                     </a>
                                   </div>
                                 </div>
@@ -522,9 +526,13 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                         href={item.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${item.id.replace('PROP-', '')}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:underline"
+                        className="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline font-medium text-xs bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100 transition-colors"
+                        title={item.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${item.id.replace('PROP-', '')}`}
                       >
-                        원문 보기 <ExternalLink className="w-3 h-3" />
+                        <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+                        <span className="truncate max-w-[240px]">
+                          {item.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${item.id.replace('PROP-', '')}`}
+                        </span>
                       </a>
                     </div>
                   </div>
