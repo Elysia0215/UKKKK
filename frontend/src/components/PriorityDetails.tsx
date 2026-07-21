@@ -413,6 +413,25 @@ export const PriorityDetails: React.FC<Props> = ({
     return counts;
   }, [proposals, selectedDepts, selectedFlows, selectedCategories]);
 
+  // 3-1) 담당부서 & 생애주기 & 대분류 & 중분류 선택에 따른 3차 세분류별 건수
+  const microCatCounts = useMemo(() => {
+    const counts: Record<string, number> = { '전체': 0 };
+    proposals.forEach(p => {
+      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
+      const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
+      const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
+      const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
+      const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
+      if (matchesDept && matchesFlow && matchesCat && matchesSubCat) {
+        counts['전체'] = (counts['전체'] || 0) + 1;
+        if (p.micro_category) {
+          counts[p.micro_category] = (counts[p.micro_category] || 0) + 1;
+        }
+      }
+    });
+    return counts;
+  }, [proposals, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories]);
+
   // 4) 생애주기 & 대분류 선택에 따른 담당부서별 건수
   const deptCounts = useMemo(() => {
     const counts: Record<string, number> = { '전체': 0 };
@@ -711,19 +730,27 @@ export const PriorityDetails: React.FC<Props> = ({
             <div className="flex items-start gap-3 bg-emerald-50/40 p-2 rounded-lg border border-emerald-100 ml-4">
               <span className="text-xs font-bold text-emerald-800 w-20 flex-shrink-0 pt-1">└ 3차 세분류</span>
               <div className="flex flex-wrap gap-1.5">
-                {microCategories.map(micro => (
-                  <button
-                    key={micro}
-                    onClick={() => setSelectedMicroCategory(micro)}
-                    className={`text-xs px-2.5 py-1 rounded-md border transition font-bold ${
-                      selectedMicroCategory === micro
-                        ? 'bg-emerald-600 text-white border-emerald-700 shadow-2xs'
-                        : 'bg-white text-emerald-700 border-emerald-200 hover:bg-emerald-50'
-                    }`}
-                  >
-                    {micro}
-                  </button>
-                ))}
+                {microCategories.map(micro => {
+                  const count = microCatCounts[micro] || 0;
+                  const isDisabled = micro !== '전체' && count === 0;
+                  const isSelected = selectedMicroCategory === micro;
+                  return (
+                    <button
+                      key={micro}
+                      disabled={isDisabled}
+                      onClick={() => setSelectedMicroCategory(micro)}
+                      className={`text-xs px-2.5 py-1 rounded-md border transition font-bold cursor-pointer ${
+                        isSelected
+                          ? 'bg-emerald-600 text-white border-emerald-700 shadow-2xs'
+                          : isDisabled
+                          ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                          : 'bg-white text-emerald-700 border-emerald-200 hover:bg-emerald-50'
+                      }`}
+                    >
+                      {micro} <span className="text-[10px] opacity-80 font-normal">({count}건)</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
           )}
