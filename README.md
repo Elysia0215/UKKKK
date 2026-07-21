@@ -21,6 +21,20 @@ class_pjt/
 └── backend/                 (필요시) FastAPI
 ```
 
+## 🐍 Poetry 가상환경 설정 (팀원 공통 개발 환경)
+본 프로젝트는 팀원 간 동일한 패키지 버전을 유지하기 위해 `poetry`를 사용합니다.
+
+```bash
+# 1. Poetry 가상환경 패키지 설치
+poetry install
+
+# 2. 가상환경 진입 (셀 실행)
+poetry shell
+
+# 3. 데이터 파이프라인 또는 스크립트 실행 예시
+python scripts/04_build_dashboard_json.py
+```
+
 ## 실행 순서
 ```
 scripts/01_collect_proposals.py   -> 팀장 1명만 실행 (전체 API 수집, 1회면 충분)

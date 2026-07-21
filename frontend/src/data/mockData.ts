@@ -17,6 +17,18 @@ export interface Proposal {
   negative_signal?: boolean;
 }
 
+export interface CivilRequest {
+  id: string;
+  title: string;
+  content: string;
+  reg_date: string;
+  category: string;
+  dept: string;
+  url: string;
+}
+
+export const mockCivilRequests: CivilRequest[] = [];
+
 export interface DistrictStat {
   district_name: string;
   fertility_rate: number;

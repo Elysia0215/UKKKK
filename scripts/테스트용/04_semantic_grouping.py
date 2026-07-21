@@ -19,10 +19,12 @@ from sentence_transformers import SentenceTransformer
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics.pairwise import cosine_similarity
 
-from category_keywords import CATEGORY_KEYWORDS
+import sys
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+sys.path.append(str(BASE_DIR / "정책"))
 
-IN_PATH = Path("../data/processed/상상대로_서울_출산육아_분류완료.csv")
-OUT_PATH = Path("../data/processed/상상대로_서울_출산육아_분류완료_v2.csv")
+IN_PATH = BASE_DIR / "data" / "processed" / "상상대로_서울_출산육아_분류완료.csv"
+OUT_PATH = BASE_DIR / "data" / "processed" / "상상대로_서울_출산육아_분류완료_v2.csv"
 
 MODEL_NAME = "snunlp/KR-SBERT-V40K-klueNLI-augSTS"
 
