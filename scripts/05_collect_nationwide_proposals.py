@@ -8,6 +8,7 @@
 """
 import requests
 import pandas as pd
+import json
 import time
 from pathlib import Path
 
@@ -83,11 +84,19 @@ if __name__ == "__main__":
     df = pd.DataFrame(all_rows).drop_duplicates(subset="petiNo")
     print(f"\n전체 수집(중복제거): {len(df)}건")
 
+    # 전국 단위 전체 수집 결과도 별도 데이터셋으로 저장 (데이터 근거 증명용)
+    NATIONWIDE_OUT_PATH = BASE_DIR / "data" / "processed" / "국민신문고_전국_제안_303건.csv"
+    FINAL_JSON_PATH = BASE_DIR / "data" / "final" / "civil_requests_all.json"
+    
+    df["source"] = "국민신문고"
+    df.to_csv(NATIONWIDE_OUT_PATH, index=False, encoding="utf-8-sig")
+    print(f"\n전국 303건 저장 완료: {NATIONWIDE_OUT_PATH}")
+
     # 처리기관명에 '서울' 포함된 것만 필터링
     df_seoul = df[df["ancName"].str.contains("서울", na=False)].copy()
     print(f"서울 관련 필터링: {len(df_seoul)}건")
 
-    # 상세 본문 수집 (건수 많으면 시간 걸림 - 필요시 상위 N건만)
+    # 상세 본문 수집
     contents = []
     for i, peti_no in enumerate(df_seoul["petiNo"]):
         contents.append(fetch_detail(peti_no))
@@ -98,5 +107,26 @@ if __name__ == "__main__":
 
     df_seoul["source"] = "국민신문고"
     df_seoul.to_csv(OUT_PATH, index=False, encoding="utf-8-sig")
-    print(f"\n저장 완료: {OUT_PATH}")
+    print(f"서울관련 저장 완료: {OUT_PATH}")
     print(f"본문 확보: {df_seoul['content'].notna().sum()}/{len(df_seoul)}")
+
+    # 대시보드 모달 연동용 303건 JSON 구성
+    civil_json = []
+    for _, row in df.iterrows():
+        peti_no = str(row.get("petiNo", ""))
+        title = str(row.get("title", ""))
+        reg_date = str(row.get("regDate", "")).split(" ")[0]
+        anc_name = str(row.get("ancName", "국민권익위원회"))
+        civil_json.append({
+            "id": f"EPEO-{peti_no}",
+            "title": title,
+            "content": f"[{anc_name}] {title} - 국민신문고 전국 단위 수집 제안 원문입니다.",
+            "reg_date": reg_date,
+            "category": "보육" if "보육" in title or "육아" in title or "어린이집" in title else "임신" if "임신" in title or "난임" in title else "출산",
+            "dept": anc_name,
+            "url": "https://www.epeople.go.kr/nep/pttn/gnrlPttn/pttnSgstnLst.npaid"
+        })
+
+    with open(FINAL_JSON_PATH, "w", encoding="utf-8") as f:
+        json.dump(civil_json, f, ensure_ascii=False, indent=2)
+    print(f"civil_requests_all.json ({len(civil_json)}건) 저장 완료!")

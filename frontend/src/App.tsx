@@ -79,8 +79,7 @@ export default function App() {
       '답변여부': p.reply_yn === 'Y' ? '답변완료' : '미답변',
       '자치구': p.district,
       '담당부서': Array.isArray(p.department) ? p.department.join('; ') : p.department,
-      '원문URL': p.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${p.id.replace('PROP-', '')}`,
-      '연동 권익위 민원수': p.related_civil_requests || 0
+      '원문URL': p.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${p.id.replace('PROP-', '')}`
     }));
 
     exportToCsv(`서울시_출산정책_전체제안데이터_426건_${new Date().toISOString().split('T')[0]}.csv`, exportData);

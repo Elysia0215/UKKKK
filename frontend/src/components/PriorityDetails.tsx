@@ -7,23 +7,22 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { PolicyProposal, PolicyCategory, DepartmentName } from '../types';
 import { SEOUL_DISTRICTS } from '../data/mockData';
-import { 
-  AlertTriangle, 
-  Search, 
-  Filter, 
-  Building2, 
-  ThumbsUp, 
-  MessageSquare, 
-  CheckCircle, 
-  Layers, 
-  ChevronDown, 
-  ChevronUp, 
+import {
+  AlertTriangle,
+  Search,
+  Filter,
+  Building2,
+  ThumbsUp,
+  MessageSquare,
+  CheckCircle,
+  Layers,
+  ChevronDown,
+  ChevronUp,
   HelpCircle,
   FileSpreadsheet,
   ExternalLink,
   Download
 } from 'lucide-react';
-import { CivilRequestModal } from './CivilRequestModal';
 import { exportToCsv } from '../utils/exportCsv';
 
 interface Props {
@@ -47,76 +46,45 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
   const [onlyShowGaps, setOnlyShowGaps] = useState(false); // '정책 공백(미답변+고공감)'만 보기 토글
   const [viewMode, setViewMode] = useState<'list' | 'group'>('group'); // 그룹 보기 vs 개별 리스트 보기
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
-  const [civilModalOpen, setCivilModalOpen] = useState(false);
-  const [civilCategory, setCivilCategory] = useState('전체');
 
-  // 1. 유사 제안 그룹핑 로직 (같은 카테고리 + 비슷한 키워드 핵심 단어 매칭)
   const groupedProposals = useMemo(() => {
     const groups: ProposalGroup[] = [];
-    
-    // 키워드 규칙 정의
-    const keywordRules = [
-      { name: '산후조리원 및 보육시설 확충 현안', keywords: ['산후조리원', '공공산후조리원'], category: '출산' as PolicyCategory },
-      { name: '다자녀 카드 및 주거 혜택 기준 일원화', keywords: ['다자녀', '2자녀', '3자녀', '특별 공급'], category: '다자녀' as PolicyCategory },
-      { name: '영유아 야간/주말 응급 의료 및 소아과 확보', keywords: ['응급실', '소아과', '진료', '병원'], category: '보육' as PolicyCategory },
-      { name: '베이비 박스 및 위기 산모 익명 보호 긴급 지원', keywords: ['쉼터', '미혼모', '위기', '익명', '베이비 박스'], category: '위기임산부' as PolicyCategory },
-      { name: '영유아 물품 대여 서비스 및 키즈카페 자치구 편차 해소', keywords: ['유모차', '대여', '키즈카페', '예약'], category: '보육' as PolicyCategory },
-      { name: '다문화 가정 언어 장벽 및 보육 알림톡 개선', keywords: ['다문화', '한국어', '모국어', '알림톡', '예방접종'], category: '다문화' as PolicyCategory },
-      { name: '임산부 교통비 및 청소 대행 바우처 사용처 개선', keywords: ['바우처', '교통비', '가사', '조리원비', '출산축하금'], category: '임신' as PolicyCategory },
-    ];
+    const clusterMap = new Map<number, PolicyProposal[]>();
 
-    // 복사본 생성 후 사용
-    let remainingProposals = [...proposals];
-
-    // 규칙 기반 매칭 수행
-    keywordRules.forEach((rule, idx) => {
-      const matched: PolicyProposal[] = [];
-      const unmatched: PolicyProposal[] = [];
-
-      remainingProposals.forEach(p => {
-        const matchesCategory = p.category === rule.category;
-        const matchesKeyword = rule.keywords.some(k => 
-          p.title.includes(k) || p.content.includes(k)
-        );
-
-        if (matchesCategory && matchesKeyword) {
-          matched.push(p);
-        } else {
-          unmatched.push(p);
-        }
-      });
-
-      if (matched.length > 0) {
-        const totalVotes = matched.reduce((acc, curr) => acc + curr.vote_score, 0);
-        const unansweredCount = matched.filter(p => p.reply_yn === 'N').length;
-        
+    proposals.forEach(p => {
+      if (p.cluster_size > 1) {
+        const list = clusterMap.get(p.cluster_id) || [];
+        list.push(p);
+        clusterMap.set(p.cluster_id, list);
+      } else {
         groups.push({
-          id: `GROUP-${idx + 1}`,
-          category: rule.category,
-          keyword: rule.keywords[0],
-          name: rule.name,
-          items: matched,
-          unansweredCount,
-          totalVotes
+          id: `GROUP-SINGLE-${p.id}`,
+          category: p.category,
+          keyword: '단독',
+          name: `[단독 제안] ${p.title}`,
+          items: [p],
+          unansweredCount: p.reply_yn === 'N' ? 1 : 0,
+          totalVotes: p.vote_score,
         });
-        remainingProposals = unmatched;
       }
     });
 
-    // 매칭되지 않고 남은 단일 제안들도 자투리 그룹으로 묶거나 개별 구성
-    remainingProposals.forEach((p, idx) => {
+    clusterMap.forEach((items, clusterId) => {
+      const totalVotes = items.reduce((acc, curr) => acc + curr.vote_score, 0);
+      const unansweredCount = items.filter(p => p.reply_yn === 'N').length;
+      const representative = [...items].sort((a, b) => b.vote_score - a.vote_score)[0];
+
       groups.push({
-        id: `GROUP-SINGLE-${p.id}`,
-        category: p.category,
-        keyword: '기타',
-        name: `[단독 제안] ${p.title}`,
-        items: [p],
-        unansweredCount: p.reply_yn === 'N' ? 1 : 0,
-        totalVotes: p.vote_score
+        id: `GROUP-${clusterId}`,
+        category: representative.category,
+        keyword: '유사그룹',
+        name: `[유사 제안 ${items.length}건 묶음] ${representative.title}`,
+        items,
+        unansweredCount,
+        totalVotes,
       });
     });
 
-    // 정렬: 미답변 수 많고, 총 공감수 높은 순
     return groups.sort((a, b) => {
       if (b.unansweredCount !== a.unansweredCount) {
         return b.unansweredCount - a.unansweredCount;
@@ -187,7 +155,9 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
   ];
 
   const handleExportProposals = () => {
-    const listToExport = filteredProposals.length > 0 ? filteredProposals : proposals;
+    const listToExport = viewMode === 'group'
+      ? filteredGroupedProposals.flatMap(g => g.items)
+      : filteredListProposals;
     const exportData = listToExport.map(p => ({
       '제안ID': p.id,
       '카테고리': p.category,
@@ -233,11 +203,10 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
             {/* 정책 공백 핫필터 */}
             <button
               onClick={() => setOnlyShowGaps(!onlyShowGaps)}
-              className={`text-xs font-bold px-3 py-2 rounded-lg border flex items-center gap-1.5 transition ${
-                onlyShowGaps 
-                  ? 'bg-rose-50 text-rose-700 border-rose-300 ring-2 ring-rose-200/50 shadow-2xs' 
+              className={`text-xs font-bold px-3 py-2 rounded-lg border flex items-center gap-1.5 transition ${onlyShowGaps
+                  ? 'bg-rose-50 text-rose-700 border-rose-300 ring-2 ring-rose-200/50 shadow-2xs'
                   : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 shadow-2xs'
-              }`}
+                }`}
             >
               <AlertTriangle className={`w-4 h-4 ${onlyShowGaps ? 'text-rose-600' : 'text-slate-400'}`} />
               정책 공백만 선별 (공감 150표 이상 + 미답변)
@@ -247,22 +216,20 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
             <div className="bg-slate-100 p-0.5 rounded-lg border border-slate-200 flex">
               <button
                 onClick={() => setViewMode('group')}
-                className={`text-xs px-3 py-1.5 rounded-md font-bold transition ${
-                  viewMode === 'group' 
-                    ? 'bg-white text-slate-800 shadow-xs' 
+                className={`text-xs px-3 py-1.5 rounded-md font-bold transition ${viewMode === 'group'
+                    ? 'bg-white text-slate-800 shadow-xs'
                     : 'text-slate-500 hover:text-slate-800'
-                }`}
+                  }`}
               >
                 <Layers className="w-3.5 h-3.5 inline mr-1" />
                 유사 제안 그룹화
               </button>
               <button
                 onClick={() => setViewMode('list')}
-                className={`text-xs px-3 py-1.5 rounded-md font-bold transition ${
-                  viewMode === 'list' 
-                    ? 'bg-white text-slate-800 shadow-xs' 
+                className={`text-xs px-3 py-1.5 rounded-md font-bold transition ${viewMode === 'list'
+                    ? 'bg-white text-slate-800 shadow-xs'
                     : 'text-slate-500 hover:text-slate-800'
-                }`}
+                  }`}
               >
                 <FileSpreadsheet className="w-3.5 h-3.5 inline mr-1" />
                 개별 리스트
@@ -271,18 +238,18 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
           </div>
         </div>
 
-        {/* 상세 선택 드롭다운 그리드 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3 border-t border-slate-200/80">
-          <div className="flex items-center gap-3">
-            <span className="text-xs font-bold text-slate-500 w-16 flex-shrink-0">정책분류</span>
+        {/* 상세 선택 필터 (정책분류 + 담당부서, 칩 형태로 통일) */}
+        <div className="space-y-3 pt-3 border-t border-slate-200/80">
+          <div className="flex items-start gap-3">
+            <span className="text-xs font-bold text-slate-500 w-16 flex-shrink-0 pt-1">정책분류</span>
             <div className="flex flex-wrap gap-1.5">
               {categories.map(cat => (
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
                   className={`text-xs px-2.5 py-1 rounded-full border transition font-bold ${
-                    selectedCategory === cat 
-                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs' 
+                    selectedCategory === cat
+                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
                       : 'bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-300'
                   }`}
                 >
@@ -292,17 +259,23 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
-            <span className="text-xs font-bold text-slate-500 w-16 flex-shrink-0">담당부서</span>
-            <select
-              value={selectedDept}
-              onChange={(e) => setSelectedDept(e.target.value)}
-              className="text-xs bg-white border border-slate-200 rounded-lg p-1.5 focus:outline-none focus:ring-1 focus:ring-[#0A2351]/50 font-semibold"
-            >
+          <div className="flex items-start gap-3">
+            <span className="text-xs font-bold text-slate-500 w-16 flex-shrink-0 pt-1">담당부서</span>
+            <div className="flex flex-wrap gap-1.5">
               {departments.map(dept => (
-                <option key={dept} value={dept}>{dept}</option>
+                <button
+                  key={dept}
+                  onClick={() => setSelectedDept(dept)}
+                  className={`text-xs px-2.5 py-1 rounded-full border transition font-bold ${
+                    selectedDept === dept
+                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
+                      : 'bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-300'
+                  }`}
+                >
+                  {dept}
+                </button>
               ))}
-            </select>
+            </div>
           </div>
         </div>
       </div>
@@ -332,33 +305,30 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
               const isExpanded = !!expandedGroups[group.id];
               const isSingle = group.id.startsWith('GROUP-SINGLE-');
               const hasGaps = group.unansweredCount > 0;
-              
+
               return (
                 <motion.div
                   key={group.id}
                   layout
-                  className={`bg-white rounded-xl border shadow-xs overflow-hidden transition-all duration-200 ${
-                    hasGaps && !isSingle 
-                      ? 'border-rose-200 ring-1 ring-rose-50/50' 
+                  className={`bg-white rounded-xl border shadow-xs overflow-hidden transition-all duration-200 ${hasGaps && !isSingle
+                      ? 'border-rose-200 ring-1 ring-rose-50/50'
                       : 'border-slate-200'
-                  }`}
+                    }`}
                 >
                   {/* 그룹 마스터 바 */}
-                  <div 
+                  <div
                     onClick={() => toggleGroup(group.id)}
-                    className={`p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 cursor-pointer select-none transition ${
-                      hasGaps && !isSingle ? 'bg-rose-50/20 hover:bg-rose-50/50' : 'bg-slate-50/50 hover:bg-slate-100/30'
-                    }`}
+                    className={`p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 cursor-pointer select-none transition ${hasGaps && !isSingle ? 'bg-rose-50/20 hover:bg-rose-50/50' : 'bg-slate-50/50 hover:bg-slate-100/30'
+                      }`}
                   >
                     <div className="flex items-start sm:items-center gap-3">
-                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                        group.category === '출산' ? 'bg-pink-100 text-pink-700' :
-                        group.category === '보육' ? 'bg-indigo-100 text-indigo-700' :
-                        group.category === '다자녀' ? 'bg-purple-100 text-purple-700' :
-                        group.category === '위기임산부' ? 'bg-rose-100 text-rose-700 border border-rose-200' :
-                        group.category === '다문화' ? 'bg-orange-100 text-orange-700' :
-                        'bg-blue-100 text-blue-700'
-                      }`}>
+                      <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${group.category === '출산' ? 'bg-pink-100 text-pink-700' :
+                          group.category === '보육' ? 'bg-indigo-100 text-indigo-700' :
+                            group.category === '다자녀' ? 'bg-purple-100 text-purple-700' :
+                              group.category === '위기임산부' ? 'bg-rose-100 text-rose-700 border border-rose-200' :
+                                group.category === '다문화' ? 'bg-orange-100 text-orange-700' :
+                                  'bg-blue-100 text-blue-700'
+                        }`}>
                         {group.category}
                       </span>
                       <div>
@@ -411,11 +381,10 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                             return (
                               <div
                                 key={item.id}
-                                className={`p-4 rounded-lg border transition ${
-                                  isGap 
-                                    ? 'bg-rose-50/50 border-rose-200 shadow-sm' 
+                                className={`p-4 rounded-lg border transition ${isGap
+                                    ? 'bg-rose-50/50 border-rose-200 shadow-sm'
                                     : 'bg-slate-50/50 border-slate-100 hover:border-slate-200'
-                                }`}
+                                  }`}
                               >
                                 <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                                   <div className="flex items-center gap-2">
@@ -457,15 +426,6 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                                     </div>
                                   </div>
                                   <div className="flex items-center gap-3 text-xs text-slate-500 font-mono">
-                                    {item.related_civil_requests && (
-                                       <button
-                                         onClick={() => { setCivilCategory(item.category); setCivilModalOpen(true); }}
-                                         className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 cursor-pointer transition-all hover:scale-105"
-                                         title="클릭하여 국민권익위원회 연동 민원 리스트 보기"
-                                       >
-                                         🏛️ 국민권익위 민원: 약 {item.related_civil_requests.toLocaleString()}건 ↗
-                                       </button>
-                                     )}
                                     <span className="flex items-center gap-1 text-slate-600 font-semibold">
                                       <ThumbsUp className="w-3.5 h-3.5 text-blue-500" /> 공감 {item.vote_score}
                                     </span>
@@ -509,11 +469,10 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
               return (
                 <div
                   key={item.id}
-                  className={`bg-white p-5 rounded-xl border shadow-xs transition ${
-                    isGap 
-                      ? 'border-rose-300 ring-1 ring-rose-50 bg-rose-50/5' 
+                  className={`bg-white p-5 rounded-xl border shadow-xs transition ${isGap
+                      ? 'border-rose-300 ring-1 ring-rose-50 bg-rose-50/5'
                       : 'border-slate-200'
-                  }`}
+                    }`}
                 >
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <div className="flex items-center gap-2">
@@ -558,15 +517,6 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                       </div>
                     </div>
                     <div className="flex items-center gap-3 text-xs text-slate-500 font-mono font-bold">
-                      {item.related_civil_requests && (
-                        <button
-                          onClick={() => { setCivilCategory(item.category); setCivilModalOpen(true); }}
-                          className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 cursor-pointer transition-all hover:scale-105"
-                          title="클릭하여 국민권익위원회 연동 민원 리스트 보기"
-                        >
-                          🏛️ 권익위 민원: 약 {item.related_civil_requests.toLocaleString()}건 ↗
-                        </button>
-                      )}
                       <span className="flex items-center gap-1 text-slate-600">
                         <ThumbsUp className="w-3.5 h-3.5 text-blue-500" /> 공감 {item.vote_score}표
                       </span>
@@ -597,12 +547,6 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
           )
         )}
       </div>
-
-      <CivilRequestModal
-        isOpen={civilModalOpen}
-        category={civilCategory}
-        onClose={() => setCivilModalOpen(false)}
-      />
     </div>
   );
 };
