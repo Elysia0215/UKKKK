@@ -29,6 +29,10 @@ import { CategoryDemand } from './components/CategoryDemand';
 import { PriorityDetails } from './components/PriorityDetails';
 import { MongttangList } from './components/MongttangList';
 import { ClusterVolumeMap } from './components/ClusterVolumeMap';
+import { SeoulMap } from './components/SeoulMap';
+import { StatCharts } from './components/StatCharts';
+import { PolicyExplorer } from './components/PolicyExplorer';
+import { SEOUL_DISTRICTS_DATA, DistrictData } from './data/seoulData';
 
 import { exportToCsv } from './utils/exportCsv';
 
@@ -38,6 +42,11 @@ export default function App() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedSubCategory, setSelectedSubCategory] = useState<string | null>(null);
   const [selectedClusterId, setSelectedClusterId] = useState<number | null>(null);
+  const [selectedPublicDistrict, setSelectedPublicDistrict] = useState<DistrictData>(
+    SEOUL_DISTRICTS_DATA.find((d) => d.name === '송파구') || SEOUL_DISTRICTS_DATA[0]
+  );
+  const [publicColorMetric, setPublicColorMetric] = useState<'proposals' | 'births' | 'daycare' | 'fertility' | 'demandScore'>('fertility');
+  const [publicSortBy, setPublicSortBy] = useState<'name' | 'value'>('value');
 
   // 실시간 통계 연산
   const stats = useMemo<DashboardStats>(() => {
@@ -52,6 +61,20 @@ export default function App() {
       avgVoteScore,
       unansweredCount,
       unansweredRate
+    };
+  }, []);
+
+  const publicStats = useMemo(() => {
+    const totalProposals = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.proposals, 0);
+    const totalBirths = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.births2024, 0);
+    const totalDaycare = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.daycare2025, 0);
+    const avgFertility = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.fertilityRate, 0) / SEOUL_DISTRICTS_DATA.length;
+
+    return {
+      totalProposals,
+      totalBirths,
+      totalDaycare,
+      avgFertility
     };
   }, []);
 
@@ -213,6 +236,18 @@ export default function App() {
               <TrendingUp className="w-4 h-4 text-emerald-500" />
               군집 볼륨 분석 (클러스터 맵)
             </button>
+
+            <button
+              onClick={() => setActiveTab(6)}
+              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
+                activeTab === 6
+                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
+                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
+              }`}
+            >
+              <FileSpreadsheet className="w-4 h-4 text-indigo-500" />
+              공공데이터 지표 분석
+            </button>
           </nav>
         </div>
       </div>
@@ -271,6 +306,120 @@ export default function App() {
                 onSelectCluster={handleSelectCluster}
               />
             )}
+
+            {activeTab === 6 && (
+              <div className="space-y-6">
+                <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
+                    <p className="text-[11px] text-slate-500 uppercase tracking-[0.18em] font-semibold">서울시 연간 총 출생아 수</p>
+                    <p className="mt-3 text-2xl font-extrabold text-slate-900">{publicStats.totalBirths.toLocaleString()}</p>
+                    <p className="text-xs text-slate-400">명 / 2024</p>
+                  </div>
+
+                  <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
+                    <p className="text-[11px] text-slate-500 uppercase tracking-[0.18em] font-semibold">서울시 총 보육시설 수</p>
+                    <p className="mt-3 text-2xl font-extrabold text-slate-900">{publicStats.totalDaycare.toLocaleString()}</p>
+                    <p className="text-xs text-slate-400">개소 / 2025</p>
+                  </div>
+
+                  <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
+                    <p className="text-[11px] text-slate-500 uppercase tracking-[0.18em] font-semibold">서울시 평균 합계출산율</p>
+                    <p className="mt-3 text-2xl font-extrabold text-slate-900">{publicStats.avgFertility.toFixed(3)}</p>
+                    <p className="text-xs text-slate-400">자치구별 평균</p>
+                  </div>
+
+                  <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
+                    <p className="text-[11px] text-slate-500 uppercase tracking-[0.18em] font-semibold">누적 시민 제안 건수</p>
+                    <p className="mt-3 text-2xl font-extrabold text-slate-900">{publicStats.totalProposals}</p>
+                    <p className="text-xs text-slate-400">서울시 정책 제안</p>
+                  </div>
+                </section>
+
+                <section className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                  <div className="lg:col-span-5 space-y-5">
+                    <div className="bg-white rounded-xl border border-slate-200 shadow-xs p-5">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+                        <div>
+                          <p className="text-xs text-slate-500 uppercase tracking-[0.2em] font-semibold">메트릭 필터</p>
+                          <h2 className="text-lg font-bold text-slate-900 mt-2">지도 기반 정책 수요 시각화</h2>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => setPublicSortBy(publicSortBy === 'name' ? 'value' : 'name')}
+                          className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-bold text-slate-600 hover:bg-slate-100"
+                        >
+                          정렬: {publicSortBy === 'name' ? '자치구명' : '수치 순'}
+                        </button>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-2">
+                        {[
+                          { id: 'fertility', label: '합계출산율' },
+                          { id: 'births', label: '출생아 수' },
+                          { id: 'daycare', label: '보육시설 수' },
+                          { id: 'demandScore', label: '정책 수요 점수' },
+                        ].map((item) => (
+                          <button
+                            key={item.id}
+                            type="button"
+                            onClick={() => setPublicColorMetric(item.id as typeof publicColorMetric)}
+                            className={`rounded-lg border px-3 py-2 text-sm font-semibold transition ${
+                              publicColorMetric === item.id
+                                ? 'bg-[#0A2351] text-white border-[#0A2351]'
+                                : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+                            }`}
+                          >
+                            {item.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    <SeoulMap
+                      selectedDistrict={selectedPublicDistrict}
+                      onSelectDistrict={setSelectedPublicDistrict}
+                      colorMetric={publicColorMetric}
+                      showBackground={true}
+                      sortBy={publicSortBy}
+                    />
+                  </div>
+
+                  <div className="lg:col-span-7 space-y-6">
+                    <div className="bg-[#0A2351] text-white rounded-xl p-6 shadow-md border border-slate-800 relative overflow-hidden">
+                      <span className="text-[11px] uppercase text-blue-200 tracking-[0.3em] font-bold">Selected district</span>
+                      <h2 className="text-3xl font-black text-white mt-4">{selectedPublicDistrict.name}</h2>
+                      <p className="mt-3 text-sm text-slate-200 max-w-2xl">
+                        선택된 자치구의 출생아 수, 보육시설 현황, 합계출산율, 정책 수요지수를 함께 확인합니다.
+                      </p>
+                      <div className="mt-6 grid grid-cols-2 gap-3">
+                        <div className="rounded-xl bg-white/10 border border-white/10 p-4">
+                          <p className="text-[10px] uppercase text-slate-300 tracking-[0.25em]">출생아 수</p>
+                          <p className="mt-3 text-2xl font-bold">{selectedPublicDistrict.births2024.toLocaleString()}</p>
+                          <p className="text-xs text-slate-300">명 / 2024</p>
+                        </div>
+                        <div className="rounded-xl bg-white/10 border border-white/10 p-4">
+                          <p className="text-[10px] uppercase text-slate-300 tracking-[0.25em]">보육시설</p>
+                          <p className="mt-3 text-2xl font-bold">{selectedPublicDistrict.daycare2025.toLocaleString()}</p>
+                          <p className="text-xs text-slate-300">개소 / 2025</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="h-[480px]">
+                      <StatCharts
+                        selectedDistrict={selectedPublicDistrict}
+                        onSelectDistrict={setSelectedPublicDistrict}
+                        colorMetric={publicColorMetric}
+                      />
+                    </div>
+
+                    <div className="h-[680px]">
+                      <PolicyExplorer selectedDistrict={selectedPublicDistrict} />
+                    </div>
+                  </div>
+                </section>
+              </div>
+            )}
           </motion.div>
         </AnimatePresence>
       </main>
@@ -293,4 +442,3 @@ export default function App() {
     </div>
   );
 }
-

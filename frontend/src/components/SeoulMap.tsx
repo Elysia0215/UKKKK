@@ -1,0 +1,191 @@
+import React, { useMemo, useState, useEffect } from 'react';
+import { DistrictData, SEOUL_DISTRICTS_DATA } from '../data/seoulData';
+import { ChevronRight, MapPin } from 'lucide-react';
+
+interface Props {
+  selectedDistrict: DistrictData;
+  onSelectDistrict: (district: DistrictData) => void;
+  colorMetric: 'proposals' | 'births' | 'daycare' | 'fertility' | 'demandScore';
+  showBackground: boolean;
+  sortBy: 'name' | 'value';
+}
+
+const metricFill = {
+  proposals: ['#eff6ff', '#c7d2fe', '#a5b4fc', '#818cf8', '#6366f1'],
+  births: ['#ecfdf5', '#bbf7d0', '#86efac', '#4ade80', '#22c55e'],
+  daycare: ['#fffbeb', '#fde68a', '#fcd34d', '#fbbf24', '#f59e0b'],
+  fertility: ['#f0f9ff', '#bae6fd', '#7dd3fc', '#38bdf8', '#0ea5e9'],
+  demandScore: ['#fff1f2', '#fecdd3', '#fda4af', '#fb7185', '#f43f5e'],
+};
+
+const getMetricValue = (district: DistrictData, metric: Props['colorMetric']) => {
+  switch (metric) {
+    case 'proposals':
+      return district.proposals;
+    case 'births':
+      return district.births2024;
+    case 'daycare':
+      return district.daycare2025;
+    case 'demandScore':
+      return district.demandScore;
+    case 'fertility':
+      return district.fertilityRate;
+    default:
+      return 0;
+  }
+};
+
+export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, colorMetric, showBackground, sortBy }) => {
+  const [tooltip, setTooltip] = useState<{ x: number; y: number; text: string } | null>(null);
+
+  const metricBounds = useMemo(() => {
+    const values = SEOUL_DISTRICTS_DATA.map((district) => getMetricValue(district, colorMetric));
+    const min = Math.min(...values);
+    const max = Math.max(...values);
+    return { min, max };
+  }, [colorMetric]);
+
+  const sortedDistricts = useMemo(() => {
+    const list = [...SEOUL_DISTRICTS_DATA];
+    if (sortBy === 'name') {
+      return list.sort((a, b) => a.name.localeCompare(b.name, 'ko'));
+    }
+    return list.sort((a, b) => getMetricValue(b, colorMetric) - getMetricValue(a, colorMetric));
+  }, [colorMetric, sortBy]);
+
+  useEffect(() => {
+    const onScroll = () => setTooltip(null);
+    window.addEventListener('scroll', onScroll, true);
+    return () => window.removeEventListener('scroll', onScroll, true);
+  }, []);
+
+  const getFill = (district: DistrictData) => {
+    const value = getMetricValue(district, colorMetric);
+    const ratio = metricBounds.max === metricBounds.min ? 0 : (value - metricBounds.min) / (metricBounds.max - metricBounds.min);
+    const index = Math.min(4, Math.max(0, Math.floor(ratio * 4)));
+    return metricFill[colorMetric][index];
+  };
+
+  const topDistricts = sortedDistricts.slice(0, 6);
+
+  return (
+    <div className="relative w-full h-full">
+      <div className="rounded-[32px] overflow-hidden border border-slate-200 bg-white shadow-sm">
+        <div className="bg-slate-950 text-white px-5 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div>
+            <div className="text-[11px] uppercase text-slate-400 tracking-[0.32em] font-semibold">서울시 자치구 클릭형 지도</div>
+            <h2 className="mt-2 text-lg font-bold">{colorMetric === 'proposals' ? '시민 제안 건수' : colorMetric === 'births' ? '2024 출생아 수' : colorMetric === 'daycare' ? '2025 보육시설 수' : colorMetric === 'demandScore' ? '정책 수요 지수' : '합계출산율'} 기준</h2>
+          </div>
+          <div className="text-right text-[11px] text-slate-400">
+            <p>{selectedDistrict.name} 선택됨</p>
+            <p className="mt-1 text-slate-300">선택하면 오른쪽 데이터 패널에 반영됩니다.</p>
+          </div>
+        </div>
+
+        <svg viewBox="0 0 520 420" className="w-full h-[420px] bg-slate-50" role="img" aria-label="서울시 자치구 지도">
+          {showBackground && (
+            <g opacity="0.18">
+              <rect x="8" y="8" width="504" height="404" rx="30" fill="#0f172a" />
+              <g stroke="#cbd5e1" strokeWidth="1" strokeDasharray="4 4">
+                <line x1="40" y1="50" x2="480" y2="50" />
+                <line x1="40" y1="130" x2="480" y2="130" />
+                <line x1="40" y1="210" x2="480" y2="210" />
+                <line x1="40" y1="290" x2="480" y2="290" />
+                <line x1="40" y1="370" x2="480" y2="370" />
+              </g>
+            </g>
+          )}
+
+          <rect x="20" y="20" width="480" height="380" rx="24" fill="transparent" stroke="#cbd5e1" strokeWidth="1.5" />
+          <text x="34" y="42" fontSize="12" fontWeight="700" fill="#0f172a">서울 자치구 맞춤형 정책 지표 맵</text>
+          <text x="34" y="58" fontSize="10" fill="#475569">한강은 제외하고 자치구 영역에 집중한 시각화입니다.</text>
+
+          {SEOUL_DISTRICTS_DATA.map((district) => {
+            const isSelected = district.name === selectedDistrict.name;
+            return (
+              <g
+                key={district.name}
+                className="cursor-pointer"
+                tabIndex={0}
+                role="button"
+                onClick={() => onSelectDistrict(district)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    onSelectDistrict(district);
+                  }
+                }}
+                onMouseEnter={(event) => {
+                  const rect = (event.currentTarget as SVGGElement).getBoundingClientRect();
+                  setTooltip({
+                    x: rect.right + 12,
+                    y: rect.top,
+                    text: `${district.name} · ${getMetricValue(district, colorMetric).toLocaleString()} ${colorMetric === 'fertility' ? '' : colorMetric === 'demandScore' ? '점' : colorMetric === 'proposals' ? '건' : colorMetric === 'births' ? '명' : '개소'}`,
+                  });
+                }}
+                onMouseLeave={() => setTooltip(null)}
+              >
+                <path
+                  d={district.path}
+                  fill={getFill(district)}
+                  stroke={isSelected ? '#0f172a' : '#64748b'}
+                  strokeWidth={isSelected ? 2.5 : 1}
+                  opacity="0.96"
+                />
+                <text x={district.labelX} y={district.labelY} fontSize="9.5" fontWeight="700" fill="#0f172a">
+                  {district.name}
+                </text>
+              </g>
+            );
+          })}
+        </svg>
+
+        <div className="px-5 pb-5 pt-4">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+            {topDistricts.map((district) => (
+              <button
+                key={district.name}
+                type="button"
+                onClick={() => onSelectDistrict(district)}
+                className={`rounded-2xl border px-4 py-3 text-left transition ${
+                  district.name === selectedDistrict.name
+                    ? 'border-indigo-600 bg-indigo-50 text-slate-900 shadow-sm'
+                    : 'border-slate-200 bg-white text-slate-700 hover:border-indigo-300 hover:bg-slate-50'
+                }`}
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-sm font-semibold">{district.name}</span>
+                  <span className="text-[11px] text-slate-500 uppercase tracking-[0.18em]">TOP</span>
+                </div>
+                <p className="mt-2 text-xs text-slate-500">
+                  {colorMetric === 'proposals' ? `${district.proposals}건 제안` :
+                    colorMetric === 'births' ? `${district.births2024.toLocaleString()}명 출생` :
+                    colorMetric === 'daycare' ? `${district.daycare2025.toLocaleString()}개소` :
+                    colorMetric === 'demandScore' ? `${district.demandScore}점` :
+                    `합계출산율 ${district.fertilityRate.toFixed(3)}`}
+                </p>
+              </button>
+            ))}
+          </div>
+          <div className="mt-4 rounded-3xl border border-slate-200 bg-slate-50 p-4 flex items-center gap-3">
+            <MapPin className="w-5 h-5 text-indigo-600" />
+            <div>
+              <p className="text-xs text-slate-500">현재 선택된 자치구</p>
+              <p className="text-sm font-semibold text-slate-900">{selectedDistrict.name}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {tooltip && (
+        <div className="absolute z-50" style={{ left: tooltip.x, top: tooltip.y, transform: 'translateY(-8px)' }}>
+          <div className="rounded-2xl border border-slate-200 bg-slate-950 px-3 py-2 text-xs text-white shadow-xl">
+            {tooltip.text}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default SeoulMap;
