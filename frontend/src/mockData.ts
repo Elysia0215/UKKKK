@@ -35601,7 +35601,7 @@ export function extractTopKeywords(proposals: PolicyProposal[], limit = 30): { k
   return sorted.slice(0, limit);
 }
 
-export function getDepartmentStats(proposals: PolicyProposal[]): { name: string; total: number; unanswered: number; rate: number }[] {
+export function getDepartmentStats(proposals: PolicyProposal[]): { name: string; total: number; answered: number; unanswered: number; rate: number }[] {
   const stats: Record<string, { total: number; unanswered: number }> = {};
   proposals.forEach(p => {
     const primaryDept = p.department_rankings?.[0]?.dept_name || (Array.isArray(p.department) ? p.department[0] : '미지정');
@@ -35617,6 +35617,7 @@ export function getDepartmentStats(proposals: PolicyProposal[]): { name: string;
   return Object.entries(stats).map(([name, val]) => ({
     name,
     total: val.total,
+    answered: val.total - val.unanswered,
     unanswered: val.unanswered,
     rate: val.total > 0 ? Math.round((val.unanswered / val.total) * 100) : 0
   })).sort((a, b) => b.total - a.total);

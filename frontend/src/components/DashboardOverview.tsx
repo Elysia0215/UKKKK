@@ -49,6 +49,12 @@ export const DashboardOverview: React.FC<Props> = ({
   const [keywordLimit, setKeywordLimit] = React.useState<number>(10);
   const topKeywords = extractTopKeywords(proposals, keywordLimit);
   const deptStats = getDepartmentStats(proposals);
+  const deptStatsProcessed = React.useMemo(() => {
+    return deptStats.map(d => ({
+      ...d,
+      answered: Math.max(0, d.total - d.unanswered)
+    }));
+  }, [deptStats]);
 
   // 카테고리별 데이터 산출
   const categoryCount = proposals.reduce((acc, curr) => {
@@ -292,38 +298,30 @@ export const DashboardOverview: React.FC<Props> = ({
             
             <div className="h-[185px] w-full">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={deptStats} margin={{ top: 10, right: 10, left: -25, bottom: 5 }}>
+                <BarChart data={deptStatsProcessed} margin={{ top: 10, right: 10, left: -25, bottom: 5 }}>
                   <XAxis dataKey="name" tick={{ fontSize: 9 }} />
                   <YAxis tick={{ fontSize: 9 }} />
                   <Tooltip 
                     contentStyle={{ borderRadius: '6px', fontSize: '11px', fontWeight: 'bold' }}
-                    formatter={(value, name) => [
+                    formatter={(value: any, name: any) => [
                       `${value}건`, 
-                      name === 'count' ? '총 접수' : '미답변'
+                      name === 'answered' ? '답변 완료' : '미답변 (검토 중)'
                     ]}
                   />
-                  <Bar dataKey="count" name="총 접수" fill="#6366f1" radius={[3, 3, 0, 0]}>
-                    {deptStats.map((entry, index) => (
-                      <Cell key={`cell-total-${index}`} fill={entry.unanswered > 0 ? '#818cf8' : '#cbd5e1'} />
-                    ))}
-                  </Bar>
-                  <Bar dataKey="unanswered" name="미답변" fill="#f43f5e" radius={[3, 3, 0, 0]} />
+                  <Bar dataKey="answered" name="답변 완료" stackId="dept" fill="#cbd5e1" radius={[0, 0, 2, 2]} />
+                  <Bar dataKey="unanswered" name="미답변" stackId="dept" fill="#f43f5e" radius={[3, 3, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
             
-            <div className="mt-2 flex flex-wrap items-center justify-center gap-3 text-[10px] font-bold">
-              <div className="flex items-center gap-1">
-                <span className="w-2.5 h-2.5 bg-slate-300 rounded-xs" />
-                <span className="text-slate-500">답변 완료</span>
+            <div className="mt-2 flex flex-wrap items-center justify-center gap-4 text-[10px] font-bold">
+              <div className="flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 bg-[#cbd5e1] rounded-xs" />
+                <span className="text-slate-600">답변 완료</span>
               </div>
-              <div className="flex items-center gap-1">
-                <span className="w-2.5 h-2.5 bg-[#818cf8] rounded-xs" />
-                <span className="text-slate-500">미답변 포함</span>
-              </div>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 bg-[#f43f5e] rounded-xs" />
-                <span className="text-slate-500">긴급 미답변</span>
+                <span className="text-slate-600">미답변 (긴급 검토)</span>
               </div>
             </div>
           </div>
