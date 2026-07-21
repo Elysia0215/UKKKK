@@ -1,0 +1,106 @@
+{
+  "total_policy_count": 322,
+  "category_metrics": [
+    {
+      "Category": "기타",
+      "total_count": 132,
+      "avg_demand_score": 0.0
+    },
+    {
+      "Category": "다문화",
+      "total_count": 11,
+      "avg_demand_score": 22.7
+    },
+    {
+      "Category": "다자녀",
+      "total_count": 8,
+      "avg_demand_score": 12.5
+    },
+    {
+      "Category": "보육",
+      "total_count": 64,
+      "avg_demand_score": 28.4
+    },
+    {
+      "Category": "위기임산부",
+      "total_count": 23,
+      "avg_demand_score": 21.3
+    },
+    {
+      "Category": "임신",
+      "total_count": 37,
+      "avg_demand_score": 33.0
+    },
+    {
+      "Category": "출산",
+      "total_count": 47,
+      "avg_demand_score": 24.9
+    }
+  ],
+  "department_metrics": [
+    {
+      "Department": "기타부서",
+      "count": 124
+    },
+    {
+      "Department": "돌봄사업팀",
+      "count": 65
+    },
+    {
+      "Department": "가족건강팀",
+      "count": 35
+    },
+    {
+      "Department": "건강임신지원팀",
+      "count": 30
+    },
+    {
+      "Department": "저출생사업1팀",
+      "count": 28
+    },
+    {
+      "Department": "가족지원팀",
+      "count": 26
+    },
+    {
+      "Department": "다문화지원팀",
+      "count": 11
+    },
+    {
+      "Department": "아동보호팀",
+      "count": 3
+    }
+  ],
+  "top_demand_policies": [
+    {
+      "사업명": "영아종일제 아이돌봄 서비스",
+      "Category": "보육",
+      "Department": "돌봄사업팀",
+      "DemandScore": 100
+    },
+    {
+      "사업명": "산모?신생아 건강관리 서비스 지원",
+      "Category": "출산",
+      "Department": "가족건강팀",
+      "DemandScore": 100
+    },
+    {
+      "사업명": "질병감염 아동돌봄 서비스",
+      "Category": "보육",
+      "Department": "돌봄사업팀",
+      "DemandScore": 100
+    },
+    {
+      "사업명": "시간제 아이돌봄 서비스",
+      "Category": "보육",
+      "Department": "돌봄사업팀",
+      "DemandScore": 100
+    },
+    {
+      "사업명": "산모?신생아 건강관리 지원사업",
+      "Category": "출산",
+      "Department": "가족건강팀",
+      "DemandScore": 100
+    }
+  ]
+}
