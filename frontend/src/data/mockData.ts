@@ -222,7 +222,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202432",
     "title": "서울시 양육지원 서비스 이용대상 확대 및 종로구 백일·돌상 촬영공간 조성 건의",
-    "content": "서울시 양육지원 서비스 이용대상 확대 및 종로구 백일·돌상 촬영공간 조성 건의",
+    "content": "\uc11c\uc6b8\uc2dc \uc591\uc721\uc9c0\uc6d0 \uc11c\ube44\uc2a4 \uc774\uc6a9\ub300\uc0c1 \ud655\ub300 \ubc0f \uc885\ub85c\uad6c \ubc31\uc77c\u00b7\ub3cc\uc0c1 \ucd2c\uc601\uacf5\uac04 \uc870\uc131 \uac74\uc758",
     "reg_date": "2026-07-21",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -278,7 +278,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202418",
     "title": "임산부 스마트 배려 뱃지 도입 제안",
-    "content": "임산부 스마트 배려 뱃지 도입 제안",
+    "content": "\uc784\uc0b0\ubd80 \uc2a4\ub9c8\ud2b8 \ubc30\ub824 \ubc43\uc9c0 \ub3c4\uc785 \uc81c\uc548",
     "reg_date": "2026-07-19",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -375,7 +375,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202389",
     "title": "친환경 수열 에너지 및 빗물 순환 기술을 적용한 '[자양한강도서관] 유수지 복합 스포츠센터(아이스링크)' 건립 제안",
-    "content": "친환경 수열 에너지 및 빗물 순환 기술을 적용한 '[자양한강도서관] 유수지 복합 스포츠센터(아이스링크)' 건립 제안",
+    "content": "\uce5c\ud658\uacbd \uc218\uc5f4 \uc5d0\ub108\uc9c0 \ubc0f \ube57\ubb3c \uc21c\ud658 \uae30\uc220\uc744 \uc801\uc6a9\ud55c '[\uc790\uc591\ud55c\uac15\ub3c4\uc11c\uad00] \uc720\uc218\uc9c0 \ubcf5\ud569 \uc2a4\ud3ec\uce20\uc13c\ud130(\uc544\uc774\uc2a4\ub9c1\ud06c)' \uac74\ub9bd \uc81c\uc548",
     "reg_date": "2026-07-15",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -431,7 +431,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202347",
     "title": "서울시 초등돌봄센터 일시돌봄 이용대상자 확대",
-    "content": "서울시 초등돌봄센터 일시돌봄 이용대상자 확대",
+    "content": "\uc11c\uc6b8\uc2dc \ucd08\ub4f1\ub3cc\ubd04\uc13c\ud130 \uc77c\uc2dc\ub3cc\ubd04 \uc774\uc6a9\ub300\uc0c1\uc790 \ud655\ub300",
     "reg_date": "2026-07-09",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -528,7 +528,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202344",
     "title": "유아숲체험원 운영 용역사업 평가 개선 건의문",
-    "content": "유아숲체험원 운영 용역사업 평가 개선 건의문",
+    "content": "\uc720\uc544\uc232\uccb4\ud5d8\uc6d0 \uc6b4\uc601 \uc6a9\uc5ed\uc0ac\uc5c5 \ud3c9\uac00 \uac1c\uc120 \uac74\uc758\ubb38",
     "reg_date": "2026-07-08",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -584,7 +584,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202286",
     "title": "저출산 고령화 문제에 관한 제안",
-    "content": "저출산 고령화 문제에 관한 제안",
+    "content": "\uc800\ucd9c\uc0b0 \uace0\ub839\ud654 \ubb38\uc81c\uc5d0 \uad00\ud55c \uc81c\uc548",
     "reg_date": "2026-06-29",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -640,7 +640,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202264",
     "title": "[BTF푸른나무재단] 아이들이 안전한 학교를 위한 학교폭력 예방 및 대응 정책 제안서 전달",
-    "content": "[BTF푸른나무재단] 아이들이 안전한 학교를 위한 학교폭력 예방 및 대응 정책 제안서 전달",
+    "content": "[BTF\ud478\ub978\ub098\ubb34\uc7ac\ub2e8] \uc544\uc774\ub4e4\uc774 \uc548\uc804\ud55c \ud559\uad50\ub97c \uc704\ud55c \ud559\uad50\ud3ed\ub825 \uc608\ubc29 \ubc0f \ub300\uc751 \uc815\ucc45 \uc81c\uc548\uc11c \uc804\ub2ec",
     "reg_date": "2026-06-26",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -696,7 +696,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202259",
     "title": "청년 주거안정 및 다자녀 가구 주거이동 지원을 위한 소규모 오피스텔 공공매입 제도 개선 건의",
-    "content": "청년 주거안정 및 다자녀 가구 주거이동 지원을 위한 소규모 오피스텔 공공매입 제도 개선 건의",
+    "content": "\uccad\ub144 \uc8fc\uac70\uc548\uc815 \ubc0f \ub2e4\uc790\ub140 \uac00\uad6c \uc8fc\uac70\uc774\ub3d9 \uc9c0\uc6d0\uc744 \uc704\ud55c \uc18c\uaddc\ubaa8 \uc624\ud53c\uc2a4\ud154 \uacf5\uacf5\ub9e4\uc785 \uc81c\ub3c4 \uac1c\uc120 \uac74\uc758",
     "reg_date": "2026-06-25",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -793,7 +793,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202234",
     "title": "초등학생 저녁식사 지원 서비스(키움센터 활용, 사전 예약 기반, 일부 비용 지급)",
-    "content": "초등학생 저녁식사 지원 서비스(키움센터 활용, 사전 예약 기반, 일부 비용 지급)",
+    "content": "\ucd08\ub4f1\ud559\uc0dd \uc800\ub141\uc2dd\uc0ac \uc9c0\uc6d0 \uc11c\ube44\uc2a4(\ud0a4\uc6c0\uc13c\ud130 \ud65c\uc6a9, \uc0ac\uc804 \uc608\uc57d \uae30\ubc18, \uc77c\ubd80 \ube44\uc6a9 \uc9c0\uae09)",
     "reg_date": "2026-06-23",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -849,7 +849,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202224",
     "title": "서울형 키즈카페의 행정 편의주의적 운영 규정 개선 및 다자녀 가구 역차별 해소 촉구",
-    "content": "서울형 키즈카페의 행정 편의주의적 운영 규정 개선 및 다자녀 가구 역차별 해소 촉구",
+    "content": "\uc11c\uc6b8\ud615 \ud0a4\uc988\uce74\ud398\uc758 \ud589\uc815 \ud3b8\uc758\uc8fc\uc758\uc801 \uc6b4\uc601 \uaddc\uc815 \uac1c\uc120 \ubc0f \ub2e4\uc790\ub140 \uac00\uad6c \uc5ed\ucc28\ubcc4 \ud574\uc18c \ucd09\uad6c",
     "reg_date": "2026-06-20",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -930,7 +930,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202208",
     "title": "대중교통 임산부 배려석 뱃지 태그 시스템 도입",
-    "content": "대중교통 임산부 배려석 뱃지 태그 시스템 도입",
+    "content": "\ub300\uc911\uad50\ud1b5 \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \ubc43\uc9c0 \ud0dc\uadf8 \uc2dc\uc2a4\ud15c \ub3c4\uc785",
     "reg_date": "2026-06-19",
     "vote_score": 28.0,
     "comment_cnt": 0,
@@ -1027,7 +1027,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202191",
     "title": "지역아동센터앞 교통안전을 위해서 붉은색으로 도로 안전구역 표시 부탁드립니다.",
-    "content": "지역아동센터앞 교통안전을 위해서 붉은색으로 도로 안전구역 표시 부탁드립니다.",
+    "content": "\uc9c0\uc5ed\uc544\ub3d9\uc13c\ud130\uc55e \uad50\ud1b5\uc548\uc804\uc744 \uc704\ud574\uc11c \ubd89\uc740\uc0c9\uc73c\ub85c \ub3c4\ub85c \uc548\uc804\uad6c\uc5ed \ud45c\uc2dc \ubd80\ud0c1\ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2026-06-17",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -1180,7 +1180,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202127",
     "title": "서울시 신혼부부 이자지원 사업",
-    "content": "서울시 신혼부부 이자지원 사업",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc774\uc790\uc9c0\uc6d0 \uc0ac\uc5c5",
     "reg_date": "2026-06-08",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -1269,7 +1269,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202117",
     "title": "타 지자체 거주 다자녀 가구의 공영주차장 이용 감면 및 주차난 해소를 위한 정책 개선을 건의합니다.",
-    "content": "타 지자체 거주 다자녀 가구의 공영주차장 이용 감면 및 주차난 해소를 위한 정책 개선을 건의합니다.",
+    "content": "\ud0c0 \uc9c0\uc790\uccb4 \uac70\uc8fc \ub2e4\uc790\ub140 \uac00\uad6c\uc758 \uacf5\uc601\uc8fc\ucc28\uc7a5 \uc774\uc6a9 \uac10\uba74 \ubc0f \uc8fc\ucc28\ub09c \ud574\uc18c\ub97c \uc704\ud55c \uc815\ucc45 \uac1c\uc120\uc744 \uac74\uc758\ud569\ub2c8\ub2e4.",
     "reg_date": "2026-06-07",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -1447,7 +1447,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202095",
     "title": "지하철 임산부석에 임산부 아닌 사람들이 앉지 못하도록 하는 공공 디자인 제안",
-    "content": "지하철 임산부석에 임산부 아닌 사람들이 앉지 못하도록 하는 공공 디자인 제안",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80\uc11d\uc5d0 \uc784\uc0b0\ubd80 \uc544\ub2cc \uc0ac\ub78c\ub4e4\uc774 \uc549\uc9c0 \ubabb\ud558\ub3c4\ub85d \ud558\ub294 \uacf5\uacf5 \ub514\uc790\uc778 \uc81c\uc548",
     "reg_date": "2026-06-04",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -1544,7 +1544,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202066",
     "title": "신생아 특례대출 기간 늘려주세요",
-    "content": "신생아 특례대출 기간 늘려주세요",
+    "content": "\uc2e0\uc0dd\uc544 \ud2b9\ub840\ub300\ucd9c \uae30\uac04 \ub298\ub824\uc8fc\uc138\uc694",
     "reg_date": "2026-05-27",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -1600,7 +1600,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-202014",
     "title": "서울특별시 신혼부부  임차보증금 대출 사업",
-    "content": "서울특별시 신혼부부  임차보증금 대출 사업",
+    "content": "\uc11c\uc6b8\ud2b9\ubcc4\uc2dc \uc2e0\ud63c\ubd80\ubd80  \uc784\ucc28\ubcf4\uc99d\uae08 \ub300\ucd9c \uc0ac\uc5c5",
     "reg_date": "2026-05-18",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -1689,7 +1689,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201995",
     "title": "어린이 보호구역내 인도의 표지판 기둥 하단 밝은 스티커 부착 제안",
-    "content": "어린이 보호구역내 인도의 표지판 기둥 하단 밝은 스티커 부착 제안",
+    "content": "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed\ub0b4 \uc778\ub3c4\uc758 \ud45c\uc9c0\ud310 \uae30\ub465 \ud558\ub2e8 \ubc1d\uc740 \uc2a4\ud2f0\ucee4 \ubd80\ucc29 \uc81c\uc548",
     "reg_date": "2026-05-15",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -1745,7 +1745,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201933",
     "title": "저출생 대책이라면서요? 난자동결 지원사업의 '난소수치(AMH)' 기준 철폐를 강력히 촉구합니다.",
-    "content": "저출생 대책이라면서요? 난자동결 지원사업의 '난소수치(AMH)' 기준 철폐를 강력히 촉구합니다.",
+    "content": "\uc800\ucd9c\uc0dd \ub300\ucc45\uc774\ub77c\uba74\uc11c\uc694? \ub09c\uc790\ub3d9\uacb0 \uc9c0\uc6d0\uc0ac\uc5c5\uc758 '\ub09c\uc18c\uc218\uce58(AMH)' \uae30\uc900 \ucca0\ud3d0\ub97c \uac15\ub825\ud788 \ucd09\uad6c\ud569\ub2c8\ub2e4.",
     "reg_date": "2026-05-05",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -1801,7 +1801,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201853",
     "title": "강남구보건소 예방접종 프로그램을  다른구 보건소에서 진행하게 해주세요",
-    "content": "강남구보건소 예방접종 프로그램을  다른구 보건소에서 진행하게 해주세요",
+    "content": "\uac15\ub0a8\uad6c\ubcf4\uac74\uc18c \uc608\ubc29\uc811\uc885 \ud504\ub85c\uadf8\ub7a8\uc744  \ub2e4\ub978\uad6c \ubcf4\uac74\uc18c\uc5d0\uc11c \uc9c4\ud589\ud558\uac8c \ud574\uc8fc\uc138\uc694",
     "reg_date": "2026-04-17",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -1857,7 +1857,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201851",
     "title": "혼잡 버스 내 임산부 안전 확보위한 자동안내시스템 건의",
-    "content": "혼잡 버스 내 임산부 안전 확보위한 자동안내시스템 건의",
+    "content": "\ud63c\uc7a1 \ubc84\uc2a4 \ub0b4 \uc784\uc0b0\ubd80 \uc548\uc804 \ud655\ubcf4\uc704\ud55c \uc790\ub3d9\uc548\ub0b4\uc2dc\uc2a4\ud15c \uac74\uc758",
     "reg_date": "2026-04-16",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -1954,7 +1954,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201849",
     "title": "아이들이 넘어지고 차가 부서지는 \"턱\" 대신, 기술이 있는 \"안전한 평면도로\"를 제안합니다.",
-    "content": "아이들이 넘어지고 차가 부서지는 \"턱\" 대신, 기술이 있는 \"안전한 평면도로\"를 제안합니다.",
+    "content": "\uc544\uc774\ub4e4\uc774 \ub118\uc5b4\uc9c0\uace0 \ucc28\uac00 \ubd80\uc11c\uc9c0\ub294 \"\ud131\" \ub300\uc2e0, \uae30\uc220\uc774 \uc788\ub294 \"\uc548\uc804\ud55c \ud3c9\uba74\ub3c4\ub85c\"\ub97c \uc81c\uc548\ud569\ub2c8\ub2e4."턱\" 대신, 기술이 있는 \"안전한 평면도로\"를 제안합니다.",
     "reg_date": "2026-04-15",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -2010,7 +2010,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201815",
     "title": "저출산 대책 역행하는 서울시 '난자동결 시술비 지원' 기준 강화(AMH 1.5 이하) 철회 요청",
-    "content": "저출산 대책 역행하는 서울시 '난자동결 시술비 지원' 기준 강화(AMH 1.5 이하) 철회 요청",
+    "content": "\uc800\ucd9c\uc0b0 \ub300\ucc45 \uc5ed\ud589\ud558\ub294 \uc11c\uc6b8\uc2dc '\ub09c\uc790\ub3d9\uacb0 \uc2dc\uc220\ube44 \uc9c0\uc6d0' \uae30\uc900 \uac15\ud654(AMH 1.5 \uc774\ud558) \ucca0\ud68c \uc694\uccad",
     "reg_date": "2026-04-09",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -2066,7 +2066,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201788",
     "title": "서울 시내버스 임산부/노약자 좌석 관련",
-    "content": "서울 시내버스 임산부/노약자 좌석 관련",
+    "content": "\uc11c\uc6b8 \uc2dc\ub0b4\ubc84\uc2a4 \uc784\uc0b0\ubd80/\ub178\uc57d\uc790 \uc88c\uc11d \uad00\ub828",
     "reg_date": "2026-04-07",
     "vote_score": 6.0,
     "comment_cnt": 0,
@@ -2163,7 +2163,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201727",
     "title": "[시민규제발굴단] 자치구별 야간 보육 거점 기관 지정 의무화 및 접근성 강화",
-    "content": "[시민규제발굴단] 자치구별 야간 보육 거점 기관 지정 의무화 및 접근성 강화",
+    "content": "[\uc2dc\ubbfc\uaddc\uc81c\ubc1c\uad74\ub2e8] \uc790\uce58\uad6c\ubcc4 \uc57c\uac04 \ubcf4\uc721 \uac70\uc810 \uae30\uad00 \uc9c0\uc815 \uc758\ubb34\ud654 \ubc0f \uc811\uadfc\uc131 \uac15\ud654",
     "reg_date": "2026-03-29",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -2260,7 +2260,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201726",
     "title": "[시민규제발굴단] 주말 특별보육 운영 시 행정 부담 완화로 보육 접근성 제고",
-    "content": "[시민규제발굴단] 주말 특별보육 운영 시 행정 부담 완화로 보육 접근성 제고",
+    "content": "[\uc2dc\ubbfc\uaddc\uc81c\ubc1c\uad74\ub2e8] \uc8fc\ub9d0 \ud2b9\ubcc4\ubcf4\uc721 \uc6b4\uc601 \uc2dc \ud589\uc815 \ubd80\ub2f4 \uc644\ud654\ub85c \ubcf4\uc721 \uc811\uadfc\uc131 \uc81c\uace0",
     "reg_date": "2026-03-29",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -2357,7 +2357,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201705",
     "title": "시간제보육 사전 예약없이 이용할 수 있게 해주세요",
-    "content": "시간제보육 사전 예약없이 이용할 수 있게 해주세요",
+    "content": "\uc2dc\uac04\uc81c\ubcf4\uc721 \uc0ac\uc804 \uc608\uc57d\uc5c6\uc774 \uc774\uc6a9\ud560 \uc218 \uc788\uac8c \ud574\uc8fc\uc138\uc694",
     "reg_date": "2026-03-25",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -2454,7 +2454,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201657",
     "title": "지하철 임산부석 이용 방식 개선에 대한 시민 제안",
-    "content": "지하철 임산부석 이용 방식 개선에 대한 시민 제안",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80\uc11d \uc774\uc6a9 \ubc29\uc2dd \uac1c\uc120\uc5d0 \ub300\ud55c \uc2dc\ubbfc \uc81c\uc548",
     "reg_date": "2026-03-15",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -2551,7 +2551,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201656",
     "title": "[시민규제발굴단] 서울시 보육 격차 해소 : 거주지 벽을 넘는 \"보편적 보육 복지\" 실현을 위한 규제 혁신안",
-    "content": "[시민규제발굴단] 서울시 보육 격차 해소 : 거주지 벽을 넘는 \"보편적 보육 복지\" 실현을 위한 규제 혁신안",
+    "content": "[\uc2dc\ubbfc\uaddc\uc81c\ubc1c\uad74\ub2e8] \uc11c\uc6b8\uc2dc \ubcf4\uc721 \uaca9\ucc28 \ud574\uc18c : \uac70\uc8fc\uc9c0 \ubcbd\uc744 \ub118\ub294 \"\ubcf4\ud3b8\uc801 \ubcf4\uc721 \ubcf5\uc9c0\" \uc2e4\ud604\uc744 \uc704\ud55c \uaddc\uc81c \ud601\uc2e0\uc548"보편적 보육 복지\" 실현을 위한 규제 혁신안",
     "reg_date": "2026-03-15",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -2648,7 +2648,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201636",
     "title": "출산 가정 태극기 제공(신혼 부부 태극기 미수혜 가정 보완 + 국기 선양 연계)",
-    "content": "출산 가정 태극기 제공(신혼 부부 태극기 미수혜 가정 보완 + 국기 선양 연계)",
+    "content": "\ucd9c\uc0b0 \uac00\uc815 \ud0dc\uadf9\uae30 \uc81c\uacf5(\uc2e0\ud63c \ubd80\ubd80 \ud0dc\uadf9\uae30 \ubbf8\uc218\ud61c \uac00\uc815 \ubcf4\uc644 + \uad6d\uae30 \uc120\uc591 \uc5f0\uacc4)",
     "reg_date": "2026-03-12",
     "vote_score": 11.0,
     "comment_cnt": 2,
@@ -2737,7 +2737,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201635",
     "title": "차상위계층 신청 시 가구원 수 및 다자녀 여부를 고려한 차량 가액 기준 완화 제안",
-    "content": "차상위계층 신청 시 가구원 수 및 다자녀 여부를 고려한 차량 가액 기준 완화 제안",
+    "content": "\ucc28\uc0c1\uc704\uacc4\uce35 \uc2e0\uccad \uc2dc \uac00\uad6c\uc6d0 \uc218 \ubc0f \ub2e4\uc790\ub140 \uc5ec\ubd80\ub97c \uace0\ub824\ud55c \ucc28\ub7c9 \uac00\uc561 \uae30\uc900 \uc644\ud654 \uc81c\uc548",
     "reg_date": "2026-03-12",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -2818,7 +2818,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201627",
     "title": "교통약자 배려 문화 정착을 위한 '임산부석 스마트 알림 시스템' 도입 제안",
-    "content": "교통약자 배려 문화 정착을 위한 '임산부석 스마트 알림 시스템' 도입 제안",
+    "content": "\uad50\ud1b5\uc57d\uc790 \ubc30\ub824 \ubb38\ud654 \uc815\ucc29\uc744 \uc704\ud55c '\uc784\uc0b0\ubd80\uc11d \uc2a4\ub9c8\ud2b8 \uc54c\ub9bc \uc2dc\uc2a4\ud15c' \ub3c4\uc785 \uc81c\uc548",
     "reg_date": "2026-03-11",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -3012,7 +3012,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201617",
     "title": "우리동네키움센터 보육횟수 증대 제안",
-    "content": "우리동네키움센터 보육횟수 증대 제안",
+    "content": "\uc6b0\ub9ac\ub3d9\ub124\ud0a4\uc6c0\uc13c\ud130 \ubcf4\uc721\ud69f\uc218 \uc99d\ub300 \uc81c\uc548",
     "reg_date": "2026-03-10",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -3109,7 +3109,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201610",
     "title": "[시민규제발굴단] 남자화장실에도 기저귀갈이대가 필요합니다.",
-    "content": "[시민규제발굴단] 남자화장실에도 기저귀갈이대가 필요합니다.",
+    "content": "[\uc2dc\ubbfc\uaddc\uc81c\ubc1c\uad74\ub2e8] \ub0a8\uc790\ud654\uc7a5\uc2e4\uc5d0\ub3c4 \uae30\uc800\uadc0\uac08\uc774\ub300\uac00 \ud544\uc694\ud569\ub2c8\ub2e4.",
     "reg_date": "2026-03-08",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -3165,7 +3165,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201601",
     "title": "임산부 배려석 태그 장치 도입",
-    "content": "임산부 배려석 태그 장치 도입",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \ud0dc\uadf8 \uc7a5\uce58 \ub3c4\uc785",
     "reg_date": "2026-03-06",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -3262,7 +3262,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201599",
     "title": "서울형키즈카페 연령제한 형제자매 제한없이 들어갈수있게해주세요",
-    "content": "서울형키즈카페 연령제한 형제자매 제한없이 들어갈수있게해주세요",
+    "content": "\uc11c\uc6b8\ud615\ud0a4\uc988\uce74\ud398 \uc5f0\ub839\uc81c\ud55c \ud615\uc81c\uc790\ub9e4 \uc81c\ud55c\uc5c6\uc774 \ub4e4\uc5b4\uac08\uc218\uc788\uac8c\ud574\uc8fc\uc138\uc694",
     "reg_date": "2026-03-06",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -3318,7 +3318,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201586",
     "title": "임산부 무료 식사지원 「행복한 임신메뉴」 운영",
-    "content": "임산부 무료 식사지원 「행복한 임신메뉴」 운영",
+    "content": "\uc784\uc0b0\ubd80 \ubb34\ub8cc \uc2dd\uc0ac\uc9c0\uc6d0 \u300c\ud589\ubcf5\ud55c \uc784\uc2e0\uba54\ub274\u300d \uc6b4\uc601",
     "reg_date": "2026-03-03",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -3415,7 +3415,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201566",
     "title": "[시민규제발굴단] 아이돌봄문턱",
-    "content": "[시민규제발굴단] 아이돌봄문턱",
+    "content": "[\uc2dc\ubbfc\uaddc\uc81c\ubc1c\uad74\ub2e8] \uc544\uc774\ub3cc\ubd04\ubb38\ud131",
     "reg_date": "2026-02-26",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -3512,7 +3512,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201550",
     "title": "[시민규제발굴단] ‘어린이집 대란‘ 완화 방안(보육규제개선제안)",
-    "content": "[시민규제발굴단] ‘어린이집 대란‘ 완화 방안(보육규제개선제안)",
+    "content": "[\uc2dc\ubbfc\uaddc\uc81c\ubc1c\uad74\ub2e8] \u2018\uc5b4\ub9b0\uc774\uc9d1 \ub300\ub780\u2018 \uc644\ud654 \ubc29\uc548(\ubcf4\uc721\uaddc\uc81c\uac1c\uc120\uc81c\uc548)",
     "reg_date": "2026-02-22",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -3609,7 +3609,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201543",
     "title": "[시민규제발굴단] 초등 긴급·일시돌봄 ‘사전등록제’ 폐지 또는 간소화",
-    "content": "[시민규제발굴단] 초등 긴급·일시돌봄 ‘사전등록제’ 폐지 또는 간소화",
+    "content": "[\uc2dc\ubbfc\uaddc\uc81c\ubc1c\uad74\ub2e8] \ucd08\ub4f1 \uae34\uae09\u00b7\uc77c\uc2dc\ub3cc\ubd04 \u2018\uc0ac\uc804\ub4f1\ub85d\uc81c\u2019 \ud3d0\uc9c0 \ub610\ub294 \uac04\uc18c\ud654",
     "reg_date": "2026-02-20",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -3706,7 +3706,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201541",
     "title": "[시민규제발굴단] 어린이집 등 입소 관련 증빙서류 반복 제출 폐지",
-    "content": "[시민규제발굴단] 어린이집 등 입소 관련 증빙서류 반복 제출 폐지",
+    "content": "[\uc2dc\ubbfc\uaddc\uc81c\ubc1c\uad74\ub2e8] \uc5b4\ub9b0\uc774\uc9d1 \ub4f1 \uc785\uc18c \uad00\ub828 \uc99d\ube59\uc11c\ub958 \ubc18\ubcf5 \uc81c\ucd9c \ud3d0\uc9c0",
     "reg_date": "2026-02-20",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -3803,7 +3803,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201539",
     "title": "[시민규제발굴단] 보육교사 처우 개선 유도함",
-    "content": "[시민규제발굴단] 보육교사 처우 개선 유도함",
+    "content": "[\uc2dc\ubbfc\uaddc\uc81c\ubc1c\uad74\ub2e8] \ubcf4\uc721\uad50\uc0ac \ucc98\uc6b0 \uac1c\uc120 \uc720\ub3c4\ud568",
     "reg_date": "2026-02-20",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -3900,7 +3900,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201529",
     "title": "한부모 가정 자립 지원을 위한 통합형 + 주거연계 모델 도입 제안",
-    "content": "한부모 가정 자립 지원을 위한 통합형 + 주거연계 모델 도입 제안",
+    "content": "\ud55c\ubd80\ubaa8 \uac00\uc815 \uc790\ub9bd \uc9c0\uc6d0\uc744 \uc704\ud55c \ud1b5\ud569\ud615 + \uc8fc\uac70\uc5f0\uacc4 \ubaa8\ub378 \ub3c4\uc785 \uc81c\uc548",
     "reg_date": "2026-02-19",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -3973,7 +3973,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201521",
     "title": "<전국 동마다 자자체에서 운영 관리 하는 동물보육원 신설 의무화에 관한 청원>",
-    "content": "<전국 동마다 자자체에서 운영 관리 하는 동물보육원 신설 의무화에 관한 청원>",
+    "content": "<\uc804\uad6d \ub3d9\ub9c8\ub2e4 \uc790\uc790\uccb4\uc5d0\uc11c \uc6b4\uc601 \uad00\ub9ac \ud558\ub294 \ub3d9\ubb3c\ubcf4\uc721\uc6d0 \uc2e0\uc124 \uc758\ubb34\ud654\uc5d0 \uad00\ud55c \uccad\uc6d0>",
     "reg_date": "2026-02-16",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -4070,7 +4070,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201497",
     "title": "남성 난임 지원 시술비를 신설해주시길 요청드립니다.",
-    "content": "남성 난임 지원 시술비를 신설해주시길 요청드립니다.",
+    "content": "\ub0a8\uc131 \ub09c\uc784 \uc9c0\uc6d0 \uc2dc\uc220\ube44\ub97c \uc2e0\uc124\ud574\uc8fc\uc2dc\uae38 \uc694\uccad\ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2026-02-11",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -4167,7 +4167,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201476",
     "title": "어린이 보호구역 이륜차 무단 주차 방지를 위한 종합 관리 방안",
-    "content": "어린이 보호구역 이륜차 무단 주차 방지를 위한 종합 관리 방안",
+    "content": "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \uc774\ub95c\ucc28 \ubb34\ub2e8 \uc8fc\ucc28 \ubc29\uc9c0\ub97c \uc704\ud55c \uc885\ud569 \uad00\ub9ac \ubc29\uc548",
     "reg_date": "2026-02-06",
     "vote_score": 4.0,
     "comment_cnt": 0,
@@ -4223,7 +4223,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201438",
     "title": "자녀6명 이상인 가정은 총재산이 15억 이하이면 교육급여 대상자로 선정해주세요.",
-    "content": "자녀6명 이상인 가정은 총재산이 15억 이하이면 교육급여 대상자로 선정해주세요.",
+    "content": "\uc790\ub1406\uba85 \uc774\uc0c1\uc778 \uac00\uc815\uc740 \ucd1d\uc7ac\uc0b0\uc774 15\uc5b5 \uc774\ud558\uc774\uba74 \uad50\uc721\uae09\uc5ec \ub300\uc0c1\uc790\ub85c \uc120\uc815\ud574\uc8fc\uc138\uc694.",
     "reg_date": "2026-01-30",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -4279,7 +4279,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201435",
     "title": "？？ [정책 제안] 빛의 자녀(개척자)들을 위한 ‘자존감 및 사회화 통합 교육’ 신설",
-    "content": "？？ [정책 제안] 빛의 자녀(개척자)들을 위한 ‘자존감 및 사회화 통합 교육’ 신설",
+    "content": "\uff1f\uff1f [\uc815\ucc45 \uc81c\uc548] \ube5b\uc758 \uc790\ub140(\uac1c\ucc99\uc790)\ub4e4\uc744 \uc704\ud55c \u2018\uc790\uc874\uac10 \ubc0f \uc0ac\ud68c\ud654 \ud1b5\ud569 \uad50\uc721\u2019 \uc2e0\uc124",
     "reg_date": "2026-01-30",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -4335,7 +4335,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201374",
     "title": "버스 내 임산부석 자리 양보",
-    "content": "버스 내 임산부석 자리 양보",
+    "content": "\ubc84\uc2a4 \ub0b4 \uc784\uc0b0\ubd80\uc11d \uc790\ub9ac \uc591\ubcf4",
     "reg_date": "2026-01-23",
     "vote_score": 6.0,
     "comment_cnt": 0,
@@ -4432,7 +4432,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201294",
     "title": "서울형키즈카페 서울 생활권자 이용권한 확대",
-    "content": "서울형키즈카페 서울 생활권자 이용권한 확대",
+    "content": "\uc11c\uc6b8\ud615\ud0a4\uc988\uce74\ud398 \uc11c\uc6b8 \uc0dd\ud65c\uad8c\uc790 \uc774\uc6a9\uad8c\ud55c \ud655\ub300",
     "reg_date": "2026-01-17",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -4488,7 +4488,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201278",
     "title": "서울시 공공자전거 따릉이 다자녀가구 할인 도입 제안",
-    "content": "서울시 공공자전거 따릉이 다자녀가구 할인 도입 제안",
+    "content": "\uc11c\uc6b8\uc2dc \uacf5\uacf5\uc790\uc804\uac70 \ub530\ub989\uc774 \ub2e4\uc790\ub140\uac00\uad6c \ud560\uc778 \ub3c4\uc785 \uc81c\uc548",
     "reg_date": "2026-01-15",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -4569,7 +4569,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201207",
     "title": "서울특별시 임산부 건강 지원사업(보건소, 산모 바우처 연계) 도입 제안",
-    "content": "서울특별시 임산부 건강 지원사업(보건소, 산모 바우처 연계) 도입 제안",
+    "content": "\uc11c\uc6b8\ud2b9\ubcc4\uc2dc \uc784\uc0b0\ubd80 \uac74\uac15 \uc9c0\uc6d0\uc0ac\uc5c5(\ubcf4\uac74\uc18c, \uc0b0\ubaa8 \ubc14\uc6b0\ucc98 \uc5f0\uacc4) \ub3c4\uc785 \uc81c\uc548",
     "reg_date": "2026-01-12",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -4666,7 +4666,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201182",
     "title": "장위동에 서울형키즈카페 개설 건의합니다.",
-    "content": "장위동에 서울형키즈카페 개설 건의합니다.",
+    "content": "\uc7a5\uc704\ub3d9\uc5d0 \uc11c\uc6b8\ud615\ud0a4\uc988\uce74\ud398 \uac1c\uc124 \uac74\uc758\ud569\ub2c8\ub2e4.",
     "reg_date": "2026-01-09",
     "vote_score": 57.0,
     "comment_cnt": 1,
@@ -4916,7 +4916,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201115",
     "title": "여의신월지하차도 다자녀(3자녀 이상) 가구 통행료 할인 적용 제안",
-    "content": "여의신월지하차도 다자녀(3자녀 이상) 가구 통행료 할인 적용 제안",
+    "content": "\uc5ec\uc758\uc2e0\uc6d4\uc9c0\ud558\ucc28\ub3c4 \ub2e4\uc790\ub140(3\uc790\ub140 \uc774\uc0c1) \uac00\uad6c \ud1b5\ud589\ub8cc \ud560\uc778 \uc801\uc6a9 \uc81c\uc548",
     "reg_date": "2025-12-26",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -4997,7 +4997,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201102",
     "title": "서울시 자치구별 다자녀 혜택의 문제점",
-    "content": "서울시 자치구별 다자녀 혜택의 문제점",
+    "content": "\uc11c\uc6b8\uc2dc \uc790\uce58\uad6c\ubcc4 \ub2e4\uc790\ub140 \ud61c\ud0dd\uc758 \ubb38\uc81c\uc810",
     "reg_date": "2025-12-23",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -5078,7 +5078,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201086",
     "title": "[시민규제발굴단]교육부 아이사랑 앱 시간제보육 예약 설정 재검토",
-    "content": "[시민규제발굴단]교육부 아이사랑 앱 시간제보육 예약 설정 재검토",
+    "content": "[\uc2dc\ubbfc\uaddc\uc81c\ubc1c\uad74\ub2e8]\uad50\uc721\ubd80 \uc544\uc774\uc0ac\ub791 \uc571 \uc2dc\uac04\uc81c\ubcf4\uc721 \uc608\uc57d \uc124\uc815 \uc7ac\uac80\ud1a0",
     "reg_date": "2025-12-19",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -5175,7 +5175,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201045",
     "title": "[시민규제발굴단] 장애인 아이들을 위한 서울형키즈카페 혹은 시설내의 프로그램",
-    "content": "[시민규제발굴단] 장애인 아이들을 위한 서울형키즈카페 혹은 시설내의 프로그램",
+    "content": "[\uc2dc\ubbfc\uaddc\uc81c\ubc1c\uad74\ub2e8] \uc7a5\uc560\uc778 \uc544\uc774\ub4e4\uc744 \uc704\ud55c \uc11c\uc6b8\ud615\ud0a4\uc988\uce74\ud398 \ud639\uc740 \uc2dc\uc124\ub0b4\uc758 \ud504\ub85c\uadf8\ub7a8",
     "reg_date": "2025-12-13",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -5231,7 +5231,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-201039",
     "title": "임산부 배려석 스마트 인증 시스템 도입 제안",
-    "content": "임산부 배려석 스마트 인증 시스템 도입 제안",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \uc2a4\ub9c8\ud2b8 \uc778\uc99d \uc2dc\uc2a4\ud15c \ub3c4\uc785 \uc81c\uc548",
     "reg_date": "2025-12-10",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -5328,7 +5328,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200988",
     "title": "임산부 배려석 사용률 증진을 위한 '스마트 알림 뱃지(Smart  Badge)' 도입 제안",
-    "content": "임산부 배려석 사용률 증진을 위한 '스마트 알림 뱃지(Smart  Badge)' 도입 제안",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \uc0ac\uc6a9\ub960 \uc99d\uc9c4\uc744 \uc704\ud55c '\uc2a4\ub9c8\ud2b8 \uc54c\ub9bc \ubc43\uc9c0(Smart  Badge)' \ub3c4\uc785 \uc81c\uc548",
     "reg_date": "2025-12-02",
     "vote_score": 32.0,
     "comment_cnt": 7,
@@ -5425,7 +5425,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200951",
     "title": "출산가구 부모대상 노인복지회관 식당 공유 제안",
-    "content": "출산가구 부모대상 노인복지회관 식당 공유 제안",
+    "content": "\ucd9c\uc0b0\uac00\uad6c \ubd80\ubaa8\ub300\uc0c1 \ub178\uc778\ubcf5\uc9c0\ud68c\uad00 \uc2dd\ub2f9 \uacf5\uc720 \uc81c\uc548",
     "reg_date": "2025-11-26",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -5675,7 +5675,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200710",
     "title": "공공자전거 그다음 \"공공유모차\", 어르신 등 취약계층 \"공공 지팡이 의자\" 정책사업 도입은 어떠할까요?",
-    "content": "공공자전거 그다음 \"공공유모차\", 어르신 등 취약계층 \"공공 지팡이 의자\" 정책사업 도입은 어떠할까요?",
+    "content": "\uacf5\uacf5\uc790\uc804\uac70 \uadf8\ub2e4\uc74c \"\uacf5\uacf5\uc720\ubaa8\ucc28\", \uc5b4\ub974\uc2e0 \ub4f1 \ucde8\uc57d\uacc4\uce35 \"\uacf5\uacf5 \uc9c0\ud321\uc774 \uc758\uc790\" \uc815\ucc45\uc0ac\uc5c5 \ub3c4\uc785\uc740 \uc5b4\ub5a0\ud560\uae4c\uc694?"공공유모차\", 어르신 등 취약계층 \"공공 지팡이 의자\" 정책사업 도입은 어떠할까요?",
     "reg_date": "2025-10-25",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -5828,7 +5828,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200665",
     "title": "신혼부부 장기전세주택2, 혼인신고와 이혼",
-    "content": "신혼부부 장기전세주택2, 혼인신고와 이혼",
+    "content": "\uc2e0\ud63c\ubd80\ubd80 \uc7a5\uae30\uc804\uc138\uc8fc\ud0dd2, \ud63c\uc778\uc2e0\uace0\uc640 \uc774\ud63c",
     "reg_date": "2025-10-21",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -5917,7 +5917,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200525",
     "title": "아이들이 등하교를 안전하게 다닐 수 있도록 개정이 필요합니다.",
-    "content": "아이들이 등하교를 안전하게 다닐 수 있도록 개정이 필요합니다.",
+    "content": "\uc544\uc774\ub4e4\uc774 \ub4f1\ud558\uad50\ub97c \uc548\uc804\ud558\uac8c \ub2e4\ub2d0 \uc218 \uc788\ub3c4\ub85d \uac1c\uc815\uc774 \ud544\uc694\ud569\ub2c8\ub2e4.",
     "reg_date": "2025-09-26",
     "vote_score": 106.0,
     "comment_cnt": 1,
@@ -5973,7 +5973,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200496",
     "title": "서울시 신혼부부 살림비 지원",
-    "content": "서울시 신혼부부 살림비 지원",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc0b4\ub9bc\ube44 \uc9c0\uc6d0",
     "reg_date": "2025-09-23",
     "vote_score": 3.0,
     "comment_cnt": 2,
@@ -6062,7 +6062,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200449",
     "title": "[시민규제발굴단] 시간제보육신청 당일예약 신청",
-    "content": "[시민규제발굴단] 시간제보육신청 당일예약 신청",
+    "content": "[\uc2dc\ubbfc\uaddc\uc81c\ubc1c\uad74\ub2e8] \uc2dc\uac04\uc81c\ubcf4\uc721\uc2e0\uccad \ub2f9\uc77c\uc608\uc57d \uc2e0\uccad",
     "reg_date": "2025-09-19",
     "vote_score": 11.0,
     "comment_cnt": 0,
@@ -6159,7 +6159,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200427",
     "title": "경춘선 숲길에 아이들을 위한 미니 기차 놀이 시설을 설치해주세요",
-    "content": "경춘선 숲길에 아이들을 위한 미니 기차 놀이 시설을 설치해주세요",
+    "content": "\uacbd\ucd98\uc120 \uc232\uae38\uc5d0 \uc544\uc774\ub4e4\uc744 \uc704\ud55c \ubbf8\ub2c8 \uae30\ucc28 \ub180\uc774 \uc2dc\uc124\uc744 \uc124\uce58\ud574\uc8fc\uc138\uc694",
     "reg_date": "2025-09-18",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -6215,7 +6215,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200421",
     "title": "[시민규제발굴단] 청약시 자녀수에 대한 가산점 확대",
-    "content": "[시민규제발굴단] 청약시 자녀수에 대한 가산점 확대",
+    "content": "[\uc2dc\ubbfc\uaddc\uc81c\ubc1c\uad74\ub2e8] \uccad\uc57d\uc2dc \uc790\ub140\uc218\uc5d0 \ub300\ud55c \uac00\uc0b0\uc810 \ud655\ub300",
     "reg_date": "2025-09-18",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -6271,7 +6271,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200411",
     "title": "서울시 신혼부부 결혼살림비 지원",
-    "content": "서울시 신혼부부 결혼살림비 지원",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uacb0\ud63c\uc0b4\ub9bc\ube44 \uc9c0\uc6d0",
     "reg_date": "2025-09-17",
     "vote_score": 24.0,
     "comment_cnt": 1,
@@ -6360,7 +6360,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200312",
     "title": "아이돌봄서비스(조부모돌봄) 기간 ,범위 확대 건의",
-    "content": "아이돌봄서비스(조부모돌봄) 기간 ,범위 확대 건의",
+    "content": "\uc544\uc774\ub3cc\ubd04\uc11c\ube44\uc2a4(\uc870\ubd80\ubaa8\ub3cc\ubd04) \uae30\uac04 ,\ubc94\uc704 \ud655\ub300 \uac74\uc758",
     "reg_date": "2025-09-03",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -6651,7 +6651,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200157",
     "title": "sh 행복주택 신생아 최우선 공급관련 건의합니다",
-    "content": "sh 행복주택 신생아 최우선 공급관련 건의합니다",
+    "content": "sh \ud589\ubcf5\uc8fc\ud0dd \uc2e0\uc0dd\uc544 \ucd5c\uc6b0\uc120 \uacf5\uae09\uad00\ub828 \uac74\uc758\ud569\ub2c8\ub2e4",
     "reg_date": "2025-08-08",
     "vote_score": 56.0,
     "comment_cnt": 1,
@@ -6707,7 +6707,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200141",
     "title": "서울형키즈카페 이용연령 확장부탁",
-    "content": "서울형키즈카페 이용연령 확장부탁",
+    "content": "\uc11c\uc6b8\ud615\ud0a4\uc988\uce74\ud398 \uc774\uc6a9\uc5f0\ub839 \ud655\uc7a5\ubd80\ud0c1",
     "reg_date": "2025-08-06",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -6763,7 +6763,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200129",
     "title": "예비 신혼부부를 위한 ‘서울시 미리내집’ 소득기준 개선 요청",
-    "content": "예비 신혼부부를 위한 ‘서울시 미리내집’ 소득기준 개선 요청",
+    "content": "\uc608\ube44 \uc2e0\ud63c\ubd80\ubd80\ub97c \uc704\ud55c \u2018\uc11c\uc6b8\uc2dc \ubbf8\ub9ac\ub0b4\uc9d1\u2019 \uc18c\ub4dd\uae30\uc900 \uac1c\uc120 \uc694\uccad",
     "reg_date": "2025-08-04",
     "vote_score": 0.0,
     "comment_cnt": 2,
@@ -6852,7 +6852,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200103",
     "title": "가정내 돌봄종사자 무료예방접종",
-    "content": "가정내 돌봄종사자 무료예방접종",
+    "content": "\uac00\uc815\ub0b4 \ub3cc\ubd04\uc885\uc0ac\uc790 \ubb34\ub8cc\uc608\ubc29\uc811\uc885",
     "reg_date": "2025-07-28",
     "vote_score": 69.0,
     "comment_cnt": 3,
@@ -6949,7 +6949,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200102",
     "title": "강동구 키움센터 방학기간 설정에 인근 초등학교 방학기간을 고려해 주세요!",
-    "content": "강동구 키움센터 방학기간 설정에 인근 초등학교 방학기간을 고려해 주세요!",
+    "content": "\uac15\ub3d9\uad6c \ud0a4\uc6c0\uc13c\ud130 \ubc29\ud559\uae30\uac04 \uc124\uc815\uc5d0 \uc778\uadfc \ucd08\ub4f1\ud559\uad50 \ubc29\ud559\uae30\uac04\uc744 \uace0\ub824\ud574 \uc8fc\uc138\uc694!",
     "reg_date": "2025-07-28",
     "vote_score": 20.0,
     "comment_cnt": 1,
@@ -7005,7 +7005,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200093",
     "title": "보육교사 집합 보수교육 기관 및 인원증설을 해 주세요",
-    "content": "보육교사 집합 보수교육 기관 및 인원증설을 해 주세요",
+    "content": "\ubcf4\uc721\uad50\uc0ac \uc9d1\ud569 \ubcf4\uc218\uad50\uc721 \uae30\uad00 \ubc0f \uc778\uc6d0\uc99d\uc124\uc744 \ud574 \uc8fc\uc138\uc694",
     "reg_date": "2025-07-26",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -7102,7 +7102,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200064",
     "title": "출산율 문제를 해결하기 위해 세종시와의 돌봄 센터 지원 교류를 제안합니다",
-    "content": "출산율 문제를 해결하기 위해 세종시와의 돌봄 센터 지원 교류를 제안합니다",
+    "content": "\ucd9c\uc0b0\uc728 \ubb38\uc81c\ub97c \ud574\uacb0\ud558\uae30 \uc704\ud574 \uc138\uc885\uc2dc\uc640\uc758 \ub3cc\ubd04 \uc13c\ud130 \uc9c0\uc6d0 \uad50\ub958\ub97c \uc81c\uc548\ud569\ub2c8\ub2e4",
     "reg_date": "2025-07-23",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -7199,7 +7199,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200040",
     "title": "국공립어린이집 유아식 저녁 배달 서비스 시범 도입 제안",
-    "content": "국공립어린이집 유아식 저녁 배달 서비스 시범 도입 제안",
+    "content": "\uad6d\uacf5\ub9bd\uc5b4\ub9b0\uc774\uc9d1 \uc720\uc544\uc2dd \uc800\ub141 \ubc30\ub2ec \uc11c\ube44\uc2a4 \uc2dc\ubc94 \ub3c4\uc785 \uc81c\uc548",
     "reg_date": "2025-07-18",
     "vote_score": 7.0,
     "comment_cnt": 2,
@@ -7296,7 +7296,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-200023",
     "title": "다자녀 가구 취득세 감면 제도 도입 제안",
-    "content": "다자녀 가구 취득세 감면 제도 도입 제안",
+    "content": "\ub2e4\uc790\ub140 \uac00\uad6c \ucde8\ub4dd\uc138 \uac10\uba74 \uc81c\ub3c4 \ub3c4\uc785 \uc81c\uc548",
     "reg_date": "2025-07-16",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -7377,7 +7377,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199938",
     "title": "공영주차장 다둥이카드, 직원들이 잘 모르네요",
-    "content": "공영주차장 다둥이카드, 직원들이 잘 모르네요",
+    "content": "\uacf5\uc601\uc8fc\ucc28\uc7a5 \ub2e4\ub465\uc774\uce74\ub4dc, \uc9c1\uc6d0\ub4e4\uc774 \uc798 \ubaa8\ub974\ub124\uc694",
     "reg_date": "2025-07-09",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -7433,7 +7433,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199926",
     "title": "근데 오늘날 현실은 저출산입니다. 알고 있죠? ( 전 출산 지원 정책을 좀 삭감했으면 합니다. 여성관련된 정책도)",
-    "content": "근데 오늘날 현실은 저출산입니다. 알고 있죠? ( 전 출산 지원 정책을 좀 삭감했으면 합니다. 여성관련된 정책도)",
+    "content": "\uadfc\ub370 \uc624\ub298\ub0a0 \ud604\uc2e4\uc740 \uc800\ucd9c\uc0b0\uc785\ub2c8\ub2e4. \uc54c\uace0 \uc788\uc8e0? ( \uc804 \ucd9c\uc0b0 \uc9c0\uc6d0 \uc815\ucc45\uc744 \uc880 \uc0ad\uac10\ud588\uc73c\uba74 \ud569\ub2c8\ub2e4. \uc5ec\uc131\uad00\ub828\ub41c \uc815\ucc45\ub3c4)",
     "reg_date": "2025-07-08",
     "vote_score": 0.0,
     "comment_cnt": 2,
@@ -7489,7 +7489,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199841",
     "title": "서울시도 난임 시술비 ‘무제한’ 지원을 도입해 주세요",
-    "content": "서울시도 난임 시술비 ‘무제한’ 지원을 도입해 주세요",
+    "content": "\uc11c\uc6b8\uc2dc\ub3c4 \ub09c\uc784 \uc2dc\uc220\ube44 \u2018\ubb34\uc81c\ud55c\u2019 \uc9c0\uc6d0\uc744 \ub3c4\uc785\ud574 \uc8fc\uc138\uc694",
     "reg_date": "2025-06-25",
     "vote_score": 43.0,
     "comment_cnt": 6,
@@ -7586,7 +7586,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199817",
     "title": "도로상 어린이보호구역 내 사고율 저하를 위한 제안 드립니다.",
-    "content": "도로상 어린이보호구역 내 사고율 저하를 위한 제안 드립니다.",
+    "content": "\ub3c4\ub85c\uc0c1 \uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed \ub0b4 \uc0ac\uace0\uc728 \uc800\ud558\ub97c \uc704\ud55c \uc81c\uc548 \ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2025-06-23",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -7642,7 +7642,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199768",
     "title": "서울형키즈카페 양말판매 건의",
-    "content": "서울형키즈카페 양말판매 건의",
+    "content": "\uc11c\uc6b8\ud615\ud0a4\uc988\uce74\ud398 \uc591\ub9d0\ud310\ub9e4 \uac74\uc758",
     "reg_date": "2025-06-15",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -7698,7 +7698,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199734",
     "title": "남성난임에 대해 관심을 가져주세요.",
-    "content": "남성난임에 대해 관심을 가져주세요.",
+    "content": "\ub0a8\uc131\ub09c\uc784\uc5d0 \ub300\ud574 \uad00\uc2ec\uc744 \uac00\uc838\uc8fc\uc138\uc694.",
     "reg_date": "2025-06-09",
     "vote_score": 8.0,
     "comment_cnt": 1,
@@ -7795,7 +7795,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199706",
     "title": "불법주정차 구역중 어린이보호구역 중 초등학교정문앞도로 시간 제한 폐지",
-    "content": "불법주정차 구역중 어린이보호구역 중 초등학교정문앞도로 시간 제한 폐지",
+    "content": "\ubd88\ubc95\uc8fc\uc815\ucc28 \uad6c\uc5ed\uc911 \uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed \uc911 \ucd08\ub4f1\ud559\uad50\uc815\ubb38\uc55e\ub3c4\ub85c \uc2dc\uac04 \uc81c\ud55c \ud3d0\uc9c0",
     "reg_date": "2025-06-05",
     "vote_score": 4.0,
     "comment_cnt": 0,
@@ -7851,7 +7851,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199700",
     "title": "서울시 체육시설 다자녀 할인 규정 개선",
-    "content": "서울시 체육시설 다자녀 할인 규정 개선",
+    "content": "\uc11c\uc6b8\uc2dc \uccb4\uc721\uc2dc\uc124 \ub2e4\uc790\ub140 \ud560\uc778 \uaddc\uc815 \uac1c\uc120",
     "reg_date": "2025-06-04",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -8126,7 +8126,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199629",
     "title": "유아차런 유아 참여 연령 상향",
-    "content": "유아차런 유아 참여 연령 상향",
+    "content": "\uc720\uc544\ucc28\ub7f0 \uc720\uc544 \ucc38\uc5ec \uc5f0\ub839 \uc0c1\ud5a5",
     "reg_date": "2025-05-27",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -8182,7 +8182,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199587",
     "title": "자녀출산 무주택가구 주거비 지원사업에 대하여 강력하게 문의합니다",
-    "content": "자녀출산 무주택가구 주거비 지원사업에 대하여 강력하게 문의합니다",
+    "content": "\uc790\ub140\ucd9c\uc0b0 \ubb34\uc8fc\ud0dd\uac00\uad6c \uc8fc\uac70\ube44 \uc9c0\uc6d0\uc0ac\uc5c5\uc5d0 \ub300\ud558\uc5ec \uac15\ub825\ud558\uac8c \ubb38\uc758\ud569\ub2c8\ub2e4",
     "reg_date": "2025-05-22",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -8255,7 +8255,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199547",
     "title": "자녀 출산 무주택가구 주거비 지원 지원대상(출산기간) 보완 제안",
-    "content": "자녀 출산 무주택가구 주거비 지원 지원대상(출산기간) 보완 제안",
+    "content": "\uc790\ub140 \ucd9c\uc0b0 \ubb34\uc8fc\ud0dd\uac00\uad6c \uc8fc\uac70\ube44 \uc9c0\uc6d0 \uc9c0\uc6d0\ub300\uc0c1(\ucd9c\uc0b0\uae30\uac04) \ubcf4\uc644 \uc81c\uc548",
     "reg_date": "2025-05-16",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -8425,7 +8425,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199518",
     "title": "지하철 내 임산부 배려석 운영 완화 요청",
-    "content": "지하철 내 임산부 배려석 운영 완화 요청",
+    "content": "\uc9c0\ud558\ucca0 \ub0b4 \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \uc6b4\uc601 \uc644\ud654 \uc694\uccad",
     "reg_date": "2025-05-12",
     "vote_score": 3.0,
     "comment_cnt": 1,
@@ -8522,7 +8522,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199506",
     "title": "정책자금 융자 조건 - 신생아 임산부 경우 완화 제안",
-    "content": "정책자금 융자 조건 - 신생아 임산부 경우 완화 제안",
+    "content": "\uc815\ucc45\uc790\uae08 \uc735\uc790 \uc870\uac74 - \uc2e0\uc0dd\uc544 \uc784\uc0b0\ubd80 \uacbd\uc6b0 \uc644\ud654 \uc81c\uc548",
     "reg_date": "2025-05-10",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -8716,7 +8716,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199451",
     "title": "봉사활동을 통한 아이들의 성실성과 자발성 함양을 위한 부모교육 제안서",
-    "content": "봉사활동을 통한 아이들의 성실성과 자발성 함양을 위한 부모교육 제안서",
+    "content": "\ubd09\uc0ac\ud65c\ub3d9\uc744 \ud1b5\ud55c \uc544\uc774\ub4e4\uc758 \uc131\uc2e4\uc131\uacfc \uc790\ubc1c\uc131 \ud568\uc591\uc744 \uc704\ud55c \ubd80\ubaa8\uad50\uc721 \uc81c\uc548\uc11c",
     "reg_date": "2025-04-28",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -8869,7 +8869,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199348",
     "title": "마루공원에 유아용 농구코트, 축구코트 설치",
-    "content": "마루공원에 유아용 농구코트, 축구코트 설치",
+    "content": "\ub9c8\ub8e8\uacf5\uc6d0\uc5d0 \uc720\uc544\uc6a9 \ub18d\uad6c\ucf54\ud2b8, \ucd95\uad6c\ucf54\ud2b8 \uc124\uce58",
     "reg_date": "2025-04-16",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -8925,7 +8925,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199206",
     "title": "정신적 어려움이 있는 보육교직원에 대한 직권휴직 조치에 대하여",
-    "content": "정신적 어려움이 있는 보육교직원에 대한 직권휴직 조치에 대하여",
+    "content": "\uc815\uc2e0\uc801 \uc5b4\ub824\uc6c0\uc774 \uc788\ub294 \ubcf4\uc721\uad50\uc9c1\uc6d0\uc5d0 \ub300\ud55c \uc9c1\uad8c\ud734\uc9c1 \uc870\uce58\uc5d0 \ub300\ud558\uc5ec",
     "reg_date": "2025-04-09",
     "vote_score": 3.0,
     "comment_cnt": 1,
@@ -9022,7 +9022,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199198",
     "title": "서울동행맵에서 장애인 임산부 정책 확인할 수 있게 개선",
-    "content": "서울동행맵에서 장애인 임산부 정책 확인할 수 있게 개선",
+    "content": "\uc11c\uc6b8\ub3d9\ud589\ub9f5\uc5d0\uc11c \uc7a5\uc560\uc778 \uc784\uc0b0\ubd80 \uc815\ucc45 \ud655\uc778\ud560 \uc218 \uc788\uac8c \uac1c\uc120",
     "reg_date": "2025-04-09",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -9119,7 +9119,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199193",
     "title": "서울시 신혼부부 전세대출 이자지원 사업 관련",
-    "content": "서울시 신혼부부 전세대출 이자지원 사업 관련",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc804\uc138\ub300\ucd9c \uc774\uc790\uc9c0\uc6d0 \uc0ac\uc5c5 \uad00\ub828",
     "reg_date": "2025-04-08",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -9208,7 +9208,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199153",
     "title": "어린이 차량갇힘사고 예방 등을 위한 이동형 안전체험버스 제작",
-    "content": "어린이 차량갇힘사고 예방 등을 위한 이동형 안전체험버스 제작",
+    "content": "\uc5b4\ub9b0\uc774 \ucc28\ub7c9\uac07\ud798\uc0ac\uace0 \uc608\ubc29 \ub4f1\uc744 \uc704\ud55c \uc774\ub3d9\ud615 \uc548\uc804\uccb4\ud5d8\ubc84\uc2a4 \uc81c\uc791",
     "reg_date": "2025-04-05",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -9264,7 +9264,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199143",
     "title": "난임 시술, 첫 아이 출산까지 건강보험 무제한 지원이 필요합니다",
-    "content": "난임 시술, 첫 아이 출산까지 건강보험 무제한 지원이 필요합니다",
+    "content": "\ub09c\uc784 \uc2dc\uc220, \uccab \uc544\uc774 \ucd9c\uc0b0\uae4c\uc9c0 \uac74\uac15\ubcf4\ud5d8 \ubb34\uc81c\ud55c \uc9c0\uc6d0\uc774 \ud544\uc694\ud569\ub2c8\ub2e4",
     "reg_date": "2025-04-04",
     "vote_score": 214.0,
     "comment_cnt": 50,
@@ -9361,7 +9361,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199139",
     "title": "[어린이집 보육환경 개선 및 보육교사 지원을 위한 플랫폼 기반 제안서]",
-    "content": "[어린이집 보육환경 개선 및 보육교사 지원을 위한 플랫폼 기반 제안서]",
+    "content": "[\uc5b4\ub9b0\uc774\uc9d1 \ubcf4\uc721\ud658\uacbd \uac1c\uc120 \ubc0f \ubcf4\uc721\uad50\uc0ac \uc9c0\uc6d0\uc744 \uc704\ud55c \ud50c\ub7ab\ud3fc \uae30\ubc18 \uc81c\uc548\uc11c]",
     "reg_date": "2025-04-04",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -9458,7 +9458,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199120",
     "title": "보육료 서비스 간 변경 미신청 시 소급지원",
-    "content": "보육료 서비스 간 변경 미신청 시 소급지원",
+    "content": "\ubcf4\uc721\ub8cc \uc11c\ube44\uc2a4 \uac04 \ubcc0\uacbd \ubbf8\uc2e0\uccad \uc2dc \uc18c\uae09\uc9c0\uc6d0",
     "reg_date": "2025-04-03",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -9555,7 +9555,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199081",
     "title": "시립 강아지 유치원 설립 제안",
-    "content": "시립 강아지 유치원 설립 제안",
+    "content": "\uc2dc\ub9bd \uac15\uc544\uc9c0 \uc720\uce58\uc6d0 \uc124\ub9bd \uc81c\uc548",
     "reg_date": "2025-03-31",
     "vote_score": 4.0,
     "comment_cnt": 1,
@@ -9611,7 +9611,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199076",
     "title": "신생아를 보려면 백일해 예방접종을 해야 합니다",
-    "content": "신생아를 보려면 백일해 예방접종을 해야 합니다",
+    "content": "\uc2e0\uc0dd\uc544\ub97c \ubcf4\ub824\uba74 \ubc31\uc77c\ud574 \uc608\ubc29\uc811\uc885\uc744 \ud574\uc57c \ud569\ub2c8\ub2e4",
     "reg_date": "2025-03-31",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -9667,7 +9667,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199074",
     "title": "서울시 조부모 돌봄수당의 시간 유연성 필요",
-    "content": "서울시 조부모 돌봄수당의 시간 유연성 필요",
+    "content": "\uc11c\uc6b8\uc2dc \uc870\ubd80\ubaa8 \ub3cc\ubd04\uc218\ub2f9\uc758 \uc2dc\uac04 \uc720\uc5f0\uc131 \ud544\uc694",
     "reg_date": "2025-03-31",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -9861,7 +9861,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199065",
     "title": "모든 초등학생들에게 무상보육",
-    "content": "모든 초등학생들에게 무상보육",
+    "content": "\ubaa8\ub4e0 \ucd08\ub4f1\ud559\uc0dd\ub4e4\uc5d0\uac8c \ubb34\uc0c1\ubcf4\uc721",
     "reg_date": "2025-03-30",
     "vote_score": 6.0,
     "comment_cnt": 0,
@@ -9958,7 +9958,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199064",
     "title": "방과후교실어린이집 방과후전담 무상교육",
-    "content": "방과후교실어린이집 방과후전담 무상교육",
+    "content": "\ubc29\uacfc\ud6c4\uad50\uc2e4\uc5b4\ub9b0\uc774\uc9d1 \ubc29\uacfc\ud6c4\uc804\ub2f4 \ubb34\uc0c1\uad50\uc721",
     "reg_date": "2025-03-30",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -10055,7 +10055,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199063",
     "title": "방과후교실 초등학생교육 무상보육 주장",
-    "content": "방과후교실 초등학생교육 무상보육 주장",
+    "content": "\ubc29\uacfc\ud6c4\uad50\uc2e4 \ucd08\ub4f1\ud559\uc0dd\uad50\uc721 \ubb34\uc0c1\ubcf4\uc721 \uc8fc\uc7a5",
     "reg_date": "2025-03-30",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -10152,7 +10152,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199044",
     "title": "서울시 다자녀 할인 정책의 지역 제한 완화 요청",
-    "content": "서울시 다자녀 할인 정책의 지역 제한 완화 요청",
+    "content": "\uc11c\uc6b8\uc2dc \ub2e4\uc790\ub140 \ud560\uc778 \uc815\ucc45\uc758 \uc9c0\uc5ed \uc81c\ud55c \uc644\ud654 \uc694\uccad",
     "reg_date": "2025-03-29",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -10233,7 +10233,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199043",
     "title": "따릉이를 만 13세 미만 어린이가 이용할 때 안전 보호 책임자 변경",
-    "content": "따릉이를 만 13세 미만 어린이가 이용할 때 안전 보호 책임자 변경",
+    "content": "\ub530\ub989\uc774\ub97c \ub9cc 13\uc138 \ubbf8\ub9cc \uc5b4\ub9b0\uc774\uac00 \uc774\uc6a9\ud560 \ub54c \uc548\uc804 \ubcf4\ud638 \ucc45\uc784\uc790 \ubcc0\uacbd",
     "reg_date": "2025-03-29",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -10289,7 +10289,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-199042",
     "title": "임산부석 뱃지 알리미를 제안합니다",
-    "content": "임산부석 뱃지 알리미를 제안합니다",
+    "content": "\uc784\uc0b0\ubd80\uc11d \ubc43\uc9c0 \uc54c\ub9ac\ubbf8\ub97c \uc81c\uc548\ud569\ub2c8\ub2e4",
     "reg_date": "2025-03-28",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -10386,7 +10386,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198980",
     "title": "지자체별 출산지원금 통일 지급",
-    "content": "지자체별 출산지원금 통일 지급",
+    "content": "\uc9c0\uc790\uccb4\ubcc4 \ucd9c\uc0b0\uc9c0\uc6d0\uae08 \ud1b5\uc77c \uc9c0\uae09",
     "reg_date": "2025-03-27",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -10442,7 +10442,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198885",
     "title": "공립유치원 다자녀도 방과후 수업 신청할 수 있도록 해주세요.",
-    "content": "공립유치원 다자녀도 방과후 수업 신청할 수 있도록 해주세요.",
+    "content": "\uacf5\ub9bd\uc720\uce58\uc6d0 \ub2e4\uc790\ub140\ub3c4 \ubc29\uacfc\ud6c4 \uc218\uc5c5 \uc2e0\uccad\ud560 \uc218 \uc788\ub3c4\ub85d \ud574\uc8fc\uc138\uc694.",
     "reg_date": "2025-03-24",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -10620,7 +10620,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198843",
     "title": "과속방지카메라로 아이들의 안전을",
-    "content": "과속방지카메라로 아이들의 안전을",
+    "content": "\uacfc\uc18d\ubc29\uc9c0\uce74\uba54\ub77c\ub85c \uc544\uc774\ub4e4\uc758 \uc548\uc804\uc744",
     "reg_date": "2025-03-21",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -10676,7 +10676,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198826",
     "title": "보육지원 규제 완화를 통한 실질적 지원 확대 제안",
-    "content": "보육지원 규제 완화를 통한 실질적 지원 확대 제안",
+    "content": "\ubcf4\uc721\uc9c0\uc6d0 \uaddc\uc81c \uc644\ud654\ub97c \ud1b5\ud55c \uc2e4\uc9c8\uc801 \uc9c0\uc6d0 \ud655\ub300 \uc81c\uc548",
     "reg_date": "2025-03-20",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -10773,7 +10773,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198762",
     "title": "송파산모건강증진센터 면회관련 제안",
-    "content": "송파산모건강증진센터 면회관련 제안",
+    "content": "\uc1a1\ud30c\uc0b0\ubaa8\uac74\uac15\uc99d\uc9c4\uc13c\ud130 \uba74\ud68c\uad00\ub828 \uc81c\uc548",
     "reg_date": "2025-03-18",
     "vote_score": 4.0,
     "comment_cnt": 1,
@@ -10926,7 +10926,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198739",
     "title": "지하철 노약자석 및 임산부석의 필요성에 대한 재고",
-    "content": "지하철 노약자석 및 임산부석의 필요성에 대한 재고",
+    "content": "\uc9c0\ud558\ucca0 \ub178\uc57d\uc790\uc11d \ubc0f \uc784\uc0b0\ubd80\uc11d\uc758 \ud544\uc694\uc131\uc5d0 \ub300\ud55c \uc7ac\uace0",
     "reg_date": "2025-03-17",
     "vote_score": 1.0,
     "comment_cnt": 2,
@@ -11023,7 +11023,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198713",
     "title": "마포구 대흥로20안길 어린이 보호구역 및 일방통행  지정 제안",
-    "content": "마포구 대흥로20안길 어린이 보호구역 및 일방통행  지정 제안",
+    "content": "\ub9c8\ud3ec\uad6c \ub300\ud765\ub85c20\uc548\uae38 \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \ubc0f \uc77c\ubc29\ud1b5\ud589  \uc9c0\uc815 \uc81c\uc548",
     "reg_date": "2025-03-16",
     "vote_score": 102.0,
     "comment_cnt": 5,
@@ -11079,7 +11079,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198705",
     "title": "신축 아파트 설계  시에, 어린이집 정원 증가",
-    "content": "신축 아파트 설계  시에, 어린이집 정원 증가",
+    "content": "\uc2e0\ucd95 \uc544\ud30c\ud2b8 \uc124\uacc4  \uc2dc\uc5d0, \uc5b4\ub9b0\uc774\uc9d1 \uc815\uc6d0 \uc99d\uac00",
     "reg_date": "2025-03-15",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -11176,7 +11176,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198658",
     "title": "지하철 장애인석(임산부, 경로석) 에 대한 정책 제안",
-    "content": "지하철 장애인석(임산부, 경로석) 에 대한 정책 제안",
+    "content": "\uc9c0\ud558\ucca0 \uc7a5\uc560\uc778\uc11d(\uc784\uc0b0\ubd80, \uacbd\ub85c\uc11d) \uc5d0 \ub300\ud55c \uc815\ucc45 \uc81c\uc548",
     "reg_date": "2025-03-13",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -11467,7 +11467,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198624",
     "title": "조건없는 다자녀 교육혜택확대 방안",
-    "content": "조건없는 다자녀 교육혜택확대 방안",
+    "content": "\uc870\uac74\uc5c6\ub294 \ub2e4\uc790\ub140 \uad50\uc721\ud61c\ud0dd\ud655\ub300 \ubc29\uc548",
     "reg_date": "2025-03-11",
     "vote_score": 4.0,
     "comment_cnt": 0,
@@ -11548,7 +11548,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198621",
     "title": "다둥이 단축 근무시간 시행부탁합니다",
-    "content": "다둥이 단축 근무시간 시행부탁합니다",
+    "content": "\ub2e4\ub465\uc774 \ub2e8\ucd95 \uadfc\ubb34\uc2dc\uac04 \uc2dc\ud589\ubd80\ud0c1\ud569\ub2c8\ub2e4",
     "reg_date": "2025-03-10",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -11604,7 +11604,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198620",
     "title": "다둥이 워킹맘 근무시간단축해주세요",
-    "content": "다둥이 워킹맘 근무시간단축해주세요",
+    "content": "\ub2e4\ub465\uc774 \uc6cc\ud0b9\ub9d8 \uadfc\ubb34\uc2dc\uac04\ub2e8\ucd95\ud574\uc8fc\uc138\uc694",
     "reg_date": "2025-03-10",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -11660,7 +11660,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198619",
     "title": "다둥이 워킹맘 근무단축제 및 보조금 지급제",
-    "content": "다둥이 워킹맘 근무단축제 및 보조금 지급제",
+    "content": "\ub2e4\ub465\uc774 \uc6cc\ud0b9\ub9d8 \uadfc\ubb34\ub2e8\ucd95\uc81c \ubc0f \ubcf4\uc870\uae08 \uc9c0\uae09\uc81c",
     "reg_date": "2025-03-10",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -11716,7 +11716,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198618",
     "title": "다둥이 워킹맘 근무단축제 시행",
-    "content": "다둥이 워킹맘 근무단축제 시행",
+    "content": "\ub2e4\ub465\uc774 \uc6cc\ud0b9\ub9d8 \uadfc\ubb34\ub2e8\ucd95\uc81c \uc2dc\ud589",
     "reg_date": "2025-03-10",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -11869,7 +11869,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198582",
     "title": "어린이보호구역(스쿨존) 속도 제한을 시간대에 따라 탄련적으로 운형하는 개선 방안 모색",
-    "content": "어린이보호구역(스쿨존) 속도 제한을 시간대에 따라 탄련적으로 운형하는 개선 방안 모색",
+    "content": "\uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed(\uc2a4\ucfe8\uc874) \uc18d\ub3c4 \uc81c\ud55c\uc744 \uc2dc\uac04\ub300\uc5d0 \ub530\ub77c \ud0c4\ub828\uc801\uc73c\ub85c \uc6b4\ud615\ud558\ub294 \uac1c\uc120 \ubc29\uc548 \ubaa8\uc0c9",
     "reg_date": "2025-03-09",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -11925,7 +11925,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198575",
     "title": "서울 자영업자에게 다둥이 행복카드를!",
-    "content": "서울 자영업자에게 다둥이 행복카드를!",
+    "content": "\uc11c\uc6b8 \uc790\uc601\uc5c5\uc790\uc5d0\uac8c \ub2e4\ub465\uc774 \ud589\ubcf5\uce74\ub4dc\ub97c!",
     "reg_date": "2025-03-08",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -11981,7 +11981,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198485",
     "title": "서울시 남녀 임신준비사업.. 방문시간이 너무 짧아요",
-    "content": "서울시 남녀 임신준비사업.. 방문시간이 너무 짧아요",
+    "content": "\uc11c\uc6b8\uc2dc \ub0a8\ub140 \uc784\uc2e0\uc900\ube44\uc0ac\uc5c5.. \ubc29\ubb38\uc2dc\uac04\uc774 \ub108\ubb34 \uc9e7\uc544\uc694",
     "reg_date": "2025-03-04",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -12037,7 +12037,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198483",
     "title": "어린이보호구역 야간 시간 해제",
-    "content": "어린이보호구역 야간 시간 해제",
+    "content": "\uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed \uc57c\uac04 \uc2dc\uac04 \ud574\uc81c",
     "reg_date": "2025-03-04",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -12093,7 +12093,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198432",
     "title": "하위계층, 한부모가정 지원혜택 철저히 조사",
-    "content": "하위계층, 한부모가정 지원혜택 철저히 조사",
+    "content": "\ud558\uc704\uacc4\uce35, \ud55c\ubd80\ubaa8\uac00\uc815 \uc9c0\uc6d0\ud61c\ud0dd \ucca0\uc800\ud788 \uc870\uc0ac",
     "reg_date": "2025-03-01",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -12149,7 +12149,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198406",
     "title": "다자녀감면 시 공영주차장은 되고 자치구 내 공영주차장은 안되는 규제 해제",
-    "content": "다자녀감면 시 공영주차장은 되고 자치구 내 공영주차장은 안되는 규제 해제",
+    "content": "\ub2e4\uc790\ub140\uac10\uba74 \uc2dc \uacf5\uc601\uc8fc\ucc28\uc7a5\uc740 \ub418\uace0 \uc790\uce58\uad6c \ub0b4 \uacf5\uc601\uc8fc\ucc28\uc7a5\uc740 \uc548\ub418\ub294 \uaddc\uc81c \ud574\uc81c",
     "reg_date": "2025-02-28",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -12230,7 +12230,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198295",
     "title": "저출산으로 30년뒤 대한민국은 사라진다고 합니다..",
-    "content": "저출산으로 30년뒤 대한민국은 사라진다고 합니다..",
+    "content": "\uc800\ucd9c\uc0b0\uc73c\ub85c 30\ub144\ub4a4 \ub300\ud55c\ubbfc\uad6d\uc740 \uc0ac\ub77c\uc9c4\ub2e4\uace0 \ud569\ub2c8\ub2e4..",
     "reg_date": "2025-02-22",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -12383,7 +12383,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198270",
     "title": "기후동행카드 다둥이할인 적용제안",
-    "content": "기후동행카드 다둥이할인 적용제안",
+    "content": "\uae30\ud6c4\ub3d9\ud589\uce74\ub4dc \ub2e4\ub465\uc774\ud560\uc778 \uc801\uc6a9\uc81c\uc548",
     "reg_date": "2025-02-20",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -12439,7 +12439,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198269",
     "title": "어린이집 관리 문서 간소화 방안 제안 : 보육 교직원의 업무 효율성을 높여 양질의 보육 서비스 제공에 집중하기 위함",
-    "content": "어린이집 관리 문서 간소화 방안 제안 : 보육 교직원의 업무 효율성을 높여 양질의 보육 서비스 제공에 집중하기 위함",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 \uad00\ub9ac \ubb38\uc11c \uac04\uc18c\ud654 \ubc29\uc548 \uc81c\uc548 : \ubcf4\uc721 \uad50\uc9c1\uc6d0\uc758 \uc5c5\ubb34 \ud6a8\uc728\uc131\uc744 \ub192\uc5ec \uc591\uc9c8\uc758 \ubcf4\uc721 \uc11c\ube44\uc2a4 \uc81c\uacf5\uc5d0 \uc9d1\uc911\ud558\uae30 \uc704\ud568",
     "reg_date": "2025-02-20",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -12536,7 +12536,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198265",
     "title": "서울시 공영주차장 다자녀 감면 혜택 확대 제안",
-    "content": "서울시 공영주차장 다자녀 감면 혜택 확대 제안",
+    "content": "\uc11c\uc6b8\uc2dc \uacf5\uc601\uc8fc\ucc28\uc7a5 \ub2e4\uc790\ub140 \uac10\uba74 \ud61c\ud0dd \ud655\ub300 \uc81c\uc548",
     "reg_date": "2025-02-20",
     "vote_score": 54.0,
     "comment_cnt": 4,
@@ -12714,7 +12714,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198243",
     "title": "다자녀 적용 범위 동일 적용",
-    "content": "다자녀 적용 범위 동일 적용",
+    "content": "\ub2e4\uc790\ub140 \uc801\uc6a9 \ubc94\uc704 \ub3d9\uc77c \uc801\uc6a9",
     "reg_date": "2025-02-19",
     "vote_score": 4.0,
     "comment_cnt": 0,
@@ -12795,7 +12795,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198232",
     "title": "서울형키즈카페 등 이용시간 연장",
-    "content": "서울형키즈카페 등 이용시간 연장",
+    "content": "\uc11c\uc6b8\ud615\ud0a4\uc988\uce74\ud398 \ub4f1 \uc774\uc6a9\uc2dc\uac04 \uc5f0\uc7a5",
     "reg_date": "2025-02-18",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -12948,7 +12948,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198203",
     "title": "야간 어린이 보호구역 30km속도제한 해제",
-    "content": "야간 어린이 보호구역 30km속도제한 해제",
+    "content": "\uc57c\uac04 \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed 30km\uc18d\ub3c4\uc81c\ud55c \ud574\uc81c",
     "reg_date": "2025-02-17",
     "vote_score": 3.0,
     "comment_cnt": 1,
@@ -13004,7 +13004,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198192",
     "title": "다자녀관련 공영주차장요금 할인",
-    "content": "다자녀관련 공영주차장요금 할인",
+    "content": "\ub2e4\uc790\ub140\uad00\ub828 \uacf5\uc601\uc8fc\ucc28\uc7a5\uc694\uae08 \ud560\uc778",
     "reg_date": "2025-02-17",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -13085,7 +13085,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198151",
     "title": "저출산 해결을 위한 문제점  및 실효성 있는 해결 방안",
-    "content": "저출산 해결을 위한 문제점  및 실효성 있는 해결 방안",
+    "content": "\uc800\ucd9c\uc0b0 \ud574\uacb0\uc744 \uc704\ud55c \ubb38\uc81c\uc810  \ubc0f \uc2e4\ud6a8\uc131 \uc788\ub294 \ud574\uacb0 \ubc29\uc548",
     "reg_date": "2025-02-15",
     "vote_score": 51.0,
     "comment_cnt": 0,
@@ -13238,7 +13238,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198137",
     "title": "조부모아이돌봄 36개월제한 완화신청",
-    "content": "조부모아이돌봄 36개월제한 완화신청",
+    "content": "\uc870\ubd80\ubaa8\uc544\uc774\ub3cc\ubd04 36\uac1c\uc6d4\uc81c\ud55c \uc644\ud654\uc2e0\uccad",
     "reg_date": "2025-02-14",
     "vote_score": 9.0,
     "comment_cnt": 1,
@@ -13432,7 +13432,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198104",
     "title": "서울시 아이돌봄비 지원 대상 확대",
-    "content": "서울시 아이돌봄비 지원 대상 확대",
+    "content": "\uc11c\uc6b8\uc2dc \uc544\uc774\ub3cc\ubd04\ube44 \uc9c0\uc6d0 \ub300\uc0c1 \ud655\ub300",
     "reg_date": "2025-02-13",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -13529,7 +13529,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198063",
     "title": "자녀수와 연계한 보증금지원형 장기안심주택 지원 세분화",
-    "content": "자녀수와 연계한 보증금지원형 장기안심주택 지원 세분화",
+    "content": "\uc790\ub140\uc218\uc640 \uc5f0\uacc4\ud55c \ubcf4\uc99d\uae08\uc9c0\uc6d0\ud615 \uc7a5\uae30\uc548\uc2ec\uc8fc\ud0dd \uc9c0\uc6d0 \uc138\ubd84\ud654",
     "reg_date": "2025-02-11",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -13585,7 +13585,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-198050",
     "title": "지하철역사내 유휴공간을 활용한 고객휴개실 또는 육아실 조성 제안",
-    "content": "지하철역사내 유휴공간을 활용한 고객휴개실 또는 육아실 조성 제안",
+    "content": "\uc9c0\ud558\ucca0\uc5ed\uc0ac\ub0b4 \uc720\ud734\uacf5\uac04\uc744 \ud65c\uc6a9\ud55c \uace0\uac1d\ud734\uac1c\uc2e4 \ub610\ub294 \uc721\uc544\uc2e4 \uc870\uc131 \uc81c\uc548",
     "reg_date": "2025-02-10",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -13738,7 +13738,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197993",
     "title": "어린이 ㆍ노인 보호구역 시차제 적용",
-    "content": "어린이 ㆍ노인 보호구역 시차제 적용",
+    "content": "\uc5b4\ub9b0\uc774 \u318d\ub178\uc778 \ubcf4\ud638\uad6c\uc5ed \uc2dc\ucc28\uc81c \uc801\uc6a9",
     "reg_date": "2025-02-07",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -13794,7 +13794,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197942",
     "title": "서울형 아이돌봄비 지원대상 범위 확대 요구",
-    "content": "서울형 아이돌봄비 지원대상 범위 확대 요구",
+    "content": "\uc11c\uc6b8\ud615 \uc544\uc774\ub3cc\ubd04\ube44 \uc9c0\uc6d0\ub300\uc0c1 \ubc94\uc704 \ud655\ub300 \uc694\uad6c",
     "reg_date": "2025-02-05",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -14085,7 +14085,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197913",
     "title": "조부모 아이돌봄 수당 30만원 36개월이 아닌 초등학교 1학년까지 확대 필요합니다",
-    "content": "조부모 아이돌봄 수당 30만원 36개월이 아닌 초등학교 1학년까지 확대 필요합니다",
+    "content": "\uc870\ubd80\ubaa8 \uc544\uc774\ub3cc\ubd04 \uc218\ub2f9 30\ub9cc\uc6d0 36\uac1c\uc6d4\uc774 \uc544\ub2cc \ucd08\ub4f1\ud559\uad50 1\ud559\ub144\uae4c\uc9c0 \ud655\ub300 \ud544\uc694\ud569\ub2c8\ub2e4",
     "reg_date": "2025-02-04",
     "vote_score": 9.0,
     "comment_cnt": 0,
@@ -14182,7 +14182,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197910",
     "title": "다둥이 등 서울런 대상자 대폭 확대",
-    "content": "다둥이 등 서울런 대상자 대폭 확대",
+    "content": "\ub2e4\ub465\uc774 \ub4f1 \uc11c\uc6b8\ub7f0 \ub300\uc0c1\uc790 \ub300\ud3ed \ud655\ub300",
     "reg_date": "2025-02-04",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -14335,7 +14335,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197873",
     "title": "청년안심주택 반려동물 양육 및 출입금지 규정 폐지 요청드립니다.",
-    "content": "청년안심주택 반려동물 양육 및 출입금지 규정 폐지 요청드립니다.",
+    "content": "\uccad\ub144\uc548\uc2ec\uc8fc\ud0dd \ubc18\ub824\ub3d9\ubb3c \uc591\uc721 \ubc0f \ucd9c\uc785\uae08\uc9c0 \uaddc\uc815 \ud3d0\uc9c0 \uc694\uccad\ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2025-02-03",
     "vote_score": 85.0,
     "comment_cnt": 14,
@@ -14391,7 +14391,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197859",
     "title": "36개월 아이도 등하원돌봄이 필요합니다",
-    "content": "36개월 아이도 등하원돌봄이 필요합니다",
+    "content": "36\uac1c\uc6d4 \uc544\uc774\ub3c4 \ub4f1\ud558\uc6d0\ub3cc\ubd04\uc774 \ud544\uc694\ud569\ub2c8\ub2e4",
     "reg_date": "2025-02-03",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -14488,7 +14488,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197853",
     "title": "영유아 가정에 '거주자우선주차' 가산점을 드리면 어떨까요? 저출산 극복!",
-    "content": "영유아 가정에 '거주자우선주차' 가산점을 드리면 어떨까요? 저출산 극복!",
+    "content": "\uc601\uc720\uc544 \uac00\uc815\uc5d0 '\uac70\uc8fc\uc790\uc6b0\uc120\uc8fc\ucc28' \uac00\uc0b0\uc810\uc744 \ub4dc\ub9ac\uba74 \uc5b4\ub5a8\uae4c\uc694? \uc800\ucd9c\uc0b0 \uadf9\ubcf5!",
     "reg_date": "2025-02-03",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -14544,7 +14544,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197755",
     "title": "키움센터 추가 개소는 어려울까요",
-    "content": "키움센터 추가 개소는 어려울까요",
+    "content": "\ud0a4\uc6c0\uc13c\ud130 \ucd94\uac00 \uac1c\uc18c\ub294 \uc5b4\ub824\uc6b8\uae4c\uc694",
     "reg_date": "2025-01-23",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -14600,7 +14600,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197727",
     "title": "서울시 자녀출산 무주택가구 지원 정책 소득 기준 관련 제안",
-    "content": "서울시 자녀출산 무주택가구 지원 정책 소득 기준 관련 제안",
+    "content": "\uc11c\uc6b8\uc2dc \uc790\ub140\ucd9c\uc0b0 \ubb34\uc8fc\ud0dd\uac00\uad6c \uc9c0\uc6d0 \uc815\ucc45 \uc18c\ub4dd \uae30\uc900 \uad00\ub828 \uc81c\uc548",
     "reg_date": "2025-01-19",
     "vote_score": 7.0,
     "comment_cnt": 0,
@@ -14656,7 +14656,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197723",
     "title": "임산부 시내버스 탑승 편의 개선 제안",
-    "content": "임산부 시내버스 탑승 편의 개선 제안",
+    "content": "\uc784\uc0b0\ubd80 \uc2dc\ub0b4\ubc84\uc2a4 \ud0d1\uc2b9 \ud3b8\uc758 \uac1c\uc120 \uc81c\uc548",
     "reg_date": "2025-01-16",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -14753,7 +14753,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197702",
     "title": "다자녀 서울런 확대 강력히 요청합니다",
-    "content": "다자녀 서울런 확대 강력히 요청합니다",
+    "content": "\ub2e4\uc790\ub140 \uc11c\uc6b8\ub7f0 \ud655\ub300 \uac15\ub825\ud788 \uc694\uccad\ud569\ub2c8\ub2e4",
     "reg_date": "2025-01-12",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -14834,7 +14834,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197676",
     "title": "애완견 외출시 기저귀 채워 주세요",
-    "content": "애완견 외출시 기저귀 채워 주세요",
+    "content": "\uc560\uc644\uacac \uc678\ucd9c\uc2dc \uae30\uc800\uadc0 \ucc44\uc6cc \uc8fc\uc138\uc694",
     "reg_date": "2025-01-05",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -14890,7 +14890,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197624",
     "title": "다둥이행복카드 소지 대상자 키즈카페머니 바우처 지급",
-    "content": "다둥이행복카드 소지 대상자 키즈카페머니 바우처 지급",
+    "content": "\ub2e4\ub465\uc774\ud589\ubcf5\uce74\ub4dc \uc18c\uc9c0 \ub300\uc0c1\uc790 \ud0a4\uc988\uce74\ud398\uba38\ub2c8 \ubc14\uc6b0\ucc98 \uc9c0\uae09",
     "reg_date": "2024-12-25",
     "vote_score": 32.0,
     "comment_cnt": 0,
@@ -15076,7 +15076,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197605",
     "title": "서울시 신혼부부 전세대출 소급적용 요청",
-    "content": "서울시 신혼부부 전세대출 소급적용 요청",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc804\uc138\ub300\ucd9c \uc18c\uae09\uc801\uc6a9 \uc694\uccad",
     "reg_date": "2024-12-19",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -15165,7 +15165,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197602",
     "title": "자녀 출산 무주택 가구 주거비 지원 정책 조건 완화 제안",
-    "content": "자녀 출산 무주택 가구 주거비 지원 정책 조건 완화 제안",
+    "content": "\uc790\ub140 \ucd9c\uc0b0 \ubb34\uc8fc\ud0dd \uac00\uad6c \uc8fc\uac70\ube44 \uc9c0\uc6d0 \uc815\ucc45 \uc870\uac74 \uc644\ud654 \uc81c\uc548",
     "reg_date": "2024-12-19",
     "vote_score": 26.0,
     "comment_cnt": 8,
@@ -15238,7 +15238,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197585",
     "title": "노인+유치원 공동 돌봄 시스템 운영",
-    "content": "노인+유치원 공동 돌봄 시스템 운영",
+    "content": "\ub178\uc778+\uc720\uce58\uc6d0 \uacf5\ub3d9 \ub3cc\ubd04 \uc2dc\uc2a4\ud15c \uc6b4\uc601",
     "reg_date": "2024-12-16",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -15432,7 +15432,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197532",
     "title": "무용지물인 버스 임산부석 이용 개선 - 임산부벨 도입",
-    "content": "무용지물인 버스 임산부석 이용 개선 - 임산부벨 도입",
+    "content": "\ubb34\uc6a9\uc9c0\ubb3c\uc778 \ubc84\uc2a4 \uc784\uc0b0\ubd80\uc11d \uc774\uc6a9 \uac1c\uc120 - \uc784\uc0b0\ubd80\ubca8 \ub3c4\uc785",
     "reg_date": "2024-12-05",
     "vote_score": 4.0,
     "comment_cnt": 0,
@@ -15626,7 +15626,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197507",
     "title": "서울시 자녀출산 무주택 가구 주거비 지원 대상 건의",
-    "content": "서울시 자녀출산 무주택 가구 주거비 지원 대상 건의",
+    "content": "\uc11c\uc6b8\uc2dc \uc790\ub140\ucd9c\uc0b0 \ubb34\uc8fc\ud0dd \uac00\uad6c \uc8fc\uac70\ube44 \uc9c0\uc6d0 \ub300\uc0c1 \uac74\uc758",
     "reg_date": "2024-12-02",
     "vote_score": 7.0,
     "comment_cnt": 1,
@@ -15796,7 +15796,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197374",
     "title": "난임치료 여성에게도 핑크색 배려를..!",
-    "content": "난임치료 여성에게도 핑크색 배려를..!",
+    "content": "\ub09c\uc784\uce58\ub8cc \uc5ec\uc131\uc5d0\uac8c\ub3c4 \ud551\ud06c\uc0c9 \ubc30\ub824\ub97c..!",
     "reg_date": "2024-11-04",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -15990,7 +15990,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197368",
     "title": "임산부 교통카드를 만들어주세요~",
-    "content": "임산부 교통카드를 만들어주세요~",
+    "content": "\uc784\uc0b0\ubd80 \uad50\ud1b5\uce74\ub4dc\ub97c \ub9cc\ub4e4\uc5b4\uc8fc\uc138\uc694~",
     "reg_date": "2024-11-04",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -16087,7 +16087,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197348",
     "title": "임산부 배려석 외국어 안내문 표기 확대 제안",
-    "content": "임산부 배려석 외국어 안내문 표기 확대 제안",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \uc678\uad6d\uc5b4 \uc548\ub0b4\ubb38 \ud45c\uae30 \ud655\ub300 \uc81c\uc548",
     "reg_date": "2024-10-30",
     "vote_score": 0.0,
     "comment_cnt": 2,
@@ -16184,7 +16184,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197311",
     "title": "임산부 배려석 운영 정책 개선 제안",
-    "content": "임산부 배려석 운영 정책 개선 제안",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \uc6b4\uc601 \uc815\ucc45 \uac1c\uc120 \uc81c\uc548",
     "reg_date": "2024-10-23",
     "vote_score": 60.0,
     "comment_cnt": 6,
@@ -16281,7 +16281,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197295",
     "title": "어린이 등하굣길 교통안전지도 사업제안",
-    "content": "어린이 등하굣길 교통안전지도 사업제안",
+    "content": "\uc5b4\ub9b0\uc774 \ub4f1\ud558\uad63\uae38 \uad50\ud1b5\uc548\uc804\uc9c0\ub3c4 \uc0ac\uc5c5\uc81c\uc548",
     "reg_date": "2024-10-20",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -16337,7 +16337,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197288",
     "title": "서울시 내 다둥이카드 사용 요건을 통일해 주세요.",
-    "content": "서울시 내 다둥이카드 사용 요건을 통일해 주세요.",
+    "content": "\uc11c\uc6b8\uc2dc \ub0b4 \ub2e4\ub465\uc774\uce74\ub4dc \uc0ac\uc6a9 \uc694\uac74\uc744 \ud1b5\uc77c\ud574 \uc8fc\uc138\uc694.",
     "reg_date": "2024-10-18",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -16393,7 +16393,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197271",
     "title": "임산부 배려석에 바닥 라이트를 설치해주세요.",
-    "content": "임산부 배려석에 바닥 라이트를 설치해주세요.",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d\uc5d0 \ubc14\ub2e5 \ub77c\uc774\ud2b8\ub97c \uc124\uce58\ud574\uc8fc\uc138\uc694.",
     "reg_date": "2024-10-16",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -16587,7 +16587,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197259",
     "title": "우리 아이들, 동네 아이들 안전하게 다닐수 있게 도와주세요!!!",
-    "content": "우리 아이들, 동네 아이들 안전하게 다닐수 있게 도와주세요!!!",
+    "content": "\uc6b0\ub9ac \uc544\uc774\ub4e4, \ub3d9\ub124 \uc544\uc774\ub4e4 \uc548\uc804\ud558\uac8c \ub2e4\ub2d0\uc218 \uc788\uac8c \ub3c4\uc640\uc8fc\uc138\uc694!!!",
     "reg_date": "2024-10-15",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -16643,7 +16643,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197236",
     "title": "서울 소재 소기업 이상 사업장에 대해 어린이집 설립 인센티브 제공 제안",
-    "content": "서울 소재 소기업 이상 사업장에 대해 어린이집 설립 인센티브 제공 제안",
+    "content": "\uc11c\uc6b8 \uc18c\uc7ac \uc18c\uae30\uc5c5 \uc774\uc0c1 \uc0ac\uc5c5\uc7a5\uc5d0 \ub300\ud574 \uc5b4\ub9b0\uc774\uc9d1 \uc124\ub9bd \uc778\uc13c\ud2f0\ube0c \uc81c\uacf5 \uc81c\uc548",
     "reg_date": "2024-10-15",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -16740,7 +16740,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197233",
     "title": "서울지하철 주요 노선에 출산, 육아 장려 칸 도입 제안",
-    "content": "서울지하철 주요 노선에 출산, 육아 장려 칸 도입 제안",
+    "content": "\uc11c\uc6b8\uc9c0\ud558\ucca0 \uc8fc\uc694 \ub178\uc120\uc5d0 \ucd9c\uc0b0, \uc721\uc544 \uc7a5\ub824 \uce78 \ub3c4\uc785 \uc81c\uc548",
     "reg_date": "2024-10-15",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -16796,7 +16796,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197204",
     "title": "신혼부부전세자금대출 이자지원사업 관련",
-    "content": "신혼부부전세자금대출 이자지원사업 관련",
+    "content": "\uc2e0\ud63c\ubd80\ubd80\uc804\uc138\uc790\uae08\ub300\ucd9c \uc774\uc790\uc9c0\uc6d0\uc0ac\uc5c5 \uad00\ub828",
     "reg_date": "2024-10-10",
     "vote_score": 18.0,
     "comment_cnt": 0,
@@ -16982,7 +16982,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197063",
     "title": "산후조리원 어린이집 유치원 3천세대 이상은 필수로",
-    "content": "산후조리원 어린이집 유치원 3천세대 이상은 필수로",
+    "content": "\uc0b0\ud6c4\uc870\ub9ac\uc6d0 \uc5b4\ub9b0\uc774\uc9d1 \uc720\uce58\uc6d0 3\ucc9c\uc138\ub300 \uc774\uc0c1\uc740 \ud544\uc218\ub85c",
     "reg_date": "2024-09-19",
     "vote_score": 3.0,
     "comment_cnt": 1,
@@ -17079,7 +17079,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197030",
     "title": "친인척 조력자 아이돌봄비 지원 제도 개선 요청",
-    "content": "친인척 조력자 아이돌봄비 지원 제도 개선 요청",
+    "content": "\uce5c\uc778\ucc99 \uc870\ub825\uc790 \uc544\uc774\ub3cc\ubd04\ube44 \uc9c0\uc6d0 \uc81c\ub3c4 \uac1c\uc120 \uc694\uccad",
     "reg_date": "2024-09-13",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -17176,7 +17176,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-197002",
     "title": "어린이보호구역내 속도제한의 탄력조정운영제안",
-    "content": "어린이보호구역내 속도제한의 탄력조정운영제안",
+    "content": "\uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed\ub0b4 \uc18d\ub3c4\uc81c\ud55c\uc758 \ud0c4\ub825\uc870\uc815\uc6b4\uc601\uc81c\uc548",
     "reg_date": "2024-09-09",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -17232,7 +17232,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196964",
     "title": "대중교통 임산부석에 대한 제안",
-    "content": "대중교통 임산부석에 대한 제안",
+    "content": "\ub300\uc911\uad50\ud1b5 \uc784\uc0b0\ubd80\uc11d\uc5d0 \ub300\ud55c \uc81c\uc548",
     "reg_date": "2024-09-02",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -17329,7 +17329,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196927",
     "title": "강남구 해찬솔 유아숲 체험 관련 건의사항입니다.",
-    "content": "강남구 해찬솔 유아숲 체험 관련 건의사항입니다.",
+    "content": "\uac15\ub0a8\uad6c \ud574\ucc2c\uc194 \uc720\uc544\uc232 \uccb4\ud5d8 \uad00\ub828 \uac74\uc758\uc0ac\ud56d\uc785\ub2c8\ub2e4.",
     "reg_date": "2024-08-26",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -17482,7 +17482,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196838",
     "title": "유치원, 초등학교 운동장에 선셰이드(햇빛 가림막)을 설치해 주세요.",
-    "content": "유치원, 초등학교 운동장에 선셰이드(햇빛 가림막)을 설치해 주세요.",
+    "content": "\uc720\uce58\uc6d0, \ucd08\ub4f1\ud559\uad50 \uc6b4\ub3d9\uc7a5\uc5d0 \uc120\uc170\uc774\ub4dc(\ud587\ube5b \uac00\ub9bc\ub9c9)\uc744 \uc124\uce58\ud574 \uc8fc\uc138\uc694.",
     "reg_date": "2024-08-14",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -17538,7 +17538,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196831",
     "title": "저출산 관련 정책 제안합니다",
-    "content": "저출산 관련 정책 제안합니다",
+    "content": "\uc800\ucd9c\uc0b0 \uad00\ub828 \uc815\ucc45 \uc81c\uc548\ud569\ub2c8\ub2e4",
     "reg_date": "2024-08-13",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -17594,7 +17594,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196829",
     "title": "우리 아이들이 안전하게 자랄 수 있도록 사당 15구역 재개발 추진해 주세요.",
-    "content": "우리 아이들이 안전하게 자랄 수 있도록 사당 15구역 재개발 추진해 주세요.",
+    "content": "\uc6b0\ub9ac \uc544\uc774\ub4e4\uc774 \uc548\uc804\ud558\uac8c \uc790\ub784 \uc218 \uc788\ub3c4\ub85d \uc0ac\ub2f9 15\uad6c\uc5ed \uc7ac\uac1c\ubc1c \ucd94\uc9c4\ud574 \uc8fc\uc138\uc694.",
     "reg_date": "2024-08-13",
     "vote_score": 19.0,
     "comment_cnt": 5,
@@ -17650,7 +17650,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196806",
     "title": "마곡유치원 공항고등학교 앞 부지에 도서관 건립 요청드려요",
-    "content": "마곡유치원 공항고등학교 앞 부지에 도서관 건립 요청드려요",
+    "content": "\ub9c8\uace1\uc720\uce58\uc6d0 \uacf5\ud56d\uace0\ub4f1\ud559\uad50 \uc55e \ubd80\uc9c0\uc5d0 \ub3c4\uc11c\uad00 \uac74\ub9bd \uc694\uccad\ub4dc\ub824\uc694",
     "reg_date": "2024-08-12",
     "vote_score": 67.0,
     "comment_cnt": 5,
@@ -17803,7 +17803,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196793",
     "title": "서울형 아이돌봄비 지원금 관련 의견",
-    "content": "서울형 아이돌봄비 지원금 관련 의견",
+    "content": "\uc11c\uc6b8\ud615 \uc544\uc774\ub3cc\ubd04\ube44 \uc9c0\uc6d0\uae08 \uad00\ub828 \uc758\uacac",
     "reg_date": "2024-08-09",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -17900,7 +17900,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196769",
     "title": "서울시 대중교통  임산부석 개선 요청합니다.",
-    "content": "서울시 대중교통  임산부석 개선 요청합니다.",
+    "content": "\uc11c\uc6b8\uc2dc \ub300\uc911\uad50\ud1b5  \uc784\uc0b0\ubd80\uc11d \uac1c\uc120 \uc694\uccad\ud569\ub2c8\ub2e4.",
     "reg_date": "2024-08-03",
     "vote_score": 13.0,
     "comment_cnt": 2,
@@ -17997,7 +17997,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196732",
     "title": "서울시에서 홍보한 교량호텔 인원제한포함 숙박시설 다둥이 인원제한관련 의견",
-    "content": "서울시에서 홍보한 교량호텔 인원제한포함 숙박시설 다둥이 인원제한관련 의견",
+    "content": "\uc11c\uc6b8\uc2dc\uc5d0\uc11c \ud64d\ubcf4\ud55c \uad50\ub7c9\ud638\ud154 \uc778\uc6d0\uc81c\ud55c\ud3ec\ud568 \uc219\ubc15\uc2dc\uc124 \ub2e4\ub465\uc774 \uc778\uc6d0\uc81c\ud55c\uad00\ub828 \uc758\uacac",
     "reg_date": "2024-07-27",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -18053,7 +18053,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196722",
     "title": "어린이 보호 구역 시점과 종점 바닥 그리고 어린이 보호구역에 있는 방호 울타리를 전부 노란색으로 칠해 주세요.",
-    "content": "어린이 보호 구역 시점과 종점 바닥 그리고 어린이 보호구역에 있는 방호 울타리를 전부 노란색으로 칠해 주세요.",
+    "content": "\uc5b4\ub9b0\uc774 \ubcf4\ud638 \uad6c\uc5ed \uc2dc\uc810\uacfc \uc885\uc810 \ubc14\ub2e5 \uadf8\ub9ac\uace0 \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed\uc5d0 \uc788\ub294 \ubc29\ud638 \uc6b8\ud0c0\ub9ac\ub97c \uc804\ubd80 \ub178\ub780\uc0c9\uc73c\ub85c \uce60\ud574 \uc8fc\uc138\uc694.",
     "reg_date": "2024-07-25",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -18109,7 +18109,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196711",
     "title": "장난감도서관의 소독시간 폐지",
-    "content": "장난감도서관의 소독시간 폐지",
+    "content": "\uc7a5\ub09c\uac10\ub3c4\uc11c\uad00\uc758 \uc18c\ub3c5\uc2dc\uac04 \ud3d0\uc9c0",
     "reg_date": "2024-07-24",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -18165,7 +18165,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196686",
     "title": "신혼부부만 서울시 시민인가요??",
-    "content": "신혼부부만 서울시 시민인가요??",
+    "content": "\uc2e0\ud63c\ubd80\ubd80\ub9cc \uc11c\uc6b8\uc2dc \uc2dc\ubbfc\uc778\uac00\uc694??",
     "reg_date": "2024-07-21",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -18448,7 +18448,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196561",
     "title": "2025년 출산 무주택가구에 30만원씩 주거비용 지원 정책에 대한 건의",
-    "content": "2025년 출산 무주택가구에 30만원씩 주거비용 지원 정책에 대한 건의",
+    "content": "2025\ub144 \ucd9c\uc0b0 \ubb34\uc8fc\ud0dd\uac00\uad6c\uc5d0 30\ub9cc\uc6d0\uc529 \uc8fc\uac70\ube44\uc6a9 \uc9c0\uc6d0 \uc815\ucc45\uc5d0 \ub300\ud55c \uac74\uc758",
     "reg_date": "2024-07-10",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -18521,7 +18521,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196543",
     "title": "난임부부를 위한 유전자검사(PGT-A) 비용 지원 건의",
-    "content": "난임부부를 위한 유전자검사(PGT-A) 비용 지원 건의",
+    "content": "\ub09c\uc784\ubd80\ubd80\ub97c \uc704\ud55c \uc720\uc804\uc790\uac80\uc0ac(PGT-A) \ube44\uc6a9 \uc9c0\uc6d0 \uac74\uc758",
     "reg_date": "2024-07-08",
     "vote_score": 28.0,
     "comment_cnt": 0,
@@ -18812,7 +18812,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196500",
     "title": "서울달 다둥이할인도 추가 부탁드려요",
-    "content": "서울달 다둥이할인도 추가 부탁드려요",
+    "content": "\uc11c\uc6b8\ub2ec \ub2e4\ub465\uc774\ud560\uc778\ub3c4 \ucd94\uac00 \ubd80\ud0c1\ub4dc\ub824\uc694",
     "reg_date": "2024-07-01",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -18868,7 +18868,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196496",
     "title": "출산 여성 보건소 골밀도 검사 대상 포함 요청건",
-    "content": "출산 여성 보건소 골밀도 검사 대상 포함 요청건",
+    "content": "\ucd9c\uc0b0 \uc5ec\uc131 \ubcf4\uac74\uc18c \uace8\ubc00\ub3c4 \uac80\uc0ac \ub300\uc0c1 \ud3ec\ud568 \uc694\uccad\uac74",
     "reg_date": "2024-06-30",
     "vote_score": 28.0,
     "comment_cnt": 1,
@@ -18924,7 +18924,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196494",
     "title": "장애아를 위한 서울형키즈카페 제안",
-    "content": "장애아를 위한 서울형키즈카페 제안",
+    "content": "\uc7a5\uc560\uc544\ub97c \uc704\ud55c \uc11c\uc6b8\ud615\ud0a4\uc988\uce74\ud398 \uc81c\uc548",
     "reg_date": "2024-06-30",
     "vote_score": 14.0,
     "comment_cnt": 1,
@@ -18980,7 +18980,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196484",
     "title": "보차혼용도로에 대한 미흡점 개선 제안 (서울시내 보차혼용도로에 위치한 어린이집, 유치원, 초등학교, 중학교, 고등학교 스쿨존 설정 및 인도 설치 의무화와 서울시내 어린이집의 스쿨존 지정(전체 불가시 보차혼용도로내 위치한 어린이들이라도 우선 지정))",
-    "content": "보차혼용도로에 대한 미흡점 개선 제안 (서울시내 보차혼용도로에 위치한 어린이집, 유치원, 초등학교, 중학교, 고등학교 스쿨존 설정 및 인도 설치 의무화와 서울시내 어린이집의 스쿨존 지정(전체 불가시 보차혼용도로내 위치한 어린이들이라도 우선 지정))",
+    "content": "\ubcf4\ucc28\ud63c\uc6a9\ub3c4\ub85c\uc5d0 \ub300\ud55c \ubbf8\ud761\uc810 \uac1c\uc120 \uc81c\uc548 (\uc11c\uc6b8\uc2dc\ub0b4 \ubcf4\ucc28\ud63c\uc6a9\ub3c4\ub85c\uc5d0 \uc704\uce58\ud55c \uc5b4\ub9b0\uc774\uc9d1, \uc720\uce58\uc6d0, \ucd08\ub4f1\ud559\uad50, \uc911\ud559\uad50, \uace0\ub4f1\ud559\uad50 \uc2a4\ucfe8\uc874 \uc124\uc815 \ubc0f \uc778\ub3c4 \uc124\uce58 \uc758\ubb34\ud654\uc640 \uc11c\uc6b8\uc2dc\ub0b4 \uc5b4\ub9b0\uc774\uc9d1\uc758 \uc2a4\ucfe8\uc874 \uc9c0\uc815(\uc804\uccb4 \ubd88\uac00\uc2dc \ubcf4\ucc28\ud63c\uc6a9\ub3c4\ub85c\ub0b4 \uc704\uce58\ud55c \uc5b4\ub9b0\uc774\ub4e4\uc774\ub77c\ub3c4 \uc6b0\uc120 \uc9c0\uc815))",
     "reg_date": "2024-06-28",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -19077,7 +19077,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196482",
     "title": "출퇴근길 자전거 도로에 유모차나 보행자가 걷지 못하게 해주세요.",
-    "content": "출퇴근길 자전거 도로에 유모차나 보행자가 걷지 못하게 해주세요.",
+    "content": "\ucd9c\ud1f4\uadfc\uae38 \uc790\uc804\uac70 \ub3c4\ub85c\uc5d0 \uc720\ubaa8\ucc28\ub098 \ubcf4\ud589\uc790\uac00 \uac77\uc9c0 \ubabb\ud558\uac8c \ud574\uc8fc\uc138\uc694.",
     "reg_date": "2024-06-27",
     "vote_score": 4.0,
     "comment_cnt": 2,
@@ -19133,7 +19133,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196474",
     "title": "임산부 등 노약자석 무단 착석 대처방법",
-    "content": "임산부 등 노약자석 무단 착석 대처방법",
+    "content": "\uc784\uc0b0\ubd80 \ub4f1 \ub178\uc57d\uc790\uc11d \ubb34\ub2e8 \ucc29\uc11d \ub300\ucc98\ubc29\ubc95",
     "reg_date": "2024-06-26",
     "vote_score": 2.0,
     "comment_cnt": 2,
@@ -19230,7 +19230,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196468",
     "title": "지하철 임산부 배려석에   지하철 보완요원  수시검사",
-    "content": "지하철 임산부 배려석에   지하철 보완요원  수시검사",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d\uc5d0   \uc9c0\ud558\ucca0 \ubcf4\uc644\uc694\uc6d0  \uc218\uc2dc\uac80\uc0ac",
     "reg_date": "2024-06-25",
     "vote_score": 2.0,
     "comment_cnt": 2,
@@ -19327,7 +19327,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196434",
     "title": "고등학생 하원 택시 운영제도",
-    "content": "고등학생 하원 택시 운영제도",
+    "content": "\uace0\ub4f1\ud559\uc0dd \ud558\uc6d0 \ud0dd\uc2dc \uc6b4\uc601\uc81c\ub3c4",
     "reg_date": "2024-06-20",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -19383,7 +19383,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196356",
     "title": "임산부 배려석 관련해서 제안드립니다.",
-    "content": "임산부 배려석 관련해서 제안드립니다.",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \uad00\ub828\ud574\uc11c \uc81c\uc548\ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2024-06-12",
     "vote_score": 4.0,
     "comment_cnt": 0,
@@ -19480,7 +19480,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196336",
     "title": "출산률 향상을 위한 저출산 대책",
-    "content": "출산률 향상을 위한 저출산 대책",
+    "content": "\ucd9c\uc0b0\ub960 \ud5a5\uc0c1\uc744 \uc704\ud55c \uc800\ucd9c\uc0b0 \ub300\ucc45",
     "reg_date": "2024-06-10",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -19536,7 +19536,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196331",
     "title": "북아현지역 우리동네 키움센터",
-    "content": "북아현지역 우리동네 키움센터",
+    "content": "\ubd81\uc544\ud604\uc9c0\uc5ed \uc6b0\ub9ac\ub3d9\ub124 \ud0a4\uc6c0\uc13c\ud130",
     "reg_date": "2024-06-09",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -19689,7 +19689,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196294",
     "title": "관악구에도 거점 키움센터가 있었으면 좋겠습니다~",
-    "content": "관악구에도 거점 키움센터가 있었으면 좋겠습니다~",
+    "content": "\uad00\uc545\uad6c\uc5d0\ub3c4 \uac70\uc810 \ud0a4\uc6c0\uc13c\ud130\uac00 \uc788\uc5c8\uc73c\uba74 \uc88b\uaca0\uc2b5\ub2c8\ub2e4~",
     "reg_date": "2024-06-02",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -19745,7 +19745,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196279",
     "title": "정부 아이돌봄서비스 개선 요청",
-    "content": "정부 아이돌봄서비스 개선 요청",
+    "content": "\uc815\ubd80 \uc544\uc774\ub3cc\ubd04\uc11c\ube44\uc2a4 \uac1c\uc120 \uc694\uccad",
     "reg_date": "2024-05-30",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -19939,7 +19939,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196265",
     "title": "저출산 대책 베이비씨터 돌봄비용",
-    "content": "저출산 대책 베이비씨터 돌봄비용",
+    "content": "\uc800\ucd9c\uc0b0 \ub300\ucc45 \ubca0\uc774\ube44\uc528\ud130 \ub3cc\ubd04\ube44\uc6a9",
     "reg_date": "2024-05-29",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -20036,7 +20036,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196238",
     "title": "청년 복지를 줄이는게 오히려 저출산 해결에 도움됩니다",
-    "content": "청년 복지를 줄이는게 오히려 저출산 해결에 도움됩니다",
+    "content": "\uccad\ub144 \ubcf5\uc9c0\ub97c \uc904\uc774\ub294\uac8c \uc624\ud788\ub824 \uc800\ucd9c\uc0b0 \ud574\uacb0\uc5d0 \ub3c4\uc6c0\ub429\ub2c8\ub2e4",
     "reg_date": "2024-05-25",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -20092,7 +20092,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196215",
     "title": "저출산 문제 해결을 위한 폐교부지 활용",
-    "content": "저출산 문제 해결을 위한 폐교부지 활용",
+    "content": "\uc800\ucd9c\uc0b0 \ubb38\uc81c \ud574\uacb0\uc744 \uc704\ud55c \ud3d0\uad50\ubd80\uc9c0 \ud65c\uc6a9",
     "reg_date": "2024-05-21",
     "vote_score": 22.0,
     "comment_cnt": 6,
@@ -20148,7 +20148,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196209",
     "title": "지하철 임산부석 앱 설치 건의",
-    "content": "지하철 임산부석 앱 설치 건의",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80\uc11d \uc571 \uc124\uce58 \uac74\uc758",
     "reg_date": "2024-05-20",
     "vote_score": 7.0,
     "comment_cnt": 0,
@@ -20245,7 +20245,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196158",
     "title": "영유아 부모 우대 교통 정책",
-    "content": "영유아 부모 우대 교통 정책",
+    "content": "\uc601\uc720\uc544 \ubd80\ubaa8 \uc6b0\ub300 \uad50\ud1b5 \uc815\ucc45",
     "reg_date": "2024-05-11",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -20398,7 +20398,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196096",
     "title": "서울시 자녀출산 무주택가구 주거비 지원",
-    "content": "서울시 자녀출산 무주택가구 주거비 지원",
+    "content": "\uc11c\uc6b8\uc2dc \uc790\ub140\ucd9c\uc0b0 \ubb34\uc8fc\ud0dd\uac00\uad6c \uc8fc\uac70\ube44 \uc9c0\uc6d0",
     "reg_date": "2024-04-30",
     "vote_score": 25.0,
     "comment_cnt": 4,
@@ -20471,7 +20471,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196094",
     "title": "서울시 자녀출산 무주택가구 주거비 지원",
-    "content": "서울시 자녀출산 무주택가구 주거비 지원",
+    "content": "\uc11c\uc6b8\uc2dc \uc790\ub140\ucd9c\uc0b0 \ubb34\uc8fc\ud0dd\uac00\uad6c \uc8fc\uac70\ube44 \uc9c0\uc6d0",
     "reg_date": "2024-04-30",
     "vote_score": 43.0,
     "comment_cnt": 7,
@@ -20544,7 +20544,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-196093",
     "title": "서울시 자녀출산 무주택 가구 주거비 지원",
-    "content": "서울시 자녀출산 무주택 가구 주거비 지원",
+    "content": "\uc11c\uc6b8\uc2dc \uc790\ub140\ucd9c\uc0b0 \ubb34\uc8fc\ud0dd \uac00\uad6c \uc8fc\uac70\ube44 \uc9c0\uc6d0",
     "reg_date": "2024-04-30",
     "vote_score": 106.0,
     "comment_cnt": 21,
@@ -20617,7 +20617,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195893",
     "title": "서울시 공영주차장 다자녀 할인 혜택의 거주지 기준 재검토 요청",
-    "content": "서울시 공영주차장 다자녀 할인 혜택의 거주지 기준 재검토 요청",
+    "content": "\uc11c\uc6b8\uc2dc \uacf5\uc601\uc8fc\ucc28\uc7a5 \ub2e4\uc790\ub140 \ud560\uc778 \ud61c\ud0dd\uc758 \uac70\uc8fc\uc9c0 \uae30\uc900 \uc7ac\uac80\ud1a0 \uc694\uccad",
     "reg_date": "2024-04-18",
     "vote_score": 19.0,
     "comment_cnt": 5,
@@ -20698,7 +20698,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195827",
     "title": "서울시 합계출산율 최저 기록에 대한 대책",
-    "content": "서울시 합계출산율 최저 기록에 대한 대책",
+    "content": "\uc11c\uc6b8\uc2dc \ud569\uacc4\ucd9c\uc0b0\uc728 \ucd5c\uc800 \uae30\ub85d\uc5d0 \ub300\ud55c \ub300\ucc45",
     "reg_date": "2024-04-07",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -20851,7 +20851,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195788",
     "title": "소득제한을 두지 않는 보편적 한부모 혜택",
-    "content": "소득제한을 두지 않는 보편적 한부모 혜택",
+    "content": "\uc18c\ub4dd\uc81c\ud55c\uc744 \ub450\uc9c0 \uc54a\ub294 \ubcf4\ud3b8\uc801 \ud55c\ubd80\ubaa8 \ud61c\ud0dd",
     "reg_date": "2024-03-25",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -20907,7 +20907,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195744",
     "title": "스쿨존 어린이 스마트폰 사용 제안",
-    "content": "스쿨존 어린이 스마트폰 사용 제안",
+    "content": "\uc2a4\ucfe8\uc874 \uc5b4\ub9b0\uc774 \uc2a4\ub9c8\ud2b8\ud3f0 \uc0ac\uc6a9 \uc81c\uc548",
     "reg_date": "2024-03-18",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -20963,7 +20963,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195730",
     "title": "소아과와 어린이집 유치원 보육시설 연계가 있었으면 좋겠습니다.",
-    "content": "소아과와 어린이집 유치원 보육시설 연계가 있었으면 좋겠습니다.",
+    "content": "\uc18c\uc544\uacfc\uc640 \uc5b4\ub9b0\uc774\uc9d1 \uc720\uce58\uc6d0 \ubcf4\uc721\uc2dc\uc124 \uc5f0\uacc4\uac00 \uc788\uc5c8\uc73c\uba74 \uc88b\uaca0\uc2b5\ub2c8\ub2e4.",
     "reg_date": "2024-03-16",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -21060,7 +21060,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195711",
     "title": "[공동육아 스타트업] 서울시육아지원정부사업_협력/홍보 문의",
-    "content": "[공동육아 스타트업] 서울시육아지원정부사업_협력/홍보 문의",
+    "content": "[\uacf5\ub3d9\uc721\uc544 \uc2a4\ud0c0\ud2b8\uc5c5] \uc11c\uc6b8\uc2dc\uc721\uc544\uc9c0\uc6d0\uc815\ubd80\uc0ac\uc5c5_\ud611\ub825/\ud64d\ubcf4 \ubb38\uc758",
     "reg_date": "2024-03-08",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -21116,7 +21116,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195684",
     "title": "유급 육아시간 확대 사용 건의",
-    "content": "유급 육아시간 확대 사용 건의",
+    "content": "\uc720\uae09 \uc721\uc544\uc2dc\uac04 \ud655\ub300 \uc0ac\uc6a9 \uac74\uc758",
     "reg_date": "2024-03-02",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -21269,7 +21269,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195671",
     "title": "[제도개선]다자녀 가정의 시·도 간 주차요금 감면 혜택 제도적 보완 제안",
-    "content": "[제도개선]다자녀 가정의 시·도 간 주차요금 감면 혜택 제도적 보완 제안",
+    "content": "[\uc81c\ub3c4\uac1c\uc120]\ub2e4\uc790\ub140 \uac00\uc815\uc758 \uc2dc\u00b7\ub3c4 \uac04 \uc8fc\ucc28\uc694\uae08 \uac10\uba74 \ud61c\ud0dd \uc81c\ub3c4\uc801 \ubcf4\uc644 \uc81c\uc548",
     "reg_date": "2024-02-26",
     "vote_score": 32.0,
     "comment_cnt": 1,
@@ -21350,7 +21350,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195665",
     "title": "우리는 왜 출산하지 않을까? Part 3",
-    "content": "우리는 왜 출산하지 않을까? Part 3",
+    "content": "\uc6b0\ub9ac\ub294 \uc65c \ucd9c\uc0b0\ud558\uc9c0 \uc54a\uc744\uae4c? Part 3",
     "reg_date": "2024-02-25",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -21406,7 +21406,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195663",
     "title": "우리는 왜 출산하지 않을까? Part 2",
-    "content": "우리는 왜 출산하지 않을까? Part 2",
+    "content": "\uc6b0\ub9ac\ub294 \uc65c \ucd9c\uc0b0\ud558\uc9c0 \uc54a\uc744\uae4c? Part 2",
     "reg_date": "2024-02-25",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -21462,7 +21462,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195661",
     "title": "우리는 왜 출산하지 않을까? Part 1",
-    "content": "우리는 왜 출산하지 않을까? Part 1",
+    "content": "\uc6b0\ub9ac\ub294 \uc65c \ucd9c\uc0b0\ud558\uc9c0 \uc54a\uc744\uae4c? Part 1",
     "reg_date": "2024-02-24",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -21615,7 +21615,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195640",
     "title": "서울시 임산부의 건강을 위한 지원사업을 요청합니다",
-    "content": "서울시 임산부의 건강을 위한 지원사업을 요청합니다",
+    "content": "\uc11c\uc6b8\uc2dc \uc784\uc0b0\ubd80\uc758 \uac74\uac15\uc744 \uc704\ud55c \uc9c0\uc6d0\uc0ac\uc5c5\uc744 \uc694\uccad\ud569\ub2c8\ub2e4",
     "reg_date": "2024-02-15",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -21712,7 +21712,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195595",
     "title": "키움센터 정기돌봄 선정을 추첨으로 해주시길 제안합니다.",
-    "content": "키움센터 정기돌봄 선정을 추첨으로 해주시길 제안합니다.",
+    "content": "\ud0a4\uc6c0\uc13c\ud130 \uc815\uae30\ub3cc\ubd04 \uc120\uc815\uc744 \ucd94\ucca8\uc73c\ub85c \ud574\uc8fc\uc2dc\uae38 \uc81c\uc548\ud569\ub2c8\ub2e4.",
     "reg_date": "2024-02-01",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -21809,7 +21809,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195593",
     "title": "서울시 신혼부부 전세자금대출 증액 가능하도록 정정 부탁 드립니다.",
-    "content": "서울시 신혼부부 전세자금대출 증액 가능하도록 정정 부탁 드립니다.",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc804\uc138\uc790\uae08\ub300\ucd9c \uc99d\uc561 \uac00\ub2a5\ud558\ub3c4\ub85d \uc815\uc815 \ubd80\ud0c1 \ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2024-01-31",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -21898,7 +21898,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195558",
     "title": "육아휴직 프리랜서 자영업 개선",
-    "content": "육아휴직 프리랜서 자영업 개선",
+    "content": "\uc721\uc544\ud734\uc9c1 \ud504\ub9ac\ub79c\uc11c \uc790\uc601\uc5c5 \uac1c\uc120",
     "reg_date": "2024-01-18",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -21954,7 +21954,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195523",
     "title": "서울시 신혼부부 전세대출 한도 증액",
-    "content": "서울시 신혼부부 전세대출 한도 증액",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc804\uc138\ub300\ucd9c \ud55c\ub3c4 \uc99d\uc561",
     "reg_date": "2024-01-10",
     "vote_score": 18.0,
     "comment_cnt": 2,
@@ -22140,7 +22140,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195492",
     "title": "한강 유람선을 탈 때 유모차나 휠체어 타고 그대로 탈 수 있게 해 주면 좋겠습니다. 지하철처럼(호주 사례 첨부)",
-    "content": "한강 유람선을 탈 때 유모차나 휠체어 타고 그대로 탈 수 있게 해 주면 좋겠습니다. 지하철처럼(호주 사례 첨부)",
+    "content": "\ud55c\uac15 \uc720\ub78c\uc120\uc744 \ud0c8 \ub54c \uc720\ubaa8\ucc28\ub098 \ud720\uccb4\uc5b4 \ud0c0\uace0 \uadf8\ub300\ub85c \ud0c8 \uc218 \uc788\uac8c \ud574 \uc8fc\uba74 \uc88b\uaca0\uc2b5\ub2c8\ub2e4. \uc9c0\ud558\ucca0\ucc98\ub7fc(\ud638\uc8fc \uc0ac\ub840 \ucca8\ubd80)",
     "reg_date": "2024-01-03",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -22196,7 +22196,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195491",
     "title": "휘경2동 아이들을 위한 시설을 만들어 주세요",
-    "content": "휘경2동 아이들을 위한 시설을 만들어 주세요",
+    "content": "\ud718\uacbd2\ub3d9 \uc544\uc774\ub4e4\uc744 \uc704\ud55c \uc2dc\uc124\uc744 \ub9cc\ub4e4\uc5b4 \uc8fc\uc138\uc694",
     "reg_date": "2024-01-03",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -22252,7 +22252,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195464",
     "title": "구에서 운영하는 체육시설에 대해 다자녀 3명 → 2명으로 변경 제한 드립니다.",
-    "content": "구에서 운영하는 체육시설에 대해 다자녀 3명 → 2명으로 변경 제한 드립니다.",
+    "content": "\uad6c\uc5d0\uc11c \uc6b4\uc601\ud558\ub294 \uccb4\uc721\uc2dc\uc124\uc5d0 \ub300\ud574 \ub2e4\uc790\ub140 3\uba85 \u2192 2\uba85\uc73c\ub85c \ubcc0\uacbd \uc81c\ud55c \ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2023-12-27",
     "vote_score": 4.0,
     "comment_cnt": 0,
@@ -22333,7 +22333,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195458",
     "title": "부모 교육 확대, 기업 본사 이전 면세 혜택,  자동·의무 육아휴직제- 저출산 정책 제안",
-    "content": "부모 교육 확대, 기업 본사 이전 면세 혜택,  자동·의무 육아휴직제- 저출산 정책 제안",
+    "content": "\ubd80\ubaa8 \uad50\uc721 \ud655\ub300, \uae30\uc5c5 \ubcf8\uc0ac \uc774\uc804 \uba74\uc138 \ud61c\ud0dd,  \uc790\ub3d9\u00b7\uc758\ubb34 \uc721\uc544\ud734\uc9c1\uc81c- \uc800\ucd9c\uc0b0 \uc815\ucc45 \uc81c\uc548",
     "reg_date": "2023-12-24",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -22389,7 +22389,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195405",
     "title": "서울지하철 임산부배려석 실효성 높이는 방안 제안합니다",
-    "content": "서울지하철 임산부배려석 실효성 높이는 방안 제안합니다",
+    "content": "\uc11c\uc6b8\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80\ubc30\ub824\uc11d \uc2e4\ud6a8\uc131 \ub192\uc774\ub294 \ubc29\uc548 \uc81c\uc548\ud569\ub2c8\ub2e4",
     "reg_date": "2023-12-05",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -22486,7 +22486,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195367",
     "title": "타지역 다둥이도 서울시 공공시설물에 주차 할인을 해주세요~",
-    "content": "타지역 다둥이도 서울시 공공시설물에 주차 할인을 해주세요~",
+    "content": "\ud0c0\uc9c0\uc5ed \ub2e4\ub465\uc774\ub3c4 \uc11c\uc6b8\uc2dc \uacf5\uacf5\uc2dc\uc124\ubb3c\uc5d0 \uc8fc\ucc28 \ud560\uc778\uc744 \ud574\uc8fc\uc138\uc694~",
     "reg_date": "2023-11-28",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -22639,7 +22639,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195248",
     "title": "난임 치료 중 PGT 진단도 의료 지원을 해주면 어떨까요?",
-    "content": "난임 치료 중 PGT 진단도 의료 지원을 해주면 어떨까요?",
+    "content": "\ub09c\uc784 \uce58\ub8cc \uc911 PGT \uc9c4\ub2e8\ub3c4 \uc758\ub8cc \uc9c0\uc6d0\uc744 \ud574\uc8fc\uba74 \uc5b4\ub5a8\uae4c\uc694?",
     "reg_date": "2023-10-29",
     "vote_score": 16.0,
     "comment_cnt": 0,
@@ -22930,7 +22930,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195183",
     "title": "국공립 유치원 등하원 차량운행 요청",
-    "content": "국공립 유치원 등하원 차량운행 요청",
+    "content": "\uad6d\uacf5\ub9bd \uc720\uce58\uc6d0 \ub4f1\ud558\uc6d0 \ucc28\ub7c9\uc6b4\ud589 \uc694\uccad",
     "reg_date": "2023-10-10",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -23083,7 +23083,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195163",
     "title": "어린이보호구역내 교통사고 방지를 위한 교통시설물 변경설치 및 작업제한",
-    "content": "어린이보호구역내 교통사고 방지를 위한 교통시설물 변경설치 및 작업제한",
+    "content": "\uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed\ub0b4 \uad50\ud1b5\uc0ac\uace0 \ubc29\uc9c0\ub97c \uc704\ud55c \uad50\ud1b5\uc2dc\uc124\ubb3c \ubcc0\uacbd\uc124\uce58 \ubc0f \uc791\uc5c5\uc81c\ud55c",
     "reg_date": "2023-10-04",
     "vote_score": 18.0,
     "comment_cnt": 0,
@@ -23139,7 +23139,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195152",
     "title": "서울시신혼부부임차보증금 금리 너무높습니다",
-    "content": "서울시신혼부부임차보증금 금리 너무높습니다",
+    "content": "\uc11c\uc6b8\uc2dc\uc2e0\ud63c\ubd80\ubd80\uc784\ucc28\ubcf4\uc99d\uae08 \uae08\ub9ac \ub108\ubb34\ub192\uc2b5\ub2c8\ub2e4",
     "reg_date": "2023-09-28",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -23228,7 +23228,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195147",
     "title": "흡연에 대한 경범죄로 추가 제안. 아이와 시민들의 건강과 올바른 흡연습관을 위해 제안합니다.",
-    "content": "흡연에 대한 경범죄로 추가 제안. 아이와 시민들의 건강과 올바른 흡연습관을 위해 제안합니다.",
+    "content": "\ud761\uc5f0\uc5d0 \ub300\ud55c \uacbd\ubc94\uc8c4\ub85c \ucd94\uac00 \uc81c\uc548. \uc544\uc774\uc640 \uc2dc\ubbfc\ub4e4\uc758 \uac74\uac15\uacfc \uc62c\ubc14\ub978 \ud761\uc5f0\uc2b5\uad00\uc744 \uc704\ud574 \uc81c\uc548\ud569\ub2c8\ub2e4.",
     "reg_date": "2023-09-26",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -23284,7 +23284,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195098",
     "title": "어린이집 교사 역량 강화비 사용",
-    "content": "어린이집 교사 역량 강화비 사용",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 \uad50\uc0ac \uc5ed\ub7c9 \uac15\ud654\ube44 \uc0ac\uc6a9",
     "reg_date": "2023-09-13",
     "vote_score": 9.0,
     "comment_cnt": 2,
@@ -23381,7 +23381,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195084",
     "title": "실효성없는 신혼부부 대상 정책 개선 부탁드립니다",
-    "content": "실효성없는 신혼부부 대상 정책 개선 부탁드립니다",
+    "content": "\uc2e4\ud6a8\uc131\uc5c6\ub294 \uc2e0\ud63c\ubd80\ubd80 \ub300\uc0c1 \uc815\ucc45 \uac1c\uc120 \ubd80\ud0c1\ub4dc\ub9bd\ub2c8\ub2e4",
     "reg_date": "2023-09-08",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -23470,7 +23470,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195063",
     "title": "대형서점 다둥이 혜택 좀 해주세요",
-    "content": "대형서점 다둥이 혜택 좀 해주세요",
+    "content": "\ub300\ud615\uc11c\uc810 \ub2e4\ub465\uc774 \ud61c\ud0dd \uc880 \ud574\uc8fc\uc138\uc694",
     "reg_date": "2023-09-05",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -23526,7 +23526,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195015",
     "title": "세자녀 이상 행복주택 거주기간 연장관련",
-    "content": "세자녀 이상 행복주택 거주기간 연장관련",
+    "content": "\uc138\uc790\ub140 \uc774\uc0c1 \ud589\ubcf5\uc8fc\ud0dd \uac70\uc8fc\uae30\uac04 \uc5f0\uc7a5\uad00\ub828",
     "reg_date": "2023-08-24",
     "vote_score": 6.0,
     "comment_cnt": 1,
@@ -23582,7 +23582,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-195004",
     "title": "임산부 배려석, 본래의 목적에 맞는 이용을 위한 제안",
-    "content": "임산부 배려석, 본래의 목적에 맞는 이용을 위한 제안",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d, \ubcf8\ub798\uc758 \ubaa9\uc801\uc5d0 \ub9de\ub294 \uc774\uc6a9\uc744 \uc704\ud55c \uc81c\uc548",
     "reg_date": "2023-08-22",
     "vote_score": 138.0,
     "comment_cnt": 12,
@@ -23776,7 +23776,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194971",
     "title": "SH신혼부부 대출 연장 조건 요청",
-    "content": "SH신혼부부 대출 연장 조건 요청",
+    "content": "SH\uc2e0\ud63c\ubd80\ubd80 \ub300\ucd9c \uc5f0\uc7a5 \uc870\uac74 \uc694\uccad",
     "reg_date": "2023-08-13",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -23865,7 +23865,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194958",
     "title": "용산가족공원 내 잔디 운동장 트랙부분 모래 깔아주세요",
-    "content": "용산가족공원 내 잔디 운동장 트랙부분 모래 깔아주세요",
+    "content": "\uc6a9\uc0b0\uac00\uc871\uacf5\uc6d0 \ub0b4 \uc794\ub514 \uc6b4\ub3d9\uc7a5 \ud2b8\ub799\ubd80\ubd84 \ubaa8\ub798 \uae54\uc544\uc8fc\uc138\uc694",
     "reg_date": "2023-08-10",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -23921,7 +23921,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194913",
     "title": "지역구 유아수영프로그램 시설문의",
-    "content": "지역구 유아수영프로그램 시설문의",
+    "content": "\uc9c0\uc5ed\uad6c \uc720\uc544\uc218\uc601\ud504\ub85c\uadf8\ub7a8 \uc2dc\uc124\ubb38\uc758",
     "reg_date": "2023-08-03",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -23977,7 +23977,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194899",
     "title": "출산율 문제 해결을 위한 제안입니다.",
-    "content": "출산율 문제 해결을 위한 제안입니다.",
+    "content": "\ucd9c\uc0b0\uc728 \ubb38\uc81c \ud574\uacb0\uc744 \uc704\ud55c \uc81c\uc548\uc785\ub2c8\ub2e4.",
     "reg_date": "2023-08-01",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -24033,7 +24033,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194883",
     "title": "소득제한 폐지 된 난임지원 6개월 거주조건 폐지 요청",
-    "content": "소득제한 폐지 된 난임지원 6개월 거주조건 폐지 요청",
+    "content": "\uc18c\ub4dd\uc81c\ud55c \ud3d0\uc9c0 \ub41c \ub09c\uc784\uc9c0\uc6d0 6\uac1c\uc6d4 \uac70\uc8fc\uc870\uac74 \ud3d0\uc9c0 \uc694\uccad",
     "reg_date": "2023-07-28",
     "vote_score": 74.0,
     "comment_cnt": 9,
@@ -24130,7 +24130,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194882",
     "title": "난임부부 6개월거주 폐지요청",
-    "content": "난임부부 6개월거주 폐지요청",
+    "content": "\ub09c\uc784\ubd80\ubd80 6\uac1c\uc6d4\uac70\uc8fc \ud3d0\uc9c0\uc694\uccad",
     "reg_date": "2023-07-28",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -24324,7 +24324,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194877",
     "title": "국공립 어린이집 처우개선 사항",
-    "content": "국공립 어린이집 처우개선 사항",
+    "content": "\uad6d\uacf5\ub9bd \uc5b4\ub9b0\uc774\uc9d1 \ucc98\uc6b0\uac1c\uc120 \uc0ac\ud56d",
     "reg_date": "2023-07-27",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -24421,7 +24421,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194855",
     "title": "노인의 안전한 버스 승하차 아이디어 제안",
-    "content": "노인의 안전한 버스 승하차 아이디어 제안",
+    "content": "\ub178\uc778\uc758 \uc548\uc804\ud55c \ubc84\uc2a4 \uc2b9\ud558\ucc28 \uc544\uc774\ub514\uc5b4 \uc81c\uc548",
     "reg_date": "2023-07-24",
     "vote_score": 25.0,
     "comment_cnt": 0,
@@ -24477,7 +24477,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194854",
     "title": "저출산 및 육아에 관련 의견 제안",
-    "content": "저출산 및 육아에 관련 의견 제안",
+    "content": "\uc800\ucd9c\uc0b0 \ubc0f \uc721\uc544\uc5d0 \uad00\ub828 \uc758\uacac \uc81c\uc548",
     "reg_date": "2023-07-24",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -24533,7 +24533,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194851",
     "title": "혼인신고서의 &#39;성·본의 협의&#39;를 출생신고에서 하도록 변경하는 것을 건의드립니다.",
-    "content": "혼인신고서의 &#39;성·본의 협의&#39;를 출생신고에서 하도록 변경하는 것을 건의드립니다.",
+    "content": "\ud63c\uc778\uc2e0\uace0\uc11c\uc758 &#39;\uc131\u00b7\ubcf8\uc758 \ud611\uc758&#39;\ub97c \ucd9c\uc0dd\uc2e0\uace0\uc5d0\uc11c \ud558\ub3c4\ub85d \ubcc0\uacbd\ud558\ub294 \uac83\uc744 \uac74\uc758\ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2023-07-23",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -24589,7 +24589,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194797",
     "title": "임산부석 알림멘트나 알림음을 도입해 주십시요.",
-    "content": "임산부석 알림멘트나 알림음을 도입해 주십시요.",
+    "content": "\uc784\uc0b0\ubd80\uc11d \uc54c\ub9bc\uba58\ud2b8\ub098 \uc54c\ub9bc\uc74c\uc744 \ub3c4\uc785\ud574 \uc8fc\uc2ed\uc2dc\uc694.",
     "reg_date": "2023-07-11",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -24686,7 +24686,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194792",
     "title": "난임지원 7월 바뀐 정책에 관해서",
-    "content": "난임지원 7월 바뀐 정책에 관해서",
+    "content": "\ub09c\uc784\uc9c0\uc6d0 7\uc6d4 \ubc14\ub010 \uc815\ucc45\uc5d0 \uad00\ud574\uc11c",
     "reg_date": "2023-07-11",
     "vote_score": 3.0,
     "comment_cnt": 1,
@@ -24783,7 +24783,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194775",
     "title": "키움센터 관련 의견 드립니다.",
-    "content": "키움센터 관련 의견 드립니다.",
+    "content": "\ud0a4\uc6c0\uc13c\ud130 \uad00\ub828 \uc758\uacac \ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2023-07-06",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -24839,7 +24839,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194771",
     "title": "서울시 신혼부부 이자지원 사업 한도 증액 허용 요청",
-    "content": "서울시 신혼부부 이자지원 사업 한도 증액 허용 요청",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc774\uc790\uc9c0\uc6d0 \uc0ac\uc5c5 \ud55c\ub3c4 \uc99d\uc561 \ud5c8\uc6a9 \uc694\uccad",
     "reg_date": "2023-07-05",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -24928,7 +24928,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194750",
     "title": "산후조리경비 지원 확대 및 소급적용 건의",
-    "content": "산후조리경비 지원 확대 및 소급적용 건의",
+    "content": "\uc0b0\ud6c4\uc870\ub9ac\uacbd\ube44 \uc9c0\uc6d0 \ud655\ub300 \ubc0f \uc18c\uae09\uc801\uc6a9 \uac74\uc758",
     "reg_date": "2023-07-01",
     "vote_score": 17.0,
     "comment_cnt": 2,
@@ -25195,7 +25195,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194719",
     "title": "매입임대 다자녀가구를 배려해 주세요.",
-    "content": "매입임대 다자녀가구를 배려해 주세요.",
+    "content": "\ub9e4\uc785\uc784\ub300 \ub2e4\uc790\ub140\uac00\uad6c\ub97c \ubc30\ub824\ud574 \uc8fc\uc138\uc694.",
     "reg_date": "2023-06-27",
     "vote_score": 6.0,
     "comment_cnt": 0,
@@ -25276,7 +25276,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194713",
     "title": "다자녀가구 자동차 취득세 감면혜택 완화요청(5인승 이상으로)",
-    "content": "다자녀가구 자동차 취득세 감면혜택 완화요청(5인승 이상으로)",
+    "content": "\ub2e4\uc790\ub140\uac00\uad6c \uc790\ub3d9\ucc28 \ucde8\ub4dd\uc138 \uac10\uba74\ud61c\ud0dd \uc644\ud654\uc694\uccad(5\uc778\uc2b9 \uc774\uc0c1\uc73c\ub85c)",
     "reg_date": "2023-06-25",
     "vote_score": 22.0,
     "comment_cnt": 1,
@@ -25454,7 +25454,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194691",
     "title": "키움센터 이용료 교육비공제 가능하게 개정해주세요",
-    "content": "키움센터 이용료 교육비공제 가능하게 개정해주세요",
+    "content": "\ud0a4\uc6c0\uc13c\ud130 \uc774\uc6a9\ub8cc \uad50\uc721\ube44\uacf5\uc81c \uac00\ub2a5\ud558\uac8c \uac1c\uc815\ud574\uc8fc\uc138\uc694",
     "reg_date": "2023-06-20",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -25510,7 +25510,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194687",
     "title": "난자냉동 지원 나이를 만28세로 하향해주세요.",
-    "content": "난자냉동 지원 나이를 만28세로 하향해주세요.",
+    "content": "\ub09c\uc790\ub0c9\ub3d9 \uc9c0\uc6d0 \ub098\uc774\ub97c \ub9cc28\uc138\ub85c \ud558\ud5a5\ud574\uc8fc\uc138\uc694.",
     "reg_date": "2023-06-19",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -25566,7 +25566,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194674",
     "title": "영유아 부모에 대한 주차비용 지원(영유아 동반시)",
-    "content": "영유아 부모에 대한 주차비용 지원(영유아 동반시)",
+    "content": "\uc601\uc720\uc544 \ubd80\ubaa8\uc5d0 \ub300\ud55c \uc8fc\ucc28\ube44\uc6a9 \uc9c0\uc6d0(\uc601\uc720\uc544 \ub3d9\ubc18\uc2dc)",
     "reg_date": "2023-06-17",
     "vote_score": 60.0,
     "comment_cnt": 2,
@@ -25719,7 +25719,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194620",
     "title": "서울시 관내의 모유수유시설의 한글 명칭과 영문 명칭 통일 해 주세요.",
-    "content": "서울시 관내의 모유수유시설의 한글 명칭과 영문 명칭 통일 해 주세요.",
+    "content": "\uc11c\uc6b8\uc2dc \uad00\ub0b4\uc758 \ubaa8\uc720\uc218\uc720\uc2dc\uc124\uc758 \ud55c\uae00 \uba85\uce6d\uacfc \uc601\ubb38 \uba85\uce6d \ud1b5\uc77c \ud574 \uc8fc\uc138\uc694.",
     "reg_date": "2023-06-10",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -25872,7 +25872,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194557",
     "title": "우리동네키움센터 증설 요청 드립니다",
-    "content": "우리동네키움센터 증설 요청 드립니다",
+    "content": "\uc6b0\ub9ac\ub3d9\ub124\ud0a4\uc6c0\uc13c\ud130 \uc99d\uc124 \uc694\uccad \ub4dc\ub9bd\ub2c8\ub2e4",
     "reg_date": "2023-05-31",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -25928,7 +25928,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194550",
     "title": "대중교통 임산부 배려석 &#34;임산부 인증후 자리에 착석 할 수 있게 부탁 드립니다. &#34;",
-    "content": "대중교통 임산부 배려석 &#34;임산부 인증후 자리에 착석 할 수 있게 부탁 드립니다. &#34;",
+    "content": "\ub300\uc911\uad50\ud1b5 \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d &#34;\uc784\uc0b0\ubd80 \uc778\uc99d\ud6c4 \uc790\ub9ac\uc5d0 \ucc29\uc11d \ud560 \uc218 \uc788\uac8c \ubd80\ud0c1 \ub4dc\ub9bd\ub2c8\ub2e4. &#34;",
     "reg_date": "2023-05-31",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -26025,7 +26025,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194544",
     "title": "서울시 신혼부부 임차보증금 이자지원사업 추가 이자지원금리 적용시점",
-    "content": "서울시 신혼부부 임차보증금 이자지원사업 추가 이자지원금리 적용시점",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc784\ucc28\ubcf4\uc99d\uae08 \uc774\uc790\uc9c0\uc6d0\uc0ac\uc5c5 \ucd94\uac00 \uc774\uc790\uc9c0\uc6d0\uae08\ub9ac \uc801\uc6a9\uc2dc\uc810",
     "reg_date": "2023-05-30",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -26114,7 +26114,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194515",
     "title": "난임부부 첫째아이는 지원 횟수제한 폐지해주시기 바랍니다.",
-    "content": "난임부부 첫째아이는 지원 횟수제한 폐지해주시기 바랍니다.",
+    "content": "\ub09c\uc784\ubd80\ubd80 \uccab\uc9f8\uc544\uc774\ub294 \uc9c0\uc6d0 \ud69f\uc218\uc81c\ud55c \ud3d0\uc9c0\ud574\uc8fc\uc2dc\uae30 \ubc14\ub78d\ub2c8\ub2e4.",
     "reg_date": "2023-05-24",
     "vote_score": 7.0,
     "comment_cnt": 0,
@@ -26308,7 +26308,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194484",
     "title": "서울시 저출산 대책마련 지원..(더 나아가 대한민국의 미래)",
-    "content": "서울시 저출산 대책마련 지원..(더 나아가 대한민국의 미래)",
+    "content": "\uc11c\uc6b8\uc2dc \uc800\ucd9c\uc0b0 \ub300\ucc45\ub9c8\ub828 \uc9c0\uc6d0..(\ub354 \ub098\uc544\uac00 \ub300\ud55c\ubbfc\uad6d\uc758 \ubbf8\ub798)",
     "reg_date": "2023-05-16",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -26364,7 +26364,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194469",
     "title": "산후조리 경비 지원 대상자 확대 요청",
-    "content": "산후조리 경비 지원 대상자 확대 요청",
+    "content": "\uc0b0\ud6c4\uc870\ub9ac \uacbd\ube44 \uc9c0\uc6d0 \ub300\uc0c1\uc790 \ud655\ub300 \uc694\uccad",
     "reg_date": "2023-05-14",
     "vote_score": 364.0,
     "comment_cnt": 76,
@@ -26437,7 +26437,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194436",
     "title": "난임 지원 제한 철폐하라, 사실혼 제한 철폐하라",
-    "content": "난임 지원 제한 철폐하라, 사실혼 제한 철폐하라",
+    "content": "\ub09c\uc784 \uc9c0\uc6d0 \uc81c\ud55c \ucca0\ud3d0\ud558\ub77c, \uc0ac\uc2e4\ud63c \uc81c\ud55c \ucca0\ud3d0\ud558\ub77c",
     "reg_date": "2023-05-04",
     "vote_score": 60.0,
     "comment_cnt": 5,
@@ -26534,7 +26534,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194428",
     "title": "신혼부부 임차보증금 이자지원사업 대출한도 변경에 따른 증액 검토 요청의 건",
-    "content": "신혼부부 임차보증금 이자지원사업 대출한도 변경에 따른 증액 검토 요청의 건",
+    "content": "\uc2e0\ud63c\ubd80\ubd80 \uc784\ucc28\ubcf4\uc99d\uae08 \uc774\uc790\uc9c0\uc6d0\uc0ac\uc5c5 \ub300\ucd9c\ud55c\ub3c4 \ubcc0\uacbd\uc5d0 \ub530\ub978 \uc99d\uc561 \uac80\ud1a0 \uc694\uccad\uc758 \uac74",
     "reg_date": "2023-05-02",
     "vote_score": 7.0,
     "comment_cnt": 0,
@@ -26623,7 +26623,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194407",
     "title": "스쿨존 교통사고 발생시 피해아동에게 실질적 피해보상안",
-    "content": "스쿨존 교통사고 발생시 피해아동에게 실질적 피해보상안",
+    "content": "\uc2a4\ucfe8\uc874 \uad50\ud1b5\uc0ac\uace0 \ubc1c\uc0dd\uc2dc \ud53c\ud574\uc544\ub3d9\uc5d0\uac8c \uc2e4\uc9c8\uc801 \ud53c\ud574\ubcf4\uc0c1\uc548",
     "reg_date": "2023-04-26",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -26679,7 +26679,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194379",
     "title": "아이들이 안전하게 걸어 다닐 수 있는 서울을 만들어주세요.(음주운전, 길거리 흡연 관련)",
-    "content": "아이들이 안전하게 걸어 다닐 수 있는 서울을 만들어주세요.(음주운전, 길거리 흡연 관련)",
+    "content": "\uc544\uc774\ub4e4\uc774 \uc548\uc804\ud558\uac8c \uac78\uc5b4 \ub2e4\ub2d0 \uc218 \uc788\ub294 \uc11c\uc6b8\uc744 \ub9cc\ub4e4\uc5b4\uc8fc\uc138\uc694.(\uc74c\uc8fc\uc6b4\uc804, \uae38\uac70\ub9ac \ud761\uc5f0 \uad00\ub828)",
     "reg_date": "2023-04-24",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -26735,7 +26735,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194363",
     "title": "저출산대책 시행일을 2023.01.01 이후로  해주세요",
-    "content": "저출산대책 시행일을 2023.01.01 이후로  해주세요",
+    "content": "\uc800\ucd9c\uc0b0\ub300\ucc45 \uc2dc\ud589\uc77c\uc744 2023.01.01 \uc774\ud6c4\ub85c  \ud574\uc8fc\uc138\uc694",
     "reg_date": "2023-04-21",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -26791,7 +26791,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194360",
     "title": "언론, 정부, 기업, 국민들이 모두 힘을 합치는 저출산 문제 해결 프로젝트 (국공립",
-    "content": "언론, 정부, 기업, 국민들이 모두 힘을 합치는 저출산 문제 해결 프로젝트 (국공립",
+    "content": "\uc5b8\ub860, \uc815\ubd80, \uae30\uc5c5, \uad6d\ubbfc\ub4e4\uc774 \ubaa8\ub450 \ud798\uc744 \ud569\uce58\ub294 \uc800\ucd9c\uc0b0 \ubb38\uc81c \ud574\uacb0 \ud504\ub85c\uc81d\ud2b8 (\uad6d\uacf5\ub9bd",
     "reg_date": "2023-04-20",
     "vote_score": 144.0,
     "comment_cnt": 5,
@@ -26847,7 +26847,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194332",
     "title": "서울런 이용자에 다자녀 가정의 추가를 건의합니다.",
-    "content": "서울런 이용자에 다자녀 가정의 추가를 건의합니다.",
+    "content": "\uc11c\uc6b8\ub7f0 \uc774\uc6a9\uc790\uc5d0 \ub2e4\uc790\ub140 \uac00\uc815\uc758 \ucd94\uac00\ub97c \uac74\uc758\ud569\ub2c8\ub2e4.",
     "reg_date": "2023-04-13",
     "vote_score": 6.0,
     "comment_cnt": 1,
@@ -26928,7 +26928,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194324",
     "title": "저출산대책2편 시행일을 정책발표일로 대상자 늘려주세요^^",
-    "content": "저출산대책2편 시행일을 정책발표일로 대상자 늘려주세요^^",
+    "content": "\uc800\ucd9c\uc0b0\ub300\ucc452\ud3b8 \uc2dc\ud589\uc77c\uc744 \uc815\ucc45\ubc1c\ud45c\uc77c\ub85c \ub300\uc0c1\uc790 \ub298\ub824\uc8fc\uc138\uc694^^",
     "reg_date": "2023-04-11",
     "vote_score": 653.0,
     "comment_cnt": 147,
@@ -26984,7 +26984,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194273",
     "title": "저출산 현상에 대한 현실적 해결방안",
-    "content": "저출산 현상에 대한 현실적 해결방안",
+    "content": "\uc800\ucd9c\uc0b0 \ud604\uc0c1\uc5d0 \ub300\ud55c \ud604\uc2e4\uc801 \ud574\uacb0\ubc29\uc548",
     "reg_date": "2023-04-02",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -27040,7 +27040,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194254",
     "title": "시도 거주지 구분 없는 다둥이 부모 주차요금 할인 확대 추진 제안",
-    "content": "시도 거주지 구분 없는 다둥이 부모 주차요금 할인 확대 추진 제안",
+    "content": "\uc2dc\ub3c4 \uac70\uc8fc\uc9c0 \uad6c\ubd84 \uc5c6\ub294 \ub2e4\ub465\uc774 \ubd80\ubaa8 \uc8fc\ucc28\uc694\uae08 \ud560\uc778 \ud655\ub300 \ucd94\uc9c4 \uc81c\uc548",
     "reg_date": "2023-03-30",
     "vote_score": 57.0,
     "comment_cnt": 6,
@@ -27096,7 +27096,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194248",
     "title": "다자녀혜택 교육도(서울런) 확대부탁드립니다",
-    "content": "다자녀혜택 교육도(서울런) 확대부탁드립니다",
+    "content": "\ub2e4\uc790\ub140\ud61c\ud0dd \uad50\uc721\ub3c4(\uc11c\uc6b8\ub7f0) \ud655\ub300\ubd80\ud0c1\ub4dc\ub9bd\ub2c8\ub2e4",
     "reg_date": "2023-03-28",
     "vote_score": 11.0,
     "comment_cnt": 0,
@@ -27177,7 +27177,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194240",
     "title": "초등학교돌봄&우리동네키움센터 현실과 다름에대해 직시해주세요",
-    "content": "초등학교돌봄&우리동네키움센터 현실과 다름에대해 직시해주세요",
+    "content": "\ucd08\ub4f1\ud559\uad50\ub3cc\ubd04&\uc6b0\ub9ac\ub3d9\ub124\ud0a4\uc6c0\uc13c\ud130 \ud604\uc2e4\uacfc \ub2e4\ub984\uc5d0\ub300\ud574 \uc9c1\uc2dc\ud574\uc8fc\uc138\uc694",
     "reg_date": "2023-03-28",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -27274,7 +27274,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194228",
     "title": "★ 우리 소중한 아이들의 스쿨존은 지금, 충 / 분 / 히  안전한가요?",
-    "content": "★ 우리 소중한 아이들의 스쿨존은 지금, 충 / 분 / 히  안전한가요?",
+    "content": "\u2605 \uc6b0\ub9ac \uc18c\uc911\ud55c \uc544\uc774\ub4e4\uc758 \uc2a4\ucfe8\uc874\uc740 \uc9c0\uae08, \ucda9 / \ubd84 / \ud788  \uc548\uc804\ud55c\uac00\uc694?",
     "reg_date": "2023-03-27",
     "vote_score": 68.0,
     "comment_cnt": 0,
@@ -27330,7 +27330,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194182",
     "title": "난임부부 지원횟수 늘려주세요",
-    "content": "난임부부 지원횟수 늘려주세요",
+    "content": "\ub09c\uc784\ubd80\ubd80 \uc9c0\uc6d0\ud69f\uc218 \ub298\ub824\uc8fc\uc138\uc694",
     "reg_date": "2023-03-20",
     "vote_score": 15.0,
     "comment_cnt": 1,
@@ -27427,7 +27427,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194170",
     "title": "난임 사각지대 남성난임의 사회경제적 지원을 부탁드립니다.",
-    "content": "난임 사각지대 남성난임의 사회경제적 지원을 부탁드립니다.",
+    "content": "\ub09c\uc784 \uc0ac\uac01\uc9c0\ub300 \ub0a8\uc131\ub09c\uc784\uc758 \uc0ac\ud68c\uacbd\uc81c\uc801 \uc9c0\uc6d0\uc744 \ubd80\ud0c1\ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2023-03-15",
     "vote_score": 111.0,
     "comment_cnt": 16,
@@ -27524,7 +27524,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194167",
     "title": "다자녀혜택 연령 상한 폐지 제안",
-    "content": "다자녀혜택 연령 상한 폐지 제안",
+    "content": "\ub2e4\uc790\ub140\ud61c\ud0dd \uc5f0\ub839 \uc0c1\ud55c \ud3d0\uc9c0 \uc81c\uc548",
     "reg_date": "2023-03-14",
     "vote_score": 4.0,
     "comment_cnt": 0,
@@ -27993,7 +27993,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194144",
     "title": "서울시민과 출산율 증가를 위한 여성 달리기 대회",
-    "content": "서울시민과 출산율 증가를 위한 여성 달리기 대회",
+    "content": "\uc11c\uc6b8\uc2dc\ubbfc\uacfc \ucd9c\uc0b0\uc728 \uc99d\uac00\ub97c \uc704\ud55c \uc5ec\uc131 \ub2ec\ub9ac\uae30 \ub300\ud68c",
     "reg_date": "2023-03-08",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -28049,7 +28049,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194132",
     "title": "신생아 유축기(모유수유 기구) 대여기간을 확대해 주세요",
-    "content": "신생아 유축기(모유수유 기구) 대여기간을 확대해 주세요",
+    "content": "\uc2e0\uc0dd\uc544 \uc720\ucd95\uae30(\ubaa8\uc720\uc218\uc720 \uae30\uad6c) \ub300\uc5ec\uae30\uac04\uc744 \ud655\ub300\ud574 \uc8fc\uc138\uc694",
     "reg_date": "2023-03-05",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -28202,7 +28202,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194088",
     "title": "난임부부 지원 확대 부탁드립니다.",
-    "content": "난임부부 지원 확대 부탁드립니다.",
+    "content": "\ub09c\uc784\ubd80\ubd80 \uc9c0\uc6d0 \ud655\ub300 \ubd80\ud0c1\ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2023-02-20",
     "vote_score": 20.0,
     "comment_cnt": 10,
@@ -28299,7 +28299,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194058",
     "title": "다둥이 모바일카드(앱) 발급을 제안합니다",
-    "content": "다둥이 모바일카드(앱) 발급을 제안합니다",
+    "content": "\ub2e4\ub465\uc774 \ubaa8\ubc14\uc77c\uce74\ub4dc(\uc571) \ubc1c\uae09\uc744 \uc81c\uc548\ud569\ub2c8\ub2e4",
     "reg_date": "2023-02-14",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -28355,7 +28355,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-194046",
     "title": "저출산 고령화 대비를 위하여",
-    "content": "저출산 고령화 대비를 위하여",
+    "content": "\uc800\ucd9c\uc0b0 \uace0\ub839\ud654 \ub300\ube44\ub97c \uc704\ud558\uc5ec",
     "reg_date": "2023-02-10",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -28605,7 +28605,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193929",
     "title": "난임 시술 지원비 대상자  전부  지원",
-    "content": "난임 시술 지원비 대상자  전부  지원",
+    "content": "\ub09c\uc784 \uc2dc\uc220 \uc9c0\uc6d0\ube44 \ub300\uc0c1\uc790  \uc804\ubd80  \uc9c0\uc6d0",
     "reg_date": "2023-01-18",
     "vote_score": 6.0,
     "comment_cnt": 1,
@@ -28799,7 +28799,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193884",
     "title": "서울시 각  구별로 공동 육아장을 만들면 어떨지요?",
-    "content": "서울시 각  구별로 공동 육아장을 만들면 어떨지요?",
+    "content": "\uc11c\uc6b8\uc2dc \uac01  \uad6c\ubcc4\ub85c \uacf5\ub3d9 \uc721\uc544\uc7a5\uc744 \ub9cc\ub4e4\uba74 \uc5b4\ub5a8\uc9c0\uc694?",
     "reg_date": "2023-01-08",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -28952,7 +28952,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193765",
     "title": "서울시 신혼부부 임차보증금 이자지원사업 금리 지원 확대 제안",
-    "content": "서울시 신혼부부 임차보증금 이자지원사업 금리 지원 확대 제안",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc784\ucc28\ubcf4\uc99d\uae08 \uc774\uc790\uc9c0\uc6d0\uc0ac\uc5c5 \uae08\ub9ac \uc9c0\uc6d0 \ud655\ub300 \uc81c\uc548",
     "reg_date": "2022-12-16",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -29138,7 +29138,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193726",
     "title": "야간 소아응급 의료진 확충 방안 건의",
-    "content": "야간 소아응급 의료진 확충 방안 건의",
+    "content": "\uc57c\uac04 \uc18c\uc544\uc751\uae09 \uc758\ub8cc\uc9c4 \ud655\ucda9 \ubc29\uc548 \uac74\uc758",
     "reg_date": "2022-12-12",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -29291,7 +29291,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193695",
     "title": "저출산 문제가 조금 걱정이 됩니다.",
-    "content": "저출산 문제가 조금 걱정이 됩니다.",
+    "content": "\uc800\ucd9c\uc0b0 \ubb38\uc81c\uac00 \uc870\uae08 \uac71\uc815\uc774 \ub429\ub2c8\ub2e4.",
     "reg_date": "2022-12-08",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -29347,7 +29347,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193669",
     "title": "서울시에서 세계 최저 출산율 개선 제언",
-    "content": "서울시에서 세계 최저 출산율 개선 제언",
+    "content": "\uc11c\uc6b8\uc2dc\uc5d0\uc11c \uc138\uacc4 \ucd5c\uc800 \ucd9c\uc0b0\uc728 \uac1c\uc120 \uc81c\uc5b8",
     "reg_date": "2022-12-05",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -29403,7 +29403,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193638",
     "title": "어린이 보호구역 알림 전광판",
-    "content": "어린이 보호구역 알림 전광판",
+    "content": "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \uc54c\ub9bc \uc804\uad11\ud310",
     "reg_date": "2022-12-01",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -29459,7 +29459,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193598",
     "title": "어린이집 조리사 처우개선비 기준 완화 건의",
-    "content": "어린이집 조리사 처우개선비 기준 완화 건의",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 \uc870\ub9ac\uc0ac \ucc98\uc6b0\uac1c\uc120\ube44 \uae30\uc900 \uc644\ud654 \uac74\uc758",
     "reg_date": "2022-11-23",
     "vote_score": 302.0,
     "comment_cnt": 50,
@@ -29556,7 +29556,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193589",
     "title": "국공립/구립 어린이집 0세반 입소 관련 제안 및 요청",
-    "content": "국공립/구립 어린이집 0세반 입소 관련 제안 및 요청",
+    "content": "\uad6d\uacf5\ub9bd/\uad6c\ub9bd \uc5b4\ub9b0\uc774\uc9d1 0\uc138\ubc18 \uc785\uc18c \uad00\ub828 \uc81c\uc548 \ubc0f \uc694\uccad",
     "reg_date": "2022-11-21",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -29750,7 +29750,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193539",
     "title": "서울시 신혼부부 임차보증금 연장",
-    "content": "서울시 신혼부부 임차보증금 연장",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc784\ucc28\ubcf4\uc99d\uae08 \uc5f0\uc7a5",
     "reg_date": "2022-11-10",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -29839,7 +29839,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193454",
     "title": "인도에서 흡연 및 오토바이. 유모차 끌고다니기 무섭다",
-    "content": "인도에서 흡연 및 오토바이. 유모차 끌고다니기 무섭다",
+    "content": "\uc778\ub3c4\uc5d0\uc11c \ud761\uc5f0 \ubc0f \uc624\ud1a0\ubc14\uc774. \uc720\ubaa8\ucc28 \ub04c\uace0\ub2e4\ub2c8\uae30 \ubb34\uc12d\ub2e4",
     "reg_date": "2022-10-30",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -29895,7 +29895,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193443",
     "title": "대중교통 임산부석을 임산부가 앉을수있도록 배려해주세요!!",
-    "content": "대중교통 임산부석을 임산부가 앉을수있도록 배려해주세요!!",
+    "content": "\ub300\uc911\uad50\ud1b5 \uc784\uc0b0\ubd80\uc11d\uc744 \uc784\uc0b0\ubd80\uac00 \uc549\uc744\uc218\uc788\ub3c4\ub85d \ubc30\ub824\ud574\uc8fc\uc138\uc694!!",
     "reg_date": "2022-10-28",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -29992,7 +29992,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193371",
     "title": "미세먼지 취약계층(임산부) 지원으로 안전한 환경조성",
-    "content": "미세먼지 취약계층(임산부) 지원으로 안전한 환경조성",
+    "content": "\ubbf8\uc138\uba3c\uc9c0 \ucde8\uc57d\uacc4\uce35(\uc784\uc0b0\ubd80) \uc9c0\uc6d0\uc73c\ub85c \uc548\uc804\ud55c \ud658\uacbd\uc870\uc131",
     "reg_date": "2022-10-12",
     "vote_score": 5.0,
     "comment_cnt": 1,
@@ -30186,7 +30186,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193296",
     "title": "임산부 대중교통 이용 배려안 (임산부 알림 기능 제안)",
-    "content": "임산부 대중교통 이용 배려안 (임산부 알림 기능 제안)",
+    "content": "\uc784\uc0b0\ubd80 \ub300\uc911\uad50\ud1b5 \uc774\uc6a9 \ubc30\ub824\uc548 (\uc784\uc0b0\ubd80 \uc54c\ub9bc \uae30\ub2a5 \uc81c\uc548)",
     "reg_date": "2022-09-23",
     "vote_score": 103.0,
     "comment_cnt": 7,
@@ -30574,7 +30574,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193159",
     "title": "희망의 인문학 프로그램과 보육원",
-    "content": "희망의 인문학 프로그램과 보육원",
+    "content": "\ud76c\ub9dd\uc758 \uc778\ubb38\ud559 \ud504\ub85c\uadf8\ub7a8\uacfc \ubcf4\uc721\uc6d0",
     "reg_date": "2022-08-28",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -30671,7 +30671,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193131",
     "title": "저출산 문제점 및 대응 방안",
-    "content": "저출산 문제점 및 대응 방안",
+    "content": "\uc800\ucd9c\uc0b0 \ubb38\uc81c\uc810 \ubc0f \ub300\uc751 \ubc29\uc548",
     "reg_date": "2022-08-22",
     "vote_score": 7.0,
     "comment_cnt": 1,
@@ -30727,7 +30727,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193109",
     "title": "임산부석 실효성 높여주세요!",
-    "content": "임산부석 실효성 높여주세요!",
+    "content": "\uc784\uc0b0\ubd80\uc11d \uc2e4\ud6a8\uc131 \ub192\uc5ec\uc8fc\uc138\uc694!",
     "reg_date": "2022-08-18",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -30824,7 +30824,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193097",
     "title": "난임부부, 임신준비시 약제비도 지원해주세요",
-    "content": "난임부부, 임신준비시 약제비도 지원해주세요",
+    "content": "\ub09c\uc784\ubd80\ubd80, \uc784\uc2e0\uc900\ube44\uc2dc \uc57d\uc81c\ube44\ub3c4 \uc9c0\uc6d0\ud574\uc8fc\uc138\uc694",
     "reg_date": "2022-08-18",
     "vote_score": 76.0,
     "comment_cnt": 0,
@@ -30921,7 +30921,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193096",
     "title": "장애인 주차장 다둥이 이용 가능하게!!",
-    "content": "장애인 주차장 다둥이 이용 가능하게!!",
+    "content": "\uc7a5\uc560\uc778 \uc8fc\ucc28\uc7a5 \ub2e4\ub465\uc774 \uc774\uc6a9 \uac00\ub2a5\ud558\uac8c!!",
     "reg_date": "2022-08-18",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -31074,7 +31074,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-193051",
     "title": "서울시 신혼부부 전세대출 한도 증액 제안",
-    "content": "서울시 신혼부부 전세대출 한도 증액 제안",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc804\uc138\ub300\ucd9c \ud55c\ub3c4 \uc99d\uc561 \uc81c\uc548",
     "reg_date": "2022-08-12",
     "vote_score": 7.0,
     "comment_cnt": 1,
@@ -31163,7 +31163,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192998",
     "title": "난임부부 소득제한 없애주세요",
-    "content": "난임부부 소득제한 없애주세요",
+    "content": "\ub09c\uc784\ubd80\ubd80 \uc18c\ub4dd\uc81c\ud55c \uc5c6\uc560\uc8fc\uc138\uc694",
     "reg_date": "2022-08-08",
     "vote_score": 181.0,
     "comment_cnt": 12,
@@ -31260,7 +31260,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192984",
     "title": "소득에 따른 정부 난임지원금 확대가 필요합니다",
-    "content": "소득에 따른 정부 난임지원금 확대가 필요합니다",
+    "content": "\uc18c\ub4dd\uc5d0 \ub530\ub978 \uc815\ubd80 \ub09c\uc784\uc9c0\uc6d0\uae08 \ud655\ub300\uac00 \ud544\uc694\ud569\ub2c8\ub2e4",
     "reg_date": "2022-08-04",
     "vote_score": 177.0,
     "comment_cnt": 34,
@@ -31357,7 +31357,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192981",
     "title": "임산부 배려석이 잘 활용됐으면 좋겠어요~",
-    "content": "임산부 배려석이 잘 활용됐으면 좋겠어요~",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d\uc774 \uc798 \ud65c\uc6a9\ub410\uc73c\uba74 \uc88b\uaca0\uc5b4\uc694~",
     "reg_date": "2022-08-02",
     "vote_score": 15.0,
     "comment_cnt": 4,
@@ -31551,7 +31551,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192909",
     "title": "다자녀 할인 서울시 전역(강서구, 양천구....)",
-    "content": "다자녀 할인 서울시 전역(강서구, 양천구....)",
+    "content": "\ub2e4\uc790\ub140 \ud560\uc778 \uc11c\uc6b8\uc2dc \uc804\uc5ed(\uac15\uc11c\uad6c, \uc591\ucc9c\uad6c....)",
     "reg_date": "2022-07-19",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -31729,7 +31729,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192871",
     "title": "보육교사의 정년을 늘려주세요",
-    "content": "보육교사의 정년을 늘려주세요",
+    "content": "\ubcf4\uc721\uad50\uc0ac\uc758 \uc815\ub144\uc744 \ub298\ub824\uc8fc\uc138\uc694",
     "reg_date": "2022-07-12",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -31826,7 +31826,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192867",
     "title": "서울시 외국인 임산부 교통비지원",
-    "content": "서울시 외국인 임산부 교통비지원",
+    "content": "\uc11c\uc6b8\uc2dc \uc678\uad6d\uc778 \uc784\uc0b0\ubd80 \uad50\ud1b5\ube44\uc9c0\uc6d0",
     "reg_date": "2022-07-11",
     "vote_score": 48.0,
     "comment_cnt": 5,
@@ -32020,7 +32020,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192824",
     "title": "서울시 임산부 교통비 지원 사업 외국인 임산부도 포함시켜주세요.",
-    "content": "서울시 임산부 교통비 지원 사업 외국인 임산부도 포함시켜주세요.",
+    "content": "\uc11c\uc6b8\uc2dc \uc784\uc0b0\ubd80 \uad50\ud1b5\ube44 \uc9c0\uc6d0 \uc0ac\uc5c5 \uc678\uad6d\uc778 \uc784\uc0b0\ubd80\ub3c4 \ud3ec\ud568\uc2dc\ucf1c\uc8fc\uc138\uc694.",
     "reg_date": "2022-06-30",
     "vote_score": 18.0,
     "comment_cnt": 3,
@@ -32117,7 +32117,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192751",
     "title": "임산부 교통비 지원 관련 추가 제안",
-    "content": "임산부 교통비 지원 관련 추가 제안",
+    "content": "\uc784\uc0b0\ubd80 \uad50\ud1b5\ube44 \uc9c0\uc6d0 \uad00\ub828 \ucd94\uac00 \uc81c\uc548",
     "reg_date": "2022-06-24",
     "vote_score": 11.0,
     "comment_cnt": 2,
@@ -32214,7 +32214,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192709",
     "title": "신혼부부 임차보증금지원사업 연장 시 소득기준 상향",
-    "content": "신혼부부 임차보증금지원사업 연장 시 소득기준 상향",
+    "content": "\uc2e0\ud63c\ubd80\ubd80 \uc784\ucc28\ubcf4\uc99d\uae08\uc9c0\uc6d0\uc0ac\uc5c5 \uc5f0\uc7a5 \uc2dc \uc18c\ub4dd\uae30\uc900 \uc0c1\ud5a5",
     "reg_date": "2022-06-18",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -32497,7 +32497,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192668",
     "title": "서울런 교재비 지원금을 늘려주세요.",
-    "content": "서울런 교재비 지원금을 늘려주세요.",
+    "content": "\uc11c\uc6b8\ub7f0 \uad50\uc7ac\ube44 \uc9c0\uc6d0\uae08\uc744 \ub298\ub824\uc8fc\uc138\uc694.",
     "reg_date": "2022-06-12",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -32650,7 +32650,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192382",
     "title": "아이들이 노는곳에 안전시설이 부족하다.",
-    "content": "아이들이 노는곳에 안전시설이 부족하다.",
+    "content": "\uc544\uc774\ub4e4\uc774 \ub178\ub294\uacf3\uc5d0 \uc548\uc804\uc2dc\uc124\uc774 \ubd80\uc871\ud558\ub2e4.",
     "reg_date": "2022-04-26",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -32706,7 +32706,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192326",
     "title": "출산지원을 출산후 지원도 검토해주세요",
-    "content": "출산지원을 출산후 지원도 검토해주세요",
+    "content": "\ucd9c\uc0b0\uc9c0\uc6d0\uc744 \ucd9c\uc0b0\ud6c4 \uc9c0\uc6d0\ub3c4 \uac80\ud1a0\ud574\uc8fc\uc138\uc694",
     "reg_date": "2022-04-14",
     "vote_score": 11.0,
     "comment_cnt": 2,
@@ -32762,7 +32762,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192268",
     "title": "종로서대문 거점형 키움센터 3호 공간 효율이 떨어집니다. 7세를 위한 프로그램 필요합니다.",
-    "content": "종로서대문 거점형 키움센터 3호 공간 효율이 떨어집니다. 7세를 위한 프로그램 필요합니다.",
+    "content": "\uc885\ub85c\uc11c\ub300\ubb38 \uac70\uc810\ud615 \ud0a4\uc6c0\uc13c\ud130 3\ud638 \uacf5\uac04 \ud6a8\uc728\uc774 \ub5a8\uc5b4\uc9d1\ub2c8\ub2e4. 7\uc138\ub97c \uc704\ud55c \ud504\ub85c\uadf8\ub7a8 \ud544\uc694\ud569\ub2c8\ub2e4.",
     "reg_date": "2022-03-23",
     "vote_score": 8.0,
     "comment_cnt": 0,
@@ -32818,7 +32818,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192216",
     "title": "강북구 유치원 교사 구청 지원금",
-    "content": "강북구 유치원 교사 구청 지원금",
+    "content": "\uac15\ubd81\uad6c \uc720\uce58\uc6d0 \uad50\uc0ac \uad6c\uccad \uc9c0\uc6d0\uae08",
     "reg_date": "2022-03-09",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -32874,7 +32874,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192172",
     "title": "장애아동을 위한 전용 미용(헤어컷)시설 설치를 제안합니다.",
-    "content": "장애아동을 위한 전용 미용(헤어컷)시설 설치를 제안합니다.",
+    "content": "\uc7a5\uc560\uc544\ub3d9\uc744 \uc704\ud55c \uc804\uc6a9 \ubbf8\uc6a9(\ud5e4\uc5b4\ucef7)\uc2dc\uc124 \uc124\uce58\ub97c \uc81c\uc548\ud569\ub2c8\ub2e4.",
     "reg_date": "2022-02-22",
     "vote_score": 112.0,
     "comment_cnt": 3,
@@ -32930,7 +32930,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192150",
     "title": "신혼부부 특별공급 자격요건 수정요청드립니다",
-    "content": "신혼부부 특별공급 자격요건 수정요청드립니다",
+    "content": "\uc2e0\ud63c\ubd80\ubd80 \ud2b9\ubcc4\uacf5\uae09 \uc790\uaca9\uc694\uac74 \uc218\uc815\uc694\uccad\ub4dc\ub9bd\ub2c8\ub2e4",
     "reg_date": "2022-02-18",
     "vote_score": 6.0,
     "comment_cnt": 1,
@@ -33019,7 +33019,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192106",
     "title": "학교, 유치원, 어린이집에 코로나19신속진단키트를 제공해주세요!",
-    "content": "학교, 유치원, 어린이집에 코로나19신속진단키트를 제공해주세요!",
+    "content": "\ud559\uad50, \uc720\uce58\uc6d0, \uc5b4\ub9b0\uc774\uc9d1\uc5d0 \ucf54\ub85c\ub09819\uc2e0\uc18d\uc9c4\ub2e8\ud0a4\ud2b8\ub97c \uc81c\uacf5\ud574\uc8fc\uc138\uc694!",
     "reg_date": "2022-02-04",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -33116,7 +33116,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-192084",
     "title": "신혼부부 임차보증금 이자 지원 사업",
-    "content": "신혼부부 임차보증금 이자 지원 사업",
+    "content": "\uc2e0\ud63c\ubd80\ubd80 \uc784\ucc28\ubcf4\uc99d\uae08 \uc774\uc790 \uc9c0\uc6d0 \uc0ac\uc5c5",
     "reg_date": "2022-01-28",
     "vote_score": 9.0,
     "comment_cnt": 2,
@@ -33205,7 +33205,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191992",
     "title": "서울시 신혼부부 전세자금대출 이자지원",
-    "content": "서울시 신혼부부 전세자금대출 이자지원",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc804\uc138\uc790\uae08\ub300\ucd9c \uc774\uc790\uc9c0\uc6d0",
     "reg_date": "2022-01-08",
     "vote_score": 12.0,
     "comment_cnt": 3,
@@ -33294,7 +33294,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191846",
     "title": "육아 예술가들의 고독감을 해결하기 위한 육아하는 예술가들의 수다방 ( 手茶房: 창작하고 이야기하고 고민을 나누는 육아 예술가들의 쉼터)",
-    "content": "육아 예술가들의 고독감을 해결하기 위한 육아하는 예술가들의 수다방 ( 手茶房: 창작하고 이야기하고 고민을 나누는 육아 예술가들의 쉼터)",
+    "content": "\uc721\uc544 \uc608\uc220\uac00\ub4e4\uc758 \uace0\ub3c5\uac10\uc744 \ud574\uacb0\ud558\uae30 \uc704\ud55c \uc721\uc544\ud558\ub294 \uc608\uc220\uac00\ub4e4\uc758 \uc218\ub2e4\ubc29 ( \u624b\uf9fe\u623f: \ucc3d\uc791\ud558\uace0 \uc774\uc57c\uae30\ud558\uace0 \uace0\ubbfc\uc744 \ub098\ub204\ub294 \uc721\uc544 \uc608\uc220\uac00\ub4e4\uc758 \uc27c\ud130)",
     "reg_date": "2021-12-10",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -33350,7 +33350,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191836",
     "title": "어린이집 영유아 보육활동 교육자료의 보육교사 자부담 유료비용 완화",
-    "content": "어린이집 영유아 보육활동 교육자료의 보육교사 자부담 유료비용 완화",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 \uc601\uc720\uc544 \ubcf4\uc721\ud65c\ub3d9 \uad50\uc721\uc790\ub8cc\uc758 \ubcf4\uc721\uad50\uc0ac \uc790\ubd80\ub2f4 \uc720\ub8cc\ube44\uc6a9 \uc644\ud654",
     "reg_date": "2021-12-09",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -33447,7 +33447,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191817",
     "title": "재택근무 가능 직종 임산부 재택근무 의무화",
-    "content": "재택근무 가능 직종 임산부 재택근무 의무화",
+    "content": "\uc7ac\ud0dd\uadfc\ubb34 \uac00\ub2a5 \uc9c1\uc885 \uc784\uc0b0\ubd80 \uc7ac\ud0dd\uadfc\ubb34 \uc758\ubb34\ud654",
     "reg_date": "2021-12-06",
     "vote_score": 5.0,
     "comment_cnt": 1,
@@ -33544,7 +33544,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191811",
     "title": "아동을 위한 녹지 및 놀이시설 부족 문제와 해결방안",
-    "content": "아동을 위한 녹지 및 놀이시설 부족 문제와 해결방안",
+    "content": "\uc544\ub3d9\uc744 \uc704\ud55c \ub179\uc9c0 \ubc0f \ub180\uc774\uc2dc\uc124 \ubd80\uc871 \ubb38\uc81c\uc640 \ud574\uacb0\ubc29\uc548",
     "reg_date": "2021-12-05",
     "vote_score": 16.0,
     "comment_cnt": 3,
@@ -33600,7 +33600,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191792",
     "title": "공공시설 형태의 유아 대상 놀이공간 확대를 건의합니다.",
-    "content": "공공시설 형태의 유아 대상 놀이공간 확대를 건의합니다.",
+    "content": "\uacf5\uacf5\uc2dc\uc124 \ud615\ud0dc\uc758 \uc720\uc544 \ub300\uc0c1 \ub180\uc774\uacf5\uac04 \ud655\ub300\ub97c \uac74\uc758\ud569\ub2c8\ub2e4.",
     "reg_date": "2021-12-02",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -33656,7 +33656,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191780",
     "title": "어린이보호구역에서 전동킥보드 속도 제한 의무화",
-    "content": "어린이보호구역에서 전동킥보드 속도 제한 의무화",
+    "content": "\uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed\uc5d0\uc11c \uc804\ub3d9\ud0a5\ubcf4\ub4dc \uc18d\ub3c4 \uc81c\ud55c \uc758\ubb34\ud654",
     "reg_date": "2021-12-01",
     "vote_score": 11.0,
     "comment_cnt": 8,
@@ -33712,7 +33712,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191733",
     "title": "서울시 신혼부부 임차보증금 지원을 공공주택에도 확대 부탁드립니다.",
-    "content": "서울시 신혼부부 임차보증금 지원을 공공주택에도 확대 부탁드립니다.",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc784\ucc28\ubcf4\uc99d\uae08 \uc9c0\uc6d0\uc744 \uacf5\uacf5\uc8fc\ud0dd\uc5d0\ub3c4 \ud655\ub300 \ubd80\ud0c1\ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2021-11-23",
     "vote_score": 14.0,
     "comment_cnt": 0,
@@ -33801,7 +33801,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191711",
     "title": "서울시시립 어린이병원 주차장(내곡동)",
-    "content": "서울시시립 어린이병원 주차장(내곡동)",
+    "content": "\uc11c\uc6b8\uc2dc\uc2dc\ub9bd \uc5b4\ub9b0\uc774\ubcd1\uc6d0 \uc8fc\ucc28\uc7a5(\ub0b4\uace1\ub3d9)",
     "reg_date": "2021-11-19",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -33857,7 +33857,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191703",
     "title": "실질적이고 획기적인 임산부배려석 이용방안",
-    "content": "실질적이고 획기적인 임산부배려석 이용방안",
+    "content": "\uc2e4\uc9c8\uc801\uc774\uace0 \ud68d\uae30\uc801\uc778 \uc784\uc0b0\ubd80\ubc30\ub824\uc11d \uc774\uc6a9\ubc29\uc548",
     "reg_date": "2021-11-18",
     "vote_score": 11.0,
     "comment_cnt": 3,
@@ -33954,7 +33954,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191671",
     "title": "임산부배려석 간단한 해결방안입니다.",
-    "content": "임산부배려석 간단한 해결방안입니다.",
+    "content": "\uc784\uc0b0\ubd80\ubc30\ub824\uc11d \uac04\ub2e8\ud55c \ud574\uacb0\ubc29\uc548\uc785\ub2c8\ub2e4.",
     "reg_date": "2021-11-12",
     "vote_score": 7.0,
     "comment_cnt": 1,
@@ -34148,7 +34148,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191631",
     "title": "한부모 가정에게 상담 치료 바우처 지원을 제안합니다.",
-    "content": "한부모 가정에게 상담 치료 바우처 지원을 제안합니다.",
+    "content": "\ud55c\ubd80\ubaa8 \uac00\uc815\uc5d0\uac8c \uc0c1\ub2f4 \uce58\ub8cc \ubc14\uc6b0\ucc98 \uc9c0\uc6d0\uc744 \uc81c\uc548\ud569\ub2c8\ub2e4.",
     "reg_date": "2021-11-04",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -34334,7 +34334,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191567",
     "title": "교통약자(장애인, 임산부, 노인 등)가 공공 기관 및 시설물 등의 고층 엘리베이터를 기다리는 동안 잠시라도 착석 가능한 밴치 설치",
-    "content": "교통약자(장애인, 임산부, 노인 등)가 공공 기관 및 시설물 등의 고층 엘리베이터를 기다리는 동안 잠시라도 착석 가능한 밴치 설치",
+    "content": "\uad50\ud1b5\uc57d\uc790(\uc7a5\uc560\uc778, \uc784\uc0b0\ubd80, \ub178\uc778 \ub4f1)\uac00 \uacf5\uacf5 \uae30\uad00 \ubc0f \uc2dc\uc124\ubb3c \ub4f1\uc758 \uace0\uce35 \uc5d8\ub9ac\ubca0\uc774\ud130\ub97c \uae30\ub2e4\ub9ac\ub294 \ub3d9\uc548 \uc7a0\uc2dc\ub77c\ub3c4 \ucc29\uc11d \uac00\ub2a5\ud55c \ubc34\uce58 \uc124\uce58",
     "reg_date": "2021-10-29",
     "vote_score": 7.0,
     "comment_cnt": 0,
@@ -34528,7 +34528,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191535",
     "title": "임산부 배려석 옆에 아동 배려석 추가 조성 제안",
-    "content": "임산부 배려석 옆에 아동 배려석 추가 조성 제안",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \uc606\uc5d0 \uc544\ub3d9 \ubc30\ub824\uc11d \ucd94\uac00 \uc870\uc131 \uc81c\uc548",
     "reg_date": "2021-10-24",
     "vote_score": 6.0,
     "comment_cnt": 0,
@@ -34625,7 +34625,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191534",
     "title": "방향성을 수정한 임산부 배려석 인식개선 캠페인 제안",
-    "content": "방향성을 수정한 임산부 배려석 인식개선 캠페인 제안",
+    "content": "\ubc29\ud5a5\uc131\uc744 \uc218\uc815\ud55c \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \uc778\uc2dd\uac1c\uc120 \ucea0\ud398\uc778 \uc81c\uc548",
     "reg_date": "2021-10-24",
     "vote_score": 6.0,
     "comment_cnt": 2,
@@ -34722,7 +34722,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191498",
     "title": "어린이 보호구역 주정차 금지",
-    "content": "어린이 보호구역 주정차 금지",
+    "content": "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \uc8fc\uc815\ucc28 \uae08\uc9c0",
     "reg_date": "2021-10-21",
     "vote_score": 5.0,
     "comment_cnt": 2,
@@ -34778,7 +34778,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191492",
     "title": "임산부 뱃지 악용 - 정책 보완 건의사항",
-    "content": "임산부 뱃지 악용 - 정책 보완 건의사항",
+    "content": "\uc784\uc0b0\ubd80 \ubc43\uc9c0 \uc545\uc6a9 - \uc815\ucc45 \ubcf4\uc644 \uac74\uc758\uc0ac\ud56d",
     "reg_date": "2021-10-20",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -34875,7 +34875,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191470",
     "title": "결혼 및 저출산문제에 대한 새로운 접근",
-    "content": "결혼 및 저출산문제에 대한 새로운 접근",
+    "content": "\uacb0\ud63c \ubc0f \uc800\ucd9c\uc0b0\ubb38\uc81c\uc5d0 \ub300\ud55c \uc0c8\ub85c\uc6b4 \uc811\uadfc",
     "reg_date": "2021-10-14",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -34931,7 +34931,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191451",
     "title": "어린이 교통 안전법안_교통안전교육 의무화",
-    "content": "어린이 교통 안전법안_교통안전교육 의무화",
+    "content": "\uc5b4\ub9b0\uc774 \uad50\ud1b5 \uc548\uc804\ubc95\uc548_\uad50\ud1b5\uc548\uc804\uad50\uc721 \uc758\ubb34\ud654",
     "reg_date": "2021-10-12",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -34987,7 +34987,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191449",
     "title": "서울시장부터 영유아까지 물 사용량 약속하고 절약하기",
-    "content": "서울시장부터 영유아까지 물 사용량 약속하고 절약하기",
+    "content": "\uc11c\uc6b8\uc2dc\uc7a5\ubd80\ud130 \uc601\uc720\uc544\uae4c\uc9c0 \ubb3c \uc0ac\uc6a9\ub7c9 \uc57d\uc18d\ud558\uace0 \uc808\uc57d\ud558\uae30",
     "reg_date": "2021-10-12",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -35043,7 +35043,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191388",
     "title": "아동 청소년을 위한 방과후 활동과 돌봄을 위해 지역 공간 개방에 대한 개선방안 마련",
-    "content": "아동 청소년을 위한 방과후 활동과 돌봄을 위해 지역 공간 개방에 대한 개선방안 마련",
+    "content": "\uc544\ub3d9 \uccad\uc18c\ub144\uc744 \uc704\ud55c \ubc29\uacfc\ud6c4 \ud65c\ub3d9\uacfc \ub3cc\ubd04\uc744 \uc704\ud574 \uc9c0\uc5ed \uacf5\uac04 \uac1c\ubc29\uc5d0 \ub300\ud55c \uac1c\uc120\ubc29\uc548 \ub9c8\ub828",
     "reg_date": "2021-09-30",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -35140,7 +35140,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191363",
     "title": "어린이집,학교, 노인시설등의 차량과속 사고예방 해결방법",
-    "content": "어린이집,학교, 노인시설등의 차량과속 사고예방 해결방법",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1,\ud559\uad50, \ub178\uc778\uc2dc\uc124\ub4f1\uc758 \ucc28\ub7c9\uacfc\uc18d \uc0ac\uace0\uc608\ubc29 \ud574\uacb0\ubc29\ubc95",
     "reg_date": "2021-09-28",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -35237,7 +35237,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191294",
     "title": "서울특별시 생태친화보육에 지역 꽃집이 참여할 수 있게 해주세요!",
-    "content": "서울특별시 생태친화보육에 지역 꽃집이 참여할 수 있게 해주세요!",
+    "content": "\uc11c\uc6b8\ud2b9\ubcc4\uc2dc \uc0dd\ud0dc\uce5c\ud654\ubcf4\uc721\uc5d0 \uc9c0\uc5ed \uaf43\uc9d1\uc774 \ucc38\uc5ec\ud560 \uc218 \uc788\uac8c \ud574\uc8fc\uc138\uc694!",
     "reg_date": "2021-09-21",
     "vote_score": 10.0,
     "comment_cnt": 1,
@@ -35334,7 +35334,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191244",
     "title": "공공교통의 임산부석 폐지해주세요~",
-    "content": "공공교통의 임산부석 폐지해주세요~",
+    "content": "\uacf5\uacf5\uad50\ud1b5\uc758 \uc784\uc0b0\ubd80\uc11d \ud3d0\uc9c0\ud574\uc8fc\uc138\uc694~",
     "reg_date": "2021-09-13",
     "vote_score": 7.0,
     "comment_cnt": 0,
@@ -35431,7 +35431,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191232",
     "title": "쌍둥이 출산시 도우미 지원 해주세요!!!",
-    "content": "쌍둥이 출산시 도우미 지원 해주세요!!!",
+    "content": "\uc30d\ub465\uc774 \ucd9c\uc0b0\uc2dc \ub3c4\uc6b0\ubbf8 \uc9c0\uc6d0 \ud574\uc8fc\uc138\uc694!!!",
     "reg_date": "2021-09-12",
     "vote_score": 5.0,
     "comment_cnt": 1,
@@ -35584,7 +35584,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191088",
     "title": "독립문 공원 건너편 &#34;독립운동가 가족을 생각하는 작은집&#34;  조적벽돌 교체해야 합니다.",
-    "content": "독립문 공원 건너편 &#34;독립운동가 가족을 생각하는 작은집&#34;  조적벽돌 교체해야 합니다.",
+    "content": "\ub3c5\ub9bd\ubb38 \uacf5\uc6d0 \uac74\ub108\ud3b8 &#34;\ub3c5\ub9bd\uc6b4\ub3d9\uac00 \uac00\uc871\uc744 \uc0dd\uac01\ud558\ub294 \uc791\uc740\uc9d1&#34;  \uc870\uc801\ubcbd\ub3cc \uad50\uccb4\ud574\uc57c \ud569\ub2c8\ub2e4.",
     "reg_date": "2021-08-24",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -35640,7 +35640,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191054",
     "title": "코로나 시국에 임산부 단축근무는 &#39;임신 전체기간&#39;으로 제도 바꿔주세요.",
-    "content": "코로나 시국에 임산부 단축근무는 &#39;임신 전체기간&#39;으로 제도 바꿔주세요.",
+    "content": "\ucf54\ub85c\ub098 \uc2dc\uad6d\uc5d0 \uc784\uc0b0\ubd80 \ub2e8\ucd95\uadfc\ubb34\ub294 &#39;\uc784\uc2e0 \uc804\uccb4\uae30\uac04&#39;\uc73c\ub85c \uc81c\ub3c4 \ubc14\uafd4\uc8fc\uc138\uc694.",
     "reg_date": "2021-08-20",
     "vote_score": 13.0,
     "comment_cnt": 0,
@@ -35737,7 +35737,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191053",
     "title": "어린이집 증원을 요청드립니다",
-    "content": "어린이집 증원을 요청드립니다",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 \uc99d\uc6d0\uc744 \uc694\uccad\ub4dc\ub9bd\ub2c8\ub2e4",
     "reg_date": "2021-08-20",
     "vote_score": 8.0,
     "comment_cnt": 1,
@@ -35834,7 +35834,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-191049",
     "title": "&#34;임신육아 종합포털 아이사랑&#34;에 어린이집 홈페이지 이관 또는 연동이 되게 해 주세요.",
-    "content": "&#34;임신육아 종합포털 아이사랑&#34;에 어린이집 홈페이지 이관 또는 연동이 되게 해 주세요.",
+    "content": "&#34;\uc784\uc2e0\uc721\uc544 \uc885\ud569\ud3ec\ud138 \uc544\uc774\uc0ac\ub791&#34;\uc5d0 \uc5b4\ub9b0\uc774\uc9d1 \ud648\ud398\uc774\uc9c0 \uc774\uad00 \ub610\ub294 \uc5f0\ub3d9\uc774 \ub418\uac8c \ud574 \uc8fc\uc138\uc694.",
     "reg_date": "2021-08-20",
     "vote_score": 5.0,
     "comment_cnt": 2,
@@ -36125,7 +36125,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190902",
     "title": "어린이집, 유치원 학부모 백신 우선접종",
-    "content": "어린이집, 유치원 학부모 백신 우선접종",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1, \uc720\uce58\uc6d0 \ud559\ubd80\ubaa8 \ubc31\uc2e0 \uc6b0\uc120\uc811\uc885",
     "reg_date": "2021-07-30",
     "vote_score": 8.0,
     "comment_cnt": 2,
@@ -36222,7 +36222,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190802",
     "title": "서울시 청년 비제조/비영리 스타트업 지원 아이디어(장기 공간 대여, 전월세 주거 지원, 상품 유통 홍보)",
-    "content": "서울시 청년 비제조/비영리 스타트업 지원 아이디어(장기 공간 대여, 전월세 주거 지원, 상품 유통 홍보)",
+    "content": "\uc11c\uc6b8\uc2dc \uccad\ub144 \ube44\uc81c\uc870/\ube44\uc601\ub9ac \uc2a4\ud0c0\ud2b8\uc5c5 \uc9c0\uc6d0 \uc544\uc774\ub514\uc5b4(\uc7a5\uae30 \uacf5\uac04 \ub300\uc5ec, \uc804\uc6d4\uc138 \uc8fc\uac70 \uc9c0\uc6d0, \uc0c1\ud488 \uc720\ud1b5 \ud64d\ubcf4)",
     "reg_date": "2021-07-19",
     "vote_score": 11.0,
     "comment_cnt": 0,
@@ -36295,7 +36295,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190761",
     "title": "아이들 안전한 등하교길을 만들어주세요",
-    "content": "아이들 안전한 등하교길을 만들어주세요",
+    "content": "\uc544\uc774\ub4e4 \uc548\uc804\ud55c \ub4f1\ud558\uad50\uae38\uc744 \ub9cc\ub4e4\uc5b4\uc8fc\uc138\uc694",
     "reg_date": "2021-07-15",
     "vote_score": 12.0,
     "comment_cnt": 1,
@@ -36351,7 +36351,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190756",
     "title": "필수목적, 예방접종 신청의 건",
-    "content": "필수목적, 예방접종 신청의 건",
+    "content": "\ud544\uc218\ubaa9\uc801, \uc608\ubc29\uc811\uc885 \uc2e0\uccad\uc758 \uac74",
     "reg_date": "2021-07-15",
     "vote_score": 7.0,
     "comment_cnt": 0,
@@ -36407,7 +36407,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190708",
     "title": "코로나 예방접종 문의 연락절대불가",
-    "content": "코로나 예방접종 문의 연락절대불가",
+    "content": "\ucf54\ub85c\ub098 \uc608\ubc29\uc811\uc885 \ubb38\uc758 \uc5f0\ub77d\uc808\ub300\ubd88\uac00",
     "reg_date": "2021-07-12",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -36463,7 +36463,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190681",
     "title": "구로구 소재 어린이집 폐원 관련 해결 방안을 마련해 주세요.",
-    "content": "구로구 소재 어린이집 폐원 관련 해결 방안을 마련해 주세요.",
+    "content": "\uad6c\ub85c\uad6c \uc18c\uc7ac \uc5b4\ub9b0\uc774\uc9d1 \ud3d0\uc6d0 \uad00\ub828 \ud574\uacb0 \ubc29\uc548\uc744 \ub9c8\ub828\ud574 \uc8fc\uc138\uc694.",
     "reg_date": "2021-07-09",
     "vote_score": 107.0,
     "comment_cnt": 18,
@@ -36560,7 +36560,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190673",
     "title": "새문안로, 새문안로 2길, 3길 교통신호 변경 및 도로 확장을 해 주세요. 아이들의 등원길이 위협받고 있습니다.",
-    "content": "새문안로, 새문안로 2길, 3길 교통신호 변경 및 도로 확장을 해 주세요. 아이들의 등원길이 위협받고 있습니다.",
+    "content": "\uc0c8\ubb38\uc548\ub85c, \uc0c8\ubb38\uc548\ub85c 2\uae38, 3\uae38 \uad50\ud1b5\uc2e0\ud638 \ubcc0\uacbd \ubc0f \ub3c4\ub85c \ud655\uc7a5\uc744 \ud574 \uc8fc\uc138\uc694. \uc544\uc774\ub4e4\uc758 \ub4f1\uc6d0\uae38\uc774 \uc704\ud611\ubc1b\uace0 \uc788\uc2b5\ub2c8\ub2e4.",
     "reg_date": "2021-07-09",
     "vote_score": 112.0,
     "comment_cnt": 25,
@@ -36616,7 +36616,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190650",
     "title": "다둥이맘에게 혼잡통행료 감면 또는 면제해 주세요",
-    "content": "다둥이맘에게 혼잡통행료 감면 또는 면제해 주세요",
+    "content": "\ub2e4\ub465\uc774\ub9d8\uc5d0\uac8c \ud63c\uc7a1\ud1b5\ud589\ub8cc \uac10\uba74 \ub610\ub294 \uba74\uc81c\ud574 \uc8fc\uc138\uc694",
     "reg_date": "2021-07-05",
     "vote_score": 8.0,
     "comment_cnt": 2,
@@ -36672,7 +36672,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190647",
     "title": "어린이 보호구역 교차로 방지턱",
-    "content": "어린이 보호구역 교차로 방지턱",
+    "content": "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \uad50\ucc28\ub85c \ubc29\uc9c0\ud131",
     "reg_date": "2021-07-05",
     "vote_score": 13.0,
     "comment_cnt": 0,
@@ -36728,7 +36728,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190633",
     "title": "서울시 남녀임신준비 사업에서 여성도 외부에서 검사받을수 있게 해주세요!",
-    "content": "서울시 남녀임신준비 사업에서 여성도 외부에서 검사받을수 있게 해주세요!",
+    "content": "\uc11c\uc6b8\uc2dc \ub0a8\ub140\uc784\uc2e0\uc900\ube44 \uc0ac\uc5c5\uc5d0\uc11c \uc5ec\uc131\ub3c4 \uc678\ubd80\uc5d0\uc11c \uac80\uc0ac\ubc1b\uc744\uc218 \uc788\uac8c \ud574\uc8fc\uc138\uc694!",
     "reg_date": "2021-07-02",
     "vote_score": 17.0,
     "comment_cnt": 2,
@@ -36784,7 +36784,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190617",
     "title": "산업단지공단 소속 햇님어린이집 폐소에 따른 대안을 마련해주세요",
-    "content": "산업단지공단 소속 햇님어린이집 폐소에 따른 대안을 마련해주세요",
+    "content": "\uc0b0\uc5c5\ub2e8\uc9c0\uacf5\ub2e8 \uc18c\uc18d \ud587\ub2d8\uc5b4\ub9b0\uc774\uc9d1 \ud3d0\uc18c\uc5d0 \ub530\ub978 \ub300\uc548\uc744 \ub9c8\ub828\ud574\uc8fc\uc138\uc694",
     "reg_date": "2021-07-01",
     "vote_score": 59.0,
     "comment_cnt": 4,
@@ -36881,7 +36881,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190545",
     "title": "아이돌봄서비스 개선을 제안합니다",
-    "content": "아이돌봄서비스 개선을 제안합니다",
+    "content": "\uc544\uc774\ub3cc\ubd04\uc11c\ube44\uc2a4 \uac1c\uc120\uc744 \uc81c\uc548\ud569\ub2c8\ub2e4",
     "reg_date": "2021-06-22",
     "vote_score": 4.0,
     "comment_cnt": 2,
@@ -36978,7 +36978,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190458",
     "title": "폭언을 없애기 위한 부모교육",
-    "content": "폭언을 없애기 위한 부모교육",
+    "content": "\ud3ed\uc5b8\uc744 \uc5c6\uc560\uae30 \uc704\ud55c \ubd80\ubaa8\uad50\uc721",
     "reg_date": "2021-06-15",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -37034,7 +37034,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190426",
     "title": "보육교사 백신휴가 평등하게 지원해 주세요",
-    "content": "보육교사 백신휴가 평등하게 지원해 주세요",
+    "content": "\ubcf4\uc721\uad50\uc0ac \ubc31\uc2e0\ud734\uac00 \ud3c9\ub4f1\ud558\uac8c \uc9c0\uc6d0\ud574 \uc8fc\uc138\uc694",
     "reg_date": "2021-06-13",
     "vote_score": 77.0,
     "comment_cnt": 15,
@@ -37131,7 +37131,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190365",
     "title": "지하절 임산부 배려석 _ 인형 배치 제안",
-    "content": "지하절 임산부 배려석 _ 인형 배치 제안",
+    "content": "\uc9c0\ud558\uc808 \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d _ \uc778\ud615 \ubc30\uce58 \uc81c\uc548",
     "reg_date": "2021-06-08",
     "vote_score": 5.0,
     "comment_cnt": 2,
@@ -37228,7 +37228,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190358",
     "title": "어린이집 10m내 금연금지구역. 흡연구역과 금연구역이 공존하는 공간",
-    "content": "어린이집 10m내 금연금지구역. 흡연구역과 금연구역이 공존하는 공간",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 10m\ub0b4 \uae08\uc5f0\uae08\uc9c0\uad6c\uc5ed. \ud761\uc5f0\uad6c\uc5ed\uacfc \uae08\uc5f0\uad6c\uc5ed\uc774 \uacf5\uc874\ud558\ub294 \uacf5\uac04",
     "reg_date": "2021-06-07",
     "vote_score": 11.0,
     "comment_cnt": 0,
@@ -37325,7 +37325,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190352",
     "title": "어린이집 교사 코로나 백신접종 추가예약서비스",
-    "content": "어린이집 교사 코로나 백신접종 추가예약서비스",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 \uad50\uc0ac \ucf54\ub85c\ub098 \ubc31\uc2e0\uc811\uc885 \ucd94\uac00\uc608\uc57d\uc11c\ube44\uc2a4",
     "reg_date": "2021-06-07",
     "vote_score": 15.0,
     "comment_cnt": 1,
@@ -37422,7 +37422,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190338",
     "title": "사무실 밀집 지역에 아이들을 위한 공간을 마련하면 좋을 것 같습니다.",
-    "content": "사무실 밀집 지역에 아이들을 위한 공간을 마련하면 좋을 것 같습니다.",
+    "content": "\uc0ac\ubb34\uc2e4 \ubc00\uc9d1 \uc9c0\uc5ed\uc5d0 \uc544\uc774\ub4e4\uc744 \uc704\ud55c \uacf5\uac04\uc744 \ub9c8\ub828\ud558\uba74 \uc88b\uc744 \uac83 \uac19\uc2b5\ub2c8\ub2e4.",
     "reg_date": "2021-06-04",
     "vote_score": 15.0,
     "comment_cnt": 4,
@@ -37478,7 +37478,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190302",
     "title": "\"삐빅, 임산부입니다\" 버스 이용 시 안내멘트 건의",
-    "content": "\"삐빅, 임산부입니다\" 버스 이용 시 안내멘트 건의",
+    "content": "\"\uc090\ube45, \uc784\uc0b0\ubd80\uc785\ub2c8\ub2e4\" \ubc84\uc2a4 \uc774\uc6a9 \uc2dc \uc548\ub0b4\uba58\ud2b8 \uac74\uc758"삐빅, 임산부입니다\" 버스 이용 시 안내멘트 건의",
     "reg_date": "2021-05-31",
     "vote_score": 53.0,
     "comment_cnt": 17,
@@ -37575,7 +37575,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190300",
     "title": "신혼부부 코로나 예방접종도 빠른일정에 넣어주세요",
-    "content": "신혼부부 코로나 예방접종도 빠른일정에 넣어주세요",
+    "content": "\uc2e0\ud63c\ubd80\ubd80 \ucf54\ub85c\ub098 \uc608\ubc29\uc811\uc885\ub3c4 \ube60\ub978\uc77c\uc815\uc5d0 \ub123\uc5b4\uc8fc\uc138\uc694",
     "reg_date": "2021-05-31",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -37761,7 +37761,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190234",
     "title": "작은도서관에 전자잡지(또는 신문, 전자책) 공용아이디 발급",
-    "content": "작은도서관에 전자잡지(또는 신문, 전자책) 공용아이디 발급",
+    "content": "\uc791\uc740\ub3c4\uc11c\uad00\uc5d0 \uc804\uc790\uc7a1\uc9c0(\ub610\ub294 \uc2e0\ubb38, \uc804\uc790\ucc45) \uacf5\uc6a9\uc544\uc774\ub514 \ubc1c\uae09",
     "reg_date": "2021-05-21",
     "vote_score": 18.0,
     "comment_cnt": 1,
@@ -37817,7 +37817,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190204",
     "title": "유기견들에게 예방접종을 해주세요",
-    "content": "유기견들에게 예방접종을 해주세요",
+    "content": "\uc720\uae30\uacac\ub4e4\uc5d0\uac8c \uc608\ubc29\uc811\uc885\uc744 \ud574\uc8fc\uc138\uc694",
     "reg_date": "2021-05-17",
     "vote_score": 6.0,
     "comment_cnt": 1,
@@ -37873,7 +37873,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190198",
     "title": "영유아 화상사고에 관련한 대책 문의",
-    "content": "영유아 화상사고에 관련한 대책 문의",
+    "content": "\uc601\uc720\uc544 \ud654\uc0c1\uc0ac\uace0\uc5d0 \uad00\ub828\ud55c \ub300\ucc45 \ubb38\uc758",
     "reg_date": "2021-05-16",
     "vote_score": 10.0,
     "comment_cnt": 0,
@@ -37929,7 +37929,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-190111",
     "title": "코로나 예방접종 예진에 대한 제안",
-    "content": "코로나 예방접종 예진에 대한 제안",
+    "content": "\ucf54\ub85c\ub098 \uc608\ubc29\uc811\uc885 \uc608\uc9c4\uc5d0 \ub300\ud55c \uc81c\uc548",
     "reg_date": "2021-05-06",
     "vote_score": 5.0,
     "comment_cnt": 1,
@@ -38082,7 +38082,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189934",
     "title": "미세먼지 경보가 발효되어도 어린이집 실외활동이 가능한 지침을 개정해 주세요",
-    "content": "미세먼지 경보가 발효되어도 어린이집 실외활동이 가능한 지침을 개정해 주세요",
+    "content": "\ubbf8\uc138\uba3c\uc9c0 \uacbd\ubcf4\uac00 \ubc1c\ud6a8\ub418\uc5b4\ub3c4 \uc5b4\ub9b0\uc774\uc9d1 \uc2e4\uc678\ud65c\ub3d9\uc774 \uac00\ub2a5\ud55c \uc9c0\uce68\uc744 \uac1c\uc815\ud574 \uc8fc\uc138\uc694",
     "reg_date": "2021-04-20",
     "vote_score": 11.0,
     "comment_cnt": 1,
@@ -38179,7 +38179,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189861",
     "title": "다자녀혜택에 대해 서울시와 경기도를 구분하지 맙시다",
-    "content": "다자녀혜택에 대해 서울시와 경기도를 구분하지 맙시다",
+    "content": "\ub2e4\uc790\ub140\ud61c\ud0dd\uc5d0 \ub300\ud574 \uc11c\uc6b8\uc2dc\uc640 \uacbd\uae30\ub3c4\ub97c \uad6c\ubd84\ud558\uc9c0 \ub9d9\uc2dc\ub2e4",
     "reg_date": "2021-04-14",
     "vote_score": 6.0,
     "comment_cnt": 0,
@@ -38260,7 +38260,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189719",
     "title": "신혼부부 임차보증금 지원사업 관련",
-    "content": "신혼부부 임차보증금 지원사업 관련",
+    "content": "\uc2e0\ud63c\ubd80\ubd80 \uc784\ucc28\ubcf4\uc99d\uae08 \uc9c0\uc6d0\uc0ac\uc5c5 \uad00\ub828",
     "reg_date": "2021-04-05",
     "vote_score": 12.0,
     "comment_cnt": 0,
@@ -38446,7 +38446,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189694",
     "title": "여성 배려석 원복 및 임산부 무료 택시 이용",
-    "content": "여성 배려석 원복 및 임산부 무료 택시 이용",
+    "content": "\uc5ec\uc131 \ubc30\ub824\uc11d \uc6d0\ubcf5 \ubc0f \uc784\uc0b0\ubd80 \ubb34\ub8cc \ud0dd\uc2dc \uc774\uc6a9",
     "reg_date": "2021-04-01",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -38543,7 +38543,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189693",
     "title": "여성 배려석 원복 및 임산부 무료 택시 이용",
-    "content": "여성 배려석 원복 및 임산부 무료 택시 이용",
+    "content": "\uc5ec\uc131 \ubc30\ub824\uc11d \uc6d0\ubcf5 \ubc0f \uc784\uc0b0\ubd80 \ubb34\ub8cc \ud0dd\uc2dc \uc774\uc6a9",
     "reg_date": "2021-04-01",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -38640,7 +38640,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189679",
     "title": "보건소 난소나이검사(AMH) 실리적인 기준 확대 요청의 건.",
-    "content": "보건소 난소나이검사(AMH) 실리적인 기준 확대 요청의 건.",
+    "content": "\ubcf4\uac74\uc18c \ub09c\uc18c\ub098\uc774\uac80\uc0ac(AMH) \uc2e4\ub9ac\uc801\uc778 \uae30\uc900 \ud655\ub300 \uc694\uccad\uc758 \uac74.",
     "reg_date": "2021-03-30",
     "vote_score": 22.0,
     "comment_cnt": 1,
@@ -38696,7 +38696,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189652",
     "title": "iseoulu.co.kr 출산용품지원누리집 운영방식 변경 요청",
-    "content": "iseoulu.co.kr 출산용품지원누리집 운영방식 변경 요청",
+    "content": "iseoulu.co.kr \ucd9c\uc0b0\uc6a9\ud488\uc9c0\uc6d0\ub204\ub9ac\uc9d1 \uc6b4\uc601\ubc29\uc2dd \ubcc0\uacbd \uc694\uccad",
     "reg_date": "2021-03-25",
     "vote_score": 7.0,
     "comment_cnt": 2,
@@ -38752,7 +38752,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189621",
     "title": "임산부 대상 공영주차장 우선이용 혜택/할인이 생겼으면 좋겠어요",
-    "content": "임산부 대상 공영주차장 우선이용 혜택/할인이 생겼으면 좋겠어요",
+    "content": "\uc784\uc0b0\ubd80 \ub300\uc0c1 \uacf5\uc601\uc8fc\ucc28\uc7a5 \uc6b0\uc120\uc774\uc6a9 \ud61c\ud0dd/\ud560\uc778\uc774 \uc0dd\uacbc\uc73c\uba74 \uc88b\uaca0\uc5b4\uc694",
     "reg_date": "2021-03-19",
     "vote_score": 12.0,
     "comment_cnt": 0,
@@ -38849,7 +38849,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189440",
     "title": "2021년 서울형 난임시술지원 서비스 횟수 증가 제안",
-    "content": "2021년 서울형 난임시술지원 서비스 횟수 증가 제안",
+    "content": "2021\ub144 \uc11c\uc6b8\ud615 \ub09c\uc784\uc2dc\uc220\uc9c0\uc6d0 \uc11c\ube44\uc2a4 \ud69f\uc218 \uc99d\uac00 \uc81c\uc548",
     "reg_date": "2021-02-19",
     "vote_score": 7.0,
     "comment_cnt": 1,
@@ -38946,7 +38946,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189414",
     "title": "우리동네키움센터 / 점심 / 저녁 / 시간 / 직장인 / 학교 / 초등돌봄 등등 문제점이 많은것 같습니다. 현실적이지 않아요.",
-    "content": "우리동네키움센터 / 점심 / 저녁 / 시간 / 직장인 / 학교 / 초등돌봄 등등 문제점이 많은것 같습니다. 현실적이지 않아요.",
+    "content": "\uc6b0\ub9ac\ub3d9\ub124\ud0a4\uc6c0\uc13c\ud130 / \uc810\uc2ec / \uc800\ub141 / \uc2dc\uac04 / \uc9c1\uc7a5\uc778 / \ud559\uad50 / \ucd08\ub4f1\ub3cc\ubd04 \ub4f1\ub4f1 \ubb38\uc81c\uc810\uc774 \ub9ce\uc740\uac83 \uac19\uc2b5\ub2c8\ub2e4. \ud604\uc2e4\uc801\uc774\uc9c0 \uc54a\uc544\uc694.",
     "reg_date": "2021-02-16",
     "vote_score": 12.0,
     "comment_cnt": 3,
@@ -39043,7 +39043,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189408",
     "title": "양육수당, 아동수당등 지급 시 ？ 부모교육 프로그램을 만들어 교육 시켜주세요.",
-    "content": "양육수당, 아동수당등 지급 시 ？ 부모교육 프로그램을 만들어 교육 시켜주세요.",
+    "content": "\uc591\uc721\uc218\ub2f9, \uc544\ub3d9\uc218\ub2f9\ub4f1 \uc9c0\uae09 \uc2dc \uff1f \ubd80\ubaa8\uad50\uc721 \ud504\ub85c\uadf8\ub7a8\uc744 \ub9cc\ub4e4\uc5b4 \uad50\uc721 \uc2dc\ucf1c\uc8fc\uc138\uc694.",
     "reg_date": "2021-02-14",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -39099,7 +39099,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189401",
     "title": "어린이집 학부모회의에서  cctv 정기적 확인할수 있게 해주세요",
-    "content": "어린이집 학부모회의에서  cctv 정기적 확인할수 있게 해주세요",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 \ud559\ubd80\ubaa8\ud68c\uc758\uc5d0\uc11c  cctv \uc815\uae30\uc801 \ud655\uc778\ud560\uc218 \uc788\uac8c \ud574\uc8fc\uc138\uc694",
     "reg_date": "2021-02-08",
     "vote_score": 60.0,
     "comment_cnt": 5,
@@ -39196,7 +39196,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189364",
     "title": "지하철 임산부 좌석 관련 문의 및 제안",
-    "content": "지하철 임산부 좌석 관련 문의 및 제안",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80 \uc88c\uc11d \uad00\ub828 \ubb38\uc758 \ubc0f \uc81c\uc548",
     "reg_date": "2021-02-01",
     "vote_score": 17.0,
     "comment_cnt": 1,
@@ -39293,7 +39293,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189255",
     "title": "난임지원 서비스 횟수 증원요청",
-    "content": "난임지원 서비스 횟수 증원요청",
+    "content": "\ub09c\uc784\uc9c0\uc6d0 \uc11c\ube44\uc2a4 \ud69f\uc218 \uc99d\uc6d0\uc694\uccad",
     "reg_date": "2021-01-08",
     "vote_score": 7.0,
     "comment_cnt": 3,
@@ -39390,7 +39390,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189236",
     "title": "서울시 임신출산 정보센터 글 수정해야 하는거 아닌가요??;;;",
-    "content": "서울시 임신출산 정보센터 글 수정해야 하는거 아닌가요??;;;",
+    "content": "\uc11c\uc6b8\uc2dc \uc784\uc2e0\ucd9c\uc0b0 \uc815\ubcf4\uc13c\ud130 \uae00 \uc218\uc815\ud574\uc57c \ud558\ub294\uac70 \uc544\ub2cc\uac00\uc694??;;;",
     "reg_date": "2021-01-05",
     "vote_score": 15.0,
     "comment_cnt": 1,
@@ -39543,7 +39543,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189218",
     "title": "보육교사 코로나19 선제검사 강력한 공지 철회를 요구합니다",
-    "content": "보육교사 코로나19 선제검사 강력한 공지 철회를 요구합니다",
+    "content": "\ubcf4\uc721\uad50\uc0ac \ucf54\ub85c\ub09819 \uc120\uc81c\uac80\uc0ac \uac15\ub825\ud55c \uacf5\uc9c0 \ucca0\ud68c\ub97c \uc694\uad6c\ud569\ub2c8\ub2e4",
     "reg_date": "2020-12-30",
     "vote_score": 24.0,
     "comment_cnt": 5,
@@ -39640,7 +39640,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189200",
     "title": "현장상황 반영 안 된 '보육교사 코로나19 선제검사'와 관련하여 제안합니다.",
-    "content": "현장상황 반영 안 된 '보육교사 코로나19 선제검사'와 관련하여 제안합니다.",
+    "content": "\ud604\uc7a5\uc0c1\ud669 \ubc18\uc601 \uc548 \ub41c '\ubcf4\uc721\uad50\uc0ac \ucf54\ub85c\ub09819 \uc120\uc81c\uac80\uc0ac'\uc640 \uad00\ub828\ud558\uc5ec \uc81c\uc548\ud569\ub2c8\ub2e4.",
     "reg_date": "2020-12-28",
     "vote_score": 25.0,
     "comment_cnt": 2,
@@ -39737,7 +39737,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189190",
     "title": "서울시 신혼부부 임차보증금 지원 정책 개선 요청",
-    "content": "서울시 신혼부부 임차보증금 지원 정책 개선 요청",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc784\ucc28\ubcf4\uc99d\uae08 \uc9c0\uc6d0 \uc815\ucc45 \uac1c\uc120 \uc694\uccad",
     "reg_date": "2020-12-25",
     "vote_score": 16.0,
     "comment_cnt": 3,
@@ -39826,7 +39826,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189155",
     "title": "보육교사 안전을 위해 긴급보육 등원하는 아이들도 음성확인서 제출 제안합니다.",
-    "content": "보육교사 안전을 위해 긴급보육 등원하는 아이들도 음성확인서 제출 제안합니다.",
+    "content": "\ubcf4\uc721\uad50\uc0ac \uc548\uc804\uc744 \uc704\ud574 \uae34\uae09\ubcf4\uc721 \ub4f1\uc6d0\ud558\ub294 \uc544\uc774\ub4e4\ub3c4 \uc74c\uc131\ud655\uc778\uc11c \uc81c\ucd9c \uc81c\uc548\ud569\ub2c8\ub2e4.",
     "reg_date": "2020-12-20",
     "vote_score": 13.0,
     "comment_cnt": 0,
@@ -39923,7 +39923,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189150",
     "title": "보육교사 선제적검사관련하여 제안합니다.",
-    "content": "보육교사 선제적검사관련하여 제안합니다.",
+    "content": "\ubcf4\uc721\uad50\uc0ac \uc120\uc81c\uc801\uac80\uc0ac\uad00\ub828\ud558\uc5ec \uc81c\uc548\ud569\ub2c8\ub2e4.",
     "reg_date": "2020-12-18",
     "vote_score": 241.0,
     "comment_cnt": 64,
@@ -40020,7 +40020,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189149",
     "title": "어린이집 이용 가정은 음성판정 후 이용할 수 있게 해주세요.",
-    "content": "어린이집 이용 가정은 음성판정 후 이용할 수 있게 해주세요.",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 \uc774\uc6a9 \uac00\uc815\uc740 \uc74c\uc131\ud310\uc815 \ud6c4 \uc774\uc6a9\ud560 \uc218 \uc788\uac8c \ud574\uc8fc\uc138\uc694.",
     "reg_date": "2020-12-18",
     "vote_score": 18.0,
     "comment_cnt": 1,
@@ -40117,7 +40117,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189148",
     "title": "보육교사가 우스운 정부공무원들께.",
-    "content": "보육교사가 우스운 정부공무원들께.",
+    "content": "\ubcf4\uc721\uad50\uc0ac\uac00 \uc6b0\uc2a4\uc6b4 \uc815\ubd80\uacf5\ubb34\uc6d0\ub4e4\uaed8.",
     "reg_date": "2020-12-18",
     "vote_score": 27.0,
     "comment_cnt": 4,
@@ -40311,7 +40311,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189144",
     "title": "육아수당이나 출생지원금이나 좀 제발 국민좀 챙겨요",
-    "content": "육아수당이나 출생지원금이나 좀 제발 국민좀 챙겨요",
+    "content": "\uc721\uc544\uc218\ub2f9\uc774\ub098 \ucd9c\uc0dd\uc9c0\uc6d0\uae08\uc774\ub098 \uc880 \uc81c\ubc1c \uad6d\ubbfc\uc880 \ucc59\uaca8\uc694",
     "reg_date": "2020-12-17",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -40464,7 +40464,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189075",
     "title": "저출산 근본적 해결을 위한 남녀성평등 교육 강화 방안",
-    "content": "저출산 근본적 해결을 위한 남녀성평등 교육 강화 방안",
+    "content": "\uc800\ucd9c\uc0b0 \uadfc\ubcf8\uc801 \ud574\uacb0\uc744 \uc704\ud55c \ub0a8\ub140\uc131\ud3c9\ub4f1 \uad50\uc721 \uac15\ud654 \ubc29\uc548",
     "reg_date": "2020-12-10",
     "vote_score": 11.0,
     "comment_cnt": 1,
@@ -40520,7 +40520,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-189067",
     "title": "어린이집 예산 지출시 전자적 영수증 첨부시 증빙 인증으로 명문 및 제도화",
-    "content": "어린이집 예산 지출시 전자적 영수증 첨부시 증빙 인증으로 명문 및 제도화",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 \uc608\uc0b0 \uc9c0\ucd9c\uc2dc \uc804\uc790\uc801 \uc601\uc218\uc99d \ucca8\ubd80\uc2dc \uc99d\ube59 \uc778\uc99d\uc73c\ub85c \uba85\ubb38 \ubc0f \uc81c\ub3c4\ud654",
     "reg_date": "2020-12-09",
     "vote_score": 49.0,
     "comment_cnt": 12,
@@ -40714,7 +40714,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188884",
     "title": "어린이집 사회적 거리두기 단계에 따른  방역지침을 보다 세밀하게 강화해주십시오.(아픈 아이들의 등원문제, 가림막설치, 교사인권 등)",
-    "content": "어린이집 사회적 거리두기 단계에 따른  방역지침을 보다 세밀하게 강화해주십시오.(아픈 아이들의 등원문제, 가림막설치, 교사인권 등)",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 \uc0ac\ud68c\uc801 \uac70\ub9ac\ub450\uae30 \ub2e8\uacc4\uc5d0 \ub530\ub978  \ubc29\uc5ed\uc9c0\uce68\uc744 \ubcf4\ub2e4 \uc138\ubc00\ud558\uac8c \uac15\ud654\ud574\uc8fc\uc2ed\uc2dc\uc624.(\uc544\ud508 \uc544\uc774\ub4e4\uc758 \ub4f1\uc6d0\ubb38\uc81c, \uac00\ub9bc\ub9c9\uc124\uce58, \uad50\uc0ac\uc778\uad8c \ub4f1)",
     "reg_date": "2020-11-22",
     "vote_score": 6.0,
     "comment_cnt": 0,
@@ -40811,7 +40811,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188854",
     "title": "육아휴직 가능한 자녀연령을 만 15세까지로 연장하고, 비공무원과 공무원 모두 육아휴직 3년과 육아기 2시간단축근무 당장 시행해주세요!!",
-    "content": "육아휴직 가능한 자녀연령을 만 15세까지로 연장하고, 비공무원과 공무원 모두 육아휴직 3년과 육아기 2시간단축근무 당장 시행해주세요!!",
+    "content": "\uc721\uc544\ud734\uc9c1 \uac00\ub2a5\ud55c \uc790\ub140\uc5f0\ub839\uc744 \ub9cc 15\uc138\uae4c\uc9c0\ub85c \uc5f0\uc7a5\ud558\uace0, \ube44\uacf5\ubb34\uc6d0\uacfc \uacf5\ubb34\uc6d0 \ubaa8\ub450 \uc721\uc544\ud734\uc9c1 3\ub144\uacfc \uc721\uc544\uae30 2\uc2dc\uac04\ub2e8\ucd95\uadfc\ubb34 \ub2f9\uc7a5 \uc2dc\ud589\ud574\uc8fc\uc138\uc694!!",
     "reg_date": "2020-11-18",
     "vote_score": 4.0,
     "comment_cnt": 0,
@@ -40867,7 +40867,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188850",
     "title": "어린이보호구역에 깃발을 설치해주세요",
-    "content": "어린이보호구역에 깃발을 설치해주세요",
+    "content": "\uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed\uc5d0 \uae43\ubc1c\uc744 \uc124\uce58\ud574\uc8fc\uc138\uc694",
     "reg_date": "2020-11-17",
     "vote_score": 31.0,
     "comment_cnt": 1,
@@ -40923,7 +40923,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188816",
     "title": "지하철 임산부 배려석 핑크색 스티커",
-    "content": "지하철 임산부 배려석 핑크색 스티커",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \ud551\ud06c\uc0c9 \uc2a4\ud2f0\ucee4",
     "reg_date": "2020-11-13",
     "vote_score": 19.0,
     "comment_cnt": 3,
@@ -41020,7 +41020,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188801",
     "title": "2021년 서울형 뉴딜일자리 어린이집 공동회계사무원 뉴딜일자리 제안서",
-    "content": "2021년 서울형 뉴딜일자리 어린이집 공동회계사무원 뉴딜일자리 제안서",
+    "content": "2021\ub144 \uc11c\uc6b8\ud615 \ub274\ub51c\uc77c\uc790\ub9ac \uc5b4\ub9b0\uc774\uc9d1 \uacf5\ub3d9\ud68c\uacc4\uc0ac\ubb34\uc6d0 \ub274\ub51c\uc77c\uc790\ub9ac \uc81c\uc548\uc11c",
     "reg_date": "2020-11-12",
     "vote_score": 56.0,
     "comment_cnt": 11,
@@ -41214,7 +41214,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188744",
     "title": "[생활 속 안전사고 거리두기] 스마트 세이프 커뮤니케이션(안전소통) 서비스 아이디어 제안",
-    "content": "[생활 속 안전사고 거리두기] 스마트 세이프 커뮤니케이션(안전소통) 서비스 아이디어 제안",
+    "content": "[\uc0dd\ud65c \uc18d \uc548\uc804\uc0ac\uace0 \uac70\ub9ac\ub450\uae30] \uc2a4\ub9c8\ud2b8 \uc138\uc774\ud504 \ucee4\ubba4\ub2c8\ucf00\uc774\uc158(\uc548\uc804\uc18c\ud1b5) \uc11c\ube44\uc2a4 \uc544\uc774\ub514\uc5b4 \uc81c\uc548",
     "reg_date": "2020-11-03",
     "vote_score": 74.0,
     "comment_cnt": 17,
@@ -41270,7 +41270,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188675",
     "title": "소·중소기업 육아 및 임산부 근로환경 컨설팅 시행",
-    "content": "소·중소기업 육아 및 임산부 근로환경 컨설팅 시행",
+    "content": "\uc18c\u00b7\uc911\uc18c\uae30\uc5c5 \uc721\uc544 \ubc0f \uc784\uc0b0\ubd80 \uadfc\ub85c\ud658\uacbd \ucee8\uc124\ud305 \uc2dc\ud589",
     "reg_date": "2020-10-28",
     "vote_score": 6.0,
     "comment_cnt": 1,
@@ -41367,7 +41367,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188674",
     "title": "지하철 이용중 임산부의 임산부 좌석  접근 및 승차 시 신호발송 장치기구의 설치를 제안합니다",
-    "content": "지하철 이용중 임산부의 임산부 좌석  접근 및 승차 시 신호발송 장치기구의 설치를 제안합니다",
+    "content": "\uc9c0\ud558\ucca0 \uc774\uc6a9\uc911 \uc784\uc0b0\ubd80\uc758 \uc784\uc0b0\ubd80 \uc88c\uc11d  \uc811\uadfc \ubc0f \uc2b9\ucc28 \uc2dc \uc2e0\ud638\ubc1c\uc1a1 \uc7a5\uce58\uae30\uad6c\uc758 \uc124\uce58\ub97c \uc81c\uc548\ud569\ub2c8\ub2e4",
     "reg_date": "2020-10-28",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -41755,7 +41755,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188607",
     "title": "임산부검사 다시 복구시켜주세요!",
-    "content": "임산부검사 다시 복구시켜주세요!",
+    "content": "\uc784\uc0b0\ubd80\uac80\uc0ac \ub2e4\uc2dc \ubcf5\uad6c\uc2dc\ucf1c\uc8fc\uc138\uc694!",
     "reg_date": "2020-10-16",
     "vote_score": 9.0,
     "comment_cnt": 3,
@@ -41852,7 +41852,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188468",
     "title": "어린이집 인건비 정부 지원정책에 연령 제한이 있다구요?",
-    "content": "어린이집 인건비 정부 지원정책에 연령 제한이 있다구요?",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 \uc778\uac74\ube44 \uc815\ubd80 \uc9c0\uc6d0\uc815\ucc45\uc5d0 \uc5f0\ub839 \uc81c\ud55c\uc774 \uc788\ub2e4\uad6c\uc694?",
     "reg_date": "2020-09-17",
     "vote_score": 10.0,
     "comment_cnt": 4,
@@ -41949,7 +41949,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188412",
     "title": "임산부배려석에 대한 작은 생각",
-    "content": "임산부배려석에 대한 작은 생각",
+    "content": "\uc784\uc0b0\ubd80\ubc30\ub824\uc11d\uc5d0 \ub300\ud55c \uc791\uc740 \uc0dd\uac01",
     "reg_date": "2020-09-09",
     "vote_score": 9.0,
     "comment_cnt": 3,
@@ -42143,7 +42143,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188280",
     "title": "기업들의 직원식당을 이용하여 현재의 엄마아빠 미래의 엄마아빠가 아이들에게 따뜻한 밥을 제공해줍시다.",
-    "content": "기업들의 직원식당을 이용하여 현재의 엄마아빠 미래의 엄마아빠가 아이들에게 따뜻한 밥을 제공해줍시다.",
+    "content": "\uae30\uc5c5\ub4e4\uc758 \uc9c1\uc6d0\uc2dd\ub2f9\uc744 \uc774\uc6a9\ud558\uc5ec \ud604\uc7ac\uc758 \uc5c4\ub9c8\uc544\ube60 \ubbf8\ub798\uc758 \uc5c4\ub9c8\uc544\ube60\uac00 \uc544\uc774\ub4e4\uc5d0\uac8c \ub530\ub73b\ud55c \ubc25\uc744 \uc81c\uacf5\ud574\uc90d\uc2dc\ub2e4.",
     "reg_date": "2020-08-25",
     "vote_score": 7.0,
     "comment_cnt": 2,
@@ -42199,7 +42199,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188272",
     "title": "각 주민센터마다 아이스팩을 재활용할 수 있는 시스템을 만들어주세요",
-    "content": "각 주민센터마다 아이스팩을 재활용할 수 있는 시스템을 만들어주세요",
+    "content": "\uac01 \uc8fc\ubbfc\uc13c\ud130\ub9c8\ub2e4 \uc544\uc774\uc2a4\ud329\uc744 \uc7ac\ud65c\uc6a9\ud560 \uc218 \uc788\ub294 \uc2dc\uc2a4\ud15c\uc744 \ub9cc\ub4e4\uc5b4\uc8fc\uc138\uc694",
     "reg_date": "2020-08-24",
     "vote_score": 10.0,
     "comment_cnt": 0,
@@ -42255,7 +42255,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188264",
     "title": "보육시설폐쇄 등 코로나 확진과 관련한 보육대책 마련관련",
-    "content": "보육시설폐쇄 등 코로나 확진과 관련한 보육대책 마련관련",
+    "content": "\ubcf4\uc721\uc2dc\uc124\ud3d0\uc1c4 \ub4f1 \ucf54\ub85c\ub098 \ud655\uc9c4\uacfc \uad00\ub828\ud55c \ubcf4\uc721\ub300\ucc45 \ub9c8\ub828\uad00\ub828",
     "reg_date": "2020-08-23",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -42352,7 +42352,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-188170",
     "title": "공덕sk리더슈뷰 단지 내 어린이집 개원 도와주세요.",
-    "content": "공덕sk리더슈뷰 단지 내 어린이집 개원 도와주세요.",
+    "content": "\uacf5\ub355sk\ub9ac\ub354\uc288\ubdf0 \ub2e8\uc9c0 \ub0b4 \uc5b4\ub9b0\uc774\uc9d1 \uac1c\uc6d0 \ub3c4\uc640\uc8fc\uc138\uc694.",
     "reg_date": "2020-08-14",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -42546,7 +42546,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-187957",
     "title": "공동육아초등방과후의 사회적 인정과 제도적 지원을 원합니다.",
-    "content": "공동육아초등방과후의 사회적 인정과 제도적 지원을 원합니다.",
+    "content": "\uacf5\ub3d9\uc721\uc544\ucd08\ub4f1\ubc29\uacfc\ud6c4\uc758 \uc0ac\ud68c\uc801 \uc778\uc815\uacfc \uc81c\ub3c4\uc801 \uc9c0\uc6d0\uc744 \uc6d0\ud569\ub2c8\ub2e4.",
     "reg_date": "2020-07-20",
     "vote_score": 170.0,
     "comment_cnt": 51,
@@ -42796,7 +42796,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-187873",
     "title": "[임산부 복지 제안] 임신 중기 이후에는 (ex. 20주 등) 택시 이용시 50% 할인(시에서 50%부담) 제도 건의합니다",
-    "content": "[임산부 복지 제안] 임신 중기 이후에는 (ex. 20주 등) 택시 이용시 50% 할인(시에서 50%부담) 제도 건의합니다",
+    "content": "[\uc784\uc0b0\ubd80 \ubcf5\uc9c0 \uc81c\uc548] \uc784\uc2e0 \uc911\uae30 \uc774\ud6c4\uc5d0\ub294 (ex. 20\uc8fc \ub4f1) \ud0dd\uc2dc \uc774\uc6a9\uc2dc 50% \ud560\uc778(\uc2dc\uc5d0\uc11c 50%\ubd80\ub2f4) \uc81c\ub3c4 \uac74\uc758\ud569\ub2c8\ub2e4",
     "reg_date": "2020-07-08",
     "vote_score": 10.0,
     "comment_cnt": 2,
@@ -42990,7 +42990,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-187774",
     "title": "코로나 19로 인한 유치원 어린이집 특기강사 에 대한 정부에 대책이 시급합니다.",
-    "content": "코로나 19로 인한 유치원 어린이집 특기강사 에 대한 정부에 대책이 시급합니다.",
+    "content": "\ucf54\ub85c\ub098 19\ub85c \uc778\ud55c \uc720\uce58\uc6d0 \uc5b4\ub9b0\uc774\uc9d1 \ud2b9\uae30\uac15\uc0ac \uc5d0 \ub300\ud55c \uc815\ubd80\uc5d0 \ub300\ucc45\uc774 \uc2dc\uae09\ud569\ub2c8\ub2e4.",
     "reg_date": "2020-06-26",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -43087,7 +43087,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-187760",
     "title": "어린이집  특기 교육  왜 못하게 하나요?",
-    "content": "어린이집  특기 교육  왜 못하게 하나요?",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1  \ud2b9\uae30 \uad50\uc721  \uc65c \ubabb\ud558\uac8c \ud558\ub098\uc694?",
     "reg_date": "2020-06-24",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -43184,7 +43184,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-187678",
     "title": "반려견 양육을 위한 공공교육",
-    "content": "반려견 양육을 위한 공공교육",
+    "content": "\ubc18\ub824\uacac \uc591\uc721\uc744 \uc704\ud55c \uacf5\uacf5\uad50\uc721",
     "reg_date": "2020-06-15",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -43240,7 +43240,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-187673",
     "title": "실질적인 임산부 배려석 운영을 위한 제안",
-    "content": "실질적인 임산부 배려석 운영을 위한 제안",
+    "content": "\uc2e4\uc9c8\uc801\uc778 \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \uc6b4\uc601\uc744 \uc704\ud55c \uc81c\uc548",
     "reg_date": "2020-06-13",
     "vote_score": 4.0,
     "comment_cnt": 0,
@@ -43434,7 +43434,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-187651",
     "title": "임산부 출퇴근 택시비 감면 복지(바우쳐카드 허용 등)",
-    "content": "임산부 출퇴근 택시비 감면 복지(바우쳐카드 허용 등)",
+    "content": "\uc784\uc0b0\ubd80 \ucd9c\ud1f4\uadfc \ud0dd\uc2dc\ube44 \uac10\uba74 \ubcf5\uc9c0(\ubc14\uc6b0\uccd0\uce74\ub4dc \ud5c8\uc6a9 \ub4f1)",
     "reg_date": "2020-06-11",
     "vote_score": 6.0,
     "comment_cnt": 1,
@@ -43531,7 +43531,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-187645",
     "title": "대중교통 버스 임산부석 대책 요망",
-    "content": "대중교통 버스 임산부석 대책 요망",
+    "content": "\ub300\uc911\uad50\ud1b5 \ubc84\uc2a4 \uc784\uc0b0\ubd80\uc11d \ub300\ucc45 \uc694\ub9dd",
     "reg_date": "2020-06-10",
     "vote_score": 10.0,
     "comment_cnt": 2,
@@ -43628,7 +43628,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-187434",
     "title": "지하철 임산부 배려석에 IoT 기술 접목한다면?",
-    "content": "지하철 임산부 배려석에 IoT 기술 접목한다면?",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d\uc5d0 IoT \uae30\uc220 \uc811\ubaa9\ud55c\ub2e4\uba74?",
     "reg_date": "2020-05-25",
     "vote_score": 6.0,
     "comment_cnt": 0,
@@ -43725,7 +43725,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-187426",
     "title": "어린이보호구역횡단보도전면차단기설치및인도난간재정비필요",
-    "content": "어린이보호구역횡단보도전면차단기설치및인도난간재정비필요",
+    "content": "\uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed\ud6a1\ub2e8\ubcf4\ub3c4\uc804\uba74\ucc28\ub2e8\uae30\uc124\uce58\ubc0f\uc778\ub3c4\ub09c\uac04\uc7ac\uc815\ube44\ud544\uc694",
     "reg_date": "2020-05-24",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -43781,7 +43781,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-187404",
     "title": "어린이 보호구역 내 어린이 보행규정강화와 부모벌점제.",
-    "content": "어린이 보호구역 내 어린이 보행규정강화와 부모벌점제.",
+    "content": "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \ub0b4 \uc5b4\ub9b0\uc774 \ubcf4\ud589\uaddc\uc815\uac15\ud654\uc640 \ubd80\ubaa8\ubc8c\uc810\uc81c.",
     "reg_date": "2020-05-21",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -43934,7 +43934,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-187366",
     "title": "동네 나눔 육아 50+어벤져스",
-    "content": "동네 나눔 육아 50+어벤져스",
+    "content": "\ub3d9\ub124 \ub098\ub214 \uc721\uc544 50+\uc5b4\ubca4\uc838\uc2a4",
     "reg_date": "2020-05-19",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -44184,7 +44184,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-187052",
     "title": "저소득, 다자녀 가구에 매트 제공",
-    "content": "저소득, 다자녀 가구에 매트 제공",
+    "content": "\uc800\uc18c\ub4dd, \ub2e4\uc790\ub140 \uac00\uad6c\uc5d0 \ub9e4\ud2b8 \uc81c\uacf5",
     "reg_date": "2020-04-15",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -44265,7 +44265,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-187005",
     "title": "서울특별시 신혼부부 전세대출제도에서, 장기전세도 지원에 포함시켜주세요.",
-    "content": "서울특별시 신혼부부 전세대출제도에서, 장기전세도 지원에 포함시켜주세요.",
+    "content": "\uc11c\uc6b8\ud2b9\ubcc4\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc804\uc138\ub300\ucd9c\uc81c\ub3c4\uc5d0\uc11c, \uc7a5\uae30\uc804\uc138\ub3c4 \uc9c0\uc6d0\uc5d0 \ud3ec\ud568\uc2dc\ucf1c\uc8fc\uc138\uc694.",
     "reg_date": "2020-04-09",
     "vote_score": 7.0,
     "comment_cnt": 0,
@@ -44354,7 +44354,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186943",
     "title": "초등 온라인개학이 직장부모 자녀의 교육 불평등이 이어지지 않을 대책이 필요합니다.",
-    "content": "초등 온라인개학이 직장부모 자녀의 교육 불평등이 이어지지 않을 대책이 필요합니다.",
+    "content": "\ucd08\ub4f1 \uc628\ub77c\uc778\uac1c\ud559\uc774 \uc9c1\uc7a5\ubd80\ubaa8 \uc790\ub140\uc758 \uad50\uc721 \ubd88\ud3c9\ub4f1\uc774 \uc774\uc5b4\uc9c0\uc9c0 \uc54a\uc744 \ub300\ucc45\uc774 \ud544\uc694\ud569\ub2c8\ub2e4.",
     "reg_date": "2020-04-05",
     "vote_score": 66.0,
     "comment_cnt": 2,
@@ -44410,7 +44410,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186896",
     "title": "코로나 아동수당(긴급돌봄쿠폰) 관련",
-    "content": "코로나 아동수당(긴급돌봄쿠폰) 관련",
+    "content": "\ucf54\ub85c\ub098 \uc544\ub3d9\uc218\ub2f9(\uae34\uae09\ub3cc\ubd04\ucfe0\ud3f0) \uad00\ub828",
     "reg_date": "2020-04-02",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -44507,7 +44507,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186849",
     "title": "어린이 보호구역 횡단보도에 스크린 도어 설치",
-    "content": "어린이 보호구역 횡단보도에 스크린 도어 설치",
+    "content": "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \ud6a1\ub2e8\ubcf4\ub3c4\uc5d0 \uc2a4\ud06c\ub9b0 \ub3c4\uc5b4 \uc124\uce58",
     "reg_date": "2020-03-30",
     "vote_score": 5.0,
     "comment_cnt": 1,
@@ -44563,7 +44563,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186804",
     "title": "민식법 실효성 높이려면 어린이 보호구역  과속 방지턱 두개 이상 연속 설치 전국적으로 시행 제안",
-    "content": "민식법 실효성 높이려면 어린이 보호구역  과속 방지턱 두개 이상 연속 설치 전국적으로 시행 제안",
+    "content": "\ubbfc\uc2dd\ubc95 \uc2e4\ud6a8\uc131 \ub192\uc774\ub824\uba74 \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed  \uacfc\uc18d \ubc29\uc9c0\ud131 \ub450\uac1c \uc774\uc0c1 \uc5f0\uc18d \uc124\uce58 \uc804\uad6d\uc801\uc73c\ub85c \uc2dc\ud589 \uc81c\uc548",
     "reg_date": "2020-03-26",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -44619,7 +44619,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186769",
     "title": "서울시 장애인시설 임산부 종사자 재택근무",
-    "content": "서울시 장애인시설 임산부 종사자 재택근무",
+    "content": "\uc11c\uc6b8\uc2dc \uc7a5\uc560\uc778\uc2dc\uc124 \uc784\uc0b0\ubd80 \uc885\uc0ac\uc790 \uc7ac\ud0dd\uadfc\ubb34",
     "reg_date": "2020-03-24",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -44716,7 +44716,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186685",
     "title": "기저귀 전용 배출봉투 제작, 배포",
-    "content": "기저귀 전용 배출봉투 제작, 배포",
+    "content": "\uae30\uc800\uadc0 \uc804\uc6a9 \ubc30\ucd9c\ubd09\ud22c \uc81c\uc791, \ubc30\ud3ec",
     "reg_date": "2020-03-16",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -44772,7 +44772,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186658",
     "title": "2020년 신혼부부 전세자금 대출 이자 지원 기준 변경 제안",
-    "content": "2020년 신혼부부 전세자금 대출 이자 지원 기준 변경 제안",
+    "content": "2020\ub144 \uc2e0\ud63c\ubd80\ubd80 \uc804\uc138\uc790\uae08 \ub300\ucd9c \uc774\uc790 \uc9c0\uc6d0 \uae30\uc900 \ubcc0\uacbd \uc81c\uc548",
     "reg_date": "2020-03-13",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -44861,7 +44861,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186632",
     "title": "구별로 영유아 마스크 공급 동일하게해주세요",
-    "content": "구별로 영유아 마스크 공급 동일하게해주세요",
+    "content": "\uad6c\ubcc4\ub85c \uc601\uc720\uc544 \ub9c8\uc2a4\ud06c \uacf5\uae09 \ub3d9\uc77c\ud558\uac8c\ud574\uc8fc\uc138\uc694",
     "reg_date": "2020-03-11",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -44917,7 +44917,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186626",
     "title": "우리 서울시 만큼이라도  아동수당 추가 지급 하게 된다면 현금으로 지급 하면 좋겠네요",
-    "content": "우리 서울시 만큼이라도  아동수당 추가 지급 하게 된다면 현금으로 지급 하면 좋겠네요",
+    "content": "\uc6b0\ub9ac \uc11c\uc6b8\uc2dc \ub9cc\ud07c\uc774\ub77c\ub3c4  \uc544\ub3d9\uc218\ub2f9 \ucd94\uac00 \uc9c0\uae09 \ud558\uac8c \ub41c\ub2e4\uba74 \ud604\uae08\uc73c\ub85c \uc9c0\uae09 \ud558\uba74 \uc88b\uaca0\ub124\uc694",
     "reg_date": "2020-03-11",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -44973,7 +44973,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186619",
     "title": "임산부들을 위한 마스크 무료 제공 제안",
-    "content": "임산부들을 위한 마스크 무료 제공 제안",
+    "content": "\uc784\uc0b0\ubd80\ub4e4\uc744 \uc704\ud55c \ub9c8\uc2a4\ud06c \ubb34\ub8cc \uc81c\uacf5 \uc81c\uc548",
     "reg_date": "2020-03-11",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -45070,7 +45070,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186586",
     "title": "보육원 졸업생 대상 직업군인 되기 캠페인",
-    "content": "보육원 졸업생 대상 직업군인 되기 캠페인",
+    "content": "\ubcf4\uc721\uc6d0 \uc878\uc5c5\uc0dd \ub300\uc0c1 \uc9c1\uc5c5\uad70\uc778 \ub418\uae30 \ucea0\ud398\uc778",
     "reg_date": "2020-03-09",
     "vote_score": 5.0,
     "comment_cnt": 2,
@@ -45167,7 +45167,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186511",
     "title": "코로나 19 임산부 및 노약자 재택근무 요청드립니다.",
-    "content": "코로나 19 임산부 및 노약자 재택근무 요청드립니다.",
+    "content": "\ucf54\ub85c\ub098 19 \uc784\uc0b0\ubd80 \ubc0f \ub178\uc57d\uc790 \uc7ac\ud0dd\uadfc\ubb34 \uc694\uccad\ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2020-02-29",
     "vote_score": 6.0,
     "comment_cnt": 1,
@@ -45264,7 +45264,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186485",
     "title": "코로나로 학원휴원 학원비반환에 대한 제안",
-    "content": "코로나로 학원휴원 학원비반환에 대한 제안",
+    "content": "\ucf54\ub85c\ub098\ub85c \ud559\uc6d0\ud734\uc6d0 \ud559\uc6d0\ube44\ubc18\ud658\uc5d0 \ub300\ud55c \uc81c\uc548",
     "reg_date": "2020-02-26",
     "vote_score": 4.0,
     "comment_cnt": 1,
@@ -45320,7 +45320,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186464",
     "title": "산후도우미 사용기간 예외적용(코로나 상황)",
-    "content": "산후도우미 사용기간 예외적용(코로나 상황)",
+    "content": "\uc0b0\ud6c4\ub3c4\uc6b0\ubbf8 \uc0ac\uc6a9\uae30\uac04 \uc608\uc678\uc801\uc6a9(\ucf54\ub85c\ub098 \uc0c1\ud669)",
     "reg_date": "2020-02-24",
     "vote_score": 15.0,
     "comment_cnt": 1,
@@ -45376,7 +45376,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186461",
     "title": "어린이집은 입학연기가 없는건가요?",
-    "content": "어린이집은 입학연기가 없는건가요?",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1\uc740 \uc785\ud559\uc5f0\uae30\uac00 \uc5c6\ub294\uac74\uac00\uc694?",
     "reg_date": "2020-02-23",
     "vote_score": 4.0,
     "comment_cnt": 0,
@@ -45570,7 +45570,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186295",
     "title": "박물관, 미술관, 도서관등 아이들이 이용하는 공공시설에 공기청정기 설치",
-    "content": "박물관, 미술관, 도서관등 아이들이 이용하는 공공시설에 공기청정기 설치",
+    "content": "\ubc15\ubb3c\uad00, \ubbf8\uc220\uad00, \ub3c4\uc11c\uad00\ub4f1 \uc544\uc774\ub4e4\uc774 \uc774\uc6a9\ud558\ub294 \uacf5\uacf5\uc2dc\uc124\uc5d0 \uacf5\uae30\uccad\uc815\uae30 \uc124\uce58",
     "reg_date": "2020-01-10",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -45626,7 +45626,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186290",
     "title": "2020 난임부부 시술비 지원정책 수정이 필요합니다.",
-    "content": "2020 난임부부 시술비 지원정책 수정이 필요합니다.",
+    "content": "2020 \ub09c\uc784\ubd80\ubd80 \uc2dc\uc220\ube44 \uc9c0\uc6d0\uc815\ucc45 \uc218\uc815\uc774 \ud544\uc694\ud569\ub2c8\ub2e4.",
     "reg_date": "2020-01-07",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -45820,7 +45820,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186240",
     "title": "청량리 한양수자인 교육연구 및 노유자시설에 국공립 유치원 설립을 부탁드립니다.",
-    "content": "청량리 한양수자인 교육연구 및 노유자시설에 국공립 유치원 설립을 부탁드립니다.",
+    "content": "\uccad\ub7c9\ub9ac \ud55c\uc591\uc218\uc790\uc778 \uad50\uc721\uc5f0\uad6c \ubc0f \ub178\uc720\uc790\uc2dc\uc124\uc5d0 \uad6d\uacf5\ub9bd \uc720\uce58\uc6d0 \uc124\ub9bd\uc744 \ubd80\ud0c1\ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2019-12-24",
     "vote_score": 550.0,
     "comment_cnt": 560,
@@ -45973,7 +45973,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186199",
     "title": "임산부석을 마냥 비워두지 않는 방법",
-    "content": "임산부석을 마냥 비워두지 않는 방법",
+    "content": "\uc784\uc0b0\ubd80\uc11d\uc744 \ub9c8\ub0e5 \ube44\uc6cc\ub450\uc9c0 \uc54a\ub294 \ubc29\ubc95",
     "reg_date": "2019-12-17",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -46070,7 +46070,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186176",
     "title": "지하철 임신부 배려석 운영 개선방안에 대한 제안",
-    "content": "지하철 임신부 배려석 운영 개선방안에 대한 제안",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc2e0\ubd80 \ubc30\ub824\uc11d \uc6b4\uc601 \uac1c\uc120\ubc29\uc548\uc5d0 \ub300\ud55c \uc81c\uc548",
     "reg_date": "2019-12-12",
     "vote_score": 1.0,
     "comment_cnt": 2,
@@ -46126,7 +46126,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186118",
     "title": "대중교통 임산부석 자리를 비워주세요",
-    "content": "대중교통 임산부석 자리를 비워주세요",
+    "content": "\ub300\uc911\uad50\ud1b5 \uc784\uc0b0\ubd80\uc11d \uc790\ub9ac\ub97c \ube44\uc6cc\uc8fc\uc138\uc694",
     "reg_date": "2019-12-07",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -46223,7 +46223,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-186065",
     "title": "서울시 수유실 찾기 지도 앱 개발 및 출시",
-    "content": "서울시 수유실 찾기 지도 앱 개발 및 출시",
+    "content": "\uc11c\uc6b8\uc2dc \uc218\uc720\uc2e4 \ucc3e\uae30 \uc9c0\ub3c4 \uc571 \uac1c\ubc1c \ubc0f \ucd9c\uc2dc",
     "reg_date": "2019-12-07",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -46279,7 +46279,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185985",
     "title": "어린이집/유치원 지원정책 확대",
-    "content": "어린이집/유치원 지원정책 확대",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1/\uc720\uce58\uc6d0 \uc9c0\uc6d0\uc815\ucc45 \ud655\ub300",
     "reg_date": "2019-12-06",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -46376,7 +46376,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185984",
     "title": "난임부부를 위한 친구 만들기",
-    "content": "난임부부를 위한 친구 만들기",
+    "content": "\ub09c\uc784\ubd80\ubd80\ub97c \uc704\ud55c \uce5c\uad6c \ub9cc\ub4e4\uae30",
     "reg_date": "2019-12-06",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -46473,7 +46473,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185872",
     "title": "어린이보호구역 스쿨존 도로 형태 변경을 제안합니다.",
-    "content": "어린이보호구역 스쿨존 도로 형태 변경을 제안합니다.",
+    "content": "\uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed \uc2a4\ucfe8\uc874 \ub3c4\ub85c \ud615\ud0dc \ubcc0\uacbd\uc744 \uc81c\uc548\ud569\ub2c8\ub2e4.",
     "reg_date": "2019-12-06",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -46529,7 +46529,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185835",
     "title": "임산부석 홍보 캠페인 더 적극적으로 해주세요.",
-    "content": "임산부석 홍보 캠페인 더 적극적으로 해주세요.",
+    "content": "\uc784\uc0b0\ubd80\uc11d \ud64d\ubcf4 \ucea0\ud398\uc778 \ub354 \uc801\uadf9\uc801\uc73c\ub85c \ud574\uc8fc\uc138\uc694.",
     "reg_date": "2019-12-05",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -46723,7 +46723,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185814",
     "title": "임산부 배지 홍보를 더 늘려주세요",
-    "content": "임산부 배지 홍보를 더 늘려주세요",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\uc9c0 \ud64d\ubcf4\ub97c \ub354 \ub298\ub824\uc8fc\uc138\uc694",
     "reg_date": "2019-12-05",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -46820,7 +46820,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185793",
     "title": "워킹맘에게 어린이집에서 전화올 때 달려가 줄 수 있는 돌보미 서비스는 없을까요?",
-    "content": "워킹맘에게 어린이집에서 전화올 때 달려가 줄 수 있는 돌보미 서비스는 없을까요?",
+    "content": "\uc6cc\ud0b9\ub9d8\uc5d0\uac8c \uc5b4\ub9b0\uc774\uc9d1\uc5d0\uc11c \uc804\ud654\uc62c \ub54c \ub2ec\ub824\uac00 \uc904 \uc218 \uc788\ub294 \ub3cc\ubcf4\ubbf8 \uc11c\ube44\uc2a4\ub294 \uc5c6\uc744\uae4c\uc694?",
     "reg_date": "2019-12-05",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -46917,7 +46917,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185784",
     "title": "지하철 임산부 좌석을 비워두는 의식을 키울수 있도록",
-    "content": "지하철 임산부 좌석을 비워두는 의식을 키울수 있도록",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80 \uc88c\uc11d\uc744 \ube44\uc6cc\ub450\ub294 \uc758\uc2dd\uc744 \ud0a4\uc6b8\uc218 \uc788\ub3c4\ub85d",
     "reg_date": "2019-12-05",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -47014,7 +47014,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185758",
     "title": "임산부를 위한 프로그램이 부족합니다.",
-    "content": "임산부를 위한 프로그램이 부족합니다.",
+    "content": "\uc784\uc0b0\ubd80\ub97c \uc704\ud55c \ud504\ub85c\uadf8\ub7a8\uc774 \ubd80\uc871\ud569\ub2c8\ub2e4.",
     "reg_date": "2019-12-05",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -47111,7 +47111,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185646",
     "title": "서울시 -저소득층 임산부와 그 남편을 대상으로 하는 임산부들의 산후우울증 예방 프로그램에 대하여  제안합니다",
-    "content": "서울시 -저소득층 임산부와 그 남편을 대상으로 하는 임산부들의 산후우울증 예방 프로그램에 대하여  제안합니다",
+    "content": "\uc11c\uc6b8\uc2dc -\uc800\uc18c\ub4dd\uce35 \uc784\uc0b0\ubd80\uc640 \uadf8 \ub0a8\ud3b8\uc744 \ub300\uc0c1\uc73c\ub85c \ud558\ub294 \uc784\uc0b0\ubd80\ub4e4\uc758 \uc0b0\ud6c4\uc6b0\uc6b8\uc99d \uc608\ubc29 \ud504\ub85c\uadf8\ub7a8\uc5d0 \ub300\ud558\uc5ec  \uc81c\uc548\ud569\ub2c8\ub2e4",
     "reg_date": "2019-11-28",
     "vote_score": 60.0,
     "comment_cnt": 16,
@@ -47208,7 +47208,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185569",
     "title": "규모가 큰 공원 내 시립어린이집+유치원 설립 및 운영",
-    "content": "규모가 큰 공원 내 시립어린이집+유치원 설립 및 운영",
+    "content": "\uaddc\ubaa8\uac00 \ud070 \uacf5\uc6d0 \ub0b4 \uc2dc\ub9bd\uc5b4\ub9b0\uc774\uc9d1+\uc720\uce58\uc6d0 \uc124\ub9bd \ubc0f \uc6b4\uc601",
     "reg_date": "2019-11-13",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -47305,7 +47305,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185511",
     "title": "어린이대공원을 아이들과 미래세대를 위한 &#39;지혜의 바다&#39;로 만들어주세요!!!",
-    "content": "어린이대공원을 아이들과 미래세대를 위한 &#39;지혜의 바다&#39;로 만들어주세요!!!",
+    "content": "\uc5b4\ub9b0\uc774\ub300\uacf5\uc6d0\uc744 \uc544\uc774\ub4e4\uacfc \ubbf8\ub798\uc138\ub300\ub97c \uc704\ud55c &#39;\uc9c0\ud61c\uc758 \ubc14\ub2e4&#39;\ub85c \ub9cc\ub4e4\uc5b4\uc8fc\uc138\uc694!!!",
     "reg_date": "2019-10-30",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -47361,7 +47361,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185502",
     "title": "주차공간을 크게 법 개정을 통해 임산부나 비만인들 쉽게 하자",
-    "content": "주차공간을 크게 법 개정을 통해 임산부나 비만인들 쉽게 하자",
+    "content": "\uc8fc\ucc28\uacf5\uac04\uc744 \ud06c\uac8c \ubc95 \uac1c\uc815\uc744 \ud1b5\ud574 \uc784\uc0b0\ubd80\ub098 \ube44\ub9cc\uc778\ub4e4 \uc27d\uac8c \ud558\uc790",
     "reg_date": "2019-10-29",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -47458,7 +47458,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185480",
     "title": "아동 양육 수당을 현금 지급이 아닌 바우처나 쿠폰, 공공시설 이용 포인트로 전환해주세요",
-    "content": "아동 양육 수당을 현금 지급이 아닌 바우처나 쿠폰, 공공시설 이용 포인트로 전환해주세요",
+    "content": "\uc544\ub3d9 \uc591\uc721 \uc218\ub2f9\uc744 \ud604\uae08 \uc9c0\uae09\uc774 \uc544\ub2cc \ubc14\uc6b0\ucc98\ub098 \ucfe0\ud3f0, \uacf5\uacf5\uc2dc\uc124 \uc774\uc6a9 \ud3ec\uc778\ud2b8\ub85c \uc804\ud658\ud574\uc8fc\uc138\uc694",
     "reg_date": "2019-10-24",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -47547,7 +47547,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185430",
     "title": "서울시 신혼부부 전세자금 대출, 신혼부부를 위한 대출인가 저소득자를 위한 대출인가?",
-    "content": "서울시 신혼부부 전세자금 대출, 신혼부부를 위한 대출인가 저소득자를 위한 대출인가?",
+    "content": "\uc11c\uc6b8\uc2dc \uc2e0\ud63c\ubd80\ubd80 \uc804\uc138\uc790\uae08 \ub300\ucd9c, \uc2e0\ud63c\ubd80\ubd80\ub97c \uc704\ud55c \ub300\ucd9c\uc778\uac00 \uc800\uc18c\ub4dd\uc790\ub97c \uc704\ud55c \ub300\ucd9c\uc778\uac00?",
     "reg_date": "2019-10-18",
     "vote_score": 3.0,
     "comment_cnt": 1,
@@ -47636,7 +47636,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185383",
     "title": "어린이공원 내에 젊은 부모들의 감성을 자극하는 테마공원을 조성해주세요.",
-    "content": "어린이공원 내에 젊은 부모들의 감성을 자극하는 테마공원을 조성해주세요.",
+    "content": "\uc5b4\ub9b0\uc774\uacf5\uc6d0 \ub0b4\uc5d0 \uc80a\uc740 \ubd80\ubaa8\ub4e4\uc758 \uac10\uc131\uc744 \uc790\uadf9\ud558\ub294 \ud14c\ub9c8\uacf5\uc6d0\uc744 \uc870\uc131\ud574\uc8fc\uc138\uc694.",
     "reg_date": "2019-10-10",
     "vote_score": 8.0,
     "comment_cnt": 0,
@@ -47692,7 +47692,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185302",
     "title": "아이와 조부모가 함께 할 수 있는 공간을 만들어주세요",
-    "content": "아이와 조부모가 함께 할 수 있는 공간을 만들어주세요",
+    "content": "\uc544\uc774\uc640 \uc870\ubd80\ubaa8\uac00 \ud568\uaed8 \ud560 \uc218 \uc788\ub294 \uacf5\uac04\uc744 \ub9cc\ub4e4\uc5b4\uc8fc\uc138\uc694",
     "reg_date": "2019-09-24",
     "vote_score": 6.0,
     "comment_cnt": 0,
@@ -47845,7 +47845,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185291",
     "title": "시가 직접 운영하는 산후조리원 건립을 제안합니다",
-    "content": "시가 직접 운영하는 산후조리원 건립을 제안합니다",
+    "content": "\uc2dc\uac00 \uc9c1\uc811 \uc6b4\uc601\ud558\ub294 \uc0b0\ud6c4\uc870\ub9ac\uc6d0 \uac74\ub9bd\uc744 \uc81c\uc548\ud569\ub2c8\ub2e4",
     "reg_date": "2019-09-24",
     "vote_score": 9.0,
     "comment_cnt": 0,
@@ -47918,7 +47918,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185286",
     "title": "조부모 공동육아 및 조부모 육아교실",
-    "content": "조부모 공동육아 및 조부모 육아교실",
+    "content": "\uc870\ubd80\ubaa8 \uacf5\ub3d9\uc721\uc544 \ubc0f \uc870\ubd80\ubaa8 \uc721\uc544\uad50\uc2e4",
     "reg_date": "2019-09-24",
     "vote_score": 9.0,
     "comment_cnt": 0,
@@ -47974,7 +47974,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185284",
     "title": "이웃 할머니 할아버지 긴급돌봄 지원",
-    "content": "이웃 할머니 할아버지 긴급돌봄 지원",
+    "content": "\uc774\uc6c3 \ud560\uba38\ub2c8 \ud560\uc544\ubc84\uc9c0 \uae34\uae09\ub3cc\ubd04 \uc9c0\uc6d0",
     "reg_date": "2019-09-24",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -48362,7 +48362,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185260",
     "title": "임산부에게 지하철 무임승차권을 지급하자,,,",
-    "content": "임산부에게 지하철 무임승차권을 지급하자,,,",
+    "content": "\uc784\uc0b0\ubd80\uc5d0\uac8c \uc9c0\ud558\ucca0 \ubb34\uc784\uc2b9\ucc28\uad8c\uc744 \uc9c0\uae09\ud558\uc790,,,",
     "reg_date": "2019-09-21",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -48459,7 +48459,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185243",
     "title": "어린이집 학교급식 식자재에 팜유 함유된 제품을 제한해주세요",
-    "content": "어린이집 학교급식 식자재에 팜유 함유된 제품을 제한해주세요",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 \ud559\uad50\uae09\uc2dd \uc2dd\uc790\uc7ac\uc5d0 \ud31c\uc720 \ud568\uc720\ub41c \uc81c\ud488\uc744 \uc81c\ud55c\ud574\uc8fc\uc138\uc694",
     "reg_date": "2019-09-20",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -48556,7 +48556,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185220",
     "title": "10월1일부터 개정되는 육아휴직관련법안관련",
-    "content": "10월1일부터 개정되는 육아휴직관련법안관련",
+    "content": "10\uc6d41\uc77c\ubd80\ud130 \uac1c\uc815\ub418\ub294 \uc721\uc544\ud734\uc9c1\uad00\ub828\ubc95\uc548\uad00\ub828",
     "reg_date": "2019-09-18",
     "vote_score": 5.0,
     "comment_cnt": 1,
@@ -48612,7 +48612,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185120",
     "title": "지하철 임산부 배려석 캠페인 소음 폭력 개선",
-    "content": "지하철 임산부 배려석 캠페인 소음 폭력 개선",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \ucea0\ud398\uc778 \uc18c\uc74c \ud3ed\ub825 \uac1c\uc120",
     "reg_date": "2019-08-27",
     "vote_score": 3.0,
     "comment_cnt": 1,
@@ -48709,7 +48709,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185087",
     "title": "지하철 임산부배려석 재명명 해주세요!",
-    "content": "지하철 임산부배려석 재명명 해주세요!",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80\ubc30\ub824\uc11d \uc7ac\uba85\uba85 \ud574\uc8fc\uc138\uc694!",
     "reg_date": "2019-08-20",
     "vote_score": 3.0,
     "comment_cnt": 2,
@@ -48903,7 +48903,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185076",
     "title": "임산부임을 알리는 가방고리를 옷에 달 수 있는 뱃지형태로도 제작하는 것은 어떨까 제안합니다",
-    "content": "임산부임을 알리는 가방고리를 옷에 달 수 있는 뱃지형태로도 제작하는 것은 어떨까 제안합니다",
+    "content": "\uc784\uc0b0\ubd80\uc784\uc744 \uc54c\ub9ac\ub294 \uac00\ubc29\uace0\ub9ac\ub97c \uc637\uc5d0 \ub2ec \uc218 \uc788\ub294 \ubc43\uc9c0\ud615\ud0dc\ub85c\ub3c4 \uc81c\uc791\ud558\ub294 \uac83\uc740 \uc5b4\ub5a8\uae4c \uc81c\uc548\ud569\ub2c8\ub2e4",
     "reg_date": "2019-08-19",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -49000,7 +49000,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-185071",
     "title": "임산부배려석 관련 의견입니다.",
-    "content": "임산부배려석 관련 의견입니다.",
+    "content": "\uc784\uc0b0\ubd80\ubc30\ub824\uc11d \uad00\ub828 \uc758\uacac\uc785\ub2c8\ub2e4.",
     "reg_date": "2019-08-18",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -49194,7 +49194,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184945",
     "title": "어린이 노인장애인보호구역 도로표시  지그자그로",
-    "content": "어린이 노인장애인보호구역 도로표시  지그자그로",
+    "content": "\uc5b4\ub9b0\uc774 \ub178\uc778\uc7a5\uc560\uc778\ubcf4\ud638\uad6c\uc5ed \ub3c4\ub85c\ud45c\uc2dc  \uc9c0\uadf8\uc790\uadf8\ub85c",
     "reg_date": "2019-08-04",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -49250,7 +49250,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184905",
     "title": "아동들의 놀 공간을 찾아주세요!",
-    "content": "아동들의 놀 공간을 찾아주세요!",
+    "content": "\uc544\ub3d9\ub4e4\uc758 \ub180 \uacf5\uac04\uc744 \ucc3e\uc544\uc8fc\uc138\uc694!",
     "reg_date": "2019-07-31",
     "vote_score": 55.0,
     "comment_cnt": 3,
@@ -49306,7 +49306,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184904",
     "title": "아이들만의 쉬는 공간이 필요해요!!",
-    "content": "아이들만의 쉬는 공간이 필요해요!!",
+    "content": "\uc544\uc774\ub4e4\ub9cc\uc758 \uc26c\ub294 \uacf5\uac04\uc774 \ud544\uc694\ud574\uc694!!",
     "reg_date": "2019-07-31",
     "vote_score": 8.0,
     "comment_cnt": 1,
@@ -49362,7 +49362,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184899",
     "title": "무료로 아이들이 놀수 있는 시설을 마련해주세요.",
-    "content": "무료로 아이들이 놀수 있는 시설을 마련해주세요.",
+    "content": "\ubb34\ub8cc\ub85c \uc544\uc774\ub4e4\uc774 \ub180\uc218 \uc788\ub294 \uc2dc\uc124\uc744 \ub9c8\ub828\ud574\uc8fc\uc138\uc694.",
     "reg_date": "2019-07-31",
     "vote_score": 28.0,
     "comment_cnt": 0,
@@ -49418,7 +49418,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184898",
     "title": "아이들을 위한 놀이공간이 필요합니다",
-    "content": "아이들을 위한 놀이공간이 필요합니다",
+    "content": "\uc544\uc774\ub4e4\uc744 \uc704\ud55c \ub180\uc774\uacf5\uac04\uc774 \ud544\uc694\ud569\ub2c8\ub2e4",
     "reg_date": "2019-07-31",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -49474,7 +49474,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184889",
     "title": "아이들을 위한 실내 놀이공간에 대한  의견",
-    "content": "아이들을 위한 실내 놀이공간에 대한  의견",
+    "content": "\uc544\uc774\ub4e4\uc744 \uc704\ud55c \uc2e4\ub0b4 \ub180\uc774\uacf5\uac04\uc5d0 \ub300\ud55c  \uc758\uacac",
     "reg_date": "2019-07-31",
     "vote_score": 6.0,
     "comment_cnt": 0,
@@ -49530,7 +49530,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184886",
     "title": "아이들을 위한 실내 공간에 대한 나의 의견",
-    "content": "아이들을 위한 실내 공간에 대한 나의 의견",
+    "content": "\uc544\uc774\ub4e4\uc744 \uc704\ud55c \uc2e4\ub0b4 \uacf5\uac04\uc5d0 \ub300\ud55c \ub098\uc758 \uc758\uacac",
     "reg_date": "2019-07-31",
     "vote_score": 3.0,
     "comment_cnt": 0,
@@ -49683,7 +49683,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184851",
     "title": "임산부 석에 앉는 사람이 많습니다.",
-    "content": "임산부 석에 앉는 사람이 많습니다.",
+    "content": "\uc784\uc0b0\ubd80 \uc11d\uc5d0 \uc549\ub294 \uc0ac\ub78c\uc774 \ub9ce\uc2b5\ub2c8\ub2e4.",
     "reg_date": "2019-07-25",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -49780,7 +49780,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184839",
     "title": "지하철 임산부 승차시 자동 알람 기능",
-    "content": "지하철 임산부 승차시 자동 알람 기능",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80 \uc2b9\ucc28\uc2dc \uc790\ub3d9 \uc54c\ub78c \uae30\ub2a5",
     "reg_date": "2019-07-22",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -50071,7 +50071,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184659",
     "title": "임산부 배려석과 국민행복카드 연계 및 지하철 앱 활용",
-    "content": "임산부 배려석과 국민행복카드 연계 및 지하철 앱 활용",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d\uacfc \uad6d\ubbfc\ud589\ubcf5\uce74\ub4dc \uc5f0\uacc4 \ubc0f \uc9c0\ud558\ucca0 \uc571 \ud65c\uc6a9",
     "reg_date": "2019-06-22",
     "vote_score": 5.0,
     "comment_cnt": 0,
@@ -50168,7 +50168,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184649",
     "title": "공영주차장에 아파트를  건축하여 저소득층이나 신혼부부에게 저렴하게 분양하자",
-    "content": "공영주차장에 아파트를  건축하여 저소득층이나 신혼부부에게 저렴하게 분양하자",
+    "content": "\uacf5\uc601\uc8fc\ucc28\uc7a5\uc5d0 \uc544\ud30c\ud2b8\ub97c  \uac74\ucd95\ud558\uc5ec \uc800\uc18c\ub4dd\uce35\uc774\ub098 \uc2e0\ud63c\ubd80\ubd80\uc5d0\uac8c \uc800\ub834\ud558\uac8c \ubd84\uc591\ud558\uc790",
     "reg_date": "2019-06-20",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -50257,7 +50257,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184604",
     "title": "동성연애 시청앞 대형행사  출산감소 부채질",
-    "content": "동성연애 시청앞 대형행사  출산감소 부채질",
+    "content": "\ub3d9\uc131\uc5f0\uc560 \uc2dc\uccad\uc55e \ub300\ud615\ud589\uc0ac  \ucd9c\uc0b0\uac10\uc18c \ubd80\ucc44\uc9c8",
     "reg_date": "2019-06-07",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -50313,7 +50313,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184600",
     "title": "서울지하철 내 임산부배려석에 ‘테디베어’ 곰 인형 설치를 확대해주세요.",
-    "content": "서울지하철 내 임산부배려석에 ‘테디베어’ 곰 인형 설치를 확대해주세요.",
+    "content": "\uc11c\uc6b8\uc9c0\ud558\ucca0 \ub0b4 \uc784\uc0b0\ubd80\ubc30\ub824\uc11d\uc5d0 \u2018\ud14c\ub514\ubca0\uc5b4\u2019 \uacf0 \uc778\ud615 \uc124\uce58\ub97c \ud655\ub300\ud574\uc8fc\uc138\uc694.",
     "reg_date": "2019-06-06",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -50410,7 +50410,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184573",
     "title": "육아 우수기업 서울시 인증제도 도입",
-    "content": "육아 우수기업 서울시 인증제도 도입",
+    "content": "\uc721\uc544 \uc6b0\uc218\uae30\uc5c5 \uc11c\uc6b8\uc2dc \uc778\uc99d\uc81c\ub3c4 \ub3c4\uc785",
     "reg_date": "2019-05-31",
     "vote_score": 37.0,
     "comment_cnt": 4,
@@ -50466,7 +50466,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184570",
     "title": "살림.육아에 대한 정보를 공공장소에 노출시켜주세요",
-    "content": "살림.육아에 대한 정보를 공공장소에 노출시켜주세요",
+    "content": "\uc0b4\ub9bc.\uc721\uc544\uc5d0 \ub300\ud55c \uc815\ubcf4\ub97c \uacf5\uacf5\uc7a5\uc18c\uc5d0 \ub178\ucd9c\uc2dc\ucf1c\uc8fc\uc138\uc694",
     "reg_date": "2019-05-31",
     "vote_score": 13.0,
     "comment_cnt": 0,
@@ -50522,7 +50522,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184569",
     "title": "“공동육아”를 기업법정 교육시간에 포함시켜주세요.",
-    "content": "“공동육아”를 기업법정 교육시간에 포함시켜주세요.",
+    "content": "\u201c\uacf5\ub3d9\uc721\uc544\u201d\ub97c \uae30\uc5c5\ubc95\uc815 \uad50\uc721\uc2dc\uac04\uc5d0 \ud3ec\ud568\uc2dc\ucf1c\uc8fc\uc138\uc694.",
     "reg_date": "2019-05-31",
     "vote_score": 11.0,
     "comment_cnt": 1,
@@ -50578,7 +50578,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184568",
     "title": "공동육아  참여하는 부모님들 위한 심리 프로그램 마련해주세요!",
-    "content": "공동육아  참여하는 부모님들 위한 심리 프로그램 마련해주세요!",
+    "content": "\uacf5\ub3d9\uc721\uc544  \ucc38\uc5ec\ud558\ub294 \ubd80\ubaa8\ub2d8\ub4e4 \uc704\ud55c \uc2ec\ub9ac \ud504\ub85c\uadf8\ub7a8 \ub9c8\ub828\ud574\uc8fc\uc138\uc694!",
     "reg_date": "2019-05-31",
     "vote_score": 13.0,
     "comment_cnt": 0,
@@ -50634,7 +50634,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184567",
     "title": "공동육아를 위한 교육이 필요해요",
-    "content": "공동육아를 위한 교육이 필요해요",
+    "content": "\uacf5\ub3d9\uc721\uc544\ub97c \uc704\ud55c \uad50\uc721\uc774 \ud544\uc694\ud574\uc694",
     "reg_date": "2019-05-31",
     "vote_score": 9.0,
     "comment_cnt": 0,
@@ -50690,7 +50690,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184566",
     "title": "각 지역 공동육아 단체들과 교류할수 있게 해주세요",
-    "content": "각 지역 공동육아 단체들과 교류할수 있게 해주세요",
+    "content": "\uac01 \uc9c0\uc5ed \uacf5\ub3d9\uc721\uc544 \ub2e8\uccb4\ub4e4\uacfc \uad50\ub958\ud560\uc218 \uc788\uac8c \ud574\uc8fc\uc138\uc694",
     "reg_date": "2019-05-31",
     "vote_score": 7.0,
     "comment_cnt": 0,
@@ -50746,7 +50746,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184557",
     "title": "서울의료원 공공난임센터 신설을 반대합니다, 누구를 위한 정책인가요?",
-    "content": "서울의료원 공공난임센터 신설을 반대합니다, 누구를 위한 정책인가요?",
+    "content": "\uc11c\uc6b8\uc758\ub8cc\uc6d0 \uacf5\uacf5\ub09c\uc784\uc13c\ud130 \uc2e0\uc124\uc744 \ubc18\ub300\ud569\ub2c8\ub2e4, \ub204\uad6c\ub97c \uc704\ud55c \uc815\ucc45\uc778\uac00\uc694?",
     "reg_date": "2019-05-29",
     "vote_score": 722.0,
     "comment_cnt": 470,
@@ -50843,7 +50843,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184534",
     "title": "지하철 임산부 배려석 도우미 &#39;Pink Voice&#39; 도입",
-    "content": "지하철 임산부 배려석 도우미 &#39;Pink Voice&#39; 도입",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \ub3c4\uc6b0\ubbf8 &#39;Pink Voice&#39; \ub3c4\uc785",
     "reg_date": "2019-05-23",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -50940,7 +50940,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184476",
     "title": "지하철 임산부배려석 위치 통일, 플랫폼(스크린도어)에 임산부배려석 위치 표시",
-    "content": "지하철 임산부배려석 위치 통일, 플랫폼(스크린도어)에 임산부배려석 위치 표시",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80\ubc30\ub824\uc11d \uc704\uce58 \ud1b5\uc77c, \ud50c\ub7ab\ud3fc(\uc2a4\ud06c\ub9b0\ub3c4\uc5b4)\uc5d0 \uc784\uc0b0\ubd80\ubc30\ub824\uc11d \uc704\uce58 \ud45c\uc2dc",
     "reg_date": "2019-05-09",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -51134,7 +51134,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184433",
     "title": "임산부 배려석 관련 제안드립니다",
-    "content": "임산부 배려석 관련 제안드립니다",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \uad00\ub828 \uc81c\uc548\ub4dc\ub9bd\ub2c8\ub2e4",
     "reg_date": "2019-04-28",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -51231,7 +51231,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184424",
     "title": "생명을 살리는 어린이 안전 모자",
-    "content": "생명을 살리는 어린이 안전 모자",
+    "content": "\uc0dd\uba85\uc744 \uc0b4\ub9ac\ub294 \uc5b4\ub9b0\uc774 \uc548\uc804 \ubaa8\uc790",
     "reg_date": "2019-04-26",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -51287,7 +51287,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184423",
     "title": "지하철 임산부석을 없애주세요.",
-    "content": "지하철 임산부석을 없애주세요.",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80\uc11d\uc744 \uc5c6\uc560\uc8fc\uc138\uc694.",
     "reg_date": "2019-04-26",
     "vote_score": 5.0,
     "comment_cnt": 4,
@@ -51384,7 +51384,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184410",
     "title": "임산부 배려&#39;칸&#39; 신설 제안",
-    "content": "임산부 배려&#39;칸&#39; 신설 제안",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824&#39;\uce78&#39; \uc2e0\uc124 \uc81c\uc548",
     "reg_date": "2019-04-23",
     "vote_score": 0.0,
     "comment_cnt": 2,
@@ -51481,7 +51481,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184408",
     "title": "공공  육아 기관을 대폭 증설하여 육아 문제를 개선해야한다.",
-    "content": "공공  육아 기관을 대폭 증설하여 육아 문제를 개선해야한다.",
+    "content": "\uacf5\uacf5  \uc721\uc544 \uae30\uad00\uc744 \ub300\ud3ed \uc99d\uc124\ud558\uc5ec \uc721\uc544 \ubb38\uc81c\ub97c \uac1c\uc120\ud574\uc57c\ud55c\ub2e4.",
     "reg_date": "2019-04-23",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -51634,7 +51634,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184312",
     "title": "중소기업에 재직하는 미혼여성들이 출산.육아휴직을 사용할수 있도록 법적으로 제도화시켰으면",
-    "content": "중소기업에 재직하는 미혼여성들이 출산.육아휴직을 사용할수 있도록 법적으로 제도화시켰으면",
+    "content": "\uc911\uc18c\uae30\uc5c5\uc5d0 \uc7ac\uc9c1\ud558\ub294 \ubbf8\ud63c\uc5ec\uc131\ub4e4\uc774 \ucd9c\uc0b0.\uc721\uc544\ud734\uc9c1\uc744 \uc0ac\uc6a9\ud560\uc218 \uc788\ub3c4\ub85d \ubc95\uc801\uc73c\ub85c \uc81c\ub3c4\ud654\uc2dc\ucf30\uc73c\uba74",
     "reg_date": "2019-04-08",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -51787,7 +51787,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184175",
     "title": "아동양육시설 등 퇴소생을 위한 금융교육 등 자립 지원 방안",
-    "content": "아동양육시설 등 퇴소생을 위한 금융교육 등 자립 지원 방안",
+    "content": "\uc544\ub3d9\uc591\uc721\uc2dc\uc124 \ub4f1 \ud1f4\uc18c\uc0dd\uc744 \uc704\ud55c \uae08\uc735\uad50\uc721 \ub4f1 \uc790\ub9bd \uc9c0\uc6d0 \ubc29\uc548",
     "reg_date": "2019-03-25",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -51843,7 +51843,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184170",
     "title": "보호종료아동들(보육원 퇴소 아동들)을 위한 지원 확대를 제안합니다.",
-    "content": "보호종료아동들(보육원 퇴소 아동들)을 위한 지원 확대를 제안합니다.",
+    "content": "\ubcf4\ud638\uc885\ub8cc\uc544\ub3d9\ub4e4(\ubcf4\uc721\uc6d0 \ud1f4\uc18c \uc544\ub3d9\ub4e4)\uc744 \uc704\ud55c \uc9c0\uc6d0 \ud655\ub300\ub97c \uc81c\uc548\ud569\ub2c8\ub2e4.",
     "reg_date": "2019-03-24",
     "vote_score": 4.0,
     "comment_cnt": 2,
@@ -52037,7 +52037,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184161",
     "title": "다자녀공영주차장할인제도개선사항",
-    "content": "다자녀공영주차장할인제도개선사항",
+    "content": "\ub2e4\uc790\ub140\uacf5\uc601\uc8fc\ucc28\uc7a5\ud560\uc778\uc81c\ub3c4\uac1c\uc120\uc0ac\ud56d",
     "reg_date": "2019-03-22",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -52118,7 +52118,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184107",
     "title": "지하철 등에 임산부/노약자 전용석 아이디어 제안 합니다.",
-    "content": "지하철 등에 임산부/노약자 전용석 아이디어 제안 합니다.",
+    "content": "\uc9c0\ud558\ucca0 \ub4f1\uc5d0 \uc784\uc0b0\ubd80/\ub178\uc57d\uc790 \uc804\uc6a9\uc11d \uc544\uc774\ub514\uc5b4 \uc81c\uc548 \ud569\ub2c8\ub2e4.",
     "reg_date": "2019-03-14",
     "vote_score": 0.0,
     "comment_cnt": 2,
@@ -52215,7 +52215,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-184041",
     "title": "길고양이 입양시 중성화 수술, 예방접종 비용 지원 및 쉼터조성을 통한 길고양이 관련 민원 해소 대책 마련",
-    "content": "길고양이 입양시 중성화 수술, 예방접종 비용 지원 및 쉼터조성을 통한 길고양이 관련 민원 해소 대책 마련",
+    "content": "\uae38\uace0\uc591\uc774 \uc785\uc591\uc2dc \uc911\uc131\ud654 \uc218\uc220, \uc608\ubc29\uc811\uc885 \ube44\uc6a9 \uc9c0\uc6d0 \ubc0f \uc27c\ud130\uc870\uc131\uc744 \ud1b5\ud55c \uae38\uace0\uc591\uc774 \uad00\ub828 \ubbfc\uc6d0 \ud574\uc18c \ub300\ucc45 \ub9c8\ub828",
     "reg_date": "2019-03-08",
     "vote_score": 10.0,
     "comment_cnt": 2,
@@ -52271,7 +52271,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183929",
     "title": "저출산 극복을 위한 청춘남녀 사랑찾기 행사제안",
-    "content": "저출산 극복을 위한 청춘남녀 사랑찾기 행사제안",
+    "content": "\uc800\ucd9c\uc0b0 \uadf9\ubcf5\uc744 \uc704\ud55c \uccad\ucd98\ub0a8\ub140 \uc0ac\ub791\ucc3e\uae30 \ud589\uc0ac\uc81c\uc548",
     "reg_date": "2019-02-27",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -52327,7 +52327,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183924",
     "title": "안전지킴이(아이들에게 기쁨을!)",
-    "content": "안전지킴이(아이들에게 기쁨을!)",
+    "content": "\uc548\uc804\uc9c0\ud0b4\uc774(\uc544\uc774\ub4e4\uc5d0\uac8c \uae30\uc068\uc744!)",
     "reg_date": "2019-02-27",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -52383,7 +52383,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183875",
     "title": "영유아 놀이장난감 대여사업 추진",
-    "content": "영유아 놀이장난감 대여사업 추진",
+    "content": "\uc601\uc720\uc544 \ub180\uc774\uc7a5\ub09c\uac10 \ub300\uc5ec\uc0ac\uc5c5 \ucd94\uc9c4",
     "reg_date": "2019-02-20",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -52536,7 +52536,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183817",
     "title": "시내버스 임산부석 가방걸이 설치",
-    "content": "시내버스 임산부석 가방걸이 설치",
+    "content": "\uc2dc\ub0b4\ubc84\uc2a4 \uc784\uc0b0\ubd80\uc11d \uac00\ubc29\uac78\uc774 \uc124\uce58",
     "reg_date": "2019-02-15",
     "vote_score": 11.0,
     "comment_cnt": 0,
@@ -52633,7 +52633,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183782",
     "title": "이야기&아트 할머니, 할아버지를 선정하여 어린이집 파견",
-    "content": "이야기&아트 할머니, 할아버지를 선정하여 어린이집 파견",
+    "content": "\uc774\uc57c\uae30&\uc544\ud2b8 \ud560\uba38\ub2c8, \ud560\uc544\ubc84\uc9c0\ub97c \uc120\uc815\ud558\uc5ec \uc5b4\ub9b0\uc774\uc9d1 \ud30c\uacac",
     "reg_date": "2019-02-11",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -52730,7 +52730,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183684",
     "title": "어르신들의 산책로와  아이들의 안전한 숲을 지켜주세요",
-    "content": "어르신들의 산책로와  아이들의 안전한 숲을 지켜주세요",
+    "content": "\uc5b4\ub974\uc2e0\ub4e4\uc758 \uc0b0\ucc45\ub85c\uc640  \uc544\uc774\ub4e4\uc758 \uc548\uc804\ud55c \uc232\uc744 \uc9c0\ucf1c\uc8fc\uc138\uc694",
     "reg_date": "2019-01-22",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -52980,7 +52980,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183623",
     "title": "맞벌이 부부를 위한 보육 정책제안",
-    "content": "맞벌이 부부를 위한 보육 정책제안",
+    "content": "\ub9de\ubc8c\uc774 \ubd80\ubd80\ub97c \uc704\ud55c \ubcf4\uc721 \uc815\ucc45\uc81c\uc548",
     "reg_date": "2019-01-10",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -53174,7 +53174,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183550",
     "title": "보건소에서도  난임주사를..",
-    "content": "보건소에서도  난임주사를..",
+    "content": "\ubcf4\uac74\uc18c\uc5d0\uc11c\ub3c4  \ub09c\uc784\uc8fc\uc0ac\ub97c..",
     "reg_date": "2018-12-24",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -53465,7 +53465,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183452",
     "title": "임산부가 살만한 세상 만들기",
-    "content": "임산부가 살만한 세상 만들기",
+    "content": "\uc784\uc0b0\ubd80\uac00 \uc0b4\ub9cc\ud55c \uc138\uc0c1 \ub9cc\ub4e4\uae30",
     "reg_date": "2018-12-21",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -53562,7 +53562,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183450",
     "title": "난임 &gt;&gt; 꼭 혼인신고 제한을 둬야 하나??",
-    "content": "난임 &gt;&gt; 꼭 혼인신고 제한을 둬야 하나??",
+    "content": "\ub09c\uc784 &gt;&gt; \uaf2d \ud63c\uc778\uc2e0\uace0 \uc81c\ud55c\uc744 \ub46c\uc57c \ud558\ub098??",
     "reg_date": "2018-12-21",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -53756,7 +53756,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183428",
     "title": "보건소에서 난임환자 주사 맞게 해주세요",
-    "content": "보건소에서 난임환자 주사 맞게 해주세요",
+    "content": "\ubcf4\uac74\uc18c\uc5d0\uc11c \ub09c\uc784\ud658\uc790 \uc8fc\uc0ac \ub9de\uac8c \ud574\uc8fc\uc138\uc694",
     "reg_date": "2018-12-20",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -54338,7 +54338,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183387",
     "title": "난임부부들을 위하누정책에 힘써주세요",
-    "content": "난임부부들을 위하누정책에 힘써주세요",
+    "content": "\ub09c\uc784\ubd80\ubd80\ub4e4\uc744 \uc704\ud558\ub204\uc815\ucc45\uc5d0 \ud798\uc368\uc8fc\uc138\uc694",
     "reg_date": "2018-12-16",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -54726,7 +54726,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183322",
     "title": "보건소에서 난임관련주사를 맞게해주세요.",
-    "content": "보건소에서 난임관련주사를 맞게해주세요.",
+    "content": "\ubcf4\uac74\uc18c\uc5d0\uc11c \ub09c\uc784\uad00\ub828\uc8fc\uc0ac\ub97c \ub9de\uac8c\ud574\uc8fc\uc138\uc694.",
     "reg_date": "2018-12-10",
     "vote_score": 3.0,
     "comment_cnt": 1,
@@ -54823,7 +54823,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183275",
     "title": "보건소에서난임관련주사를맞게해주세요",
-    "content": "보건소에서난임관련주사를맞게해주세요",
+    "content": "\ubcf4\uac74\uc18c\uc5d0\uc11c\ub09c\uc784\uad00\ub828\uc8fc\uc0ac\ub97c\ub9de\uac8c\ud574\uc8fc\uc138\uc694",
     "reg_date": "2018-12-05",
     "vote_score": 22.0,
     "comment_cnt": 4,
@@ -55017,7 +55017,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183253",
     "title": "난임바우처. 나이제한없애주세요",
-    "content": "난임바우처. 나이제한없애주세요",
+    "content": "\ub09c\uc784\ubc14\uc6b0\ucc98. \ub098\uc774\uc81c\ud55c\uc5c6\uc560\uc8fc\uc138\uc694",
     "reg_date": "2018-12-04",
     "vote_score": 52.0,
     "comment_cnt": 16,
@@ -55696,7 +55696,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183203",
     "title": "보건소에서도 난임주사맞게해주세요!!!",
-    "content": "보건소에서도 난임주사맞게해주세요!!!",
+    "content": "\ubcf4\uac74\uc18c\uc5d0\uc11c\ub3c4 \ub09c\uc784\uc8fc\uc0ac\ub9de\uac8c\ud574\uc8fc\uc138\uc694!!!",
     "reg_date": "2018-12-01",
     "vote_score": 65.0,
     "comment_cnt": 6,
@@ -55987,7 +55987,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183196",
     "title": "보건소에서 난임주사를 맞게해주세요",
-    "content": "보건소에서 난임주사를 맞게해주세요",
+    "content": "\ubcf4\uac74\uc18c\uc5d0\uc11c \ub09c\uc784\uc8fc\uc0ac\ub97c \ub9de\uac8c\ud574\uc8fc\uc138\uc694",
     "reg_date": "2018-11-30",
     "vote_score": 39.0,
     "comment_cnt": 3,
@@ -56084,7 +56084,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183193",
     "title": "난임에 대한  지원이 부족합니다.",
-    "content": "난임에 대한  지원이 부족합니다.",
+    "content": "\ub09c\uc784\uc5d0 \ub300\ud55c  \uc9c0\uc6d0\uc774 \ubd80\uc871\ud569\ub2c8\ub2e4.",
     "reg_date": "2018-11-30",
     "vote_score": 52.0,
     "comment_cnt": 4,
@@ -56181,7 +56181,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183190",
     "title": "보건소에서 난임주사 허용해주세요",
-    "content": "보건소에서 난임주사 허용해주세요",
+    "content": "\ubcf4\uac74\uc18c\uc5d0\uc11c \ub09c\uc784\uc8fc\uc0ac \ud5c8\uc6a9\ud574\uc8fc\uc138\uc694",
     "reg_date": "2018-11-30",
     "vote_score": 39.0,
     "comment_cnt": 2,
@@ -56278,7 +56278,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183187",
     "title": "난임지원. 현실적인 대안이 필요합니다..",
-    "content": "난임지원. 현실적인 대안이 필요합니다..",
+    "content": "\ub09c\uc784\uc9c0\uc6d0. \ud604\uc2e4\uc801\uc778 \ub300\uc548\uc774 \ud544\uc694\ud569\ub2c8\ub2e4..",
     "reg_date": "2018-11-30",
     "vote_score": 44.0,
     "comment_cnt": 1,
@@ -56375,7 +56375,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183186",
     "title": "난임주사 보건소에서 맞게해주세요",
-    "content": "난임주사 보건소에서 맞게해주세요",
+    "content": "\ub09c\uc784\uc8fc\uc0ac \ubcf4\uac74\uc18c\uc5d0\uc11c \ub9de\uac8c\ud574\uc8fc\uc138\uc694",
     "reg_date": "2018-11-30",
     "vote_score": 38.0,
     "comment_cnt": 1,
@@ -56569,7 +56569,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183171",
     "title": "난임정책(첫아이 만큼 바우처 실행해주세요)",
-    "content": "난임정책(첫아이 만큼 바우처 실행해주세요)",
+    "content": "\ub09c\uc784\uc815\ucc45(\uccab\uc544\uc774 \ub9cc\ud07c \ubc14\uc6b0\ucc98 \uc2e4\ud589\ud574\uc8fc\uc138\uc694)",
     "reg_date": "2018-11-30",
     "vote_score": 192.0,
     "comment_cnt": 40,
@@ -57054,7 +57054,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183154",
     "title": "대중교통 임산부 배려석을 위한 제안",
-    "content": "대중교통 임산부 배려석을 위한 제안",
+    "content": "\ub300\uc911\uad50\ud1b5 \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d\uc744 \uc704\ud55c \uc81c\uc548",
     "reg_date": "2018-11-29",
     "vote_score": 14.0,
     "comment_cnt": 2,
@@ -57248,7 +57248,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183140",
     "title": "난임지원 횟수 철폐해 주세요~",
-    "content": "난임지원 횟수 철폐해 주세요~",
+    "content": "\ub09c\uc784\uc9c0\uc6d0 \ud69f\uc218 \ucca0\ud3d0\ud574 \uc8fc\uc138\uc694~",
     "reg_date": "2018-11-28",
     "vote_score": 212.0,
     "comment_cnt": 29,
@@ -57345,7 +57345,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183131",
     "title": "난임여성의 허가외 처방을 담당주치의재량으로할 수 있도록 법률을 개정해주세요.",
-    "content": "난임여성의 허가외 처방을 담당주치의재량으로할 수 있도록 법률을 개정해주세요.",
+    "content": "\ub09c\uc784\uc5ec\uc131\uc758 \ud5c8\uac00\uc678 \ucc98\ubc29\uc744 \ub2f4\ub2f9\uc8fc\uce58\uc758\uc7ac\ub7c9\uc73c\ub85c\ud560 \uc218 \uc788\ub3c4\ub85d \ubc95\ub960\uc744 \uac1c\uc815\ud574\uc8fc\uc138\uc694.",
     "reg_date": "2018-11-27",
     "vote_score": 614.0,
     "comment_cnt": 96,
@@ -57442,7 +57442,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183130",
     "title": "난임지원 나이제한 철폐해주세요",
-    "content": "난임지원 나이제한 철폐해주세요",
+    "content": "\ub09c\uc784\uc9c0\uc6d0 \ub098\uc774\uc81c\ud55c \ucca0\ud3d0\ud574\uc8fc\uc138\uc694",
     "reg_date": "2018-11-27",
     "vote_score": 757.0,
     "comment_cnt": 212,
@@ -57539,7 +57539,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183129",
     "title": "보건소에서 예비맘을 위한 예비맘 키트를 제공해주셨으면 좋겠어요",
-    "content": "보건소에서 예비맘을 위한 예비맘 키트를 제공해주셨으면 좋겠어요",
+    "content": "\ubcf4\uac74\uc18c\uc5d0\uc11c \uc608\ube44\ub9d8\uc744 \uc704\ud55c \uc608\ube44\ub9d8 \ud0a4\ud2b8\ub97c \uc81c\uacf5\ud574\uc8fc\uc168\uc73c\uba74 \uc88b\uaca0\uc5b4\uc694",
     "reg_date": "2018-11-27",
     "vote_score": 294.0,
     "comment_cnt": 25,
@@ -57595,7 +57595,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183127",
     "title": "보건소에서 난임과 임신,출산 업무 공간을 분리해주세요",
-    "content": "보건소에서 난임과 임신,출산 업무 공간을 분리해주세요",
+    "content": "\ubcf4\uac74\uc18c\uc5d0\uc11c \ub09c\uc784\uacfc \uc784\uc2e0,\ucd9c\uc0b0 \uc5c5\ubb34 \uacf5\uac04\uc744 \ubd84\ub9ac\ud574\uc8fc\uc138\uc694",
     "reg_date": "2018-11-27",
     "vote_score": 342.0,
     "comment_cnt": 28,
@@ -57692,7 +57692,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183126",
     "title": "보건소 산전검사 중 난임검사 항목 추가 요청",
-    "content": "보건소 산전검사 중 난임검사 항목 추가 요청",
+    "content": "\ubcf4\uac74\uc18c \uc0b0\uc804\uac80\uc0ac \uc911 \ub09c\uc784\uac80\uc0ac \ud56d\ubaa9 \ucd94\uac00 \uc694\uccad",
     "reg_date": "2018-11-27",
     "vote_score": 364.0,
     "comment_cnt": 52,
@@ -57789,7 +57789,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183124",
     "title": "보건소 난임당담파트를 따로 해주세요",
-    "content": "보건소 난임당담파트를 따로 해주세요",
+    "content": "\ubcf4\uac74\uc18c \ub09c\uc784\ub2f9\ub2f4\ud30c\ud2b8\ub97c \ub530\ub85c \ud574\uc8fc\uc138\uc694",
     "reg_date": "2018-11-27",
     "vote_score": 372.0,
     "comment_cnt": 41,
@@ -57886,7 +57886,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183123",
     "title": "각 구마다 다른 혜택, 서울시에서 난임 관련 혜택을 동일하게 적용받을 수 있게 해주세요!",
-    "content": "각 구마다 다른 혜택, 서울시에서 난임 관련 혜택을 동일하게 적용받을 수 있게 해주세요!",
+    "content": "\uac01 \uad6c\ub9c8\ub2e4 \ub2e4\ub978 \ud61c\ud0dd, \uc11c\uc6b8\uc2dc\uc5d0\uc11c \ub09c\uc784 \uad00\ub828 \ud61c\ud0dd\uc744 \ub3d9\uc77c\ud558\uac8c \uc801\uc6a9\ubc1b\uc744 \uc218 \uc788\uac8c \ud574\uc8fc\uc138\uc694!",
     "reg_date": "2018-11-27",
     "vote_score": 289.0,
     "comment_cnt": 17,
@@ -57983,7 +57983,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183122",
     "title": "보건소에서 난임주사를 맞을 수 있으면 좋을 것 같아요!",
-    "content": "보건소에서 난임주사를 맞을 수 있으면 좋을 것 같아요!",
+    "content": "\ubcf4\uac74\uc18c\uc5d0\uc11c \ub09c\uc784\uc8fc\uc0ac\ub97c \ub9de\uc744 \uc218 \uc788\uc73c\uba74 \uc88b\uc744 \uac83 \uac19\uc544\uc694!",
     "reg_date": "2018-11-27",
     "vote_score": 459.0,
     "comment_cnt": 85,
@@ -58080,7 +58080,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183121",
     "title": "보건소에서 난임심리 상담 및 배우자 난임 교육 부탁드립니다",
-    "content": "보건소에서 난임심리 상담 및 배우자 난임 교육 부탁드립니다",
+    "content": "\ubcf4\uac74\uc18c\uc5d0\uc11c \ub09c\uc784\uc2ec\ub9ac \uc0c1\ub2f4 \ubc0f \ubc30\uc6b0\uc790 \ub09c\uc784 \uad50\uc721 \ubd80\ud0c1\ub4dc\ub9bd\ub2c8\ub2e4",
     "reg_date": "2018-11-27",
     "vote_score": 299.0,
     "comment_cnt": 24,
@@ -58274,7 +58274,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183047",
     "title": "지하철 임산부 배려석 활성화 방안(임산부카드+교통카드)",
-    "content": "지하철 임산부 배려석 활성화 방안(임산부카드+교통카드)",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d \ud65c\uc131\ud654 \ubc29\uc548(\uc784\uc0b0\ubd80\uce74\ub4dc+\uad50\ud1b5\uce74\ub4dc)",
     "reg_date": "2018-11-19",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -58371,7 +58371,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183038",
     "title": "지하철 임산부좌석(핑크카펫)의 수를 줄여주세요",
-    "content": "지하철 임산부좌석(핑크카펫)의 수를 줄여주세요",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80\uc88c\uc11d(\ud551\ud06c\uce74\ud3ab)\uc758 \uc218\ub97c \uc904\uc5ec\uc8fc\uc138\uc694",
     "reg_date": "2018-11-18",
     "vote_score": 10.0,
     "comment_cnt": 2,
@@ -58565,7 +58565,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-183004",
     "title": "미혼세,무자녀교육세 신설 제안",
-    "content": "미혼세,무자녀교육세 신설 제안",
+    "content": "\ubbf8\ud63c\uc138,\ubb34\uc790\ub140\uad50\uc721\uc138 \uc2e0\uc124 \uc81c\uc548",
     "reg_date": "2018-11-13",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -58815,7 +58815,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182901",
     "title": "어르신 어린이집 하원 도우미",
-    "content": "어르신 어린이집 하원 도우미",
+    "content": "\uc5b4\ub974\uc2e0 \uc5b4\ub9b0\uc774\uc9d1 \ud558\uc6d0 \ub3c4\uc6b0\ubbf8",
     "reg_date": "2018-11-06",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -58912,7 +58912,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182871",
     "title": "육아네트워크를 위한 공간/차량 등의 민간지원 활성화 요청",
-    "content": "육아네트워크를 위한 공간/차량 등의 민간지원 활성화 요청",
+    "content": "\uc721\uc544\ub124\ud2b8\uc6cc\ud06c\ub97c \uc704\ud55c \uacf5\uac04/\ucc28\ub7c9 \ub4f1\uc758 \ubbfc\uac04\uc9c0\uc6d0 \ud65c\uc131\ud654 \uc694\uccad",
     "reg_date": "2018-11-01",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -58968,7 +58968,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182870",
     "title": "육아정보 채널을 일원화해주세요.",
-    "content": "육아정보 채널을 일원화해주세요.",
+    "content": "\uc721\uc544\uc815\ubcf4 \ucc44\ub110\uc744 \uc77c\uc6d0\ud654\ud574\uc8fc\uc138\uc694.",
     "reg_date": "2018-11-01",
     "vote_score": 4.0,
     "comment_cnt": 0,
@@ -59024,7 +59024,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182866",
     "title": "다둥이가족은 차 없으면 아무데도 못나가나요?",
-    "content": "다둥이가족은 차 없으면 아무데도 못나가나요?",
+    "content": "\ub2e4\ub465\uc774\uac00\uc871\uc740 \ucc28 \uc5c6\uc73c\uba74 \uc544\ubb34\ub370\ub3c4 \ubabb\ub098\uac00\ub098\uc694?",
     "reg_date": "2018-11-01",
     "vote_score": 41.0,
     "comment_cnt": 3,
@@ -59080,7 +59080,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182865",
     "title": "육아....아빠들의 교육이 절실합니다.",
-    "content": "육아....아빠들의 교육이 절실합니다.",
+    "content": "\uc721\uc544....\uc544\ube60\ub4e4\uc758 \uad50\uc721\uc774 \uc808\uc2e4\ud569\ub2c8\ub2e4.",
     "reg_date": "2018-11-01",
     "vote_score": 18.0,
     "comment_cnt": 2,
@@ -59136,7 +59136,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182862",
     "title": "서울시 내 자치구별 다둥이 혜택을 통일시켜주세요!",
-    "content": "서울시 내 자치구별 다둥이 혜택을 통일시켜주세요!",
+    "content": "\uc11c\uc6b8\uc2dc \ub0b4 \uc790\uce58\uad6c\ubcc4 \ub2e4\ub465\uc774 \ud61c\ud0dd\uc744 \ud1b5\uc77c\uc2dc\ucf1c\uc8fc\uc138\uc694!",
     "reg_date": "2018-11-01",
     "vote_score": 16.0,
     "comment_cnt": 0,
@@ -59192,7 +59192,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182859",
     "title": "임신육아 전문  컨설턴트가 필요합니다",
-    "content": "임신육아 전문  컨설턴트가 필요합니다",
+    "content": "\uc784\uc2e0\uc721\uc544 \uc804\ubb38  \ucee8\uc124\ud134\ud2b8\uac00 \ud544\uc694\ud569\ub2c8\ub2e4",
     "reg_date": "2018-11-01",
     "vote_score": 34.0,
     "comment_cnt": 1,
@@ -59248,7 +59248,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182858",
     "title": "민방위 교육에 남편육아교육을 넣어주세요^^",
-    "content": "민방위 교육에 남편육아교육을 넣어주세요^^",
+    "content": "\ubbfc\ubc29\uc704 \uad50\uc721\uc5d0 \ub0a8\ud3b8\uc721\uc544\uad50\uc721\uc744 \ub123\uc5b4\uc8fc\uc138\uc694^^",
     "reg_date": "2018-11-01",
     "vote_score": 37.0,
     "comment_cnt": 13,
@@ -59304,7 +59304,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182856",
     "title": "아이, 엄마를 대상으로 한 시간제보육통합센터를 마련해주시면 좋겠습니다!",
-    "content": "아이, 엄마를 대상으로 한 시간제보육통합센터를 마련해주시면 좋겠습니다!",
+    "content": "\uc544\uc774, \uc5c4\ub9c8\ub97c \ub300\uc0c1\uc73c\ub85c \ud55c \uc2dc\uac04\uc81c\ubcf4\uc721\ud1b5\ud569\uc13c\ud130\ub97c \ub9c8\ub828\ud574\uc8fc\uc2dc\uba74 \uc88b\uaca0\uc2b5\ub2c8\ub2e4!",
     "reg_date": "2018-11-01",
     "vote_score": 39.0,
     "comment_cnt": 1,
@@ -59498,7 +59498,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182826",
     "title": "지하철 내 임산부 알림 경보 설치 제안",
-    "content": "지하철 내 임산부 알림 경보 설치 제안",
+    "content": "\uc9c0\ud558\ucca0 \ub0b4 \uc784\uc0b0\ubd80 \uc54c\ub9bc \uacbd\ubcf4 \uc124\uce58 \uc81c\uc548",
     "reg_date": "2018-10-29",
     "vote_score": 2.0,
     "comment_cnt": 0,
@@ -59595,7 +59595,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182797",
     "title": "임산부 배려석에 핑크라이트 설치",
-    "content": "임산부 배려석에 핑크라이트 설치",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d\uc5d0 \ud551\ud06c\ub77c\uc774\ud2b8 \uc124\uce58",
     "reg_date": "2018-10-26",
     "vote_score": 21.0,
     "comment_cnt": 4,
@@ -59692,7 +59692,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182770",
     "title": "어린이보호구역 불법주차 및 정차 상설 신고제도",
-    "content": "어린이보호구역 불법주차 및 정차 상설 신고제도",
+    "content": "\uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed \ubd88\ubc95\uc8fc\ucc28 \ubc0f \uc815\ucc28 \uc0c1\uc124 \uc2e0\uace0\uc81c\ub3c4",
     "reg_date": "2018-10-24",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -59845,7 +59845,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182746",
     "title": "하나의 정책으로 일자리도 창출하고, 저출산 문제도 해결!",
-    "content": "하나의 정책으로 일자리도 창출하고, 저출산 문제도 해결!",
+    "content": "\ud558\ub098\uc758 \uc815\ucc45\uc73c\ub85c \uc77c\uc790\ub9ac\ub3c4 \ucc3d\ucd9c\ud558\uace0, \uc800\ucd9c\uc0b0 \ubb38\uc81c\ub3c4 \ud574\uacb0!",
     "reg_date": "2018-10-22",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -59901,7 +59901,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182741",
     "title": "임산부 배려석이 아닌 임산부석을 마련해주세요",
-    "content": "임산부 배려석이 아닌 임산부석을 마련해주세요",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d\uc774 \uc544\ub2cc \uc784\uc0b0\ubd80\uc11d\uc744 \ub9c8\ub828\ud574\uc8fc\uc138\uc694",
     "reg_date": "2018-10-21",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -60095,7 +60095,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182581",
     "title": "임산부 배려석에 임산부만 앉을 수 있는 장치를 설치해주세요.",
-    "content": "임산부 배려석에 임산부만 앉을 수 있는 장치를 설치해주세요.",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d\uc5d0 \uc784\uc0b0\ubd80\ub9cc \uc549\uc744 \uc218 \uc788\ub294 \uc7a5\uce58\ub97c \uc124\uce58\ud574\uc8fc\uc138\uc694.",
     "reg_date": "2018-10-03",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -60192,7 +60192,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182580",
     "title": "지하철 임산부 배려석에 외국인들을 위한 안내가 있어야 할 것 같습니다",
-    "content": "지하철 임산부 배려석에 외국인들을 위한 안내가 있어야 할 것 같습니다",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d\uc5d0 \uc678\uad6d\uc778\ub4e4\uc744 \uc704\ud55c \uc548\ub0b4\uac00 \uc788\uc5b4\uc57c \ud560 \uac83 \uac19\uc2b5\ub2c8\ub2e4",
     "reg_date": "2018-10-03",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -60289,7 +60289,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182496",
     "title": "저출산 대책(국민연금  수령연령과 연계)",
-    "content": "저출산 대책(국민연금  수령연령과 연계)",
+    "content": "\uc800\ucd9c\uc0b0 \ub300\ucc45(\uad6d\ubbfc\uc5f0\uae08  \uc218\ub839\uc5f0\ub839\uacfc \uc5f0\uacc4)",
     "reg_date": "2018-09-25",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -60442,7 +60442,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182392",
     "title": "서울시립대학 을 폐교하고 신혼부부용 아파트를 건설합시다",
-    "content": "서울시립대학 을 폐교하고 신혼부부용 아파트를 건설합시다",
+    "content": "\uc11c\uc6b8\uc2dc\ub9bd\ub300\ud559 \uc744 \ud3d0\uad50\ud558\uace0 \uc2e0\ud63c\ubd80\ubd80\uc6a9 \uc544\ud30c\ud2b8\ub97c \uac74\uc124\ud569\uc2dc\ub2e4",
     "reg_date": "2018-09-17",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -60531,7 +60531,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182378",
     "title": "임산부 배려석? 생각의 전환으로! 임산부 배려뱃지!",
-    "content": "임산부 배려석? 생각의 전환으로! 임산부 배려뱃지!",
+    "content": "\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d? \uc0dd\uac01\uc758 \uc804\ud658\uc73c\ub85c! \uc784\uc0b0\ubd80 \ubc30\ub824\ubc43\uc9c0!",
     "reg_date": "2018-09-15",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -60628,7 +60628,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182221",
     "title": "청년및 신혼부부희망주택 정책제안",
-    "content": "청년및 신혼부부희망주택 정책제안",
+    "content": "\uccad\ub144\ubc0f \uc2e0\ud63c\ubd80\ubd80\ud76c\ub9dd\uc8fc\ud0dd \uc815\ucc45\uc81c\uc548",
     "reg_date": "2018-09-09",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -60717,7 +60717,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182211",
     "title": "신혼부부 영구주택 100만호 건설합시다.",
-    "content": "신혼부부 영구주택 100만호 건설합시다.",
+    "content": "\uc2e0\ud63c\ubd80\ubd80 \uc601\uad6c\uc8fc\ud0dd 100\ub9cc\ud638 \uac74\uc124\ud569\uc2dc\ub2e4.",
     "reg_date": "2018-09-08",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -60903,7 +60903,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182192",
     "title": "장애인, 기초수급자, 한부모가정 등 이사시 에어컨 보일러 점검 서비스 해야",
-    "content": "장애인, 기초수급자, 한부모가정 등 이사시 에어컨 보일러 점검 서비스 해야",
+    "content": "\uc7a5\uc560\uc778, \uae30\ucd08\uc218\uae09\uc790, \ud55c\ubd80\ubaa8\uac00\uc815 \ub4f1 \uc774\uc0ac\uc2dc \uc5d0\uc5b4\ucee8 \ubcf4\uc77c\ub7ec \uc810\uac80 \uc11c\ube44\uc2a4 \ud574\uc57c",
     "reg_date": "2018-09-06",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -60959,7 +60959,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182161",
     "title": "어린이 노인보호구역 신호등커버나 기둥에 노란색 칠하기",
-    "content": "어린이 노인보호구역 신호등커버나 기둥에 노란색 칠하기",
+    "content": "\uc5b4\ub9b0\uc774 \ub178\uc778\ubcf4\ud638\uad6c\uc5ed \uc2e0\ud638\ub4f1\ucee4\ubc84\ub098 \uae30\ub465\uc5d0 \ub178\ub780\uc0c9 \uce60\ud558\uae30",
     "reg_date": "2018-09-04",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -61015,7 +61015,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182151",
     "title": "각 구마다 산모을 위한 산모요가 프로그램?",
-    "content": "각 구마다 산모을 위한 산모요가 프로그램?",
+    "content": "\uac01 \uad6c\ub9c8\ub2e4 \uc0b0\ubaa8\uc744 \uc704\ud55c \uc0b0\ubaa8\uc694\uac00 \ud504\ub85c\uadf8\ub7a8?",
     "reg_date": "2018-09-03",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -61071,7 +61071,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182108",
     "title": "어린이 보호구역 신호등 노란색 칠하기",
-    "content": "어린이 보호구역 신호등 노란색 칠하기",
+    "content": "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \uc2e0\ud638\ub4f1 \ub178\ub780\uc0c9 \uce60\ud558\uae30",
     "reg_date": "2018-08-29",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -61127,7 +61127,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-182052",
     "title": "어린이보호구역 도로를 울퉁불퉁하게 해서 과속을 방지해 주세요",
-    "content": "어린이보호구역 도로를 울퉁불퉁하게 해서 과속을 방지해 주세요",
+    "content": "\uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed \ub3c4\ub85c\ub97c \uc6b8\ud241\ubd88\ud241\ud558\uac8c \ud574\uc11c \uacfc\uc18d\uc744 \ubc29\uc9c0\ud574 \uc8fc\uc138\uc694",
     "reg_date": "2018-08-22",
     "vote_score": 3.0,
     "comment_cnt": 1,
@@ -61183,7 +61183,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181959",
     "title": "어린이 등하원 돌보미 활용방안",
-    "content": "어린이 등하원 돌보미 활용방안",
+    "content": "\uc5b4\ub9b0\uc774 \ub4f1\ud558\uc6d0 \ub3cc\ubcf4\ubbf8 \ud65c\uc6a9\ubc29\uc548",
     "reg_date": "2018-08-10",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -61336,7 +61336,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181936",
     "title": "양육수당 어린이집 보육료만큼 인상 제안합니다",
-    "content": "양육수당 어린이집 보육료만큼 인상 제안합니다",
+    "content": "\uc591\uc721\uc218\ub2f9 \uc5b4\ub9b0\uc774\uc9d1 \ubcf4\uc721\ub8cc\ub9cc\ud07c \uc778\uc0c1 \uc81c\uc548\ud569\ub2c8\ub2e4",
     "reg_date": "2018-08-07",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -61433,7 +61433,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181921",
     "title": "큰 건물의 하수처리 시설 설치를 지원해 주세요. (열섬 현상 개선 아이디어)",
-    "content": "큰 건물의 하수처리 시설 설치를 지원해 주세요. (열섬 현상 개선 아이디어)",
+    "content": "\ud070 \uac74\ubb3c\uc758 \ud558\uc218\ucc98\ub9ac \uc2dc\uc124 \uc124\uce58\ub97c \uc9c0\uc6d0\ud574 \uc8fc\uc138\uc694. (\uc5f4\uc12c \ud604\uc0c1 \uac1c\uc120 \uc544\uc774\ub514\uc5b4)",
     "reg_date": "2018-08-06",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -61489,7 +61489,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181875",
     "title": "어린이집 통학차량에  대한 제언",
-    "content": "어린이집 통학차량에  대한 제언",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 \ud1b5\ud559\ucc28\ub7c9\uc5d0  \ub300\ud55c \uc81c\uc5b8",
     "reg_date": "2018-07-29",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -61586,7 +61586,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181849",
     "title": "어린이집 통원버스 하차 안전장치 제안",
-    "content": "어린이집 통원버스 하차 안전장치 제안",
+    "content": "\uc5b4\ub9b0\uc774\uc9d1 \ud1b5\uc6d0\ubc84\uc2a4 \ud558\ucc28 \uc548\uc804\uc7a5\uce58 \uc81c\uc548",
     "reg_date": "2018-07-25",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -61683,7 +61683,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181847",
     "title": "안녕하세요. 한 아이를 어린이집에 보내고 있는 아빠이자 개발자입니다.",
-    "content": "안녕하세요. 한 아이를 어린이집에 보내고 있는 아빠이자 개발자입니다.",
+    "content": "\uc548\ub155\ud558\uc138\uc694. \ud55c \uc544\uc774\ub97c \uc5b4\ub9b0\uc774\uc9d1\uc5d0 \ubcf4\ub0b4\uace0 \uc788\ub294 \uc544\ube60\uc774\uc790 \uac1c\ubc1c\uc790\uc785\ub2c8\ub2e4.",
     "reg_date": "2018-07-25",
     "vote_score": 8.0,
     "comment_cnt": 2,
@@ -61780,7 +61780,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181809",
     "title": "서울 및 수도권 지하철에 있는 &#34;임산부 배려석&#34; 개선 요청합니다.",
-    "content": "서울 및 수도권 지하철에 있는 &#34;임산부 배려석&#34; 개선 요청합니다.",
+    "content": "\uc11c\uc6b8 \ubc0f \uc218\ub3c4\uad8c \uc9c0\ud558\ucca0\uc5d0 \uc788\ub294 &#34;\uc784\uc0b0\ubd80 \ubc30\ub824\uc11d&#34; \uac1c\uc120 \uc694\uccad\ud569\ub2c8\ub2e4.",
     "reg_date": "2018-07-20",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -61974,7 +61974,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181602",
     "title": "다문화 가정 자녀들의 교육권을 보장하기 위한 정책 제안합니다",
-    "content": "다문화 가정 자녀들의 교육권을 보장하기 위한 정책 제안합니다",
+    "content": "\ub2e4\ubb38\ud654 \uac00\uc815 \uc790\ub140\ub4e4\uc758 \uad50\uc721\uad8c\uc744 \ubcf4\uc7a5\ud558\uae30 \uc704\ud55c \uc815\ucc45 \uc81c\uc548\ud569\ub2c8\ub2e4",
     "reg_date": "2018-06-23",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -62127,7 +62127,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181437",
     "title": "아이돌봄서비스 더 쉽게 이용할수 있으면 합니다",
-    "content": "아이돌봄서비스 더 쉽게 이용할수 있으면 합니다",
+    "content": "\uc544\uc774\ub3cc\ubd04\uc11c\ube44\uc2a4 \ub354 \uc27d\uac8c \uc774\uc6a9\ud560\uc218 \uc788\uc73c\uba74 \ud569\ub2c8\ub2e4",
     "reg_date": "2018-06-04",
     "vote_score": 0.0,
     "comment_cnt": 0,
@@ -62224,7 +62224,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181306",
     "title": "보육교사 휴게시간 개선에 대해",
-    "content": "보육교사 휴게시간 개선에 대해",
+    "content": "\ubcf4\uc721\uad50\uc0ac \ud734\uac8c\uc2dc\uac04 \uac1c\uc120\uc5d0 \ub300\ud574",
     "reg_date": "2018-05-23",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -62321,7 +62321,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181300",
     "title": "유아용 체험학습장소 실내식사장소 확대해주세요",
-    "content": "유아용 체험학습장소 실내식사장소 확대해주세요",
+    "content": "\uc720\uc544\uc6a9 \uccb4\ud5d8\ud559\uc2b5\uc7a5\uc18c \uc2e4\ub0b4\uc2dd\uc0ac\uc7a5\uc18c \ud655\ub300\ud574\uc8fc\uc138\uc694",
     "reg_date": "2018-05-23",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -62377,7 +62377,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181276",
     "title": "서울 녹지, 공원, 아동청소년 놀이터 확충 요구한다",
-    "content": "서울 녹지, 공원, 아동청소년 놀이터 확충 요구한다",
+    "content": "\uc11c\uc6b8 \ub179\uc9c0, \uacf5\uc6d0, \uc544\ub3d9\uccad\uc18c\ub144 \ub180\uc774\ud130 \ud655\ucda9 \uc694\uad6c\ud55c\ub2e4",
     "reg_date": "2018-05-20",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -62433,7 +62433,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181229",
     "title": "월컴 키즈존 - 아이들과 함께하는 행복한 식사",
-    "content": "월컴 키즈존 - 아이들과 함께하는 행복한 식사",
+    "content": "\uc6d4\ucef4 \ud0a4\uc988\uc874 - \uc544\uc774\ub4e4\uacfc \ud568\uaed8\ud558\ub294 \ud589\ubcf5\ud55c \uc2dd\uc0ac",
     "reg_date": "2018-05-14",
     "vote_score": 6.0,
     "comment_cnt": 1,
@@ -62489,7 +62489,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181150",
     "title": "서울시 전 지역 운행 중인 시내 저상버스 내에 유모차의 고정 장치를 설치",
-    "content": "서울시 전 지역 운행 중인 시내 저상버스 내에 유모차의 고정 장치를 설치",
+    "content": "\uc11c\uc6b8\uc2dc \uc804 \uc9c0\uc5ed \uc6b4\ud589 \uc911\uc778 \uc2dc\ub0b4 \uc800\uc0c1\ubc84\uc2a4 \ub0b4\uc5d0 \uc720\ubaa8\ucc28\uc758 \uace0\uc815 \uc7a5\uce58\ub97c \uc124\uce58",
     "reg_date": "2018-05-05",
     "vote_score": 4.0,
     "comment_cnt": 1,
@@ -62545,7 +62545,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181065",
     "title": "어린이보호구역 불법주차 단속 민원신청 방법 을 바꾸어 주세요",
-    "content": "어린이보호구역 불법주차 단속 민원신청 방법 을 바꾸어 주세요",
+    "content": "\uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed \ubd88\ubc95\uc8fc\ucc28 \ub2e8\uc18d \ubbfc\uc6d0\uc2e0\uccad \ubc29\ubc95 \uc744 \ubc14\uafb8\uc5b4 \uc8fc\uc138\uc694",
     "reg_date": "2018-04-25",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -62601,7 +62601,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181060",
     "title": "서울지하철에 임산부 핑크라이트 설치를 제안합니다",
-    "content": "서울지하철에 임산부 핑크라이트 설치를 제안합니다",
+    "content": "\uc11c\uc6b8\uc9c0\ud558\ucca0\uc5d0 \uc784\uc0b0\ubd80 \ud551\ud06c\ub77c\uc774\ud2b8 \uc124\uce58\ub97c \uc81c\uc548\ud569\ub2c8\ub2e4",
     "reg_date": "2018-04-25",
     "vote_score": 7.0,
     "comment_cnt": 1,
@@ -62698,7 +62698,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181051",
     "title": "서울시 산후도우미 관련 적용기준이 궁금합니다.",
-    "content": "서울시 산후도우미 관련 적용기준이 궁금합니다.",
+    "content": "\uc11c\uc6b8\uc2dc \uc0b0\ud6c4\ub3c4\uc6b0\ubbf8 \uad00\ub828 \uc801\uc6a9\uae30\uc900\uc774 \uad81\uae08\ud569\ub2c8\ub2e4.",
     "reg_date": "2018-04-24",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -62754,7 +62754,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181019",
     "title": "임산부석 희망고문은 이제 그만",
-    "content": "임산부석 희망고문은 이제 그만",
+    "content": "\uc784\uc0b0\ubd80\uc11d \ud76c\ub9dd\uace0\ubb38\uc740 \uc774\uc81c \uadf8\ub9cc",
     "reg_date": "2018-04-19",
     "vote_score": 12.0,
     "comment_cnt": 2,
@@ -62851,7 +62851,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181015",
     "title": "서울시 어린이 보호구역 안전휀스 개선",
-    "content": "서울시 어린이 보호구역 안전휀스 개선",
+    "content": "\uc11c\uc6b8\uc2dc \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \uc548\uc804\ud700\uc2a4 \uac1c\uc120",
     "reg_date": "2018-04-19",
     "vote_score": 11.0,
     "comment_cnt": 1,
@@ -62907,7 +62907,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-181006",
     "title": "서울시 지하철에 임산부배려석 알람 설치 제안합니다",
-    "content": "서울시 지하철에 임산부배려석 알람 설치 제안합니다",
+    "content": "\uc11c\uc6b8\uc2dc \uc9c0\ud558\ucca0\uc5d0 \uc784\uc0b0\ubd80\ubc30\ub824\uc11d \uc54c\ub78c \uc124\uce58 \uc81c\uc548\ud569\ub2c8\ub2e4",
     "reg_date": "2018-04-18",
     "vote_score": 3.0,
     "comment_cnt": 3,
@@ -63004,7 +63004,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180989",
     "title": "서울시내 도로교통법 바껴야한다고 봅니다. (시내한복판/스쿨존/어린이보호구역/노인보호구역)",
-    "content": "서울시내 도로교통법 바껴야한다고 봅니다. (시내한복판/스쿨존/어린이보호구역/노인보호구역)",
+    "content": "\uc11c\uc6b8\uc2dc\ub0b4 \ub3c4\ub85c\uad50\ud1b5\ubc95 \ubc14\uaef4\uc57c\ud55c\ub2e4\uace0 \ubd05\ub2c8\ub2e4. (\uc2dc\ub0b4\ud55c\ubcf5\ud310/\uc2a4\ucfe8\uc874/\uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed/\ub178\uc778\ubcf4\ud638\uad6c\uc5ed)",
     "reg_date": "2018-04-17",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -63157,7 +63157,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180866",
     "title": "서울시 거동 불편 어르신들이 사용하는 유모차에 야광판 부착토록 지급",
-    "content": "서울시 거동 불편 어르신들이 사용하는 유모차에 야광판 부착토록 지급",
+    "content": "\uc11c\uc6b8\uc2dc \uac70\ub3d9 \ubd88\ud3b8 \uc5b4\ub974\uc2e0\ub4e4\uc774 \uc0ac\uc6a9\ud558\ub294 \uc720\ubaa8\ucc28\uc5d0 \uc57c\uad11\ud310 \ubd80\ucc29\ud1a0\ub85d \uc9c0\uae09",
     "reg_date": "2018-04-11",
     "vote_score": 3.0,
     "comment_cnt": 1,
@@ -63213,7 +63213,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180851",
     "title": "어린이보호구역 도로교통법위반집중단속하자,,,",
-    "content": "어린이보호구역 도로교통법위반집중단속하자,,,",
+    "content": "\uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed \ub3c4\ub85c\uad50\ud1b5\ubc95\uc704\ubc18\uc9d1\uc911\ub2e8\uc18d\ud558\uc790,,,",
     "reg_date": "2018-04-10",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -63269,7 +63269,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180818",
     "title": "서울시 공공화장실 기저귀교환대 살균소독기 비치",
-    "content": "서울시 공공화장실 기저귀교환대 살균소독기 비치",
+    "content": "\uc11c\uc6b8\uc2dc \uacf5\uacf5\ud654\uc7a5\uc2e4 \uae30\uc800\uadc0\uad50\ud658\ub300 \uc0b4\uade0\uc18c\ub3c5\uae30 \ube44\uce58",
     "reg_date": "2018-04-07",
     "vote_score": 12.0,
     "comment_cnt": 2,
@@ -63325,7 +63325,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180806",
     "title": "2018년도 출산장려금 제도 시행",
-    "content": "2018년도 출산장려금 제도 시행",
+    "content": "2018\ub144\ub3c4 \ucd9c\uc0b0\uc7a5\ub824\uae08 \uc81c\ub3c4 \uc2dc\ud589",
     "reg_date": "2018-04-06",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -63381,7 +63381,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180778",
     "title": "서울을 방문한 외국인 관광객을 위한 유모차 대여서비스를 해주세요",
-    "content": "서울을 방문한 외국인 관광객을 위한 유모차 대여서비스를 해주세요",
+    "content": "\uc11c\uc6b8\uc744 \ubc29\ubb38\ud55c \uc678\uad6d\uc778 \uad00\uad11\uac1d\uc744 \uc704\ud55c \uc720\ubaa8\ucc28 \ub300\uc5ec\uc11c\ube44\uc2a4\ub97c \ud574\uc8fc\uc138\uc694",
     "reg_date": "2018-04-04",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -63437,7 +63437,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180721",
     "title": "어린이 보호구역을 넘어 아동ㆍ청소년 보호구역으로 확대 제안",
-    "content": "어린이 보호구역을 넘어 아동ㆍ청소년 보호구역으로 확대 제안",
+    "content": "\uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed\uc744 \ub118\uc5b4 \uc544\ub3d9\u318d\uccad\uc18c\ub144 \ubcf4\ud638\uad6c\uc5ed\uc73c\ub85c \ud655\ub300 \uc81c\uc548",
     "reg_date": "2018-03-30",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -63493,7 +63493,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180672",
     "title": "서울 다둥이카드 혜택을 줄이지 말아주세요",
-    "content": "서울 다둥이카드 혜택을 줄이지 말아주세요",
+    "content": "\uc11c\uc6b8 \ub2e4\ub465\uc774\uce74\ub4dc \ud61c\ud0dd\uc744 \uc904\uc774\uc9c0 \ub9d0\uc544\uc8fc\uc138\uc694",
     "reg_date": "2018-03-25",
     "vote_score": 1.0,
     "comment_cnt": 2,
@@ -63646,7 +63646,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180655",
     "title": "저출산 대책) 다자녀 가정 차량 운영 지원건",
-    "content": "저출산 대책) 다자녀 가정 차량 운영 지원건",
+    "content": "\uc800\ucd9c\uc0b0 \ub300\ucc45) \ub2e4\uc790\ub140 \uac00\uc815 \ucc28\ub7c9 \uc6b4\uc601 \uc9c0\uc6d0\uac74",
     "reg_date": "2018-03-22",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -63727,7 +63727,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180628",
     "title": "다자녀 장학생 역차별 제도개선",
-    "content": "다자녀 장학생 역차별 제도개선",
+    "content": "\ub2e4\uc790\ub140 \uc7a5\ud559\uc0dd \uc5ed\ucc28\ubcc4 \uc81c\ub3c4\uac1c\uc120",
     "reg_date": "2018-03-20",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -63808,7 +63808,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180586",
     "title": "서울시 공공화장실 기저귀교환대 살균소독기 비치",
-    "content": "서울시 공공화장실 기저귀교환대 살균소독기 비치",
+    "content": "\uc11c\uc6b8\uc2dc \uacf5\uacf5\ud654\uc7a5\uc2e4 \uae30\uc800\uadc0\uad50\ud658\ub300 \uc0b4\uade0\uc18c\ub3c5\uae30 \ube44\uce58",
     "reg_date": "2018-03-13",
     "vote_score": 9.0,
     "comment_cnt": 1,
@@ -63864,7 +63864,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180585",
     "title": "서울시 어린이 보호구역 안전휀스 개선",
-    "content": "서울시 어린이 보호구역 안전휀스 개선",
+    "content": "\uc11c\uc6b8\uc2dc \uc5b4\ub9b0\uc774 \ubcf4\ud638\uad6c\uc5ed \uc548\uc804\ud700\uc2a4 \uac1c\uc120",
     "reg_date": "2018-03-13",
     "vote_score": 8.0,
     "comment_cnt": 1,
@@ -64017,7 +64017,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180512",
     "title": "초등학교 병설유치원신설필수,,,,,,,,,,,,,,,,,,,,,,,,,,",
-    "content": "초등학교 병설유치원신설필수,,,,,,,,,,,,,,,,,,,,,,,,,,",
+    "content": "\ucd08\ub4f1\ud559\uad50 \ubcd1\uc124\uc720\uce58\uc6d0\uc2e0\uc124\ud544\uc218,,,,,,,,,,,,,,,,,,,,,,,,,,",
     "reg_date": "2018-03-04",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -64073,7 +64073,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180506",
     "title": "임산부석 희망고문은 이제 그만",
-    "content": "임산부석 희망고문은 이제 그만",
+    "content": "\uc784\uc0b0\ubd80\uc11d \ud76c\ub9dd\uace0\ubb38\uc740 \uc774\uc81c \uadf8\ub9cc",
     "reg_date": "2018-03-03",
     "vote_score": 8.0,
     "comment_cnt": 1,
@@ -64170,7 +64170,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180493",
     "title": "유모차의 이동이 편리해야 출산율 극복할 수 있습니다.",
-    "content": "유모차의 이동이 편리해야 출산율 극복할 수 있습니다.",
+    "content": "\uc720\ubaa8\ucc28\uc758 \uc774\ub3d9\uc774 \ud3b8\ub9ac\ud574\uc57c \ucd9c\uc0b0\uc728 \uadf9\ubcf5\ud560 \uc218 \uc788\uc2b5\ub2c8\ub2e4.",
     "reg_date": "2018-03-01",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -64226,7 +64226,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180489",
     "title": "직장 예비엄마들을 위한 임신 요가 교실",
-    "content": "직장 예비엄마들을 위한 임신 요가 교실",
+    "content": "\uc9c1\uc7a5 \uc608\ube44\uc5c4\ub9c8\ub4e4\uc744 \uc704\ud55c \uc784\uc2e0 \uc694\uac00 \uad50\uc2e4",
     "reg_date": "2018-02-28",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -64282,7 +64282,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180477",
     "title": "어린이보호구역 주정차단속필요&lt;&lt;&lt;",
-    "content": "어린이보호구역 주정차단속필요&lt;&lt;&lt;",
+    "content": "\uc5b4\ub9b0\uc774\ubcf4\ud638\uad6c\uc5ed \uc8fc\uc815\ucc28\ub2e8\uc18d\ud544\uc694&lt;&lt;&lt;",
     "reg_date": "2018-02-26",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -64338,7 +64338,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180472",
     "title": "서울시 임신한 여성들을 위하여 주말에도 자치구청 보건소 운영",
-    "content": "서울시 임신한 여성들을 위하여 주말에도 자치구청 보건소 운영",
+    "content": "\uc11c\uc6b8\uc2dc \uc784\uc2e0\ud55c \uc5ec\uc131\ub4e4\uc744 \uc704\ud558\uc5ec \uc8fc\ub9d0\uc5d0\ub3c4 \uc790\uce58\uad6c\uccad \ubcf4\uac74\uc18c \uc6b4\uc601",
     "reg_date": "2018-02-26",
     "vote_score": 6.0,
     "comment_cnt": 2,
@@ -64394,7 +64394,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180451",
     "title": "제안 제목 : “임산부의 교통카드 발급으로 공공교통요금 면제” 제안",
-    "content": "제안 제목 : “임산부의 교통카드 발급으로 공공교통요금 면제” 제안",
+    "content": "\uc81c\uc548 \uc81c\ubaa9 : \u201c\uc784\uc0b0\ubd80\uc758 \uad50\ud1b5\uce74\ub4dc \ubc1c\uae09\uc73c\ub85c \uacf5\uacf5\uad50\ud1b5\uc694\uae08 \uba74\uc81c\u201d \uc81c\uc548",
     "reg_date": "2018-02-22",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -64491,7 +64491,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180443",
     "title": "지하철 역 내 수유실 환경개선이 필요해요!",
-    "content": "지하철 역 내 수유실 환경개선이 필요해요!",
+    "content": "\uc9c0\ud558\ucca0 \uc5ed \ub0b4 \uc218\uc720\uc2e4 \ud658\uacbd\uac1c\uc120\uc774 \ud544\uc694\ud574\uc694!",
     "reg_date": "2018-02-21",
     "vote_score": 10.0,
     "comment_cnt": 1,
@@ -64547,7 +64547,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180440",
     "title": "출산 장려를 위해 정확도99.9%인 아리아니프티(태아기형아검사)검사를 제안합니다.",
-    "content": "출산 장려를 위해 정확도99.9%인 아리아니프티(태아기형아검사)검사를 제안합니다.",
+    "content": "\ucd9c\uc0b0 \uc7a5\ub824\ub97c \uc704\ud574 \uc815\ud655\ub3c499.9%\uc778 \uc544\ub9ac\uc544\ub2c8\ud504\ud2f0(\ud0dc\uc544\uae30\ud615\uc544\uac80\uc0ac)\uac80\uc0ac\ub97c \uc81c\uc548\ud569\ub2c8\ub2e4.",
     "reg_date": "2018-02-20",
     "vote_score": 1.0,
     "comment_cnt": 0,
@@ -64603,7 +64603,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180438",
     "title": "신혼부부 임대 주택 신청 기준",
-    "content": "신혼부부 임대 주택 신청 기준",
+    "content": "\uc2e0\ud63c\ubd80\ubd80 \uc784\ub300 \uc8fc\ud0dd \uc2e0\uccad \uae30\uc900",
     "reg_date": "2018-02-20",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -64692,7 +64692,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180422",
     "title": "서울시 25개 자치구청 보건소 예방접종 의료진료기록 평생관리 개선토록 개선",
-    "content": "서울시 25개 자치구청 보건소 예방접종 의료진료기록 평생관리 개선토록 개선",
+    "content": "\uc11c\uc6b8\uc2dc 25\uac1c \uc790\uce58\uad6c\uccad \ubcf4\uac74\uc18c \uc608\ubc29\uc811\uc885 \uc758\ub8cc\uc9c4\ub8cc\uae30\ub85d \ud3c9\uc0dd\uad00\ub9ac \uac1c\uc120\ud1a0\ub85d \uac1c\uc120",
     "reg_date": "2018-02-17",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -64845,7 +64845,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180374",
     "title": "지하철 임산부석 보완할 점 제안합니다.",
-    "content": "지하철 임산부석 보완할 점 제안합니다.",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80\uc11d \ubcf4\uc644\ud560 \uc810 \uc81c\uc548\ud569\ub2c8\ub2e4.",
     "reg_date": "2018-02-08",
     "vote_score": 9.0,
     "comment_cnt": 1,
@@ -64942,7 +64942,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180363",
     "title": "최저임금제인상에 따른  어린이집 특활비 상한제 조정필요 (국공립5만원, 민간가정 8만원)",
-    "content": "최저임금제인상에 따른  어린이집 특활비 상한제 조정필요 (국공립5만원, 민간가정 8만원)",
+    "content": "\ucd5c\uc800\uc784\uae08\uc81c\uc778\uc0c1\uc5d0 \ub530\ub978  \uc5b4\ub9b0\uc774\uc9d1 \ud2b9\ud65c\ube44 \uc0c1\ud55c\uc81c \uc870\uc815\ud544\uc694 (\uad6d\uacf5\ub9bd5\ub9cc\uc6d0, \ubbfc\uac04\uac00\uc815 8\ub9cc\uc6d0)",
     "reg_date": "2018-02-07",
     "vote_score": 3.0,
     "comment_cnt": 1,
@@ -65039,7 +65039,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180344",
     "title": "유치원 버스에  차량용 공기 청정기를 제안 합니다.",
-    "content": "유치원 버스에  차량용 공기 청정기를 제안 합니다.",
+    "content": "\uc720\uce58\uc6d0 \ubc84\uc2a4\uc5d0  \ucc28\ub7c9\uc6a9 \uacf5\uae30 \uccad\uc815\uae30\ub97c \uc81c\uc548 \ud569\ub2c8\ub2e4.",
     "reg_date": "2018-02-05",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -65095,7 +65095,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180332",
     "title": "지하철 임산부석 폐지와 (초기)임산부 표식 배포를 청원 드립니다.",
-    "content": "지하철 임산부석 폐지와 (초기)임산부 표식 배포를 청원 드립니다.",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80\uc11d \ud3d0\uc9c0\uc640 (\ucd08\uae30)\uc784\uc0b0\ubd80 \ud45c\uc2dd \ubc30\ud3ec\ub97c \uccad\uc6d0 \ub4dc\ub9bd\ub2c8\ub2e4.",
     "reg_date": "2018-02-04",
     "vote_score": 1.0,
     "comment_cnt": 2,
@@ -65289,7 +65289,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180319",
     "title": "소방시설의 학교, 어린이집 의무조항",
-    "content": "소방시설의 학교, 어린이집 의무조항",
+    "content": "\uc18c\ubc29\uc2dc\uc124\uc758 \ud559\uad50, \uc5b4\ub9b0\uc774\uc9d1 \uc758\ubb34\uc870\ud56d",
     "reg_date": "2018-02-01",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -65386,7 +65386,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180253",
     "title": "미세먼지 대피소로 아이들을 위한 대형실내놀이터를 제안합니다!!",
-    "content": "미세먼지 대피소로 아이들을 위한 대형실내놀이터를 제안합니다!!",
+    "content": "\ubbf8\uc138\uba3c\uc9c0 \ub300\ud53c\uc18c\ub85c \uc544\uc774\ub4e4\uc744 \uc704\ud55c \ub300\ud615\uc2e4\ub0b4\ub180\uc774\ud130\ub97c \uc81c\uc548\ud569\ub2c8\ub2e4!!",
     "reg_date": "2018-01-24",
     "vote_score": 13.0,
     "comment_cnt": 11,
@@ -65442,7 +65442,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180216",
     "title": "보건소에서 난임관련주사를 맞게해주세요.",
-    "content": "보건소에서 난임관련주사를 맞게해주세요.",
+    "content": "\ubcf4\uac74\uc18c\uc5d0\uc11c \ub09c\uc784\uad00\ub828\uc8fc\uc0ac\ub97c \ub9de\uac8c\ud574\uc8fc\uc138\uc694.",
     "reg_date": "2018-01-19",
     "vote_score": 5346.0,
     "comment_cnt": 2559,
@@ -65539,7 +65539,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180213",
     "title": "임산부 지정석 진동 알림 안내",
-    "content": "임산부 지정석 진동 알림 안내",
+    "content": "\uc784\uc0b0\ubd80 \uc9c0\uc815\uc11d \uc9c4\ub3d9 \uc54c\ub9bc \uc548\ub0b4",
     "reg_date": "2018-01-19",
     "vote_score": 0.0,
     "comment_cnt": 1,
@@ -65636,7 +65636,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180149",
     "title": "지역에 유아교육을 위해 &#34;관인유치원 추가&#34; 설립해 줘야",
-    "content": "지역에 유아교육을 위해 &#34;관인유치원 추가&#34; 설립해 줘야",
+    "content": "\uc9c0\uc5ed\uc5d0 \uc720\uc544\uad50\uc721\uc744 \uc704\ud574 &#34;\uad00\uc778\uc720\uce58\uc6d0 \ucd94\uac00&#34; \uc124\ub9bd\ud574 \uc918\uc57c",
     "reg_date": "2018-01-13",
     "vote_score": 0.0,
     "comment_cnt": 2,
@@ -65789,7 +65789,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180131",
     "title": "서울시 산후도우미 지원 7월부터 시행",
-    "content": "서울시 산후도우미 지원 7월부터 시행",
+    "content": "\uc11c\uc6b8\uc2dc \uc0b0\ud6c4\ub3c4\uc6b0\ubbf8 \uc9c0\uc6d0 7\uc6d4\ubd80\ud130 \uc2dc\ud589",
     "reg_date": "2018-01-10",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -65845,7 +65845,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180125",
     "title": "육아담당 조부모 동아리 지원",
-    "content": "육아담당 조부모 동아리 지원",
+    "content": "\uc721\uc544\ub2f4\ub2f9 \uc870\ubd80\ubaa8 \ub3d9\uc544\ub9ac \uc9c0\uc6d0",
     "reg_date": "2018-01-09",
     "vote_score": 14.0,
     "comment_cnt": 3,
@@ -65901,7 +65901,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180104",
     "title": "서울시 다자녀 가정에 층간소음 방지 용품 무상 지원 대책",
-    "content": "서울시 다자녀 가정에 층간소음 방지 용품 무상 지원 대책",
+    "content": "\uc11c\uc6b8\uc2dc \ub2e4\uc790\ub140 \uac00\uc815\uc5d0 \uce35\uac04\uc18c\uc74c \ubc29\uc9c0 \uc6a9\ud488 \ubb34\uc0c1 \uc9c0\uc6d0 \ub300\ucc45",
     "reg_date": "2018-01-05",
     "vote_score": 10.0,
     "comment_cnt": 1,
@@ -66273,7 +66273,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-180013",
     "title": "지하철 임산부배려석 계속 유지해야 할까요?",
-    "content": "지하철 임산부배려석 계속 유지해야 할까요?",
+    "content": "\uc9c0\ud558\ucca0 \uc784\uc0b0\ubd80\ubc30\ub824\uc11d \uacc4\uc18d \uc720\uc9c0\ud574\uc57c \ud560\uae4c\uc694?",
     "reg_date": "2017-12-14",
     "vote_score": 7.0,
     "comment_cnt": 1,
@@ -66370,7 +66370,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-179981",
     "title": "한부모소득탈락 유예기간을 주세요",
-    "content": "한부모소득탈락 유예기간을 주세요",
+    "content": "\ud55c\ubd80\ubaa8\uc18c\ub4dd\ud0c8\ub77d \uc720\uc608\uae30\uac04\uc744 \uc8fc\uc138\uc694",
     "reg_date": "2017-12-09",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -66426,7 +66426,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-179980",
     "title": "미혼모 정서적 지원시스템 개설요청",
-    "content": "미혼모 정서적 지원시스템 개설요청",
+    "content": "\ubbf8\ud63c\ubaa8 \uc815\uc11c\uc801 \uc9c0\uc6d0\uc2dc\uc2a4\ud15c \uac1c\uc124\uc694\uccad",
     "reg_date": "2017-12-09",
     "vote_score": 7.0,
     "comment_cnt": 1,
@@ -66579,7 +66579,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-179976",
     "title": "육아부서 부모부서 같은 부서를 신설해주세요",
-    "content": "육아부서 부모부서 같은 부서를 신설해주세요",
+    "content": "\uc721\uc544\ubd80\uc11c \ubd80\ubaa8\ubd80\uc11c \uac19\uc740 \ubd80\uc11c\ub97c \uc2e0\uc124\ud574\uc8fc\uc138\uc694",
     "reg_date": "2017-12-09",
     "vote_score": 2.0,
     "comment_cnt": 1,
@@ -66635,7 +66635,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-179975",
     "title": "한부모 카드 발급을 통한 차등제 지원",
-    "content": "한부모 카드 발급을 통한 차등제 지원",
+    "content": "\ud55c\ubd80\ubaa8 \uce74\ub4dc \ubc1c\uae09\uc744 \ud1b5\ud55c \ucc28\ub4f1\uc81c \uc9c0\uc6d0",
     "reg_date": "2017-12-09",
     "vote_score": 3.0,
     "comment_cnt": 1,
@@ -66691,7 +66691,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-179973",
     "title": "미혼모라는 정의를 바꿔주세요",
-    "content": "미혼모라는 정의를 바꿔주세요",
+    "content": "\ubbf8\ud63c\ubaa8\ub77c\ub294 \uc815\uc758\ub97c \ubc14\uafd4\uc8fc\uc138\uc694",
     "reg_date": "2017-12-09",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -66747,7 +66747,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-179928",
     "title": "대중교통 임산부석 관련 제안",
-    "content": "대중교통 임산부석 관련 제안",
+    "content": "\ub300\uc911\uad50\ud1b5 \uc784\uc0b0\ubd80\uc11d \uad00\ub828 \uc81c\uc548",
     "reg_date": "2017-12-02",
     "vote_score": 6.0,
     "comment_cnt": 1,
@@ -66941,7 +66941,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-179862",
     "title": "지하철 역사 유휴공간의 영유아 보육시설로 활용하기",
-    "content": "지하철 역사 유휴공간의 영유아 보육시설로 활용하기",
+    "content": "\uc9c0\ud558\ucca0 \uc5ed\uc0ac \uc720\ud734\uacf5\uac04\uc758 \uc601\uc720\uc544 \ubcf4\uc721\uc2dc\uc124\ub85c \ud65c\uc6a9\ud558\uae30",
     "reg_date": "2017-11-23",
     "vote_score": 1.0,
     "comment_cnt": 1,
@@ -67038,7 +67038,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-179861",
     "title": "핑크색 임산부보호석 제도 폐지",
-    "content": "핑크색 임산부보호석 제도 폐지",
+    "content": "\ud551\ud06c\uc0c9 \uc784\uc0b0\ubd80\ubcf4\ud638\uc11d \uc81c\ub3c4 \ud3d0\uc9c0",
     "reg_date": "2017-11-23",
     "vote_score": 2.0,
     "comment_cnt": 2,
@@ -67135,7 +67135,7 @@ export const mockProposals: PolicyProposal[] = [
   {
     "id": "PROP-179798",
     "title": "지하철의 노약자석과 임산부 배려석",
-    "content": "지하철의 노약자석과 임산부 배려석",
+    "content": "\uc9c0\ud558\ucca0\uc758 \ub178\uc57d\uc790\uc11d\uacfc \uc784\uc0b0\ubd80 \ubc30\ub824\uc11d",
     "reg_date": "2017-11-15",
     "vote_score": 2.0,
     "comment_cnt": 1,

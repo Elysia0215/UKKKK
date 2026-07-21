@@ -203,7 +203,7 @@ export const StatCharts: React.FC<StatChartsProps> = ({
       <div className="p-4 bg-slate-50 border-t border-slate-100 flex items-start gap-2.5">
         <HelpCircle className="w-4 h-4 text-indigo-500 flex-shrink-0 mt-0.5" />
         <div className="text-[11px] text-slate-600 leading-relaxed">
-          {selectedDistrict.name}은(는) 2024년 기준 합계출산율 <span className="font-semibold text-emerald-600">{selectedDistrict.fertilityRate.toFixed(3)}</span>, 연간 출생아수 <span className="font-semibold text-purple-600">{selectedDistrict.births2024.toLocaleString()}명</span>를 기록하고 있습니다. 어린이집은 현재 <span className="font-semibold text-amber-600">{selectedDistrict.daycare2025}개소</span>가 확보되어 있습니다.
+          {selectedDistrict.name}은(는) 2025년 기준 합계출산율 <span className="font-semibold text-emerald-600">{selectedDistrict.fertilityRate.toFixed(3)}</span>, 2025년 연간 출생아수 <span className="font-semibold text-purple-600">{selectedDistrict.births2024.toLocaleString()}명</span>를 기록하고 있습니다. 어린이집은 현재 <span className="font-semibold text-amber-600">{selectedDistrict.daycare2025}개소</span>가 확보되어 있습니다.
         </div>
       </div>
     </div>

@@ -65,7 +65,7 @@ export default function App() {
   }, []);
 
   const publicStats = useMemo(() => {
-    const totalProposals = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.proposals, 0);
+    const totalProposals = mockProposals.length;
     const totalBirths = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.births2024, 0);
     const totalDaycare = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.daycare2025, 0);
     const avgFertility = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.fertilityRate, 0) / SEOUL_DISTRICTS_DATA.length;
@@ -76,7 +76,7 @@ export default function App() {
       totalDaycare,
       avgFertility
     };
-  }, []);
+  }, [mockProposals]);
 
   // 탭 네비게이션 및 카테고리/지역 즉시 이동 연동
   const handleNavigateToTab = (tabIndex: number, category?: string) => {
@@ -383,8 +383,8 @@ export default function App() {
 
                       <div className="grid grid-cols-2 gap-2">
                         {[
-                          { id: 'fertility', label: '합계출산율' },
-                          { id: 'births', label: '출생아 수' },
+                          { id: 'fertility', label: '합계출산율 (2025년)' },
+                          { id: 'births', label: '출생아 수 (2025년)' },
                           { id: 'daycare', label: '보육시설 수' },
                           { id: 'demandScore', label: '정책 수요 점수' },
                         ].map((item) => (

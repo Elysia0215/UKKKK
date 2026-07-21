@@ -85,7 +85,7 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
         <div className="bg-slate-950 text-white px-5 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <div>
             <div className="text-[11px] uppercase text-slate-400 tracking-[0.32em] font-semibold">서울시 자치구 클릭형 지도</div>
-            <h2 className="mt-2 text-lg font-bold">{colorMetric === 'proposals' ? '시민 제안 건수' : colorMetric === 'births' ? '2024 출생아 수' : colorMetric === 'daycare' ? '2025 보육시설 수' : colorMetric === 'demandScore' ? '정책 수요 지수' : '합계출산율'} 기준</h2>
+            <h2 className="mt-2 text-lg font-bold">{colorMetric === 'proposals' ? '시민 제안 건수' : colorMetric === 'births' ? '2025년 출생아 수' : colorMetric === 'daycare' ? '2025년 보육시설 수' : colorMetric === 'demandScore' ? '정책 수요 지수' : '2025년 합계출산율'} 기준</h2>
           </div>
           <div className="text-right text-[11px] text-slate-400">
             <p>{selectedDistrict.name} 선택됨</p>
