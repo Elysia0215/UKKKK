@@ -88,11 +88,25 @@ export const CategoryDemand: React.FC<Props> = ({
       .slice(0, 5);
   }, [proposals]);
 
-  // 카테고리별 필터링된 제안들
+  // 카테고리별 및 5단계 딥 필터 연동 제안들
   const filteredProposals = useMemo(() => {
-    if (!selectedCategory) return proposals;
-    return proposals.filter(p => p.category === selectedCategory);
-  }, [proposals, selectedCategory]);
+    return proposals.filter(p => {
+      if (selectedCategory && p.category !== selectedCategory) return false;
+      if (filterState.year !== '전체년') {
+        if (filterState.year === '2026' && !p.reg_date?.startsWith('2026')) return false;
+        if (filterState.year === '2025' && !p.reg_date?.startsWith('2025')) return false;
+        if (filterState.year === '2024' && !p.reg_date?.startsWith('2024')) return false;
+        if (filterState.year === '2023' && !p.reg_date?.startsWith('2023')) return false;
+        if (filterState.year === '2022이전' && (!p.reg_date || p.reg_date >= '2023')) return false;
+      }
+      if (filterState.lifecycle !== '전체' && p.policy_flow !== filterState.lifecycle) return false;
+      if (filterState.category1 !== '전체' && p.category !== filterState.category1) return false;
+      if (filterState.category2 !== '전체' && p.sub_category !== filterState.category2) return false;
+      if (filterState.category3 !== '전체' && p.micro_category !== filterState.category3) return false;
+      if (filterState.department !== '전체' && (!p.department || !p.department.includes(filterState.department))) return false;
+      return true;
+    });
+  }, [proposals, selectedCategory, filterState]);
 
   // 현재 상세히 보기 위한 제안 정보
   const activeProposal = useMemo(() => {
