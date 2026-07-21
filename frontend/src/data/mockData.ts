@@ -1,7 +1,6 @@
 // 100% 출산·육아 정밀 데이터 426건 전용 mockData (몽땅정보 공식 URL https://umsa.seoul.go.kr/ 교정)
 import { PolicyProposal, DistrictStat, DashboardStats } from '../types';
-
-export type { PolicyProposal as Proposal };
+import type { CivilRequest } from '../types';
 
 export const SEOUL_DISTRICTS = [
   "종로구", "중구", "용산구", "성동구", "광진구", "동대문구", "중랑구", "성북구",
@@ -15,6 +14,36 @@ export const mockDashboardStats: DashboardStats = {
   "unansweredCount": 382,
   "unansweredRate": 89.7
 };
+
+export const mockCivilRequests: CivilRequest[] = [
+  {
+    id: '1',
+    title: '야간 긴급돌봄 어린이집 확충 요청',
+    content: '야간 돌봄 수요가 높은 지역에 어린이집과 돌봄 인력을 확대해 주세요.',
+    reg_date: '2026-07-20',
+    category: '보육',
+    dept: '돌봄사업팀',
+    url: 'https://www.epeople.go.kr/nep/pttn/gnrlPttn/pttnSgstnLst.npaid'
+  },
+  {
+    id: '2',
+    title: '난임 시술비 지원 소득 기준 완화',
+    content: '난임 치료 비용 부담을 줄이기 위해 지원 기준을 완화해 주세요.',
+    reg_date: '2026-07-21',
+    category: '임신',
+    dept: '건강임신지원팀',
+    url: 'https://www.epeople.go.kr/nep/pttn/gnrlPttn/pttnSgstnLst.npaid'
+  },
+  {
+    id: '3',
+    title: '다자녀 가구 주거 안정 지원 확대',
+    content: '다자녀 가구의 주거비 부담을 줄일 수 있도록 지원 대상을 확대해 주세요.',
+    reg_date: '2026-07-22',
+    category: '다자녀',
+    dept: '가족지원팀',
+    url: 'https://www.epeople.go.kr/nep/pttn/gnrlPttn/pttnSgstnLst.npaid'
+  }
+];
 
 export const districtStats: DistrictStat[] = [
   {
