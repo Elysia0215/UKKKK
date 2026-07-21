@@ -1,24 +1,21 @@
 # 서울시 출산·양육 정책 수요 분석 대시보드
 
-## 폴더 구조
-```
-class_pjt/
-├── docs/                    기획서, 데이터분석정의서, PRD
-├── data/
-│   ├── raw/                 4명 각자의 스크래핑 결과 (part_1~4.csv)
-│   ├── processed/           병합·분류 완료된 중간 산출물
-│   └── final/                React 앱에 넣을 최종 JSON
-├── scripts/                 데이터 수집·스크래핑·JSON변환 파이프라인
-│   ├── 01_collect_proposals.py
-│   ├── 02_scrape_details.py
-│   ├── 02b_merge_parts.py
-│   └── 04_build_dashboard_json.py
-├── 정책/                    정책분류·부서매칭 (프로젝트 핵심 로직)
-│   ├── category_keywords.py    정책분류 키워드 사전 (수정은 여기서)
-│   ├── department_keywords.py  담당부서 키워드 사전 (수정은 여기서)
-│   └── 03_classify.py          위 두 사전으로 실제 분류 실행
-├── frontend/                React 대시보드 (Google AI Studio 산출물)
-└── backend/                 (필요시) FastAPI
+## 폴더 구조 (상세 안내: [DIRECTORY_MAP.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/DIRECTORY_MAP.md))
+```text
+UKKKK/
+├── 📄 DIRECTORY_MAP.md                 # 🗺️ 직관적 디렉토리 & 데이터 전체 안내서
+├── 📄 README.md                        # 📘 프로젝트 개요 및 가이드
+├── 📂 docs/                            # 📄 프로젝트 기획서, 분석정의서, 로드맵 문서 모음
+├── 📂 data/                            # 📊 원천, 가공, DB, 백업 데이터 관리
+│   ├── 📂 raw/                         # 1️⃣ [원천] 통계청 / 서울시 공공데이터 수집 원본
+│   ├── 📂 mongttang/                    # 2️⃣ [DB] 몽땅정보통 323개 사업 & 서울시 조직도 DB
+│   ├── 📂 processed/                    # 3️⃣ [가공] 규칙 기반 필터링 및 확장 데이터셋
+│   │   ├── 📂 ver1_baseline/            # 🎯 [Ver1] 1차 기준 결과물 (704건 기준)
+│   │   └── 📂 ver2_expanded/            # 🚀 [Ver2] 2차 확장 및 웹 크롤링 결과물 (824건 & 팀검증용 137건)
+│   └── 📂 archive/                      # 4️⃣ [백업] 과거 압축 백업 파일
+├── 📂 scripts/                         # 🐍 파이썬 2단계 수집, 정제, 분류, 매칭 파이프라인
+├── 📂 frontend/                        # 💻 React + Vite 대시보드 웹 애플리케이션
+└── 📂 backend/                         # ⚙️ 백엔드 서비스
 ```
 
 ## 🐍 Poetry 가상환경 설정 (팀원 공통 개발 환경)

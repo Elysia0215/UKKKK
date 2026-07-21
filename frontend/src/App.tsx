@@ -167,7 +167,8 @@ export default function App() {
           <nav className="flex space-x-2 overflow-x-auto" aria-label="Tabs">
             <button
               onClick={() => handleTabClick(0)}
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
+              title="서울시 출산·육아 시민 제안 전체 현황 및 연도별 민원 트렌드 종합 개요"
+              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
                 activeTab === 0
                   ? 'bg-[#0A2351] text-white border-[#0A2351]'
                   : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
@@ -179,7 +180,8 @@ export default function App() {
 
             <button
               onClick={() => handleTabClick(1)}
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
+              title="25개 자치구별 시민 제안 수량 및 출생아·보육시설 인프라 비교 지도 분석"
+              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
                 activeTab === 1
                   ? 'bg-[#0A2351] text-white border-[#0A2351]'
                   : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
@@ -194,7 +196,8 @@ export default function App() {
 
             <button
               onClick={() => handleTabClick(2)}
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
+              title="TOP 30 최신 핵심 키워드 태그 클라우드 및 생애주기별 민원 수요 강도 분석"
+              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
                 activeTab === 2
                   ? 'bg-[#0A2351] text-white border-[#0A2351]'
                   : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
@@ -206,7 +209,8 @@ export default function App() {
 
             <button
               onClick={() => handleTabClick(3)}
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
+              title="150표 이상 시민 공감을 얻었으나 서울시 공식 답변이 완료되지 않은 긴급 정책 공백 제안 총 4건 검토 및 일괄 답변 처리"
+              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
                 activeTab === 3
                   ? 'bg-[#0A2351] text-white border-[#0A2351]'
                   : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
@@ -214,14 +218,18 @@ export default function App() {
             >
               <AlertOctagon className="w-4 h-4 text-rose-500" />
               정책 우선순위 상세
-              <span className="bg-rose-100 text-rose-700 text-[10px] font-black px-2 py-0.5 rounded-full ml-1 flex items-center gap-0.5">
+              <span 
+                title="150표 이상 공감 및 서울시 미답변 긴급 검토 제안 총 4건"
+                className="bg-rose-100 text-rose-700 text-[10px] font-black px-2 py-0.5 rounded-full ml-1 flex items-center gap-0.5 shadow-2xs"
+              >
                 <span>공백 {mockProposals.filter(p => p.reply_yn === 'N' && p.vote_score >= 150).length}건</span>
               </span>
             </button>
 
             <button
               onClick={() => handleTabClick(4)}
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
+              title="몽땅정보 만능키에 등록된 서울시 323개 공식 출산·보육 사업 검색 및 대조"
+              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
                 activeTab === 4
                   ? 'bg-[#0A2351] text-white border-[#0A2351]'
                   : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
@@ -229,14 +237,18 @@ export default function App() {
             >
               <Building2 className="w-4 h-4 text-blue-500" />
               서울시 현행 정책 (몽땅정보 323건)
-              <span className="bg-blue-100 text-blue-800 text-[10px] font-black px-1.5 py-0.2 rounded-full ml-0.5">
+              <span 
+                title="서울시 몽땅정보 공식 등록 총 323개 사업"
+                className="bg-blue-100 text-blue-800 text-[10px] font-black px-1.5 py-0.2 rounded-full ml-0.5"
+              >
                 323
               </span>
             </button>
 
             <button
               onClick={() => handleTabClick(5)}
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
+              title="BERT Embedding 기반 유사 제안 군집 볼록(Voronoi/3D) 클러스터 시각화 지도"
+              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
                 activeTab === 5
                   ? 'bg-[#0A2351] text-white border-[#0A2351]'
                   : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
@@ -248,7 +260,8 @@ export default function App() {
 
             <button
               onClick={() => handleTabClick(6)}
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
+              title="KOSIS/KSTAT 서울시 출생아 수, 합계출산율(TFR), 보육시설 통계 지표 분석"
+              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
                 activeTab === 6
                   ? 'bg-[#0A2351] text-white border-[#0A2351]'
                   : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'

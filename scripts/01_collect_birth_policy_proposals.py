@@ -17,9 +17,10 @@ from typing import Dict, List, Tuple
 
 BASE_DIR = Path('/Users/parkcy/Desktop/sesac_pjt/UKKKK')
 RAW_CSV_PATH = BASE_DIR / 'data' / 'processed' / '상상대로_서울_전체_최신.csv'
-RESULT_CSV = BASE_DIR / 'data' / 'processed' / '상상대로_출산양육관련_수집결과.csv'
-RESULT_XLSX = BASE_DIR / 'data' / 'processed' / '상상대로_출산양육관련_수집결과.xlsx'
-EXCLUDE_LOG_CSV = BASE_DIR / 'data' / 'processed' / '상상대로_출산양육관련_제외로그.csv'
+VER2_DIR = BASE_DIR / 'data' / 'processed' / 'ver2_expanded'
+RESULT_CSV = VER2_DIR / '상상대로_출산양육관련_수집결과_ver2.csv'
+RESULT_XLSX = VER2_DIR / '상상대로_출산양육관련_수집결과_ver2.xlsx'
+EXCLUDE_LOG_CSV = VER2_DIR / '상상대로_출산양육관련_제외로그_ver2.csv'
 
 # 1단계: 기존 직접 출산·양육 키워드
 CORE_DIRECT_KEYWORDS = [
