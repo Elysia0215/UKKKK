@@ -3,6 +3,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+export interface CivilRequest {
+  id: string;
+  title: string;
+  content: string;
+  reg_date: string;
+  category: string;
+  dept: string;
+  url: string;
+}
+
 export type PolicyCategory = 
   | '임신·난임·생식건강'
   | '출산·산후 초기지원'

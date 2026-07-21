@@ -8,8 +8,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { MapPin, ThumbsUp, MessageSquare, HelpCircle, CheckCircle, ArrowUpDown, ExternalLink, Download } from 'lucide-react';
 import { PolicyProposal } from '../types';
 import { SEOUL_DISTRICTS } from '../data/mockData';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, ComposedChart, Line, Legend } from 'recharts';
 import { districtStats } from '../data/mockData';
+import { districtMapLayout } from '../data/seoul_districts_geo';
 import { exportToCsv } from '../utils/exportCsv';
 
 interface Props {
@@ -18,12 +18,16 @@ interface Props {
   onSelectDistrict: (district: string | null) => void;
 }
 
+
+
 export const DistrictComparison: React.FC<Props> = ({
   proposals,
   selectedDistrict,
   onSelectDistrict
 }) => {
   const [sortOrder, setSortOrder] = useState<'desc' | 'asc'>('desc');
+  const [civilModalOpen, setCivilModalOpen] = useState(false);
+  const [civilCategory, setCivilCategory] = useState('전체');
 
   const handleExportDistrictStats = () => {
     const exportData = districtStats.map(d => ({
@@ -35,7 +39,6 @@ export const DistrictComparison: React.FC<Props> = ({
     exportToCsv(`서울시_25개자치구_출생_보육통계_${new Date().toISOString().split('T')[0]}.csv`, exportData);
   };
 
-  // 자치구별 데이터 계산
   const districtData = useMemo(() => {
     const counts = SEOUL_DISTRICTS.reduce((acc, dist) => {
       acc[dist] = { count: 0, avgVote: 0, totalVote: 0 };
@@ -55,32 +58,67 @@ export const DistrictComparison: React.FC<Props> = ({
         count: stats.count,
         avgVote: stats.count > 0 ? Math.round(stats.totalVote / stats.count) : 0
       }))
-      .filter(item => item.count > 0 || selectedDistrict === item.name) // 제안이 있는 구만 우선 보거나 전체 출력
-      .sort((a, b) => {
-        return sortOrder === 'desc' ? b.count - a.count : a.count - b.count;
-      });
+      .filter(item => item.count > 0 || selectedDistrict === item.name)
+      .sort((a, b) => (sortOrder === 'desc' ? b.count - a.count : a.count - b.count));
   }, [proposals, sortOrder, selectedDistrict]);
 
-  // 자치구별 제안 건수 + 공공데이터(실제 출생아수) 결합 - 수요-공급 갭 비교용
-  const districtGapData = useMemo(() => {
-    const proposalCounts = SEOUL_DISTRICTS.reduce((acc, dist) => {
-      acc[dist] = 0;
-      return acc;
-    }, {} as Record<string, number>);
-    proposals.forEach(prop => {
-      if (proposalCounts[prop.district] !== undefined) {
-        proposalCounts[prop.district] += 1;
-      }
+  const districtMapData = useMemo(() => {
+    const maxCount = Math.max(...districtData.map(item => item.count), 1);
+
+    return districtMapLayout.map(item => {
+      const districtEntry = districtData.find(entry => entry.name === item.name) ?? { name: item.name, count: 0, avgVote: 0 };
+      const stat = districtStats.find(entry => entry.district === item.name);
+      const isSelected = selectedDistrict === item.name;
+      const normalized = districtEntry.count / maxCount;
+      const fill = isSelected
+        ? '#ef4444'
+        : districtEntry.count > 0
+          ? `rgba(14, 116, 144, ${0.22 + normalized * 0.58})`
+          : '#f1f5f9';
+
+      return {
+        ...item,
+        count: districtEntry.count,
+        avgVote: districtEntry.avgVote,
+        births: stat?.births_total ?? 0,
+        childcare: stat?.childcare_facility_count ?? 0,
+        fill,
+      };
     });
+  }, [districtData, selectedDistrict]);
 
-    return districtStats.map(stat => ({
-      name: stat.district,
-      proposalCount: proposalCounts[stat.district] || 0,
-      births: stat.births_total ?? 0,
-      childcare: stat.childcare_facility_count ?? 0,
-    }));
-  }, [proposals]);
+  // Adjust label positions to reduce simple overlaps (naive vertical shift)
+  const adjustedDistrictMapData = useMemo(() => {
+    const items = districtMapData.map(i => ({ ...i, labelX: (i as any).labelX ?? 0, labelY: (i as any).labelY ?? 0 }));
+    const placed: Array<{ x: number; y: number; w: number; h: number }> = [];
+    const approxCharWidth = 6; // px per character, rough
+    items.forEach(item => {
+      const text = item.name + (item.count > 0 ? ` ${item.count}건` : '');
+      const w = Math.min(120, Math.max(40, text.length * approxCharWidth));
+      const h = 14;
+      let x = item.labelX - Math.floor(w / 2);
+      let y = item.labelY - Math.floor(h / 2);
 
+      // shift down until no overlap or max attempts
+      let attempts = 0;
+      const maxAttempts = 10;
+      while (attempts < maxAttempts) {
+        const overlap = placed.some(r => {
+          return !(x + w < r.x || x > r.x + r.w || y + h < r.y || y > r.y + r.h);
+        });
+        if (!overlap) break;
+        y += h + 2;
+        attempts += 1;
+      }
+      placed.push({ x, y, w, h });
+      item._labelX = x + Math.floor(w / 2);
+      item._labelY = y + Math.floor(h / 2);
+    });
+    return items;
+  }, [districtMapData]);
+
+  const selectedDistrictDetail = districtData.find(item => item.name === selectedDistrict);
+  const selectedDistrictStat = districtStats.find(stat => stat.district === selectedDistrict);
 
   const filteredProposals = useMemo(() => {
     if (!selectedDistrict) return [];
@@ -89,54 +127,15 @@ export const DistrictComparison: React.FC<Props> = ({
 
   return (
     <div className="space-y-6">
-      {/* 공공데이터 결합: 제안건수 vs 실제 출생아수·보육시설 */}
       <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-sm transition">
         <div className="mb-4 pb-4 border-b border-slate-200/80 flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
               <MapPin className="text-emerald-600 w-5 h-5" />
-              자치구별 시민제안 vs 공공데이터(실제 출생아수·보육시설)
+              서울시 자치구 지도에서 제안 분포를 바로 확인하세요
             </h4>
             <p className="text-xs text-slate-500 mt-1">
-              서울 열린데이터광장 통계(2024~2025)와 시민제안 건수를 함께 비교해 수요-공급 격차를 확인합니다.
-            </p>
-          </div>
-          <button
-            onClick={handleExportDistrictStats}
-            className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg transition shrink-0 cursor-pointer shadow-xs"
-            title="25개 자치구별 출생 및 보육 통계 CSV 다운로드"
-          >
-            <Download className="w-3.5 h-3.5" /> 25개 자치구 통계 CSV 다운로드
-          </button>
-        </div>
-        <div className="h-[300px] w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <ComposedChart data={districtGapData} margin={{ top: 10, right: 10, left: -15, bottom: 5 }}>
-              <XAxis dataKey="name" tick={{ fontSize: 9, fontWeight: 'bold' }} interval={0} angle={-35} textAnchor="end" height={60} />
-              <YAxis yAxisId="left" tick={{ fontSize: 10 }} label={{ value: '제안 건수', angle: -90, position: 'insideLeft', style: { fontSize: 10, fill: '#0A2351', fontWeight: 'bold' } }} allowDecimals={false} />
-              <YAxis yAxisId="right" orientation="right" tick={{ fontSize: 10 }} label={{ value: '실제 출생아수 (명)', angle: 90, position: 'insideRight', style: { fontSize: 10, fill: '#059669', fontWeight: 'bold' } }} />
-              <Tooltip contentStyle={{ borderRadius: '6px', fontSize: '11px', fontWeight: 'bold' }} />
-              <Legend wrapperStyle={{ fontSize: '11px' }} />
-              <Bar yAxisId="left" dataKey="proposalCount" name="시민제안 건수" fill="#0A2351" radius={[4, 4, 0, 0]} />
-              <Line yAxisId="right" type="monotone" dataKey="births" name="실제 출생아수(2024)" stroke="#059669" strokeWidth={3} dot={{ r: 4, fill: '#059669' }} />
-            </ComposedChart>
-          </ResponsiveContainer>
-        </div>
-        <p className="text-[11px] text-slate-400 italic font-semibold mt-2 text-center">
-          * 시민제안은 267건 중 지역 명시분(45건, 16.9%)만 반영되어 표본이 제한적입니다. 공공데이터(출생아수 등)는 자치구 전수 통계입니다.
-        </p>
-      </div>
-
-      {/* 자치구별 제안수 막대그래프 */}
-      <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-sm transition">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 pb-4 border-b border-slate-200/80 gap-4">
-          <div>
-            <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-              <MapPin className="text-red-600 w-5 h-5" />
-              서울시 자치구별 제안 통계
-            </h4>
-            <p className="text-xs text-slate-500 mt-1">
-              막대바를 클릭하거나 아래 버튼을 통해 자치구별 상세 제안을 확인할 수 있습니다.
+              지도를 클릭하면 해당 자치구의 시민제안 건수와 공공데이터 기반 통계를 바로 확인할 수 있습니다.
             </p>
           </div>
           <div className="flex items-center gap-2">
@@ -147,52 +146,124 @@ export const DistrictComparison: React.FC<Props> = ({
               <ArrowUpDown className="w-3.5 h-3.5" />
               {sortOrder === 'desc' ? '건수 높은 순' : '건수 낮은 순'}
             </button>
-            {selectedDistrict && (
-              <button
-                onClick={() => onSelectDistrict(null)}
-                className="text-xs bg-red-50 text-red-600 border border-red-200 px-3 py-1.5 rounded-lg font-bold hover:bg-red-100 transition"
-              >
-                필터 초기화
-              </button>
-            )}
+            <button
+              onClick={handleExportDistrictStats}
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg transition shrink-0 cursor-pointer shadow-xs"
+              title="25개 자치구별 출생 및 보육 통계 CSV 다운로드"
+            >
+              <Download className="w-3.5 h-3.5" /> 통계 CSV
+            </button>
+            {/* 배경 이미지 오버레이 토글 제거 - 배경 보기 기능 비활성화 요청에 따른 삭제 */}
           </div>
         </div>
 
-        <div className="h-[280px] w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart 
-              data={districtData} 
-              margin={{ top: 10, right: 10, left: -25, bottom: 5 }}
-              onClick={(state) => {
-                if (state && state.activeLabel) {
-                  onSelectDistrict(state.activeLabel as string);
-                }
-              }}
-            >
-              <XAxis dataKey="name" tick={{ fontSize: 10, fontWeight: 'bold' }} />
-              <YAxis tick={{ fontSize: 10 }} allowDecimals={false} />
-              <Tooltip
-                contentStyle={{ borderRadius: '6px', fontSize: '11px', fontWeight: 'bold' }}
-                formatter={(value) => [`${value}건`, '제안 수']}
+        <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="rounded-2xl border border-slate-200 bg-slate-50/70 p-4">
+            <svg viewBox="0 0 560 380" className="w-full h-[340px]">
+              <rect x="12" y="12" width="536" height="356" rx="24" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="2" />
+              <text x="28" y="38" fontSize="13" fontWeight="700" fill="#0f172a">서울 자치구 제안 분포 지도</text>
+              <text x="28" y="56" fontSize="11" fill="#64748b">색이 진할수록 제안 건수가 많습니다.</text>
+
+              <path
+                d="M 104 88 L 176 72 L 230 78 L 286 100 L 332 90 L 404 96 L 456 116 L 492 150 L 488 214 L 446 250 L 392 272 L 336 284 L 286 268 L 232 258 L 176 248 L 126 224 L 98 184 L 104 138 Z"
+                fill="#f8fafc"
+                stroke="#94a3b8"
+                strokeWidth="2"
+                opacity="0.95"
               />
-              <Bar dataKey="count" fill="#93c5fd" radius={[4, 4, 0, 0]} cursor="pointer">
-                {districtData.map((entry, index) => (
-                  <Cell 
-                    key={`cell-${index}`} 
-                    fill={entry.name === selectedDistrict ? '#ef4444' : '#0A2351'} 
-                    className="hover:opacity-85 transition-opacity"
+              <path
+                d="M 122 118 L 176 112 L 206 136 L 196 168 L 144 176 L 118 148 Z"
+                fill="#eef2ff"
+                stroke="#cbd5e1"
+                strokeWidth="1.2"
+                opacity="0.8"
+              />
+              <path
+                d="M 318 112 L 376 108 L 410 132 L 396 166 L 338 170 L 314 140 Z"
+                fill="#f8fafc"
+                stroke="#cbd5e1"
+                strokeWidth="1.2"
+                opacity="0.8"
+              />
+              {/* 배경 오버레이 제거: 이미지는 더 이상 렌더링되지 않습니다. */}
+              {adjustedDistrictMapData.map(item => (
+                <g
+                  key={item.name}
+                  onClick={() => onSelectDistrict(item.name)}
+                  onKeyDown={(event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault();
+                      onSelectDistrict(item.name);
+                    }
+                  }}
+                  tabIndex={0}
+                  role="button"
+                  className="cursor-pointer outline-none"
+                >
+                  <path
+                    d={item.d}
+                    fill={item.fill}
+                    stroke={selectedDistrict === item.name ? '#dc2626' : '#64748b'}
+                    strokeWidth={selectedDistrict === item.name ? 3 : 1.2}
                   />
+                  <text x={item._labelX ?? item.labelX} y={item._labelY ?? item.labelY} fontSize="10" fontWeight="700" fill="#0f172a">
+                    {item.name}
+                  </text>
+                  <text x={item._labelX ?? item.labelX} y={(item._labelY ?? item.labelY) + 14} fontSize="9" fill={item.count > 0 ? '#0f766e' : '#64748b'}>
+                    {item.count > 0 ? `${item.count}건` : '데이터 없음'}
+                  </text>
+                </g>
+              ))}
+            </svg>
+          </div>
+
+          <div className="space-y-3">
+            <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4">
+              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">선택된 자치구</p>
+              <h5 className="mt-2 text-base font-bold text-slate-900">
+                {selectedDistrict || '클릭해서 자치구를 선택하세요'}
+              </h5>
+              {selectedDistrict ? (
+                <div className="mt-3 space-y-2 text-sm text-slate-600">
+                  <div className="flex items-center justify-between rounded-lg bg-white px-3 py-2 border border-slate-200">
+                    <span>제안 건수</span>
+                    <span className="font-bold text-slate-900">{selectedDistrictDetail?.count ?? 0}건</span>
+                  </div>
+                  <div className="flex items-center justify-between rounded-lg bg-white px-3 py-2 border border-slate-200">
+                    <span>출생아수(2024)</span>
+                    <span className="font-bold text-slate-900">{selectedDistrictStat?.births_total?.toLocaleString() ?? 'N/A'}명</span>
+                  </div>
+                  <div className="flex items-center justify-between rounded-lg bg-white px-3 py-2 border border-slate-200">
+                    <span>보육시설수(2025)</span>
+                    <span className="font-bold text-slate-900">{selectedDistrictStat?.childcare_facility_count?.toLocaleString() ?? 'N/A'}개</span>
+                  </div>
+                </div>
+              ) : (
+                <p className="mt-3 text-sm text-slate-500">
+                  지도에서 자치구를 선택하면 제안 수, 출생아수, 보육시설수 요약이 여기에 표시됩니다.
+                </p>
+              )}
+            </div>
+            <div className="rounded-xl border border-slate-200 bg-white p-4">
+              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-slate-500">빠른 선택</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {districtMapData.filter(item => item.count > 0).slice(0, 8).map(item => (
+                  <button
+                    key={item.name}
+                    onClick={() => onSelectDistrict(item.name)}
+                    className={`rounded-full border px-2.5 py-1 text-[11px] font-semibold transition ${selectedDistrict === item.name ? 'border-red-500 bg-red-50 text-red-700' : 'border-slate-200 text-slate-700 hover:bg-slate-50'}`}
+                  >
+                    {item.name}
+                  </button>
                 ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div className="text-center mt-2">
-          <p className="text-[11px] text-slate-400 italic font-semibold">
-            * 차트 막대를 클릭하면 해당 자치구 제안 목록으로 바로 점프합니다. (현재 선택: <span className="text-rose-600 font-bold">{selectedDistrict || '없음'}</span>)
-          </p>
-        </div>
+
+        <p className="mt-4 text-[11px] text-slate-400 italic font-semibold">
+          * 지도 구역을 클릭하면 해당 자치구의 시민 제안 목록이 바로 아래에 표시됩니다. 색이 진할수록 제안 건수가 많습니다.
+        </p>
       </div>
 
       {/* 25개 자치구 퀵 필터 그리드 */}
