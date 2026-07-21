@@ -5,7 +5,18 @@
 
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MapPin, ThumbsUp, MessageSquare, HelpCircle, CheckCircle, ArrowUpDown, ExternalLink, Download } from 'lucide-react';
+import { MapPin, ThumbsUp, MessageSquare, HelpCircle, CheckCircle, ArrowUpDown, ExternalLink, Download, BarChart3 } from 'lucide-react';
+import {
+  ResponsiveContainer,
+  ComposedChart,
+  Bar,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+  CartesianGrid
+} from 'recharts';
 import { PolicyProposal } from '../types';
 import { SEOUL_DISTRICTS } from '../data/mockData';
 import { districtStats } from '../data/mockData';
@@ -94,6 +105,21 @@ export const DistrictComparison: React.FC<Props> = ({
 
   const selectedDistrictDetail = districtData.find(item => item.name === selectedDistrict);
   const selectedDistrictStat = districtStats.find(stat => stat.district === selectedDistrict);
+
+  // 25개 자치구 제안 수량 vs 출생아수 & 보육시설수 비교 차트 데이터
+  const districtChartData = useMemo(() => {
+    return SEOUL_DISTRICTS.map(dist => {
+      const propCount = proposals.filter(p => p.district === dist).length;
+      const stat = districtStats.find(s => s.district === dist);
+      return {
+        district: dist,
+        '시민 제안수': propCount,
+        '출생아수(명)': stat?.births_total ?? 0,
+        '보육시설수(개)': stat?.childcare_facility_count ?? 0,
+        '합계출산율': stat?.tfr ?? stat?.fertility_rate ?? 0
+      };
+    }).sort((a, b) => (sortOrder === 'desc' ? b['시민 제안수'] - a['시민 제안수'] : a['시민 제안수'] - b['시민 제안수']));
+  }, [proposals, sortOrder]);
 
   const filteredProposals = useMemo(() => {
     if (!selectedDistrict) return [];
@@ -249,6 +275,39 @@ export const DistrictComparison: React.FC<Props> = ({
         <p className="mt-4 text-[11px] text-slate-400 italic font-semibold">
           * 지도 구역을 클릭하면 해당 자치구의 시민 제안 목록이 바로 아래에 표시됩니다. 색이 진할수록 제안 건수가 많습니다.
         </p>
+      </div>
+
+      {/* 25개 자치구 시민 제안수 vs 출생아수 & 보육시설수 이중축 분석 차트 */}
+      <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-200/80">
+          <div>
+            <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <BarChart3 className="text-blue-600 w-5 h-5" />
+              자치구별 시민 제안 수요 vs 공공 출생·보육 인프라 지표 비교 분석
+            </h4>
+            <p className="text-xs text-slate-500 mt-0.5">
+              막대 그래프(좌측 축: 시민 제안 수량)와 꺾은선 그래프(우측 축: 총 출생아 수 / 보육시설 수)를 통해 지역별 정책 사각지대 및 인프라 매칭 상태를 종합 검토할 수 있습니다.
+            </p>
+          </div>
+        </div>
+
+        <div className="h-[280px] w-full pt-2">
+          <ResponsiveContainer width="100%" height="100%">
+            <ComposedChart data={districtChartData} margin={{ top: 10, right: 30, left: 0, bottom: 20 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+              <XAxis dataKey="district" tick={{ fontSize: 11, fill: '#64748b' }} interval={0} angle={-25} textAnchor="end" />
+              <YAxis yAxisId="left" orientation="left" stroke="#2563eb" tick={{ fontSize: 11 }} label={{ value: '제안수(건)', angle: -90, position: 'insideLeft', fontSize: 10 }} />
+              <YAxis yAxisId="right" orientation="right" stroke="#e11d48" tick={{ fontSize: 11 }} label={{ value: '출생아수(명) / 보육시설(개)', angle: 90, position: 'insideRight', fontSize: 10 }} />
+              <Tooltip
+                contentStyle={{ backgroundColor: '#ffffff', borderRadius: '12px', border: '1px solid #e2e8f0', fontSize: '12px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }}
+              />
+              <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }} />
+              <Bar yAxisId="left" dataKey="시민 제안수" fill="#3b82f6" radius={[4, 4, 0, 0]} barSize={18} />
+              <Line yAxisId="right" type="monotone" dataKey="출생아수(명)" stroke="#e11d48" strokeWidth={2.5} dot={{ r: 3 }} />
+              <Line yAxisId="right" type="monotone" dataKey="보육시설수(개)" stroke="#10b981" strokeWidth={2} strokeDasharray="4 4" dot={{ r: 2 }} />
+            </ComposedChart>
+          </ResponsiveContainer>
+        </div>
       </div>
 
       {/* 25개 자치구 퀵 필터 그리드 */}
