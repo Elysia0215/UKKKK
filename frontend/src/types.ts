@@ -73,6 +73,8 @@ export interface MongttangPolicy {
   biz_lclsf_nm: string;
   biz_mclsf_nm?: string;
   biz_sclsf_nm?: string;
+  displayCategory?: string;
+  displaySubCategory?: string;
   biz_cn: string;
   utztn_trpr_cn?: string | null;
   utztn_mthd_cn?: string | null;
