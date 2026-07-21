@@ -7,6 +7,8 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Line, ComposedChart } from 'recharts';
 import { PolicyCategory, PolicyProposal } from '../types';
+import { extractTopKeywords } from '../data/mockData';
+import { KeywordDetailModal } from './KeywordDetailModal';
 import { 
   BarChart3, 
   ThumbsUp, 
@@ -17,7 +19,8 @@ import {
   Building2, 
   MessageSquare,
   Sparkles,
-  ExternalLink
+  ExternalLink,
+  Tag
 } from 'lucide-react';
 
 interface Props {
@@ -32,30 +35,28 @@ export const CategoryDemand: React.FC<Props> = ({
   onSelectCategory
 }) => {
   const [selectedProposalId, setSelectedProposalId] = useState<string | null>(null);
+  const [selectedKeywordModal, setSelectedKeywordModal] = useState<string | null>(null);
 
-  // 카테고리별 통계 데이터 가공
+  const topKeywords30 = useMemo(() => extractTopKeywords(proposals, 30), [proposals]);
+
+  // 카테고리별 통계 데이터 가공 (8개 생애주기 대분류 동적 수집)
   const categoryChartData = useMemo(() => {
-    const stats: Record<string, { count: number; totalVote: number }> = {
-      '임신': { count: 0, totalVote: 0 },
-      '출산': { count: 0, totalVote: 0 },
-      '보육': { count: 0, totalVote: 0 },
-      '다자녀': { count: 0, totalVote: 0 },
-      '위기임산부': { count: 0, totalVote: 0 },
-      '다문화': { count: 0, totalVote: 0 },
-    };
+    const stats: Record<string, { count: number; totalVote: number }> = {};
 
     proposals.forEach(p => {
-      if (stats[p.category]) {
-        stats[p.category].count += 1;
-        stats[p.category].totalVote += p.vote_score;
+      const cat = p.category || '기타';
+      if (!stats[cat]) {
+        stats[cat] = { count: 0, totalVote: 0 };
       }
+      stats[cat].count += 1;
+      stats[cat].totalVote += p.vote_score;
     });
 
     return Object.entries(stats).map(([name, val]) => ({
       name,
       count: val.count,
       avgVote: val.count > 0 ? Math.round(val.totalVote / val.count) : 0
-    }));
+    })).sort((a, b) => b.count - a.count);
   }, [proposals]);
 
   // 공감수 최고순 제안 5건
@@ -79,6 +80,38 @@ export const CategoryDemand: React.FC<Props> = ({
 
   return (
     <div className="space-y-6">
+      {/* 전체 출산·육아 핵심 키워드 태그 클라우드 (TOP 30 대형 뷰) */}
+      <div className="bg-gradient-to-r from-slate-900 to-[#0A2351] text-white p-6 rounded-2xl shadow-md space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-3">
+          <div className="flex items-center gap-2">
+            <Tag className="w-5 h-5 text-yellow-400" />
+            <h3 className="text-base font-black">전체 정책 키워드 태그 탐색기 (TOP 30 대형 뷰)</h3>
+          </div>
+          <span className="text-xs text-blue-200 font-mono">태그 클릭 시 426건 중 관련 제안 원문 팝업</span>
+        </div>
+        <div className="flex flex-wrap gap-2 pt-1">
+          {topKeywords30.map((item, idx) => (
+            <button
+              key={item.keyword}
+              onClick={() => setSelectedKeywordModal(item.keyword)}
+              className={`text-xs px-3 py-1.5 rounded-full font-extrabold border transition-all cursor-pointer flex items-center gap-1.5 ${
+                idx < 5
+                  ? 'bg-rose-500 hover:bg-rose-600 text-white border-rose-400 shadow-sm hover:scale-105'
+                  : idx < 15
+                  ? 'bg-blue-600/80 hover:bg-blue-600 text-white border-blue-400 hover:scale-105'
+                  : 'bg-white/10 hover:bg-white/20 text-blue-100 border-white/20 hover:scale-105'
+              }`}
+              title={`'${item.keyword}' 관련 본문 총 ${item.count}회 등장 (클릭하여 연관 제안 원문 보기)`}
+            >
+              <span>#{item.keyword}</span>
+              <span className="text-[10px] bg-black/30 px-1.5 py-0.2 rounded-full font-mono font-normal">
+                {item.count}회
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* 2축 복합 분석 그래프 */}
       <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-sm transition">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 pb-4 border-b border-slate-200/80 gap-2">
@@ -301,6 +334,13 @@ export const CategoryDemand: React.FC<Props> = ({
           </AnimatePresence>
         </div>
       </div>
+
+      <KeywordDetailModal
+        isOpen={!!selectedKeywordModal}
+        keyword={selectedKeywordModal}
+        proposals={proposals}
+        onClose={() => setSelectedKeywordModal(null)}
+      />
     </div>
   );
 };
