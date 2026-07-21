@@ -1,6 +1,7 @@
 import React, { useMemo, useState, useEffect } from 'react';
 import { DistrictData, SEOUL_DISTRICTS_DATA } from '../data/seoulData';
-import { ChevronRight, MapPin } from 'lucide-react';
+import { districtMapLayout } from '../data/seoul_districts_geo';
+import { MapPin } from 'lucide-react';
 
 interface Props {
   selectedDistrict: DistrictData;
@@ -33,6 +34,16 @@ const getMetricValue = (district: DistrictData, metric: Props['colorMetric']) =>
     default:
       return 0;
   }
+};
+
+const formatMetricValue = (district: DistrictData, metric: Props['colorMetric']) => {
+  const value = getMetricValue(district, metric);
+
+  if (metric === 'fertility') return district.fertilityRate.toFixed(3);
+  if (metric === 'demandScore') return `${value}점`;
+  if (metric === 'proposals') return `${value}건`;
+  if (metric === 'births') return `${value.toLocaleString()}명`;
+  return `${value.toLocaleString()}개소`;
 };
 
 export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, colorMetric, showBackground, sortBy }) => {
@@ -82,58 +93,87 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
           </div>
         </div>
 
-        <svg viewBox="0 0 520 420" className="w-full h-[420px] bg-slate-50" role="img" aria-label="서울시 자치구 지도">
+        <svg viewBox="0 0 800 550" className="w-full h-[500px] bg-slate-50" role="img" aria-label="서울시 자치구 실제 행정구역 지도">
           {showBackground && (
-            <g opacity="0.18">
-              <rect x="8" y="8" width="504" height="404" rx="30" fill="#0f172a" />
-              <g stroke="#cbd5e1" strokeWidth="1" strokeDasharray="4 4">
-                <line x1="40" y1="50" x2="480" y2="50" />
-                <line x1="40" y1="130" x2="480" y2="130" />
-                <line x1="40" y1="210" x2="480" y2="210" />
-                <line x1="40" y1="290" x2="480" y2="290" />
-                <line x1="40" y1="370" x2="480" y2="370" />
+            <g opacity="0.28">
+              <rect x="24" y="24" width="752" height="502" rx="30" fill="#e2e8f0" />
+              <g stroke="#ffffff" strokeWidth="1.4" strokeDasharray="6 7">
+                <line x1="80" y1="110" x2="720" y2="110" />
+                <line x1="80" y1="220" x2="720" y2="220" />
+                <line x1="80" y1="330" x2="720" y2="330" />
+                <line x1="80" y1="440" x2="720" y2="440" />
               </g>
             </g>
           )}
 
-          <rect x="20" y="20" width="480" height="380" rx="24" fill="transparent" stroke="#cbd5e1" strokeWidth="1.5" />
-          <text x="34" y="42" fontSize="12" fontWeight="700" fill="#0f172a">서울 자치구 맞춤형 정책 지표 맵</text>
-          <text x="34" y="58" fontSize="10" fill="#475569">한강은 제외하고 자치구 영역에 집중한 시각화입니다.</text>
+          <defs>
+            <filter id="publicMapShadow" x="-10%" y="-10%" width="120%" height="120%">
+              <feDropShadow dx="0" dy="3" stdDeviation="4" floodOpacity="0.16" />
+            </filter>
+          </defs>
 
-          {SEOUL_DISTRICTS_DATA.map((district) => {
-            const isSelected = district.name === selectedDistrict.name;
+          {districtMapLayout.map((boundary) => {
+            const district = SEOUL_DISTRICTS_DATA.find((item) => item.name === boundary.name);
+            const isSelected = boundary.name === selectedDistrict.name;
+            const fill = district ? getFill(district) : '#f8fafc';
+            const metricText = district ? formatMetricValue(district, colorMetric) : 'N/A';
+
             return (
               <g
-                key={district.name}
+                key={boundary.name}
                 className="cursor-pointer"
                 tabIndex={0}
                 role="button"
-                onClick={() => onSelectDistrict(district)}
+                onClick={() => district && onSelectDistrict(district)}
                 onKeyDown={(event) => {
-                  if (event.key === 'Enter' || event.key === ' ') {
+                  if (district && (event.key === 'Enter' || event.key === ' ')) {
                     event.preventDefault();
                     onSelectDistrict(district);
                   }
                 }}
                 onMouseEnter={(event) => {
+                  if (!district) return;
                   const rect = (event.currentTarget as SVGGElement).getBoundingClientRect();
                   setTooltip({
                     x: rect.right + 12,
                     y: rect.top,
-                    text: `${district.name} · ${getMetricValue(district, colorMetric).toLocaleString()} ${colorMetric === 'fertility' ? '' : colorMetric === 'demandScore' ? '점' : colorMetric === 'proposals' ? '건' : colorMetric === 'births' ? '명' : '개소'}`,
+                    text: `${district.name} · ${formatMetricValue(district, colorMetric)}`,
                   });
                 }}
                 onMouseLeave={() => setTooltip(null)}
               >
                 <path
-                  d={district.path}
-                  fill={getFill(district)}
-                  stroke={isSelected ? '#0f172a' : '#64748b'}
-                  strokeWidth={isSelected ? 2.5 : 1}
+                  d={boundary.d}
+                  fill={fill}
+                  stroke={isSelected ? '#ef4444' : '#475569'}
+                  strokeWidth={isSelected ? 3.4 : 1.2}
+                  filter={isSelected ? 'url(#publicMapShadow)' : undefined}
                   opacity="0.96"
+                  className="transition-all duration-150 hover:brightness-95"
                 />
-                <text x={district.labelX} y={district.labelY} fontSize="9.5" fontWeight="700" fill="#0f172a">
-                  {district.name}
+                <text
+                  x={boundary.labelX}
+                  y={boundary.labelY - 5}
+                  textAnchor="middle"
+                  dominantBaseline="middle"
+                  fontSize="10.5"
+                  fontWeight="800"
+                  fill={isSelected ? '#ffffff' : '#0f172a'}
+                  className="pointer-events-none"
+                >
+                  {boundary.name}
+                </text>
+                <text
+                  x={boundary.labelX}
+                  y={boundary.labelY + 9}
+                  textAnchor="middle"
+                  dominantBaseline="middle"
+                  fontSize="9.5"
+                  fontWeight="800"
+                  fill={isSelected ? '#fbbf24' : '#2563eb'}
+                  className="pointer-events-none"
+                >
+                  {metricText}
                 </text>
               </g>
             );
