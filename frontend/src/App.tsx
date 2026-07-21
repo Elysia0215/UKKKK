@@ -83,6 +83,15 @@ export default function App() {
     setActiveTab(tabIndex);
   };
 
+  // 상단 네비게이션 탭 직접 클릭 시 이전 점프 필터(카테고리/지역 등) 초기화 후 탭 전환
+  const handleTabClick = (tabIndex: number) => {
+    setSelectedCategory(null);
+    setSelectedSubCategory(null);
+    setSelectedClusterId(null);
+    setSelectedDistrict(null);
+    setActiveTab(tabIndex);
+  };
+
   const handleSelectCategoryFromOverview = (category: string) => {
     setSelectedCategory(category);
     setActiveTab(2); // 키워드/수요 분석 탭으로 이동
@@ -157,7 +166,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
           <nav className="flex space-x-2 overflow-x-auto" aria-label="Tabs">
             <button
-              onClick={() => setActiveTab(0)}
+              onClick={() => handleTabClick(0)}
               className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
                 activeTab === 0
                   ? 'bg-[#0A2351] text-white border-[#0A2351]'
@@ -169,7 +178,7 @@ export default function App() {
             </button>
 
             <button
-              onClick={() => setActiveTab(1)}
+              onClick={() => handleTabClick(1)}
               className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
                 activeTab === 1
                   ? 'bg-[#0A2351] text-white border-[#0A2351]'
@@ -184,7 +193,7 @@ export default function App() {
             </button>
 
             <button
-              onClick={() => setActiveTab(2)}
+              onClick={() => handleTabClick(2)}
               className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
                 activeTab === 2
                   ? 'bg-[#0A2351] text-white border-[#0A2351]'
@@ -196,7 +205,7 @@ export default function App() {
             </button>
 
             <button
-              onClick={() => setActiveTab(3)}
+              onClick={() => handleTabClick(3)}
               className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
                 activeTab === 3
                   ? 'bg-[#0A2351] text-white border-[#0A2351]'
@@ -211,7 +220,7 @@ export default function App() {
             </button>
 
             <button
-              onClick={() => setActiveTab(4)}
+              onClick={() => handleTabClick(4)}
               className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
                 activeTab === 4
                   ? 'bg-[#0A2351] text-white border-[#0A2351]'
@@ -226,7 +235,7 @@ export default function App() {
             </button>
 
             <button
-              onClick={() => setActiveTab(5)}
+              onClick={() => handleTabClick(5)}
               className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
                 activeTab === 5
                   ? 'bg-[#0A2351] text-white border-[#0A2351]'
@@ -238,7 +247,7 @@ export default function App() {
             </button>
 
             <button
-              onClick={() => setActiveTab(6)}
+              onClick={() => handleTabClick(6)}
               className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
                 activeTab === 6
                   ? 'bg-[#0A2351] text-white border-[#0A2351]'

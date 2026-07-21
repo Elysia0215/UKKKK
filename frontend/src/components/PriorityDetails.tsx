@@ -76,9 +76,13 @@ export const PriorityDetails: React.FC<Props> = ({
   React.useEffect(() => {
     if (initialCategory) {
       setSelectedCategories([initialCategory]);
+    } else {
+      setSelectedCategories(['전체']);
     }
     if (initialSubCategory) {
       setSelectedSubCategories([initialSubCategory]);
+    } else {
+      setSelectedSubCategories(['전체']);
     }
   }, [initialCategory, initialSubCategory, initialClusterId]);
 
