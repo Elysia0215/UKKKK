@@ -112,11 +112,13 @@ export const DistrictComparison: React.FC<Props> = ({
     return SEOUL_DISTRICTS.map(dist => {
       const propCount = proposals.filter(p => p.district === dist).length;
       const stat = districtStats.find(s => s.district === dist);
+      const facilityCount = stat?.childcare_facility_count ?? 0;
       return {
         district: dist,
         '시민 제안수': propCount,
         '출생아수(명)': stat?.births_total ?? 0,
-        '보육시설수(개)': stat?.childcare_facility_count ?? 0,
+        '보육시설수(개)': facilityCount,
+        '보육시설수(x10개)': facilityCount * 10,
         '합계출산율': stat?.tfr ?? stat?.fertility_rate ?? 0
       };
     }).sort((a, b) => (sortOrder === 'desc' ? b['시민 제안수'] - a['시민 제안수'] : a['시민 제안수'] - b['시민 제안수']));
@@ -287,7 +289,7 @@ export const DistrictComparison: React.FC<Props> = ({
               자치구별 시민 제안 수요 vs 공공 출생·보육 인프라 지표 비교 분석
             </h4>
             <p className="text-xs text-slate-500 mt-0.5">
-              막대 그래프(좌측 축: 시민 제안 수량)와 꺾은선 그래프(우측 축: 총 출생아 수 / 보육시설 수)를 통해 지역별 정책 사각지대 및 인프라 매칭 상태를 종합 검토할 수 있습니다.
+              막대 그래프(좌측 축: 시민 제안 수량)와 꺾은선 그래프(우측 축: 총 출생아 수 / 보육시설 수 <strong className="text-emerald-700">x10 확대 시각화</strong>)를 통해 지역별 정책 사각지대 및 인프라 매칭 추세를 종합 검토할 수 있습니다.
             </p>
           </div>
         </div>
@@ -298,14 +300,27 @@ export const DistrictComparison: React.FC<Props> = ({
               <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
               <XAxis dataKey="district" tick={{ fontSize: 11, fill: '#64748b' }} interval={0} angle={-25} textAnchor="end" />
               <YAxis yAxisId="left" orientation="left" stroke="#2563eb" tick={{ fontSize: 11 }} label={{ value: '제안수(건)', angle: -90, position: 'insideLeft', fontSize: 10 }} />
-              <YAxis yAxisId="right" orientation="right" stroke="#e11d48" tick={{ fontSize: 11 }} label={{ value: '출생아수(명) / 보육시설(개)', angle: 90, position: 'insideRight', fontSize: 10 }} />
+              <YAxis yAxisId="right" orientation="right" stroke="#e11d48" tick={{ fontSize: 11 }} label={{ value: '출생아수(명) / 보육시설(x10개)', angle: 90, position: 'insideRight', fontSize: 10 }} />
               <Tooltip
+                formatter={(value: any, name: string) => {
+                  if (name.includes('보육시설')) {
+                    const realVal = Math.round(Number(value) / 10);
+                    return [`${realVal.toLocaleString()}개소 (x10 스케일링)`, '보육시설 수'];
+                  }
+                  if (name.includes('출생아')) {
+                    return [`${Number(value).toLocaleString()}명`, '총 출생아 수'];
+                  }
+                  if (name.includes('제안')) {
+                    return [`${value}건`, '시민 제안 수'];
+                  }
+                  return [value, name];
+                }}
                 contentStyle={{ backgroundColor: '#ffffff', borderRadius: '12px', border: '1px solid #e2e8f0', fontSize: '12px', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }}
               />
               <Legend wrapperStyle={{ fontSize: '11px', paddingTop: '10px' }} />
               <Bar yAxisId="left" dataKey="시민 제안수" fill="#3b82f6" radius={[4, 4, 0, 0]} barSize={18} />
               <Line yAxisId="right" type="monotone" dataKey="출생아수(명)" stroke="#e11d48" strokeWidth={2.5} dot={{ r: 3 }} />
-              <Line yAxisId="right" type="monotone" dataKey="보육시설수(개)" stroke="#10b981" strokeWidth={2} strokeDasharray="4 4" dot={{ r: 2 }} />
+              <Line yAxisId="right" type="monotone" dataKey="보육시설수(x10개)" name="보육시설수(x10개소 확대)" stroke="#10b981" strokeWidth={2.5} strokeDasharray="4 4" dot={{ r: 3 }} />
             </ComposedChart>
           </ResponsiveContainer>
         </div>
