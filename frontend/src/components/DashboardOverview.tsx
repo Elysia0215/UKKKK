@@ -94,7 +94,7 @@ export const DashboardOverview: React.FC<Props> = ({
           <div className="flex justify-between items-start mb-3">
             <div>
               <p className="text-xs text-slate-500 font-bold">평균 시민 공감도</p>
-              <h3 className="text-2xl font-black text-[#0A2351] mt-1 font-mono">{stats.avgVoteScore} <span className="text-xs font-normal text-slate-500">표</span></h3>
+              <h3 className="text-2xl font-black text-[#0A2351] mt-1 font-mono">{Math.round(proposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (proposals.length || 1)).toLocaleString()} <span className="text-xs font-normal text-slate-500">표</span></h3>
             </div>
             <div className="w-10 h-10 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center font-bold">
               <ThumbsUp className="w-5 h-5" />
