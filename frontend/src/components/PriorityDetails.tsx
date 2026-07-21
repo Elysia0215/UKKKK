@@ -56,6 +56,8 @@ export const PriorityDetails: React.FC<Props> = ({
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isMultiSelectMode, setIsMultiSelectMode] = useState<boolean>(false);
+  const [selectedYears, setSelectedYears] = useState<string[]>(['전체']);
+  const [sortBy, setSortBy] = useState<'date_desc' | 'date_asc' | 'vote_desc' | 'comment_desc'>('date_desc');
   const [selectedFlows, setSelectedFlows] = useState<string[]>(['전체']);
   const [selectedCategories, setSelectedCategories] = useState<string[]>(
     initialCategory ? [initialCategory] : ['전체']
@@ -103,6 +105,7 @@ export const PriorityDetails: React.FC<Props> = ({
   };
 
   const handleResetFilters = () => {
+    setSelectedYears(['전체']);
     setSelectedFlows(['전체']);
     setSelectedCategories(['전체']);
     setSelectedSubCategories(['전체']);
@@ -110,7 +113,25 @@ export const PriorityDetails: React.FC<Props> = ({
     setSelectedDepts(['전체']);
     setSearchTerm('');
     setOnlyShowGaps(false);
+    setSortBy('date_desc');
   };
+
+  // 연도 옵션 정의 및 연도별 수량 집계
+  const yearOptions = ['전체', '2026', '2025', '2024', '2023', '2022이전'];
+  const yearCounts = useMemo(() => {
+    const counts: Record<string, number> = { '전체': proposals.length };
+    yearOptions.forEach(y => { if (y !== '전체') counts[y] = 0; });
+
+    proposals.forEach(p => {
+      if (!p.reg_date) return;
+      if (p.reg_date.startsWith('2026')) counts['2026']++;
+      else if (p.reg_date.startsWith('2025')) counts['2025']++;
+      else if (p.reg_date.startsWith('2024')) counts['2024']++;
+      else if (p.reg_date.startsWith('2023')) counts['2023']++;
+      else counts['2022이전']++;
+    });
+    return counts;
+  }, [proposals]);
 
   // 몽땅정보 현행 정책 목록
   const mongttangPolicies: MongttangPolicy[] = useMemo(() => {
@@ -171,41 +192,51 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
 
-    return groups.sort((a, b) => {
-      if (b.unansweredCount !== a.unansweredCount) {
-        return b.unansweredCount - a.unansweredCount;
-      }
-      return b.totalVotes - a.totalVotes;
-    });
+    return groups;
   }, [proposals]);
 
-  // 2. 검색 및 필터 적용 (그룹 단위 또는 리스트 단위 모두 대응 가능)
-  // 개별 리스트 보기 필터 결과
-  const filteredListProposals = useMemo(() => {
+  // 필터링 및 날짜/공감도 정렬 적용된 제안 목록
+  const filteredProposals = useMemo(() => {
     return proposals.filter(p => {
-      // 1) 검색어 필터
       const matchesSearch = p.title.includes(searchTerm) || p.content.includes(searchTerm);
-      // 2) 분야 계층 필터 (대분류, 중분류, 세분류)
+      const matchesYear = selectedYears.includes('전체') || selectedYears.some(y => {
+        if (y === '2026') return p.reg_date?.startsWith('2026');
+        if (y === '2025') return p.reg_date?.startsWith('2025');
+        if (y === '2024') return p.reg_date?.startsWith('2024');
+        if (y === '2023') return p.reg_date?.startsWith('2023');
+        if (y === '2022이전') return p.reg_date && p.reg_date < '2023';
+        return false;
+      });
       const matchesCategory = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
       const matchesSubCategory = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCategory = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
-      // 3) 정책 흐름 필터
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
-      // 4) 1순위 주관부서 기준 필터
       const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
       const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
-      // 5) 정책 공백 토글 (미답변 N 이면서 공감수 150 이상)
       const matchesGap = !onlyShowGaps || (p.reply_yn === 'N' && p.vote_score >= 150);
-
-      return matchesSearch && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap;
-    }).sort((a, b) => b.vote_score - a.vote_score); // 기본 공감도순 정렬
-  }, [proposals, searchTerm, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps]);
+      return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap;
+    }).sort((a, b) => {
+      if (sortBy === 'date_desc') return (b.reg_date || '').localeCompare(a.reg_date || '');
+      if (sortBy === 'date_asc') return (a.reg_date || '').localeCompare(b.reg_date || '');
+      if (sortBy === 'vote_desc') return b.vote_score - a.vote_score;
+      if (sortBy === 'comment_desc') return b.comment_cnt - a.comment_cnt;
+      return 0;
+    });
+  }, [proposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, sortBy]);
 
   // 그룹 보기 필터 결과 (그룹 구성원 필터 후 빈 그룹 배제)
   const filteredGroupedProposals = useMemo(() => {
     return groupedProposals.map(g => {
       const filteredItems = g.items.filter(p => {
         const matchesSearch = p.title.includes(searchTerm) || p.content.includes(searchTerm);
+        const matchesYear = selectedYears.includes('전체') || selectedYears.some(y => {
+          if (y === '2026') return p.reg_date?.startsWith('2026');
+          if (y === '2025') return p.reg_date?.startsWith('2025');
+          if (y === '2024') return p.reg_date?.startsWith('2024');
+          if (y === '2023') return p.reg_date?.startsWith('2023');
+          if (y === '2022이전') return p.reg_date && p.reg_date < '2023';
+          return false;
+        });
         const matchesCategory = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
         const matchesSubCategory = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
         const matchesMicroCategory = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
@@ -213,7 +244,13 @@ export const PriorityDetails: React.FC<Props> = ({
         const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
         const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
         const matchesGap = !onlyShowGaps || (p.reply_yn === 'N' && p.vote_score >= 150);
-        return matchesSearch && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap;
+        return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap;
+      }).sort((a, b) => {
+        if (sortBy === 'date_desc') return (b.reg_date || '').localeCompare(a.reg_date || '');
+        if (sortBy === 'date_asc') return (a.reg_date || '').localeCompare(b.reg_date || '');
+        if (sortBy === 'vote_desc') return b.vote_score - a.vote_score;
+        if (sortBy === 'comment_desc') return b.comment_cnt - a.comment_cnt;
+        return 0;
       });
 
       if (filteredItems.length === 0) return null;
@@ -358,7 +395,7 @@ export const PriorityDetails: React.FC<Props> = ({
   const handleExportProposals = () => {
     const listToExport = viewMode === 'group'
       ? filteredGroupedProposals.flatMap(g => g.items)
-      : filteredListProposals;
+      : filteredProposals;
     const exportData = listToExport.map(p => ({
       '제안ID': p.id,
       '카테고리': p.category,
@@ -413,8 +450,23 @@ export const PriorityDetails: React.FC<Props> = ({
               정책 공백만 선별 (공감 150표 이상 + 미답변)
             </button>
 
-            {/* 보기 모드 변경 & 다중선택 토글 */}
-            <div className="flex items-center gap-2">
+            {/* 보기 모드 변경 & 다중선택 토글 & 정렬 */}
+            <div className="flex flex-wrap items-center gap-2">
+              {/* 날짜/공감도 정렬 셀렉터 */}
+              <div className="flex items-center gap-1 bg-slate-100 p-0.5 rounded-lg border border-slate-200">
+                <span className="text-[10px] font-black text-slate-500 pl-2 pr-1">↕️ 정렬</span>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value as any)}
+                  className="text-xs px-2 py-1 rounded-md font-bold bg-white text-slate-800 border-0 focus:ring-0 cursor-pointer outline-none"
+                >
+                  <option value="date_desc">📅 등록일 최신순</option>
+                  <option value="date_asc">⏳ 등록일 과거순</option>
+                  <option value="vote_desc">👍 공감 높은순</option>
+                  <option value="comment_desc">💬 댓글 많은순</option>
+                </select>
+              </div>
+
               <button
                 onClick={() => setIsMultiSelectMode(!isMultiSelectMode)}
                 className={`text-xs px-3 py-1.5 rounded-lg border font-bold transition flex items-center gap-1.5 cursor-pointer ${
@@ -424,10 +476,10 @@ export const PriorityDetails: React.FC<Props> = ({
                 }`}
                 title="클릭하여 여러 카테고리/부서를 중복 선택하여 동시에 조회"
               >
-                <span>{isMultiSelectMode ? '☑️ 다중 선택 모드 ON' : '☐ 다중 선택 모드 OFF'}</span>
+                <span>{isMultiSelectMode ? '☑️ 다중 선택 ON' : '☐ 다중 선택 OFF'}</span>
               </button>
 
-              {(selectedFlows[0] !== '전체' || selectedCategories[0] !== '전체' || selectedSubCategories[0] !== '전체' || selectedDepts[0] !== '전체' || searchTerm || onlyShowGaps) && (
+              {(selectedYears[0] !== '전체' || selectedFlows[0] !== '전체' || selectedCategories[0] !== '전체' || selectedSubCategories[0] !== '전체' || selectedDepts[0] !== '전체' || searchTerm || onlyShowGaps || sortBy !== 'date_desc') && (
                 <button
                   onClick={handleResetFilters}
                   className="text-xs px-2.5 py-1.5 rounded-lg border border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100 font-bold transition flex items-center gap-1 cursor-pointer"
@@ -464,8 +516,41 @@ export const PriorityDetails: React.FC<Props> = ({
           </div>
         </div>
 
-        {/* 상세 선택 필터 (계층형 대/중/세분류 + 생애주기 정책흐름 + 담당부서) */}
+        {/* 상세 선택 필터 (연도 + 계층형 대/중/세분류 + 생애주기 정책흐름 + 담당부서) */}
         <div className="space-y-3 pt-3 border-t border-slate-200/80">
+          {/* 0. 연도별 필터 */}
+          <div className="flex items-start gap-3 bg-amber-50/50 p-2.5 rounded-xl border border-amber-200/80">
+            <span className="text-xs font-black text-amber-900 w-20 flex-shrink-0 pt-1 flex items-center gap-1">
+              📅 제안 연도
+            </span>
+            <div className="flex flex-wrap gap-1.5">
+              {yearOptions.map(y => {
+                const count = yearCounts[y] || 0;
+                const isDisabled = y !== '전체' && count === 0;
+                const isSelected = selectedYears.includes(y);
+                const isNew2026 = y === '2026';
+                return (
+                  <button
+                    key={y}
+                    disabled={isDisabled}
+                    onClick={() => toggleFilterItem(selectedYears, setSelectedYears, y)}
+                    className={`text-xs px-2.5 py-1 rounded-full border transition font-bold cursor-pointer ${
+                      isSelected
+                        ? isNew2026 ? 'bg-emerald-600 text-white border-emerald-700 shadow-xs ring-2 ring-emerald-300' : 'bg-amber-700 text-white border-amber-800 shadow-2xs'
+                        : isDisabled
+                        ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                        : isNew2026
+                        ? 'bg-emerald-50 text-emerald-700 border-emerald-300 hover:bg-emerald-100 animate-pulse'
+                        : 'bg-white text-amber-800 border-amber-200 hover:bg-amber-100'
+                    }`}
+                  >
+                    {y === '2026' ? '🔥 2026 최신' : y === '2022이전' ? '2022이전 과거제안' : `${y}년`}
+                    <span className="text-[10px] opacity-80 font-normal ml-1">({count}건)</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
           {/* 생애주기 정책흐름 필터 */}
           <div className="flex items-start gap-3 bg-indigo-50/50 p-2.5 rounded-xl border border-indigo-100">
             <span className="text-xs font-black text-indigo-900 w-20 flex-shrink-0 pt-1 flex items-center gap-1">
@@ -619,7 +704,7 @@ export const PriorityDetails: React.FC<Props> = ({
           {viewMode === 'group' ? (
             <span>필터 조건에 부합하는 <strong>{filteredGroupedProposals.length}개 유사 정책 군집(그룹)</strong>이 발견되었습니다.</span>
           ) : (
-            <span>필터 조건에 부합하는 <strong>{filteredListProposals.length}건의 개별 제안</strong>이 발견되었습니다.</span>
+            <span>필터 조건에 부합하는 <strong>{filteredProposals.length}건의 개별 제안</strong>이 발견되었습니다.</span>
           )}
         </div>
         {onlyShowGaps && (
@@ -882,8 +967,8 @@ export const PriorityDetails: React.FC<Props> = ({
           )
         ) : (
           /* 2. 일반 개별 목록 뷰 */
-          filteredListProposals.length > 0 ? (
-            filteredListProposals.map((item) => {
+          filteredProposals.length > 0 ? (
+            filteredProposals.map((item) => {
               const isGap = item.reply_yn === 'N' && item.vote_score >= 150;
               return (
                 <div
@@ -895,6 +980,15 @@ export const PriorityDetails: React.FC<Props> = ({
                 >
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <div className="flex items-center gap-2">
+                      {item.reg_date?.startsWith('2026') ? (
+                        <span className="text-[10px] bg-emerald-600 text-white font-black px-2 py-0.5 rounded shadow-2xs">
+                          🔥 NEW 2026
+                        </span>
+                      ) : (
+                        <span className="text-[10px] bg-slate-100 text-slate-700 font-bold border border-slate-200 px-2 py-0.5 rounded">
+                          {item.reg_date ? item.reg_date.substring(0, 4) + '년' : '과거'}
+                        </span>
+                      )}
                       <span className="text-[10px] font-bold bg-[#0A2351] text-white px-2 py-0.5 rounded">
                         {item.category}
                       </span>

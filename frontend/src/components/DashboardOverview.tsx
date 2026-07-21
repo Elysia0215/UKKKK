@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion } from 'motion/react';
 import { 
   FileText, 
@@ -15,7 +15,8 @@ import {
   AlertTriangle,
   Building2,
   PieChart as PieIcon,
-  ChevronRight
+  ChevronRight,
+  Calendar
 } from 'lucide-react';
 import { PolicyProposal, DashboardStats } from '../types';
 import { extractTopKeywords, getDepartmentStats } from '../data/mockData';
@@ -76,6 +77,31 @@ export const DashboardOverview: React.FC<Props> = ({
     .filter(p => p.reply_yn === 'N')
     .sort((a, b) => b.vote_score - a.vote_score)
     .slice(0, 3);
+
+  // 연도별 제안 수량 & 답변 현황 연도별 트렌드 데이터
+  const yearTrendData = useMemo(() => {
+    const years = ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'];
+    const map = new Map<string, { total: number; answered: number; unanswered: number }>();
+    years.forEach(y => map.set(y, { total: 0, answered: 0, unanswered: 0 }));
+
+    proposals.forEach(p => {
+      if (!p.reg_date) return;
+      const y = p.reg_date.substring(0, 4);
+      if (map.has(y)) {
+        const item = map.get(y)!;
+        item.total++;
+        if (p.reply_yn === 'Y') item.answered++;
+        else item.unanswered++;
+      }
+    });
+
+    return years.map(y => ({
+      year: `${y}년`,
+      '답변 완료': map.get(y)!.answered,
+      '미답변 (검토중)': map.get(y)!.unanswered,
+      '전체 제안': map.get(y)!.total
+    }));
+  }, [proposals]);
 
   return (
     <div className="space-y-6">
@@ -331,6 +357,38 @@ export const DashboardOverview: React.FC<Props> = ({
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* 실무자 전용: 연도별 제안 발생 및 답변 추이 차트 (2018~2026) */}
+      <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:shadow-sm transition">
+        <div className="flex items-center justify-between mb-3 pb-2 border-b border-slate-200/80">
+          <div>
+            <h4 className="text-xs sm:text-sm font-bold text-slate-900 flex items-center gap-2">
+              <Calendar className="text-amber-600 w-4.5 h-4.5" />
+              연도별 출산·육아 시민 제안 추이 및 행정 처리 현황 (2018년 ~ 2026년)
+            </h4>
+            <p className="text-xs text-slate-500 mt-0.5">
+              상상대로 서울 데이터의 연도별 시민 민원 발생 수량 및 답변 완료/미답변 비율 변천사
+            </p>
+          </div>
+          <span className="text-[10px] bg-amber-50 text-amber-800 font-extrabold px-2 py-0.5 rounded border border-amber-200">
+            🔥 2026년 최신 31건 포함
+          </span>
+        </div>
+
+        <div className="h-[200px] w-full pt-1">
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={yearTrendData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+              <XAxis dataKey="year" tick={{ fontSize: 11, fill: '#475569', fontWeight: 600 }} />
+              <YAxis tick={{ fontSize: 11 }} />
+              <Tooltip
+                contentStyle={{ borderRadius: '8px', fontSize: '12px', fontWeight: 'bold' }}
+              />
+              <Bar dataKey="답변 완료" stackId="yr" fill="#94a3b8" barSize={20} radius={[0, 0, 2, 2]} />
+              <Bar dataKey="미답변 (검토중)" stackId="yr" fill="#10b981" barSize={20} radius={[4, 4, 0, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
       </div>
 
