@@ -1,5 +1,5 @@
-// 100% 검증 정제된 순수 출산·육아·신혼부부 정책 제안 데이터셋 (774건)
-// (기존 426건 + 사용자 검증 신규 348건 병합, 몽땅정보통 323개 사업/조직도 실무부서 100% 연동)
+// 100% 검증 정제된 순수 출산·육아·신혼부부 정책 제안 데이터셋 (754건)
+// (기존 426건 + 사용자 팀 검증 상/중 신뢰도 328건 병합, 무관한 20건 완전 삭제)
 import { PolicyProposal, DistrictStat, DashboardStats, CivilRequest } from '../types';
 
 export type { PolicyProposal as Proposal };
@@ -11,9 +11,9 @@ export const SEOUL_DISTRICTS = [
 ];
 
 export const mockDashboardStats: DashboardStats = {
-  "totalCount": 774,
-  "avgVoteScore": 29.5,
-  "unansweredCount": 712,
+  "totalCount": 754,
+  "avgVoteScore": 29.9,
+  "unansweredCount": 694,
   "unansweredRate": 92.0
 };
 
@@ -5149,100 +5149,6 @@ export const mockProposals: PolicyProposal[] = [
     ]
   },
   {
-    "id": "PROP-201435",
-    "title": "？？ [정책 제안] 빛의 자녀(개척자)들을 위한 ‘자존감 및 사회화 통합 교육’ 신설",
-    "content": "？？ [정책 제안] 빛의 자녀(개척자)들을 위한 ‘자존감 및 사회화 통합 교육’ 신설 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2026-01-30",
-    "vote_score": 1.0,
-    "comment_cnt": 1,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201435",
-    "source": "상상대로서울",
-    "cluster_id": 25,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
     "id": "PROP-201374",
     "title": "버스 내 임산부석 자리 양보",
     "content": "버스 내 임산부석 자리 양보 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
@@ -5261,7 +5167,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201374",
     "source": "상상대로서울",
-    "cluster_id": 26,
+    "cluster_id": 25,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -5330,100 +5236,6 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
-    "id": "PROP-201314",
-    "title": "마장 한전물류센터 특별계획구역 내 “성동구립마장도서관 및 서울형키즈까페를 포함하는 복합문화시설” 설치 필요성 및 요청",
-    "content": "마장 한전물류센터 특별계획구역 내 “성동구립마장도서관 및 서울형키즈까페를 포함하는 복합문화시설” 설치 필요성 및 요청 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2026-01-19",
-    "vote_score": 0.0,
-    "comment_cnt": 0,
-    "reply_yn": "N",
-    "district": "성동구",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201314",
-    "source": "상상대로서울",
-    "cluster_id": 27,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
@@ -5530,7 +5342,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201207",
     "source": "상상대로서울",
-    "cluster_id": 28,
+    "cluster_id": 26,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -5624,7 +5436,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201158",
     "source": "상상대로서울",
-    "cluster_id": 29,
+    "cluster_id": 27,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -5993,7 +5805,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201045",
     "source": "상상대로서울",
-    "cluster_id": 30,
+    "cluster_id": 28,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -6087,7 +5899,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201039",
     "source": "상상대로서울",
-    "cluster_id": 1,
+    "cluster_id": 29,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -6181,7 +5993,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200988",
     "source": "상상대로서울",
-    "cluster_id": 2,
+    "cluster_id": 30,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -6275,7 +6087,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200978",
     "source": "상상대로서울",
-    "cluster_id": 3,
+    "cluster_id": 1,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -6522,7 +6334,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200867",
     "source": "상상대로서울",
-    "cluster_id": 4,
+    "cluster_id": 2,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -6672,7 +6484,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200696",
     "source": "상상대로서울",
-    "cluster_id": 5,
+    "cluster_id": 3,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -6766,7 +6578,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200665",
     "source": "상상대로서울",
-    "cluster_id": 6,
+    "cluster_id": 4,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -6860,7 +6672,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200532",
     "source": "상상대로서울",
-    "cluster_id": 7,
+    "cluster_id": 5,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -6954,7 +6766,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200496",
     "source": "상상대로서울",
-    "cluster_id": 8,
+    "cluster_id": 6,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -7048,7 +6860,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200475",
     "source": "상상대로서울",
-    "cluster_id": 9,
+    "cluster_id": 7,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -7142,7 +6954,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200463",
     "source": "상상대로서울",
-    "cluster_id": 10,
+    "cluster_id": 8,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -7333,7 +7145,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200411",
     "source": "상상대로서울",
-    "cluster_id": 11,
+    "cluster_id": 9,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -7524,7 +7336,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200196",
     "source": "상상대로서울",
-    "cluster_id": 12,
+    "cluster_id": 10,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -7618,7 +7430,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200169",
     "source": "상상대로서울",
-    "cluster_id": 13,
+    "cluster_id": 11,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -7712,7 +7524,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200168",
     "source": "상상대로서울",
-    "cluster_id": 14,
+    "cluster_id": 12,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -7806,7 +7618,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200157",
     "source": "상상대로서울",
-    "cluster_id": 15,
+    "cluster_id": 13,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -7900,7 +7712,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200141",
     "source": "상상대로서울",
-    "cluster_id": 16,
+    "cluster_id": 14,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -7994,7 +7806,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200129",
     "source": "상상대로서울",
-    "cluster_id": 17,
+    "cluster_id": 15,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -8185,7 +7997,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200102",
     "source": "상상대로서울",
-    "cluster_id": 18,
+    "cluster_id": 16,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -8707,7 +8519,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199880",
     "source": "상상대로서울",
-    "cluster_id": 19,
+    "cluster_id": 17,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -9076,7 +8888,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199692",
     "source": "상상대로서울",
-    "cluster_id": 20,
+    "cluster_id": 18,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -9170,7 +8982,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199683",
     "source": "상상대로서울",
-    "cluster_id": 21,
+    "cluster_id": 19,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -9361,7 +9173,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199642",
     "source": "상상대로서울",
-    "cluster_id": 22,
+    "cluster_id": 20,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -9567,7 +9379,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199524",
     "source": "상상대로서울",
-    "cluster_id": 23,
+    "cluster_id": 21,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -9661,7 +9473,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199518",
     "source": "상상대로서울",
-    "cluster_id": 24,
+    "cluster_id": 22,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -9755,7 +9567,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199506",
     "source": "상상대로서울",
-    "cluster_id": 25,
+    "cluster_id": 23,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -9849,7 +9661,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199443",
     "source": "상상대로서울",
-    "cluster_id": 26,
+    "cluster_id": 24,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -9943,7 +9755,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199393",
     "source": "상상대로서울",
-    "cluster_id": 27,
+    "cluster_id": 25,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -10037,7 +9849,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199271",
     "source": "상상대로서울",
-    "cluster_id": 28,
+    "cluster_id": 26,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -10228,7 +10040,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199198",
     "source": "상상대로서울",
-    "cluster_id": 29,
+    "cluster_id": 27,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -10322,7 +10134,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199193",
     "source": "상상대로서울",
-    "cluster_id": 30,
+    "cluster_id": 28,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -10804,7 +10616,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199081",
     "source": "상상대로서울",
-    "cluster_id": 1,
+    "cluster_id": 29,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -10898,7 +10710,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199076",
     "source": "상상대로서울",
-    "cluster_id": 2,
+    "cluster_id": 30,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -11283,7 +11095,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199068",
     "source": "상상대로서울",
-    "cluster_id": 3,
+    "cluster_id": 1,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -11458,7 +11270,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199042",
     "source": "상상대로서울",
-    "cluster_id": 4,
+    "cluster_id": 2,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -11608,7 +11420,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198897",
     "source": "상상대로서울",
-    "cluster_id": 5,
+    "cluster_id": 3,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -11896,7 +11708,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198759",
     "source": "상상대로서울",
-    "cluster_id": 6,
+    "cluster_id": 4,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -11990,7 +11802,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198762",
     "source": "상상대로서울",
-    "cluster_id": 7,
+    "cluster_id": 5,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -12084,7 +11896,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198739",
     "source": "상상대로서울",
-    "cluster_id": 8,
+    "cluster_id": 6,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -12178,7 +11990,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198748",
     "source": "상상대로서울",
-    "cluster_id": 9,
+    "cluster_id": 7,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -12425,7 +12237,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198658",
     "source": "상상대로서울",
-    "cluster_id": 10,
+    "cluster_id": 8,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -12713,7 +12525,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198625",
     "source": "상상대로서울",
-    "cluster_id": 11,
+    "cluster_id": 9,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -12942,100 +12754,6 @@ export const mockProposals: PolicyProposal[] = [
     "matched_policies": []
   },
   {
-    "id": "PROP-198434",
-    "title": "자녀가 있는가정 가족과 함께하는 문화생활",
-    "content": "자녀가 있는가정 가족과 함께하는 문화생활 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2025-03-02",
-    "vote_score": 0.0,
-    "comment_cnt": 0,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198434",
-    "source": "상상대로서울",
-    "cluster_id": 12,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
     "id": "PROP-198432",
     "title": "하위계층, 한부모가정 지원혜택 철저히 조사",
     "content": "하위계층, 한부모가정 지원혜택 철저히 조사 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
@@ -13054,7 +12772,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198432",
     "source": "상상대로서울",
-    "cluster_id": 13,
+    "cluster_id": 10,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -13682,7 +13400,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198258",
     "source": "상상대로서울",
-    "cluster_id": 14,
+    "cluster_id": 11,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -14325,7 +14043,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198142",
     "source": "상상대로서울",
-    "cluster_id": 15,
+    "cluster_id": 12,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -14710,7 +14428,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198063",
     "source": "상상대로서울",
-    "cluster_id": 16,
+    "cluster_id": 13,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -15248,7 +14966,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197873",
     "source": "상상대로서울",
-    "cluster_id": 17,
+    "cluster_id": 14,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -15342,7 +15060,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197755",
     "source": "상상대로서울",
-    "cluster_id": 18,
+    "cluster_id": 15,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -15492,7 +15210,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197723",
     "source": "상상대로서울",
-    "cluster_id": 19,
+    "cluster_id": 16,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -15667,7 +15385,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197624",
     "source": "상상대로서울",
-    "cluster_id": 20,
+    "cluster_id": 17,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -15761,7 +15479,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197619",
     "source": "상상대로서울",
-    "cluster_id": 21,
+    "cluster_id": 18,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -15911,7 +15629,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197605",
     "source": "상상대로서울",
-    "cluster_id": 22,
+    "cluster_id": 19,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -16102,7 +15820,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197539",
     "source": "상상대로서울",
-    "cluster_id": 23,
+    "cluster_id": 20,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -16196,7 +15914,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197532",
     "source": "상상대로서울",
-    "cluster_id": 24,
+    "cluster_id": 21,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -16346,7 +16064,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197512",
     "source": "상상대로서울",
-    "cluster_id": 25,
+    "cluster_id": 22,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -16496,7 +16214,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197461",
     "source": "상상대로서울",
-    "cluster_id": 26,
+    "cluster_id": 23,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -16590,7 +16308,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197394",
     "source": "상상대로서울",
-    "cluster_id": 27,
+    "cluster_id": 24,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -16781,7 +16499,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197370",
     "source": "상상대로서울",
-    "cluster_id": 28,
+    "cluster_id": 25,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -16875,7 +16593,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197368",
     "source": "상상대로서울",
-    "cluster_id": 29,
+    "cluster_id": 26,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -16969,7 +16687,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197348",
     "source": "상상대로서울",
-    "cluster_id": 30,
+    "cluster_id": 27,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -17063,7 +16781,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197311",
     "source": "상상대로서울",
-    "cluster_id": 1,
+    "cluster_id": 28,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -17157,7 +16875,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197263",
     "source": "상상대로서울",
-    "cluster_id": 2,
+    "cluster_id": 29,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -17251,7 +16969,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197271",
     "source": "상상대로서울",
-    "cluster_id": 3,
+    "cluster_id": 30,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -17539,7 +17257,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197204",
     "source": "상상대로서울",
-    "cluster_id": 4,
+    "cluster_id": 1,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -17803,7 +17521,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196964",
     "source": "상상대로서울",
-    "cluster_id": 5,
+    "cluster_id": 2,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -17953,7 +17671,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196838",
     "source": "상상대로서울",
-    "cluster_id": 6,
+    "cluster_id": 3,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -18144,7 +17862,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196806",
     "source": "상상대로서울",
-    "cluster_id": 7,
+    "cluster_id": 4,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -18335,7 +18053,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196769",
     "source": "상상대로서울",
-    "cluster_id": 8,
+    "cluster_id": 5,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -18429,7 +18147,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196686",
     "source": "상상대로서울",
-    "cluster_id": 9,
+    "cluster_id": 6,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -18579,7 +18297,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196628",
     "source": "상상대로서울",
-    "cluster_id": 10,
+    "cluster_id": 7,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -18932,7 +18650,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196541",
     "source": "상상대로서울",
-    "cluster_id": 11,
+    "cluster_id": 8,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -19026,7 +18744,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196514",
     "source": "상상대로서울",
-    "cluster_id": 12,
+    "cluster_id": 9,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -19288,7 +19006,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196474",
     "source": "상상대로서울",
-    "cluster_id": 13,
+    "cluster_id": 10,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -19382,7 +19100,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196468",
     "source": "상상대로서울",
-    "cluster_id": 14,
+    "cluster_id": 11,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -19476,7 +19194,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196356",
     "source": "상상대로서울",
-    "cluster_id": 15,
+    "cluster_id": 12,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -19626,7 +19344,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196331",
     "source": "상상대로서울",
-    "cluster_id": 16,
+    "cluster_id": 13,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -19720,7 +19438,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196309",
     "source": "상상대로서울",
-    "cluster_id": 17,
+    "cluster_id": 14,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -19814,7 +19532,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196294",
     "source": "상상대로서울",
-    "cluster_id": 18,
+    "cluster_id": 15,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -20270,7 +19988,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196209",
     "source": "상상대로서울",
-    "cluster_id": 19,
+    "cluster_id": 16,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -20364,7 +20082,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196158",
     "source": "상상대로서울",
-    "cluster_id": 20,
+    "cluster_id": 17,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -20458,7 +20176,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196115",
     "source": "상상대로서울",
-    "cluster_id": 21,
+    "cluster_id": 18,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -20737,7 +20455,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196044",
     "source": "상상대로서울",
-    "cluster_id": 22,
+    "cluster_id": 19,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -21009,7 +20727,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195788",
     "source": "상상대로서울",
-    "cluster_id": 23,
+    "cluster_id": 20,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -21764,7 +21482,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195640",
     "source": "상상대로서울",
-    "cluster_id": 24,
+    "cluster_id": 21,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -21955,7 +21673,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195593",
     "source": "상상대로서울",
-    "cluster_id": 25,
+    "cluster_id": 22,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -22105,7 +21823,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195523",
     "source": "상상대로서울",
-    "cluster_id": 26,
+    "cluster_id": 23,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -22448,7 +22166,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195405",
     "source": "상상대로서울",
-    "cluster_id": 27,
+    "cluster_id": 24,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -22542,7 +22260,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195331",
     "source": "상상대로서울",
-    "cluster_id": 28,
+    "cluster_id": 25,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -22636,7 +22354,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195272",
     "source": "상상대로서울",
-    "cluster_id": 29,
+    "cluster_id": 26,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -22827,7 +22545,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195209",
     "source": "상상대로서울",
-    "cluster_id": 30,
+    "cluster_id": 27,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -22921,7 +22639,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195183",
     "source": "상상대로서울",
-    "cluster_id": 1,
+    "cluster_id": 28,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -23015,7 +22733,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195168",
     "source": "상상대로서울",
-    "cluster_id": 2,
+    "cluster_id": 29,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -23109,7 +22827,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195152",
     "source": "상상대로서울",
-    "cluster_id": 3,
+    "cluster_id": 30,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -23300,7 +23018,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195084",
     "source": "상상대로서울",
-    "cluster_id": 4,
+    "cluster_id": 1,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -23394,7 +23112,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195015",
     "source": "상상대로서울",
-    "cluster_id": 5,
+    "cluster_id": 2,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -23488,7 +23206,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195004",
     "source": "상상대로서울",
-    "cluster_id": 6,
+    "cluster_id": 3,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -23582,7 +23300,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194971",
     "source": "상상대로서울",
-    "cluster_id": 7,
+    "cluster_id": 4,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -23712,100 +23430,6 @@ export const mockProposals: PolicyProposal[] = [
       }
     ],
     "matched_policies": []
-  },
-  {
-    "id": "PROP-194901",
-    "title": "홍보물 개선 제안드립니다 (서울키즈 오케이존)",
-    "content": "홍보물 개선 제안드립니다 (서울키즈 오케이존) - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2023-08-01",
-    "vote_score": 0.0,
-    "comment_cnt": 0,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194901",
-    "source": "상상대로서울",
-    "cluster_id": 8,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
   },
   {
     "id": "PROP-194881",
@@ -24367,7 +23991,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194851",
     "source": "상상대로서울",
-    "cluster_id": 9,
+    "cluster_id": 5,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -24558,7 +24182,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194797",
     "source": "상상대로서울",
-    "cluster_id": 10,
+    "cluster_id": 6,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -24652,7 +24276,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194775",
     "source": "상상대로서울",
-    "cluster_id": 11,
+    "cluster_id": 7,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -24746,7 +24370,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194771",
     "source": "상상대로서울",
-    "cluster_id": 12,
+    "cluster_id": 8,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -24969,7 +24593,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194730",
     "source": "상상대로서울",
-    "cluster_id": 13,
+    "cluster_id": 9,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -25225,7 +24849,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194695",
     "source": "상상대로서울",
-    "cluster_id": 14,
+    "cluster_id": 10,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -25319,7 +24943,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194691",
     "source": "상상대로서울",
-    "cluster_id": 15,
+    "cluster_id": 11,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -25604,100 +25228,6 @@ export const mockProposals: PolicyProposal[] = [
     ]
   },
   {
-    "id": "PROP-194607",
-    "title": "결식아동 도시락 배달사업을 통한 노인 일자리 창출",
-    "content": "결식아동 도시락 배달사업을 통한 노인 일자리 창출 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2023-06-08",
-    "vote_score": 61.0,
-    "comment_cnt": 0,
-    "reply_yn": "Y",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194607",
-    "source": "상상대로서울",
-    "cluster_id": 16,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "고령사회정책팀",
-        "full_dept": "서울특별시 복지실 돌봄고독정책관 고령사회대응과 고령사회정책팀",
-        "phone": "02-2133-7409",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청",
-        "duty_summary": "○ 시의회 및 국회 관련 업무 ○ 대한노인회 서울시 연합회 운영·지원 ○ 어버이날, 노인의 날 등 행사 ○ 효행 유공자 등 포상 및 시장 표창 ○ 저출산·고령사회 기본계획 수립(보건복지부) ○ 어르신 정보몽땅 홈페이지 구축·운영 ○ 바인더(시설통계 포함)"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
     "id": "PROP-194557",
     "title": "우리동네키움센터 증설 요청 드립니다",
     "content": "우리동네키움센터 증설 요청 드립니다 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
@@ -25716,7 +25246,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194557",
     "source": "상상대로서울",
-    "cluster_id": 17,
+    "cluster_id": 12,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -25810,7 +25340,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194550",
     "source": "상상대로서울",
-    "cluster_id": 18,
+    "cluster_id": 13,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -25904,7 +25434,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194544",
     "source": "상상대로서울",
-    "cluster_id": 19,
+    "cluster_id": 14,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -26095,7 +25625,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194486",
     "source": "상상대로서울",
-    "cluster_id": 20,
+    "cluster_id": 15,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -26439,7 +25969,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194428",
     "source": "상상대로서울",
-    "cluster_id": 21,
+    "cluster_id": 16,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -26469,100 +25999,6 @@ export const mockProposals: PolicyProposal[] = [
         "phone": "02-2133-5772",
         "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
         "duty_summary": "○ 시 공무원 임대아파트 운영, 연금공단 아파트 안내 등 ○ 주거안정 지원사업 전수조사 실시(지원) ○ 직원 책임보험 운영(행정종합배상공제) ○ 순직 유가족, 재직중 사망직원 지원, 부조급여 및 기타 재해보상제도 ○ 대여학자금 상환 원천징수 고지 및 정산 ○ 다자녀 출산직원 지원(임신·출산포인트 등) ○ 공무원노동조합 관련 업무 지원 ○ 팀 서무 및 기타 현안업무 처리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
-    "id": "PROP-194407",
-    "title": "스쿨존 교통사고 발생시 피해아동에게 실질적 피해보상안",
-    "content": "스쿨존 교통사고 발생시 피해아동에게 실질적 피해보상안 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2023-04-26",
-    "vote_score": 5.0,
-    "comment_cnt": 0,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194407",
-    "source": "상상대로서울",
-    "cluster_id": 22,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
       }
     ],
     "matched_policies": [
@@ -27184,7 +26620,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194225",
     "source": "상상대로서울",
-    "cluster_id": 23,
+    "cluster_id": 17,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -28181,7 +27617,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193946",
     "source": "상상대로서울",
-    "cluster_id": 24,
+    "cluster_id": 18,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -28469,7 +27905,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193921",
     "source": "상상대로서울",
-    "cluster_id": 25,
+    "cluster_id": 19,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -28563,7 +27999,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193892",
     "source": "상상대로서울",
-    "cluster_id": 26,
+    "cluster_id": 20,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -28769,7 +28205,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193830",
     "source": "상상대로서울",
-    "cluster_id": 27,
+    "cluster_id": 21,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -28960,7 +28396,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193765",
     "source": "상상대로서울",
-    "cluster_id": 28,
+    "cluster_id": 22,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -29110,7 +28546,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193715",
     "source": "상상대로서울",
-    "cluster_id": 29,
+    "cluster_id": 23,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -29510,7 +28946,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193539",
     "source": "상상대로서울",
-    "cluster_id": 30,
+    "cluster_id": 24,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -29660,7 +29096,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193443",
     "source": "상상대로서울",
-    "cluster_id": 1,
+    "cluster_id": 25,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -29754,7 +29190,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193371",
     "source": "상상대로서울",
-    "cluster_id": 2,
+    "cluster_id": 26,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -29904,7 +29340,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193296",
     "source": "상상대로서울",
-    "cluster_id": 3,
+    "cluster_id": 27,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -30774,7 +30210,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193109",
     "source": "상상대로서울",
-    "cluster_id": 4,
+    "cluster_id": 28,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -30965,7 +30401,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193054",
     "source": "상상대로서울",
-    "cluster_id": 5,
+    "cluster_id": 29,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -31059,7 +30495,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193051",
     "source": "상상대로서울",
-    "cluster_id": 6,
+    "cluster_id": 30,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -31347,7 +30783,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192981",
     "source": "상상대로서울",
-    "cluster_id": 7,
+    "cluster_id": 1,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -31716,7 +31152,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192881",
     "source": "상상대로서울",
-    "cluster_id": 8,
+    "cluster_id": 2,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -32004,7 +31440,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192867",
     "source": "상상대로서울",
-    "cluster_id": 9,
+    "cluster_id": 3,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -32098,7 +31534,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192824",
     "source": "상상대로서울",
-    "cluster_id": 10,
+    "cluster_id": 4,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -32192,7 +31628,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192751",
     "source": "상상대로서울",
-    "cluster_id": 11,
+    "cluster_id": 5,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -32286,7 +31722,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192747",
     "source": "상상대로서울",
-    "cluster_id": 12,
+    "cluster_id": 6,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -32380,7 +31816,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192709",
     "source": "상상대로서울",
-    "cluster_id": 13,
+    "cluster_id": 7,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -33056,7 +32492,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192298",
     "source": "상상대로서울",
-    "cluster_id": 14,
+    "cluster_id": 8,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -33150,7 +32586,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192268",
     "source": "상상대로서울",
-    "cluster_id": 15,
+    "cluster_id": 9,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -33244,101 +32680,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192216",
     "source": "상상대로서울",
-    "cluster_id": 16,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
-    "id": "PROP-192172",
-    "title": "장애아동을 위한 전용 미용(헤어컷)시설 설치를 제안합니다.",
-    "content": "장애아동을 위한 전용 미용(헤어컷)시설 설치를 제안합니다. - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2022-02-22",
-    "vote_score": 112.0,
-    "comment_cnt": 3,
-    "reply_yn": "Y",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192172",
-    "source": "상상대로서울",
-    "cluster_id": 17,
+    "cluster_id": 10,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -33432,7 +32774,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192150",
     "source": "상상대로서울",
-    "cluster_id": 18,
+    "cluster_id": 11,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -33582,7 +32924,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192084",
     "source": "상상대로서울",
-    "cluster_id": 19,
+    "cluster_id": 12,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -33676,7 +33018,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191992",
     "source": "상상대로서울",
-    "cluster_id": 20,
+    "cluster_id": 13,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -34061,7 +33403,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191817",
     "source": "상상대로서울",
-    "cluster_id": 21,
+    "cluster_id": 14,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -34155,7 +33497,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191811",
     "source": "상상대로서울",
-    "cluster_id": 22,
+    "cluster_id": 15,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -34346,7 +33688,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191740",
     "source": "상상대로서울",
-    "cluster_id": 23,
+    "cluster_id": 16,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -34440,7 +33782,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191733",
     "source": "상상대로서울",
-    "cluster_id": 24,
+    "cluster_id": 17,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -34534,7 +33876,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191703",
     "source": "상상대로서울",
-    "cluster_id": 25,
+    "cluster_id": 18,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -34628,7 +33970,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191671",
     "source": "상상대로서울",
-    "cluster_id": 26,
+    "cluster_id": 19,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -34803,7 +34145,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191656",
     "source": "상상대로서울",
-    "cluster_id": 27,
+    "cluster_id": 20,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -34897,7 +34239,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191631",
     "source": "상상대로서울",
-    "cluster_id": 28,
+    "cluster_id": 21,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -35088,7 +34430,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191567",
     "source": "상상대로서울",
-    "cluster_id": 29,
+    "cluster_id": 22,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -35182,7 +34524,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191572",
     "source": "상상대로서울",
-    "cluster_id": 30,
+    "cluster_id": 23,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -35276,7 +34618,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191559",
     "source": "상상대로서울",
-    "cluster_id": 1,
+    "cluster_id": 24,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -35370,7 +34712,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191535",
     "source": "상상대로서울",
-    "cluster_id": 2,
+    "cluster_id": 25,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -35464,7 +34806,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191534",
     "source": "상상대로서울",
-    "cluster_id": 3,
+    "cluster_id": 26,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -35558,7 +34900,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191492",
     "source": "상상대로서울",
-    "cluster_id": 4,
+    "cluster_id": 27,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -36055,7 +35397,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191244",
     "source": "상상대로서울",
-    "cluster_id": 5,
+    "cluster_id": 28,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -36124,100 +35466,6 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
-    "id": "PROP-191241",
-    "title": "따릉이를 통한 실종 아동/노인 홍보를 제안합니다.",
-    "content": "따릉이를 통한 실종 아동/노인 홍보를 제안합니다. - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2021-09-13",
-    "vote_score": 12.0,
-    "comment_cnt": 0,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191241",
-    "source": "상상대로서울",
-    "cluster_id": 6,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
@@ -36628,100 +35876,6 @@ export const mockProposals: PolicyProposal[] = [
     ]
   },
   {
-    "id": "PROP-191033",
-    "title": "아동의 놀이권을 보장해 주세요.",
-    "content": "아동의 놀이권을 보장해 주세요. - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2021-08-18",
-    "vote_score": 10.0,
-    "comment_cnt": 4,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191033",
-    "source": "상상대로서울",
-    "cluster_id": 7,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
     "id": "PROP-191024",
     "title": "방치된 소공원 어린이공원  활용",
     "content": "방치된 소공원 어린이공원  활용 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
@@ -36740,7 +35894,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191024",
     "source": "상상대로서울",
-    "cluster_id": 8,
+    "cluster_id": 29,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -37525,100 +36679,6 @@ export const mockProposals: PolicyProposal[] = [
     ]
   },
   {
-    "id": "PROP-190366",
-    "title": "보호종료아동들의 처우를 개선해주세요",
-    "content": "보호종료아동들의 처우를 개선해주세요 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2021-06-08",
-    "vote_score": 43.0,
-    "comment_cnt": 2,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190366",
-    "source": "상상대로서울",
-    "cluster_id": 9,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
     "id": "PROP-190365",
     "title": "지하절 임산부 배려석 _ 인형 배치 제안",
     "content": "지하절 임산부 배려석 _ 인형 배치 제안 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
@@ -37637,7 +36697,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190365",
     "source": "상상대로서울",
-    "cluster_id": 10,
+    "cluster_id": 30,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -37884,7 +36944,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190302",
     "source": "상상대로서울",
-    "cluster_id": 11,
+    "cluster_id": 1,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -37978,7 +37038,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190300",
     "source": "상상대로서울",
-    "cluster_id": 12,
+    "cluster_id": 2,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -38072,7 +37132,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189949",
     "source": "상상대로서울",
-    "cluster_id": 13,
+    "cluster_id": 3,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -38303,7 +37363,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189719",
     "source": "상상대로서울",
-    "cluster_id": 14,
+    "cluster_id": 4,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -38397,7 +37457,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189693",
     "source": "상상대로서울",
-    "cluster_id": 15,
+    "cluster_id": 5,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -38491,7 +37551,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189694",
     "source": "상상대로서울",
-    "cluster_id": 16,
+    "cluster_id": 6,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -38585,7 +37645,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189697",
     "source": "상상대로서울",
-    "cluster_id": 17,
+    "cluster_id": 7,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -38776,7 +37836,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189621",
     "source": "상상대로서울",
-    "cluster_id": 18,
+    "cluster_id": 8,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -39176,7 +38236,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189364",
     "source": "상상대로서울",
-    "cluster_id": 19,
+    "cluster_id": 9,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -39270,7 +38330,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189336",
     "source": "상상대로서울",
-    "cluster_id": 20,
+    "cluster_id": 10,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -39558,7 +38618,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189234",
     "source": "상상대로서울",
-    "cluster_id": 21,
+    "cluster_id": 11,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -39846,7 +38906,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189190",
     "source": "상상대로서울",
-    "cluster_id": 22,
+    "cluster_id": 12,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -40481,7 +39541,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189143",
     "source": "상상대로서울",
-    "cluster_id": 23,
+    "cluster_id": 13,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -40687,7 +39747,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188888",
     "source": "상상대로서울",
-    "cluster_id": 24,
+    "cluster_id": 14,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -40860,100 +39920,6 @@ export const mockProposals: PolicyProposal[] = [
     ]
   },
   {
-    "id": "PROP-188880",
-    "title": "미등록이주아동 인권을 위한 홍보 프로젝트 기획을 제안 합니다",
-    "content": "미등록이주아동 인권을 위한 홍보 프로젝트 기획을 제안 합니다 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2020-11-21",
-    "vote_score": 7.0,
-    "comment_cnt": 1,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188880",
-    "source": "상상대로서울",
-    "cluster_id": 25,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
     "id": "PROP-188872",
     "title": "꿈나무카드(서울시아동급식카드) 가맹점 조회방식을 개선해주세요!",
     "content": "꿈나무카드(서울시아동급식카드) 가맹점 조회방식을 개선해주세요! - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
@@ -40972,7 +39938,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188872",
     "source": "상상대로서울",
-    "cluster_id": 26,
+    "cluster_id": 15,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -41122,7 +40088,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188816",
     "source": "상상대로서울",
-    "cluster_id": 27,
+    "cluster_id": 16,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -41563,7 +40529,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188674",
     "source": "상상대로서울",
-    "cluster_id": 28,
+    "cluster_id": 17,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -41657,7 +40623,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188671",
     "source": "상상대로서울",
-    "cluster_id": 29,
+    "cluster_id": 18,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -41751,7 +40717,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188612",
     "source": "상상대로서울",
-    "cluster_id": 30,
+    "cluster_id": 19,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -41845,7 +40811,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188607",
     "source": "상상대로서울",
-    "cluster_id": 1,
+    "cluster_id": 20,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -42327,7 +41293,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188412",
     "source": "상상대로서울",
-    "cluster_id": 2,
+    "cluster_id": 21,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -42421,7 +41387,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188337",
     "source": "상상대로서울",
-    "cluster_id": 3,
+    "cluster_id": 22,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -42490,100 +41456,6 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
-    "id": "PROP-188333",
-    "title": "서울을 넘어 경기도를 넘어 수도권에도 아동 친화적 인프라 확충과 강화",
-    "content": "서울을 넘어 경기도를 넘어 수도권에도 아동 친화적 인프라 확충과 강화 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2020-08-31",
-    "vote_score": 2.0,
-    "comment_cnt": 0,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188333",
-    "source": "상상대로서울",
-    "cluster_id": 4,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "아동보호팀",
-        "full_dept": "서울특별시 여성가족실 아동담당관 아동보호팀",
-        "phone": "02-2133-5303",
-        "location": "서울시청 9층",
-        "duty_summary": "○ 공적 입양체계 관련 및 보호출산제 업무 추진 ○ 입양(대상)아동 및 입양가족 지원(양육보조금, 보호비) ○ 팀예산 관련 업무 ○ 청년정책위원회(자립준비청년) 관련 업무 ○ 기타 타 직원에 속하지 않는 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "다문화지원팀",
-        "full_dept": "서울특별시 글로벌도시정책관 다문화담당관 다문화지원팀",
-        "phone": "02-2133-8696",
-        "location": "세종대로110 서울특별시청 8층",
-        "duty_summary": "ㅇ 이주여성 건강관리(건강검진, 출산교실 등) ㅇ 다문화가족 건강지원 서비스 강화에 관한 사항 ㅇ 다문화가족 시간제 아이돌봄 거점센터 운영 ㅇ 다문화가족 자녀 방문학습 지원사업 운영 ㅇ 다문화아동 외국어 교육 지원 사업 ㅇ FC 서울 축구교실, 다문화가족 국민주택 특별공급"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
@@ -42762,7 +41634,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188136",
     "source": "상상대로서울",
-    "cluster_id": 5,
+    "cluster_id": 23,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -42856,7 +41728,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188022",
     "source": "상상대로서울",
-    "cluster_id": 6,
+    "cluster_id": 24,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -43047,7 +41919,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187964",
     "source": "상상대로서울",
-    "cluster_id": 7,
+    "cluster_id": 25,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -43141,7 +42013,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187940",
     "source": "상상대로서울",
-    "cluster_id": 8,
+    "cluster_id": 26,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -43235,7 +42107,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187929",
     "source": "상상대로서울",
-    "cluster_id": 9,
+    "cluster_id": 27,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -43426,7 +42298,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187783",
     "source": "상상대로서울",
-    "cluster_id": 10,
+    "cluster_id": 28,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -43632,7 +42504,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187678",
     "source": "상상대로서울",
-    "cluster_id": 11,
+    "cluster_id": 29,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -43726,7 +42598,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187673",
     "source": "상상대로서울",
-    "cluster_id": 12,
+    "cluster_id": 30,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -43802,100 +42674,6 @@ export const mockProposals: PolicyProposal[] = [
     ]
   },
   {
-    "id": "PROP-187655",
-    "title": "결식아동을 돕는 꿈나무카드의 개선안을 제안합니다!",
-    "content": "결식아동을 돕는 꿈나무카드의 개선안을 제안합니다! - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2020-06-12",
-    "vote_score": 8.0,
-    "comment_cnt": 0,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187655",
-    "source": "상상대로서울",
-    "cluster_id": 13,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
     "id": "PROP-187651",
     "title": "임산부 출퇴근 택시비 감면 복지(바우쳐카드 허용 등)",
     "content": "임산부 출퇴근 택시비 감면 복지(바우쳐카드 허용 등) - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
@@ -43914,7 +42692,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187651",
     "source": "상상대로서울",
-    "cluster_id": 14,
+    "cluster_id": 1,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -44008,7 +42786,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187645",
     "source": "상상대로서울",
-    "cluster_id": 15,
+    "cluster_id": 2,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -44102,7 +42880,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187434",
     "source": "상상대로서울",
-    "cluster_id": 16,
+    "cluster_id": 3,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -44196,7 +42974,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187401",
     "source": "상상대로서울",
-    "cluster_id": 17,
+    "cluster_id": 4,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -44484,7 +43262,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187092",
     "source": "상상대로서울",
-    "cluster_id": 18,
+    "cluster_id": 5,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -44756,7 +43534,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187005",
     "source": "상상대로서울",
-    "cluster_id": 19,
+    "cluster_id": 6,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -44850,7 +43628,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186943",
     "source": "상상대로서울",
-    "cluster_id": 20,
+    "cluster_id": 7,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -45138,7 +43916,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186877",
     "source": "상상대로서울",
-    "cluster_id": 21,
+    "cluster_id": 8,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -45232,7 +44010,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186865",
     "source": "상상대로서울",
-    "cluster_id": 22,
+    "cluster_id": 9,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -45326,7 +44104,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186769",
     "source": "상상대로서울",
-    "cluster_id": 23,
+    "cluster_id": 10,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -45420,7 +44198,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186658",
     "source": "상상대로서울",
-    "cluster_id": 24,
+    "cluster_id": 11,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -45570,7 +44348,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186619",
     "source": "상상대로서울",
-    "cluster_id": 25,
+    "cluster_id": 12,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -45664,7 +44442,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186597",
     "source": "상상대로서울",
-    "cluster_id": 26,
+    "cluster_id": 13,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -45855,7 +44633,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186511",
     "source": "상상대로서울",
-    "cluster_id": 27,
+    "cluster_id": 14,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -45949,7 +44727,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186464",
     "source": "상상대로서울",
-    "cluster_id": 28,
+    "cluster_id": 15,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -46099,7 +44877,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186393",
     "source": "상상대로서울",
-    "cluster_id": 29,
+    "cluster_id": 16,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -46290,7 +45068,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186264",
     "source": "상상대로서울",
-    "cluster_id": 30,
+    "cluster_id": 17,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -46384,7 +45162,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186240",
     "source": "상상대로서울",
-    "cluster_id": 1,
+    "cluster_id": 18,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -46534,7 +45312,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186201",
     "source": "상상대로서울",
-    "cluster_id": 2,
+    "cluster_id": 19,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -46628,7 +45406,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186199",
     "source": "상상대로서울",
-    "cluster_id": 3,
+    "cluster_id": 20,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -46778,7 +45556,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186118",
     "source": "상상대로서울",
-    "cluster_id": 4,
+    "cluster_id": 21,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -47081,7 +45859,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185758",
     "source": "상상대로서울",
-    "cluster_id": 5,
+    "cluster_id": 22,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -47175,7 +45953,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185835",
     "source": "상상대로서울",
-    "cluster_id": 6,
+    "cluster_id": 23,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -47269,7 +46047,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185816",
     "source": "상상대로서울",
-    "cluster_id": 7,
+    "cluster_id": 24,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -47363,7 +46141,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185814",
     "source": "상상대로서울",
-    "cluster_id": 8,
+    "cluster_id": 25,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -47457,7 +46235,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185784",
     "source": "상상대로서울",
-    "cluster_id": 9,
+    "cluster_id": 26,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -47630,100 +46408,6 @@ export const mockProposals: PolicyProposal[] = [
     ]
   },
   {
-    "id": "PROP-185626",
-    "title": "서울시 방문 아동을 위한 다회용 교통카드시스템 신설",
-    "content": "서울시 방문 아동을 위한 다회용 교통카드시스템 신설 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2019-11-26",
-    "vote_score": 0.0,
-    "comment_cnt": 0,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185626",
-    "source": "상상대로서울",
-    "cluster_id": 10,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "건강팀",
-        "full_dept": "서울특별시 행정국 인력개발과 건강팀",
-        "phone": "02-2133-5785",
-        "location": "(04524) 서울특별시 중구 세종대로 110 본청 7층",
-        "duty_summary": "○ 서울시 직원 헬스케어 서비스 운영 - 만성질환(고혈압, 당뇨, 비만, 이상지질혈증)관리 프로그램 - 건강상담 및 진료예약 서비스 등 - 종합건강검진 예약관리시스템 - 종합건강검진 통계·분석 - 산전·산후 방문관리서비스 - 수면관리 프로그램 - 금연 프로그램 ○ 직원 대사증후군(혈압, 혈당, 콜레스테롤 등) 검진 ○ 출산준비교실 기획 및 운영 ○ 난임 직원 시술비 지원 ○ 사랑의 헌혈 행사 계획 및 운영 ○ 건강팀 서무 업무"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
     "id": "PROP-185569",
     "title": "규모가 큰 공원 내 시립어린이집+유치원 설립 및 운영",
     "content": "1. 제안배경 - 서울시 직장맘의 육아를 위한 시설이 많이 부족함 - 특히 직장맘을 위한 야간 근무 어린이집은 턱없이 부족한 현실 - 월드컵 공원은 부지가 넓고, 대규모 주차시설 완비, 어린이체험학습장 기운영 등 시립어린이집을 설립하여 운영할 수 있는 좋은 인프라가 구축되어 있음 2. 제안 내용 - 맞벌이 부모가 시간에 구애받지 않고 맞길 수 있는 최대규모의 시립어린이집 + 유치원 운영 - 서울시 거점별로 다른 큰 규모의 공원에서도 사업진행 3. 기대효과 - 공원의 기능을 다른 차원에서 접근하는 발상으로 시민복지 증진 도모 (최근 차고지를 컴팩트시티로 만드는 등 색다른 접근으로 시민복지에 기여하는 프로젝트가 많음) - 고용창출 효과 - 서울시 홍보효과 : 막대한 예산이 투여되나 정작 시민들은 많이 이용하지 못하고 유지비만 드는 공원이 아니라, 시민들에게 힘이되고 실질적인 도움을 주는 새로운 패러다임을 서울시가 주도 - 공원 관람객 증진 (아이들 마중 나온 부모들이 차를 주차하고 공원시설을 더 이용 가능, 일부러 오긴 힘드나 딜리버리로 올 경우 모객증진 효과 큼) 및 이를 통한 부대사업 증진 가능",
@@ -47798,7 +46482,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185502",
     "source": "상상대로서울",
-    "cluster_id": 11,
+    "cluster_id": 27,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -47892,7 +46576,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185480",
     "source": "상상대로서울",
-    "cluster_id": 12,
+    "cluster_id": 28,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -47986,7 +46670,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185429",
     "source": "상상대로서울",
-    "cluster_id": 13,
+    "cluster_id": 29,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -48080,7 +46764,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185430",
     "source": "상상대로서울",
-    "cluster_id": 14,
+    "cluster_id": 30,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -48174,7 +46858,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185383",
     "source": "상상대로서울",
-    "cluster_id": 15,
+    "cluster_id": 1,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -48718,7 +47402,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185260",
     "source": "상상대로서울",
-    "cluster_id": 16,
+    "cluster_id": 2,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -48850,100 +47534,6 @@ export const mockProposals: PolicyProposal[] = [
     "matched_policies": []
   },
   {
-    "id": "PROP-185251",
-    "title": "서울시 관계자님!&#774;&#776; ‘’아동놀이위원회’를 만들어주세요!",
-    "content": "서울시 관계자님!&#774;&#776; ‘’아동놀이위원회’를 만들어주세요! - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2019-09-20",
-    "vote_score": 6.0,
-    "comment_cnt": 0,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185251",
-    "source": "상상대로서울",
-    "cluster_id": 17,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
     "id": "PROP-185220",
     "title": "10월1일부터 개정되는 육아휴직관련법안관련",
     "content": "10월1일부터 육아휴직1년 +육아기 근로시간단축1년으로 변경된다고 들었습니다. 모든 8세미만의 엄마들에게 희소식이었으나. 이 제도가 10월 1일부터 육아휴직을 사용하는 사람에 한하여 적용이 된다는 설이 있어. 제안합니다. 제도의 취지는 8세미만의 아이가 있는 가정의 일과 양육의 밸런스를 맞춰주고자, 고충을 줄여주고자 하는것으로 보이는데. 10월 1일부터 육아휴직을 사용하는 사람부터 적용?? 이건 취지와 전혀 맞지 않는 것으로 생각됩니다. 한참전에 사용했던 사람들일지라도 8세가 되기 1년전에 있는 사람들이라면 해줘야 하는것으로 생각됩니다.  혹여 이렇게 하는것이 너무 무리가 된다면  당해년도 혹은 몇년전까지만으로도 유예기간을 둬야 하는것 아닐까요? 10월1일부터 사용하는 자. 에 해당하는 이 제도는 격어보지 못한 사람들의 그저 보여주기 식의 제도인것 같습니다. 19년 1월에 태어나 휴직을 몇개월 빨리 썼다는 이유로 적용을 받지 못하는것도 억울하며, 전년도에 태어나서 갓 돌 된아이를 갖고있는   .. 이제서야 복직을 해야하는 걱정에 잠못이루는 엄마들의 고충도 함께 생각해주시길 요청드립니다",
@@ -49018,7 +47608,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185190",
     "source": "상상대로서울",
-    "cluster_id": 18,
+    "cluster_id": 3,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -49112,101 +47702,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185158",
     "source": "상상대로서울",
-    "cluster_id": 19,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
-    "id": "PROP-185163",
-    "title": "장애 아동이 놀수 있는 장소와 나이 제한이 없었으면 합니다.",
-    "content": "장애 아동이 놀수 있는 장소와 나이 제한이 없었으면 합니다. - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2019-08-31",
-    "vote_score": 10.0,
-    "comment_cnt": 0,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185163",
-    "source": "상상대로서울",
-    "cluster_id": 20,
+    "cluster_id": 4,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -49300,7 +47796,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185120",
     "source": "상상대로서울",
-    "cluster_id": 21,
+    "cluster_id": 5,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -49394,7 +47890,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185087",
     "source": "상상대로서울",
-    "cluster_id": 22,
+    "cluster_id": 6,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -49488,7 +47984,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185086",
     "source": "상상대로서울",
-    "cluster_id": 23,
+    "cluster_id": 7,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -49582,7 +48078,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185076",
     "source": "상상대로서울",
-    "cluster_id": 24,
+    "cluster_id": 8,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -49676,7 +48172,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185069",
     "source": "상상대로서울",
-    "cluster_id": 25,
+    "cluster_id": 9,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -49770,7 +48266,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185071",
     "source": "상상대로서울",
-    "cluster_id": 26,
+    "cluster_id": 10,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -49864,7 +48360,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184868",
     "source": "상상대로서울",
-    "cluster_id": 27,
+    "cluster_id": 11,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -50055,7 +48551,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184851",
     "source": "상상대로서울",
-    "cluster_id": 28,
+    "cluster_id": 12,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -50149,7 +48645,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184839",
     "source": "상상대로서울",
-    "cluster_id": 29,
+    "cluster_id": 13,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -50243,7 +48739,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184828",
     "source": "상상대로서울",
-    "cluster_id": 30,
+    "cluster_id": 14,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -50337,7 +48833,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184757",
     "source": "상상대로서울",
-    "cluster_id": 1,
+    "cluster_id": 15,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -50431,7 +48927,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184729",
     "source": "상상대로서울",
-    "cluster_id": 2,
+    "cluster_id": 16,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -50525,7 +49021,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184659",
     "source": "상상대로서울",
-    "cluster_id": 3,
+    "cluster_id": 17,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -50619,7 +49115,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184649",
     "source": "상상대로서울",
-    "cluster_id": 4,
+    "cluster_id": 18,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -50769,7 +49265,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184600",
     "source": "상상대로서울",
-    "cluster_id": 5,
+    "cluster_id": 19,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -51587,7 +50083,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184534",
     "source": "상상대로서울",
-    "cluster_id": 6,
+    "cluster_id": 20,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -51681,7 +50177,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184476",
     "source": "상상대로서울",
-    "cluster_id": 7,
+    "cluster_id": 21,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -51775,7 +50271,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184454",
     "source": "상상대로서울",
-    "cluster_id": 8,
+    "cluster_id": 22,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -51869,7 +50365,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184443",
     "source": "상상대로서울",
-    "cluster_id": 9,
+    "cluster_id": 23,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -51963,7 +50459,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184433",
     "source": "상상대로서울",
-    "cluster_id": 10,
+    "cluster_id": 24,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -52154,7 +50650,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184423",
     "source": "상상대로서울",
-    "cluster_id": 11,
+    "cluster_id": 25,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -52304,7 +50800,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184410",
     "source": "상상대로서울",
-    "cluster_id": 12,
+    "cluster_id": 26,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -52632,7 +51128,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184175",
     "source": "상상대로서울",
-    "cluster_id": 13,
+    "cluster_id": 27,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -52823,7 +51319,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184163",
     "source": "상상대로서울",
-    "cluster_id": 14,
+    "cluster_id": 28,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -52998,7 +51494,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184107",
     "source": "상상대로서울",
-    "cluster_id": 15,
+    "cluster_id": 29,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -53092,7 +51588,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184041",
     "source": "상상대로서울",
-    "cluster_id": 16,
+    "cluster_id": 30,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -53242,7 +51738,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183875",
     "source": "상상대로서울",
-    "cluster_id": 17,
+    "cluster_id": 1,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -53336,7 +51832,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183833",
     "source": "상상대로서울",
-    "cluster_id": 18,
+    "cluster_id": 2,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -53430,7 +51926,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183817",
     "source": "상상대로서울",
-    "cluster_id": 19,
+    "cluster_id": 3,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -53580,7 +52076,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183638",
     "source": "상상대로서울",
-    "cluster_id": 20,
+    "cluster_id": 4,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -53924,7 +52420,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183574",
     "source": "상상대로서울",
-    "cluster_id": 21,
+    "cluster_id": 5,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -54503,7 +52999,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183452",
     "source": "상상대로서울",
-    "cluster_id": 22,
+    "cluster_id": 6,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -55454,7 +53950,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183344",
     "source": "상상대로서울",
-    "cluster_id": 23,
+    "cluster_id": 7,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -58070,7 +56566,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183154",
     "source": "상상대로서울",
-    "cluster_id": 24,
+    "cluster_id": 8,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -59037,7 +57533,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183047",
     "source": "상상대로서울",
-    "cluster_id": 25,
+    "cluster_id": 9,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -59131,7 +57627,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183038",
     "source": "상상대로서울",
-    "cluster_id": 26,
+    "cluster_id": 10,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -59378,7 +57874,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182912",
     "source": "상상대로서울",
-    "cluster_id": 27,
+    "cluster_id": 11,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -59472,7 +57968,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182913",
     "source": "상상대로서울",
-    "cluster_id": 28,
+    "cluster_id": 12,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -59566,7 +58062,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182914",
     "source": "상상대로서울",
-    "cluster_id": 29,
+    "cluster_id": 13,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -60328,7 +58824,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182826",
     "source": "상상대로서울",
-    "cluster_id": 30,
+    "cluster_id": 14,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -60422,7 +58918,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182797",
     "source": "상상대로서울",
-    "cluster_id": 1,
+    "cluster_id": 15,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -60595,100 +59091,6 @@ export const mockProposals: PolicyProposal[] = [
     ]
   },
   {
-    "id": "PROP-182767",
-    "title": "아동, 차별, 낙인없는 보편적 아동복지 필요",
-    "content": "아동, 차별, 낙인없는 보편적 아동복지 필요 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2018-10-23",
-    "vote_score": 0.0,
-    "comment_cnt": 0,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182767",
-    "source": "상상대로서울",
-    "cluster_id": 2,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
     "id": "PROP-182746",
     "title": "하나의 정책으로 일자리도 창출하고, 저출산 문제도 해결!",
     "content": "• 기존 어린이집 또는 유치원을 영유아 단기보호센터로 운영하여 은퇴 고령자를 보육 보조인력으로 채용 , 부모가 긴급히 자녀를 1 일 8 시간 내로 맡길 수 있는 육아지원 시설로 운영 • 은퇴 고령자 중 육아경험이 풍부한 자를 보육 보조원으로 채용하여 영유아 단기 보호센터에서 같이 근무하며 필요로 하는 가정에 직접 파견 나가는 육아도우미제도 운영",
@@ -60804,7 +59206,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182741",
     "source": "상상대로서울",
-    "cluster_id": 3,
+    "cluster_id": 16,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -60873,100 +59275,6 @@ export const mockProposals: PolicyProposal[] = [
         "policy_id": "임산부 출산급여 지원",
         "policy_name": "임산부 출산급여 지원",
         "summary": "ㅇ 임산부 출산급여 90만원 지원     ※고용노동부 ‘고용보험 미적용자 출산급여’ 150만원에 추가지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
-    "id": "PROP-182732",
-    "title": "차별없는 아동복지 정책을 실현해 주세요.",
-    "content": "차별없는 아동복지 정책을 실현해 주세요. - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2018-10-19",
-    "vote_score": 2.0,
-    "comment_cnt": 0,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182732",
-    "source": "상상대로서울",
-    "cluster_id": 4,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
         "apply_url": "https://umsa.seoul.go.kr/",
         "dept_name": "저출생사업1팀",
         "score": 30
@@ -61048,7 +59356,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182580",
     "source": "상상대로서울",
-    "cluster_id": 5,
+    "cluster_id": 17,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -61142,7 +59450,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182581",
     "source": "상상대로서울",
-    "cluster_id": 6,
+    "cluster_id": 18,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -61315,100 +59623,6 @@ export const mockProposals: PolicyProposal[] = [
     ]
   },
   {
-    "id": "PROP-182505",
-    "title": "강북구 미아동258번지에 임대아파트는 어떤지요??",
-    "content": "강북구 미아동258번지에 임대아파트는 어떤지요?? - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2018-09-27",
-    "vote_score": 2.0,
-    "comment_cnt": 1,
-    "reply_yn": "N",
-    "district": "강북구",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182505",
-    "source": "상상대로서울",
-    "cluster_id": 7,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
     "id": "PROP-182496",
     "title": "저출산 대책(국민연금  수령연령과 연계)",
     "content": "3자녀에게는  국민연금  수령연령  3년 일찍받기 4자녀에게는  4년 5자녀는  5년 ................... 여성  기준으로  아이  수에 따라서  혜택을  주면  많이  낳지  않을까요?",
@@ -61483,7 +59697,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182481",
     "source": "상상대로서울",
-    "cluster_id": 8,
+    "cluster_id": 19,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -61577,7 +59791,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182392",
     "source": "상상대로서울",
-    "cluster_id": 9,
+    "cluster_id": 20,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -61671,7 +59885,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182378",
     "source": "상상대로서울",
-    "cluster_id": 10,
+    "cluster_id": 21,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -61765,7 +59979,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182221",
     "source": "상상대로서울",
-    "cluster_id": 11,
+    "cluster_id": 22,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -61859,7 +60073,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182211",
     "source": "상상대로서울",
-    "cluster_id": 12,
+    "cluster_id": 23,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -62050,7 +60264,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182200",
     "source": "상상대로서울",
-    "cluster_id": 13,
+    "cluster_id": 24,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -62144,7 +60358,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182192",
     "source": "상상대로서울",
-    "cluster_id": 14,
+    "cluster_id": 25,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -62238,7 +60452,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182151",
     "source": "상상대로서울",
-    "cluster_id": 15,
+    "cluster_id": 26,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -62767,7 +60981,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181809",
     "source": "상상대로서울",
-    "cluster_id": 16,
+    "cluster_id": 27,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -62843,100 +61057,6 @@ export const mockProposals: PolicyProposal[] = [
     ]
   },
   {
-    "id": "PROP-181791",
-    "title": "근로자녀장려금 지급기준",
-    "content": "근로자녀장려금 지급기준 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
-    "reg_date": "2018-07-18",
-    "vote_score": 0.0,
-    "comment_cnt": 1,
-    "reply_yn": "N",
-    "district": "미상",
-    "category_raw": "보육",
-    "category": "보육·돌봄 인프라",
-    "sub_category": "어린이·아동 생활환경",
-    "micro_category": "아동친화 환경·시설",
-    "policy_flow": "영유아·초등 돌봄",
-    "department": [
-      "돌봄사업팀"
-    ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181791",
-    "source": "상상대로서울",
-    "cluster_id": 17,
-    "cluster_size": 5,
-    "negative_signal": false,
-    "department_rankings": [
-      {
-        "rank": 1,
-        "role_type": "주관부서",
-        "dept_name": "돌봄사업팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 돌봄사업팀",
-        "phone": "02-2133-6560",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 아이돌봄 지원사업 운영 관리 - 자치구 대기인원 관리 등 운영 현황 관리 ㅇ 서울형 틈새3종 아이돌봄 지원사업 추진 - 영아전담·등하원·병원동행·하원특화 아이돌봄 ㅇ 둘째출산시 첫째아이 돌봄 지원 사업 추진"
-      },
-      {
-        "rank": 2,
-        "role_type": "협조부서 (2순위)",
-        "dept_name": "가족지원팀",
-        "full_dept": "서울특별시 여성가족실 가족담당관 가족지원팀",
-        "phone": "02-2133-6562",
-        "location": "서울특별시 중구 세종대로 110 서울시청 9층",
-        "duty_summary": "ㅇ 위기임산부 통합지원사업 추진 - 통합지원센터 운영지원 및 관리 - 위기임산부 지원 자원 발굴, 지원 등 실적 관리 - 위기임산부 쉼터 운영지원 ㅇ 지역상담기관 운영지원 - 지역상담기관 심사·지정, 관리·감독 및 예산관리 - 보호출산 관련 업무 지원 - 의사능력심의위원회 구성·운영 ㅇ 경계선지능 한부모·자녀 지원 계획수립, 지원 자원 발굴 등 ㅇ 한부모가족정책 시행계획 수립(여성가족부) ㅇ 서울시 거주 한부모가족 생활 실태조사 연구 ㅇ 서울시 한부모가족지원센터 운영 ㅇ 팀내 타 직원에 속하지 않은 업무"
-      },
-      {
-        "rank": 3,
-        "role_type": "협조부서 (3순위)",
-        "dept_name": "저출생사업1팀",
-        "full_dept": "서울특별시 여성가족실 저출생담당관 저출생사업1팀",
-        "phone": "02-2133-5025",
-        "location": "서울 중구 세종대로 110. 9층",
-        "duty_summary": "ㅇ 자녀출산 무주택가구 주거비 지원사업 추진 - 사회보장제도 협의, 신청시스템 및 지급시스템 관리, 사업홍보 ㅇ 자녀출산 무주택가구 주거비 지원사업 대행기관 관리"
-      }
-    ],
-    "matched_policies": [
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 결혼ㆍ살림비용 지원",
-        "summary": "ㅇ 결혼ㆍ살림 비용 최대 100만원 지원    - 결혼준비 및 혼인살림 장만 관련 비용 지출    ※ 생애 1회 지급   ? 결혼준비 : 혼수, 예식장, 신혼여행, 청첩장 등    ? 혼인살림 : 전자제품, 주방가전...",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "다문화지원팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "자녀출산 무주택가구 주거비 지원",
-        "summary": "월 최대 30만원(2년간 최대 720만원) 주거비 지원",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼희망타운",
-        "summary": "신혼희망타운 분양?임대주택 공급 및 청약 자격 제공",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "기타부서",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 전용 주택 구입 자금 대출",
-        "summary": "연 2.55~3.85% 금리로 주택구입 자금 대출, 최대 3억 2천만 원 한도",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      },
-      {
-        "policy_id": " ",
-        "policy_name": "신혼부부 임차보증금 이자 지원",
-        "summary": "- 임차보증금 대출금: 최대 3억원(임차보증금의 90% 이내) - 이자지원 금리: 최대 4.5% - 지원기간: 최장 10년(25.11.20. 부터 최장 12년) ※ 자세한 사항은 서울주거포털 공고문 참조",
-        "apply_url": "https://umsa.seoul.go.kr/",
-        "dept_name": "저출생사업1팀",
-        "score": 30
-      }
-    ]
-  },
-  {
     "id": "PROP-181777",
     "title": "임산부석 좌석 알람제",
     "content": "임산부석 좌석 알람제 - 서울시 출산·육아 및 신혼부부 주거 지원을 위해 접수된 시민 정책 제안입니다. (상상대로 서울)",
@@ -62955,7 +61075,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181777",
     "source": "상상대로서울",
-    "cluster_id": 18,
+    "cluster_id": 28,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -63049,7 +61169,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181693",
     "source": "상상대로서울",
-    "cluster_id": 19,
+    "cluster_id": 29,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -63143,7 +61263,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181602",
     "source": "상상대로서울",
-    "cluster_id": 20,
+    "cluster_id": 30,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -63415,7 +61535,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181390",
     "source": "상상대로서울",
-    "cluster_id": 21,
+    "cluster_id": 1,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -63606,7 +61726,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181276",
     "source": "상상대로서울",
-    "cluster_id": 22,
+    "cluster_id": 2,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -63756,7 +61876,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181060",
     "source": "상상대로서울",
-    "cluster_id": 23,
+    "cluster_id": 3,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -63850,7 +61970,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181051",
     "source": "상상대로서울",
-    "cluster_id": 24,
+    "cluster_id": 4,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -63944,7 +62064,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181019",
     "source": "상상대로서울",
-    "cluster_id": 25,
+    "cluster_id": 5,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -64038,7 +62158,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181006",
     "source": "상상대로서울",
-    "cluster_id": 26,
+    "cluster_id": 6,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -64285,7 +62405,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180862",
     "source": "상상대로서울",
-    "cluster_id": 27,
+    "cluster_id": 7,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -64831,7 +62951,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180560",
     "source": "상상대로서울",
-    "cluster_id": 28,
+    "cluster_id": 8,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -64925,7 +63045,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180512",
     "source": "상상대로서울",
-    "cluster_id": 29,
+    "cluster_id": 9,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -65019,7 +63139,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180506",
     "source": "상상대로서울",
-    "cluster_id": 30,
+    "cluster_id": 10,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -65363,7 +63483,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180451",
     "source": "상상대로서울",
-    "cluster_id": 1,
+    "cluster_id": 11,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -65513,7 +63633,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180438",
     "source": "상상대로서울",
-    "cluster_id": 2,
+    "cluster_id": 12,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -65663,7 +63783,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180374",
     "source": "상상대로서울",
-    "cluster_id": 3,
+    "cluster_id": 13,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -65813,7 +63933,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180344",
     "source": "상상대로서울",
-    "cluster_id": 4,
+    "cluster_id": 14,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -65907,7 +64027,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180332",
     "source": "상상대로서울",
-    "cluster_id": 5,
+    "cluster_id": 15,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -66138,7 +64258,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180235",
     "source": "상상대로서울",
-    "cluster_id": 6,
+    "cluster_id": 16,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -66329,7 +64449,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180213",
     "source": "상상대로서울",
-    "cluster_id": 7,
+    "cluster_id": 17,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -66423,7 +64543,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180149",
     "source": "상상대로서울",
-    "cluster_id": 8,
+    "cluster_id": 18,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -66517,7 +64637,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180134",
     "source": "상상대로서울",
-    "cluster_id": 9,
+    "cluster_id": 19,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -66611,7 +64731,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180131",
     "source": "상상대로서울",
-    "cluster_id": 10,
+    "cluster_id": 20,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -66939,7 +65059,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180034",
     "source": "상상대로서울",
-    "cluster_id": 11,
+    "cluster_id": 21,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -67033,7 +65153,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180018",
     "source": "상상대로서울",
-    "cluster_id": 12,
+    "cluster_id": 22,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -67127,7 +65247,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180013",
     "source": "상상대로서울",
-    "cluster_id": 13,
+    "cluster_id": 23,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -67527,7 +65647,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179975",
     "source": "상상대로서울",
-    "cluster_id": 14,
+    "cluster_id": 24,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -67621,7 +65741,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179981",
     "source": "상상대로서울",
-    "cluster_id": 15,
+    "cluster_id": 25,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -67715,7 +65835,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179928",
     "source": "상상대로서울",
-    "cluster_id": 16,
+    "cluster_id": 26,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -68003,7 +66123,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179861",
     "source": "상상대로서울",
-    "cluster_id": 17,
+    "cluster_id": 27,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
@@ -68097,7 +66217,7 @@ export const mockProposals: PolicyProposal[] = [
     ],
     "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179798",
     "source": "상상대로서울",
-    "cluster_id": 18,
+    "cluster_id": 28,
     "cluster_size": 5,
     "negative_signal": false,
     "department_rankings": [
