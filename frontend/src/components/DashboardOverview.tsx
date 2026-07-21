@@ -296,10 +296,16 @@ export const DashboardOverview: React.FC<Props> = ({
               <span className="text-[10px] bg-slate-100 text-slate-500 font-bold px-1.5 py-0.5 rounded font-mono">부서 매칭 카운트</span>
             </div>
             
-            <div className="h-[185px] w-full">
+            <div className="h-[210px] w-full">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={deptStatsProcessed} margin={{ top: 10, right: 10, left: -25, bottom: 5 }}>
-                  <XAxis dataKey="name" tick={{ fontSize: 9 }} />
+                <BarChart data={deptStatsProcessed} margin={{ top: 10, right: 10, left: -25, bottom: 35 }}>
+                  <XAxis 
+                    dataKey="name" 
+                    tick={{ fontSize: 9, fill: '#475569', fontWeight: 600 }} 
+                    angle={-30} 
+                    textAnchor="end" 
+                    interval={0}
+                  />
                   <YAxis tick={{ fontSize: 9 }} />
                   <Tooltip 
                     contentStyle={{ borderRadius: '6px', fontSize: '11px', fontWeight: 'bold' }}
@@ -308,8 +314,8 @@ export const DashboardOverview: React.FC<Props> = ({
                       (name === '답변 완료' || name === 'answered') ? '답변 완료' : '미답변 (검토 중)'
                     ]}
                   />
-                  <Bar dataKey="answered" name="답변 완료" stackId="dept" fill="#cbd5e1" barSize={14} radius={[0, 0, 2, 2]} />
-                  <Bar dataKey="unanswered" name="미답변" stackId="dept" fill="#f43f5e" barSize={14} radius={[3, 3, 0, 0]} />
+                  <Bar dataKey="answered" name="답변 완료" stackId="dept" fill="#cbd5e1" barSize={12} radius={[0, 0, 2, 2]} />
+                  <Bar dataKey="unanswered" name="미답변" stackId="dept" fill="#f43f5e" barSize={12} radius={[3, 3, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>
