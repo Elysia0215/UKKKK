@@ -1,4 +1,4 @@
-// 100% 규칙기반 설명가능 부서 매칭근거 포함 426건 mockData
+// 100% 온전한 대분류/중분류/세분류/담당부서 426건 mockData
 import { PolicyProposal, DistrictStat, DashboardStats } from './types';
 
 export type { PolicyProposal as Proposal };
@@ -35002,16 +35002,13 @@ export function extractTopKeywords(proposals: PolicyProposal[], limit = 30): { k
 export function getDepartmentStats(proposals: PolicyProposal[]): { name: string; total: number; unanswered: number; rate: number }[] {
   const stats: Record<string, { total: number; unanswered: number }> = {};
   proposals.forEach(p => {
-    if (Array.isArray(p.department)) {
-      p.department.forEach(dept => {
-        if (!stats[dept]) {
-          stats[dept] = { total: 0, unanswered: 0 };
-        }
-        stats[dept].total += 1;
-        if (p.reply_yn === 'N') {
-          stats[dept].unanswered += 1;
-        }
-      });
+    const primaryDept = p.department_rankings?.[0]?.dept_name || (Array.isArray(p.department) ? p.department[0] : '미지정');
+    if (!stats[primaryDept]) {
+      stats[primaryDept] = { total: 0, unanswered: 0 };
+    }
+    stats[primaryDept].total += 1;
+    if (p.reply_yn === 'N') {
+      stats[primaryDept].unanswered += 1;
     }
   });
 

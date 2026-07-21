@@ -111,8 +111,9 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
       const matchesMicroCategory = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
       // 3) 정책 흐름 필터
       const matchesFlow = selectedFlow === '전체' || p.policy_flow === selectedFlow;
-      // 4) 부서 필터
-      const matchesDept = selectedDept === '전체' || p.department.includes(selectedDept as DepartmentName);
+      // 4) 1순위 주관부서 기준 필터
+      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
+      const matchesDept = selectedDept === '전체' || primaryDept === selectedDept || p.department.includes(selectedDept as DepartmentName);
       // 5) 정책 공백 토글 (미답변 N 이면서 공감수 150 이상)
       const matchesGap = !onlyShowGaps || (p.reply_yn === 'N' && p.vote_score >= 150);
 
@@ -129,7 +130,8 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
         const matchesSubCategory = selectedSubCategory === '전체' || p.sub_category === selectedSubCategory;
         const matchesMicroCategory = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
         const matchesFlow = selectedFlow === '전체' || p.policy_flow === selectedFlow;
-        const matchesDept = selectedDept === '전체' || p.department.includes(selectedDept as DepartmentName);
+        const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
+        const matchesDept = selectedDept === '전체' || primaryDept === selectedDept || p.department.includes(selectedDept as DepartmentName);
         const matchesGap = !onlyShowGaps || (p.reply_yn === 'N' && p.vote_score >= 150);
         return matchesSearch && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap;
       });
@@ -195,16 +197,16 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
     });
     return ['전체', ...Array.from(set)];
   }, [proposals]);
-  const departments: string[] = [
-    '전체',
-    '저출생사업1팀',
-    '건강임신지원팀',
-    '가족건강팀',
-    '돌봄사업팀',
-    '가족지원팀',
-    '아동보호팀',
-    '다문화지원팀'
-  ];
+
+  // 1순위 주관부서 동적 목록 (단순 합산 시 426건 1:1 매칭)
+  const departments: string[] = useMemo(() => {
+    const set = new Set<string>();
+    proposals.forEach(p => {
+      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0];
+      if (primaryDept) set.add(primaryDept);
+    });
+    return ['전체', ...Array.from(set)];
+  }, [proposals]);
 
   const handleExportProposals = () => {
     const listToExport = viewMode === 'group'
