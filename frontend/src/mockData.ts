@@ -1,4 +1,4 @@
-// 426건 실제 스크래핑 및 통계데이터 기반 mockData (2026.07.21 자동 생성)
+// 426건 및 국민권익위 민원 연동 수량 포함 mockData (2026.07.21 자동 생성)
 
 export interface Proposal {
   id: string;
@@ -12,6 +12,8 @@ export interface Proposal {
   category: string;
   department: string[];
   url?: string;
+  source?: string;
+  related_civil_requests?: number;
   negative_signal?: boolean;
 }
 
@@ -209,7 +211,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202286"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202286",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": true
   },
   {
     "id": "PROP-202259",
@@ -226,7 +231,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202259"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202259",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-202224",
@@ -242,7 +250,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202224"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202224",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-202117",
@@ -257,7 +268,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202117"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202117",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-201815",
@@ -274,7 +288,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201815"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201815",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": true
   },
   {
     "id": "PROP-201727",
@@ -289,7 +306,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201727"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201727",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201726",
@@ -304,7 +324,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201726"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201726",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201705",
@@ -319,7 +342,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201705"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201705",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201656",
@@ -335,7 +361,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201656"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201656",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201636",
@@ -350,7 +379,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201636"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201636",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-201635",
@@ -367,7 +399,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201635"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201635",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-201617",
@@ -382,7 +417,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201617"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201617",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201586",
@@ -399,7 +437,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201586"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201586",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-201566",
@@ -414,7 +455,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201566"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201566",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201550",
@@ -431,7 +475,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201550"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201550",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201541",
@@ -446,7 +493,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201541"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201541",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201539",
@@ -461,7 +511,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201539"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201539",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201521",
@@ -476,7 +529,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201521"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201521",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201278",
@@ -492,7 +548,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201278"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201278",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-201115",
@@ -509,7 +568,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201115"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201115",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-201102",
@@ -525,7 +587,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201102"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201102",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-201086",
@@ -540,7 +605,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201086"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201086",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-200951",
@@ -555,7 +623,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200951"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200951",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-200449",
@@ -570,7 +641,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200449"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200449",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-200312",
@@ -586,7 +660,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200312"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200312",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-200093",
@@ -601,7 +678,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200093"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200093",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-200064",
@@ -617,7 +697,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200064"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200064",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-200040",
@@ -632,7 +715,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200040"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200040",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-200023",
@@ -649,7 +735,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200023"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200023",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-199926",
@@ -665,7 +754,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199926"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199926",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": true
   },
   {
     "id": "PROP-199700",
@@ -682,7 +774,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199700"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199700",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-199587",
@@ -699,7 +794,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199587"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199587",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-199547",
@@ -715,7 +813,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199547"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199547",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-199206",
@@ -730,7 +831,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199206"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199206",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-199143",
@@ -747,7 +851,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199143"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199143",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": true
   },
   {
     "id": "PROP-199139",
@@ -762,7 +869,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199139"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199139",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-199120",
@@ -777,7 +887,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199120"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199120",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-199065",
@@ -792,7 +905,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199065"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199065",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-199064",
@@ -807,7 +923,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199064"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199064",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-199063",
@@ -822,7 +941,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199063"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199063",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-199044",
@@ -837,7 +959,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199044"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199044",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-198980",
@@ -852,7 +977,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198980"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198980",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-198885",
@@ -869,7 +997,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198885"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198885",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-198826",
@@ -886,7 +1017,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198826"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198826",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-198705",
@@ -902,7 +1036,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198705"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198705",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-198624",
@@ -919,7 +1056,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198624"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198624",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-198485",
@@ -934,7 +1074,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198485"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198485",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-198406",
@@ -949,7 +1092,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198406"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198406",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-198295",
@@ -966,7 +1112,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198295"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198295",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-198288",
@@ -983,7 +1132,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198288"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198288",
+    "source": "상상대로서울",
+    "related_civil_requests": 130,
+    "negative_signal": false
   },
   {
     "id": "PROP-198269",
@@ -998,7 +1150,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198269"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198269",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-198265",
@@ -1015,7 +1170,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198265"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198265",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-198243",
@@ -1030,7 +1188,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198243"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198243",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-198192",
@@ -1047,7 +1208,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198192"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198192",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-198151",
@@ -1064,7 +1228,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198151"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198151",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-198137",
@@ -1079,7 +1246,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198137"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198137",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-198127",
@@ -1096,7 +1266,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198127"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198127",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-198104",
@@ -1111,7 +1284,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198104"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198104",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-198050",
@@ -1126,7 +1302,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198050"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198050",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-197942",
@@ -1141,7 +1320,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197942"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197942",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-197913",
@@ -1157,7 +1339,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197913"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197913",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-197853",
@@ -1174,7 +1359,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197853"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197853",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-197727",
@@ -1191,7 +1379,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197727"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197727",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-197702",
@@ -1206,7 +1397,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197702"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197702",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-197602",
@@ -1223,7 +1417,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197602"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197602",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-197507",
@@ -1240,7 +1437,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197507"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197507",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-197491",
@@ -1256,7 +1456,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197491"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197491",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-197236",
@@ -1271,7 +1474,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197236"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197236",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-197233",
@@ -1288,7 +1494,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197233"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197233",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-197063",
@@ -1303,7 +1512,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197063"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197063",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-197030",
@@ -1318,7 +1530,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197030"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197030",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-196911",
@@ -1333,7 +1548,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196911"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196911",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-196831",
@@ -1350,7 +1568,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196831"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196831",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-196793",
@@ -1365,7 +1586,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196793"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196793",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-196601",
@@ -1381,7 +1605,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196601"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196601",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-196561",
@@ -1398,7 +1625,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196561"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196561",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-196496",
@@ -1414,7 +1644,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196496"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196496",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-196484",
@@ -1430,7 +1663,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196484"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196484",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-196336",
@@ -1447,7 +1683,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196336"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196336",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-196279",
@@ -1464,7 +1703,10 @@ export const mockProposals: Proposal[] = [
       "가족지원팀",
       "저출생사업1팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196279"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196279",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-196273",
@@ -1481,7 +1723,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196273"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196273",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-196265",
@@ -1498,7 +1743,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196265"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196265",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-196238",
@@ -1514,7 +1762,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196238"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196238",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-196215",
@@ -1530,7 +1781,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196215"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196215",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-196096",
@@ -1547,7 +1801,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196096"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196096",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-196094",
@@ -1564,7 +1821,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196094"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196094",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-196093",
@@ -1580,7 +1840,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196093"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196093",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-195893",
@@ -1597,7 +1860,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195893"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195893",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-195827",
@@ -1614,7 +1880,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195827"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195827",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-195730",
@@ -1629,7 +1898,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195730"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195730",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-195711",
@@ -1644,7 +1916,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195711"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195711",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-195684",
@@ -1659,7 +1934,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195684"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195684",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-195676",
@@ -1674,7 +1952,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195676"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195676",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-195671",
@@ -1691,7 +1972,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195671"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195671",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-195665",
@@ -1706,7 +1990,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195665"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195665",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": true
   },
   {
     "id": "PROP-195663",
@@ -1722,7 +2009,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195663"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195663",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-195661",
@@ -1738,7 +2028,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195661"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195661",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-195657",
@@ -1753,7 +2046,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195657"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195657",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-195558",
@@ -1768,7 +2064,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195558"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195558",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-195496",
@@ -1783,7 +2082,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195496"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195496",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-195464",
@@ -1800,7 +2102,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195464"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195464",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-195458",
@@ -1816,7 +2121,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195458"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195458",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-195098",
@@ -1831,7 +2139,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195098"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195098",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-194899",
@@ -1848,7 +2159,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194899"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194899",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-194881",
@@ -1865,7 +2179,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194881"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194881",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-194877",
@@ -1880,7 +2197,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194877"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194877",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-194854",
@@ -1897,7 +2217,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194854"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194854",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-194750",
@@ -1914,7 +2237,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194750"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194750",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-194732",
@@ -1929,7 +2255,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194732"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194732",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-194719",
@@ -1945,7 +2274,10 @@ export const mockProposals: Proposal[] = [
       "가족지원팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194719"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194719",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-194713",
@@ -1961,7 +2293,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194713"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194713",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-194667",
@@ -1978,7 +2313,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194667"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194667",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-194610",
@@ -1993,7 +2331,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194610"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194610",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-194484",
@@ -2010,7 +2351,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194484"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194484",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-194469",
@@ -2025,7 +2369,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194469"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194469",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-194363",
@@ -2041,7 +2388,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194363"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194363",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-194360",
@@ -2058,7 +2408,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "저출생사업1팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194360"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194360",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-194332",
@@ -2074,7 +2427,10 @@ export const mockProposals: Proposal[] = [
       "가족지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194332"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194332",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-194324",
@@ -2090,7 +2446,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194324"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194324",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-194273",
@@ -2106,7 +2465,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194273"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194273",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-194248",
@@ -2123,7 +2485,10 @@ export const mockProposals: Proposal[] = [
       "가족지원팀",
       "다문화지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194248"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194248",
+    "source": "상상대로서울",
+    "related_civil_requests": 90,
+    "negative_signal": false
   },
   {
     "id": "PROP-194167",
@@ -2139,7 +2504,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194167"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194167",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-194164",
@@ -2155,7 +2523,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194164"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194164",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": true
   },
   {
     "id": "PROP-194163",
@@ -2170,7 +2541,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "저출생사업1팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194163"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194163",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-194145",
@@ -2186,7 +2560,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194145"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194145",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-194144",
@@ -2202,7 +2579,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194144"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194144",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-194129",
@@ -2217,7 +2597,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194129"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194129",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-194046",
@@ -2233,7 +2616,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194046"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194046",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-193970",
@@ -2248,7 +2634,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193970"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193970",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-193884",
@@ -2263,7 +2652,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193884"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193884",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-193853",
@@ -2279,7 +2671,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193853"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193853",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-193727",
@@ -2294,7 +2689,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193727"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193727",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-193695",
@@ -2310,7 +2708,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193695"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193695",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-193669",
@@ -2325,7 +2726,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193669"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193669",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-193598",
@@ -2342,7 +2746,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193598"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193598",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-193589",
@@ -2357,7 +2764,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193589"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193589",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-193306",
@@ -2372,7 +2782,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193306"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193306",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-193159",
@@ -2387,7 +2800,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193159"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193159",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-193131",
@@ -2404,7 +2820,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193131"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193131",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-193097",
@@ -2419,7 +2838,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193097"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193097",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-192909",
@@ -2434,7 +2856,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192909"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192909",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-192871",
@@ -2449,7 +2874,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192871"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192871",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-192865",
@@ -2464,7 +2892,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192865"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192865",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-192326",
@@ -2480,7 +2911,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192326"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192326",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-192106",
@@ -2495,7 +2929,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192106"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192106",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-191846",
@@ -2511,7 +2948,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191846"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191846",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-191836",
@@ -2526,7 +2966,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191836"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191836",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-191657",
@@ -2541,7 +2984,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191657"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191657",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-191470",
@@ -2557,7 +3003,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191470"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191470",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-191363",
@@ -2572,7 +3021,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191363"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191363",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-191294",
@@ -2588,7 +3040,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "저출생사업1팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191294"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191294",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-191232",
@@ -2604,7 +3059,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191232"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191232",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-191195",
@@ -2621,7 +3079,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "저출생사업1팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191195"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191195",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-191054",
@@ -2637,7 +3098,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191054"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191054",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-191053",
@@ -2653,7 +3117,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191053"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191053",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-191049",
@@ -2669,7 +3136,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191049"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191049",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-190968",
@@ -2684,7 +3154,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190968"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190968",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-190902",
@@ -2699,7 +3172,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190902"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190902",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-190681",
@@ -2714,7 +3190,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190681"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190681",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-190633",
@@ -2731,7 +3210,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190633"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190633",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-190617",
@@ -2746,7 +3228,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190617"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190617",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-190545",
@@ -2763,7 +3248,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190545"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190545",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-190426",
@@ -2778,7 +3266,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190426"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190426",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-190358",
@@ -2793,7 +3284,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190358"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190358",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-190352",
@@ -2808,7 +3302,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190352"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190352",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-189934",
@@ -2823,7 +3320,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189934"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189934",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-189861",
@@ -2839,7 +3339,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189861"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189861",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-189652",
@@ -2854,7 +3357,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189652"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189652",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-189401",
@@ -2869,7 +3375,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189401"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189401",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-189236",
@@ -2885,7 +3394,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189236"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189236",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-189218",
@@ -2900,7 +3412,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189218"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189218",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-189200",
@@ -2915,7 +3430,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189200"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189200",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-189155",
@@ -2930,7 +3448,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189155"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189155",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-189150",
@@ -2945,7 +3466,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189150"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189150",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-189149",
@@ -2960,7 +3484,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189149"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189149",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-189148",
@@ -2975,7 +3502,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189148"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189148",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-189145",
@@ -2990,7 +3520,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189145"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189145",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-189144",
@@ -3006,7 +3539,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "다문화지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189144"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189144",
+    "source": "상상대로서울",
+    "related_civil_requests": 90,
+    "negative_signal": false
   },
   {
     "id": "PROP-189075",
@@ -3022,7 +3558,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189075"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189075",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-189067",
@@ -3037,7 +3576,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189067"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189067",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-188884",
@@ -3052,7 +3594,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188884"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188884",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-188854",
@@ -3069,7 +3614,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188854"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188854",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-188801",
@@ -3084,7 +3632,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188801"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188801",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-188788",
@@ -3099,7 +3650,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188788"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188788",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-188675",
@@ -3115,7 +3669,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188675"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188675",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-188468",
@@ -3130,7 +3687,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188468"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188468",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-188264",
@@ -3145,7 +3705,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188264"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188264",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-188170",
@@ -3160,7 +3723,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188170"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188170",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-187957",
@@ -3176,7 +3742,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187957"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187957",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-187873",
@@ -3192,7 +3761,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187873"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187873",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-187774",
@@ -3207,7 +3779,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187774"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187774",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-187760",
@@ -3222,7 +3797,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187760"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187760",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-187366",
@@ -3237,7 +3815,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187366"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187366",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-187052",
@@ -3252,7 +3833,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187052"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187052",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-186586",
@@ -3267,7 +3851,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186586"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186586",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-186461",
@@ -3282,7 +3869,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186461"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186461",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-186221",
@@ -3298,7 +3888,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186221"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186221",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-186176",
@@ -3313,7 +3906,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186176"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186176",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-185985",
@@ -3328,7 +3924,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185985"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185985",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-185793",
@@ -3343,7 +3942,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185793"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185793",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-185569",
@@ -3358,7 +3960,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185569"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185569",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-185295",
@@ -3373,7 +3978,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185295"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185295",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-185291",
@@ -3388,7 +3996,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "저출생사업1팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185291"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185291",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-185286",
@@ -3403,7 +4014,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185286"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185286",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-185280",
@@ -3418,7 +4032,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185280"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185280",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-185277",
@@ -3433,7 +4050,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185277"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185277",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-185272",
@@ -3448,7 +4068,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185272"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185272",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-185243",
@@ -3463,7 +4086,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185243"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185243",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-185220",
@@ -3478,7 +4104,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185220"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185220",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-184852",
@@ -3493,7 +4122,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184852"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184852",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-184604",
@@ -3509,7 +4141,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "다문화지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184604"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184604",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-184573",
@@ -3524,7 +4159,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184573"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184573",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-184570",
@@ -3539,7 +4177,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184570"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184570",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-184569",
@@ -3554,7 +4195,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184569"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184569",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-184568",
@@ -3569,7 +4213,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184568"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184568",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-184567",
@@ -3584,7 +4231,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184567"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184567",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-184566",
@@ -3599,7 +4249,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184566"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184566",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-184408",
@@ -3614,7 +4267,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184408"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184408",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-184404",
@@ -3630,7 +4286,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184404"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184404",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-184312",
@@ -3645,7 +4304,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184312"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184312",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-184170",
@@ -3660,7 +4322,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184170"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184170",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-184161",
@@ -3676,7 +4341,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184161"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184161",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-183929",
@@ -3692,7 +4360,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183929"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183929",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-183782",
@@ -3707,7 +4378,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183782"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183782",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-183631",
@@ -3724,7 +4398,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183631"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183631",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": true
   },
   {
     "id": "PROP-183623",
@@ -3740,7 +4417,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183623"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183623",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-183353",
@@ -3757,7 +4437,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183353"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183353",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-183127",
@@ -3773,7 +4456,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183127"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183127",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-182901",
@@ -3788,7 +4474,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182901"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182901",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-182871",
@@ -3803,7 +4492,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182871"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182871",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-182870",
@@ -3818,7 +4510,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182870"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182870",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-182865",
@@ -3833,7 +4528,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182865"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182865",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-182859",
@@ -3849,7 +4547,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182859"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182859",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-182858",
@@ -3864,7 +4565,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182858"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182858",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-182856",
@@ -3879,7 +4583,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182856"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182856",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-182827",
@@ -3895,7 +4602,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182827"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182827",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-182764",
@@ -3910,7 +4620,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182764"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182764",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-182746",
@@ -3927,7 +4640,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182746"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182746",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-182675",
@@ -3942,7 +4658,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182675"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182675",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-182496",
@@ -3958,7 +4677,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182496"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182496",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-181948",
@@ -3975,7 +4697,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181948"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181948",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-181936",
@@ -3991,7 +4716,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "저출생사업1팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181936"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181936",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-181875",
@@ -4006,7 +4734,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181875"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181875",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-181849",
@@ -4021,7 +4752,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181849"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181849",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-181847",
@@ -4036,7 +4770,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181847"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181847",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-181473",
@@ -4052,7 +4789,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181473"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181473",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-181437",
@@ -4067,7 +4807,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181437"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181437",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-181306",
@@ -4082,7 +4825,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181306"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181306",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-180894",
@@ -4098,7 +4844,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180894"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180894",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-180806",
@@ -4115,7 +4864,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180806"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180806",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-180667",
@@ -4130,7 +4882,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180667"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180667",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-180655",
@@ -4147,7 +4902,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180655"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180655",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-180628",
@@ -4162,7 +4920,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180628"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180628",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-180493",
@@ -4177,7 +4938,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180493"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180493",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-180489",
@@ -4193,7 +4957,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180489"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180489",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-180472",
@@ -4208,7 +4975,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180472"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180472",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-180440",
@@ -4224,7 +4994,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180440"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180440",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-180406",
@@ -4240,7 +5013,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180406"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180406",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-180363",
@@ -4255,7 +5031,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180363"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180363",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-180324",
@@ -4272,7 +5051,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180324"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180324",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-180319",
@@ -4287,7 +5069,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180319"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180319",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-180125",
@@ -4302,7 +5087,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180125"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180125",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-180104",
@@ -4319,7 +5107,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180104"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180104",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-180063",
@@ -4334,7 +5125,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180063"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180063",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-179976",
@@ -4349,7 +5143,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179976"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179976",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-179899",
@@ -4365,7 +5162,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179899"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179899",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-179862",
@@ -4381,7 +5181,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179862"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179862",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-202347",
@@ -4397,7 +5200,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202347"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=202347",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201935",
@@ -4412,7 +5218,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201935"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201935",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201933",
@@ -4429,7 +5238,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201933"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201933",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-201714",
@@ -4444,7 +5256,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201714"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201714",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201704",
@@ -4459,7 +5274,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201704"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201704",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201651",
@@ -4475,7 +5293,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201651"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201651",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": true
   },
   {
     "id": "PROP-201642",
@@ -4490,7 +5311,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201642"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201642",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201604",
@@ -4505,7 +5329,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201604"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201604",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201545",
@@ -4520,7 +5347,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201545"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201545",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201543",
@@ -4535,7 +5365,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201543"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201543",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201540",
@@ -4550,7 +5383,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201540"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201540",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-201497",
@@ -4566,7 +5402,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201497"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=201497",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-200910",
@@ -4581,7 +5420,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200910"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200910",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-200710",
@@ -4596,7 +5438,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200710"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200710",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-200103",
@@ -4612,7 +5457,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200103"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=200103",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-199841",
@@ -4628,7 +5476,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199841"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199841",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-199734",
@@ -4644,7 +5495,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199734"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199734",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-199648",
@@ -4660,7 +5514,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "아동보호팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199648"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199648",
+    "source": "상상대로서울",
+    "related_civil_requests": 130,
+    "negative_signal": false
   },
   {
     "id": "PROP-199074",
@@ -4675,7 +5532,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199074"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=199074",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-198717",
@@ -4690,7 +5550,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198717"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198717",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-198631",
@@ -4705,7 +5568,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198631"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198631",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-198579",
@@ -4720,7 +5586,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198579"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198579",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-198383",
@@ -4735,7 +5604,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198383"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198383",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-198216",
@@ -4751,7 +5623,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198216"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198216",
+    "source": "상상대로서울",
+    "related_civil_requests": 130,
+    "negative_signal": false
   },
   {
     "id": "PROP-198207",
@@ -4766,7 +5641,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198207"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198207",
+    "source": "상상대로서울",
+    "related_civil_requests": 130,
+    "negative_signal": false
   },
   {
     "id": "PROP-198073",
@@ -4781,7 +5659,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198073"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198073",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-198072",
@@ -4796,7 +5677,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198072"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=198072",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-197859",
@@ -4811,7 +5695,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197859"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197859",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-197585",
@@ -4826,7 +5713,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197585"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197585",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-197374",
@@ -4841,7 +5731,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197374"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=197374",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-196679",
@@ -4856,7 +5749,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196679"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196679",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-196543",
@@ -4873,7 +5769,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196543"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196543",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-196482",
@@ -4888,7 +5787,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196482"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=196482",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-195595",
@@ -4903,7 +5805,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195595"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195595",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-195492",
@@ -4918,7 +5823,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195492"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195492",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-195248",
@@ -4933,7 +5841,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195248"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=195248",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-194883",
@@ -4950,7 +5861,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194883"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194883",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-194882",
@@ -4965,7 +5879,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194882"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194882",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-194853",
@@ -4980,7 +5897,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194853"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194853",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-194792",
@@ -4996,7 +5916,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194792"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194792",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-194620",
@@ -5011,7 +5934,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194620"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194620",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-194515",
@@ -5028,7 +5954,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194515"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194515",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-194436",
@@ -5045,7 +5974,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194436"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194436",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-194240",
@@ -5060,7 +5992,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194240"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194240",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-194182",
@@ -5077,7 +6012,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194182"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194182",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-194170",
@@ -5092,7 +6030,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194170"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194170",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-194132",
@@ -5108,7 +6049,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194132"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194132",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-194088",
@@ -5124,7 +6068,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194088"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=194088",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-193932",
@@ -5139,7 +6086,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193932"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193932",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-193929",
@@ -5156,7 +6106,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193929"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193929",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-193780",
@@ -5171,7 +6124,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193780"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193780",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-193454",
@@ -5186,7 +6142,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193454"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193454",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-193260",
@@ -5201,7 +6160,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193260"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193260",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-193257",
@@ -5217,7 +6179,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193257"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193257",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-193241",
@@ -5234,7 +6199,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193241"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193241",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": true
   },
   {
     "id": "PROP-193205",
@@ -5250,7 +6218,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193205"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193205",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-193112",
@@ -5265,7 +6236,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193112"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193112",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-193089",
@@ -5280,7 +6254,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193089"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=193089",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-192998",
@@ -5297,7 +6274,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "저출생사업1팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192998"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192998",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-192984",
@@ -5314,7 +6294,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192984"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192984",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-192978",
@@ -5330,7 +6313,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192978"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192978",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-192976",
@@ -5345,7 +6331,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192976"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192976",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-192699",
@@ -5360,7 +6349,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192699"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192699",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-192686",
@@ -5377,7 +6369,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192686"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192686",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-192646",
@@ -5392,7 +6387,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192646"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192646",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-192614",
@@ -5409,7 +6407,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192614"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192614",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-192565",
@@ -5424,7 +6425,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192565"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=192565",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-191849",
@@ -5439,7 +6443,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191849"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191849",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-191757",
@@ -5454,7 +6461,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191757"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191757",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-191603",
@@ -5469,7 +6479,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191603"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191603",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-191388",
@@ -5484,7 +6497,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191388"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191388",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-191311",
@@ -5499,7 +6515,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191311"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=191311",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-190910",
@@ -5514,7 +6533,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190910"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190910",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-190853",
@@ -5529,7 +6551,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190853"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=190853",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-189440",
@@ -5546,7 +6571,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189440"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189440",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-189414",
@@ -5561,7 +6589,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189414"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189414",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-189408",
@@ -5576,7 +6607,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "저출생사업1팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189408"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189408",
+    "source": "상상대로서울",
+    "related_civil_requests": 130,
+    "negative_signal": false
   },
   {
     "id": "PROP-189255",
@@ -5592,7 +6626,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189255"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=189255",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-188790",
@@ -5607,7 +6644,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188790"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188790",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-188566",
@@ -5622,7 +6662,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188566"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188566",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-188552",
@@ -5637,7 +6680,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188552"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188552",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-188508",
@@ -5652,7 +6698,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188508"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=188508",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-187148",
@@ -5669,7 +6718,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187148"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187148",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": true
   },
   {
     "id": "PROP-187073",
@@ -5684,7 +6736,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187073"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=187073",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-186908",
@@ -5700,7 +6755,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186908"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186908",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-186896",
@@ -5715,7 +6773,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186896"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186896",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-186626",
@@ -5730,7 +6791,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186626"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186626",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-186290",
@@ -5747,7 +6811,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186290"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=186290",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-185984",
@@ -5762,7 +6829,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185984"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185984",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-185646",
@@ -5778,7 +6848,10 @@ export const mockProposals: Proposal[] = [
       "가족건강팀",
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185646"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185646",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-185284",
@@ -5793,7 +6866,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185284"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=185284",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-184577",
@@ -5808,7 +6884,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184577"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184577",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-184575",
@@ -5824,7 +6903,10 @@ export const mockProposals: Proposal[] = [
       "돌봄사업팀",
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184575"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184575",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-184571",
@@ -5839,7 +6921,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184571"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184571",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-184557",
@@ -5854,7 +6939,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184557"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184557",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-184431",
@@ -5869,7 +6957,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184431"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184431",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-184207",
@@ -5884,7 +6975,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184207"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=184207",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-183626",
@@ -5899,7 +6993,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183626"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183626",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-183550",
@@ -5914,7 +7011,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183550"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183550",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183549",
@@ -5929,7 +7029,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183549"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183549",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183490",
@@ -5944,7 +7047,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183490"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183490",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183450",
@@ -5959,7 +7065,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183450"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183450",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183446",
@@ -5974,7 +7083,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183446"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183446",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183428",
@@ -5991,7 +7103,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183428"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183428",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183419",
@@ -6006,7 +7121,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183419"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183419",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183412",
@@ -6021,7 +7139,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183412"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183412",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183409",
@@ -6036,7 +7157,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183409"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183409",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183408",
@@ -6051,7 +7175,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183408"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183408",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183407",
@@ -6066,7 +7193,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183407"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183407",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": true
   },
   {
     "id": "PROP-183387",
@@ -6081,7 +7211,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183387"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183387",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183374",
@@ -6096,7 +7229,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183374"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183374",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183322",
@@ -6111,7 +7247,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183322"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183322",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183292",
@@ -6126,7 +7265,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183292"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183292",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-183275",
@@ -6141,7 +7283,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183275"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183275",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183273",
@@ -6158,7 +7303,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183273"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183273",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": true
   },
   {
     "id": "PROP-183253",
@@ -6175,7 +7323,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183253"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183253",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": true
   },
   {
     "id": "PROP-183248",
@@ -6191,7 +7342,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183248"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183248",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183243",
@@ -6208,7 +7362,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183243"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183243",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": true
   },
   {
     "id": "PROP-183237",
@@ -6224,7 +7381,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183237"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183237",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183223",
@@ -6239,7 +7399,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183223"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183223",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183217",
@@ -6256,7 +7419,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183217"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183217",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": true
   },
   {
     "id": "PROP-183208",
@@ -6271,7 +7437,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183208"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183208",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": true
   },
   {
     "id": "PROP-183203",
@@ -6286,7 +7455,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183203"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183203",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": true
   },
   {
     "id": "PROP-183202",
@@ -6301,7 +7473,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183202"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183202",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183197",
@@ -6316,7 +7491,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183197"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183197",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183196",
@@ -6333,7 +7511,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183196"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183196",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183193",
@@ -6348,7 +7529,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183193"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183193",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183190",
@@ -6363,7 +7547,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183190"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183190",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183187",
@@ -6379,7 +7566,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183187"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183187",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183186",
@@ -6394,7 +7584,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183186"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183186",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183174",
@@ -6411,7 +7604,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183174"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183174",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183171",
@@ -6426,7 +7622,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183171"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183171",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183170",
@@ -6443,7 +7642,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183170"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183170",
+    "source": "상상대로서울",
+    "related_civil_requests": 920,
+    "negative_signal": false
   },
   {
     "id": "PROP-183167",
@@ -6460,7 +7662,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183167"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183167",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183163",
@@ -6475,7 +7680,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183163"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183163",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": true
   },
   {
     "id": "PROP-183162",
@@ -6490,7 +7698,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183162"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183162",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183153",
@@ -6507,7 +7718,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183153"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183153",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183140",
@@ -6522,7 +7736,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183140"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183140",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183131",
@@ -6537,7 +7754,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183131"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183131",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183130",
@@ -6554,7 +7774,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183130"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183130",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183126",
@@ -6571,7 +7794,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183126"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183126",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183124",
@@ -6587,7 +7813,10 @@ export const mockProposals: Proposal[] = [
       "건강임신지원팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183124"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183124",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183123",
@@ -6602,7 +7831,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183123"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183123",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183122",
@@ -6617,7 +7849,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183122"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183122",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183121",
@@ -6632,7 +7867,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183121"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183121",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-183033",
@@ -6647,7 +7885,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "건강임신지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183033"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=183033",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-182889",
@@ -6662,7 +7903,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182889"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182889",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-182864",
@@ -6677,7 +7921,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182864"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182864",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-182528",
@@ -6692,7 +7939,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182528"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182528",
+    "source": "상상대로서울",
+    "related_civil_requests": 510,
+    "negative_signal": false
   },
   {
     "id": "PROP-182197",
@@ -6707,7 +7957,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182197"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=182197",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-181983",
@@ -6722,7 +7975,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181983"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181983",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-181150",
@@ -6737,7 +7993,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181150"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=181150",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-180866",
@@ -6752,7 +8011,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "미지정"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180866"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180866",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-180778",
@@ -6767,7 +8029,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "다문화지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180778"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180778",
+    "source": "상상대로서울",
+    "related_civil_requests": 150,
+    "negative_signal": false
   },
   {
     "id": "PROP-180569",
@@ -6782,7 +8047,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180569"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180569",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-180216",
@@ -6799,7 +8067,10 @@ export const mockProposals: Proposal[] = [
       "저출생사업1팀",
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180216"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=180216",
+    "source": "상상대로서울",
+    "related_civil_requests": 680,
+    "negative_signal": false
   },
   {
     "id": "PROP-179980",
@@ -6814,7 +8085,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "돌봄사업팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179980"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179980",
+    "source": "상상대로서울",
+    "related_civil_requests": 1240,
+    "negative_signal": false
   },
   {
     "id": "PROP-179977",
@@ -6829,7 +8103,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족지원팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179977"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179977",
+    "source": "상상대로서울",
+    "related_civil_requests": 130,
+    "negative_signal": false
   },
   {
     "id": "PROP-179973",
@@ -6844,7 +8121,10 @@ export const mockProposals: Proposal[] = [
     "department": [
       "가족건강팀"
     ],
-    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179973"
+    "url": "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=179973",
+    "source": "상상대로서울",
+    "related_civil_requests": 130,
+    "negative_signal": false
   }
 ];
 

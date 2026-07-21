@@ -27,6 +27,9 @@ export interface PolicyProposal {
   category: PolicyCategory;
   department: DepartmentName[];
   url: string;
+  source?: '상상대로서울' | '국민권익위';
+  related_civil_requests?: number;
+  negative_signal?: boolean;
 }
 
 export interface DistrictStat {

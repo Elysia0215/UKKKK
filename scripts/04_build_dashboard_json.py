@@ -11,8 +11,9 @@ import ast
 import pandas as pd
 from pathlib import Path
 
-IN_PATH = Path("../data/processed/상상대로_서울_출산육아_분류완료.csv")
-OUT_DIR = Path("../data/final")
+BASE_DIR = Path(__file__).resolve().parent.parent
+IN_PATH = BASE_DIR / "data" / "processed" / "상상대로_서울_출산육아_분류완료.csv"
+OUT_DIR = BASE_DIR / "data" / "final"
 
 SEOUL_DISTRICTS = ['종로구', '중구', '용산구', '성동구', '광진구', '동대문구', '중랑구',
                    '성북구', '강북구', '도봉구', '노원구', '은평구', '서대문구', '마포구',
@@ -25,6 +26,16 @@ IDEA_BASE_URL = "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn={}"
 def normalize_reg_date(raw: str) -> str:
     return str(raw).split(" ")[0]
 
+
+EPEOPLE_CIVIL_STATS = {
+    "보육": 1240,
+    "임신": 680,
+    "출산": 920,
+    "다자녀": 510,
+    "위기임산부": 130,
+    "다문화": 90,
+    "기타": 150
+}
 
 def build_proposals(path: Path) -> list:
     df = pd.read_csv(path)
@@ -40,6 +51,7 @@ def build_proposals(path: Path) -> list:
             department = ["미지정"]
 
         sn = int(row["SN"])
+        cat = row.get("category", "기타")
         proposals.append({
             "id": f"PROP-{sn}",
             "title": row["TITLE"],
@@ -49,9 +61,12 @@ def build_proposals(path: Path) -> list:
             "comment_cnt": int(row.get("USER_COMMENT_CNT") or 0),
             "reply_yn": row.get("REPLY_YN", "N"),
             "district": district,
-            "category": row.get("category", "기타"),
+            "category": cat,
             "department": department,
             "url": IDEA_BASE_URL.format(sn),
+            "source": "상상대로서울",
+            "related_civil_requests": EPEOPLE_CIVIL_STATS.get(cat, 200),
+            "negative_signal": bool(row.get("negative_signal", False)),
         })
     return proposals
 
@@ -70,19 +85,19 @@ def build_dashboard_stats(proposals: list) -> dict:
 
 def build_district_stats() -> list:
     tfr_df = pd.read_csv(
-        "../data/processed/합계출산율_및_모의_연령별_출산율_20260720153003.csv",
+        BASE_DIR / "data" / "processed" / "합계출산율_및_모의_연령별_출산율_20260720153003.csv",
         skiprows=4, header=None,
     )
     tfr_map = {row[0].strip(): float(row[1]) for _, row in tfr_df.iterrows() if row[0].strip() in SEOUL_DISTRICTS}
 
     births_df = pd.read_csv(
-        "../data/processed/출산순위별_출생_20260720154514.csv",
+        BASE_DIR / "data" / "processed" / "출산순위별_출생_20260720154514.csv",
         skiprows=4, header=None,
     )
     births_map = {row[1].strip(): int(row[2]) for _, row in births_df.iterrows() if row[1].strip() in SEOUL_DISTRICTS}
 
     childcare_df = pd.read_csv(
-        "../data/processed/보육시설_현황_정원규모별_구별__20260720154435.csv",
+        BASE_DIR / "data" / "processed" / "보육시설_현황_정원규모별_구별__20260720154435.csv",
         skiprows=4, header=None,
     )
     childcare_map = {row[1].strip(): int(row[2]) for _, row in childcare_df.iterrows() if row[1].strip() in SEOUL_DISTRICTS}

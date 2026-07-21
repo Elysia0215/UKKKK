@@ -424,6 +424,11 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                                     </div>
                                   </div>
                                   <div className="flex items-center gap-3 text-xs text-slate-500 font-mono">
+                                    {item.related_civil_requests && (
+                                       <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200" title="국민권익위원회 전국 민원 데이터 연동 결과">
+                                         🏛️ 국민권익위 민원: 약 {item.related_civil_requests.toLocaleString()}건
+                                       </span>
+                                     )}
                                     <span className="flex items-center gap-1 text-slate-600 font-semibold">
                                       <ThumbsUp className="w-3.5 h-3.5 text-blue-500" /> 공감 {item.vote_score}
                                     </span>
@@ -516,6 +521,11 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                       </div>
                     </div>
                     <div className="flex items-center gap-3 text-xs text-slate-500 font-mono font-bold">
+                      {item.related_civil_requests && (
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200" title="국민권익위원회 전국 민원 데이터 연동 결과">
+                          🏛️ 권익위 민원: 약 {item.related_civil_requests.toLocaleString()}건
+                        </span>
+                      )}
                       <span className="flex items-center gap-1 text-slate-600">
                         <ThumbsUp className="w-3.5 h-3.5 text-blue-500" /> 공감 {item.vote_score}표
                       </span>
