@@ -5,12 +5,12 @@
 
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MapPin, ThumbsUp, MessageSquare, HelpCircle, CheckCircle, ArrowUpDown, ExternalLink } from 'lucide-react';
+import { MapPin, ThumbsUp, MessageSquare, HelpCircle, CheckCircle, ArrowUpDown, ExternalLink, Download } from 'lucide-react';
 import { PolicyProposal } from '../types';
 import { SEOUL_DISTRICTS } from '../data/mockData';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, ComposedChart, Line, Legend } from 'recharts';
 import { districtStats } from '../data/mockData';
-
+import { exportToCsv } from '../utils/exportCsv';
 import { CivilRequestModal } from './CivilRequestModal';
 
 interface Props {
@@ -27,6 +27,16 @@ export const DistrictComparison: React.FC<Props> = ({
   const [sortOrder, setSortOrder] = useState<'desc' | 'asc'>('desc');
   const [civilModalOpen, setCivilModalOpen] = useState(false);
   const [civilCategory, setCivilCategory] = useState('전체');
+
+  const handleExportDistrictStats = () => {
+    const exportData = districtStats.map(d => ({
+      '자치구명': d.district_name || d.district,
+      '합계출산율(TFR)': d.fertility_rate || d.tfr || 'N/A',
+      '총출생아수(2024)': d.total_births || d.births_total || 0,
+      '보육시설수(2025)': d.daycare_centers || d.childcare_facility_count || 0
+    }));
+    exportToCsv(`서울시_25개자치구_출생_보육통계_${new Date().toISOString().split('T')[0]}.csv`, exportData);
+  };
 
   // 자치구별 데이터 계산
   const districtData = useMemo(() => {
@@ -84,15 +94,23 @@ export const DistrictComparison: React.FC<Props> = ({
     <div className="space-y-6">
       {/* 공공데이터 결합: 제안건수 vs 실제 출생아수·보육시설 */}
       <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-sm transition">
-        <div className="mb-4 pb-4 border-b border-slate-200/80">
-          <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-            <MapPin className="text-emerald-600 w-5 h-5" />
-            자치구별 시민제안 vs 공공데이터(실제 출생아수·보육시설)
-          </h4>
-          <p className="text-xs text-slate-500 mt-1">
-            서울 열린데이터광장 통계(2024~2025)와 시민제안 건수를 함께 비교해 수요-공급 격차를 확인합니다.
-            제안 건수가 많은데 실제 출생아수·보육시설도 뒷받침되는지 한눈에 볼 수 있습니다.
-          </p>
+        <div className="mb-4 pb-4 border-b border-slate-200/80 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
+              <MapPin className="text-emerald-600 w-5 h-5" />
+              자치구별 시민제안 vs 공공데이터(실제 출생아수·보육시설)
+            </h4>
+            <p className="text-xs text-slate-500 mt-1">
+              서울 열린데이터광장 통계(2024~2025)와 시민제안 건수를 함께 비교해 수요-공급 격차를 확인합니다.
+            </p>
+          </div>
+          <button
+            onClick={handleExportDistrictStats}
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg transition shrink-0 cursor-pointer shadow-xs"
+            title="25개 자치구별 출생 및 보육 통계 CSV 다운로드"
+          >
+            <Download className="w-3.5 h-3.5" /> 25개 자치구 통계 CSV 다운로드
+          </button>
         </div>
         <div className="h-[300px] w-full">
           <ResponsiveContainer width="100%" height="100%">

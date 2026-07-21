@@ -20,9 +20,11 @@ import {
   ChevronUp, 
   HelpCircle,
   FileSpreadsheet,
-  ExternalLink
+  ExternalLink,
+  Download
 } from 'lucide-react';
 import { CivilRequestModal } from './CivilRequestModal';
+import { exportToCsv } from '../utils/exportCsv';
 
 interface Props {
   proposals: PolicyProposal[];
@@ -184,6 +186,26 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
     '다문화지원팀'
   ];
 
+  const handleExportProposals = () => {
+    const listToExport = filteredProposals.length > 0 ? filteredProposals : proposals;
+    const exportData = listToExport.map(p => ({
+      '제안ID': p.id,
+      '카테고리': p.category,
+      '제안제목': p.title,
+      '제안본문내용': p.content,
+      '등록일자': p.reg_date,
+      '공감수': p.vote_score,
+      '댓글수': p.comment_cnt,
+      '답변여부': p.reply_yn === 'Y' ? '답변완료' : '미답변',
+      '자치구': p.district,
+      '담당부서': Array.isArray(p.department) ? p.department.join('; ') : p.department,
+      '원문URL': p.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${p.id.replace('PROP-', '')}`,
+      '연동 권익위 민원수': p.related_civil_requests || 0
+    }));
+
+    exportToCsv(`서울시_출산정책_제안데이터_426건_${new Date().toISOString().split('T')[0]}.csv`, exportData);
+  };
+
   return (
     <div className="space-y-6">
       {/* 고정밀 필터 제어판 */}
@@ -200,6 +222,14 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
             />
           </div>
           <div className="flex flex-wrap items-center gap-2">
+            {/* 데이터 내보내기 버튼 */}
+            <button
+              onClick={handleExportProposals}
+              className="flex items-center gap-1.5 px-3 py-2 text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition shadow-xs cursor-pointer"
+              title="현재 필터링된 제안 데이터 (426건) 엑셀/CSV로 다운로드"
+            >
+              <Download className="w-3.5 h-3.5" /> 426건 데이터 엑셀/CSV 다운로드
+            </button>
             {/* 정책 공백 핫필터 */}
             <button
               onClick={() => setOnlyShowGaps(!onlyShowGaps)}

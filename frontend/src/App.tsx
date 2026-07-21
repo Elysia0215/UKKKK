@@ -28,6 +28,8 @@ import { DistrictComparison } from './components/DistrictComparison';
 import { CategoryDemand } from './components/CategoryDemand';
 import { PriorityDetails } from './components/PriorityDetails';
 
+import { exportToCsv } from './utils/exportCsv';
+
 export default function App() {
   const [activeTab, setActiveTab] = useState<number>(0);
   const [selectedDistrict, setSelectedDistrict] = useState<string | null>(null);
@@ -64,9 +66,24 @@ export default function App() {
     setActiveTab(1); // 지역별 비교 탭으로 이동
   };
 
-  // 엑셀 내보내기 시뮬레이션
+  // 엑셀/CSV 데이터 내보내기
   const handleExportData = () => {
-    alert("시민 제안 및 정책 수요 분석 데이터를 CSV/XLSX 양식으로 내보냅니다. (MVP 데모)");
+    const exportData = mockProposals.map(p => ({
+      '제안ID': p.id,
+      '카테고리': p.category,
+      '제안제목': p.title,
+      '제안본문내용': p.content,
+      '등록일자': p.reg_date,
+      '공감수': p.vote_score,
+      '댓글수': p.comment_cnt,
+      '답변여부': p.reply_yn === 'Y' ? '답변완료' : '미답변',
+      '자치구': p.district,
+      '담당부서': Array.isArray(p.department) ? p.department.join('; ') : p.department,
+      '원문URL': p.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${p.id.replace('PROP-', '')}`,
+      '연동 권익위 민원수': p.related_civil_requests || 0
+    }));
+
+    exportToCsv(`서울시_출산정책_전체제안데이터_426건_${new Date().toISOString().split('T')[0]}.csv`, exportData);
   };
 
   return (

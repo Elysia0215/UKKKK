@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ExternalLink, Building2, Calendar, FileText, CheckCircle2 } from 'lucide-react';
+import { X, ExternalLink, Building2, Calendar, FileText, CheckCircle2, Download } from 'lucide-react';
 import { CivilRequest } from '../types';
 import { mockCivilRequests } from '../data/mockData';
+import { exportToCsv } from '../utils/exportCsv';
 
 interface Props {
   isOpen: boolean;
@@ -19,6 +20,19 @@ export const CivilRequestModal: React.FC<Props> = ({ isOpen, category, onClose }
   );
 
   const displayList = relatedRequests.length > 0 ? relatedRequests : mockCivilRequests;
+
+  const handleDownload = () => {
+    const exportData = displayList.map(item => ({
+      '민원ID': item.id,
+      '분류카테고리': item.category,
+      '민원제목': item.title,
+      '민원상세내용': item.content,
+      '등록일자': item.reg_date,
+      '담당부서': item.dept,
+      '원문주소': item.url
+    }));
+    exportToCsv(`국민권익위_민원데이터_${category}_${new Date().toISOString().split('T')[0]}.csv`, exportData);
+  };
 
   return (
     <AnimatePresence>
@@ -40,12 +54,21 @@ export const CivilRequestModal: React.FC<Props> = ({ isOpen, category, onClose }
                 </p>
               </div>
             </div>
-            <button
-              onClick={onClose}
-              className="p-1.5 rounded-full hover:bg-white/20 text-white transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={handleDownload}
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-white/20 hover:bg-white/30 text-white text-xs font-bold rounded-lg border border-white/30 transition-all cursor-pointer"
+                title="민원 목록 엑셀/CSV 내보내기"
+              >
+                <Download className="w-4 h-4" /> CSV 내보내기
+              </button>
+              <button
+                onClick={onClose}
+                className="p-1.5 rounded-full hover:bg-white/20 text-white transition-colors cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
           {/* Sub Header Notice */}
@@ -89,9 +112,13 @@ export const CivilRequestModal: React.FC<Props> = ({ isOpen, category, onClose }
                     href={req.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-emerald-700 hover:text-emerald-900 hover:underline font-bold text-xs bg-emerald-100/60 px-2.5 py-1 rounded-md border border-emerald-200 transition-colors"
+                    className="flex items-center gap-1.5 text-emerald-800 hover:text-emerald-950 hover:underline font-bold text-[11px] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200 transition-colors"
+                    title={req.url}
                   >
-                    권익위 원문보기 <ExternalLink className="w-3 h-3" />
+                    <ExternalLink className="w-3 h-3 shrink-0" />
+                    <span className="truncate max-w-[260px] font-mono">
+                      {req.url}
+                    </span>
                   </a>
                 </div>
               </div>

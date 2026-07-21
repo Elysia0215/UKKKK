@@ -1,4 +1,4 @@
-// 426건 제안 및 국민권익위 민원 리스트 포함 mockData (2026.07.21 자동 생성)
+// 426건 제안 및 구체화된 국민권익위 민원 검색 URL 포함 mockData (2026.07.21 자동 생성)
 
 export interface Proposal {
   id: string;
@@ -8146,7 +8146,7 @@ export const mockCivilRequests: CivilRequest[] = [
     "reg_date": "2026-02-15",
     "category": "보육",
     "dept": "보건복지부 / 서울시 돌봄사업팀",
-    "url": "https://www.epeople.go.kr"
+    "url": "https://www.epeople.go.kr/nep/pttn/gnrlPttn/pttnSgstnLst.npaid?st=out&query=%EC%96%B4%EB%A6%B0%EC%9D%B4%EC%A7%91+%EC%95%BC%EA%B0%84+%EB%B3%B4%EC%9C%A1"
   },
   {
     "id": "EPEO-1002",
@@ -8155,7 +8155,7 @@ export const mockCivilRequests: CivilRequest[] = [
     "reg_date": "2026-01-20",
     "category": "임신",
     "dept": "보건복지부 / 서울시 건강임신지원팀",
-    "url": "https://www.epeople.go.kr"
+    "url": "https://www.epeople.go.kr/nep/pttn/gnrlPttn/pttnSgstnLst.npaid?st=out&query=%EC%9E%84%EC%82%B0%EB%B6%80+%EA%B5%90%ED%86%B5%EB%B9%84+%EC%A7%80%EC%9B%90"
   },
   {
     "id": "EPEO-1003",
@@ -8164,7 +8164,7 @@ export const mockCivilRequests: CivilRequest[] = [
     "reg_date": "2026-03-01",
     "category": "다자녀",
     "dept": "국토교통부 / 서울시 저출생사업1팀",
-    "url": "https://www.epeople.go.kr"
+    "url": "https://www.epeople.go.kr/nep/pttn/gnrlPttn/pttnSgstnLst.npaid?st=out&query=%EB%8B%A4%EC%9E%90%EB%85%80+%EA%B3%B5%EC%98%81%EC%A3%BC%EC%B0%A8%EC%9E%A5"
   },
   {
     "id": "EPEO-1004",
@@ -8173,7 +8173,7 @@ export const mockCivilRequests: CivilRequest[] = [
     "reg_date": "2026-02-28",
     "category": "출산",
     "dept": "보건복지부 / 서울시 저출생사업1팀",
-    "url": "https://www.epeople.go.kr"
+    "url": "https://www.epeople.go.kr/nep/pttn/gnrlPttn/pttnSgstnLst.npaid?st=out&query=%EC%82%B0%ED%9B%84%EC%A1%B0%EB%A6%AC+%EA%B2%BD%EB%B9%84+%EB%B0%94%EC%9A%B0%EC%B2%98"
   },
   {
     "id": "EPEO-1005",
@@ -8182,7 +8182,7 @@ export const mockCivilRequests: CivilRequest[] = [
     "reg_date": "2026-03-05",
     "category": "위기임산부",
     "dept": "여성가족부 / 서울시 가족지원팀",
-    "url": "https://www.epeople.go.kr"
+    "url": "https://www.epeople.go.kr/nep/pttn/gnrlPttn/pttnSgstnLst.npaid?st=out&query=%EC%9C%84%EA%B8%B0%EC%9E%84%EC%82%B0%EB%B6%80"
   }
 ];
 
