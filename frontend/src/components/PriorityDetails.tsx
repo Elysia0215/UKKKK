@@ -431,7 +431,7 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                                       <MessageSquare className="w-3.5 h-3.5" /> 댓글 {item.comment_cnt}
                                     </span>
                                     <a
-                                      href={item.url}
+                                      href={item.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${item.id.replace('PROP-', '')}`}
                                       target="_blank"
                                       rel="noopener noreferrer"
                                       className="flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:underline font-bold"
@@ -519,7 +519,7 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                         <MessageSquare className="w-3.5 h-3.5" /> 댓글 {item.comment_cnt}개
                       </span>
                       <a
-                        href={item.url}
+                        href={item.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${item.id.replace('PROP-', '')}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:underline"

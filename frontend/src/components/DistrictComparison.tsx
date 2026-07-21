@@ -286,7 +286,7 @@ export const DistrictComparison: React.FC<Props> = ({
                           <MessageSquare className="w-3.5 h-3.5" /> 댓글 {prop.comment_cnt}
                         </span>
                         <a
-                          href={prop.url}
+                          href={prop.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${prop.id.replace('PROP-', '')}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:underline font-bold"
