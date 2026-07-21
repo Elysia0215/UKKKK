@@ -208,6 +208,73 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
     return ['전체', ...Array.from(set)];
   }, [proposals]);
 
+  // --- 타 필터 선택 시 교차 연동 건수 실시간 계산 맵 ---
+  // 1) 담당부서 선택에 따른 생애주기별 건수
+  const flowCounts = useMemo(() => {
+    const counts: Record<string, number> = { '전체': 0 };
+    proposals.forEach(p => {
+      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
+      const matchesDept = selectedDept === '전체' || primaryDept === selectedDept || p.department.includes(selectedDept as DepartmentName);
+      if (matchesDept) {
+        counts['전체'] = (counts['전체'] || 0) + 1;
+        if (p.policy_flow) {
+          counts[p.policy_flow] = (counts[p.policy_flow] || 0) + 1;
+        }
+      }
+    });
+    return counts;
+  }, [proposals, selectedDept]);
+
+  // 2) 담당부서 & 생애주기 선택에 따른 1차 대분류별 건수
+  const catCounts = useMemo(() => {
+    const counts: Record<string, number> = { '전체': 0 };
+    proposals.forEach(p => {
+      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
+      const matchesDept = selectedDept === '전체' || primaryDept === selectedDept || p.department.includes(selectedDept as DepartmentName);
+      const matchesFlow = selectedFlow === '전체' || p.policy_flow === selectedFlow;
+      if (matchesDept && matchesFlow) {
+        counts['전체'] = (counts['전체'] || 0) + 1;
+        if (p.category) {
+          counts[p.category] = (counts[p.category] || 0) + 1;
+        }
+      }
+    });
+    return counts;
+  }, [proposals, selectedDept, selectedFlow]);
+
+  // 3) 담당부서 & 생애주기 & 대분류 선택에 따른 2차 중분류별 건수
+  const subCatCounts = useMemo(() => {
+    const counts: Record<string, number> = { '전체': 0 };
+    proposals.forEach(p => {
+      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
+      const matchesDept = selectedDept === '전체' || primaryDept === selectedDept || p.department.includes(selectedDept as DepartmentName);
+      const matchesFlow = selectedFlow === '전체' || p.policy_flow === selectedFlow;
+      const matchesCat = selectedCategory === '전체' || p.category === selectedCategory;
+      if (matchesDept && matchesFlow && matchesCat) {
+        counts['전체'] = (counts['전체'] || 0) + 1;
+        if (p.sub_category) {
+          counts[p.sub_category] = (counts[p.sub_category] || 0) + 1;
+        }
+      }
+    });
+    return counts;
+  }, [proposals, selectedDept, selectedFlow, selectedCategory]);
+
+  // 4) 생애주기 & 대분류 선택에 따른 담당부서별 건수
+  const deptCounts = useMemo(() => {
+    const counts: Record<string, number> = { '전체': 0 };
+    proposals.forEach(p => {
+      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
+      const matchesFlow = selectedFlow === '전체' || p.policy_flow === selectedFlow;
+      const matchesCat = selectedCategory === '전체' || p.category === selectedCategory;
+      if (matchesFlow && matchesCat) {
+        counts['전체'] = (counts['전체'] || 0) + 1;
+        counts[primaryDept] = (counts[primaryDept] || 0) + 1;
+      }
+    });
+    return counts;
+  }, [proposals, selectedFlow, selectedCategory]);
+
   const handleExportProposals = () => {
     const listToExport = viewMode === 'group'
       ? filteredGroupedProposals.flatMap(g => g.items)
@@ -300,19 +367,26 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
               🌱 생애주기
             </span>
             <div className="flex flex-wrap gap-1.5">
-              {policyFlows.map(flow => (
-                <button
-                  key={flow}
-                  onClick={() => setSelectedFlow(flow)}
-                  className={`text-xs px-2.5 py-1 rounded-full border transition font-bold ${
-                    selectedFlow === flow
-                      ? 'bg-indigo-700 text-white border-indigo-800 shadow-2xs'
-                      : 'bg-white text-indigo-700 border-indigo-200 hover:bg-indigo-100'
-                  }`}
-                >
-                  {flow}
-                </button>
-              ))}
+              {policyFlows.map(flow => {
+                const count = flowCounts[flow] || 0;
+                const isDisabled = flow !== '전체' && count === 0;
+                return (
+                  <button
+                    key={flow}
+                    disabled={isDisabled}
+                    onClick={() => setSelectedFlow(flow)}
+                    className={`text-xs px-2.5 py-1 rounded-full border transition font-bold ${
+                      selectedFlow === flow
+                        ? 'bg-indigo-700 text-white border-indigo-800 shadow-2xs'
+                        : isDisabled
+                        ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                        : 'bg-white text-indigo-700 border-indigo-200 hover:bg-indigo-100'
+                    }`}
+                  >
+                    {flow} <span className="text-[10px] opacity-80 font-normal">({count}건)</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
@@ -320,23 +394,30 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
           <div className="flex items-start gap-3">
             <span className="text-xs font-bold text-slate-500 w-20 flex-shrink-0 pt-1">1차 대분류</span>
             <div className="flex flex-wrap gap-1.5">
-              {categories.map(cat => (
-                <button
-                  key={cat}
-                  onClick={() => {
-                    setSelectedCategory(cat);
-                    setSelectedSubCategory('전체');
-                    setSelectedMicroCategory('전체');
-                  }}
-                  className={`text-xs px-2.5 py-1 rounded-full border transition font-bold ${
-                    selectedCategory === cat
-                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
-                      : 'bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-300'
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
+              {categories.map(cat => {
+                const count = catCounts[cat] || 0;
+                const isDisabled = cat !== '전체' && count === 0;
+                return (
+                  <button
+                    key={cat}
+                    disabled={isDisabled}
+                    onClick={() => {
+                      setSelectedCategory(cat);
+                      setSelectedSubCategory('전체');
+                      setSelectedMicroCategory('전체');
+                    }}
+                    className={`text-xs px-2.5 py-1 rounded-full border transition font-bold ${
+                      selectedCategory === cat
+                        ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
+                        : isDisabled
+                        ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                        : 'bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-300'
+                    }`}
+                  >
+                    {cat} <span className="text-[10px] opacity-80 font-normal">({count}건)</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 
@@ -345,22 +426,29 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
             <div className="flex items-start gap-3 bg-blue-50/40 p-2 rounded-lg border border-blue-100">
               <span className="text-xs font-bold text-blue-800 w-20 flex-shrink-0 pt-1">└ 2차 중분류</span>
               <div className="flex flex-wrap gap-1.5">
-                {subCategories.map(sub => (
-                  <button
-                    key={sub}
-                    onClick={() => {
-                      setSelectedSubCategory(sub);
-                      setSelectedMicroCategory('전체');
-                    }}
-                    className={`text-xs px-2.5 py-1 rounded-md border transition font-bold ${
-                      selectedSubCategory === sub
-                        ? 'bg-blue-600 text-white border-blue-700 shadow-2xs'
-                        : 'bg-white text-blue-700 border-blue-200 hover:bg-blue-50'
-                    }`}
-                  >
-                    {sub}
-                  </button>
-                ))}
+                {subCategories.map(sub => {
+                  const count = subCatCounts[sub] || 0;
+                  const isDisabled = sub !== '전체' && count === 0;
+                  return (
+                    <button
+                      key={sub}
+                      disabled={isDisabled}
+                      onClick={() => {
+                        setSelectedSubCategory(sub);
+                        setSelectedMicroCategory('전체');
+                      }}
+                      className={`text-xs px-2.5 py-1 rounded-md border transition font-bold ${
+                        selectedSubCategory === sub
+                          ? 'bg-blue-600 text-white border-blue-700 shadow-2xs'
+                          : isDisabled
+                          ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                          : 'bg-white text-blue-700 border-blue-200 hover:bg-blue-50'
+                      }`}
+                    >
+                      {sub} <span className="text-[10px] opacity-80 font-normal">({count}건)</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
           )}
@@ -387,22 +475,30 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
             </div>
           )}
 
+          {/* 담당부서 필터 */}
           <div className="flex items-start gap-3">
-            <span className="text-xs font-bold text-slate-500 w-16 flex-shrink-0 pt-1">담당부서</span>
+            <span className="text-xs font-bold text-slate-500 w-20 flex-shrink-0 pt-1">담당부서</span>
             <div className="flex flex-wrap gap-1.5">
-              {departments.map(dept => (
-                <button
-                  key={dept}
-                  onClick={() => setSelectedDept(dept)}
-                  className={`text-xs px-2.5 py-1 rounded-full border transition font-bold ${
-                    selectedDept === dept
-                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
-                      : 'bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-300'
-                  }`}
-                >
-                  {dept}
-                </button>
-              ))}
+              {departments.map(dept => {
+                const count = deptCounts[dept] || 0;
+                const isDisabled = dept !== '전체' && count === 0;
+                return (
+                  <button
+                    key={dept}
+                    disabled={isDisabled}
+                    onClick={() => setSelectedDept(dept)}
+                    className={`text-xs px-2.5 py-1 rounded-full border transition font-bold ${
+                      selectedDept === dept
+                        ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
+                        : isDisabled
+                        ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                        : 'bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-300'
+                    }`}
+                  >
+                    {dept} <span className="text-[10px] opacity-80 font-normal">({count}건)</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>
