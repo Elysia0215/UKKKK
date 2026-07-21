@@ -109,16 +109,14 @@ export const CivilRequestModal: React.FC<Props> = ({ isOpen, category, onClose }
                   </span>
 
                   <a
-                    href={req.url}
+                    href="https://www.epeople.go.kr/nep/pttn/gnrlPttn/pttnSgstnLst.npaid"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-1.5 text-emerald-800 hover:text-emerald-950 hover:underline font-bold text-[11px] bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200 transition-colors"
-                    title={req.url}
+                    title="국민신문고 공개제안 검색 이동"
                   >
                     <ExternalLink className="w-3 h-3 shrink-0" />
-                    <span className="truncate max-w-[260px] font-mono">
-                      {req.url}
-                    </span>
+                    <span>권익위 국민신문고 원문검색 ↗</span>
                   </a>
                 </div>
               </div>
