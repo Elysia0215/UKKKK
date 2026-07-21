@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ExternalLink, ThumbsUp, MessageSquare, Building2, Calendar, FileText } from 'lucide-react';
 import { PolicyProposal } from '../types';
+import { formatProposalContent } from '../utils/formatText';
 
 interface Props {
   isOpen: boolean;
@@ -86,8 +87,8 @@ export const KeywordDetailModal: React.FC<Props> = ({ isOpen, keyword, proposals
                   </div>
 
                   <h4 className="font-bold text-sm text-slate-900">{item.title}</h4>
-                  <p className="text-xs text-slate-600 bg-white p-3 rounded-lg border border-slate-100 leading-relaxed line-clamp-3 whitespace-pre-line">
-                    {item.content}
+                  <p className="text-xs text-slate-600 bg-white p-3 rounded-lg border border-slate-100 leading-relaxed max-h-[140px] overflow-y-auto whitespace-pre-line font-sans">
+                    {formatProposalContent(item.content)}
                   </p>
 
                   <div className="flex justify-between items-center pt-1 text-xs text-slate-500 font-medium">

@@ -22,6 +22,7 @@ import { SEOUL_DISTRICTS } from '../data/mockData';
 import { districtStats } from '../data/mockData';
 import { districtMapLayout } from '../data/seoul_districts_geo';
 import { exportToCsv } from '../utils/exportCsv';
+import { formatProposalContent } from '../utils/formatText';
 
 interface Props {
   proposals: PolicyProposal[];
