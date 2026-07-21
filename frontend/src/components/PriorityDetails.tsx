@@ -19,7 +19,8 @@ import {
   ChevronDown, 
   ChevronUp, 
   HelpCircle,
-  FileSpreadsheet
+  FileSpreadsheet,
+  ExternalLink
 } from 'lucide-react';
 
 interface Props {
@@ -429,6 +430,14 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                                     <span className="flex items-center gap-1">
                                       <MessageSquare className="w-3.5 h-3.5" /> 댓글 {item.comment_cnt}
                                     </span>
+                                    <a
+                                      href={item.url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:underline font-bold"
+                                    >
+                                      원문 보기 <ExternalLink className="w-3 h-3" />
+                                    </a>
                                   </div>
                                 </div>
                               </div>
@@ -509,6 +518,14 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
                       <span className="flex items-center gap-1">
                         <MessageSquare className="w-3.5 h-3.5" /> 댓글 {item.comment_cnt}개
                       </span>
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:underline"
+                      >
+                        원문 보기 <ExternalLink className="w-3 h-3" />
+                      </a>
                     </div>
                   </div>
                 </div>

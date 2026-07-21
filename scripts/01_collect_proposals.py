@@ -13,7 +13,11 @@ API_KEY = "6a564a7772746e6532306861565169"
 SERVICE = "ChunmanFreeSuggestions"
 BASE_URL = f"http://openapi.seoul.go.kr:8088/{API_KEY}/json/{SERVICE}"
 
-KEYWORDS = ["출산", "육아", "보육", "임신", "다자녀", "산후조리", "어린이집", "아이돌봄", "저출생", "돌봄"]
+KEYWORDS = [
+    "출산", "육아", "보육", "임신", "다자녀", "산후조리", "어린이집", "아이돌봄", "저출생", "돌봄",
+    "난임", "부모급여", "아동수당", "위기임산부", "미혼모", "보호출산",
+    "다태아", "쌍둥이", "모유수유", "산후우울", "유모차",
+]
 OUT_DIR = Path("../data/processed")
 
 

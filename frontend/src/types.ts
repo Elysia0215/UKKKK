@@ -26,6 +26,14 @@ export interface PolicyProposal {
   district: string;
   category: PolicyCategory;
   department: DepartmentName[];
+  url: string;
+}
+
+export interface DistrictStat {
+  district: string;
+  tfr: number | null;               // 합계출산율
+  births_total: number | null;      // 실제 출생아수 (2024)
+  childcare_facility_count: number | null; // 보육시설 수 (2025)
 }
 
 export interface DashboardStats {

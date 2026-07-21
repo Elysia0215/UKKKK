@@ -5,10 +5,11 @@
 
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MapPin, ThumbsUp, MessageSquare, HelpCircle, CheckCircle, ArrowUpDown } from 'lucide-react';
+import { MapPin, ThumbsUp, MessageSquare, HelpCircle, CheckCircle, ArrowUpDown, ExternalLink } from 'lucide-react';
 import { PolicyProposal } from '../types';
 import { SEOUL_DISTRICTS } from '../data/mockData';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, ComposedChart, Line, Legend } from 'recharts';
+import { districtStats } from '../data/mockData';
 
 interface Props {
   proposals: PolicyProposal[];
@@ -49,7 +50,27 @@ export const DistrictComparison: React.FC<Props> = ({
       });
   }, [proposals, sortOrder, selectedDistrict]);
 
-  // 선택된 자치구의 제안 필터링
+  // 자치구별 제안 건수 + 공공데이터(실제 출생아수) 결합 - 수요-공급 갭 비교용
+  const districtGapData = useMemo(() => {
+    const proposalCounts = SEOUL_DISTRICTS.reduce((acc, dist) => {
+      acc[dist] = 0;
+      return acc;
+    }, {} as Record<string, number>);
+    proposals.forEach(prop => {
+      if (proposalCounts[prop.district] !== undefined) {
+        proposalCounts[prop.district] += 1;
+      }
+    });
+
+    return districtStats.map(stat => ({
+      name: stat.district,
+      proposalCount: proposalCounts[stat.district] || 0,
+      births: stat.births_total ?? 0,
+      childcare: stat.childcare_facility_count ?? 0,
+    }));
+  }, [proposals]);
+
+
   const filteredProposals = useMemo(() => {
     if (!selectedDistrict) return [];
     return proposals.filter(p => p.district === selectedDistrict);
@@ -57,6 +78,36 @@ export const DistrictComparison: React.FC<Props> = ({
 
   return (
     <div className="space-y-6">
+      {/* 공공데이터 결합: 제안건수 vs 실제 출생아수·보육시설 */}
+      <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-sm transition">
+        <div className="mb-4 pb-4 border-b border-slate-200/80">
+          <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
+            <MapPin className="text-emerald-600 w-5 h-5" />
+            자치구별 시민제안 vs 공공데이터(실제 출생아수·보육시설)
+          </h4>
+          <p className="text-xs text-slate-500 mt-1">
+            서울 열린데이터광장 통계(2024~2025)와 시민제안 건수를 함께 비교해 수요-공급 격차를 확인합니다.
+            제안 건수가 많은데 실제 출생아수·보육시설도 뒷받침되는지 한눈에 볼 수 있습니다.
+          </p>
+        </div>
+        <div className="h-[300px] w-full">
+          <ResponsiveContainer width="100%" height="100%">
+            <ComposedChart data={districtGapData} margin={{ top: 10, right: 10, left: -15, bottom: 5 }}>
+              <XAxis dataKey="name" tick={{ fontSize: 9, fontWeight: 'bold' }} interval={0} angle={-35} textAnchor="end" height={60} />
+              <YAxis yAxisId="left" tick={{ fontSize: 10 }} label={{ value: '제안 건수', angle: -90, position: 'insideLeft', style: { fontSize: 10, fill: '#0A2351', fontWeight: 'bold' } }} allowDecimals={false} />
+              <YAxis yAxisId="right" orientation="right" tick={{ fontSize: 10 }} label={{ value: '실제 출생아수 (명)', angle: 90, position: 'insideRight', style: { fontSize: 10, fill: '#059669', fontWeight: 'bold' } }} />
+              <Tooltip contentStyle={{ borderRadius: '6px', fontSize: '11px', fontWeight: 'bold' }} />
+              <Legend wrapperStyle={{ fontSize: '11px' }} />
+              <Bar yAxisId="left" dataKey="proposalCount" name="시민제안 건수" fill="#0A2351" radius={[4, 4, 0, 0]} />
+              <Line yAxisId="right" type="monotone" dataKey="births" name="실제 출생아수(2024)" stroke="#059669" strokeWidth={3} dot={{ r: 4, fill: '#059669' }} />
+            </ComposedChart>
+          </ResponsiveContainer>
+        </div>
+        <p className="text-[11px] text-slate-400 italic font-semibold mt-2 text-center">
+          * 시민제안은 267건 중 지역 명시분(45건, 16.9%)만 반영되어 표본이 제한적입니다. 공공데이터(출생아수 등)는 자치구 전수 통계입니다.
+        </p>
+      </div>
+
       {/* 자치구별 제안수 막대그래프 */}
       <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs hover:shadow-sm transition">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 pb-4 border-b border-slate-200/80 gap-4">
@@ -234,6 +285,14 @@ export const DistrictComparison: React.FC<Props> = ({
                         <span className="flex items-center gap-1">
                           <MessageSquare className="w-3.5 h-3.5" /> 댓글 {prop.comment_cnt}
                         </span>
+                        <a
+                          href={prop.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1 text-blue-600 hover:text-blue-800 hover:underline font-bold"
+                        >
+                          원문 보기 <ExternalLink className="w-3 h-3" />
+                        </a>
                       </div>
                     </div>
                   </div>

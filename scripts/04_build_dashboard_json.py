@@ -1,7 +1,10 @@
 """
 4단계: 분류 완료된 데이터를 React 대시보드용 JSON으로 변환
 입력: data/processed/상상대로_서울_출산육아_분류완료.csv
-출력: data/final/proposals.json, data/final/dashboard_stats.json
+      data/processed/합계출산율_및_모의_연령별_출산율_20260720153003.csv
+      data/processed/출산순위별_출생_20260720154514.csv
+      data/processed/보육시설_현황_정원규모별_구별__20260720154435.csv
+출력: data/final/proposals.json, data/final/dashboard_stats.json, data/final/district_stats.json
 """
 import json
 import ast
@@ -10,6 +13,13 @@ from pathlib import Path
 
 IN_PATH = Path("../data/processed/상상대로_서울_출산육아_분류완료.csv")
 OUT_DIR = Path("../data/final")
+
+SEOUL_DISTRICTS = ['종로구', '중구', '용산구', '성동구', '광진구', '동대문구', '중랑구',
+                   '성북구', '강북구', '도봉구', '노원구', '은평구', '서대문구', '마포구',
+                   '양천구', '강서구', '구로구', '금천구', '영등포구', '동작구', '관악구',
+                   '서초구', '강남구', '송파구', '강동구']
+
+IDEA_BASE_URL = "https://idea.seoul.go.kr/front/freeSuggest/view.do?sn={}"
 
 
 def normalize_reg_date(raw: str) -> str:
@@ -29,8 +39,9 @@ def build_proposals(path: Path) -> list:
         except (ValueError, SyntaxError):
             department = ["미지정"]
 
+        sn = int(row["SN"])
         proposals.append({
-            "id": f"PROP-{int(row['SN'])}",
+            "id": f"PROP-{sn}",
             "title": row["TITLE"],
             "content": row.get("content_full") or row["TITLE"],
             "reg_date": normalize_reg_date(row["REG_DATE"]),
@@ -40,6 +51,7 @@ def build_proposals(path: Path) -> list:
             "district": district,
             "category": row.get("category", "기타"),
             "department": department,
+            "url": IDEA_BASE_URL.format(sn),
         })
     return proposals
 
@@ -56,11 +68,42 @@ def build_dashboard_stats(proposals: list) -> dict:
     }
 
 
+def build_district_stats() -> list:
+    tfr_df = pd.read_csv(
+        "../data/processed/합계출산율_및_모의_연령별_출산율_20260720153003.csv",
+        skiprows=4, header=None,
+    )
+    tfr_map = {row[0].strip(): float(row[1]) for _, row in tfr_df.iterrows() if row[0].strip() in SEOUL_DISTRICTS}
+
+    births_df = pd.read_csv(
+        "../data/processed/출산순위별_출생_20260720154514.csv",
+        skiprows=4, header=None,
+    )
+    births_map = {row[1].strip(): int(row[2]) for _, row in births_df.iterrows() if row[1].strip() in SEOUL_DISTRICTS}
+
+    childcare_df = pd.read_csv(
+        "../data/processed/보육시설_현황_정원규모별_구별__20260720154435.csv",
+        skiprows=4, header=None,
+    )
+    childcare_map = {row[1].strip(): int(row[2]) for _, row in childcare_df.iterrows() if row[1].strip() in SEOUL_DISTRICTS}
+
+    return [
+        {
+            "district": d,
+            "tfr": tfr_map.get(d),
+            "births_total": births_map.get(d),
+            "childcare_facility_count": childcare_map.get(d),
+        }
+        for d in SEOUL_DISTRICTS
+    ]
+
+
 if __name__ == "__main__":
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     proposals = build_proposals(IN_PATH)
     stats = build_dashboard_stats(proposals)
+    district_stats = build_district_stats()
 
     with open(OUT_DIR / "proposals.json", "w", encoding="utf-8") as f:
         json.dump(proposals, f, ensure_ascii=False, indent=2)
@@ -68,6 +111,9 @@ if __name__ == "__main__":
     with open(OUT_DIR / "dashboard_stats.json", "w", encoding="utf-8") as f:
         json.dump(stats, f, ensure_ascii=False, indent=2)
 
-    print(f"proposals.json 저장 완료: {len(proposals)}건")
+    with open(OUT_DIR / "district_stats.json", "w", encoding="utf-8") as f:
+        json.dump(district_stats, f, ensure_ascii=False, indent=2)
+
+    print(f"proposals.json 저장 완료: {len(proposals)}건 (url 필드 포함)")
     print("dashboard_stats.json:", stats)
-    print("\n※ district_stats.json은 통계 파일(합계출산율 등) 컬럼 구조 확인 후 별도 작업 필요")
+    print(f"district_stats.json 저장 완료: {len(district_stats)}개 자치구")
