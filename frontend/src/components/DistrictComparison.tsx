@@ -70,9 +70,8 @@ export const DistrictComparison: React.FC<Props> = ({
         count: stats.count,
         avgVote: stats.count > 0 ? Math.round(stats.totalVote / stats.count) : 0
       }))
-      .filter(item => item.count > 0 || selectedDistrict === item.name)
       .sort((a, b) => (sortOrder === 'desc' ? b.count - a.count : a.count - b.count));
-  }, [proposals, sortOrder, selectedDistrict]);
+  }, [proposals, sortOrder]);
 
   const districtMapData = useMemo(() => {
     const maxCount = Math.max(...districtData.map(item => item.count), 1);
@@ -358,9 +357,8 @@ export const DistrictComparison: React.FC<Props> = ({
                     ? 'bg-red-500 text-white border-red-600 shadow-sm ring-2 ring-red-200' 
                     : hasData 
                       ? 'bg-slate-50 hover:bg-indigo-50 text-slate-800 border-slate-200 hover:border-indigo-400' 
-                      : 'bg-slate-100 text-slate-400 border-slate-200 cursor-not-allowed opacity-60'
+                      : 'bg-slate-50/70 hover:bg-indigo-50 text-slate-500 border-slate-200/80 hover:border-indigo-300'
                 }`}
-                disabled={!hasData}
                 title={`${dist}: 총 ${count}건 시민 제안`}
               >
                 <span>{dist}</span>
