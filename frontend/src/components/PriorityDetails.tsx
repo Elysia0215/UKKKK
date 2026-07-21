@@ -21,10 +21,14 @@ import {
   HelpCircle,
   FileSpreadsheet,
   ExternalLink,
-  Download
+  Download,
+  CheckCircle2,
+  ShieldAlert
 } from 'lucide-react';
 import { CivilRequestModal } from './CivilRequestModal';
 import { exportToCsv } from '../utils/exportCsv';
+import rawMongttangData from '../data/mongttang.json';
+import { MongttangPolicy } from '../types';
 
 interface Props {
   proposals: PolicyProposal[];
@@ -49,6 +53,25 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
   const [civilModalOpen, setCivilModalOpen] = useState(false);
   const [civilCategory, setCivilCategory] = useState('전체');
+
+  // 몽땅정보 현행 정책 목록
+  const mongttangPolicies: MongttangPolicy[] = useMemo(() => {
+    if (rawMongttangData && Array.isArray((rawMongttangData as any).DATA)) {
+      return (rawMongttangData as any).DATA as MongttangPolicy[];
+    }
+    return [];
+  }, []);
+
+  // 시민 제안 ↔ 몽땅정보 정책 매칭 함수
+  const findMatchingPolicy = (title: string, content: string): MongttangPolicy | undefined => {
+    const text = (title + ' ' + content).toLowerCase();
+    return mongttangPolicies.find(p => {
+      if (!p.biz_nm) return false;
+      const bizNm = p.biz_nm.toLowerCase();
+      const words = bizNm.split(/[\s,·\(\)\-]+/).filter(w => w.length >= 2 && !['지원', '사업', '서울시', '서울형'].includes(w));
+      return words.length > 0 && words.some(w => text.includes(w));
+    });
+  };
 
   // 1. 유사 제안 그룹핑 로직 (같은 카테고리 + 비슷한 키워드 핵심 단어 매칭)
   const groupedProposals = useMemo(() => {
@@ -187,7 +210,7 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
   ];
 
   const handleExportProposals = () => {
-    const listToExport = filteredProposals.length > 0 ? filteredProposals : proposals;
+    const listToExport = filteredListProposals.length > 0 ? filteredListProposals : proposals;
     const exportData = listToExport.map(p => ({
       '제안ID': p.id,
       '카테고리': p.category,
@@ -443,6 +466,40 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
 
                                 <h5 className="text-sm font-bold text-slate-800 mb-1.5">{item.title}</h5>
                                 <p className="text-xs text-slate-600 leading-relaxed mb-3">{item.content}</p>
+
+                                {/* 몽땅정보 현행 정책 대조 뱃지 (전략 1) */}
+                                {(() => {
+                                  const match = findMatchingPolicy(item.title, item.content);
+                                  if (match) {
+                                    return (
+                                      <div className="mb-3 p-2.5 bg-emerald-50/90 border border-emerald-200 rounded-lg text-xs text-emerald-900 flex items-center justify-between gap-2 shadow-2xs">
+                                        <div className="flex items-center gap-1.5 font-bold">
+                                          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                                          <span>✅ 현행 정책 시행 중: <strong className="text-emerald-950">[{match.biz_nm}]</strong></span>
+                                        </div>
+                                        {match.aply_site_addr && match.aply_site_addr !== '.' && (
+                                          <a 
+                                            href={match.aply_site_addr.startsWith('http') ? match.aply_site_addr : `https://${match.aply_site_addr}`}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="text-[10px] bg-emerald-600 text-white px-2 py-1 rounded-md font-bold hover:bg-emerald-700 transition flex items-center gap-0.5 shrink-0 shadow-2xs"
+                                          >
+                                            신청하기 <ExternalLink className="w-2.5 h-2.5" />
+                                          </a>
+                                        )}
+                                      </div>
+                                    );
+                                  } else {
+                                    return (
+                                      <div className="mb-3 p-2.5 bg-amber-50/90 border border-amber-200 rounded-lg text-xs text-amber-900 flex items-center justify-between gap-2 shadow-2xs">
+                                        <div className="flex items-center gap-1.5 font-bold">
+                                          <ShieldAlert className="w-4 h-4 text-amber-600 shrink-0" />
+                                          <span>⚠️ 정책 공백: 서울시 몽땅정보 323개 공식 사업과 대조 결과 <strong className="text-amber-950 font-black">미시행 신규 요구</strong></span>
+                                        </div>
+                                      </div>
+                                    );
+                                  }
+                                })()}
 
                                 <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-100">
                                   <div className="flex items-center gap-2">

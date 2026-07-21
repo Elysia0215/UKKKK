@@ -27,6 +27,7 @@ import { DashboardOverview } from './components/DashboardOverview';
 import { DistrictComparison } from './components/DistrictComparison';
 import { CategoryDemand } from './components/CategoryDemand';
 import { PriorityDetails } from './components/PriorityDetails';
+import { MongttangList } from './components/MongttangList';
 
 import { exportToCsv } from './utils/exportCsv';
 
@@ -176,6 +177,21 @@ export default function App() {
                 {mockProposals.filter(p => p.reply_yn === 'N' && p.vote_score >= 150).length}
               </span>
             </button>
+
+            <button
+              onClick={() => setActiveTab(4)}
+              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap ${
+                activeTab === 4
+                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
+                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
+              }`}
+            >
+              <Building2 className="w-4 h-4 text-blue-500" />
+              서울시 현행 정책 (몽땅정보 323건)
+              <span className="bg-blue-100 text-blue-800 text-[10px] font-black px-1.5 py-0.2 rounded-full ml-0.5">
+                323
+              </span>
+            </button>
           </nav>
         </div>
       </div>
@@ -219,6 +235,10 @@ export default function App() {
               <PriorityDetails 
                 proposals={mockProposals}
               />
+            )}
+
+            {activeTab === 4 && (
+              <MongttangList />
             )}
           </motion.div>
         </AnimatePresence>

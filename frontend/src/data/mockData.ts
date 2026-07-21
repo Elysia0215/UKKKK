@@ -30,15 +30,19 @@ export interface CivilRequest {
 export const mockCivilRequests: CivilRequest[] = [];
 
 export interface DistrictStat {
-  district_name: string;
-  fertility_rate: number;
-  total_births: number;
-  first_child_births: number;
-  second_child_births: number;
-  third_child_births: number;
-  daycare_centers: number;
-  daycare_capacity: number;
-  proposal_count: number;
+  district?: string;
+  district_name?: string;
+  tfr?: number | null;
+  fertility_rate?: number;
+  births_total?: number | null;
+  total_births?: number;
+  first_child_births?: number;
+  second_child_births?: number;
+  third_child_births?: number;
+  childcare_facility_count?: number | null;
+  daycare_centers?: number;
+  daycare_capacity?: number;
+  proposal_count?: number;
 }
 
 export const SEOUL_DISTRICTS = [
