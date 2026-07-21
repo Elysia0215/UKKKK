@@ -29,7 +29,7 @@ export const DistrictComparison: React.FC<Props> = ({
   const [sortOrder, setSortOrder] = useState<'desc' | 'asc'>('desc');
   const [civilModalOpen, setCivilModalOpen] = useState(false);
   const [civilCategory, setCivilCategory] = useState('전체');
-  const [showBgOverlay, setShowBgOverlay] = useState(false);
+  
 
   const handleExportDistrictStats = () => {
     const exportData = districtStats.map(d => ({
@@ -155,12 +155,7 @@ export const DistrictComparison: React.FC<Props> = ({
             >
               <Download className="w-3.5 h-3.5" /> 통계 CSV
             </button>
-            <button
-              onClick={() => setShowBgOverlay(s => !s)}
-              className={`text-xs px-3 py-1.5 rounded-lg border font-bold ${showBgOverlay ? 'bg-slate-800 text-white' : 'bg-slate-50 text-slate-700 border-slate-200'}`}
-            >
-              {showBgOverlay ? '배경 숨기기' : '배경 표시'}
-            </button>
+            {/* 배경 이미지 오버레이 토글 제거 - 배경 보기 기능 비활성화 요청에 따른 삭제 */}
           </div>
         </div>
 
@@ -192,9 +187,7 @@ export const DistrictComparison: React.FC<Props> = ({
                 strokeWidth="1.2"
                 opacity="0.8"
               />
-              {showBgOverlay && (
-                <image href="/seoul_map_bg.png" x="12" y="12" width="536" height="356" preserveAspectRatio="xMidYMid slice" opacity="0.32" />
-              )}
+              {/* 배경 오버레이 제거: 이미지는 더 이상 렌더링되지 않습니다. */}
               {adjustedDistrictMapData.map(item => (
                 <g
                   key={item.name}
