@@ -43,6 +43,9 @@ interface ProposalGroup {
 export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('전체');
+  const [selectedSubCategory, setSelectedSubCategory] = useState<string>('전체');
+  const [selectedMicroCategory, setSelectedMicroCategory] = useState<string>('전체');
+  const [selectedFlow, setSelectedFlow] = useState<string>('전체');
   const [selectedDept, setSelectedDept] = useState<string>('전체');
   const [onlyShowGaps, setOnlyShowGaps] = useState(false); // '정책 공백(미답변+고공감)'만 보기 토글
   const [viewMode, setViewMode] = useState<'list' | 'group'>('group'); // 그룹 보기 vs 개별 리스트 보기
@@ -51,40 +54,41 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
 
   const groupedProposals = useMemo(() => {
     const groups: ProposalGroup[] = [];
-    const clusterMap = new Map<number, PolicyProposal[]>();
+    const subCatMap = new Map<string, PolicyProposal[]>();
 
     proposals.forEach(p => {
-      if (p.cluster_size > 1) {
-        const list = clusterMap.get(p.cluster_id) || [];
-        list.push(p);
-        clusterMap.set(p.cluster_id, list);
-      } else {
-        groups.push({
-          id: `GROUP-SINGLE-${p.id}`,
-          category: p.category,
-          keyword: '단독',
-          name: `[단독 제안] ${p.title}`,
-          items: [p],
-          unansweredCount: p.reply_yn === 'N' ? 1 : 0,
-          totalVotes: p.vote_score,
-        });
-      }
+      const key = p.sub_category || p.category || '기타';
+      const list = subCatMap.get(key) || [];
+      list.push(p);
+      subCatMap.set(key, list);
     });
 
-    clusterMap.forEach((items, clusterId) => {
+    subCatMap.forEach((items, key) => {
       const totalVotes = items.reduce((acc, curr) => acc + curr.vote_score, 0);
       const unansweredCount = items.filter(p => p.reply_yn === 'N').length;
       const representative = [...items].sort((a, b) => b.vote_score - a.vote_score)[0];
 
-      groups.push({
-        id: `GROUP-${clusterId}`,
-        category: representative.category,
-        keyword: '유사그룹',
-        name: `[유사 제안 ${items.length}건 묶음] ${representative.title}`,
-        items,
-        unansweredCount,
-        totalVotes,
-      });
+      if (items.length > 1) {
+        groups.push({
+          id: `GROUP-SUB-${key}`,
+          category: representative.category,
+          keyword: key,
+          name: `[유사 제안 ${items.length}건 묶음] ${key} - ${representative.title}`,
+          items: items.sort((a, b) => b.vote_score - a.vote_score),
+          unansweredCount,
+          totalVotes,
+        });
+      } else {
+        groups.push({
+          id: `GROUP-SINGLE-${representative.id}`,
+          category: representative.category,
+          keyword: '단독',
+          name: `[단독 제안] ${representative.title}`,
+          items: [representative],
+          unansweredCount: representative.reply_yn === 'N' ? 1 : 0,
+          totalVotes: representative.vote_score,
+        });
+      }
     });
 
     return groups.sort((a, b) => {
@@ -101,16 +105,20 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
     return proposals.filter(p => {
       // 1) 검색어 필터
       const matchesSearch = p.title.includes(searchTerm) || p.content.includes(searchTerm);
-      // 2) 분야 필터
+      // 2) 분야 계층 필터 (대분류, 중분류, 세분류)
       const matchesCategory = selectedCategory === '전체' || p.category === selectedCategory;
-      // 3) 부서 필터
+      const matchesSubCategory = selectedSubCategory === '전체' || p.sub_category === selectedSubCategory;
+      const matchesMicroCategory = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
+      // 3) 정책 흐름 필터
+      const matchesFlow = selectedFlow === '전체' || p.policy_flow === selectedFlow;
+      // 4) 부서 필터
       const matchesDept = selectedDept === '전체' || p.department.includes(selectedDept as DepartmentName);
-      // 4) 정책 공백 토글 (미답변 N 이면서 공감수 150 이상)
+      // 5) 정책 공백 토글 (미답변 N 이면서 공감수 150 이상)
       const matchesGap = !onlyShowGaps || (p.reply_yn === 'N' && p.vote_score >= 150);
 
-      return matchesSearch && matchesCategory && matchesDept && matchesGap;
+      return matchesSearch && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap;
     }).sort((a, b) => b.vote_score - a.vote_score); // 기본 공감도순 정렬
-  }, [proposals, searchTerm, selectedCategory, selectedDept, onlyShowGaps]);
+  }, [proposals, searchTerm, selectedCategory, selectedSubCategory, selectedMicroCategory, selectedFlow, selectedDept, onlyShowGaps]);
 
   // 그룹 보기 필터 결과 (그룹 구성원 필터 후 빈 그룹 배제)
   const filteredGroupedProposals = useMemo(() => {
@@ -118,9 +126,12 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
       const filteredItems = g.items.filter(p => {
         const matchesSearch = p.title.includes(searchTerm) || p.content.includes(searchTerm);
         const matchesCategory = selectedCategory === '전체' || p.category === selectedCategory;
+        const matchesSubCategory = selectedSubCategory === '전체' || p.sub_category === selectedSubCategory;
+        const matchesMicroCategory = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
+        const matchesFlow = selectedFlow === '전체' || p.policy_flow === selectedFlow;
         const matchesDept = selectedDept === '전체' || p.department.includes(selectedDept as DepartmentName);
         const matchesGap = !onlyShowGaps || (p.reply_yn === 'N' && p.vote_score >= 150);
-        return matchesSearch && matchesCategory && matchesDept && matchesGap;
+        return matchesSearch && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap;
       });
 
       if (filteredItems.length === 0) return null;
@@ -135,7 +146,7 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
         unansweredCount
       };
     }).filter((g): g is ProposalGroup => g !== null);
-  }, [groupedProposals, searchTerm, selectedCategory, selectedDept, onlyShowGaps]);
+  }, [groupedProposals, searchTerm, selectedCategory, selectedSubCategory, selectedMicroCategory, selectedFlow, selectedDept, onlyShowGaps]);
 
   const toggleGroup = (groupId: string) => {
     setExpandedGroups(prev => ({
@@ -148,6 +159,39 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
     const set = new Set<string>();
     proposals.forEach(p => {
       if (p.category) set.add(p.category);
+    });
+    return ['전체', ...Array.from(set)];
+  }, [proposals]);
+
+  // 계층형 중분류 목록 (선택된 대분류에 연동)
+  const subCategories: string[] = useMemo(() => {
+    const set = new Set<string>();
+    proposals.forEach(p => {
+      if ((selectedCategory === '전체' || p.category === selectedCategory) && p.sub_category) {
+        set.add(p.sub_category);
+      }
+    });
+    return ['전체', ...Array.from(set)];
+  }, [proposals, selectedCategory]);
+
+  // 계층형 세분류 목록 (선택된 중분류에 연동)
+  const microCategories: string[] = useMemo(() => {
+    const set = new Set<string>();
+    proposals.forEach(p => {
+      if ((selectedCategory === '전체' || p.category === selectedCategory) &&
+          (selectedSubCategory === '전체' || p.sub_category === selectedSubCategory) &&
+          p.micro_category) {
+        set.add(p.micro_category);
+      }
+    });
+    return ['전체', ...Array.from(set)];
+  }, [proposals, selectedCategory, selectedSubCategory]);
+
+  // 생애주기 정책 흐름 목록
+  const policyFlows: string[] = useMemo(() => {
+    const set = new Set<string>();
+    proposals.forEach(p => {
+      if (p.policy_flow) set.add(p.policy_flow);
     });
     return ['전체', ...Array.from(set)];
   }, [proposals]);
@@ -246,15 +290,42 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
           </div>
         </div>
 
-        {/* 상세 선택 필터 (정책분류 + 담당부서, 칩 형태로 통일) */}
+        {/* 상세 선택 필터 (계층형 대/중/세분류 + 생애주기 정책흐름 + 담당부서) */}
         <div className="space-y-3 pt-3 border-t border-slate-200/80">
+          {/* 생애주기 정책흐름 필터 */}
+          <div className="flex items-start gap-3 bg-indigo-50/50 p-2.5 rounded-xl border border-indigo-100">
+            <span className="text-xs font-black text-indigo-900 w-20 flex-shrink-0 pt-1 flex items-center gap-1">
+              🌱 생애주기
+            </span>
+            <div className="flex flex-wrap gap-1.5">
+              {policyFlows.map(flow => (
+                <button
+                  key={flow}
+                  onClick={() => setSelectedFlow(flow)}
+                  className={`text-xs px-2.5 py-1 rounded-full border transition font-bold ${
+                    selectedFlow === flow
+                      ? 'bg-indigo-700 text-white border-indigo-800 shadow-2xs'
+                      : 'bg-white text-indigo-700 border-indigo-200 hover:bg-indigo-100'
+                  }`}
+                >
+                  {flow}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* 1차: 대분류 */}
           <div className="flex items-start gap-3">
-            <span className="text-xs font-bold text-slate-500 w-16 flex-shrink-0 pt-1">정책분류</span>
+            <span className="text-xs font-bold text-slate-500 w-20 flex-shrink-0 pt-1">1차 대분류</span>
             <div className="flex flex-wrap gap-1.5">
               {categories.map(cat => (
                 <button
                   key={cat}
-                  onClick={() => setSelectedCategory(cat)}
+                  onClick={() => {
+                    setSelectedCategory(cat);
+                    setSelectedSubCategory('전체');
+                    setSelectedMicroCategory('전체');
+                  }}
                   className={`text-xs px-2.5 py-1 rounded-full border transition font-bold ${
                     selectedCategory === cat
                       ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
@@ -266,6 +337,53 @@ export const PriorityDetails: React.FC<Props> = ({ proposals }) => {
               ))}
             </div>
           </div>
+
+          {/* 2차: 연동 중분류 */}
+          {subCategories.length > 1 && (
+            <div className="flex items-start gap-3 bg-blue-50/40 p-2 rounded-lg border border-blue-100">
+              <span className="text-xs font-bold text-blue-800 w-20 flex-shrink-0 pt-1">└ 2차 중분류</span>
+              <div className="flex flex-wrap gap-1.5">
+                {subCategories.map(sub => (
+                  <button
+                    key={sub}
+                    onClick={() => {
+                      setSelectedSubCategory(sub);
+                      setSelectedMicroCategory('전체');
+                    }}
+                    className={`text-xs px-2.5 py-1 rounded-md border transition font-bold ${
+                      selectedSubCategory === sub
+                        ? 'bg-blue-600 text-white border-blue-700 shadow-2xs'
+                        : 'bg-white text-blue-700 border-blue-200 hover:bg-blue-50'
+                    }`}
+                  >
+                    {sub}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* 3차: 연동 세분류 */}
+          {microCategories.length > 1 && selectedSubCategory !== '전체' && (
+            <div className="flex items-start gap-3 bg-emerald-50/40 p-2 rounded-lg border border-emerald-100 ml-4">
+              <span className="text-xs font-bold text-emerald-800 w-20 flex-shrink-0 pt-1">└ 3차 세분류</span>
+              <div className="flex flex-wrap gap-1.5">
+                {microCategories.map(micro => (
+                  <button
+                    key={micro}
+                    onClick={() => setSelectedMicroCategory(micro)}
+                    className={`text-xs px-2.5 py-1 rounded-md border transition font-bold ${
+                      selectedMicroCategory === micro
+                        ? 'bg-emerald-600 text-white border-emerald-700 shadow-2xs'
+                        : 'bg-white text-emerald-700 border-emerald-200 hover:bg-emerald-50'
+                    }`}
+                  >
+                    {micro}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
 
           <div className="flex items-start gap-3">
             <span className="text-xs font-bold text-slate-500 w-16 flex-shrink-0 pt-1">담당부서</span>
