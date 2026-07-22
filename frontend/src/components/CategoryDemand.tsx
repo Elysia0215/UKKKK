@@ -7,8 +7,63 @@ import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Line, ComposedChart } from 'recharts';
 import { PolicyCategory, PolicyProposal } from '../types';
-import { extractTopKeywords } from '../data/mockData';
 import { KeywordDetailModal } from './KeywordDetailModal';
+
+function cleanKoreanWord(word: string): string {
+  const suffixes = [
+    '에서', '에게', '한테', '부터', '까지', '으로', '하고', '보다', '들만',
+    '들', '은', '는', '이', '가', '을', '를', '에', '의', '과', '와', '도', '만', '로'
+  ];
+  
+  let cleaned = word;
+  let changed = true;
+  
+  while (changed) {
+    changed = false;
+    for (const suffix of suffixes) {
+      if (cleaned.length > suffix.length && cleaned.endsWith(suffix)) {
+        cleaned = cleaned.slice(0, -suffix.length);
+        changed = true;
+        break;
+      }
+    }
+  }
+  return cleaned;
+}
+
+function extractTopKeywords(proposals: PolicyProposal[], count: number = 30): { keyword: string; count: number }[] {
+  const keywordMap: Record<string, number> = {};
+  const stopWords = new Set([
+    '서울시', '서울', '지원', '관한', '위한', '대해', '관하여', '합니다', 
+    '해주세요', '부탁드립니다', '제안합니다', '생각합니다', '경우', '관련',
+    '있는', '있습니다', '제안', '대한', '하는', '있도록', '위해', 
+    '많이', '좋겠습니다', '현재', '많은', '너무', '같습니다', '하고', 
+    '안녕하세요', '갈습니다', '없습니다', '때문에', '통해', '아래', 
+    '또한', '있게', '혜택을', '주세요', '저는', '것입니다', '그리고', 
+    '다른', '서울시에서', '같은', '그래서', '것이', '것을', '해서', '하며',
+    '아니라', '필요합니다', '있고', '하지만', '있으며', '같아', '같네요',
+    '바랍니다', '원합니다', '등', '및', '및 관련'
+  ]);
+
+  proposals.forEach(p => {
+    const text = (p.title + ' ' + (p.content || '')).replace(/[^가-힣a-zA-Z0-9\s]/g, ' ');
+    const words = text.split(/\s+/);
+
+    words.forEach(w => {
+      if (w.length >= 2) {
+        const cleaned = cleanKoreanWord(w);
+        if (cleaned.length >= 2 && !stopWords.has(cleaned)) {
+          keywordMap[cleaned] = (keywordMap[cleaned] || 0) + 1;
+        }
+      }
+    });
+  });
+
+  return Object.entries(keywordMap)
+    .map(([keyword, count]) => ({ keyword, count }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, count);
+}
 import { MultiTierCategoryFilter, FilterState, CAT1_TO_LIFECYCLE } from './MultiTierCategoryFilter';
 import { 
   BarChart3, 
