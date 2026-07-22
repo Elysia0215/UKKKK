@@ -192,3 +192,28 @@
 
 > **[스크립트]**
 > 파편화된 데이터 속에서 실제 시민이 겪는 저출생 정책 공백을 데이터로 탐지하고, 신속한 행정 조치로 이끄는 대시보드, **UKKKK**였습니다. 경청해 주셔서 감사합니다. 지금부터 질의응답을 진행하도록 하겠습니다.
+
+---
+
+## 📂 [APPENDIX] 최종 산출물 및 산출물 경로 매핑 (Deliverables)
+
+본 프로젝트의 최종 산출물 상세 내역과 소스코드/문서 파일 위치입니다. 발표 자료 슬라이드나 보고서 제출 시 참조할 수 있도록 실제 Workspace 경로를 매핑해 둡니다.
+
+1. **PPT 및 발표자료**
+   - [발표 대본 및 PPT 구성안 (본 문서)](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/발표자료/발표_대본_PPT구성.md)
+   - [기존 컴퓨존 코미 최종 발표 자료 (참고용)](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/발표참고자료/컴퓨존%20코미_최종발표본.pptx)
+2. **참고 논문 (Reference Papers)**
+   - [논문 1: 국민신문고 저출산 민원 게시글에 나타난 영유아 정책 내용 분석 (CONCOR)](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/발표참고자료/국민신문고_저출산_민원_게시글에_나타난_영유아_정책_내용_분석%20(1).pdf)
+   - [논문 2: 텍스트 마이닝을 활용한 저출산 정책과 대중인식 비교](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/발표참고자료/텍스트_마이닝을_활용한_저출산_정책과_대중인식_비교.pdf)
+3. **기획안 (Policy Proposal)**
+   - [서울시 출산정책 대시보드 기획서](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/서울시_출산정책_대시보드_기획서.md)
+   - [팀 회의 및 문제 정의 점검 체크리스트](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/내일회의_문제정의_점검체크리스트.md)
+4. **PRD (Product Requirement Document)**
+   - [프로젝트 분석 보고서 및 요구사항 명세서](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/발표참고자료/[PRD]프로젝트_분석_보고서.md)
+5. **데이터분석 정의서 & 보고서 (EDA)**
+   - [데이터 분석 정의서 (5원 Multi-API 융합판)](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/데이터분석정의서_템플릿.md)
+6. **대시보드 MVP (React App)**
+   - [프론트엔드 컴포넌트 디렉토리](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components)
+   - [갭 분석 대시보드 메인 컴포넌트 (GapMatrixDashboard.tsx)](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/GapMatrixDashboard.tsx)
+   - [정밀 우선순위 분석 컴포넌트 (PriorityDetails.tsx)](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/PriorityDetails.tsx)
+   - [기안·결재 보고서 자동 생성기 컴포넌트 (ReportExportModal.tsx)](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/ReportExportModal.tsx)
