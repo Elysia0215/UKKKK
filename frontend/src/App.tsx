@@ -19,7 +19,8 @@ import {
   HelpCircle,
   FileSpreadsheet,
   TrendingUp,
-  Download
+  Download,
+  AlertTriangle
 } from 'lucide-react';
 import rawMongttangData from './data/mongttang.json';
 import { PolicyProposal, DashboardStats } from './types';
@@ -34,6 +35,7 @@ import { ClusterVolumeMap } from './components/ClusterVolumeMap';
 import { SeoulMap } from './components/SeoulMap';
 import { StatCharts } from './components/StatCharts';
 import { PolicyExplorer } from './components/PolicyExplorer';
+import { GapMatrixDashboard } from './components/GapMatrixDashboard';
 import { SEOUL_DISTRICTS_DATA, DistrictData } from './data/seoulData';
 
 import { exportToCsv } from './utils/exportCsv';
@@ -279,6 +281,19 @@ export default function App() {
               <FileSpreadsheet className="w-4 h-4 text-indigo-500" />
               공공데이터 지표 분석
             </button>
+
+            <button
+              onClick={() => handleTabClick(7)}
+              title="수요-공급-민원 통합 갭(Gap) 분석 6대 판단 매트릭스 진단표"
+              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
+                activeTab === 7
+                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
+                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
+              }`}
+            >
+              <AlertTriangle className="w-4 h-4 text-rose-500 animate-pulse" />
+              종합 의사결정 분석표 (Gap Matrix)
+            </button>
           </nav>
         </div>
       </div>
@@ -450,6 +465,13 @@ export default function App() {
                   </div>
                 </section>
               </div>
+            )}
+
+            {activeTab === 7 && (
+              <GapMatrixDashboard 
+                proposals={mockProposals}
+                onNavigateToTab={handleNavigateToTab}
+              />
             )}
           </motion.div>
         </AnimatePresence>
