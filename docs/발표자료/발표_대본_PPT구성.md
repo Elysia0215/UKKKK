@@ -376,8 +376,19 @@
 #### Slide A-1: [APPENDIX] 최종 산출물 및 산출물 경로 매핑 (Deliverables)
 * **PPT 화면 구성**:
   - 헤드라인 타이틀: **"APPENDIX: 최종 산출물 목록"**
-  - 6대 최종 산출물 및 Workspace 절대경로 하이퍼링크 리스트 테이블. (설명 텍스트 배제, 경로 링크만 격자형으로 배치)
+  - **최종 산출물 테이블**:
+
+| 번호 | 산출물 항목 | 파일 형식 | 절대 경로 링크 | 비고 |
+| :---: | :--- | :---: | :--- | :--- |
+| **1** | 시스템 설계 기획서 (PRD) | Markdown | [SYSTEM_DESIGN_PRD.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/SYSTEM_DESIGN_PRD.md) | 분석 시스템 아키텍처 및 요구사항 기술서 |
+| **2** | 데이터 분석 정의서 | Word/MD | [데이터분석정의서_템플릿.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/데이터분석정의서_템플릿.md) | 가중치 연산 수식 및 통계청 인구동향 매핑 정보 |
+| **3** | 프로젝트 개발 일지 | Markdown | [DEVELOPMENT_LOG.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/DEVELOPMENT_LOG.md) | 일자별 상세 구현 내역 및 이슈 트러블슈팅 이력 |
+| **4** | 대시보드 메인 소스 코드 | TypeScript | [App.tsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/App.tsx) | 프론트엔드 상태관리 및 8대 탭 연동 메인 파일 |
+| **5** | 갭 진단 분석 컴포넌트 | TypeScript | [GapMatrixDashboard.tsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/GapMatrixDashboard.tsx) | 의사결정 갭 분석 매트릭스 및 결재 환류 패널 구현부 |
+| **6** | 데이터 수집 및 정제 스크립트 | Python | [scripts/](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/scripts) | SBERT 의미론적 군집화 및 NMF 토픽 모델링 파이프라인 |
+
 * **시간**: `Q&A 및 제출 검증용`
 
 > **[스크립트]**
 > (평가위원이 산출물과 실제 코드를 대조해 보거나 기술 검증을 요청할 시 활용하는 장표입니다.)
+> "저희 프로젝트의 기술적 투명성을 입증하기 위해, 시스템 설계 기획서부터 데이터 분석 정의서, 개발일지, 그리고 프론트엔드와 백엔드 데이터 파이프라인의 핵심 소스 코드 경로를 아웃링크 형태로 격자 배치했습니다. 평가위원분들께서 언제든 실제 구현체와 대조하여 검증하실 수 있도록 모든 산출물을 오픈소스로 투명하게 공개해 두었습니다."
