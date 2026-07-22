@@ -150,13 +150,30 @@ export const GapMatrixDashboard: React.FC<Props> = ({
   const [expandedMetric, setExpandedMetric] = useState<string | null>(null);
 
   // Human-in-the-loop state variables
-  const [feedbackLogs, setFeedbackLogs] = useState<FeedbackLog[]>([]);
+  const [feedbackLogs, setFeedbackLogs] = useState<FeedbackLog[]>([
+    {
+      issue_id: '임신·출산 이용기준',
+      official_feedback: '수정 후 승인',
+      ai_recommended_action: '임산부 배려석 기준 조례 완화 및 스티커 교체 안내',
+      correct_action: '[조치 완료] 임산부 배려석 양보 캠페인 확대 및 자치구 지하철 스티커 시인성 개선 공문 발송 완료',
+      reviewed_at: '2026-07-21 14:32:10',
+      was_modified: true
+    },
+    {
+      issue_id: '의료비·경제 부담',
+      official_feedback: '승인',
+      ai_recommended_action: '소아 응급 진료비 비급여 항목 지원 확대 추진',
+      correct_action: '소아 응급 진료비 비급여 항목 지원 확대 추진',
+      reviewed_at: '2026-07-20 09:15:43',
+      was_modified: false
+    }
+  ]);
   const [showApprovalPanel, setShowApprovalPanel] = useState<boolean>(false);
   const [editedAnswer, setEditedAnswer] = useState<string>('');
   const [feedbackAction, setFeedbackAction] = useState<'승인' | '수정 후 승인' | '반려' | null>(null);
   const [customActions, setCustomActions] = useState<Record<string, { action: string; status: string; overrideSatisfaction?: string }>>({});
   const [lastSubmittedLog, setLastSubmittedLog] = useState<FeedbackLog | null>(null);
-  const [showFeedbackHistory, setShowFeedbackHistory] = useState<boolean>(false);
+  const [showFeedbackHistory, setShowFeedbackHistory] = useState<boolean>(true);
 
   // 2열 비교 검증 펼치기/접기 토글 상태
   const [showRawProposals, setShowRawProposals] = useState<boolean>(false);
