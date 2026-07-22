@@ -57,6 +57,7 @@ export const DashboardOverview: React.FC<Props> = ({
   const deptStatsProcessed = React.useMemo(() => {
     return deptStats.map(d => ({
       ...d,
+      name: d.dept,
       answered: Math.max(0, d.total - d.unanswered)
     }));
   }, [deptStats]);

@@ -22,7 +22,9 @@ import {
   Sparkles,
   Check,
   X,
-  Clock
+  Clock,
+  Maximize2,
+  Minimize2
 } from 'lucide-react';
 import { PolicyProposal } from '../types';
 import rawMongttangData from '../data/mongttang.json';
@@ -94,6 +96,51 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
   const [editedAnswer, setEditedAnswer] = useState<string>('');
   const [feedbackAction, setFeedbackAction] = useState<'승인' | '수정 후 승인' | '반려' | null>(null);
   const [customActions, setCustomActions] = useState<Record<string, { action: string; status: string; overrideSatisfaction?: string }>>({});
+
+  // [추가] 실제 원문 대조용 검증 펼치기/접기 토글 상태
+  const [showRawProposals, setShowRawProposals] = useState<boolean>(false);
+  const [showRawCivils, setShowRawCivils] = useState<boolean>(false);
+  const [showRawPolicies, setShowRawPolicies] = useState<boolean>(false);
+  const [showComparisonModal, setShowComparisonModal] = useState<boolean>(false);
+
+  // [추가] 선택된 이슈에 해당하는 실제 원천 데이터 매핑 memo
+  const selectedIssueRawData = useMemo(() => {
+    if (!selectedIssue) return { proposals: [], civils: [], policies: [] };
+    
+    // 1. 매칭되는 상상대로서울 시민제안 필터링 (8대 분류 규칙 연동)
+    const matchedProps = proposals.filter(p => {
+      const cat = selectedIssue.name;
+      if (cat === '임신·난임·생식건강') return p.category === '임신·난임·생식건강';
+      if (cat === '출산·산후 초기지원') return p.category === '출산·산후 초기지원';
+      if (cat === '양육비·부모급여·금융지원') return p.category === '다자녀·양육비·생활지원' && (p.sub_category?.includes('양육비') || p.sub_category?.includes('생활비') || p.sub_category?.includes('지원'));
+      if (cat === '보육·돌봄 인프라') return p.category === '보육·돌봄 인프라';
+      if (cat === '일·가정 양립 지원') return p.category === '일·가정 양립·부모 노동';
+      if (cat === '다자녀 가구 특화 혜택') return p.category === '다자녀·양육비·생활지원' && p.sub_category?.includes('다자녀');
+      if (cat === '주거·교통·도시생활환경') return p.category === '주거·교통·도시생활환경';
+      if (cat === '의료·건강·심리 지원') return p.sub_category?.includes('건강') || p.sub_category?.includes('의료') || p.sub_category?.includes('치료') || p.category === '취약·다양가족 사각지대';
+      return p.category === cat;
+    }).sort((a, b) => b.vote_score - a.vote_score);
+
+    // 2. 매칭되는 국민신문고 현장민원 필터링
+    const matchedCivils = (civilRequestsData as any[]).filter(r => 
+      r.category === selectedIssue.name || 
+      r.category === selectedIssue.category || 
+      r.title?.includes(selectedIssue.name.substring(0, 2))
+    );
+
+    // 3. 매칭되는 몽땅정보통 서울시 정책 데이터 필터링
+    const matchedPolicies = (rawMongttangData as any[]).filter(p => 
+      p.policy_name === selectedIssue.policyName || 
+      p.policy_name?.includes(selectedIssue.policyName) ||
+      p.category === selectedIssue.name
+    );
+
+    return {
+      proposals: matchedProps,
+      civils: matchedCivils,
+      policies: matchedPolicies
+    };
+  }, [selectedIssue, proposals]);
 
   // 1. 최신성 가중치 계산 규칙
   const getRecencyWeight = (dateStr?: string) => {
@@ -515,13 +562,28 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
             <div className="flex flex-col h-full justify-between">
               {/* 카드 상단 헤더 */}
               <div className="p-4 bg-slate-900 text-white flex justify-between items-center">
-                <div>
-                  <h3 className="font-bold text-xs">{selectedIssue.name}</h3>
-                  <span className="text-[10px] text-slate-300">{selectedIssue.statusInterpretation}</span>
+                <div className="min-w-0 mr-2">
+                  <h3 className="font-bold text-xs truncate">{selectedIssue.name}</h3>
+                  <span className="text-[9.5px] text-slate-300 block truncate">{selectedIssue.statusInterpretation}</span>
                 </div>
-                <span className="text-xs bg-rose-600 text-white px-2 py-0.5 rounded font-black shadow-xs">
-                  우선순위 {selectedIssue.priorityScore}점
-                </span>
+                <div className="flex items-center gap-2 shrink-0">
+                  {/* 2열 비교 분석기 확대 아이콘 버튼 (컴퓨존 챗봇 모티프) */}
+                  <button 
+                    onClick={() => {
+                      setShowComparisonModal(true);
+                      setShowRawProposals(true);
+                      setShowRawCivils(true);
+                      setShowRawPolicies(true);
+                    }}
+                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-all duration-200 hover:scale-110 flex items-center justify-center cursor-pointer"
+                    title="↔️ 양측 원문 2열 비교분석기 (전체화면 확대)"
+                  >
+                    <Maximize2 className="w-4 h-4" />
+                  </button>
+                  <span className="text-[11px] bg-rose-600 text-white px-2 py-0.5 rounded font-black shadow-xs">
+                    {selectedIssue.priorityScore}점
+                  </span>
+                </div>
               </div>
 
               {/* 4대 원천 탭 내비게이션 */}
@@ -943,6 +1005,87 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
                 </div>
               </div>
 
+              {/* [추가] 실제 원천 데이터 검토용 아코디언 */}
+              <div className="space-y-2 pt-2 border-t border-slate-200">
+                <span className="font-bold text-slate-800 block">📂 실제 원천 데이터 교차 검증 (원문 대조)</span>
+                
+                {/* 1. 시민 제안 원문 */}
+                <div className="border border-slate-200 rounded-lg overflow-hidden bg-white">
+                  <button 
+                    type="button"
+                    onClick={() => setShowRawProposals(!showRawProposals)}
+                    className="w-full flex justify-between items-center p-2.5 bg-slate-50 text-[11px] font-bold text-blue-900 border-b border-slate-200"
+                  >
+                    <span>📜 실제 시민 제안 원문 ({selectedIssueRawData.proposals.length}건)</span>
+                    <span className="text-[10px] font-normal">{showRawProposals ? '▲ 접기' : '▼ 펼치기'}</span>
+                  </button>
+                  {showRawProposals && (
+                    <div className="p-2.5 max-h-48 overflow-y-auto space-y-2.5 text-[10.5px] bg-slate-50/20">
+                      {selectedIssueRawData.proposals.map((prop, idx) => (
+                        <div key={prop.id} className="p-2 bg-white rounded border border-slate-200 shadow-2xs">
+                          <div className="flex justify-between items-center text-[9px] text-slate-400 font-bold mb-1">
+                            <span>No. {idx + 1} ({prop.id}) | 공감: {prop.vote_score}표</span>
+                            <span>{prop.reg_date}</span>
+                          </div>
+                          <h5 className="font-bold text-slate-900 mb-1">{prop.title}</h5>
+                          <p className="text-slate-600 whitespace-pre-line leading-relaxed max-h-24 overflow-y-auto font-sans text-[10.5px] p-2 bg-slate-50 rounded">{prop.content}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* 2. 국민신문고 민원 원문 */}
+                <div className="border border-slate-200 rounded-lg overflow-hidden bg-white">
+                  <button 
+                    type="button"
+                    onClick={() => setShowRawCivils(!showRawCivils)}
+                    className="w-full flex justify-between items-center p-2.5 bg-slate-50 text-[11px] font-bold text-indigo-900 border-b border-slate-200"
+                  >
+                    <span>🏢 실제 현장 민원 원문 ({selectedIssueRawData.civils.length}건)</span>
+                    <span className="text-[10px] font-normal">{showRawCivils ? '▲ 접기' : '▼ 펼치기'}</span>
+                  </button>
+                  {showRawCivils && (
+                    <div className="p-2.5 max-h-48 overflow-y-auto space-y-2.5 text-[10.5px] bg-slate-50/20">
+                      {selectedIssueRawData.civils.map((civ, idx) => (
+                        <div key={civ.id || idx} className="p-2 bg-white rounded border border-slate-200 shadow-2xs">
+                          <div className="flex justify-between items-center text-[9px] text-slate-400 font-bold mb-1">
+                            <span>No. {idx + 1} | 담당부서: {civ.dept}</span>
+                            <span>{civ.reg_date}</span>
+                          </div>
+                          <h5 className="font-bold text-slate-900 mb-1">{civ.title}</h5>
+                          <p className="text-slate-600 whitespace-pre-line leading-relaxed max-h-24 overflow-y-auto font-sans text-[10.5px] p-2 bg-slate-50 rounded">{civ.content}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* 3. 몽땅정보통 정책 원문 */}
+                <div className="border border-slate-200 rounded-lg overflow-hidden bg-white">
+                  <button 
+                    type="button"
+                    onClick={() => setShowRawPolicies(!showRawPolicies)}
+                    className="w-full flex justify-between items-center p-2.5 bg-slate-50 text-[11px] font-bold text-emerald-900 border-b border-slate-200"
+                  >
+                    <span>🔍 실제 서울시 정책 상세 정보 ({selectedIssueRawData.policies.length}건)</span>
+                    <span className="text-[10px] font-normal">{showRawPolicies ? '▲ 접기' : '▼ 펼치기'}</span>
+                  </button>
+                  {showRawPolicies && (
+                    <div className="p-2.5 max-h-48 overflow-y-auto space-y-2.5 text-[10.5px] bg-slate-50/20">
+                      {selectedIssueRawData.policies.map((pol, idx) => (
+                        <div key={pol.id || idx} className="p-2 bg-white rounded border border-slate-200 shadow-2xs space-y-1">
+                          <h5 className="font-extrabold text-slate-900 text-[11px]">{pol.policy_name}</h5>
+                          <p className="text-slate-600 font-bold text-[10px]">🎯 지원 대상: {pol.targetGroup || pol.support_target}</p>
+                          <p className="text-slate-600 text-[10px]">🎁 지원 혜택: {pol.supportDetail || pol.support_content}</p>
+                          <p className="text-slate-600 text-[10px]">📝 신청 방법: {pol.apply_method || '온라인 접수'}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+
               {/* 답변 초안 작성 에디터 */}
               <div className="space-y-1">
                 <span className="font-bold text-slate-800 block">✍️ 행정 공식 답변 초안 수정 (Human Edit)</span>
@@ -953,34 +1096,244 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
                 />
               </div>
             </div>
+ 
+             {/* 모달 푸터 버튼 피드백 */}
+             <div className="p-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] text-slate-500">
+               <span className="flex items-center gap-1 font-medium">
+                 <Info className="w-3.5 h-3.5 text-indigo-500" />
+                 제출한 이력은 담당자 피드백 기반 룰·가중치 개선 구조에 기록됩니다.
+               </span>
+               <div className="flex gap-2 w-full sm:w-auto">
+                 <button 
+                   onClick={() => handleFeedbackSubmit('반려')}
+                   className="flex-1 sm:flex-initial bg-rose-600 hover:bg-rose-700 text-white px-3 py-2 rounded-lg font-bold shadow-xs transition"
+                 >
+                   반려 (신규 검토)
+                 </button>
+                 <button 
+                   onClick={() => handleFeedbackSubmit('수정 후 승인')}
+                   className="flex-1 sm:flex-initial bg-amber-500 hover:bg-amber-600 text-slate-900 px-3 py-2 rounded-lg font-bold shadow-xs transition"
+                 >
+                   수정 후 승인
+                 </button>
+                 <button 
+                   onClick={() => handleFeedbackSubmit('승인')}
+                   className="flex-1 sm:flex-initial bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-lg font-bold shadow-xs transition"
+                 >
+                   승인 (기존정책 안내)
+                 </button>
+               </div>
+             </div>
+           </div>
+         </div>
+       )}
 
-            {/* 모달 푸터 버튼 피드백 */}
-            <div className="p-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-[10px] text-slate-500">
-              <span className="flex items-center gap-1 font-medium">
-                <Info className="w-3.5 h-3.5 text-indigo-500" />
-                제출한 이력은 담당자 피드백 기반 룰·가중치 개선 구조에 기록됩니다.
+      {/* [추가] 2열 교차 검증 비교분석기 모달 */}
+      {showComparisonModal && selectedIssue && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-xs p-4 overflow-y-auto">
+          <div className="bg-slate-50 w-full max-w-6xl rounded-2xl border border-slate-200 shadow-2xl overflow-hidden flex flex-col max-h-[95vh]">
+            {/* 헤더 */}
+            <div className="bg-slate-900 p-4 text-white flex justify-between items-center">
+              <div className="flex items-center gap-2.5">
+                <span className="text-xl">⚖️</span>
+                <div>
+                  <h3 className="font-extrabold text-sm">[2열 원문 교차 검증] {selectedIssue.name} 비교분석기</h3>
+                  <p className="text-[10px] text-slate-400">
+                    우선순위: <span className="text-rose-400 font-bold">{selectedIssue.priorityScore}점</span> | 
+                    AI 분석결과: <span className="text-blue-300 font-bold">{selectedIssue.statusInterpretation}</span> | 
+                    R&R: <span className="text-emerald-300 font-bold">{selectedIssue.primaryDept}</span>
+                  </p>
+                </div>
+              </div>
+              <button 
+                onClick={() => setShowComparisonModal(false)}
+                className="p-1 text-slate-400 hover:text-white transition cursor-pointer"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+
+            {/* 비교 내용 본문 (2열 레이아웃) */}
+            <div className="p-5 flex-grow overflow-y-auto grid grid-cols-1 lg:grid-cols-2 gap-6 min-h-0">
+              
+              {/* 왼쪽 열: 시민 요구사항 (시민 제안 및 현장 민원) */}
+              <div className="space-y-4 flex flex-col min-h-0">
+                <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex-1 flex flex-col min-h-[300px]">
+                  <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-3">
+                    <h4 className="font-black text-xs text-blue-800 flex items-center gap-1">
+                      <span>📜 시민 요구사항 (상상대로 서울 제안)</span>
+                      <span className="bg-blue-50 text-blue-700 px-1.5 py-0.2 rounded text-[9px] font-mono">{selectedIssueRawData.proposals.length}건</span>
+                    </h4>
+                  </div>
+                  
+                  <div className="flex-1 overflow-y-auto space-y-3 max-h-[360px] pr-1">
+                    {selectedIssueRawData.proposals.length === 0 ? (
+                      <p className="text-slate-400 text-center py-10 text-[11px]">해당 분야의 매칭된 시민 제안이 없습니다.</p>
+                    ) : (
+                      selectedIssueRawData.proposals.map((prop, pIdx) => (
+                        <div key={prop.id} className="bg-slate-50 p-3 rounded-lg border border-slate-200 text-[11px] space-y-1.5">
+                          <div className="flex justify-between items-center text-[10px] text-slate-500 font-bold">
+                            <span>No. {pIdx + 1} ({prop.id})</span>
+                            <div className="flex items-center gap-2">
+                              <span>{prop.reg_date}</span>
+                              <span className="bg-white border border-slate-200 px-1.5 py-0.2 rounded text-blue-600 font-mono">👍 {prop.vote_score}표</span>
+                            </div>
+                          </div>
+                          <h5 className="font-bold text-slate-900 leading-snug">{prop.title}</h5>
+                          <p className="text-slate-600 bg-white p-2.5 rounded border border-slate-150 whitespace-pre-line leading-relaxed max-h-36 overflow-y-auto font-sans text-[10.5px]">
+                            {prop.content}
+                          </p>
+                        </div>
+                      ))
+                    )}
+                  </div>
+                </div>
+
+                <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex-1 flex flex-col min-h-[220px]">
+                  <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-3">
+                    <h4 className="font-black text-xs text-indigo-800 flex items-center gap-1">
+                      <span>🏢 현장 고충 민원 (국민신문고)</span>
+                      <span className="bg-indigo-50 text-indigo-700 px-1.5 py-0.2 rounded text-[9px] font-mono">{selectedIssueRawData.civils.length}건</span>
+                    </h4>
+                  </div>
+                  
+                  <div className="flex-1 overflow-y-auto space-y-3 max-h-[260px] pr-1">
+                    {selectedIssueRawData.civils.length === 0 ? (
+                      <p className="text-slate-400 text-center py-10 text-[11px]">해당 분야의 매칭된 국민신문고 민원이 없습니다.</p>
+                    ) : (
+                      selectedIssueRawData.civils.map((civ, cIdx) => (
+                        <div key={civ.id || cIdx} className="bg-slate-50 p-3 rounded-lg border border-slate-200 text-[11px] space-y-1.5">
+                          <div className="flex justify-between items-center text-[10px] text-slate-500 font-bold">
+                            <span>No. {cIdx + 1} ({civ.dept})</span>
+                            <span>{civ.reg_date}</span>
+                          </div>
+                          <h5 className="font-bold text-slate-900 leading-snug">{civ.title}</h5>
+                          <p className="text-slate-600 bg-white p-2.5 rounded border border-slate-150 whitespace-pre-line leading-relaxed max-h-32 overflow-y-auto font-sans text-[10.5px]">
+                            {civ.content}
+                          </p>
+                        </div>
+                      ))
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* 오른쪽 열: 서울시 정책 공급 (몽땅정보통 지원사업 및 뉴스) */}
+              <div className="space-y-4 flex flex-col min-h-0">
+                <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex-1 flex flex-col min-h-[300px]">
+                  <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-3">
+                    <h4 className="font-black text-xs text-emerald-800 flex items-center gap-1">
+                      <span>🔍 서울시 정책 공급 현황 (몽땅정보통)</span>
+                      <span className="bg-emerald-50 text-emerald-700 px-1.5 py-0.2 rounded text-[9px] font-mono">{selectedIssueRawData.policies.length}건</span>
+                    </h4>
+                  </div>
+                  
+                  <div className="flex-1 overflow-y-auto space-y-3 max-h-[360px] pr-1">
+                    {selectedIssueRawData.policies.length === 0 ? (
+                      <p className="text-slate-400 text-center py-10 text-[11px]">해당 분야의 매칭된 서울시 정책이 없습니다.</p>
+                    ) : (
+                      selectedIssueRawData.policies.map((pol, pIdx) => (
+                        <div key={pol.id || pIdx} className="bg-slate-50 p-3 rounded-lg border border-slate-200 text-[11px] space-y-2">
+                          <div className="flex justify-between items-center text-[10px] text-slate-500 font-bold border-b border-slate-200/50 pb-1">
+                            <span>No. {pIdx + 1} ({pol.id || '정책'})</span>
+                            <span className="bg-emerald-100 text-emerald-800 px-1.5 py-0.2 rounded text-[9.5px] font-bold">{pol.category || '출산지원'}</span>
+                          </div>
+                          <h5 className="font-black text-slate-900 text-xs flex justify-between items-start">
+                            <span>{pol.policy_name}</span>
+                          </h5>
+                          <div className="space-y-1 text-[10px] leading-snug">
+                            <p><strong className="text-slate-700">🎯 지원 대상:</strong> {pol.targetGroup || pol.support_target}</p>
+                            <p><strong className="text-slate-700">🎁 지원 혜택:</strong> {pol.supportDetail || pol.support_content}</p>
+                            <p><strong className="text-slate-700">📝 신청 방법:</strong> {pol.apply_method || '온라인 접수'}</p>
+                            {pol.url && (
+                              <p>
+                                <strong className="text-slate-700">🔗 관련 링크:</strong>{' '}
+                                <a href={pol.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                                  {pol.url}
+                                </a>
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      ))
+                    )}
+                  </div>
+                </div>
+
+                <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex-1 flex flex-col min-h-[220px]">
+                  <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-3">
+                    <h4 className="font-black text-xs text-slate-800 flex items-center gap-1">
+                      <span>📰 사회 보도 트렌드 (네이버 API & 연구 뉴스)</span>
+                    </h4>
+                  </div>
+                  
+                  <div className="flex-1 overflow-y-auto space-y-2 max-h-[260px] pr-1">
+                    {(() => {
+                      const matchedNews = newsAllData.filter(n => {
+                        const issueName = selectedIssue.name;
+                        const newsCat = n.category;
+                        if (issueName === newsCat) return true;
+                        if (issueName === '양육비·부모급여·금융지원' || issueName === '다자녀 가구 특화 혜택') {
+                          return newsCat === '다자녀·양육비·생활지원';
+                        }
+                        if (issueName === '일·가정 양립 지원') {
+                          return newsCat === '일·가정 양립·부모 노동';
+                        }
+                        if (issueName === '의료·건강·심리 지원') {
+                          return newsCat === '임신·난임·생식건강' || newsCat === '취약·다양가족 사각지대';
+                        }
+                        return false;
+                      }).slice(0, 5);
+
+                      if (matchedNews.length === 0) {
+                        return <p className="text-slate-400 text-center py-10 text-[11px]">매칭된 뉴스가 없습니다.</p>;
+                      }
+
+                      return matchedNews.map((news: any, nIdx: number) => (
+                        <div key={nIdx} className="bg-slate-50 p-2.5 rounded-lg border border-slate-200 text-[10px] space-y-1">
+                          <div className="flex items-center justify-between text-[9px] text-slate-400 font-bold">
+                            <span>{news.type || '네이버뉴스'}</span>
+                            <span className="text-red-500 font-black">🔥 이슈강도: {news.strength}</span>
+                          </div>
+                          <h5 className="font-bold text-slate-800 line-clamp-1">{news.title}</h5>
+                          <p className="text-slate-500 text-[9.5px] line-clamp-2 leading-relaxed">
+                            {news.snippet}
+                          </p>
+                        </div>
+                      ));
+                    })()}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            {/* 푸터 */}
+            <div className="p-4 bg-slate-100 border-t border-slate-200 flex justify-between items-center">
+              <span className="text-[10px] text-slate-500">
+                💡 좌측의 실제 시민 원문 요구(요구/민원)와 우측의 행정 공급(기존 정책/뉴스)을 직접 1:1로 비교해 보십시오.
               </span>
-              <div className="flex gap-2 w-full sm:w-auto">
-                <button 
-                  onClick={() => handleFeedbackSubmit('반려')}
-                  className="flex-1 sm:flex-initial bg-rose-600 hover:bg-rose-700 text-white px-3 py-2 rounded-lg font-bold shadow-xs transition"
+              <div className="flex gap-2">
+                <button
+                  onClick={() => {
+                    setEditedAnswer(`[기존 정책 답변 안내]\n- 정책명: ${selectedIssue.policyName}\n- 지원대상: ${selectedIssue.targetGroup}\n- 지원내용: ${selectedIssue.supportDetail}\n- 신청방법: ${selectedIssue.url}를 통한 온라인/오프라인 신청 가능합니다.\n\n시민께서 제안해 주신 요구사항 중 일부가 현행 정책을 통해 이미 지원 중이거나 지원 방안에 포함되어 있음을 안내드립니다.`);
+                    setFeedbackAction(null);
+                    setShowApprovalPanel(true);
+                  }}
+                  className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs px-4 py-2 rounded-lg shadow-sm transition flex items-center gap-1.5 cursor-pointer"
                 >
-                  반려 (신규 검토)
+                  <Sparkles className="w-3.5 h-3.5" />
+                  <span>🤖 AI 답변 검토·승인 패널 열기</span>
                 </button>
-                <button 
-                  onClick={() => handleFeedbackSubmit('수정 후 승인')}
-                  className="flex-1 sm:flex-initial bg-amber-500 hover:bg-amber-600 text-slate-900 px-3 py-2 rounded-lg font-bold shadow-xs transition"
+                <button
+                  onClick={() => setShowComparisonModal(false)}
+                  className="bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs px-4 py-2 rounded-lg transition cursor-pointer"
                 >
-                  수정 후 승인
-                </button>
-                <button 
-                  onClick={() => handleFeedbackSubmit('승인')}
-                  className="flex-1 sm:flex-initial bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-2 rounded-lg font-bold shadow-xs transition"
-                >
-                  승인 (기존정책 안내)
+                  비교뷰 닫기
                 </button>
               </div>
             </div>
+
           </div>
         </div>
       )}

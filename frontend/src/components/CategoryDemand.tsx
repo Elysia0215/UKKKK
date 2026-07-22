@@ -9,7 +9,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Line, Compos
 import { PolicyCategory, PolicyProposal } from '../types';
 import { extractTopKeywords } from '../data/mockData';
 import { KeywordDetailModal } from './KeywordDetailModal';
-import { MultiTierCategoryFilter, FilterState } from './MultiTierCategoryFilter';
+import { MultiTierCategoryFilter, FilterState, CAT1_TO_LIFECYCLE } from './MultiTierCategoryFilter';
 import { 
   BarChart3, 
   ThumbsUp, 
@@ -47,6 +47,37 @@ export const CategoryDemand: React.FC<Props> = ({
     category3: '전체',
     department: '전체',
   });
+
+  // Sync selectedCategory from parent component with multi-tier filter state
+  React.useEffect(() => {
+    if (selectedCategory && selectedCategory !== '전체') {
+      const targetLifecycle = CAT1_TO_LIFECYCLE[selectedCategory] || '전체';
+      setFilterState(prev => ({
+        ...prev,
+        category1: selectedCategory,
+        lifecycle: targetLifecycle,
+        category2: '전체',
+        category3: '전체'
+      }));
+    } else if (selectedCategory === null) {
+      setFilterState(prev => ({
+        ...prev,
+        category1: '전체',
+        lifecycle: '전체',
+        category2: '전체',
+        category3: '전체'
+      }));
+    }
+  }, [selectedCategory]);
+
+  const handleFilterChange = (newState: FilterState) => {
+    setFilterState(newState);
+    if (newState.category1 === '전체') {
+      onSelectCategory(null);
+    } else {
+      onSelectCategory(newState.category1);
+    }
+  };
 
   // 연도별 필터링된 제안 목록
   const keywordFilteredProposals = useMemo(() => {
@@ -168,7 +199,7 @@ export const CategoryDemand: React.FC<Props> = ({
       <MultiTierCategoryFilter
         proposals={proposals}
         filterState={filterState}
-        onFilterChange={setFilterState}
+        onFilterChange={handleFilterChange}
       />
 
       {/* 2축 복합 분석 그래프 */}
