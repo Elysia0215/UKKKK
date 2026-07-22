@@ -33,14 +33,14 @@
 
 ## 3. 4대 데이터 원천별 역할 정의
 
-| 데이터 소스 | 주요 역할 | 대시보드 활용 방식 |
-|---|---|---|
-| **상상대로 시민 제안** | 시민 아이디어 및 정책 개선 요구 (824건) | 제안 수, 공감수, 댓글수, 100% 웹 원문, `[🔗 원문 URL 직접 확인 ↗]` |
-| **국민신문고 민원** | 현장 고충, 불만, 시급성 높은 불편 신호 (582건) | 민원 수, OpenProposalItem 풀 본문, `[🔗 국민신문고 포털 열람 ↗]` |
-| **몽땅정보통 정책** | 기존 서울시 정책 공급 데이터 (323건) | 사업명, 혜택 요약, `https://umppa.seoul.go.kr` 신청 포털 연동 |
-| **자치구 공공 통계** | 서울시 25개 자치구 TFR (0.63명), 출생아수 (45,500명), 보육시설 | 지도(Choropleth), 이중축 그래프, 인프라 갭 지수 (2025 최신 속보치 반영) |
-| **뉴스 및 언론 보도** | 사회적 확산 여론 및 외부 이슈 보조 데이터 (1,145건) | 실시간 네이버 API 뉴스 + 리서치 DB 융합, 이슈강도(상/중/하) 및 활용유형 배지 |
-| **담당 부서/업무분장** | 정책 수립 및 개선 실행 주체 (18개 실무팀) | 1·2·3순위 부서 후보, 전화번호, 업무 근거 |
+| 데이터 소스 | 실제 파일 경로 | 주요 역할 | 대시보드 활용 방식 |
+|---|---|---|---|
+| **상상대로 시민 제안** | [mongttang.json](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/data/mongttang.json) | 시민 아이디어 및 정책 개선 요구 (824건) | 제안 수, 공감수, 댓글수, 100% 웹 원문, `[🔗 원문 URL 직접 확인 ↗]` |
+| **국민신문고 민원** | [civil_requests_all.json](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/data/civil_requests_all.json) <br> [civil_requests_all.csv](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/data/final/civil_requests_all.csv) | 현장 고충, 불만, 시급성 높은 불편 신호 (582건) | 민원 수, OpenProposalItem 풀 본문, `[🔗 국민신문고 포털 열람 ↗]` |
+| **몽땅정보통 정책** | [classified_policy.csv](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/data/mongttang/classified_policy.csv) | 기존 서울시 정책 공급 데이터 (323건) | 사업명, 혜택 요약, `https://umppa.seoul.go.kr` 신청 포털 연동 |
+| **자치구 공공 통계** | [seoulData.ts](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/data/seoulData.ts) | 서울시 25개 자치구 TFR (0.63명), 출생아수 (45,500명), 보육시설 | 지도(Choropleth), 이중축 그래프, 인프라 갭 지수 (2025 최신 속보치 반영) |
+| **뉴스 및 언론 보도** | [news_all.json](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/data/news_all.json) <br> [merged_naver_news_all_categories.csv](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/data/final/merged_naver_news_all_categories.csv) | 사회적 확산 여론 및 외부 이슈 보조 데이터 (1,145건) | 실시간 네이버 API 뉴스 + 리서치 DB 융합, 이슈강도(상/중/하) 및 활용유형 배지 |
+| **담당 부서/업무분장** | [출산정책관련_업무담당.xlsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/data/mongttang/출산정책관련_업무담당.xlsx) | 정책 수립 및 개선 실행 주체 (18개 실무팀) | 1·2·3순위 부서 후보, 전화번호, 업무 근거 |
 
 ---
 
