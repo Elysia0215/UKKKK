@@ -1333,7 +1333,15 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
                             <span>{news.type || '네이버뉴스'}</span>
                             <span className="text-red-500 font-black">🔥 이슈강도: {news.strength}</span>
                           </div>
-                          <h5 className="font-bold text-slate-800 line-clamp-1">{news.title}</h5>
+                          <a 
+                            href={news.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="font-bold text-slate-800 hover:text-blue-600 hover:underline flex items-center justify-between gap-1 leading-snug cursor-pointer"
+                          >
+                            <span className="line-clamp-1">{news.title}</span>
+                            <ExternalLink className="w-2.5 h-2.5 flex-shrink-0 text-slate-400" />
+                          </a>
                           <p className="text-slate-500 text-[9.5px] line-clamp-2 leading-relaxed">
                             {news.snippet}
                           </p>
