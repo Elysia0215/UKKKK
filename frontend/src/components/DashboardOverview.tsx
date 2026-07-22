@@ -221,7 +221,10 @@ export const DashboardOverview: React.FC<Props> = ({
                 </div>
               </div>
 
-              <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-purple-600 font-bold">
+              <div 
+                onClick={() => onNavigateToTab(2)}
+                className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-purple-600 hover:text-purple-800 font-bold cursor-pointer hover:bg-purple-50/30 p-1 rounded transition"
+              >
                 <span>분야별 전체 분석</span>
                 <ChevronRight className="w-3.5 h-3.5" />
               </div>
@@ -264,7 +267,10 @@ export const DashboardOverview: React.FC<Props> = ({
                 </div>
               </div>
 
-              <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-amber-600 font-bold">
+              <div 
+                onClick={() => onNavigateToTab(3)}
+                className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-amber-600 hover:text-amber-800 font-bold cursor-pointer hover:bg-amber-50/30 p-1 rounded transition"
+              >
                 <span>인기 이슈 제안 목록</span>
                 <ChevronRight className="w-3.5 h-3.5" />
               </div>

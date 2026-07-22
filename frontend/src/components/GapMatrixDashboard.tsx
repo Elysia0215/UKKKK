@@ -104,23 +104,28 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
   const [showRawPolicies, setShowRawPolicies] = useState<boolean>(false);
   const [showComparisonModal, setShowComparisonModal] = useState<boolean>(false);
 
+  // 8대 정책 분류명에 따른 시민 제안 스마트 매칭 함수 (일관성 유지)
+  const getSmartMatchedProposals = (catName: string, proposalsList: PolicyProposal[]) => {
+    return proposalsList.filter(p => {
+      if (catName === '임신·난임·생식건강') return p.category === '임신·난임·생식건강';
+      if (catName === '출산·산후 초기지원') return p.category === '출산·산후 초기지원';
+      if (catName === '양육비·부모급여·금융지원') return p.category === '다자녀·양육비·생활지원' && (p.sub_category?.includes('양육비') || p.sub_category?.includes('생활비') || p.sub_category?.includes('지원'));
+      if (catName === '보육·돌봄 인프라') return p.category === '보육·돌봄 인프라';
+      if (catName === '일·가정 양립 지원') return p.category === '일·가정 양립·부모 노동';
+      if (catName === '다자녀 가구 특화 혜택') return p.category === '다자녀·양육비·생활지원' && p.sub_category?.includes('다자녀');
+      if (catName === '주거·교통·도시생활환경') return p.category === '주거·교통·도시생활환경';
+      if (catName === '의료·건강·심리 지원') return p.sub_category?.includes('건강') || p.sub_category?.includes('의료') || p.sub_category?.includes('치료') || p.category === '취약·다양가족 사각지대';
+      return p.category === catName;
+    });
+  };
+
   // [추가] 선택된 이슈에 해당하는 실제 원천 데이터 매핑 memo
   const selectedIssueRawData = useMemo(() => {
     if (!selectedIssue) return { proposals: [], civils: [], policies: [] };
     
     // 1. 매칭되는 상상대로서울 시민제안 필터링 (8대 분류 규칙 연동)
-    const matchedProps = proposals.filter(p => {
-      const cat = selectedIssue.name;
-      if (cat === '임신·난임·생식건강') return p.category === '임신·난임·생식건강';
-      if (cat === '출산·산후 초기지원') return p.category === '출산·산후 초기지원';
-      if (cat === '양육비·부모급여·금융지원') return p.category === '다자녀·양육비·생활지원' && (p.sub_category?.includes('양육비') || p.sub_category?.includes('생활비') || p.sub_category?.includes('지원'));
-      if (cat === '보육·돌봄 인프라') return p.category === '보육·돌봄 인프라';
-      if (cat === '일·가정 양립 지원') return p.category === '일·가정 양립·부모 노동';
-      if (cat === '다자녀 가구 특화 혜택') return p.category === '다자녀·양육비·생활지원' && p.sub_category?.includes('다자녀');
-      if (cat === '주거·교통·도시생활환경') return p.category === '주거·교통·도시생활환경';
-      if (cat === '의료·건강·심리 지원') return p.sub_category?.includes('건강') || p.sub_category?.includes('의료') || p.sub_category?.includes('치료') || p.category === '취약·다양가족 사각지대';
-      return p.category === cat;
-    }).sort((a, b) => b.vote_score - a.vote_score);
+    const matchedProps = getSmartMatchedProposals(selectedIssue.name, proposals)
+      .sort((a, b) => b.vote_score - a.vote_score);
 
     // 2. 매칭되는 국민신문고 현장민원 필터링
     const matchedCivils = (civilRequestsData as any[]).filter(r => 
@@ -329,7 +334,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
     ];
 
     return categories.map((cat, idx) => {
-      const catProps = proposals.filter(p => p.category === cat.name);
+      const catProps = getSmartMatchedProposals(cat.name, proposals);
       const propsCount = catProps.length;
       const votesCount = catProps.reduce((sum, p) => sum + (p.vote_score || 0), 0);
       
