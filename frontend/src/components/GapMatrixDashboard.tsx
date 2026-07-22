@@ -379,39 +379,71 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
                 )}
 
                 {activeTab === 'news' && (
-                  <div className="space-y-2">
-                    <span className="text-[10px] font-bold text-slate-700 block mb-1">네이버 API & 연구 뉴스 DB 연계</span>
+                  <div className="space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-bold text-slate-700 block">네이버 API & 연구 뉴스 DB 연계</span>
+                      <span className="text-[9px] text-slate-400 font-medium">8대 정책 대분류 정규화 분류체계</span>
+                    </div>
                     {(() => {
                       // Filter news matching current issue category/topic
-                      const matchedNews = newsAllData.filter(n => 
-                        n.category === selectedIssue.category || 
-                        selectedIssue.name.includes(n.category) ||
-                        (selectedIssue.id === 'GAP-1' && n.topic_name.includes('Topic 5')) ||
-                        (selectedIssue.id === 'GAP-2' && n.topic_name.includes('Topic 4'))
-                      ).slice(0, 3);
+                      const matchedNews = newsAllData.filter(n => {
+                        const issueName = selectedIssue.name;
+                        const newsCat = n.category;
+                        
+                        if (issueName === newsCat) return true;
+                        
+                        if (issueName === '양육비·부모급여·금융지원' || issueName === '다자녀 가구 특화 혜택') {
+                          return newsCat === '다자녀·양육비·생활지원';
+                        }
+                        if (issueName === '일·가정 양립 지원') {
+                          return newsCat === '일·가정 양립·부모 노동';
+                        }
+                        if (issueName === '의료·건강·심리 지원') {
+                          return newsCat === '임신·난임·생식건강' || newsCat === '취약·다양가족 사각지대';
+                        }
+                        return false;
+                      }).slice(0, 5);
 
                       if (matchedNews.length === 0) {
                         return (
-                          <div className="bg-slate-50 p-2.5 rounded border border-slate-150 text-[10px] text-slate-500">
+                          <div className="bg-slate-50 p-3 rounded-lg border border-slate-150 text-[10px] text-slate-500">
                             연관된 뉴스가 없습니다.
                           </div>
                         );
                       }
 
                       return (
-                        <div className="space-y-2">
-                          {matchedNews.map((news, nIdx) => (
-                            <div key={nIdx} className="bg-slate-50 p-2 rounded border border-slate-150 text-[10px] space-y-1">
+                        <div className="space-y-2 max-h-[300px] overflow-y-auto pr-1">
+                          {matchedNews.map((news: any, nIdx: number) => (
+                            <div key={nIdx} className="bg-slate-50 p-2.5 rounded-lg border border-slate-150 text-[10px] space-y-1.5 shadow-2xs">
+                              <div className="flex items-center gap-1.5 flex-wrap">
+                                {news.strength === '상' ? (
+                                  <span className="bg-red-50 text-red-600 text-[8px] font-black px-1.5 py-0.5 rounded border border-red-100 flex items-center gap-0.5">
+                                    🚨 이슈강도: 상
+                                  </span>
+                                ) : news.strength === '중' ? (
+                                  <span className="bg-amber-50 text-amber-700 text-[8px] font-bold px-1.5 py-0.5 rounded border border-amber-100">
+                                    ⚡ 이슈강도: 중
+                                  </span>
+                                ) : (
+                                  <span className="bg-slate-100 text-slate-500 text-[8px] px-1.5 py-0.5 rounded">
+                                    이슈강도: 하
+                                  </span>
+                                )}
+                                <span className="bg-blue-50 text-blue-700 text-[8px] font-bold px-1.5 py-0.5 rounded border border-blue-100">
+                                  {news.type}
+                                </span>
+                              </div>
                               <a 
                                 href={news.url} 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
-                                className="font-bold text-slate-900 hover:text-blue-600 flex items-center justify-between gap-1 hover:underline"
+                                className="font-extrabold text-slate-900 hover:text-blue-600 flex items-center justify-between gap-1 hover:underline text-[10.5px] leading-snug"
                               >
-                                <span>• {news.title}</span>
-                                <ExternalLink className="w-2.5 h-2.5 flex-shrink-0" />
+                                <span>{news.title}</span>
+                                <ExternalLink className="w-3 h-3 flex-shrink-0 text-slate-400" />
                               </a>
-                              <p className="text-slate-500 text-[9px] line-clamp-2 leading-relaxed">
+                              <p className="text-slate-500 text-[9.5px] line-clamp-2 leading-relaxed">
                                 {news.snippet}
                               </p>
                             </div>

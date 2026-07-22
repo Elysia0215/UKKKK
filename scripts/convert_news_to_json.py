@@ -3,12 +3,12 @@ import json
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-CSV_PATH = BASE_DIR / "data" / "final" / "merged_naver_news_all_categories.csv"
+CSV_PATH = BASE_DIR / "data" / "final" / "merged_naver_news_all_categories_classified.csv"
 JSON_OUT_PATH = BASE_DIR / "frontend" / "src" / "data" / "news_all.json"
 
 def main():
     print("=" * 60)
-    print("Converting birth_policy_news_final_DB.csv to light JSON")
+    print("Converting merged_naver_news_all_categories_classified.csv to JSON")
     print("=" * 60)
 
     if not CSV_PATH.exists():
@@ -17,17 +17,17 @@ def main():
 
     df = pd.read_csv(CSV_PATH)
     
-    # Select and rename columns
     light_news = []
     for _, row in df.iterrows():
-        # Clean clean_content to a shortened snippet
         content = str(row.get('clean_content') or '')
         snippet = content[:150].strip() + ("..." if len(content) > 150 else "")
         
         light_news.append({
-            "category": str(row.get('category') or '').strip(),
-            "topic_name": str(row.get('topic_name') or '').strip(),
-            "core_keywords": str(row.get('core_keywords') or '').strip(),
+            "category": str(row.get('뉴스_대분류') or '').strip(),
+            "sub_category": str(row.get('뉴스_중분류') or '').strip(),
+            "micro_category": str(row.get('뉴스_소분류') or '').strip(),
+            "strength": str(row.get('뉴스_이슈강도') or '').strip(),
+            "type": str(row.get('뉴스_활용유형') or '').strip(),
             "title": str(row.get('title') or '').strip(),
             "snippet": snippet,
             "url": str(row.get('originallink') or '').strip()
