@@ -569,6 +569,7 @@ export default function App() {
       {/* 오피스 길잡이 (새싹이) */}
       <OfficeAssistant
         selectedDept={selectedDept}
+        activeTab={activeTab}
         onNavigateToTab={handleNavigateToTab}
       />
     </div>

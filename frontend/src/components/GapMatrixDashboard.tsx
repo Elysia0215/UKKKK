@@ -625,8 +625,9 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                       <Label value="사회적 시급성 ➔" angle={-90} position="insideLeft" offset={5} style={{ fontSize: 10, fill: '#475569', fontWeight: 'bold' }} />
                     </YAxis>
                     <ZAxis type="number" dataKey="z" range={[50, 450]} name="수요 강도" />
-                    <Tooltip 
+                    <Tooltip
                       cursor={{ strokeDasharray: '3 3' }}
+                      isAnimationActive={false}
                       content={({ active, payload }: any) => {
                         if (active && payload && payload.length) {
                           const data = payload[0].payload;
@@ -664,7 +665,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                             fillOpacity={opacity}
                             stroke={entry.confidence >= 60 ? '#1e293b' : color}
                             strokeWidth={strokeWidth}
-                            className="cursor-pointer hover:scale-110 transition-all duration-150"
+                            className="cursor-pointer"
                           />
                         );
                       })}
@@ -799,7 +800,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
         </div>
 
         {/* 4. 오른쪽 영역: 문제 클러스터 진단 상세 패널 */}
-        <div className="bg-white rounded-xl border border-slate-200 shadow-2xs overflow-hidden flex flex-col justify-between min-h-[500px]">
+        <div className="bg-white rounded-xl border border-slate-200 shadow-2xs overflow-hidden flex flex-col justify-between h-[calc(100vh-140px)] sticky top-24 self-start w-full min-h-[500px]">
           {!selectedIssue ? (
             <div className="p-8 text-center my-auto flex flex-col items-center justify-center space-y-3">
               <HelpCircle className="w-10 h-10 text-slate-300 animate-bounce" />
@@ -807,7 +808,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               <p className="text-[10px] text-slate-400">5대 진단 지표와 3단계 추천 액션이 포함된 상세 진단서가 우측에 표출됩니다.</p>
             </div>
           ) : (
-            <div className="flex flex-col h-full justify-between">
+            <div className="flex flex-col h-full justify-between min-h-0">
               
               {/* 패널 헤더 */}
               <div className="p-4 bg-slate-900 text-white flex justify-between items-center">
@@ -835,7 +836,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               </div>
 
               {/* 상세 스크롤 영역 */}
-              <div className="p-4 flex-grow space-y-4 overflow-y-auto max-h-[700px]">
+              <div className="p-4 flex-grow space-y-4 overflow-y-auto min-h-0">
                 
                 {/* 상태 요약 배너 */}
                 <div className={`p-3 rounded-lg border flex items-center gap-2 text-xs font-bold ${getStatusColor(selectedIssue.status)}`}>
@@ -1072,22 +1073,22 @@ export const GapMatrixDashboard: React.FC<Props> = ({
 
               </div>
 
-              {/* 패널 푸터 (AI 답변 검토·승인) */}
+              {/* 패널 푸터 (AI 답변 검토·승인 - 마스코트와 겹치지 않게 버튼을 좌측으로 배치하고 부서 텍스트를 우측으로 배치) */}
               <div className="p-3 bg-slate-900 border-t border-slate-800 flex justify-between items-center shrink-0">
-                <div className="text-[10px] text-slate-400">
-                  담당 부서: <strong>{selectedIssue.primaryDept}</strong> ({selectedIssue.deptPhone})
-                </div>
                 <button
                   onClick={() => {
                     setEditedAnswer(`[기존 정책 답변 안내]\n- 문제 클러스터: ${selectedIssue.cluster}\n- 주관부서 조치사항: ${selectedIssue.recommended_action}\n\n시민께서 제안해 주신 요구사항에 대해 서울시 ${selectedIssue.primaryDept}에서 적극 수렴하여 기존 복지 정책을 보완하거나 신속 조례 개정을 검토하겠습니다.`);
                     setFeedbackAction(null);
                     setShowApprovalPanel(true);
                   }}
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-[10px] px-3 py-1.5 rounded-lg flex items-center gap-1 transition-all duration-200 cursor-pointer"
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-[10px] px-3 py-1.5 rounded-lg flex items-center gap-1 transition-all duration-200 cursor-pointer shrink-0"
                 >
                   <Sparkles className="w-3 h-3 animate-pulse" />
                   <span>AI 답변 승인 패널 열기</span>
                 </button>
+                <div className="text-[9.5px] text-slate-400 text-right leading-tight ml-2">
+                  담당 부서: <strong>{selectedIssue.primaryDept}</strong><br />({selectedIssue.deptPhone})
+                </div>
               </div>
 
             </div>
