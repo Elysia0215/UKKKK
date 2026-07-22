@@ -201,7 +201,7 @@
 
 1. **PPT 및 발표자료**
    - [발표 대본 및 PPT 구성안 (본 문서)](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/발표자료/발표_대본_PPT구성.md)
-   - [기존 컴퓨존 코미 최종 발표 자료 (참고용)](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/발표참고자료/컴퓨존%20코미_최종발표본.pptx)
+   - (실제 발표용 최종 PPT 슬라이드 파일 포함)
 2. **참고 논문 (Reference Papers)**
    - [논문 1: 국민신문고 저출산 민원 게시글에 나타난 영유아 정책 내용 분석 (CONCOR)](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/발표참고자료/국민신문고_저출산_민원_게시글에_나타난_영유아_정책_내용_분석%20(1).pdf)
    - [논문 2: 텍스트 마이닝을 활용한 저출산 정책과 대중인식 비교](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/발표참고자료/텍스트_마이닝을_활용한_저출산_정책과_대중인식_비교.pdf)
