@@ -213,7 +213,7 @@ export const OfficeAssistant: React.FC<Props> = ({ selectedDept, onNavigateToTab
         )}
         
         {/* 업로드된 오피스 길잡이 새싹 강아지 캐릭터 이미지 */}
-        <div className="relative w-16 h-20 overflow-visible group-hover:scale-105 transition">
+        <div className="relative w-24 h-28 overflow-visible group-hover:scale-105 transition">
           <img 
             src="/rover.png" 
             alt="새싹이 길잡이" 

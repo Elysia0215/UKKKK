@@ -76,6 +76,7 @@ export const PriorityDetails: React.FC<Props> = ({
   const [viewMode, setViewMode] = useState<'list' | 'group'>('group'); // 그룹 보기 vs 개별 리스트 보기
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
   const [activeBatchGroup, setActiveBatchGroup] = useState<ProposalGroup | null>(null);
+  const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(false);
 
   React.useEffect(() => {
     if (initialCategory) {
@@ -557,311 +558,285 @@ export const PriorityDetails: React.FC<Props> = ({
   };
 
   return (
-    <div className="space-y-6">
-      {/* 고정밀 필터 제어판 */}
-      <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-4">
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-          <div className="relative flex-1">
-            <Search className="absolute left-3 top-2.5 h-4.5 w-4.5 text-slate-400" />
-            <input
-              type="text"
-              placeholder="제목, 본문 키워드로 빠른 검색..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 pr-4 py-2 w-full text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0A2351]/20 focus:border-[#0A2351] transition"
-            />
+    <div className="space-y-4">
+      {/* 1. 최상단 컴팩트 툴바 */}
+      <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-2xs flex flex-wrap items-center justify-between gap-3">
+        {/* 좌측: 실시간 키워드 빠른 검색 */}
+        <div className="relative w-72">
+          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-slate-400" />
+          <input
+            type="text"
+            placeholder="제목, 본문 키워드로 빠른 검색..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="pl-8.5 pr-3 py-1.5 w-full text-xs border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#0A2351]/20 focus:border-[#0A2351] transition bg-slate-50/50"
+          />
+        </div>
+
+        {/* 우측: 정렬, 다중선택, 보기모드, 맞춤 CSV 다운로드 */}
+        <div className="flex flex-wrap items-center gap-2">
+          {/* 정렬 셀렉터 */}
+          <div className="flex items-center gap-1 bg-slate-50 p-0.5 rounded-lg border border-slate-200">
+            <span className="text-[10px] font-black text-slate-500 pl-1.5 pr-0.5">정렬</span>
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value as any)}
+              className="text-[11px] px-1.5 py-1 rounded-md font-bold bg-white text-slate-800 border-0 focus:ring-0 cursor-pointer outline-none"
+            >
+              <option value="date_desc">📅 등록일 최신</option>
+              <option value="date_asc">⏳ 등록일 과거</option>
+              <option value="vote_desc">👍 공감 높은순</option>
+              <option value="comment_desc">💬 댓글 많은순</option>
+            </select>
           </div>
-          <div className="flex flex-wrap items-center gap-2">
-            {/* 데이터 내보내기 버튼 */}
+
+          {/* 다중 선택 토글 */}
+          <button
+            onClick={handleToggleMultiSelectMode}
+            className={`text-[11px] px-2.5 py-1.5 rounded-lg border font-bold transition cursor-pointer ${
+              isMultiSelectMode
+                ? 'bg-purple-600 text-white border-purple-700 shadow-xs'
+                : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-50'
+            }`}
+          >
+            <span>{isMultiSelectMode ? '☑️ 다중선택 ON' : '☐ 다중선택 OFF'}</span>
+          </button>
+
+          {/* 보기 모드 (Segmented Control) */}
+          <div className="bg-slate-100 p-0.5 rounded-lg border border-slate-200 flex">
             <button
-              onClick={handleExportProposals}
-              className="flex items-center gap-1.5 px-3 py-2 text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition shadow-xs cursor-pointer"
-              title="선택된 연도 및 정렬 조건으로 맞춤 CSV 파일 다운로드"
+              onClick={() => setViewMode('group')}
+              className={`text-[11px] px-2.5 py-1 rounded-md font-bold transition cursor-pointer ${
+                viewMode === 'group'
+                  ? 'bg-white text-slate-800 shadow-2xs'
+                  : 'text-slate-500 hover:text-slate-800'
+              }`}
             >
-              <Download className="w-3.5 h-3.5" /> 맞춤 CSV 다운로드
+              <Layers className="w-3.5 h-3.5 inline mr-1" />
+              그룹화
             </button>
-            {/* 2026 최신 정책 공백 핫필터 */}
             <button
-              onClick={() => {
-                setOnlyShow2026Gaps(!onlyShow2026Gaps);
-                if (!onlyShow2026Gaps) setOnlyShowGaps(false);
-              }}
-              className={`text-xs font-bold px-3 py-2 rounded-lg border flex items-center gap-1.5 transition cursor-pointer ${onlyShow2026Gaps
-                  ? 'bg-emerald-600 text-white border-emerald-700 ring-2 ring-emerald-300 shadow-xs'
-                  : 'bg-emerald-50 text-emerald-800 border-emerald-200 hover:bg-emerald-100 shadow-2xs'
-                }`}
-              title="2026년 등록 제안 중 미답변(검토중) 및 공감 150표 이상 민원 선별"
+              onClick={() => setViewMode('list')}
+              className={`text-[11px] px-2.5 py-1 rounded-md font-bold transition cursor-pointer ${
+                viewMode === 'list'
+                  ? 'bg-white text-slate-800 shadow-2xs'
+                  : 'text-slate-500 hover:text-slate-800'
+              }`}
             >
-              <span>🔥 2026 최신 정책 공백</span>
+              <FileSpreadsheet className="w-3.5 h-3.5 inline mr-1" />
+              리스트
             </button>
+          </div>
 
-            {/* 일반 정책 공백 핫필터 */}
+          {/* 초기화 버튼 */}
+          {(selectedYears[0] !== '전체' || selectedFlows[0] !== '전체' || selectedCategories[0] !== '전체' || selectedSubCategories[0] !== '전체' || selectedDepts[0] !== '전체' || searchTerm || onlyShowGaps || onlyShow2026Gaps || sortBy !== 'date_desc') && (
             <button
-              onClick={() => {
-                setOnlyShowGaps(!onlyShowGaps);
-                if (!onlyShowGaps) setOnlyShow2026Gaps(false);
-              }}
-              className={`text-xs font-bold px-3 py-2 rounded-lg border flex items-center gap-1.5 transition cursor-pointer ${onlyShowGaps
-                  ? 'bg-rose-50 text-rose-700 border-rose-300 ring-2 ring-rose-200/50 shadow-2xs'
-                  : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 shadow-2xs'
-                }`}
+              onClick={handleResetFilters}
+              className="text-[11px] px-2 py-1.5 rounded-lg border border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100 font-bold transition flex items-center gap-1 cursor-pointer"
             >
-              <AlertTriangle className={`w-4 h-4 ${onlyShowGaps ? 'text-rose-600' : 'text-slate-400'}`} />
-              전체 정책 공백 (150표↑ 미답변)
+              <RotateCcw className="w-3 h-3" />
+              초기화
             </button>
+          )}
 
-            {/* 보기 모드 변경 & 다중선택 토글 & 정렬 */}
-            <div className="flex flex-wrap items-center gap-2">
-              {/* 날짜/공감도 정렬 셀렉터 */}
-              <div className="flex items-center gap-1 bg-slate-100 p-0.5 rounded-lg border border-slate-200">
-                <span className="text-[10px] font-black text-slate-500 pl-2 pr-1">↕️ 정렬</span>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
-                  className="text-xs px-2 py-1 rounded-md font-bold bg-white text-slate-800 border-0 focus:ring-0 cursor-pointer outline-none"
-                >
-                  <option value="date_desc">📅 등록일 최신순</option>
-                  <option value="date_asc">⏳ 등록일 과거순</option>
-                  <option value="vote_desc">👍 공감 높은순</option>
-                  <option value="comment_desc">💬 댓글 많은순</option>
-                </select>
-              </div>
+          {/* 맞춤 CSV 다운로드 (가장 우측 배치) */}
+          <button
+            onClick={handleExportProposals}
+            className="flex items-center gap-1 px-2.5 py-1.5 text-[11px] font-bold bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition shadow-xs cursor-pointer"
+            title="선택된 연도 및 정렬 조건으로 맞춤 CSV 파일 다운로드"
+          >
+            <Download className="w-3 h-3" /> 맞춤 CSV
+          </button>
+        </div>
+      </div>
 
-              <button
-                onClick={handleToggleMultiSelectMode}
-                className={`text-xs px-3 py-1.5 rounded-lg border font-bold transition flex items-center gap-1.5 cursor-pointer ${
-                  isMultiSelectMode
-                    ? 'bg-purple-600 text-white border-purple-700 shadow-xs'
-                    : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-50'
-                }`}
-                title="클릭하여 여러 카테고리/부서를 중복 선택하여 동시에 조회"
-              >
-                <span>{isMultiSelectMode ? '☑️ 다중 선택 ON' : '☐ 다중 선택 OFF'}</span>
-              </button>
-
-              {(selectedYears[0] !== '전체' || selectedFlows[0] !== '전체' || selectedCategories[0] !== '전체' || selectedSubCategories[0] !== '전체' || selectedDepts[0] !== '전체' || searchTerm || onlyShowGaps || onlyShow2026Gaps || sortBy !== 'date_desc') && (
+      {/* 2. 고정밀 필터 제어판 */}
+      <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs space-y-2.5">
+        
+        {/* 1. 제안 연도 (Moved to the top!) */}
+        <div className="flex items-start gap-3 py-1 border-b border-slate-100 pb-1.5">
+          <span className="text-xs font-black text-slate-600 w-20 flex-shrink-0 pt-0.5 flex items-center gap-1">
+            📅 제안 연도
+          </span>
+          <div className="flex flex-wrap gap-1">
+            {yearOptions.map(y => {
+              const count = yearCounts[y] || 0;
+              const isDisabled = y !== '전체' && count === 0;
+              const isSelected = selectedYears.includes(y);
+              const isNew2026 = y === '2026';
+              return (
                 <button
-                  onClick={handleResetFilters}
-                  className="text-xs px-2.5 py-1.5 rounded-lg border border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100 font-bold transition flex items-center gap-1 cursor-pointer"
-                  title="모든 필터를 기본 전체 상태로 초기화"
+                  key={y}
+                  disabled={isDisabled}
+                  onClick={() => toggleFilterItem(selectedYears, setSelectedYears, y)}
+                  className={`text-[10px] px-2.5 py-0.5 rounded-full border transition font-bold cursor-pointer ${
+                    isSelected
+                      ? isNew2026 ? 'bg-[#10B981] text-white border-[#10B981] shadow-2xs' : 'bg-[#0A2351] text-white border-[#0A2351]'
+                      : isDisabled
+                      ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                      : isNew2026
+                      ? 'bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100'
+                      : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
+                  }`}
                 >
-                  <RotateCcw className="w-3.5 h-3.5" />
-                  초기화
+                  {y === '2026' ? '🔥 2026 최신' : y === '2022이전' ? '2022이전 과거제안' : `${y}년`}
+                  <span className="text-[9px] opacity-80 font-normal ml-0.5">({count}건)</span>
                 </button>
-              )}
-
-              <div className="bg-slate-100 p-0.5 rounded-lg border border-slate-200 flex">
-                <button
-                  onClick={() => setViewMode('group')}
-                  className={`text-xs px-3 py-1.5 rounded-md font-bold transition ${viewMode === 'group'
-                      ? 'bg-white text-slate-800 shadow-xs'
-                      : 'text-slate-500 hover:text-slate-800'
-                    }`}
-                >
-                  <Layers className="w-3.5 h-3.5 inline mr-1" />
-                  유사 제안 그룹화
-                </button>
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`text-xs px-3 py-1.5 rounded-md font-bold transition ${viewMode === 'list'
-                      ? 'bg-white text-slate-800 shadow-xs'
-                      : 'text-slate-500 hover:text-slate-800'
-                    }`}
-                >
-                  <FileSpreadsheet className="w-3.5 h-3.5 inline mr-1" />
-                  개별 리스트
-                </button>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
 
-        {/* 상세 선택 필터 (연도 + 계층형 대/중/세분류 + 생애주기 정책흐름 + 담당부서) */}
-        <div className="space-y-3 pt-3 border-t border-slate-200/80">
-          {/* 0. 연도별 필터 */}
-          <div className="flex items-start gap-3 bg-amber-50/50 p-2.5 rounded-xl border border-amber-200/80">
-            <span className="text-xs font-black text-amber-900 w-20 flex-shrink-0 pt-1 flex items-center gap-1">
-              📅 제안 연도
-            </span>
-            <div className="flex flex-wrap gap-1.5">
-              {yearOptions.map(y => {
-                const count = yearCounts[y] || 0;
-                const isDisabled = y !== '전체' && count === 0;
-                const isSelected = selectedYears.includes(y);
-                const isNew2026 = y === '2026';
-                return (
-                  <button
-                    key={y}
-                    disabled={isDisabled}
-                    onClick={() => toggleFilterItem(selectedYears, setSelectedYears, y)}
-                    className={`text-xs px-2.5 py-1 rounded-full border transition font-bold cursor-pointer ${
-                      isSelected
-                        ? isNew2026 ? 'bg-emerald-600 text-white border-emerald-700 shadow-xs ring-2 ring-emerald-300' : 'bg-amber-700 text-white border-amber-800 shadow-2xs'
-                        : isDisabled
-                        ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
-                        : isNew2026
-                        ? 'bg-emerald-50 text-emerald-700 border-emerald-300 hover:bg-emerald-100 animate-pulse'
-                        : 'bg-white text-amber-800 border-amber-200 hover:bg-amber-100'
-                    }`}
-                  >
-                    {y === '2026' ? '🔥 2026 최신' : y === '2022이전' ? '2022이전 과거제안' : `${y}년`}
-                    <span className="text-[10px] opacity-80 font-normal ml-1">({count}건)</span>
-                  </button>
-                );
-              })}
-            </div>
+        {/* 2. 생애주기 정책흐름 필터 */}
+        <div className="flex items-start gap-3 py-1 border-b border-slate-100 pb-1.5">
+          <span className="text-xs font-black text-[#0A2351] w-20 flex-shrink-0 pt-0.5 flex items-center gap-1">
+            🌱 생애주기
+          </span>
+          <div className="flex flex-wrap gap-1">
+            {policyFlows.map(flow => {
+              const count = flowCounts[flow] || 0;
+              const isDisabled = flow !== '전체' && count === 0;
+              const isSelected = selectedFlows.includes(flow);
+              return (
+                <button
+                  key={flow}
+                  disabled={isDisabled}
+                  onClick={() => toggleFilterItem(selectedFlows, setSelectedFlows, flow)}
+                  className={`text-[10px] px-2.5 py-0.5 rounded-full border transition font-bold cursor-pointer ${
+                    isSelected
+                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
+                      : isDisabled
+                      ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                      : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                  }`}
+                >
+                  {flow} <span className="text-[9px] opacity-80 font-normal">({count}건)</span>
+                </button>
+              );
+            })}
           </div>
-          {/* 생애주기 정책흐름 필터 */}
-          <div className="flex items-start gap-3 bg-indigo-50/50 p-2.5 rounded-xl border border-indigo-100">
-            <span className="text-xs font-black text-indigo-900 w-20 flex-shrink-0 pt-1 flex items-center gap-1">
-              🌱 생애주기
-            </span>
-            <div className="flex flex-wrap gap-1.5">
-              {policyFlows.map(flow => {
-                const count = flowCounts[flow] || 0;
-                const isDisabled = flow !== '전체' && count === 0;
-                const isSelected = selectedFlows.includes(flow);
-                return (
-                  <button
-                    key={flow}
-                    disabled={isDisabled}
-                    onClick={() => toggleFilterItem(selectedFlows, setSelectedFlows, flow)}
-                    className={`text-xs px-2.5 py-1 rounded-full border transition font-bold ${
-                      isSelected
-                        ? 'bg-indigo-700 text-white border-indigo-800 shadow-2xs'
-                        : isDisabled
-                        ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
-                        : 'bg-white text-indigo-700 border-indigo-200 hover:bg-indigo-100'
-                    }`}
-                  >
-                    {flow} <span className="text-[10px] opacity-80 font-normal">({count}건)</span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
+        </div>
 
-          {/* 1차: 대분류 */}
-          <div className="flex items-start gap-3">
-            <span className="text-xs font-bold text-slate-500 w-20 flex-shrink-0 pt-1">1차 대분류</span>
-            <div className="flex flex-wrap gap-1.5">
-              {categories.map(cat => {
-                const count = catCounts[cat] || 0;
-                const isDisabled = cat !== '전체' && count === 0;
-                const isSelected = selectedCategories.includes(cat);
+        {/* 3. 1차 대분류 */}
+        <div className="flex items-start gap-3 py-1 border-b border-slate-100 pb-1.5">
+          <span className="text-xs font-bold text-slate-500 w-20 flex-shrink-0 pt-0.5">1차 대분류</span>
+          <div className="flex flex-wrap gap-1">
+            {categories.map(cat => {
+              const count = catCounts[cat] || 0;
+              const isDisabled = cat !== '전체' && count === 0;
+              const isSelected = selectedCategories.includes(cat);
+              return (
+                <button
+                  key={cat}
+                  disabled={isDisabled}
+                  onClick={() => {
+                    toggleFilterItem(selectedCategories, setSelectedCategories, cat);
+                    setSelectedSubCategories(['전체']);
+                    setSelectedMicroCategory('전체');
+                  }}
+                  className={`text-[10px] px-2.5 py-0.5 rounded-full border transition font-bold cursor-pointer ${
+                    isSelected
+                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
+                      : isDisabled
+                      ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                      : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                  }`}
+                >
+                  {cat} <span className="text-[9px] opacity-80 font-normal">({count}건)</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* 4. 2차 중분류 (1차 대분류 바로 밑에 계층형 └ 2차 중분류로 노출!) */}
+        {subCategories.length > 1 && (
+          <div className="flex items-start gap-3 py-1 border-b border-slate-100 pb-1.5 animate-fade-in bg-slate-50/50 p-2 rounded-lg">
+            <span className="text-xs font-bold text-slate-500 w-20 flex-shrink-0 pt-0.5 pl-2">└ 2차 중분류</span>
+            <div className="flex flex-wrap gap-1">
+              {subCategories.map(sub => {
+                const count = subCatCounts[sub] || 0;
+                const isDisabled = sub !== '전체' && count === 0;
+                const isSelected = selectedSubCategories.includes(sub);
                 return (
                   <button
-                    key={cat}
+                    key={sub}
                     disabled={isDisabled}
                     onClick={() => {
-                      toggleFilterItem(selectedCategories, setSelectedCategories, cat);
-                      setSelectedSubCategories(['전체']);
+                      toggleFilterItem(selectedSubCategories, setSelectedSubCategories, sub);
                       setSelectedMicroCategory('전체');
                     }}
-                    className={`text-xs px-2.5 py-1 rounded-full border transition font-bold ${
+                    className={`text-[10px] px-2 py-0.5 rounded-md border transition font-bold cursor-pointer ${
                       isSelected
                         ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
                         : isDisabled
                         ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
-                        : 'bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-300'
+                        : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
                     }`}
                   >
-                    {cat} <span className="text-[10px] opacity-80 font-normal">({count}건)</span>
+                     {sub} <span className="text-[9px] opacity-80 font-normal">({count}건)</span>
                   </button>
                 );
               })}
             </div>
           </div>
+        )}
 
-          {/* 2차: 연동 중분류 */}
-          {subCategories.length > 1 && (
-            <div className="flex items-start gap-3 bg-blue-50/40 p-2 rounded-lg border border-blue-100">
-              <span className="text-xs font-bold text-blue-800 w-20 flex-shrink-0 pt-1">└ 2차 중분류</span>
-              <div className="flex flex-wrap gap-1.5">
-                {subCategories.map(sub => {
-                  const count = subCatCounts[sub] || 0;
-                  const isDisabled = sub !== '전체' && count === 0;
-                  const isSelected = selectedSubCategories.includes(sub);
-                  return (
-                    <button
-                      key={sub}
-                      disabled={isDisabled}
-                      onClick={() => {
-                        toggleFilterItem(selectedSubCategories, setSelectedSubCategories, sub);
-                        setSelectedMicroCategory('전체');
-                      }}
-                      className={`text-xs px-2.5 py-1 rounded-md border transition font-bold ${
-                        isSelected
-                          ? 'bg-blue-600 text-white border-blue-700 shadow-2xs'
-                          : isDisabled
-                          ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
-                          : 'bg-white text-blue-700 border-blue-200 hover:bg-blue-50'
-                      }`}
-                    >
-                      {sub} <span className="text-[10px] opacity-80 font-normal">({count}건)</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* 3차: 연동 세분류 */}
-          {microCategories.length > 1 && !selectedSubCategories.includes('전체') && (
-            <div className="flex items-start gap-3 bg-emerald-50/40 p-2 rounded-lg border border-emerald-100 ml-4">
-              <span className="text-xs font-bold text-emerald-800 w-20 flex-shrink-0 pt-1">└ 3차 세분류</span>
-              <div className="flex flex-wrap gap-1.5">
-                {microCategories.map(micro => {
-                  const count = microCatCounts[micro] || 0;
-                  const isDisabled = micro !== '전체' && count === 0;
-                  const isSelected = selectedMicroCategory === micro;
-                  return (
-                    <button
-                      key={micro}
-                      disabled={isDisabled}
-                      onClick={() => setSelectedMicroCategory(micro)}
-                      className={`text-xs px-2.5 py-1 rounded-md border transition font-bold cursor-pointer ${
-                        isSelected
-                          ? 'bg-emerald-600 text-white border-emerald-700 shadow-2xs'
-                          : isDisabled
-                          ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
-                          : 'bg-white text-emerald-700 border-emerald-200 hover:bg-emerald-50'
-                      }`}
-                    >
-                      {micro} <span className="text-[10px] opacity-80 font-normal">({count}건)</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* 담당부서 필터 */}
-          <div className="flex items-start gap-3">
-            <span className="text-xs font-bold text-slate-500 w-20 flex-shrink-0 pt-1">담당부서</span>
-            <div className="flex flex-wrap gap-1.5">
-              {departments.map(dept => {
-                const count = deptCounts[dept] || 0;
-                const isDisabled = dept !== '전체' && count === 0;
-                const isSelected = selectedDepts.includes(dept);
+        {/* 5. 3차 세분류 (2차 중분류가 특정값으로 선택되었을 때만 그 아래 계층형 └ 3차 세분류 노출!) */}
+        {microCategories.length > 1 && !selectedSubCategories.includes('전체') && (
+          <div className="flex items-start gap-3 py-1 border-b border-slate-100 pb-1.5 animate-fade-in bg-slate-50/80 p-2 rounded-lg pl-6">
+            <span className="text-xs font-bold text-slate-500 w-20 flex-shrink-0 pt-0.5">└ 3차 세분류</span>
+            <div className="flex flex-wrap gap-1">
+              {microCategories.map(micro => {
+                const count = microCatCounts[micro] || 0;
+                const isDisabled = micro !== '전체' && count === 0;
+                const isSelected = selectedMicroCategory === micro;
                 return (
                   <button
-                    key={dept}
+                    key={micro}
                     disabled={isDisabled}
-                    onClick={() => toggleFilterItem(selectedDepts, setSelectedDepts, dept)}
-                    className={`text-xs px-2.5 py-1 rounded-full border transition font-bold ${
+                    onClick={() => setSelectedMicroCategory(micro)}
+                    className={`text-[10px] px-2 py-0.5 rounded-md border transition font-bold cursor-pointer ${
                       isSelected
                         ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
                         : isDisabled
                         ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
-                        : 'bg-slate-50 text-slate-600 border-slate-200 hover:border-slate-300'
+                        : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
                     }`}
                   >
-                    {dept} <span className="text-[10px] opacity-80 font-normal">({count}건)</span>
+                    {micro} <span className="text-[9px] opacity-80 font-normal">({count}건)</span>
                   </button>
                 );
               })}
             </div>
+          </div>
+        )}
+
+        {/* 6. 담당부서 필터 */}
+        <div className="flex items-start gap-3 py-1 pb-1">
+          <span className="text-xs font-bold text-slate-500 w-20 flex-shrink-0 pt-0.5">담당부서</span>
+          <div className="flex flex-wrap gap-1">
+            {departments.map(dept => {
+              const count = deptCounts[dept] || 0;
+              const isDisabled = dept !== '전체' && count === 0;
+              const isSelected = selectedDepts.includes(dept);
+              return (
+                <button
+                  key={dept}
+                  disabled={isDisabled}
+                  onClick={() => toggleFilterItem(selectedDepts, setSelectedDepts, dept)}
+                  className={`text-[10px] px-2 py-0.5 rounded-full border transition font-bold cursor-pointer ${
+                    isSelected
+                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
+                      : isDisabled
+                      ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                      : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                  }`}
+                >
+                  {dept} <span className="text-[9px] opacity-80 font-normal">({count}건)</span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>

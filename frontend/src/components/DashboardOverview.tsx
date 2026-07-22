@@ -53,7 +53,7 @@ export const DashboardOverview: React.FC<Props> = ({
   selectedDept
 }) => {
   const [selectedKeywordModal, setSelectedKeywordModal] = React.useState<string | null>(null);
-  const [keywordLimit, setKeywordLimit] = React.useState<number>(10);
+  const [keywordLimit, setKeywordLimit] = React.useState<number>(5);
 
   // 부서별 필터 매칭 로직
   const filteredProposals = React.useMemo(() => {
@@ -251,9 +251,9 @@ export const DashboardOverview: React.FC<Props> = ({
       </div>
 
       {/* 시민 제안 핵심 인사이트 (최다 제안 분야 / 최고 공감 제안 좌우 배치) */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
         {/* 1번 카드: 최다 제안 분야 TOP 3 */}
-        <div className="bg-white p-4 rounded-xl border border-purple-100 shadow-2xs flex flex-col justify-between hover:shadow-xs transition">
+        <div className="bg-white p-4 rounded-xl border border-purple-100 shadow-2xs flex flex-col justify-between hover:shadow-xs transition h-full">
           <div>
             <div className="flex justify-between items-center mb-3">
               <span className="inline-flex items-center gap-1.5 text-xs font-bold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-md">
@@ -311,7 +311,7 @@ export const DashboardOverview: React.FC<Props> = ({
         </div>
 
         {/* 2번 카드: 최고 공감 제안 TOP 3 */}
-        <div className="bg-white p-4 rounded-xl border border-amber-100 shadow-2xs flex flex-col justify-between hover:shadow-xs transition">
+        <div className="bg-white p-4 rounded-xl border border-amber-100 shadow-2xs flex flex-col justify-between hover:shadow-xs transition h-full">
           <div>
             <div className="flex justify-between items-center mb-3">
               <span className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-md">
@@ -358,34 +358,34 @@ export const DashboardOverview: React.FC<Props> = ({
       </div>
 
       {/* 핵심 3개 분석 지표 1행 3컬럼 통합 레이아웃 (3:4:5 비율) */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
-        {/* 1. 최근 급증 키워드 TOP 5 (lg:col-span-3) */}
-        <div className="lg:col-span-3 bg-white p-5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-sm transition">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-stretch">
+        {/* 1. 최근 급증 키워드 (lg:col-span-3) */}
+        <div className="lg:col-span-3 bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-between hover:shadow-sm transition h-full">
           <div>
-            <div className="flex items-center justify-between mb-3 pb-2 border-b border-slate-200/80">
-              <h4 className="text-xs sm:text-sm font-bold text-slate-900 flex items-center gap-1.5">
-                <TrendingUp className="text-rose-500 w-4 h-4" />
-                급증 키워드 TOP 5
+            <div className="flex items-center justify-between mb-2 pb-1 border-b border-slate-200/80">
+              <h4 className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                <TrendingUp className="text-rose-500 w-3.5 h-3.5" />
+                급증 키워드 TOP {keywordLimit}
               </h4>
-              <span className="text-[10px] bg-slate-100 text-slate-500 font-bold px-1.5 py-0.5 rounded font-mono">가중치</span>
+              <span className="text-[9px] bg-slate-100 text-slate-500 font-bold px-1 py-0.5 rounded font-mono">가중치</span>
             </div>
             
-            <div className="space-y-3 pt-1">
+            <div className="space-y-1.5 pt-0.5">
               {topKeywords.map((item, index) => {
                 const maxVal = topKeywords[0]?.count || 1;
                 const percentage = (item.count / maxVal) * 100;
                 return (
-                  <div key={item.keyword} className="space-y-1">
+                  <div key={item.keyword} className="space-y-0.5">
                     <div className="flex justify-between items-center text-xs">
                       <div className="flex items-center gap-1.5">
-                        <span className="w-4 h-4 bg-[#0A2351] text-white font-bold rounded text-[9px] flex items-center justify-center">
+                        <span className="w-3.5 h-3.5 bg-[#0A2351] text-white font-bold rounded text-[8px] flex items-center justify-center">
                           {index + 1}
                         </span>
                         <span className="font-bold text-slate-800 text-xs">{item.keyword}</span>
                       </div>
-                      <span className="text-[10px] text-slate-500 font-mono font-semibold">{item.count}회</span>
+                      <span className="text-[9px] text-slate-500 font-mono font-semibold">{item.count}회</span>
                     </div>
-                    <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                    <div className="h-1 bg-slate-100 rounded-full overflow-hidden">
                       <motion.div 
                         initial={{ width: 0 }}
                         animate={{ width: `${percentage}%` }}
@@ -403,30 +403,36 @@ export const DashboardOverview: React.FC<Props> = ({
               })}
             </div>
           </div>
-          <div className="mt-4 pt-3 border-t border-slate-100 text-center">
+          <div className="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-[10px]">
+            <button 
+              onClick={() => setKeywordLimit(keywordLimit === 5 ? 10 : 5)}
+              className="text-[#0A2351] font-bold hover:underline inline-flex items-center gap-1 cursor-pointer"
+            >
+              {keywordLimit === 5 ? '➕ 더보기 (TOP 10)' : '➖ 접기 (TOP 5)'}
+            </button>
             <button 
               onClick={() => onNavigateToTab(2)}
-              className="text-[11px] text-[#0A2351] font-bold hover:underline inline-flex items-center gap-1 cursor-pointer"
+              className="text-slate-500 font-medium hover:underline inline-flex items-center gap-1 cursor-pointer"
             >
-              상세 원문 분석하기
-              <ChevronRight className="w-3 h-3" />
+              상세 원문 분석
+              <ChevronRight className="w-2.5 h-2.5" />
             </button>
           </div>
         </div>
 
         {/* 2. 속까지 채워진 3D 입체 파이 차트 - 정책 분야별 제안 비중 (lg:col-span-4) */}
-        <div className="lg:col-span-4 bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:shadow-sm transition flex flex-col justify-between">
+        <div className="lg:col-span-4 bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs hover:shadow-sm transition flex flex-col justify-between h-full">
           <div>
-            <div className="flex items-center justify-between mb-3 pb-2 border-b border-slate-200/80">
-              <h4 className="text-xs sm:text-sm font-bold text-slate-900 flex items-center gap-1.5">
-                <PieIcon className="text-indigo-600 w-4 h-4" />
+            <div className="flex items-center justify-between mb-2 pb-1 border-b border-slate-200/80">
+              <h4 className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                <PieIcon className="text-indigo-600 w-3.5 h-3.5" />
                 분야별 제안 비중 (3D 파이)
               </h4>
-              <span className="text-[10px] bg-slate-100 text-slate-500 font-bold px-1.5 py-0.5 rounded font-mono">카테고리 누적</span>
+              <span className="text-[9px] bg-slate-100 text-slate-500 font-bold px-1 py-0.5 rounded font-mono">카테고리 누적</span>
             </div>
 
             {/* 3D 꽉 찬 원형 파이 차트 (innerRadius={0}) + 3D 섀도우 필터 */}
-            <div className="h-[150px] w-full relative filter drop-shadow-lg">
+            <div className="h-[110px] w-full relative filter drop-shadow-lg">
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
@@ -434,7 +440,7 @@ export const DashboardOverview: React.FC<Props> = ({
                     cx="50%"
                     cy="50%"
                     innerRadius={0}
-                    outerRadius={68}
+                    outerRadius={50}
                     paddingAngle={1.5}
                     dataKey="value"
                   >
@@ -443,7 +449,7 @@ export const DashboardOverview: React.FC<Props> = ({
                         key={`cell-${index}`} 
                         fill={COLORS[index % COLORS.length]} 
                         stroke="#ffffff" 
-                        strokeWidth={2}
+                        strokeWidth={1.5}
                       />
                     ))}
                   </Pie>
@@ -455,19 +461,19 @@ export const DashboardOverview: React.FC<Props> = ({
                         const ratio = ((data.value / total) * 100).toFixed(1);
                         const color = data.payload.fill || data.color || '#3b82f6';
                         return (
-                          <div className="bg-slate-900/95 text-white p-3 rounded-xl shadow-2xl border border-slate-700/80 backdrop-blur-xs space-y-1.5 min-w-[150px] z-50">
-                            <div className="flex items-center gap-2 border-b border-slate-700/60 pb-1.5">
-                              <span className="w-3 h-3 rounded-full shrink-0 shadow-xs" style={{ backgroundColor: color }} />
-                              <span className="font-black text-xs text-white">{data.name}</span>
+                          <div className="bg-slate-900/95 text-white p-2.5 rounded-lg shadow-2xl border border-slate-700/80 backdrop-blur-xs space-y-1 min-w-[130px] z-50">
+                            <div className="flex items-center gap-1.5 border-b border-slate-700/60 pb-1">
+                              <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: color }} />
+                              <span className="font-black text-[11px] text-white">{data.name}</span>
                             </div>
-                            <div className="space-y-1 text-[11px] pt-0.5">
+                            <div className="space-y-0.5 text-[10px] pt-0.5">
                               <div className="flex justify-between items-center text-slate-300">
                                 <span>제안 건수:</span>
-                                <span className="font-black text-amber-400 font-mono text-xs">{data.value}건</span>
+                                <span className="font-black text-amber-400 font-mono">{data.value}건</span>
                               </div>
                               <div className="flex justify-between items-center text-slate-300">
                                 <span>점유 비율:</span>
-                                <span className="font-black text-sky-400 font-mono text-xs">{ratio}%</span>
+                                <span className="font-black text-sky-400 font-mono">{ratio}%</span>
                               </div>
                             </div>
                           </div>
@@ -479,62 +485,62 @@ export const DashboardOverview: React.FC<Props> = ({
                 </PieChart>
               </ResponsiveContainer>
             </div>
+          </div>
 
-            {/* 콤팩트 범례 목록 */}
-            <div className="grid grid-cols-2 gap-1.5 pt-2">
-              {pieData.map((entry, index) => {
-                const total = proposals.length;
-                const ratio = ((entry.value / total) * 100).toFixed(1);
-                return (
-                  <div 
-                    key={entry.name} 
-                    onClick={() => onSelectCategory(entry.name)}
-                    className="flex items-center justify-between p-1 hover:bg-slate-100 border border-transparent hover:border-slate-200 rounded cursor-pointer transition text-xs"
-                    title="클릭 시 해당 분야 필터링"
-                  >
-                    <div className="flex items-center gap-1.5 min-w-0">
-                      <span className="w-2.5 h-2.5 rounded-xs shrink-0" style={{ backgroundColor: COLORS[index % COLORS.length] }} />
-                      <span className="font-bold text-slate-700 truncate text-[11px]">{entry.name}</span>
-                    </div>
-                    <span className="text-[10px] font-bold text-[#0A2351] font-mono shrink-0 ml-1">{ratio}%</span>
+          {/* 콤팩트 범례 목록 (Pushed to bottom!) */}
+          <div className="grid grid-cols-2 gap-1 pt-1.5 mt-2 border-t border-slate-100">
+            {pieData.slice(0, 4).map((entry, index) => {
+              const total = proposals.length;
+              const ratio = ((entry.value / total) * 100).toFixed(1);
+              return (
+                <div 
+                  key={entry.name} 
+                  onClick={() => onSelectCategory(entry.name)}
+                  className="flex items-center justify-between p-0.5 hover:bg-slate-100 rounded cursor-pointer transition text-[10px]"
+                  title="클릭 시 해당 분야 필터링"
+                >
+                  <div className="flex items-center gap-1 min-w-0">
+                    <span className="w-2 h-2 rounded-xs shrink-0" style={{ backgroundColor: COLORS[index % COLORS.length] }} />
+                    <span className="font-bold text-slate-700 truncate text-[10px]">{entry.name}</span>
                   </div>
-                );
-              })}
-            </div>
+                  <span className="text-[9px] font-bold text-[#0A2351] font-mono shrink-0 ml-0.5">{ratio}%</span>
+                </div>
+              );
+            })}
           </div>
         </div>
 
-        {/* 3. 부서별 제안 접수 현황 (위로 올려서 붙임) (lg:col-span-5) */}
-        <div className="lg:col-span-5 bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:shadow-sm transition flex flex-col justify-between">
+        {/* 3. 부서별 제안 접수 현황 (lg:col-span-5) */}
+        <div className="lg:col-span-5 bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs hover:shadow-sm transition flex flex-col justify-between h-full">
           <div>
-            <div className="flex items-center justify-between mb-3 pb-2 border-b border-slate-200/80">
-              <h4 className="text-xs sm:text-sm font-bold text-slate-900 flex items-center gap-1.5">
-                <Building2 className="text-slate-600 w-4 h-4" />
+            <div className="flex items-center justify-between mb-2 pb-1 border-b border-slate-200/80">
+              <h4 className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                <Building2 className="text-slate-600 w-3.5 h-3.5" />
                 부서별 제안 접수 현황
               </h4>
-              <span className="text-[10px] bg-slate-100 text-slate-500 font-bold px-1.5 py-0.5 rounded font-mono">부서 매칭 카운트</span>
+              <span className="text-[9px] bg-slate-100 text-slate-500 font-bold px-1 py-0.5 rounded font-mono">부서 매칭</span>
             </div>
             
-            <div className="h-[210px] w-full">
+            <div className="h-[130px] w-full">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={deptStatsProcessed} margin={{ top: 10, right: 10, left: -25, bottom: 35 }}>
+                <BarChart data={deptStatsProcessed} margin={{ top: 5, right: 5, left: -30, bottom: 20 }}>
                   <XAxis 
                     dataKey="name" 
-                    tick={{ fontSize: 9, fill: '#475569', fontWeight: 600 }} 
-                    angle={-30} 
+                    tick={{ fontSize: 8, fill: '#475569', fontWeight: 600 }} 
+                    angle={-20} 
                     textAnchor="end" 
                     interval={0}
                   />
-                  <YAxis tick={{ fontSize: 9 }} />
+                  <YAxis tick={{ fontSize: 8 }} />
                   <Tooltip 
-                    contentStyle={{ borderRadius: '6px', fontSize: '11px', fontWeight: 'bold' }}
+                    contentStyle={{ borderRadius: '4px', fontSize: '10px', fontWeight: 'bold', padding: '6px' }}
                     formatter={(value: any, name: any) => [
                       `${value}건`, 
                       (name === '답변 완료' || name === 'answered') ? '답변 완료' : '미답변 (검토 중)'
                     ]}
                   />
-                  <Bar dataKey="answered" name="답변 완료" stackId="dept" fill="#cbd5e1" barSize={12} radius={[0, 0, 2, 2]} />
-                  <Bar dataKey="unanswered" name="미답변" stackId="dept" fill="#f43f5e" barSize={12} radius={[3, 3, 0, 0]} />
+                  <Bar dataKey="answered" name="답변 완료" stackId="dept" fill="#cbd5e1" barSize={10} radius={[0, 0, 1, 1]} />
+                  <Bar dataKey="unanswered" name="미답변" stackId="dept" fill="#f43f5e" barSize={10} radius={[2, 2, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </div>

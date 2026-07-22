@@ -20,7 +20,9 @@ import {
   FileSpreadsheet,
   TrendingUp,
   Download,
-  AlertTriangle
+  AlertTriangle,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import rawMongttangData from './data/mongttang.json';
 import { PolicyProposal, DashboardStats } from './types';
@@ -55,6 +57,7 @@ export default function App() {
   const [publicSortBy, setPublicSortBy] = useState<'name' | 'value'>('value');
   const [selectedDept, setSelectedDept] = useState<string | null>(null);
   const [isExportModalOpen, setIsExportModalOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
 
   // 실시간 통계 연산
   const stats = useMemo<DashboardStats>(() => {
@@ -188,142 +191,161 @@ export default function App() {
         </div>
       </header>
 
-      {/* 메인 내비게이션 탭 */}
-      <div className="bg-white border-b border-slate-200 shadow-2xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-          <nav className="flex space-x-2 overflow-x-auto" aria-label="Tabs">
+      {/* 메인 본문 레이아웃 (사이드바 + 메인 콘텐츠) */}
+      <div className="flex-grow flex flex-row w-full relative">
+        {/* 좌측 사이드바 */}
+        <aside className={`${isSidebarOpen ? 'w-64' : 'w-16'} bg-[#0B2545] text-white flex flex-col transition-all duration-300 border-r border-[#134074] shrink-0 sticky top-[72px] h-[calc(100vh-72px)] overflow-y-auto z-30`}>
+          
+          {/* 사이드바 접기/펼치기 토글 단추 */}
+          <div className="p-3 border-b border-[#134074] flex justify-between items-center bg-[#081F3D]">
+            {isSidebarOpen && <span className="text-[10px] font-bold text-slate-400 tracking-wider">메뉴 탐색기</span>}
+            <button
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+              className="p-1.5 rounded bg-blue-900 hover:bg-blue-800 text-white transition cursor-pointer mx-auto flex items-center justify-center"
+              title={isSidebarOpen ? "사이드바 접기" : "사이드바 펼치기"}
+            >
+              {isSidebarOpen ? <ChevronLeft className="w-3.5 h-3.5" /> : <ChevronRight className="w-3.5 h-3.5" />}
+            </button>
+          </div>
+
+          {/* 세로 메뉴 목록 */}
+          <nav className="flex flex-col py-2" aria-label="Sidebar Tabs">
             <button
               onClick={() => handleTabClick(0)}
               title="서울시 출산·육아 시민 제안 전체 현황 및 연도별 민원 트렌드 종합 개요"
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
                 activeTab === 0
-                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
+                  ? 'bg-[#134074] text-white border-blue-400'
+                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
               }`}
             >
-              <LayoutDashboard className="w-4 h-4" />
-              정책 수요 개요
+              <LayoutDashboard className="w-4 h-4 shrink-0" />
+              {isSidebarOpen && <span>정책 수요 개요</span>}
             </button>
 
             <button
               onClick={() => handleTabClick(1)}
               title="25개 자치구별 시민 제안 수량 및 출생아·보육시설 인프라 비교 지도 분석"
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
                 activeTab === 1
-                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
+                  ? 'bg-[#134074] text-white border-blue-400'
+                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
               }`}
             >
-              <MapPin className="w-4 h-4" />
-              지역별 비교
-              {selectedDistrict && (
-                <span className="w-1.5 h-1.5 bg-rose-500 rounded-full animate-ping" />
+              <MapPin className="w-4 h-4 shrink-0" />
+              {isSidebarOpen && (
+                <span className="flex items-center gap-1">
+                  <span>지역별 비교</span>
+                  {selectedDistrict && <span className="w-1.5 h-1.5 bg-rose-500 rounded-full animate-ping" />}
+                </span>
               )}
             </button>
 
             <button
               onClick={() => handleTabClick(2)}
               title="TOP 30 최신 핵심 키워드 태그 클라우드 및 생애주기별 민원 수요 강도 분석"
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
                 activeTab === 2
-                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
+                  ? 'bg-[#134074] text-white border-blue-400'
+                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
               }`}
             >
-              <BarChart3 className="w-4 h-4" />
-              키워드·수요 강도 분석
+              <BarChart3 className="w-4 h-4 shrink-0" />
+              {isSidebarOpen && <span>키워드·수요 강도 분석</span>}
             </button>
 
             <button
               onClick={() => handleTabClick(3)}
               title="150표 이상 시민 공감을 얻었으나 서울시 공식 답변이 완료되지 않은 긴급 정책 공백 제안 총 4건 검토 및 일괄 답변 처리"
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
                 activeTab === 3
-                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
+                  ? 'bg-[#134074] text-white border-blue-400'
+                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
               }`}
             >
-              <AlertOctagon className="w-4 h-4 text-rose-500" />
-              정책 우선순위 상세
-              <span 
-                title="150표 이상 공감 및 서울시 미답변 긴급 검토 제안 총 4건"
-                className="bg-rose-100 text-rose-700 text-[10px] font-black px-2 py-0.5 rounded-full ml-1 flex items-center gap-0.5 shadow-2xs"
-              >
-                <span>공백 {mockProposals.filter(p => p.reply_yn === 'N' && p.vote_score >= 150).length}건</span>
-              </span>
+              <AlertOctagon className="w-4 h-4 text-rose-400 shrink-0" />
+              {isSidebarOpen && (
+                <span className="flex items-center justify-between w-full min-w-0">
+                  <span className="truncate">정책 우선순위 상세</span>
+                  <span className="bg-rose-600 text-white text-[9px] font-black px-1.5 py-0.2 rounded-full shrink-0 ml-1">
+                    {mockProposals.filter(p => p.reply_yn === 'N' && p.vote_score >= 150).length}
+                  </span>
+                </span>
+              )}
             </button>
 
             <button
               onClick={() => handleTabClick(4)}
               title="몽땅정보 만능키에 등록된 서울시 323개 공식 출산·보육 사업 검색 및 대조"
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
                 activeTab === 4
-                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
+                  ? 'bg-[#134074] text-white border-blue-400'
+                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
               }`}
             >
-              <Building2 className="w-4 h-4 text-blue-500" />
-              서울시 현행 정책 (몽땅정보 323건)
-              <span 
-                title="서울시 몽땅정보 공식 등록 총 323개 사업"
-                className="bg-blue-100 text-blue-800 text-[10px] font-black px-1.5 py-0.2 rounded-full ml-0.5"
-              >
-                323
-              </span>
+              <Building2 className="w-4 h-4 text-blue-400 shrink-0" />
+              {isSidebarOpen && (
+                <span className="flex items-center justify-between w-full min-w-0">
+                  <span className="truncate">서울시 현행 정책</span>
+                  <span className="bg-blue-900 text-slate-300 text-[9px] px-1.5 py-0.2 rounded-full shrink-0 ml-1">
+                    323
+                  </span>
+                </span>
+              )}
             </button>
 
             <button
               onClick={() => handleTabClick(5)}
               title="BERT Embedding 기반 유사 제안 군집 볼록(Voronoi/3D) 클러스터 시각화 지도"
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
                 activeTab === 5
-                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
+                  ? 'bg-[#134074] text-white border-blue-400'
+                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
               }`}
             >
-              <TrendingUp className="w-4 h-4 text-emerald-500" />
-              군집 볼륨 분석 (클러스터 맵)
+              <TrendingUp className="w-4 h-4 text-emerald-400 shrink-0" />
+              {isSidebarOpen && <span className="truncate">군집 볼륨 분석</span>}
             </button>
 
             <button
               onClick={() => handleTabClick(6)}
               title="KOSIS/KSTAT 서울시 출생아 수, 합계출산율(TFR), 보육시설 통계 지표 분석"
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
                 activeTab === 6
-                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
+                  ? 'bg-[#134074] text-white border-blue-400'
+                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
               }`}
             >
-              <FileSpreadsheet className="w-4 h-4 text-indigo-500" />
-              공공데이터 지표 분석
+              <FileSpreadsheet className="w-4 h-4 text-indigo-400 shrink-0" />
+              {isSidebarOpen && <span className="truncate">공공데이터 지표</span>}
             </button>
 
             <button
               onClick={() => handleTabClick(7)}
               title="수요-공급-민원 통합 갭(Gap) 분석 6대 판단 매트릭스 진단표"
-              className={`flex items-center gap-2 px-4 py-2 text-xs font-bold rounded-lg border transition whitespace-nowrap cursor-pointer ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
                 activeTab === 7
-                  ? 'bg-[#0A2351] text-white border-[#0A2351]'
-                  : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border-slate-200 shadow-2xs'
+                  ? 'bg-[#134074] text-white border-blue-400'
+                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
               }`}
             >
-              <AlertTriangle className="w-4 h-4 text-rose-500 animate-pulse" />
-              종합 의사결정 분석표 (Gap Matrix)
+              <AlertTriangle className="w-4 h-4 text-rose-400 animate-pulse shrink-0" />
+              {isSidebarOpen && <span className="truncate">의사결정 갭 분석표</span>}
             </button>
           </nav>
-        </div>
-      </div>
+        </aside>
 
-      {/* 메인 본문 콘텐츠 */}
-      <main className="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-6">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -5 }}
-            transition={{ duration: 0.15 }}
-          >
+        {/* 메인 콘텐츠 영역 */}
+        <main className="flex-grow p-6 overflow-y-auto bg-slate-50 min-h-[calc(100vh-72px)]">
+          <div className="max-w-6xl mx-auto w-full">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab}
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -5 }}
+                transition={{ duration: 0.15 }}
+              >
             {activeTab === 0 && (
               <DashboardOverview 
                 proposals={mockProposals}
@@ -516,7 +538,9 @@ export default function App() {
             )}
           </motion.div>
         </AnimatePresence>
-      </main>
+      </div>
+    </main>
+  </div>
 
       {/* 하단 업무용 푸터 */}
       <footer className="bg-white border-t border-slate-200 px-6 py-3 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500 mt-auto">
