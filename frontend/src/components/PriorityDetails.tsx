@@ -529,6 +529,57 @@ export const PriorityDetails: React.FC<Props> = ({
     return counts;
   }, [proposals, selectedFlows, selectedCategories]);
 
+  // 자동으로 0건이 된 필터 선택을 제외(pruning)해주는 반응형 이펙트 추가
+  React.useEffect(() => {
+    // 1. 연도 필터 정제
+    const validYears = selectedYears.filter(y => y === '전체' || (yearCounts[y] || 0) > 0);
+    if (validYears.length === 0) {
+      setSelectedYears(['전체']);
+    } else if (validYears.length !== selectedYears.length) {
+      setSelectedYears(validYears);
+    }
+
+    // 2. 생애주기 필터 정제
+    const validFlows = selectedFlows.filter(flow => flow === '전체' || (flowCounts[flow] || 0) > 0);
+    if (validFlows.length === 0) {
+      setSelectedFlows(['전체']);
+    } else if (validFlows.length !== selectedFlows.length) {
+      setSelectedFlows(validFlows);
+    }
+
+    // 3. 대분류 필터 정제
+    const validCats = selectedCategories.filter(cat => cat === '전체' || (catCounts[cat] || 0) > 0);
+    if (validCats.length === 0) {
+      setSelectedCategories(['전체']);
+    } else if (validCats.length !== selectedCategories.length) {
+      setSelectedCategories(validCats);
+    }
+
+    // 4. 중분류 필터 정제
+    const validSubs = selectedSubCategories.filter(sub => sub === '전체' || (subCatCounts[sub] || 0) > 0);
+    if (validSubs.length === 0) {
+      setSelectedSubCategories(['전체']);
+    } else if (validSubs.length !== selectedSubCategories.length) {
+      setSelectedSubCategories(validSubs);
+    }
+
+    // 5. 세분류 필터 정제
+    if (selectedMicroCategory !== '전체' && (microCatCounts[selectedMicroCategory] || 0) === 0) {
+      setSelectedMicroCategory('전체');
+    }
+
+    // 6. 담당부서 필터 정제
+    const validDepts = selectedDepts.filter(dept => dept === '전체' || (deptCounts[dept] || 0) > 0);
+    if (validDepts.length === 0) {
+      setSelectedDepts(['전체']);
+    } else if (validDepts.length !== selectedDepts.length) {
+      setSelectedDepts(validDepts);
+    }
+  }, [
+    yearCounts, flowCounts, catCounts, subCatCounts, microCatCounts, deptCounts,
+    selectedYears, selectedFlows, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedDepts
+  ]);
+
   const handleExportProposals = () => {
     const listToExport = viewMode === 'group'
       ? filteredGroupedProposals.flatMap(g => g.items)
@@ -670,10 +721,10 @@ export const PriorityDetails: React.FC<Props> = ({
                   disabled={isDisabled}
                   onClick={() => toggleFilterItem(selectedYears, setSelectedYears, y)}
                   className={`text-[10px] px-2.5 py-0.5 rounded-full border transition font-bold cursor-pointer ${
-                    isSelected
-                      ? isNew2026 ? 'bg-[#10B981] text-white border-[#10B981] shadow-2xs' : 'bg-[#0A2351] text-white border-[#0A2351]'
-                      : isDisabled
+                    isDisabled
                       ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                      : isSelected
+                      ? isNew2026 ? 'bg-[#10B981] text-white border-[#10B981] shadow-2xs' : 'bg-[#0A2351] text-white border-[#0A2351]'
                       : isNew2026
                       ? 'bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100'
                       : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
@@ -703,10 +754,10 @@ export const PriorityDetails: React.FC<Props> = ({
                   disabled={isDisabled}
                   onClick={() => toggleFilterItem(selectedFlows, setSelectedFlows, flow)}
                   className={`text-[10px] px-2.5 py-0.5 rounded-full border transition font-bold cursor-pointer ${
-                    isSelected
-                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
-                      : isDisabled
+                    isDisabled
                       ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                      : isSelected
+                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
                       : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
                   }`}
                 >
@@ -735,10 +786,10 @@ export const PriorityDetails: React.FC<Props> = ({
                     setSelectedMicroCategory('전체');
                   }}
                   className={`text-[10px] px-2.5 py-0.5 rounded-full border transition font-bold cursor-pointer ${
-                    isSelected
-                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
-                      : isDisabled
+                    isDisabled
                       ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                      : isSelected
+                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
                       : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
                   }`}
                 >
@@ -767,10 +818,10 @@ export const PriorityDetails: React.FC<Props> = ({
                       setSelectedMicroCategory('전체');
                     }}
                     className={`text-[10px] px-2 py-0.5 rounded-md border transition font-bold cursor-pointer ${
-                      isSelected
-                        ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
-                        : isDisabled
+                      isDisabled
                         ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                        : isSelected
+                        ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
                         : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
                     }`}
                   >
@@ -797,10 +848,10 @@ export const PriorityDetails: React.FC<Props> = ({
                     disabled={isDisabled}
                     onClick={() => setSelectedMicroCategory(micro)}
                     className={`text-[10px] px-2 py-0.5 rounded-md border transition font-bold cursor-pointer ${
-                      isSelected
-                        ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
-                        : isDisabled
+                      isDisabled
                         ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                        : isSelected
+                        ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
                         : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
                     }`}
                   >
@@ -826,10 +877,10 @@ export const PriorityDetails: React.FC<Props> = ({
                   disabled={isDisabled}
                   onClick={() => toggleFilterItem(selectedDepts, setSelectedDepts, dept)}
                   className={`text-[10px] px-2 py-0.5 rounded-full border transition font-bold cursor-pointer ${
-                    isSelected
-                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
-                      : isDisabled
+                    isDisabled
                       ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
+                      : isSelected
+                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
                       : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
                   }`}
                 >
