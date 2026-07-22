@@ -21,8 +21,10 @@ import {
   TrendingUp,
   Download
 } from 'lucide-react';
-import { mockProposals } from './data/mockData';
-import { DashboardStats } from './types';
+import rawMongttangData from './data/mongttang.json';
+import { PolicyProposal, DashboardStats } from './types';
+
+const mockProposals = rawMongttangData as unknown as PolicyProposal[];
 import { DashboardOverview } from './components/DashboardOverview';
 import { DistrictComparison } from './components/DistrictComparison';
 import { CategoryDemand } from './components/CategoryDemand';
