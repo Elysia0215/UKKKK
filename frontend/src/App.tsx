@@ -380,6 +380,29 @@ export default function App() {
                     <p className="text-xs text-slate-400">서울시 정책 제안</p>
                   </div>
                 </section>
+                <div className="bg-emerald-600 text-white p-5 rounded-xl shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div>
+                    <span className="bg-white/25 text-white text-[9px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">
+                      🎉 2025년 최신 인구동향 통계청 잠정 속보 반영 완료
+                    </span>
+                    <h3 className="text-base font-extrabold mt-1.5">
+                      서울시 출생아 수 9.4% 대반등 성공 (45,500명) & 합계출산율 0.63명 반등!
+                    </h3>
+                    <p className="text-[11px] text-emerald-100 mt-0.5">
+                      통계청 2026.02.25 발표 잠정치 기준: 서울시 출생아 증가율(9.4%) 전국 광역시도 중 압도적 1위 기록!
+                    </p>
+                  </div>
+                  <div className="flex gap-2.5">
+                    <div className="bg-white/15 px-3 py-1.5 rounded-lg text-center border border-white/10">
+                      <span className="text-[8px] text-emerald-200 uppercase font-semibold block">전국 TFR</span>
+                      <span className="text-base font-black">0.80명</span>
+                    </div>
+                    <div className="bg-white/15 px-3 py-1.5 rounded-lg text-center border border-white/10">
+                      <span className="text-[8px] text-emerald-200 uppercase font-semibold block">서울 TFR</span>
+                      <span className="text-base font-black">0.63명</span>
+                    </div>
+                  </div>
+                </div>
 
                 <section className="grid grid-cols-1 lg:grid-cols-12 gap-6">
                   <div className="lg:col-span-5 space-y-5">

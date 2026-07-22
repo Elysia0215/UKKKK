@@ -24,6 +24,7 @@ import {
 import { PolicyProposal } from '../types';
 import rawMongttangData from '../data/mongttang.json';
 import civilRequestsData from '../data/civil_requests_all.json';
+import newsAllData from '../data/news_all.json';
 
 interface Props {
   proposals: PolicyProposal[];
@@ -378,12 +379,46 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
                 )}
 
                 {activeTab === 'news' && (
-                  <div>
-                    <span className="text-[10px] font-bold text-slate-700 block mb-1">언론 여론 보도 트렌드</span>
-                    <div className="bg-slate-50 p-2.5 rounded border border-slate-150 text-[10px] space-y-1">
-                      <p className="font-bold text-slate-900">• 저출생 특별 대책 예산 편성 확대 검토 보도 증가</p>
-                      <p className="text-slate-500">• 시민 제안 분야 언급량: 최근 30일 내 {selectedIssue.newsCount}회 보도</p>
-                    </div>
+                  <div className="space-y-2">
+                    <span className="text-[10px] font-bold text-slate-700 block mb-1">네이버 API & 연구 뉴스 DB 연계</span>
+                    {(() => {
+                      // Filter news matching current issue category/topic
+                      const matchedNews = newsAllData.filter(n => 
+                        n.category === selectedIssue.category || 
+                        selectedIssue.name.includes(n.category) ||
+                        (selectedIssue.id === 'GAP-1' && n.topic_name.includes('Topic 5')) ||
+                        (selectedIssue.id === 'GAP-2' && n.topic_name.includes('Topic 4'))
+                      ).slice(0, 3);
+
+                      if (matchedNews.length === 0) {
+                        return (
+                          <div className="bg-slate-50 p-2.5 rounded border border-slate-150 text-[10px] text-slate-500">
+                            연관된 뉴스가 없습니다.
+                          </div>
+                        );
+                      }
+
+                      return (
+                        <div className="space-y-2">
+                          {matchedNews.map((news, nIdx) => (
+                            <div key={nIdx} className="bg-slate-50 p-2 rounded border border-slate-150 text-[10px] space-y-1">
+                              <a 
+                                href={news.url} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="font-bold text-slate-900 hover:text-blue-600 flex items-center justify-between gap-1 hover:underline"
+                              >
+                                <span>• {news.title}</span>
+                                <ExternalLink className="w-2.5 h-2.5 flex-shrink-0" />
+                              </a>
+                              <p className="text-slate-500 text-[9px] line-clamp-2 leading-relaxed">
+                                {news.snippet}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      );
+                    })()}
                   </div>
                 )}
               </div>
