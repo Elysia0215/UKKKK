@@ -602,16 +602,16 @@ export const GapMatrixDashboard: React.FC<Props> = ({
           </div>
           
           <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse text-[11px]">
+            <table className="w-full min-w-[940px] table-auto text-left border-collapse text-[11px]">
               <thead>
                 <tr className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold">
-                  <th className="px-3 py-2">대분류 카테고리</th>
-                  <th className="px-3 py-2 text-center">시민 제안 (수요)</th>
-                  <th className="px-3 py-2 text-center">국민신문고 (현장)</th>
-                  <th className="px-3 py-2 text-center">기존 정책 (공급)</th>
-                  <th className="px-3 py-2 text-center">언론 보도 (사회)</th>
-                  <th className="px-3 py-2 text-center">우선점수</th>
-                  <th className="px-3 py-2">의사결정 추천 액션</th>
+                  <th className="px-3 py-2 min-w-[180px] whitespace-nowrap">대분류 카테고리</th>
+                  <th className="px-3 py-2 text-center min-w-[120px] whitespace-nowrap">시민 제안 (수요)</th>
+                  <th className="px-3 py-2 text-center min-w-[120px] whitespace-nowrap">국민신문고 (현장)</th>
+                  <th className="px-3 py-2 text-center min-w-[120px] whitespace-nowrap">기존 정책 (공급)</th>
+                  <th className="px-3 py-2 text-center min-w-[120px] whitespace-nowrap">언론 보도 (사회)</th>
+                  <th className="px-3 py-2 text-center min-w-[100px] whitespace-nowrap">우선점수</th>
+                  <th className="px-3 py-2 min-w-[220px] whitespace-nowrap">의사결정 추천 액션</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 bg-white">
@@ -625,12 +625,12 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                         selectedIssue?.id === issue.id ? 'bg-blue-50/60 font-semibold' : ''
                       } ${!isDeptMatch ? 'opacity-30 hover:opacity-70 scale-98' : ''}`}
                     >
-                    <td className="px-3 py-3 font-semibold text-slate-900">{issue.name}</td>
-                    <td className="px-3 py-3 text-center font-mono font-bold text-slate-700">{issue.proposalsCount}건</td>
-                    <td className="px-3 py-3 text-center font-mono font-bold text-slate-700">{issue.civilRequestsCount}건</td>
-                    <td className="px-3 py-3 text-center font-mono font-bold text-slate-700">{issue.existingPoliciesCount}개</td>
-                    <td className="px-3 py-3 text-center font-mono font-bold text-slate-700">{issue.newsCount}회</td>
-                    <td className="px-3 py-3 text-center">
+                    <td className="px-3 py-3 font-semibold text-slate-900 whitespace-nowrap">{issue.name}</td>
+                    <td className="px-3 py-3 text-center font-mono font-bold text-slate-700 whitespace-nowrap">{issue.proposalsCount}건</td>
+                    <td className="px-3 py-3 text-center font-mono font-bold text-slate-700 whitespace-nowrap">{issue.civilRequestsCount}건</td>
+                    <td className="px-3 py-3 text-center font-mono font-bold text-slate-700 whitespace-nowrap">{issue.existingPoliciesCount}개</td>
+                    <td className="px-3 py-3 text-center font-mono font-bold text-slate-700 whitespace-nowrap">{issue.newsCount}회</td>
+                    <td className="px-3 py-3 text-center whitespace-nowrap">
                       <span className={`px-2 py-0.5 rounded-full font-black text-xs ${
                         issue.priorityScore >= 75 ? 'bg-rose-100 text-rose-800' :
                         issue.priorityScore >= 50 ? 'bg-amber-100 text-amber-800' :
@@ -640,8 +640,8 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                       </span>
                     </td>
                     <td className="px-3 py-3">
-                      <div className="flex flex-col">
-                        <span className="font-bold text-slate-800 flex items-center gap-1">
+                      <div className="flex flex-col gap-1">
+                        <span className="font-bold text-slate-800 flex items-center gap-1 whitespace-nowrap">
                           {issue.recommendedAction}
                           {customActions[issue.name] && <Check className="w-3.5 h-3.5 text-blue-600" />}
                         </span>
