@@ -17,6 +17,7 @@ import {
   CheckCircle,
   AlertTriangle,
   ArrowRight,
+  ArrowLeft,
   TrendingDown,
   Layers,
   Sparkles,
@@ -69,7 +70,9 @@ interface FeedbackLog {
   ai_satisfaction_label: string;
   official_feedback: '승인' | '수정 후 승인' | '반려';
   correct_policy_id: string;
+  ai_recommended_action: string;
   correct_action: string;
+  was_modified: boolean;
   edited_answer: string;
   reviewer_id: string;
   reviewed_at: string;
@@ -144,6 +147,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
 }) => {
   const [selectedIssue, setSelectedIssue] = useState<IssueItem | null>(null);
   const [activeTab, setActiveTab] = useState<'proposals' | 'civil' | 'policies' | 'news'>('proposals');
+  const [expandedMetric, setExpandedMetric] = useState<string | null>(null);
 
   // Human-in-the-loop state variables
   const [feedbackLogs, setFeedbackLogs] = useState<FeedbackLog[]>([]);
@@ -151,6 +155,8 @@ export const GapMatrixDashboard: React.FC<Props> = ({
   const [editedAnswer, setEditedAnswer] = useState<string>('');
   const [feedbackAction, setFeedbackAction] = useState<'승인' | '수정 후 승인' | '반려' | null>(null);
   const [customActions, setCustomActions] = useState<Record<string, { action: string; status: string; overrideSatisfaction?: string }>>({});
+  const [lastSubmittedLog, setLastSubmittedLog] = useState<FeedbackLog | null>(null);
+  const [showFeedbackHistory, setShowFeedbackHistory] = useState<boolean>(false);
 
   // 2열 비교 검증 펼치기/접기 토글 상태
   const [showRawProposals, setShowRawProposals] = useState<boolean>(false);
@@ -341,7 +347,16 @@ export const GapMatrixDashboard: React.FC<Props> = ({
 
   const handleFeedbackSubmit = (actionType: '승인' | '수정 후 승인' | '반려') => {
     if (!selectedIssue) return;
-    
+
+    const aiOriginalAction = selectedIssue.recommended_action;
+    // '수정 후 승인'은 담당자가 실제로 고친 답변 본문을 최종 액션으로 남긴다 (AI 원안과 분리 추적)
+    const finalAction = actionType === '반려'
+      ? '신규 정책 수립 검토'
+      : actionType === '수정 후 승인'
+        ? editedAnswer.trim()
+        : aiOriginalAction;
+    const wasModified = actionType === '수정 후 승인' && finalAction !== aiOriginalAction;
+
     const logRecord: FeedbackLog = {
       issue_id: selectedIssue.id,
       source_type: 'problem_cluster',
@@ -350,7 +365,9 @@ export const GapMatrixDashboard: React.FC<Props> = ({
       ai_satisfaction_label: selectedIssue.priority_score >= 75 ? '미충족' : '일부 충족',
       official_feedback: actionType,
       correct_policy_id: actionType === '반려' ? 'POLICY-NONE' : `POLICY-${selectedIssue.id.replace('GAP-', '10')}`,
-      correct_action: actionType === '승인' ? '현행 기존 정책 매칭 승인' : actionType === '수정 후 승인' ? '신청 기준 완화 조례 건의' : '신규 정책 수립 검토',
+      ai_recommended_action: aiOriginalAction,
+      correct_action: finalAction,
+      was_modified: wasModified,
       edited_answer: editedAnswer,
       reviewer_id: 'OFFICIAL-SESAC-01',
       reviewed_at: new Date().toISOString().substring(0, 10)
@@ -362,7 +379,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
     setCustomActions(prev => ({
       ...prev,
       [selectedIssue.cluster]: {
-        action: logRecord.correct_action,
+        action: actionType === '수정 후 승인' ? aiOriginalAction : logRecord.correct_action,
         status: actionType === '승인' ? '승인 완료' : actionType === '수정 후 승인' ? '수정 승인' : '신규 수립 검토',
         overrideSatisfaction: actionType === '승인' ? '충족' : actionType === '수정 후 승인' ? '일부 충족' : '미충족'
       }
@@ -370,12 +387,12 @@ export const GapMatrixDashboard: React.FC<Props> = ({
 
     setSelectedIssue(prev => prev ? {
       ...prev,
-      recommended_action: logRecord.correct_action,
+      // 화면(우측 패널)에는 AI 원 추천 문구를 그대로 유지하고, 실제 확정 답변은 이력 로그에서만 확인
       status: actionType === '승인' ? '모니터링' : actionType === '수정 후 승인' ? '빠른 개선' : '즉시 검토'
     } : null);
 
-    alert(`[Human-in-the-loop 피드백 반영]\n- 피드백 액션: ${actionType}\n- 최종 확정 액션: ${logRecord.correct_action}`);
     setShowApprovalPanel(false);
+    setLastSubmittedLog(logRecord);
   };
 
   const toggleCategory = (cat: string) => {
@@ -581,6 +598,63 @@ export const GapMatrixDashboard: React.FC<Props> = ({
         </div>
       </div>
 
+      {/* 2b. Human-in-the-loop 검토 이력 로그 (AI 원안 vs 담당자 최종 확정 액션 비교) */}
+      {feedbackLogs.length > 0 && (
+        <div className="bg-white rounded-xl border border-slate-200 shadow-2xs overflow-hidden">
+          <button
+            onClick={() => setShowFeedbackHistory(prev => !prev)}
+            className="w-full flex items-center justify-between px-4 py-3 hover:bg-slate-50 transition cursor-pointer"
+          >
+            <span className="font-extrabold text-xs text-slate-900 flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+              📋 검토·승인 이력 로그 ({feedbackLogs.length}건) — AI 추천 vs 담당자 최종 확정
+            </span>
+            <span className="text-[9px] text-slate-500 font-bold flex items-center gap-1">
+              {showFeedbackHistory ? '접기' : '펼쳐서 확인'}
+              {showFeedbackHistory ? <ArrowLeft className="w-3 h-3 rotate-90" /> : <ArrowRight className="w-3 h-3 -rotate-90" />}
+            </span>
+          </button>
+          {showFeedbackHistory && (
+            <div className="border-t border-slate-100 max-h-72 overflow-y-auto">
+              <table className="w-full text-[10px]">
+                <thead className="bg-slate-50 sticky top-0">
+                  <tr className="text-slate-500 font-bold text-left">
+                    <th className="px-3 py-2">클러스터</th>
+                    <th className="px-3 py-2">피드백</th>
+                    <th className="px-3 py-2">AI 원 추천 액션</th>
+                    <th className="px-3 py-2">담당자 최종 확정 액션</th>
+                    <th className="px-3 py-2">검토일</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {feedbackLogs.map((log, idx) => (
+                    <tr key={idx} className="border-t border-slate-100">
+                      <td className="px-3 py-2 font-semibold text-slate-800">{log.issue_id}</td>
+                      <td className="px-3 py-2">
+                        <span className={`px-1.5 py-0.5 rounded-full font-bold text-[9px] ${
+                          log.official_feedback === '승인' ? 'bg-blue-50 text-blue-700' :
+                          log.official_feedback === '수정 후 승인' ? 'bg-amber-50 text-amber-700' :
+                          'bg-rose-50 text-rose-700'
+                        }`}>
+                          {log.official_feedback}{log.was_modified ? ' (수정됨)' : ''}
+                        </span>
+                      </td>
+                      <td className="px-3 py-2 text-slate-500 max-w-[220px] truncate" title={log.ai_recommended_action}>
+                        {log.ai_recommended_action}
+                      </td>
+                      <td className={`px-3 py-2 max-w-[260px] truncate ${log.was_modified ? 'text-amber-700 font-semibold' : 'text-slate-700'}`} title={log.correct_action}>
+                        {log.correct_action}
+                      </td>
+                      <td className="px-3 py-2 text-slate-400">{log.reviewed_at}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      )}
+
       {/* 3. 버블 차트 & 테이블 & 상세패널 복합 레이아웃 */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
@@ -656,15 +730,17 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                         const color = entry.status === '즉시 검토' ? '#ef4444' :
                                       entry.status === '제도 개선' ? '#f59e0b' :
                                       entry.status === '빠른 개선' ? '#10b981' : '#64748b';
-                        const opacity = 0.35 + 0.65 * (entry.confidence / 100);
+                        const isDeptMatch = !selectedDept || entry.raw?.primaryDept === selectedDept;
+                        const baseOpacity = 0.35 + 0.65 * (entry.confidence / 100);
+                        const opacity = isDeptMatch ? baseOpacity : baseOpacity * 0.3;
                         const strokeWidth = entry.confidence >= 70 ? 2 : 1;
                         return (
-                          <Cell 
-                            key={`cell-${index}`} 
-                            fill={color} 
+                          <Cell
+                            key={`cell-${index}`}
+                            fill={color}
                             fillOpacity={opacity}
-                            stroke={entry.confidence >= 60 ? '#1e293b' : color}
-                            strokeWidth={strokeWidth}
+                            stroke={isDeptMatch ? (entry.confidence >= 60 ? '#1e293b' : color) : '#cbd5e1'}
+                            strokeWidth={isDeptMatch ? strokeWidth : 1}
                             className="cursor-pointer"
                           />
                         );
@@ -871,63 +947,74 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                 {/* 5대 진단 축 수평 막대 그래프 */}
                 <div className="space-y-2 bg-slate-50 p-3 rounded-lg border border-slate-100">
                   <h4 className="text-[10px] font-black text-slate-800">📊 5대 진단 축 상세 분석</h4>
-                  
+
                   <div className="space-y-2 text-[10px]">
-                    {/* 수요 강도 */}
-                    <div className="space-y-0.5">
-                      <div className="flex justify-between font-semibold">
-                        <span>수요 강도 (Demand Strength)</span>
-                        <span className="font-mono text-slate-600">{selectedIssue.demand} / 100</span>
+                    {([
+                      {
+                        key: 'demand',
+                        label: '수요 강도 (Demand Strength)',
+                        value: selectedIssue.demand,
+                        bar: 'bg-[#0A2351]',
+                        evidence: `이 클러스터로 분류된 제안·민원 건수(${selectedIssue.item_count}건)를 기준으로 산정합니다. 공식: 25 + 75 × log(1+건수) / log(1+동일 카테고리 내 최다 건수 클러스터). 건수가 많을수록 높아지되, 특정 클러스터로의 쏠림을 완화하기 위해 로그 스케일을 사용합니다.`
+                      },
+                      {
+                        key: 'policy_gap',
+                        label: '정책 공백 (Policy Gap)',
+                        value: selectedIssue.policy_gap,
+                        bar: 'bg-rose-500',
+                        evidence: `공식: 0.6 × 미해결도(unresolved) + 0.4 × (100 − 기존 정책 커버리지). 그룹 내 건들의 '아직 해결되지 않았는가'와 '현행 정책이 이미 다루고 있는가'를 평균 내어, 미해결이면서 현행 정책이 못 미치는 문제일수록 공백 점수가 높게 나옵니다.`
+                      },
+                      {
+                        key: 'urgency',
+                        label: '사회적 시급성 (Social Urgency)',
+                        value: selectedIssue.urgency,
+                        bar: 'bg-amber-500',
+                        evidence: `건별로 입력된 시급성 점수가 있으면 그 평균을, 없으면 본문에 '긴급·위험·안전·응급·폭력·자살·생명·즉시' 등 긴급 키워드 포함 여부로 기본값(45~55)을 추정해 반영합니다.`
+                      },
+                      {
+                        key: 'feasibility',
+                        label: '실행 가능성 (Feasibility)',
+                        value: selectedIssue.feasibility,
+                        bar: 'bg-blue-600',
+                        evidence: `건별로 입력된 실행가능성 점수가 있으면 그 평균을, 없으면 '안내·홍보·기준·절차·신청·정보·개선' 등 비교적 실행이 쉬운 키워드 포함 여부로 기본값(45~60)을 추정해 반영합니다.`
+                      },
+                      {
+                        key: 'evidence_confidence',
+                        label: '근거 신뢰도 (Evidence Confidence)',
+                        value: selectedIssue.evidence_confidence,
+                        bar: 'bg-indigo-600',
+                        evidence: `공식: 35 + 0.35 × 출처 다양성 + 30 × 데이터 완성도. 출처 다양성은 서로 다른 출처 수(현재 ${selectedIssue.source_count}개) × 20(최대 100)으로 계산하고, 완성도는 각 건에 시급성·실행가능성·미해결·정책커버리지 값이 얼마나 채워져 있는지 비율입니다. 표본이 적거나 출처가 한 곳뿐이면 신뢰도가 낮게 나옵니다.`
+                      }
+                    ] as const).map(metric => (
+                      <div key={metric.key} className="space-y-0.5">
+                        <div className="flex justify-between items-center font-semibold">
+                          <span className="flex items-center gap-1">
+                            {metric.label}
+                            <button
+                              onClick={() => setExpandedMetric(prev => prev === metric.key ? null : metric.key)}
+                              className="text-slate-400 hover:text-blue-600 transition cursor-pointer"
+                              title="산출 근거 보기"
+                            >
+                              <Info className="w-3 h-3" />
+                            </button>
+                          </span>
+                          <span className="font-mono text-slate-600">{metric.value} / 100</span>
+                        </div>
+                        <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden">
+                          <div className={`${metric.bar} h-full`} style={{ width: `${metric.value}%` }} />
+                        </div>
+                        {expandedMetric === metric.key && (
+                          <div className="mt-1 p-2 bg-white border border-slate-200 rounded-lg text-[9.5px] text-slate-600 leading-relaxed">
+                            🧮 {metric.evidence}
+                          </div>
+                        )}
                       </div>
-                      <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden">
-                        <div className="bg-[#0A2351] h-full" style={{ width: `${selectedIssue.demand}%` }} />
-                      </div>
-                    </div>
-
-                    {/* 정책 공백 */}
-                    <div className="space-y-0.5">
-                      <div className="flex justify-between font-semibold">
-                        <span>정책 공백 (Policy Gap)</span>
-                        <span className="font-mono text-slate-600">{selectedIssue.policy_gap} / 100</span>
-                      </div>
-                      <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden">
-                        <div className="bg-rose-500 h-full" style={{ width: `${selectedIssue.policy_gap}%` }} />
-                      </div>
-                    </div>
-
-                    {/* 사회적 시급성 */}
-                    <div className="space-y-0.5">
-                      <div className="flex justify-between font-semibold">
-                        <span>사회적 시급성 (Social Urgency)</span>
-                        <span className="font-mono text-slate-600">{selectedIssue.urgency} / 100</span>
-                      </div>
-                      <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden">
-                        <div className="bg-amber-500 h-full" style={{ width: `${selectedIssue.urgency}%` }} />
-                      </div>
-                    </div>
-
-                    {/* 실행 가능성 */}
-                    <div className="space-y-0.5">
-                      <div className="flex justify-between font-semibold">
-                        <span>실행 가능성 (Feasibility)</span>
-                        <span className="font-mono text-slate-600">{selectedIssue.feasibility} / 100</span>
-                      </div>
-                      <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden">
-                        <div className="bg-blue-600 h-full" style={{ width: `${selectedIssue.feasibility}%` }} />
-                      </div>
-                    </div>
-
-                    {/* 근거 신뢰도 */}
-                    <div className="space-y-0.5">
-                      <div className="flex justify-between font-semibold">
-                        <span>근거 신뢰도 (Evidence Confidence)</span>
-                        <span className="font-mono text-slate-600">{selectedIssue.evidence_confidence} / 100</span>
-                      </div>
-                      <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden">
-                        <div className="bg-indigo-600 h-full" style={{ width: `${selectedIssue.evidence_confidence}%` }} />
-                      </div>
-                    </div>
+                    ))}
                   </div>
+
+                  <p className="text-[9px] text-slate-400 pt-1 border-t border-slate-200 leading-snug">
+                    우선순위 지수 = 수요×0.30 + 정책공백×0.25 + 시급성×0.25 + 실행가능성×0.10 + 근거신뢰도×0.10
+                  </p>
                 </div>
 
                 {/* 3단계 추천 액션 */}
@@ -1156,6 +1243,53 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                 className="px-4 py-2 text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition shadow-sm animate-pulse"
               >
                 답변 승인
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ✅ 피드백 제출 확인 배너 (AI 원 추천 vs 담당자 최종 확정 액션을 명시적으로 대비해서 보여줌) */}
+      {lastSubmittedLog && (
+        <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 animate-fade-in">
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-2xl w-full max-w-md overflow-hidden">
+            <div className="p-4 bg-emerald-600 text-white flex items-center gap-2">
+              <CheckCircle className="w-4 h-4" />
+              <h3 className="font-extrabold text-xs">Human-in-the-loop 피드백이 반영되었습니다</h3>
+            </div>
+            <div className="p-4 space-y-2.5 text-xs text-slate-700">
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] font-bold text-slate-400 w-16 shrink-0">피드백</span>
+                <span className={`px-2 py-0.5 rounded-full font-bold text-[10px] ${
+                  lastSubmittedLog.official_feedback === '승인' ? 'bg-blue-50 text-blue-700' :
+                  lastSubmittedLog.official_feedback === '수정 후 승인' ? 'bg-amber-50 text-amber-700' :
+                  'bg-rose-50 text-rose-700'
+                }`}>
+                  {lastSubmittedLog.official_feedback}
+                </span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-[10px] font-bold text-slate-400 w-16 shrink-0 pt-0.5">AI 원 추천</span>
+                <span className="text-slate-500 line-clamp-2">{lastSubmittedLog.ai_recommended_action}</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-[10px] font-bold text-slate-400 w-16 shrink-0 pt-0.5">최종 확정</span>
+                <span className={`line-clamp-3 ${lastSubmittedLog.was_modified ? 'text-amber-700 font-semibold' : 'text-slate-800 font-semibold'}`}>
+                  {lastSubmittedLog.correct_action}
+                </span>
+              </div>
+              {lastSubmittedLog.was_modified && (
+                <p className="text-[9.5px] text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-2.5 py-1.5 leading-snug">
+                  ⚠️ AI 원안과 다르게 수정되어 승인되었습니다. 이 건은 아래 "검토·승인 이력 로그"에 기록되어 담당자가 모아서 검수할 수 있습니다.
+                </p>
+              )}
+            </div>
+            <div className="p-3 bg-slate-50 border-t border-slate-100 flex justify-end">
+              <button
+                onClick={() => setLastSubmittedLog(null)}
+                className="px-4 py-2 text-xs font-bold bg-slate-800 hover:bg-slate-900 text-white rounded-lg transition cursor-pointer"
+              >
+                확인
               </button>
             </div>
           </div>
