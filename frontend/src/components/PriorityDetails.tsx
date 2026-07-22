@@ -141,22 +141,31 @@ export const PriorityDetails: React.FC<Props> = ({
     setSortBy('date_desc');
   };
 
-  // 연도 옵션 정의 및 연도별 수량 집계
+  // 연도 옵션 정의 및 연도별 수량 집계 (타 필터 교차 연동)
   const yearOptions = ['전체', '2026', '2025', '2024', '2023', '2022이전'];
   const yearCounts = useMemo(() => {
-    const counts: Record<string, number> = { '전체': proposals.length };
+    const counts: Record<string, number> = { '전체': 0 };
     yearOptions.forEach(y => { if (y !== '전체') counts[y] = 0; });
 
     proposals.forEach(p => {
-      if (!p.reg_date) return;
-      if (p.reg_date.startsWith('2026')) counts['2026']++;
-      else if (p.reg_date.startsWith('2025')) counts['2025']++;
-      else if (p.reg_date.startsWith('2024')) counts['2024']++;
-      else if (p.reg_date.startsWith('2023')) counts['2023']++;
-      else counts['2022이전']++;
+      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
+      const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
+      const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
+      const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
+      const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
+      const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
+      if (matchesDept && matchesFlow && matchesCat && matchesSubCat && matchesMicroCat) {
+        counts['전체'] = (counts['전체'] || 0) + 1;
+        if (!p.reg_date) return;
+        if (p.reg_date.startsWith('2026')) counts['2026']++;
+        else if (p.reg_date.startsWith('2025')) counts['2025']++;
+        else if (p.reg_date.startsWith('2024')) counts['2024']++;
+        else if (p.reg_date.startsWith('2023')) counts['2023']++;
+        else counts['2022이전']++;
+      }
     });
     return counts;
-  }, [proposals]);
+  }, [proposals, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories, selectedMicroCategory]);
 
   // 몽땅정보 현행 정책 목록
   const mongttangPolicies: MongttangPolicy[] = useMemo(() => {
@@ -444,13 +453,18 @@ export const PriorityDetails: React.FC<Props> = ({
   }, [proposals]);
 
   // --- 타 필터 선택 시 교차 연동 건수 실시간 계산 맵 ---
-  // 1) 담당부서 선택에 따른 생애주기별 건수
+  // 1) 타 필터 선택에 따른 생애주기별 건수 (연도, 부서, 대분류, 중분류, 세분류 선택 연동)
   const flowCounts = useMemo(() => {
     const counts: Record<string, number> = { '전체': 0 };
     proposals.forEach(p => {
+      const regYear = p.reg_year || '2022이전';
+      const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
       const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
       const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
-      if (matchesDept) {
+      const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
+      const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
+      const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
+      if (matchesYear && matchesDept && matchesCat && matchesSubCat && matchesMicroCat) {
         counts['전체'] = (counts['전체'] || 0) + 1;
         if (p.policy_flow) {
           counts[p.policy_flow] = (counts[p.policy_flow] || 0) + 1;
@@ -458,16 +472,20 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedDepts]);
+  }, [proposals, selectedYears, selectedDepts, selectedCategories, selectedSubCategories, selectedMicroCategory]);
 
-  // 2) 담당부서 & 생애주기 선택에 따른 1차 대분류별 건수
+  // 2) 타 필터 선택에 따른 1차 대분류별 건수 (연도, 부서, 생애주기, 중분류, 세분류 선택 연동)
   const catCounts = useMemo(() => {
     const counts: Record<string, number> = { '전체': 0 };
     proposals.forEach(p => {
+      const regYear = p.reg_year || '2022이전';
+      const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
       const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
       const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
-      if (matchesDept && matchesFlow) {
+      const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
+      const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
+      if (matchesYear && matchesDept && matchesFlow && matchesSubCat && matchesMicroCat) {
         counts['전체'] = (counts['전체'] || 0) + 1;
         if (p.category) {
           counts[p.category] = (counts[p.category] || 0) + 1;
@@ -475,17 +493,20 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedDepts, selectedFlows]);
+  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedSubCategories, selectedMicroCategory]);
 
-  // 3) 담당부서 & 생애주기 & 대분류 선택에 따른 2차 중분류별 건수
+  // 3) 타 필터 선택에 따른 2차 중분류별 건수 (연도, 부서, 생애주기, 대분류, 세분류 선택 연동)
   const subCatCounts = useMemo(() => {
     const counts: Record<string, number> = { '전체': 0 };
     proposals.forEach(p => {
+      const regYear = p.reg_year || '2022이전';
+      const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
       const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
       const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
       const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
-      if (matchesDept && matchesFlow && matchesCat) {
+      const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
+      if (matchesYear && matchesDept && matchesFlow && matchesCat && matchesMicroCat) {
         counts['전체'] = (counts['전체'] || 0) + 1;
         if (p.sub_category) {
           counts[p.sub_category] = (counts[p.sub_category] || 0) + 1;
@@ -493,18 +514,20 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedDepts, selectedFlows, selectedCategories]);
+  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedCategories, selectedMicroCategory]);
 
-  // 3-1) 담당부서 & 생애주기 & 대분류 & 중분류 선택에 따른 3차 세분류별 건수
+  // 3-1) 타 필터 선택에 따른 3차 세분류별 건수 (연도, 부서, 생애주기, 대분류, 중분류 선택 연동)
   const microCatCounts = useMemo(() => {
     const counts: Record<string, number> = { '전체': 0 };
     proposals.forEach(p => {
+      const regYear = p.reg_year || '2022이전';
+      const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
       const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
       const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
       const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
-      if (matchesDept && matchesFlow && matchesCat && matchesSubCat) {
+      if (matchesYear && matchesDept && matchesFlow && matchesCat && matchesSubCat) {
         counts['전체'] = (counts['전체'] || 0) + 1;
         if (p.micro_category) {
           counts[p.micro_category] = (counts[p.micro_category] || 0) + 1;
@@ -512,22 +535,26 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories]);
+  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories]);
 
-  // 4) 생애주기 & 대분류 선택에 따른 담당부서별 건수
+  // 4) 타 필터 선택에 따른 담당부서별 건수 (연도, 생애주기, 대분류, 중분류, 세분류 선택 연동)
   const deptCounts = useMemo(() => {
     const counts: Record<string, number> = { '전체': 0 };
     proposals.forEach(p => {
-      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
+      const regYear = p.reg_year || '2022이전';
+      const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
       const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
-      if (matchesFlow && matchesCat) {
+      const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
+      const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
+      if (matchesYear && matchesFlow && matchesCat && matchesSubCat && matchesMicroCat) {
+        const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
         counts['전체'] = (counts['전체'] || 0) + 1;
         counts[primaryDept] = (counts[primaryDept] || 0) + 1;
       }
     });
     return counts;
-  }, [proposals, selectedFlows, selectedCategories]);
+  }, [proposals, selectedYears, selectedFlows, selectedCategories, selectedSubCategories, selectedMicroCategory]);
 
   // 자동으로 0건이 된 필터 선택을 제외(pruning)해주는 반응형 이펙트 추가
   React.useEffect(() => {
@@ -624,8 +651,39 @@ export const PriorityDetails: React.FC<Props> = ({
           />
         </div>
 
-        {/* 우측: 정렬, 다중선택, 보기모드, 맞춤 CSV 다운로드 */}
+        {/* 우측: 초기화, 정렬, 다중선택, 보기모드, 맞춤 CSV 다운로드 */}
         <div className="flex flex-wrap items-center gap-2">
+          {/* 초기화 버튼 (정렬 좌측에 상시 노출되도록 배치, 필터 활성화 상태에 따라 스타일 변경) */}
+          {(() => {
+            const isFilterActive = 
+              !selectedYears.includes('전체') || 
+              !selectedFlows.includes('전체') || 
+              !selectedCategories.includes('전체') || 
+              !selectedSubCategories.includes('전체') || 
+              !selectedDepts.includes('전체') || 
+              selectedMicroCategory !== '전체' ||
+              searchTerm !== '' || 
+              onlyShowGaps || 
+              onlyShow2026Gaps || 
+              sortBy !== 'date_desc';
+
+            return (
+              <button
+                onClick={handleResetFilters}
+                disabled={!isFilterActive}
+                className={`text-[11px] px-2 py-1.5 rounded-lg border font-bold transition flex items-center gap-1 cursor-pointer ${
+                  isFilterActive
+                    ? 'border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100'
+                    : 'border-slate-200 bg-slate-50 text-slate-400 cursor-not-allowed opacity-50'
+                }`}
+                title="모든 검색 및 필터 조건을 초기 상태로 리셋합니다."
+              >
+                <RotateCcw className="w-3.5 h-3.5" />
+                <span>초기화</span>
+              </button>
+            );
+          })()}
+
           {/* 정렬 셀렉터 */}
           <div className="flex items-center gap-1 bg-slate-50 p-0.5 rounded-lg border border-slate-200">
             <span className="text-[10px] font-black text-slate-500 pl-1.5 pr-0.5">정렬</span>
@@ -679,16 +737,7 @@ export const PriorityDetails: React.FC<Props> = ({
             </button>
           </div>
 
-          {/* 초기화 버튼 */}
-          {(selectedYears[0] !== '전체' || selectedFlows[0] !== '전체' || selectedCategories[0] !== '전체' || selectedSubCategories[0] !== '전체' || selectedDepts[0] !== '전체' || searchTerm || onlyShowGaps || onlyShow2026Gaps || sortBy !== 'date_desc') && (
-            <button
-              onClick={handleResetFilters}
-              className="text-[11px] px-2 py-1.5 rounded-lg border border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100 font-bold transition flex items-center gap-1 cursor-pointer"
-            >
-              <RotateCcw className="w-3 h-3" />
-              초기화
-            </button>
-          )}
+
 
           {/* 맞춤 CSV 다운로드 (가장 우측 배치) */}
           <button
