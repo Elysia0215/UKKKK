@@ -850,10 +850,10 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
                                 href={news.url} 
                                 target="_blank" 
                                 rel="noopener noreferrer" 
-                                className="font-extrabold text-slate-900 hover:text-blue-600 flex items-center justify-between gap-1 hover:underline text-[10.5px] leading-snug"
+                                className="font-extrabold text-blue-600 hover:text-blue-850 flex items-center justify-between gap-1 hover:underline text-[10.5px] leading-snug cursor-pointer"
                               >
                                 <span>{news.title}</span>
-                                <ExternalLink className="w-3 h-3 flex-shrink-0 text-slate-400" />
+                                <ExternalLink className="w-3 h-3 flex-shrink-0 text-blue-500" />
                               </a>
                               <p className="text-slate-500 text-[9.5px] line-clamp-2 leading-relaxed">
                                 {news.snippet}
@@ -862,6 +862,18 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
                               <div className="bg-indigo-50/50 border border-indigo-100/50 p-2 rounded-lg text-[9.5px] text-indigo-950 font-medium leading-relaxed flex gap-1 items-start mt-1.5 animate-fade-in">
                                 <span className="text-indigo-600 shrink-0 font-bold">🤖 AI 요약:</span>
                                 <span>{summarizeNews(news.title, news.snippet)}</span>
+                              </div>
+                              {/* 뉴스 원문 링크 바로가기 버튼 */}
+                              <div className="flex justify-end items-center pt-1.5 mt-1.5 border-t border-slate-200/50">
+                                <a 
+                                  href={news.url} 
+                                  target="_blank" 
+                                  rel="noopener noreferrer" 
+                                  className="text-blue-600 hover:text-blue-800 font-extrabold flex items-center gap-0.5 text-[9.5px] hover:underline cursor-pointer"
+                                >
+                                  <span>🔗 뉴스 기사 원문보기</span>
+                                  <ExternalLink className="w-2.5 h-2.5" />
+                                </a>
                               </div>
                             </div>
                           ))}
@@ -1366,7 +1378,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
                       }
 
                       return matchedNews.map((news: any, nIdx: number) => (
-                        <div key={nIdx} className="bg-slate-50 p-2.5 rounded-lg border border-slate-200 text-[10px] space-y-1">
+                        <div key={nIdx} className="bg-slate-50 p-2.5 rounded-lg border border-slate-200 text-[10px] space-y-1.5 shadow-2xs">
                           <div className="flex items-center justify-between text-[9px] text-slate-400 font-bold">
                             <span>{news.type || '네이버뉴스'}</span>
                             <span className="text-red-500 font-black">🔥 이슈강도: {news.strength}</span>
@@ -1375,10 +1387,10 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
                             href={news.url} 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className="font-bold text-slate-800 hover:text-blue-600 hover:underline flex items-center justify-between gap-1 leading-snug cursor-pointer"
+                            className="font-bold text-blue-600 hover:text-blue-850 hover:underline flex items-center justify-between gap-1 leading-snug cursor-pointer"
                           >
                             <span className="line-clamp-1">{news.title}</span>
-                            <ExternalLink className="w-2.5 h-2.5 flex-shrink-0 text-slate-400" />
+                            <ExternalLink className="w-2.5 h-2.5 flex-shrink-0 text-blue-500" />
                           </a>
                           <p className="text-slate-500 text-[9.5px] line-clamp-2 leading-relaxed">
                             {news.snippet}
@@ -1387,6 +1399,18 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
                           <div className="bg-indigo-50/50 border border-indigo-100/50 p-2 rounded-lg text-[9.5px] text-indigo-950 font-medium leading-relaxed flex gap-1 items-start mt-1.5 animate-fade-in">
                             <span className="text-indigo-600 shrink-0 font-bold">🤖 AI 요약:</span>
                             <span>{summarizeNews(news.title, news.snippet)}</span>
+                          </div>
+                          {/* 뉴스 원문 링크 바로가기 버튼 */}
+                          <div className="flex justify-end items-center pt-1.5 mt-1.5 border-t border-slate-200/50">
+                            <a 
+                              href={news.url} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="text-blue-600 hover:text-blue-800 font-extrabold flex items-center gap-0.5 text-[9.5px] hover:underline cursor-pointer"
+                            >
+                              <span>🔗 뉴스 기사 원문보기</span>
+                              <ExternalLink className="w-2.5 h-2.5" />
+                            </a>
                           </div>
                         </div>
                       ));
