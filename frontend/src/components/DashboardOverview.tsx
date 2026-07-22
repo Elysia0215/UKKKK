@@ -42,18 +42,37 @@ interface Props {
   stats: DashboardStats;
   onNavigateToTab: (tabIndex: number) => void;
   onSelectCategory: (category: string) => void;
+  selectedDept?: string | null;
 }
 
 export const DashboardOverview: React.FC<Props> = ({ 
   proposals, 
   stats, 
   onNavigateToTab,
-  onSelectCategory
+  onSelectCategory,
+  selectedDept
 }) => {
   const [selectedKeywordModal, setSelectedKeywordModal] = React.useState<string | null>(null);
   const [keywordLimit, setKeywordLimit] = React.useState<number>(10);
-  const topKeywords = extractTopKeywords(proposals, keywordLimit);
-  const deptStats = getDepartmentStats(proposals);
+
+  // 부서별 필터 매칭 로직
+  const filteredProposals = React.useMemo(() => {
+    if (!selectedDept) return proposals;
+    return proposals.filter(p => {
+      if (selectedDept === '건강임신지원팀') return p.category === '임신·난임·생식건강';
+      if (selectedDept === '저출생사업1팀') return p.category === '출산·산후 초기지원';
+      if (selectedDept === '저출생사업2팀') return p.category === '다자녀·양육비·생활지원' && (p.sub_category?.includes('양육비') || p.sub_category?.includes('생활비') || p.sub_category?.includes('지원') || p.sub_category?.includes('다자녀'));
+      if (selectedDept === '영유아담당관') return p.category === '보육·돌봄 인프라';
+      if (selectedDept === '가족지원팀') return p.category === '일·가정 양립·부모 노동';
+      if (selectedDept === '주거정비과') return p.category === '주거·교통·도시생활환경';
+      if (selectedDept === '가족건강팀') return p.sub_category?.includes('건강') || p.sub_category?.includes('의료') || p.sub_category?.includes('치료') || p.category === '취약·다양가족 사각지대';
+      if (selectedDept === '아동보호팀') return p.category === '취약·다양가족 사각지대';
+      return true;
+    });
+  }, [proposals, selectedDept]);
+
+  const topKeywords = extractTopKeywords(filteredProposals, keywordLimit);
+  const deptStats = getDepartmentStats(filteredProposals);
   const deptStatsProcessed = React.useMemo(() => {
     return deptStats.map(d => ({
       ...d,
@@ -63,7 +82,7 @@ export const DashboardOverview: React.FC<Props> = ({
   }, [deptStats]);
 
   // 카테고리별 데이터 산출
-  const categoryCount = proposals.reduce((acc, curr) => {
+  const categoryCount = filteredProposals.reduce((acc, curr) => {
     acc[curr.category] = (acc[curr.category] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);
@@ -78,20 +97,42 @@ export const DashboardOverview: React.FC<Props> = ({
   const topCategories = pieData.slice(0, 3);
 
   const topVotedProposals = useMemo(() => {
-    if (!proposals || proposals.length === 0) return [];
-    return [...proposals].sort((a, b) => b.vote_score - a.vote_score).slice(0, 3);
-  }, [proposals]);
+    if (!filteredProposals || filteredProposals.length === 0) return [];
+    return [...filteredProposals].sort((a, b) => b.vote_score - a.vote_score).slice(0, 3);
+  }, [filteredProposals]);
 
   const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4', '#6366f1', '#64748b'];
 
   // 공감수가 높은 미답변 핵심 현안 (정책 공백 3건 간략 요약)
-  const keyGaps = [...proposals]
+  const keyGaps = [...filteredProposals]
     .filter(p => p.reply_yn === 'N')
     .sort((a, b) => b.vote_score - a.vote_score)
     .slice(0, 3);
 
   return (
     <div className="space-y-6">
+      {/* 부서 전용 필터 경고 배너 */}
+      {selectedDept && (
+        <div className="bg-blue-50/80 border border-blue-200/80 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 animate-fade-in">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-blue-600 rounded-lg text-white">
+              <Building2 className="w-5 h-5" />
+            </div>
+            <div>
+              <h3 className="text-sm font-extrabold text-slate-900">
+                🏢 {selectedDept} R&R 업무 모니터링 모드 활성화
+              </h3>
+              <p className="text-[11px] text-slate-500 mt-0.5">
+                해당 부서 전담 카테고리에 연관된 총 {filteredProposals.length}건의 제안 및 민원 위주로 필터링되었습니다.
+              </p>
+            </div>
+          </div>
+          <div className="text-xs font-mono font-bold text-blue-600 bg-white border border-blue-200 px-3 py-1.5 rounded-lg shadow-2xs">
+            담당 우선검토 안건: {filteredProposals.filter(p => p.reply_yn === 'N').length}건 미답변
+          </div>
+        </div>
+      )}
+
       {/* 상단 2개 그룹 레이아웃 (좌: 행정 지표 4개 2x2 / 우: 주요 인사이트 2개 좌우 반반) */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         {/* [왼쪽 그룹: 행정 기본 현황 (2x2 감싸기)] */}

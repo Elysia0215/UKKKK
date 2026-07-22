@@ -36,6 +36,7 @@ import { SeoulMap } from './components/SeoulMap';
 import { StatCharts } from './components/StatCharts';
 import { PolicyExplorer } from './components/PolicyExplorer';
 import { GapMatrixDashboard } from './components/GapMatrixDashboard';
+import { ReportExportModal } from './components/ReportExportModal';
 import { SEOUL_DISTRICTS_DATA, DistrictData } from './data/seoulData';
 
 import { exportToCsv } from './utils/exportCsv';
@@ -51,6 +52,8 @@ export default function App() {
   );
   const [publicColorMetric, setPublicColorMetric] = useState<'proposals' | 'births' | 'daycare' | 'fertility' | 'demandScore'>('fertility');
   const [publicSortBy, setPublicSortBy] = useState<'name' | 'value'>('value');
+  const [selectedDept, setSelectedDept] = useState<string | null>(null);
+  const [isExportModalOpen, setIsExportModalOpen] = useState(false);
 
   // 실시간 통계 연산
   const stats = useMemo<DashboardStats>(() => {
@@ -116,23 +119,9 @@ export default function App() {
     setActiveTab(3); // 정책 우선순위 상세 탭으로 이동
   };
 
-  // 엑셀/CSV 데이터 내보내기
+  // 엑셀/CSV 데이터 내보내기 및 맞춤 보고서 생성
   const handleExportData = () => {
-    const exportData = mockProposals.map(p => ({
-      '제안ID': p.id,
-      '카테고리': p.category,
-      '제안제목': p.title,
-      '제안본문내용': p.content,
-      '등록일자': p.reg_date,
-      '공감수': p.vote_score,
-      '댓글수': p.comment_cnt,
-      '답변여부': p.reply_yn === 'Y' ? '답변완료' : '미답변',
-      '자치구': p.district,
-      '담당부서': Array.isArray(p.department) ? p.department.join('; ') : p.department,
-      '원문URL': p.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${p.id.replace('PROP-', '')}`
-    }));
-
-    exportToCsv(`서울시_출산정책_전체제안데이터_${mockProposals.length}건_${new Date().toISOString().split('T')[0]}.csv`, exportData);
+    setIsExportModalOpen(true);
   };
 
   return (
@@ -157,6 +146,32 @@ export default function App() {
         </div>
 
         <div className="flex flex-wrap items-center gap-4 text-xs">
+          {/* 부서 선택 필터 */}
+          <div className="flex items-center gap-1.5 bg-slate-800/80 border border-slate-700 rounded px-2.5 py-1">
+            <Building2 className="w-3.5 h-3.5 text-blue-400" />
+            <select
+              value={selectedDept || ''}
+              onChange={(e) => setSelectedDept(e.target.value || null)}
+              className="bg-transparent text-white font-bold text-xs focus:outline-none cursor-pointer pr-1"
+            >
+              <option value="" className="bg-[#0A2351] text-slate-300">🏢 전체 부서 (R&R 통합)</option>
+              {[
+                '건강임신지원팀',
+                '저출생사업1팀',
+                '저출생사업2팀',
+                '영유아담당관',
+                '가족지원팀',
+                '주거정비과',
+                '가족건강팀',
+                '아동보호팀'
+              ].map((dept) => (
+                <option key={dept} value={dept} className="bg-[#0A2351] text-white">
+                  🏢 {dept}
+                </option>
+              ))}
+            </select>
+          </div>
+
           <span className="bg-blue-600 px-3 py-1 rounded text-xs font-semibold flex items-center gap-1">
             <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
             실시간 분석 중
@@ -314,6 +329,7 @@ export default function App() {
                 stats={stats}
                 onNavigateToTab={handleNavigateToTab}
                 onSelectCategory={handleSelectCategoryFromOverview}
+                selectedDept={selectedDept}
               />
             )}
 
@@ -494,6 +510,7 @@ export default function App() {
               <GapMatrixDashboard 
                 proposals={mockProposals}
                 onNavigateToTab={handleNavigateToTab}
+                selectedDept={selectedDept}
               />
             )}
           </motion.div>
@@ -515,6 +532,14 @@ export default function App() {
           <span className="font-semibold text-slate-700">Admin 접속 중</span>
         </div>
       </footer>
+
+      {/* 보고서 생성 및 내보내기 모달 */}
+      <ReportExportModal
+        isOpen={isExportModalOpen}
+        onClose={() => setIsExportModalOpen(false)}
+        selectedDept={selectedDept}
+        proposals={mockProposals}
+      />
     </div>
   );
 }

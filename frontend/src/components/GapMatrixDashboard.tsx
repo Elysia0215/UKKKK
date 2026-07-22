@@ -24,9 +24,11 @@ import {
   X,
   Clock,
   Maximize2,
-  Minimize2
+  Minimize2,
+  Download
 } from 'lucide-react';
 import { PolicyProposal } from '../types';
+import { ReportExportModal } from './ReportExportModal';
 import rawMongttangData from '../data/mongttang.json';
 import civilRequestsData from '../data/civil_requests_all.json';
 import newsAllData from '../data/news_all.json';
@@ -35,6 +37,7 @@ import classifiedPolicyData from '../data/classified_policy.json';
 interface Props {
   proposals: PolicyProposal[];
   onNavigateToTab: (tabIndex: number, category?: string) => void;
+  selectedDept?: string | null;
 }
 
 interface FeedbackLog {
@@ -87,7 +90,11 @@ interface IssueItem {
   satisfactionLabel: string;
 }
 
-export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab }) => {
+export const GapMatrixDashboard: React.FC<Props> = ({ 
+  proposals, 
+  onNavigateToTab,
+  selectedDept
+}) => {
   const [selectedIssue, setSelectedIssue] = useState<IssueItem | null>(null);
   const [activeTab, setActiveTab] = useState<'proposals' | 'civil' | 'policies' | 'news'>('proposals');
 
@@ -103,6 +110,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
   const [showRawCivils, setShowRawCivils] = useState<boolean>(false);
   const [showRawPolicies, setShowRawPolicies] = useState<boolean>(false);
   const [showComparisonModal, setShowComparisonModal] = useState<boolean>(false);
+  const [isLocalExportOpen, setIsLocalExportOpen] = useState<boolean>(false);
 
   // 8대 정책 분류명에 따른 시민 제안 스마트 매칭 함수 (일관성 유지)
   const getSmartMatchedProposals = (catName: string, proposalsList: PolicyProposal[]) => {
@@ -322,7 +330,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
 
   // 3. 8대 분류별 갭 분석 및 정밀 우선순위 모델 적용
   const issueItems = useMemo<IssueItem[]>(() => {
-    const categories = [
+    let categoriesList = [
       { name: '임신·난임·생식건강', dept: '건강임신지원팀', phone: '02-2133-9491' },
       { name: '출산·산후 초기지원', dept: '저출생사업1팀', phone: '02-2133-5025' },
       { name: '양육비·부모급여·금융지원', dept: '저출생사업2팀', phone: '02-2133-5030' },
@@ -333,7 +341,15 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
       { name: '의료·건강·심리 지원', dept: '가족건강팀', phone: '02-2133-9495' }
     ];
 
-    return categories.map((cat, idx) => {
+    if (selectedDept) {
+      categoriesList = [...categoriesList].sort((a, b) => {
+        const aMatch = a.dept === selectedDept ? 1 : 0;
+        const bMatch = b.dept === selectedDept ? 1 : 0;
+        return bMatch - aMatch;
+      });
+    }
+
+    return categoriesList.map((cat, idx) => {
       const catProps = getSmartMatchedProposals(cat.name, proposals);
       const propsCount = catProps.length;
       const votesCount = catProps.reduce((sum, p) => sum + (p.vote_score || 0), 0);
@@ -493,7 +509,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
         satisfactionLabel: satisfactionLabel
       };
     });
-  }, [proposals, customActions, catPolicyProps]);
+  }, [proposals, customActions, catPolicyProps, selectedDept]);
 
   const handleCardClick = (issue: IssueItem) => {
     setSelectedIssue(issue);
@@ -570,7 +586,19 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
               <Layers className="w-4 h-4 text-blue-600" />
               정책 우선순위 진단 매트릭스 표
             </h3>
-            <span className="text-[10px] bg-blue-50 text-blue-700 px-2 py-0.5 rounded font-bold">5원 데이터 융합</span>
+            <div className="flex items-center gap-2">
+              {selectedDept && (
+                <button
+                  onClick={() => setIsLocalExportOpen(true)}
+                  className="px-2.5 py-1 text-[10px] bg-blue-600 hover:bg-blue-700 text-white font-extrabold rounded-lg flex items-center gap-1 transition shadow-2xs cursor-pointer"
+                  title={`${selectedDept} 맞춤 보고서 생성`}
+                >
+                  <Download className="w-3 h-3" />
+                  <span>맞춤 보고서 생성</span>
+                </button>
+              )}
+              <span className="text-[10px] bg-blue-50 text-blue-700 px-2 py-0.5 rounded font-bold">5원 데이터 융합</span>
+            </div>
           </div>
           
           <div className="overflow-x-auto">
@@ -587,12 +615,16 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 bg-white">
-                {issueItems.map((issue) => (
-                  <tr 
-                    key={issue.id}
-                    onClick={() => handleCardClick(issue)}
-                    className={`hover:bg-blue-50/40 cursor-pointer transition ${selectedIssue?.id === issue.id ? 'bg-blue-50/60 font-semibold' : ''}`}
-                  >
+                {issueItems.map((issue) => {
+                  const isDeptMatch = !selectedDept || issue.primaryDept === selectedDept;
+                  return (
+                    <tr 
+                      key={issue.id}
+                      onClick={() => handleCardClick(issue)}
+                      className={`hover:bg-blue-50/40 cursor-pointer transition ${
+                        selectedIssue?.id === issue.id ? 'bg-blue-50/60 font-semibold' : ''
+                      } ${!isDeptMatch ? 'opacity-30 hover:opacity-70 scale-98' : ''}`}
+                    >
                     <td className="px-3 py-3 font-semibold text-slate-900">{issue.name}</td>
                     <td className="px-3 py-3 text-center font-mono font-bold text-slate-700">{issue.proposalsCount}건</td>
                     <td className="px-3 py-3 text-center font-mono font-bold text-slate-700">{issue.civilRequestsCount}건</td>
@@ -617,7 +649,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
                       </div>
                     </td>
                   </tr>
-                ))}
+                ); })}
               </tbody>
             </table>
           </div>
@@ -1455,6 +1487,14 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
           </div>
         </div>
       )}
+      {/* 부서 맞춤 보고서 모달 */}
+      <ReportExportModal
+        isOpen={isLocalExportOpen}
+        onClose={() => setIsLocalExportOpen(false)}
+        selectedDept={selectedDept}
+        proposals={proposals}
+        customActions={customActions}
+      />
     </div>
   );
 };
