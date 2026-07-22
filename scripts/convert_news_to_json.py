@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-CSV_PATH = BASE_DIR / "scripts" / "테스트용" / "birth_policy_news_final_DB.csv"
+CSV_PATH = BASE_DIR / "data" / "final" / "merged_naver_news_all_categories.csv"
 JSON_OUT_PATH = BASE_DIR / "frontend" / "src" / "data" / "news_all.json"
 
 def main():
