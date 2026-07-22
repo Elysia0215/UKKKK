@@ -11,6 +11,8 @@ interface Props {
   isOpen: boolean;
   onClose: () => void;
   selectedDept: string | null;
+  selectedDistrict?: string | null;
+  selectedCategory?: string | null;
   proposals: PolicyProposal[];
   customActions?: Record<string, { action: string; status: string; overrideSatisfaction?: string }>;
 }
@@ -19,6 +21,8 @@ export const ReportExportModal: React.FC<Props> = ({
   isOpen,
   onClose,
   selectedDept,
+  selectedDistrict = null,
+  selectedCategory = null,
   proposals,
   customActions = {}
 }) => {
@@ -33,6 +37,7 @@ export const ReportExportModal: React.FC<Props> = ({
 
   // 부서별 카테고리 매핑 정보
   const deptCategories = useMemo(() => {
+    if (selectedCategory) return [selectedCategory];
     if (!selectedDept) {
       return ['임신·난임·생식건강', '출산·산후 초기지원', '양육비·부모급여·금융지원', '보육·돌봄 인프라', '일·가정 양립 지원', '다자녀 가구 특화 혜택', '주거·교통·도시생활환경', '의료·건강·심리 지원'];
     }
@@ -45,30 +50,49 @@ export const ReportExportModal: React.FC<Props> = ({
     if (selectedDept === '가족건강팀') return ['의료·건강·심리 지원'];
     if (selectedDept === '아동보호팀') return ['취약·다양가족 사각지대'];
     return [];
-  }, [selectedDept]);
+  }, [selectedDept, selectedCategory]);
 
-  // 부서별 필터링된 시민제안
+  // 부서별 + 카테고리 + 자치구별 필터링된 시민제안
   const deptProposals = useMemo(() => {
     return proposals.filter(p => {
-      if (!selectedDept) return true;
-      if (selectedDept === '건강임신지원팀') return p.category === '임신·난임·생식건강';
-      if (selectedDept === '저출생사업1팀') return p.category === '출산·산후 초기지원';
-      if (selectedDept === '저출생사업2팀') return p.category === '다자녀·양육비·생활지원' && (p.sub_category?.includes('양육비') || p.sub_category?.includes('생활비') || p.sub_category?.includes('지원') || p.sub_category?.includes('다자녀'));
-      if (selectedDept === '영유아담당관') return p.category === '보육·돌봄 인프라';
-      if (selectedDept === '가족지원팀') return p.category === '일·가정 양립·부모 노동';
-      if (selectedDept === '주거정비과') return p.category === '주거·교통·도시생활환경';
-      if (selectedDept === '가족건강팀') return p.sub_category?.includes('건강') || p.sub_category?.includes('의료') || p.sub_category?.includes('치료') || p.category === '취약·다양가족 사각지대';
-      if (selectedDept === '아동보호팀') return p.category === '취약·다양가족 사각지대';
+      // 1. 부서 R&R 필터
+      if (selectedDept) {
+        let deptMatch = false;
+        if (selectedDept === '건강임신지원팀' && p.category === '임신·난임·생식건강') deptMatch = true;
+        else if (selectedDept === '저출생사업1팀' && p.category === '출산·산후 초기지원') deptMatch = true;
+        else if (selectedDept === '저출생사업2팀' && p.category === '다자녀·양육비·생활지원' && (p.sub_category?.includes('양육비') || p.sub_category?.includes('생활비') || p.sub_category?.includes('지원') || p.sub_category?.includes('다자녀'))) deptMatch = true;
+        else if (selectedDept === '영유아담당관' && p.category === '보육·돌봄 인프라') deptMatch = true;
+        else if (selectedDept === '가족지원팀' && p.category === '일·가정 양립·부모 노동') deptMatch = true;
+        else if (selectedDept === '주거정비과' && p.category === '주거·교통·도시생활환경') deptMatch = true;
+        else if (selectedDept === '가족건강팀' && (p.sub_category?.includes('건강') || p.sub_category?.includes('의료') || p.sub_category?.includes('치료') || p.category === '취약·다양가족 사각지대')) deptMatch = true;
+        else if (selectedDept === '아동보호팀' && p.category === '취약·다양가족 사각지대') deptMatch = true;
+        
+        if (!deptMatch) return false;
+      }
+      // 2. 카테고리 필터
+      if (selectedCategory && p.category !== selectedCategory) {
+        return false;
+      }
+      // 3. 자치구 필터
+      if (selectedDistrict && p.district !== selectedDistrict) {
+        return false;
+      }
       return true;
     });
-  }, [proposals, selectedDept]);
+  }, [proposals, selectedDept, selectedCategory, selectedDistrict]);
 
   // 공문 보고서 텍스트 생성기
   const generatedReportText = useMemo(() => {
     const today = new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
+    
+    let subtitle = '';
+    if (selectedDistrict || selectedCategory) {
+      subtitle = ` (필터링: ${selectedDistrict ? `${selectedDistrict} ` : ''}${selectedCategory ? `[${selectedCategory}]` : ''})`;
+    }
+
     const title = selectedDept 
-      ? `[${selectedDept}] 저출생 대책 정책 수요 및 의사결정 분석 보고` 
-      : `[여성가족실] 서울시 출산·양육 정책 수요 및 공백(Gap) 종합보고서`;
+      ? `[${selectedDept}] 저출생 대책 정책 수요 및 의사결정 분석 보고${subtitle}` 
+      : `[여성가족실] 서울시 출산·양육 정책 수요 및 공백(Gap) 종합보고서${subtitle}`;
 
     let text = `============================================================\n`;
     text += `   ${title}\n`;
@@ -84,7 +108,7 @@ export const ReportExportModal: React.FC<Props> = ({
 
     if (includeStats) {
       text += `2. 주요 수요/현장 데이터 현황\n`;
-      text += `  가. 분석 대상 범위: ${selectedDept ? `${selectedDept} 소관 카테고리 (${deptCategories.join(', ')})` : '서울시 출산·양육 8대 정책 분야 전체'}\n`;
+      text += `  가. 분석 대상 범위: ${selectedDept ? `${selectedDept} 소관` : '여성가족실 전체'}${selectedCategory ? ` 및 [${selectedCategory}] 카테고리` : ''}${selectedDistrict ? ` (${selectedDistrict} 지역 한정)` : ''}\n`;
       text += `  나. 시민 정책 제안 수집 건수: 총 ${deptProposals.length}건\n`;
       text += `  다. 총 시민 공감(추천) 수: 총 ${deptProposals.reduce((sum, p) => sum + (p.vote_score || 0), 0).toLocaleString()}표\n`;
       text += `  라. 주요 핵심 키워드: 난임지원, 긴급돌봄, 다자녀 혜택, 유아식 지원, 주택 특별공급, 육아휴직 급여 등\n\n`;

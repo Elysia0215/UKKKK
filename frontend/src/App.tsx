@@ -569,6 +569,8 @@ export default function App() {
         isOpen={isExportModalOpen}
         onClose={() => setIsExportModalOpen(false)}
         selectedDept={selectedDept}
+        selectedDistrict={selectedDistrict}
+        selectedCategory={selectedCategory}
         proposals={mockProposals}
       />
 
