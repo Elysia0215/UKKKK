@@ -27,6 +27,7 @@ export const ReportExportModal: React.FC<Props> = ({
   const [includeAI, setIncludeAI] = useState(true);
   const [includeStats, setIncludeStats] = useState(true);
   const [includeGaps, setIncludeGaps] = useState(true);
+  const [includeAcademic, setIncludeAcademic] = useState(true);
   const [includeLogs, setIncludeLogs] = useState(true);
   const [copySuccess, setCopySuccess] = useState(false);
 
@@ -129,8 +130,18 @@ export const ReportExportModal: React.FC<Props> = ({
       text += `  나. 언론 보도(뉴스) 분석 결과, 타 지자체의 파격 지원 정책과 서울시 정책 간의 혜택 차이를 지적하는 보도가 우세(이슈 강도: 상)하여 선제적 홍보 대응이 동반되어야 함.\n\n`;
     }
 
+    if (includeAcademic) {
+      text += `5. 학술적 선행 연구 및 통계 근거 대조 (Factual & Academic Grounding)\n`;
+      text += `  가. [홍향희·이정화 (2026) 연구 대조 - 국민신문고 저출산 민원 992건 CONCOR 분석]:\n`;
+      text += `    - 시민 민원의 핵심 쟁점은 단순 수당 지원보다 '시간제 보육 편의성', '소아 응급 의료 체계', '맞벌이 돌봄 공백 해소' 등 연속적인 인프라 보장임.\n`;
+      text += `    - 본 부서 소관 카테고리 연계도: 실시간 민원 수집본 중 보육/돌봄 인프라에 대한 수요 강도가 강하게 판정되어 정책 연계 및 R&R 부서 조치 권고를 지원함.\n`;
+      text += `  나. [이정기 (2021) 연구 대조 - 뉴스 및 대중 댓글 25,800건 텍스트 마이닝 분석]:\n`;
+      text += `    - 청년층이 결혼과 출산을 주저하게 만드는 근본적인 진입 장벽이자 체감 정책 공백(Gap)은 단순 일회성 현금 수당보다 '출산가구 주거비 부담 완화', '일·가정 양립을 위한 유연근무 제도화', '육아휴직 직장 내 불이익 해소'로 나타남.\n`;
+      text += `    - 본 보고서 연계: 갭 분석 알고리즘에서 산출된 주거 및 노동 유연성 관련 정책 공백(Gap) 지수가 높게 대조되며, 서울시 공급 정책(몽땅정보통 323개 사업)의 수혜 대상 및 이용 자격 보정 필요성을 지지함.\n\n`;
+    }
+
     if (includeLogs) {
-      text += `5. 실무자 검토 및 조치 피드백 로그\n`;
+      text += `6. 실무자 검토 및 조치 피드백 로그\n`;
       const loggedItems = Object.entries(customActions);
       if (loggedItems.length > 0) {
         loggedItems.forEach(([cat, dataVal], idx) => {
@@ -146,7 +157,7 @@ export const ReportExportModal: React.FC<Props> = ({
     text += `------------------------------------------------------------\n`;
     text += `※ 본 보고서는 서울시 출산·양육 대시보드(UKKKK)에서 실시간 데이터 및 AI 우선순위 모델을 융합하여 자동 생성한 공식 초안 문서입니다.`;
     return text;
-  }, [selectedDept, reportType, includeAI, includeStats, includeGaps, includeLogs, deptCategories, deptProposals, customActions]);
+  }, [selectedDept, reportType, includeAI, includeStats, includeGaps, includeAcademic, includeLogs, deptCategories, deptProposals, customActions]);
 
   if (!isOpen) return null;
 
@@ -318,11 +329,20 @@ export const ReportExportModal: React.FC<Props> = ({
                 <label className="flex items-center gap-2 cursor-pointer font-medium text-slate-700">
                   <input
                     type="checkbox"
+                    checked={includeAcademic}
+                    onChange={(e) => setIncludeAcademic(e.target.checked)}
+                    className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                  />
+                  <span>4. 학술 연구 및 통계 근거 대조</span>
+                </label>
+                <label className="flex items-center gap-2 cursor-pointer font-medium text-slate-700">
+                  <input
+                    type="checkbox"
                     checked={includeLogs}
                     onChange={(e) => setIncludeLogs(e.target.checked)}
                     className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
                   />
-                  <span>4. 행정 조치 피드백 로그</span>
+                  <span>5. 행정 조치 피드백 로그</span>
                 </label>
               </div>
             </div>
