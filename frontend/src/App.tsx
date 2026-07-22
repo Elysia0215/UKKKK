@@ -70,7 +70,7 @@ export default function App() {
 
   const publicStats = useMemo(() => {
     const totalProposals = mockProposals.length;
-    const totalBirths = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.births2024, 0);
+    const totalBirths = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.births2025, 0);
     const totalDaycare = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.daycare2025, 0);
     const avgFertility = SEOUL_DISTRICTS_DATA.reduce((sum, d) => sum + d.fertilityRate, 0) / SEOUL_DISTRICTS_DATA.length;
 
@@ -359,7 +359,7 @@ export default function App() {
                   <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
                     <p className="text-[11px] text-slate-500 uppercase tracking-[0.18em] font-semibold">서울시 연간 총 출생아 수</p>
                     <p className="mt-3 text-2xl font-extrabold text-slate-900">{publicStats.totalBirths.toLocaleString()}</p>
-                    <p className="text-xs text-slate-400">명 / 2024</p>
+                    <p className="text-xs text-slate-400">명 / 2025 (잠정)</p>
                   </div>
 
                   <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
@@ -463,8 +463,8 @@ export default function App() {
                       <div className="mt-6 grid grid-cols-2 gap-3">
                         <div className="rounded-xl bg-white/10 border border-white/10 p-4">
                           <p className="text-[10px] uppercase text-slate-300 tracking-[0.25em]">출생아 수</p>
-                          <p className="mt-3 text-2xl font-bold">{selectedPublicDistrict.births2024.toLocaleString()}</p>
-                          <p className="text-xs text-slate-300">명 / 2024</p>
+                          <p className="mt-3 text-2xl font-bold">{selectedPublicDistrict.births2025.toLocaleString()}</p>
+                          <p className="text-xs text-slate-300">명 / 2025 (잠정)</p>
                         </div>
                         <div className="rounded-xl bg-white/10 border border-white/10 p-4">
                           <p className="text-[10px] uppercase text-slate-300 tracking-[0.25em]">보육시설</p>

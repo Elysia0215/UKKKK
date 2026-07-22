@@ -24,7 +24,7 @@ const getMetricValue = (district: DistrictData, metric: Props['colorMetric']) =>
     case 'proposals':
       return district.proposals;
     case 'births':
-      return district.births2024;
+      return district.births2025;
     case 'daycare':
       return district.daycare2025;
     case 'demandScore':
@@ -215,7 +215,7 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
                 </div>
                 <p className="mt-2 text-xs text-slate-500">
                   {colorMetric === 'proposals' ? `${district.proposals}건 제안` :
-                    colorMetric === 'births' ? `${district.births2024.toLocaleString()}명 출생` :
+                    colorMetric === 'births' ? `${district.births2025.toLocaleString()}명 출생` :
                     colorMetric === 'daycare' ? `${district.daycare2025.toLocaleString()}개소` :
                     colorMetric === 'demandScore' ? `${district.demandScore}점` :
                     `합계출산율 ${district.fertilityRate.toFixed(3)}`}
