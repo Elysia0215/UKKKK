@@ -1463,6 +1463,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                     setEditedAnswer(`[기존 정책 답변 안내]\n- 정책명: ${selectedIssue.policyName}\n- 지원대상: ${selectedIssue.targetGroup}\n- 지원내용: ${selectedIssue.supportDetail}\n- 신청방법: ${selectedIssue.url}를 통한 온라인/오프라인 신청 가능합니다.\n\n시민께서 제안해 주신 요구사항 중 일부가 현행 정책을 통해 이미 지원 중이거나 지원 방안에 포함되어 있음을 안내드립니다.`);
                     setFeedbackAction(null);
                     setShowApprovalPanel(true);
+                    setShowComparisonModal(false);
                   }}
                   className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs px-4 py-2 rounded-lg shadow-sm transition flex items-center gap-1.5 cursor-pointer"
                 >
