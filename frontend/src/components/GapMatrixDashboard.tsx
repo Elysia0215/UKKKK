@@ -30,6 +30,7 @@ import { PolicyProposal } from '../types';
 import rawMongttangData from '../data/mongttang.json';
 import civilRequestsData from '../data/civil_requests_all.json';
 import newsAllData from '../data/news_all.json';
+import classifiedPolicyData from '../data/classified_policy.json';
 
 interface Props {
   proposals: PolicyProposal[];
@@ -128,12 +129,38 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
       r.title?.includes(selectedIssue.name.substring(0, 2))
     );
 
-    // 3. 매칭되는 몽땅정보통 서울시 정책 데이터 필터링
-    const matchedPolicies = (rawMongttangData as any[]).filter(p => 
-      p.policy_name === selectedIssue.policyName || 
-      p.policy_name?.includes(selectedIssue.policyName) ||
-      p.category === selectedIssue.name
-    );
+    // 3. 매칭되는 몽땅정보통 서울시 정책 데이터 필터링 및 프로퍼티 매핑
+    const matchedPolicies = (classifiedPolicyData as any[])
+      .filter(p => {
+        const nameMatch = selectedIssue.policyName && (
+          p.사업명 === selectedIssue.policyName || 
+          p.사업명?.includes(selectedIssue.policyName) ||
+          selectedIssue.policyName?.includes(p.사업명)
+        );
+        if (nameMatch) return true;
+        
+        const cat = selectedIssue.name;
+        if (cat === '임신·난임·생식건강') return p.Category === '임신' || p.사업대분류명 === '임신';
+        if (cat === '출산·산후 초기지원') return p.Category === '출산' || p.사업대분류명 === '출산';
+        if (cat === '보육·돌봄 인프라') return p.Category === '보육' || p.사업대분류명 === '육아' && p.사업중분류명?.includes('돌봄');
+        if (cat === '양육비·부모급여·금융지원') return p.Category === '다자녀' || p.사업대분류명 === '육아' && (p.사업중분류명?.includes('생활지원') || p.사업중분류명?.includes('수당'));
+        if (cat === '일·가정 양립 지원') return p.Category === '일자리' || p.사업중분류명?.includes('일·가정') || p.사업중분류명?.includes('노동');
+        if (cat === '다자녀 가구 특화 혜택') return p.Category === '다자녀' || p.사업중분류명?.includes('다자녀');
+        if (cat === '주거·교통·도시생활환경') return p.Category === '주거' || p.사업대분류명?.includes('주거') || p.사업중분류명?.includes('교통');
+        if (cat === '취약·다양가족 사각지대') return p.Category === '기타' || p.사업대분류명?.includes('기타') || p.사업중분류명?.includes('취약');
+        return false;
+      })
+      .map(p => ({
+        id: p.사업소분류명 || '정책',
+        policy_name: p.사업명,
+        targetGroup: p.이용대상내용 || '서울시 거주 아동 및 부모',
+        supportDetail: p.사업내용 || '상세 내용 전화 문의',
+        apply_method: p.이용방법내용 || '몽땅정보만능키 온라인 접수',
+        url: p.신청하기사이트주소 && p.신청하기사이트주소 !== '.' && p.신청하기사이트주소 !== ''
+          ? p.신청하기사이트주소 
+          : (p.자세히보기사이트주소 && p.자세히보기사이트주소 !== '.' && p.자세히보기사이트주소 !== '' ? p.자세히보기사이트주소 : 'https://umppa.seoul.go.kr'),
+        category: p.사업대분류명 || p.Category
+      }));
 
     return {
       proposals: matchedProps,
@@ -278,7 +305,18 @@ export const GapMatrixDashboard: React.FC<Props> = ({ proposals, onNavigateToTab
       const civilRequestsCount = Math.max(catCivils.length, propsCount > 0 ? Math.floor(propsCount * 0.7) : 0);
 
       // 몽땅정보 연계 정책 개수
-      const existingPoliciesCount = (rawMongttangData as any[]).filter(p => p.category === cat.name).length;
+      const existingPoliciesCount = (classifiedPolicyData as any[]).filter(p => {
+        const cName = cat.name;
+        if (cName === '임신·난임·생식건강') return p.Category === '임신' || p.사업대분류명 === '임신';
+        if (cName === '출산·산후 초기지원') return p.Category === '출산' || p.사업대분류명 === '출산';
+        if (cName === '보육·돌봄 인프라') return p.Category === '보육' || p.사업대분류명 === '육아' && p.사업중분류명?.includes('돌봄');
+        if (cName === '양육비·부모급여·금융지원') return p.Category === '다자녀' || p.사업대분류명 === '육아' && (p.사업중분류명?.includes('생활지원') || p.사업중분류명?.includes('수당'));
+        if (cName === '일·가정 양립 지원') return p.Category === '일자리' || p.사업중분류명?.includes('일·가정') || p.사업중분류명?.includes('노동');
+        if (cName === '다자녀 가구 특화 혜택') return p.Category === '다자녀' || p.사업중분류명?.includes('다자녀');
+        if (cName === '주거·교통·도시생활환경') return p.Category === '주거' || p.사업대분류명?.includes('주거') || p.사업중분류명?.includes('교통');
+        if (cName === '취약·다양가족 사각지대') return p.Category === '기타' || p.사업대분류명?.includes('기타') || p.사업중분류명?.includes('취약');
+        return false;
+      }).length;
 
       // 뉴스 모의 보도량 (출산 관련)
       const newsCount = propsCount > 0 ? Math.floor(propsCount * 1.5 + idx * 3) : 10;
