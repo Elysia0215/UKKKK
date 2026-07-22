@@ -133,189 +133,226 @@ export const DashboardOverview: React.FC<Props> = ({
         </div>
       )}
 
-      {/* 상단 2개 그룹 레이아웃 (좌: 행정 지표 4개 2x2 / 우: 주요 인사이트 2개 좌우 반반) */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-        {/* [왼쪽 그룹: 행정 기본 현황 (2x2 감싸기)] */}
-        <div className="bg-slate-50/70 p-4 rounded-2xl border border-slate-200/80 shadow-xs flex flex-col justify-between">
-          <div className="flex items-center justify-between mb-2.5 px-1">
-            <span className="text-xs font-bold text-slate-600 tracking-tight flex items-center gap-1.5">
-              <Building2 className="w-3.5 h-3.5 text-slate-500" />
-              행정 & 제안 기본 현황
-            </span>
-            <span className="text-[11px] font-medium text-slate-400">4대 주요 지표</span>
+      {/* 4대 주요 지표 가로형 슬림 스트레이트 바 */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 bg-white p-4 rounded-xl border border-slate-200 shadow-2xs">
+        {/* 1. 총 분석 제안 */}
+        <div className="p-3 bg-slate-50/50 rounded-lg border border-slate-100 flex items-center justify-between">
+          <div className="min-w-0 flex-1">
+            <p className="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider">총 분석 제안</p>
+            <div className="flex items-baseline gap-1.5 mt-1.5">
+              <span className="text-lg font-black text-slate-900 font-mono">
+                {selectedDept ? filteredProposals.length.toLocaleString() : proposals.length.toLocaleString()}
+              </span>
+              <span className="text-[10px] text-slate-500 font-medium">건</span>
+              {selectedDept && (
+                <span className="text-[9px] text-slate-400 font-medium ml-1">
+                  / {proposals.length.toLocaleString()}건 (전체)
+                </span>
+              )}
+            </div>
+            {selectedDept && (
+              <span className="text-[8px] bg-blue-100/70 text-blue-700 font-bold px-1.5 py-0.2 rounded-full mt-1 inline-block">
+                부서 비중 {Math.round((filteredProposals.length / (proposals.length || 1)) * 100)}%
+              </span>
+            )}
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 flex-1">
-            {/* 1. 총 분석 제안 */}
-            <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
-              <div className="flex justify-between items-start mb-2">
-                <div>
-                  <p className="text-xs text-slate-500 font-bold">총 분석 제안</p>
-                  <h3 className="text-xl font-black text-slate-900 mt-1 font-mono">{stats.totalCount.toLocaleString()} <span className="text-xs font-normal text-slate-500">건</span></h3>
-                </div>
-                <div className="w-9 h-9 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center font-bold">
-                  <FileText className="w-4 h-4" />
-                </div>
-              </div>
-              <p className="text-[11px] text-slate-400 font-medium">서울 출산·육아 정책 제안</p>
-            </div>
-
-            {/* 2. 평균 시민 공감도 */}
-            <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
-              <div className="flex justify-between items-start mb-2">
-                <div>
-                  <p className="text-xs text-slate-500 font-bold">평균 시민 공감도</p>
-                  <h3 className="text-xl font-black text-[#0A2351] mt-1 font-mono">{Math.round(proposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (proposals.length || 1)).toLocaleString()} <span className="text-xs font-normal text-slate-500">표</span></h3>
-                </div>
-                <div className="w-9 h-9 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center font-bold">
-                  <ThumbsUp className="w-4 h-4" />
-                </div>
-              </div>
-              <p className="text-[11px] text-slate-400 font-medium">제안당 평균 공감도 산출</p>
-            </div>
-
-            {/* 3. 미답변 행정 건수 */}
-            <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
-              <div className="flex justify-between items-start mb-2">
-                <div>
-                  <p className="text-xs text-slate-500 font-bold">미답변 행정 건수</p>
-                  <h3 className="text-xl font-black text-rose-600 mt-1 font-mono">{stats.unansweredCount.toLocaleString()} <span className="text-xs font-normal text-slate-500">건</span></h3>
-                </div>
-                <div className="w-9 h-9 bg-rose-50 text-rose-600 rounded-lg flex items-center justify-center font-bold">
-                  <Clock className="w-4 h-4" />
-                </div>
-              </div>
-              <p className="text-[11px] text-rose-500 font-bold">전체 제안의 약 {Math.round(stats.unansweredRate)}% 검토 대기중</p>
-            </div>
-
-            {/* 4. 행정 답변율 */}
-            <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-2xs hover:shadow-md transition flex flex-col justify-between">
-              <div className="flex justify-between items-start mb-2">
-                <div>
-                  <p className="text-xs text-slate-500 font-bold">행정 답변율</p>
-                  <h3 className="text-xl font-black text-emerald-600 mt-1 font-mono">{(100 - stats.unansweredRate).toFixed(1)} <span className="text-xs font-normal text-slate-500">%</span></h3>
-                </div>
-                <div className="w-9 h-9 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center font-bold">
-                  <CheckCircle2 className="w-4 h-4" />
-                </div>
-              </div>
-              <p className="text-[11px] text-slate-400 font-medium">공식 수용 및 답변 처리 비율</p>
-            </div>
+          <div className="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center font-bold shrink-0 ml-2">
+            <FileText className="w-4 h-4" />
           </div>
         </div>
 
-        {/* [오른쪽 그룹: 주요 인사이트 묶음 (좌우 반반 50:50 감싸기)] */}
-        <div className="bg-slate-50/70 p-4 rounded-2xl border border-slate-200/80 shadow-xs flex flex-col justify-between">
-          <div className="flex items-center justify-between mb-2.5 px-1">
-            <span className="text-xs font-bold text-purple-700 tracking-tight flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-purple-600" />
-              시민 제안 핵심 인사이트
-            </span>
-            <span className="text-[11px] font-medium text-slate-400">실시간 데이터 산출</span>
+        {/* 2. 평균 시민 공감도 */}
+        <div className="p-3 bg-slate-50/50 rounded-lg border border-slate-100 flex items-center justify-between">
+          <div className="min-w-0 flex-1">
+            <p className="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider">평균 시민 공감도</p>
+            <div className="flex items-baseline gap-1.5 mt-1.5">
+              <span className="text-lg font-black text-slate-900 font-mono">
+                {selectedDept 
+                  ? Math.round(filteredProposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (filteredProposals.length || 1)).toLocaleString()
+                  : Math.round(proposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (proposals.length || 1)).toLocaleString()}
+              </span>
+              <span className="text-[10px] text-slate-500 font-medium">표</span>
+              {selectedDept && (
+                <span className="text-[9px] text-slate-400 font-medium ml-1">
+                  / 전체 {Math.round(proposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (proposals.length || 1)).toLocaleString()}표
+                </span>
+              )}
+            </div>
+            {selectedDept && (
+              <span className="text-[8px] bg-amber-100/70 text-amber-700 font-bold px-1.5 py-0.2 rounded-full mt-1 inline-block">
+                격차 {Math.round(filteredProposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (filteredProposals.length || 1)) - Math.round(proposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (proposals.length || 1)) >= 0 ? `+${Math.round(filteredProposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (filteredProposals.length || 1)) - Math.round(proposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (proposals.length || 1))}` : Math.round(filteredProposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (filteredProposals.length || 1)) - Math.round(proposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (proposals.length || 1))}표
+              </span>
+            )}
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 flex-1">
-            {/* 1번 카드: 최다 제안 분야 TOP 3 */}
-            <div className="bg-white p-3.5 rounded-xl border border-purple-100 shadow-2xs flex flex-col justify-between">
-              <div>
-                <div className="flex justify-between items-center mb-2">
-                  <span className="inline-flex items-center gap-1 text-[11px] font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded-md">
-                    <Tag className="w-3 h-3 text-purple-600" />
-                    최다 제안 분야 TOP 3
-                  </span>
-                  <Award className="w-4 h-4 text-purple-500" />
-                </div>
+          <div className="w-8 h-8 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center font-bold shrink-0 ml-2">
+            <ThumbsUp className="w-4 h-4" />
+          </div>
+        </div>
 
-                <div className="space-y-2">
-                  {topCategories.map((item, idx) => {
-                    const pct = Math.round((item.value / (proposals.length || 1)) * 100);
-                    return (
-                      <div 
-                        key={idx}
-                        onClick={() => onSelectCategory(item.name)}
-                        className="p-1.5 rounded-lg hover:bg-purple-50/70 transition cursor-pointer group"
-                      >
-                        <div className="flex items-center justify-between text-xs mb-1 gap-2">
-                          <div className="flex items-center gap-1.5 min-w-0 flex-1">
-                            <span className={`w-4 h-4 rounded-full text-[10px] font-bold flex items-center justify-center shrink-0 ${
-                              idx === 0 ? 'bg-purple-600 text-white' : idx === 1 ? 'bg-purple-200 text-purple-800' : 'bg-slate-100 text-slate-600'
-                            }`}>
-                              {idx + 1}
-                            </span>
-                            <HoverScrollText 
-                              text={item.name} 
-                              className="font-bold text-slate-800 text-xs group-hover:text-purple-700 transition" 
-                            />
-                          </div>
-                          <span className="text-[11px] font-mono font-bold text-purple-600 shrink-0 ml-1">
-                            {pct}% <span className="text-[10px] font-normal text-slate-400">({item.value}건)</span>
-                          </span>
-                        </div>
-                        {/* 미니 게이지 바 */}
-                        <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
-                          <div 
-                            className={`h-full rounded-full ${idx === 0 ? 'bg-purple-600' : idx === 1 ? 'bg-purple-400' : 'bg-purple-300'}`}
-                            style={{ width: `${Math.min(100, pct)}%` }}
-                          />
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+        {/* 3. 미답변 행정 건수 */}
+        <div className="p-3 bg-slate-50/50 rounded-lg border border-slate-100 flex items-center justify-between">
+          <div className="min-w-0 flex-1">
+            <p className="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider">미답변 행정 건수</p>
+            <div className="flex items-baseline gap-1.5 mt-1.5">
+              <span className="text-lg font-black text-rose-600 font-mono">
+                {selectedDept 
+                  ? filteredProposals.filter(p => p.reply_yn === 'N').length.toLocaleString()
+                  : proposals.filter(p => p.reply_yn === 'N').length.toLocaleString()}
+              </span>
+              <span className="text-[10px] text-slate-500 font-medium">건</span>
+              {selectedDept && (
+                <span className="text-[9px] text-slate-400 font-medium ml-1">
+                  / {proposals.filter(p => p.reply_yn === 'N').length.toLocaleString()}건 (전체)
+                </span>
+              )}
+            </div>
+            {selectedDept ? (
+              <span className="text-[8px] bg-rose-100/70 text-rose-700 font-bold px-1.5 py-0.2 rounded-full mt-1 inline-block">
+                부서 미답변 비중 {Math.round((filteredProposals.filter(p => p.reply_yn === 'N').length / (proposals.filter(p => p.reply_yn === 'N').length || 1)) * 100)}%
+              </span>
+            ) : (
+              <span className="text-[8px] text-rose-500 font-bold mt-1 inline-block">
+                전체 제안의 약 {Math.round((proposals.filter(p => p.reply_yn === 'N').length / (proposals.length || 1)) * 100)}% 검토 대기중
+              </span>
+            )}
+          </div>
+          <div className="w-8 h-8 bg-rose-50 text-rose-600 rounded-lg flex items-center justify-center font-bold shrink-0 ml-2">
+            <Clock className="w-4 h-4" />
+          </div>
+        </div>
 
-              <div 
-                onClick={() => onNavigateToTab(2)}
-                className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-purple-600 hover:text-purple-800 font-bold cursor-pointer hover:bg-purple-50/30 p-1 rounded transition"
-              >
-                <span>분야별 전체 분석</span>
-                <ChevronRight className="w-3.5 h-3.5" />
-              </div>
+        {/* 4. 행정 답변율 */}
+        <div className="p-3 bg-slate-50/50 rounded-lg border border-slate-100 flex items-center justify-between">
+          <div className="min-w-0 flex-1">
+            <p className="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider">행정 답변율</p>
+            <div className="flex items-baseline gap-1.5 mt-1.5">
+              <span className="text-lg font-black text-emerald-600 font-mono">
+                {selectedDept
+                  ? ((filteredProposals.filter(p => p.reply_yn === 'Y').length / (filteredProposals.length || 1)) * 100).toFixed(1)
+                  : ((proposals.filter(p => p.reply_yn === 'Y').length / (proposals.length || 1)) * 100).toFixed(1)}
+              </span>
+              <span className="text-[10px] text-slate-500 font-medium">%</span>
+              {selectedDept && (
+                <span className="text-[9px] text-slate-400 font-medium ml-1">
+                  / 전체 {((proposals.filter(p => p.reply_yn === 'Y').length / (proposals.length || 1)) * 100).toFixed(1)}%
+                </span>
+              )}
+            </div>
+            {selectedDept && (
+              <span className="text-[8px] bg-emerald-100/70 text-emerald-700 font-bold px-1.5 py-0.2 rounded-full mt-1 inline-block">
+                답변 격차 {(((filteredProposals.filter(p => p.reply_yn === 'Y').length / (filteredProposals.length || 1)) * 100) - ((proposals.filter(p => p.reply_yn === 'Y').length / (proposals.length || 1)) * 100)).toFixed(1)}%p
+              </span>
+            )}
+          </div>
+          <div className="w-8 h-8 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center font-bold shrink-0 ml-2">
+            <CheckCircle2 className="w-4 h-4" />
+          </div>
+        </div>
+      </div>
+
+      {/* 시민 제안 핵심 인사이트 (최다 제안 분야 / 최고 공감 제안 좌우 배치) */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        {/* 1번 카드: 최다 제안 분야 TOP 3 */}
+        <div className="bg-white p-4 rounded-xl border border-purple-100 shadow-2xs flex flex-col justify-between hover:shadow-xs transition">
+          <div>
+            <div className="flex justify-between items-center mb-3">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-md">
+                <Tag className="w-3.5 h-3.5 text-purple-600" />
+                최다 제안 분야 TOP 3
+              </span>
+              <Award className="w-4 h-4 text-purple-500" />
             </div>
 
-            {/* 2번 카드: 최고 공감 제안 TOP 3 */}
-            <div className="bg-white p-3.5 rounded-xl border border-amber-100 shadow-2xs flex flex-col justify-between">
-              <div>
-                <div className="flex justify-between items-center mb-2">
-                  <span className="inline-flex items-center gap-1 text-[11px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md">
-                    <Flame className="w-3 h-3 text-amber-600" />
-                    최고 공감 제안 TOP 3
-                  </span>
-                  <ThumbsUp className="w-4 h-4 text-amber-500" />
-                </div>
-
-                <div className="space-y-2">
-                  {topVotedProposals.map((item, idx) => (
-                    <div 
-                      key={item.id || idx}
-                      onClick={() => setSelectedKeywordModal(item.title)}
-                      className="p-1.5 rounded-lg hover:bg-amber-50/70 transition cursor-pointer group flex items-start gap-2"
-                    >
-                      <span className={`w-4 h-4 rounded-full text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5 ${
-                        idx === 0 ? 'bg-amber-500 text-white' : idx === 1 ? 'bg-amber-200 text-amber-900' : 'bg-slate-100 text-slate-600'
-                      }`}>
-                        {idx + 1}
-                      </span>
-                      <div className="flex-1 min-w-0">
+            <div className="space-y-3">
+              {topCategories.map((item, idx) => {
+                const pct = Math.round((item.value / (filteredProposals.length || 1)) * 100);
+                return (
+                  <div 
+                    key={idx}
+                    onClick={() => onSelectCategory(item.name)}
+                    className="p-2 rounded-lg hover:bg-purple-50/70 transition cursor-pointer group"
+                  >
+                    <div className="flex items-center justify-between text-xs mb-1.5 gap-2">
+                      <div className="flex items-center gap-2 min-w-0 flex-1">
+                        <span className={`w-4.5 h-4.5 rounded-full text-[10px] font-bold flex items-center justify-center shrink-0 ${
+                          idx === 0 ? 'bg-purple-600 text-white' : idx === 1 ? 'bg-purple-200 text-purple-800' : 'bg-slate-100 text-slate-600'
+                        }`}>
+                          {idx + 1}
+                        </span>
                         <HoverScrollText 
-                          text={item.title} 
-                          className="text-xs font-bold text-slate-800 group-hover:text-amber-700 transition leading-snug" 
+                          text={item.name} 
+                          className="font-bold text-slate-800 text-xs group-hover:text-purple-700 transition" 
                         />
-                        <p className="text-[10px] font-mono font-bold text-amber-600 mt-0.5">
-                          총 {item.vote_score.toLocaleString()} 표 <span className="text-slate-400 font-normal">공감</span>
-                        </p>
                       </div>
+                      <span className="text-[11px] font-mono font-bold text-purple-600 shrink-0 ml-1">
+                        {pct}% <span className="text-[10px] font-normal text-slate-400">({item.value}건)</span>
+                      </span>
                     </div>
-                  ))}
-                </div>
-              </div>
-
-              <div 
-                onClick={() => onNavigateToTab(3)}
-                className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-amber-600 hover:text-amber-800 font-bold cursor-pointer hover:bg-amber-50/30 p-1 rounded transition"
-              >
-                <span>인기 이슈 제안 목록</span>
-                <ChevronRight className="w-3.5 h-3.5" />
-              </div>
+                    {/* 미니 게이지 바 */}
+                    <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                      <div 
+                        className={`h-full rounded-full ${idx === 0 ? 'bg-purple-600' : idx === 1 ? 'bg-purple-400' : 'bg-purple-300'}`}
+                        style={{ width: `${Math.min(100, pct)}%` }}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
             </div>
+          </div>
+
+          <div 
+            onClick={() => onNavigateToTab(2)}
+            className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-purple-600 hover:text-purple-800 font-bold cursor-pointer hover:bg-purple-50/30 p-1 rounded transition"
+          >
+            <span>분야별 전체 분석</span>
+            <ChevronRight className="w-3.5 h-3.5" />
+          </div>
+        </div>
+
+        {/* 2번 카드: 최고 공감 제안 TOP 3 */}
+        <div className="bg-white p-4 rounded-xl border border-amber-100 shadow-2xs flex flex-col justify-between hover:shadow-xs transition">
+          <div>
+            <div className="flex justify-between items-center mb-3">
+              <span className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-md">
+                <Flame className="w-3.5 h-3.5 text-amber-600" />
+                최고 공감 제안 TOP 3
+              </span>
+              <ThumbsUp className="w-4 h-4 text-amber-500" />
+            </div>
+
+            <div className="space-y-3">
+              {topVotedProposals.map((item, idx) => (
+                <div 
+                  key={item.id || idx}
+                  onClick={() => setSelectedKeywordModal(item.title)}
+                  className="p-2 rounded-lg hover:bg-amber-50/70 transition cursor-pointer group flex items-start gap-2.5"
+                >
+                  <span className={`w-4.5 h-4.5 rounded-full text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5 ${
+                    idx === 0 ? 'bg-amber-500 text-white' : idx === 1 ? 'bg-amber-200 text-amber-900' : 'bg-slate-100 text-slate-600'
+                  }`}>
+                    {idx + 1}
+                  </span>
+                  <div className="flex-1 min-w-0">
+                    <HoverScrollText 
+                      text={item.title} 
+                      className="text-xs font-bold text-slate-800 group-hover:text-amber-700 transition leading-snug" 
+                    />
+                    <p className="text-[10px] font-mono font-bold text-amber-600 mt-0.5">
+                      총 {item.vote_score.toLocaleString()} 표 <span className="text-slate-400 font-normal">공감</span>
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div 
+            onClick={() => onNavigateToTab(3)}
+            className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-amber-600 hover:text-amber-800 font-bold cursor-pointer hover:bg-amber-50/30 p-1 rounded transition"
+          >
+            <span>인기 이슈 제안 목록</span>
+            <ChevronRight className="w-3.5 h-3.5" />
           </div>
         </div>
       </div>

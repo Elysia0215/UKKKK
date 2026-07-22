@@ -37,6 +37,7 @@ import { StatCharts } from './components/StatCharts';
 import { PolicyExplorer } from './components/PolicyExplorer';
 import { GapMatrixDashboard } from './components/GapMatrixDashboard';
 import { ReportExportModal } from './components/ReportExportModal';
+import { OfficeAssistant } from './components/OfficeAssistant';
 import { SEOUL_DISTRICTS_DATA, DistrictData } from './data/seoulData';
 
 import { exportToCsv } from './utils/exportCsv';
@@ -539,6 +540,12 @@ export default function App() {
         onClose={() => setIsExportModalOpen(false)}
         selectedDept={selectedDept}
         proposals={mockProposals}
+      />
+
+      {/* 오피스 길잡이 (새싹이) */}
+      <OfficeAssistant
+        selectedDept={selectedDept}
+        onNavigateToTab={handleNavigateToTab}
       />
     </div>
   );
