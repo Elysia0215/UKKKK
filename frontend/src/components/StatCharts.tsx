@@ -123,7 +123,7 @@ export const StatCharts: React.FC<StatChartsProps> = ({
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                   data={chartData}
-                  margin={{ top: 10, right: 10, left: -20, bottom: 20 }}
+                  margin={{ top: 10, right: 10, left: -20, bottom: 80 }}
                   onClick={(state: any) => {
                     if (state && state.activePayload && state.activePayload[0]) {
                       const clickedDist = state.activePayload[0].payload.original;
@@ -132,13 +132,32 @@ export const StatCharts: React.FC<StatChartsProps> = ({
                   }}
                 >
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
-                  <XAxis dataKey="name" tick={{ fill: '#64748b', fontSize: 10, fontWeight: 500 }} axisLine={{ stroke: '#e2e8f0' }} tickLine={false} />
+                  <XAxis
+                    dataKey="name"
+                    tick={{ fill: '#64748b', fontSize: 9, fontWeight: 500 }}
+                    axisLine={{ stroke: '#e2e8f0' }}
+                    tickLine={false}
+                    interval={0}
+                    minTickGap={0}
+                    height={70}
+                    angle={-20}
+                    textAnchor="end"
+                    tickMargin={8}
+                  />
                   <YAxis tick={{ fill: '#64748b', fontSize: 10 }} axisLine={false} tickLine={false} />
                   <Tooltip content={<CustomTooltip />} cursor={{ fill: '#f8fafc' }} />
-                  <Bar dataKey="Value" radius={[4, 4, 0, 0]}>
+                  <Bar dataKey="Value" radius={[4, 4, 0, 0]} cursor="pointer">
                     {chartData.map((entry, index) => {
                       const isSelected = entry.name === selectedDistrict.name;
-                      return <Cell key={`cell-${index}`} fill={isSelected ? '#1e1b4b' : getMetricColor()} fillOpacity={isSelected ? 1 : 0.75} cursor="pointer" />;
+                      return (
+                        <Cell
+                          key={`cell-${index}`}
+                          fill={isSelected ? '#1e1b4b' : getMetricColor()}
+                          fillOpacity={isSelected ? 1 : 0.75}
+                          cursor="pointer"
+                          onClick={() => onSelectDistrict(entry.original)}
+                        />
+                      );
                     })}
                   </Bar>
                 </BarChart>
@@ -152,9 +171,20 @@ export const StatCharts: React.FC<StatChartsProps> = ({
             <span className="text-[11px] font-semibold text-slate-500 font-mono">★ 합계출산율(선)과 출생아 수(면) 자치구별 비교 분포도</span>
             <div className="flex-1 w-full min-h-[280px]">
               <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -10, bottom: 20 }}>
+                <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -10, bottom: 80 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-                  <XAxis dataKey="name" tick={{ fill: '#64748b', fontSize: 9 }} axisLine={{ stroke: '#e2e8f0' }} tickLine={false} />
+                  <XAxis
+                    dataKey="name"
+                    tick={{ fill: '#64748b', fontSize: 9 }}
+                    axisLine={{ stroke: '#e2e8f0' }}
+                    tickLine={false}
+                    interval={0}
+                    minTickGap={0}
+                    height={70}
+                    angle={-20}
+                    textAnchor="end"
+                    tickMargin={8}
+                  />
                   <YAxis yAxisId="left" tick={{ fill: '#8b5cf6', fontSize: 10 }} axisLine={false} tickLine={false} />
                   <YAxis yAxisId="right" orientation="right" tick={{ fill: '#10b981', fontSize: 10 }} axisLine={false} tickLine={false} />
                   <Tooltip content={<CustomTooltip />} />

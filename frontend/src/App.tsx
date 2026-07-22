@@ -197,11 +197,17 @@ export default function App() {
         <aside className={`${isSidebarOpen ? 'w-64' : 'w-16'} bg-[#0B2545] text-white flex flex-col transition-all duration-300 border-r border-[#134074] shrink-0 sticky top-[72px] h-[calc(100vh-72px)] overflow-y-auto z-30`}>
           
           {/* 사이드바 접기/펼치기 토글 단추 */}
-          <div className="p-3 border-b border-[#134074] flex justify-between items-center bg-[#081F3D]">
-            {isSidebarOpen && <span className="text-[10px] font-bold text-slate-400 tracking-wider">메뉴 탐색기</span>}
+          <div className={`p-3 border-b border-[#134074] flex items-center bg-[#081F3D] ${isSidebarOpen ? 'justify-between gap-3' : 'justify-end'}`}>
+            {isSidebarOpen ? (
+              <span className="text-[11px] sm:text-[12px] font-black tracking-[0.24em] text-slate-200 uppercase">
+                메뉴 탐색기
+              </span>
+            ) : (
+              <span className="w-0" />
+            )}
             <button
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              className="p-1.5 rounded bg-blue-900 hover:bg-blue-800 text-white transition cursor-pointer mx-auto flex items-center justify-center"
+              className="p-1.5 rounded bg-blue-900 hover:bg-blue-800 text-white transition cursor-pointer flex items-center justify-center shrink-0"
               title={isSidebarOpen ? "사이드바 접기" : "사이드바 펼치기"}
             >
               {isSidebarOpen ? <ChevronLeft className="w-3.5 h-3.5" /> : <ChevronRight className="w-3.5 h-3.5" />}
@@ -213,7 +219,7 @@ export default function App() {
             <button
               onClick={() => handleTabClick(0)}
               title="서울시 출산·육아 시민 제안 전체 현황 및 연도별 민원 트렌드 종합 개요"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
                 activeTab === 0
                   ? 'bg-[#134074] text-white border-blue-400'
                   : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
@@ -226,7 +232,7 @@ export default function App() {
             <button
               onClick={() => handleTabClick(1)}
               title="25개 자치구별 시민 제안 수량 및 출생아·보육시설 인프라 비교 지도 분석"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
                 activeTab === 1
                   ? 'bg-[#134074] text-white border-blue-400'
                   : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
@@ -244,7 +250,7 @@ export default function App() {
             <button
               onClick={() => handleTabClick(2)}
               title="TOP 30 최신 핵심 키워드 태그 클라우드 및 생애주기별 민원 수요 강도 분석"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
                 activeTab === 2
                   ? 'bg-[#134074] text-white border-blue-400'
                   : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
@@ -257,7 +263,7 @@ export default function App() {
             <button
               onClick={() => handleTabClick(3)}
               title="150표 이상 시민 공감을 얻었으나 서울시 공식 답변이 완료되지 않은 긴급 정책 공백 제안 총 4건 검토 및 일괄 답변 처리"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
                 activeTab === 3
                   ? 'bg-[#134074] text-white border-blue-400'
                   : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
@@ -277,7 +283,7 @@ export default function App() {
             <button
               onClick={() => handleTabClick(4)}
               title="몽땅정보 만능키에 등록된 서울시 323개 공식 출산·보육 사업 검색 및 대조"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
                 activeTab === 4
                   ? 'bg-[#134074] text-white border-blue-400'
                   : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
@@ -297,7 +303,7 @@ export default function App() {
             <button
               onClick={() => handleTabClick(5)}
               title="BERT Embedding 기반 유사 제안 군집 볼록(Voronoi/3D) 클러스터 시각화 지도"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
                 activeTab === 5
                   ? 'bg-[#134074] text-white border-blue-400'
                   : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
@@ -310,7 +316,7 @@ export default function App() {
             <button
               onClick={() => handleTabClick(6)}
               title="KOSIS/KSTAT 서울시 출생아 수, 합계출산율(TFR), 보육시설 통계 지표 분석"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
                 activeTab === 6
                   ? 'bg-[#134074] text-white border-blue-400'
                   : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
@@ -323,7 +329,7 @@ export default function App() {
             <button
               onClick={() => handleTabClick(7)}
               title="수요-공급-민원 통합 갭(Gap) 분석 6대 판단 매트릭스 진단표"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-xs font-bold transition cursor-pointer border-l-4 text-left ${
+              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
                 activeTab === 7
                   ? 'bg-[#134074] text-white border-blue-400'
                   : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
