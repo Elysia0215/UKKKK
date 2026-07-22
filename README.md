@@ -34,11 +34,13 @@ UKKKK/
 ├── 📄 README.md                        # 📘 [현재 파일] 프로젝트 개요 및 종합 가이드
 ├── 📄 CONTRIBUTING.md                  # 🤝 협업 및 기여 가이드
 │
-├── 📂 docs/                            # 📄 프로젝트 기획서, 분석정의서, 로드맵 문서 모음
-│   ├── 📄 DEVELOPMENT_LOG.md           # 📝 [신설] 기획~구현까지의 상세 프로젝트 개발일지
+├── 📂 docs/                            # 📄 프로젝트 기획서, 분석정의서, 가이드라인 문서 모음
+│   ├── 📄 DEVELOPMENT_LOG.md           # 📝 [신설] 상세 프로젝트 개발일지 (기획부터 완료까지)
 │   ├── 📄 서울시_출산정책_대시보드_기획서.md     # - 대시보드 기획 및 대분류 8개 축 기본 설계서
-│   ├── 📄 보고서_및_발표_진행가이드.md        # - 내일 회의 및 최종 데모데이 발표 피치덱 가이드
-│   └── 📄 역할분담_및_일정가이드.md           # - 4인 팀 역할 분담 및 일자별 가이드
+│   ├── 📄 데이터분석정의서_템플릿.md           # - 데이터 분석 및 파이프라인 정의서
+│   ├── 📄 보고서_및_발표_진행가이드.md        # - 최종 발표 피치덱 및 시나리오 가이드
+│   ├── 📄 역할분담_및_일정가이드.md           # - 4인 팀 R&R 및 일일 일정 매뉴얼
+│   └── 📄 내일회의_문제정의_점검체크리스트.md  # - 문제정의 및 핵심 KPI 체크리스트
 │
 ├── 📂 data/                            # 📊 원천, 가공, DB, 백업 데이터 일체 관리
 │   ├── 📂 raw/                         # 1️⃣ [원천] 통계청 / 서울시 공공데이터 수집 원본
@@ -47,14 +49,20 @@ UKKKK/
 │   └── 📂 final/                        # 4️⃣ [최종] 100% 원문 동기화 proposals.json 및 civil_requests_all.csv/csv
 │
 ├── 📂 scripts/                         # 🐍 파이썬 2단계 수집, 스크래핑, 분류, 매칭 파이프라인
-│   ├── 📂 테스트용/                     # - 통계청 PDF 분석 및 뉴스 분류 태깅 스크립트 모음
-│   ├── 🐍 01_collect_birth_policy_proposals.py  (# 규칙 기반 scoring & 5대 룰 정밀 분류)
-│   ├── 🐍 fetch_naver_news_live.py              (# 네이버 뉴스 API 융합 연동 엔진)
-│   └── 🐍 convert_news_to_json.py               (# CSV 데이터를 frontend JSON으로 변환)
+│   ├── 📂 테스트용/                     # 🧪 통계청 속보치 PDF 및 뉴스 분석/태깅 스크립트 모음
+│   │   ├── 📄 2025년+출생.사망통계(잠정).pdf # - 통계청 배포 2025년 잠정 속보치 공식 PDF 문서
+│   │   └── 🐍 classify_naver_news_taxonomy.py # - 1,145건 뉴스 8대 카테고리/강도/유형 분류 스크립트
+│   │
+│   ├── 🐍 01_collect_birth_policy_proposals.py  # - 규칙 기반 scoring & 5대 룰 정밀 분류
+│   ├── 🐍 06_build_department_ranking.py        # - 조직도 R&R 1·2·3순위 랭킹 & 몽땅정보 매칭
+│   ├── 🐍 crawl_naver_news_by_all_categories.py # - 네이버 API 뉴스 카테고리별 크롤러
+│   ├── 🐍 convert_civil_json_to_csv.py          # - 국민신문고 JSON ➔ 엑셀 분석용 CSV 변환 스크립트
+│   ├── 🐍 convert_news_to_json.py               # - 1,145건 뉴스 CSV ➔ 프론트엔드 JSON 변환 스크립트
+│   └── 🐍 update_district_births_to_2025.py     # - 자치구별 출생아 수 통계 2025 기준 자동 업데이트
 │
 ├── 📂 frontend/                        # 💻 React + Vite 대시보드 웹 애플리케이션
-│   ├── 📁 src/components/               # - GapMatrixDashboard 등 컴포넌트 모음
-│   └── 📁 src/data/news_all.json        # - 1,145건 대분류/강도/유형 매핑 뉴스 DB
+│   ├── 📁 src/components/               # 🧩 GapMatrixDashboard, HoverScrollText, SeoulMap 등 컴포넌트 모음
+│   └── 📁 src/data/                     # 📋 mongttang, civil, news_all 등 라이브 JSON DB 모음
 │
 └── 📂 backend/                         # ⚙️ 백엔드 서비스
 ```
