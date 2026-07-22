@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from 'react';
+import React, { useMemo } from 'react';
 import { DistrictData, SEOUL_DISTRICTS_DATA } from '../data/seoulData';
 import { districtMapLayout } from '../data/seoul_districts_geo';
 import { MapPin } from 'lucide-react';
@@ -47,9 +47,7 @@ const formatMetricValue = (district: DistrictData, metric: Props['colorMetric'])
 };
 
 export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, colorMetric, showBackground, sortBy }) => {
-  const [tooltip, setTooltip] = useState<{ x: number; y: number; text: string } | null>(null);
-
-  const metricBounds = useMemo(() => {
+    const metricBounds = useMemo(() => {
     const values = SEOUL_DISTRICTS_DATA.map((district) => getMetricValue(district, colorMetric));
     const min = Math.min(...values);
     const max = Math.max(...values);
@@ -63,12 +61,6 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
     }
     return list.sort((a, b) => getMetricValue(b, colorMetric) - getMetricValue(a, colorMetric));
   }, [colorMetric, sortBy]);
-
-  useEffect(() => {
-    const onScroll = () => setTooltip(null);
-    window.addEventListener('scroll', onScroll, true);
-    return () => window.removeEventListener('scroll', onScroll, true);
-  }, []);
 
   const getFill = (district: DistrictData) => {
     const value = getMetricValue(district, colorMetric);
@@ -135,16 +127,6 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
                     onSelectDistrict(district);
                   }
                 }}
-                onMouseEnter={(event) => {
-                  if (!district) return;
-                  const rect = (event.currentTarget as SVGGElement).getBoundingClientRect();
-                  setTooltip({
-                    x: rect.right + 12,
-                    y: rect.top,
-                    text: `${district.name} · ${formatMetricValue(district, colorMetric)}`,
-                  });
-                }}
-                onMouseLeave={() => setTooltip(null)}
               >
                 <path
                   d={boundary.d}
@@ -233,13 +215,6 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
         </div>
       </div>
 
-      {tooltip && (
-        <div className="absolute z-50" style={{ left: tooltip.x, top: tooltip.y, transform: 'translateY(-8px)' }}>
-          <div className="rounded-2xl border border-slate-200 bg-slate-950 px-3 py-2 text-xs text-white shadow-xl">
-            {tooltip.text}
-          </div>
-        </div>
-      )}
     </div>
   );
 };
