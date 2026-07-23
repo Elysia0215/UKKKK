@@ -140,6 +140,9 @@ const classifyCluster = (title: string, content: string): string => {
   return bestCluster;
 };
 
+// (방법론 가중치 맵은 현재 사용하지 않음)
+
+
 const renderAcademicProof = (issue: IssueItem) => {
   const cat = issue.category;
   
@@ -185,14 +188,14 @@ const renderAcademicProof = (issue: IssueItem) => {
           <strong className="text-blue-900">[박미경 (2022) 저출산 대응정책 요구도 및 우선순위 분석]</strong><br />
           MZ세대 설문조사를 통해 정책 요구도 우선순위를 도출했습니다.
           <span className="block mt-0.5 text-slate-500 font-normal">
-            ➔ <strong>우선순위 연계:</strong> 대시보드가 시민 제안의 공감수(vote_score)를 기반으로 우선순위 점수를 산출하는 가중치 배분 설계의 타당성을 지지합니다.
+            ➔ <strong>우선순위 연계:</strong> 대시보드가 시민 제안의 공감수(vote_score)를 기반으로 우선순위 점수를 산출하는 가중치 배분 설계의 타당성을 지지합니다. (전문 확인 권장)
           </span>
         </div>
       </div>
     );
   }
 
-  // Fallback
+  // Fallback (임신·난임·생식건강, 취약·다양가족 사각지대, 정보·상담·교육·거버넌스 등)
   return (
     <div className="space-y-2 text-[9.5px]">
       <div>
@@ -535,8 +538,8 @@ export const GapMatrixDashboard: React.FC<Props> = ({
       {/* 설명 배너 */}
       <div className="bg-[#0B1B3D] text-white p-5 rounded-2xl border border-blue-950 shadow-md flex items-center justify-between">
         <div className="space-y-1.5">
-          <span className="bg-blue-600 text-white text-[9px] font-black px-2 py-0.5 rounded uppercase tracking-wider">Decision Diagnostic Board</span>
-          <h2 className="text-lg font-black mt-1">📊 설명 가능한 문제 클러스터 기반 정책 우선순위 진단 매트릭스</h2>
+          <span className="bg-blue-600 text-white text-[9px] font-black px-2 py-0.5 rounded uppercase tracking-wider">우선순위 진단 매트릭스</span>
+          <h2 className="text-lg font-black mt-1">📊 우선순위 진단 매트릭스 (X: 정책 공백 (GAP), Y: 시급성, 크기: 수요)</h2>
           <p className="text-[11px] text-slate-300 leading-relaxed max-w-4xl">
             본 화면은 시민 제안 및 국민신문고 현장 민원 데이터를 정밀 재분류하여 **문제 클러스터** 단위의 5대 진단 축(수요, 공백, 시급성, 실행성, 신뢰도)을 다차원 평가합니다.<br />
             실제 의사결정자는 **인터랙티브 버블 매트릭스**를 통해 직관적으로 우선순위를 선별하고, 우측 상세 패널에서 AI 답변 및 추천 행정 조치를 즉시 검토 및 승인할 수 있습니다.
@@ -1049,23 +1052,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                     🎓 학술 연구 & 실측 데이터 교차 검증 (Academic Proof)
                   </h4>
                   <div className="text-slate-700 leading-relaxed font-medium">
-                    {selectedIssue.category === '보육·돌봄 인프라' || selectedIssue.category === '정보·상담·교육·거버넌스' ? (
-                      <div>
-                        <strong>[홍향희(2026) 영유아 정책 민원 992건 분석 대조]</strong><br />
-                        시민의 핵심 요구는 일회성 수당 지원보다 '시간제 보육 편의', '소아 응급 의료', '돌봄 공백 해소' 등 영유아 인프라 보장입니다.
-                        <span className="block mt-1 text-slate-500 font-normal">
-                          ➔ <strong>실측 데이터 매핑:</strong> 현재 본 <strong>[{selectedIssue.cluster}]</strong> 클러스터에 수집된 시민 수요(제안·민원 등)는 총 <strong>{selectedIssue.item_count}건</strong>으로, 영유아 보육 접근성 키워드와 결합되어 학계가 실증한 사회적 우선 요구 추이를 그대로 증명합니다.
-                        </span>
-                      </div>
-                    ) : (
-                      <div>
-                        <strong>[이정기(2021) 저출산 대중댓글 25,800건 분석 대조]</strong><br />
-                        청년들이 결혼·출산 시 체감하는 최대 장벽은 단순 축하금 지원이 아닌 '주택·주거', '일자리', '비용' 등의 삶의 안정성 결여입니다.
-                        <span className="block mt-1 text-slate-500 font-normal">
-                          ➔ <strong>실측 데이터 매핑:</strong> 본 <strong>[{selectedIssue.cluster}]</strong> 클러스터는 몽땅정보통(323개 사업)과의 대조 결과 <strong>정책 공백 점수 {selectedIssue.policy_gap}점</strong>의 높은 미스매칭이 산출되어, 단순 홍보를 넘어 수혜 대상 및 자격 기준 완화가 시급함을 입증합니다.
-                        </span>
-                      </div>
-                    )}
+                    {renderAcademicProof(selectedIssue)}
                   </div>
                 </div>
 
