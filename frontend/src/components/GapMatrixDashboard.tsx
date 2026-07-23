@@ -163,10 +163,7 @@ const PAPER_METHODS: Record<string, { label: string; weights: { demand: number; 
     label: '박미경 (2022) 우선순위 모델',
     weights: { demand: 0.40, policy_gap: 0.20, urgency: 0.20, feasibility: 0.10, evidence_confidence: 0.10 }
   },
-  'hong2026': {
-    label: '홍향희·이정화 (2026) 보육 인프라 중점',
-    weights: { demand: 0.25, policy_gap: 0.35, urgency: 0.15, feasibility: 0.15, evidence_confidence: 0.10 }
-  },
+
   'kicce2023': {
     label: 'KICCE (2023) 지역형 형평성 가중치',
     weights: { demand: 0.20, policy_gap: 0.40, urgency: 0.20, feasibility: 0.10, evidence_confidence: 0.10 }
@@ -180,13 +177,6 @@ const renderAcademicProof = (issue: IssueItem) => {
     return (
       <div className="space-y-2 text-[9.5px]">
         <div>
-          <strong className="text-blue-900">[홍향희·이정화 (2026) 영유아 정책 민원 992건 CONCOR 분석 대조]</strong><br />
-          국민신문고 접수 저출산 민원 992건을 대상으로 텍스트마이닝 및 CONCOR(수렴통계분석) 클러스터링 테스트를 수행한 결과, 시민의 주류 요구는 단순 현금 수당보다 시간제 보육 편의성, 맞벌이 돌봄 공백 해소 등 연속적인 보육 인프라 보장임을 규명하여 가설을 입증했습니다.
-          <span className="block mt-0.5 text-slate-500 font-normal">
-            ➔ <strong>가설 입증 연계:</strong> 현재 본 <strong>[{issue.cluster}]</strong> 클러스터에 수집된 시민 요구는 총 <strong>{issue.item_count}건</strong>으로, 영유아 보육 접근성 키워드와 결합되어 학계가 실증한 인프라 보장 요구 추이를 그대로 증명합니다.
-          </span>
-        </div>
-        <div className="border-t border-blue-100/60 pt-1.5">
           <strong className="text-blue-900">[성낙일·박선권 (2012) 자녀 양육환경과 출산율 실증분석]</strong><br />
           전국 232개 시군구 패널 데이터의 다중 회귀 분석(Regression Analysis) 결과 지역 내 보육시설 인프라의 양적 공급 규모와 육아 편의 환경 확충이 지역 합계출산율에 통계적으로 유의미한 양(+)의 경제적 효과(p &lt; 0.05)를 미침을 계량적으로 입증했습니다.
           <span className="block mt-0.5 text-slate-500 font-normal">
@@ -259,13 +249,7 @@ const getAcademicEvidenceItems = (issue: IssueItem): AcademicEvidenceItem[] => {
   
   if (cat === '보육·돌봄 인프라') {
     return [
-      {
-        title: "홍향희·이정화 (2026)",
-        url: "https://www.kci.go.kr",
-        detail: "국민신문고 접수 저출산 관련 민원 992건을 수집하여 CONCOR(수렴통계분석) 및 텍스트마이닝 클러스터링 테스트를 가동한 결과, 단순 현금성 지원(수당)보다 시간제 보육 편의성 및 맞벌이 돌봄 공백 해소 등 연속적인 보육 인프라 보장을 통계적으로 유의미하게 요구함을 실증했습니다.",
-        implication: "단순 일회성 보조에 재원을 편성하기보다 24시간 긴급돌봄 및 밀착형 보육 공간을 지역 거점별로 확충할 때 시민의 체감도가 가장 큽니다.",
-        tag: "민원 분석"
-      },
+
       {
         title: "성낙일·박선권 (2012)",
         url: "https://www.kci.go.kr",
@@ -348,7 +332,7 @@ const getPolicyHypothesis = (
   if (cat === '보육·돌봄 인프라') {
     return {
       title: "맞벌이 및 영유아 가구 보육 접근성 확보를 위한 '시간제 긴급돌봄' 인프라 확충 가설",
-      body: `현재 서울시 시민제안(${proposalCount}건) 및 국민신문고 민원(${civilCount}건)을 분석한 결과, 맞벌이 부부들이 평일 야간이나 주말 시간대에 갑작스러운 양육 공백이 발생했을 때 신뢰하고 맡길 돌봄 채널이 턱없이 부족하다는 호소가 다수를 차지합니다. 홍향희(2026) 및 KICCE(2023)의 연구에 따르면, 이러한 현장 밀착형 시간제 시설의 유무가 부모가 느끼는 실질적인 저출생 장벽을 낮추는 주된 요인입니다. 현행 공급망 진단 결과 기존 정책(${policyCount}개)은 평일 주간 위주의 일반 어린이집 지원에 편중되어 있으므로, 틈새 돌봄 공백이 뚜렷하게 관찰됩니다.`,
+      body: `현재 서울시 시민제안(${proposalCount}건) 및 국민신문고 민원(${civilCount}건)을 분석한 결과, 맞벌이 부부들이 평일 야간이나 주말 시간대에 갑작스러운 양육 공백이 발생했을 때 신뢰하고 맡길 돌봄 채널이 턱없이 부족하다는 호소가 다수를 차지합니다. 성낙일(2012) 및 KICCE(2023)의 연구에 따르면, 이러한 현장 밀착형 시간제 시설의 유무가 부모가 느끼는 실질적인 저출생 장벽을 낮추는 주된 요인입니다. 현행 공급망 진단 결과 기존 정책(${policyCount}개)은 평일 주간 위주의 일반 어린이집 지원에 편중되어 있으므로, 틈새 돌봄 공백이 뚜렷하게 관찰됩니다.`,
       action: "야간·주말 안심돌봄 전담 어린이집 자치구별 최소 2개소 이상 지정 및 아이돌보미 긴급 호출 매칭 플랫폼 조속 도입",
       metrics
     };
