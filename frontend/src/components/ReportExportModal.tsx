@@ -91,13 +91,25 @@ export const ReportExportModal: React.FC<Props> = ({
   });
   const [copySuccess, setCopySuccess] = useState(false);
 
-  const scopedProposals = useMemo(() => {
-    return proposals.filter((proposal) => {
+  const { scopedProposals, isDistrictFallback } = useMemo(() => {
+    const directMatches = proposals.filter((proposal) => {
       if (selectedDept && !getDepartmentNames(proposal).includes(selectedDept)) return false;
       if (selectedCategory && proposal.category !== selectedCategory) return false;
       if (selectedDistrict && proposal.district !== selectedDistrict) return false;
       return true;
     });
+
+    if (selectedDistrict && directMatches.length === 0) {
+      const fallbackMatches = proposals.filter((proposal) => {
+        if (selectedDept && !getDepartmentNames(proposal).includes(selectedDept)) return false;
+        if (selectedCategory && proposal.category !== selectedCategory) return false;
+        if (proposal.district !== '미상') return false;
+        return true;
+      });
+      return { scopedProposals: fallbackMatches, isDistrictFallback: true };
+    }
+
+    return { scopedProposals: directMatches, isDistrictFallback: false };
   }, [proposals, selectedCategory, selectedDept, selectedDistrict]);
 
   const reportData = useMemo(() => {
@@ -149,7 +161,7 @@ export const ReportExportModal: React.FC<Props> = ({
     const filterText = [
       selectedDept ? `부서: ${selectedDept}` : '부서: 전체',
       selectedCategory ? `분야: ${selectedCategory}` : null,
-      selectedDistrict ? `지역: ${selectedDistrict}` : null,
+      selectedDistrict ? `지역: ${selectedDistrict}${isDistrictFallback ? ' (미상 데이터 연계)' : ''}` : null,
     ]
       .filter(Boolean)
       .join(' / ');
@@ -248,6 +260,7 @@ export const ReportExportModal: React.FC<Props> = ({
     ];
   }, [
     customActions,
+    isDistrictFallback,
     reportData,
     scopedProposals.length,
     selectedCategory,
@@ -264,7 +277,7 @@ export const ReportExportModal: React.FC<Props> = ({
     const subtitle = [
       selectedDept ? selectedDept : '여성가족실 전체',
       selectedCategory ? selectedCategory : null,
-      selectedDistrict ? selectedDistrict : null,
+      selectedDistrict ? `${selectedDistrict}${isDistrictFallback ? ' (미상 연계)' : ''}` : null,
     ]
       .filter(Boolean)
       .join(' / ');
@@ -287,7 +300,7 @@ export const ReportExportModal: React.FC<Props> = ({
     ];
 
     return [...header, ...body, ...footer].join('\n');
-  }, [reportType, selectedCategory, selectedDept, selectedDistrict, selectedSections]);
+  }, [reportType, selectedCategory, selectedDept, selectedDistrict, selectedSections, isDistrictFallback]);
 
   if (!isOpen) return null;
 
@@ -314,13 +327,16 @@ export const ReportExportModal: React.FC<Props> = ({
       return;
     }
 
+    if (format === 'pdf') {
+      window.print();
+      return;
+    }
+
     const blob = new Blob([generatedReportText], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `[${selectedDept || '여성가족실'}]_정책수요_Gap_보고서_${new Date().toISOString().slice(0, 10)}.${
-      format === 'hwp' ? 'hwp.txt' : 'pdf.txt'
-    }`;
+    link.download = `[${selectedDept || '여성가족실'}]_정책수요_Gap_보고서_${new Date().toISOString().slice(0, 10)}.hwp.txt`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -335,6 +351,29 @@ export const ReportExportModal: React.FC<Props> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 p-4 backdrop-blur-xs animate-fade-in">
+      <style>{`
+        @media print {
+          body * {
+            visibility: hidden !important;
+          }
+          #printable-report-area, #printable-report-area * {
+            visibility: visible !important;
+          }
+          #printable-report-area {
+            position: absolute !important;
+            left: 0 !important;
+            top: 0 !important;
+            width: 100% !important;
+            height: auto !important;
+            overflow: visible !important;
+            padding: 24px !important;
+            margin: 0 !important;
+            box-shadow: none !important;
+            background: white !important;
+            color: black !important;
+          }
+        }
+      `}</style>
       <div className="flex h-[90vh] max-h-[780px] w-full max-w-5xl flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl animate-scale-up">
         <div className="flex items-center justify-between bg-[#0A2351] px-5 py-4 text-white">
           <div className="flex items-center gap-3">
@@ -477,13 +516,13 @@ export const ReportExportModal: React.FC<Props> = ({
                 {scopedProposals.length > 15 ? `\n... 외 ${scopedProposals.length - 15}건이 다운로드 파일에 포함됩니다.` : ''}
               </pre>
             ) : (
-              <div className="mt-4 min-h-0 flex-1 overflow-y-auto rounded-xl bg-white p-6 text-slate-900">
+              <div id="printable-report-area" className="mt-4 min-h-0 flex-1 overflow-y-auto rounded-xl bg-white p-6 text-slate-900">
                 <div className="border-b border-slate-200 pb-4">
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-blue-700">
                     {reportType === 'detailed' ? '실무자 상세 보고용' : '시장단 및 간부 브리핑용'}
                   </p>
                   <h3 className="mt-2 text-xl font-black leading-snug text-slate-950">
-                    [{selectedDept || selectedCategory || selectedDistrict || '여성가족실 전체'}] 출산·양육 정책 수요 및 공급 Gap 종합보고서
+                    [{selectedDept || selectedCategory || (selectedDistrict ? `${selectedDistrict}${isDistrictFallback ? ' (미상 연계)' : ''}` : '여성가족실 전체')}] 출산·양육 정책 수요 및 공급 Gap 종합보고서
                   </h3>
                   <div className="mt-3 flex flex-wrap gap-2 text-xs">
                     <span className="rounded-full bg-slate-100 px-3 py-1 font-bold text-slate-700">

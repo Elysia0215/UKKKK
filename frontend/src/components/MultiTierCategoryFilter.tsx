@@ -97,6 +97,12 @@ export const LIFECYCLE_TO_CAT1: Record<string, string> = {
   '공통 행정·정보': '정보·상담·교육·거버넌스',
 };
 
+const sortKoreanWithTotalFirst = (a: [string, number], b: [string, number]) => {
+  if (a[0] === '전체' || a[0] === '전체년') return -1;
+  if (b[0] === '전체' || b[0] === '전체년') return 1;
+  return a[0].localeCompare(b[0], 'ko');
+};
+
 export const MultiTierCategoryFilter: React.FC<Props> = ({
   proposals,
   filterState,
@@ -348,7 +354,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
           <span>생애주기</span>
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1">
-          {Object.entries(lifecycleCounts).map(([lf, count]) => {
+          {Object.entries(lifecycleCounts).sort(sortKoreanWithTotalFirst).map(([lf, count]) => {
             const isSelected = filterState.lifecycle === lf;
             return (
               <button
@@ -374,7 +380,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
           <span>1차 대분류</span>
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1">
-          {Object.entries(cat1Counts).map(([cat, count]) => {
+          {Object.entries(cat1Counts).sort(sortKoreanWithTotalFirst).map(([cat, count]) => {
             const isSelected = filterState.category1 === cat;
             return (
               <button
@@ -401,7 +407,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
           <span>2차 중분류</span>
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1 max-h-32 overflow-y-auto pr-1">
-          {Object.entries(cat2Counts).map(([sub, count]) => {
+          {Object.entries(cat2Counts).sort(sortKoreanWithTotalFirst).map(([sub, count]) => {
             const isSelected = filterState.category2 === sub;
             return (
               <button
@@ -429,7 +435,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
             <span>3차 세분류</span>
           </div>
           <div className="flex flex-wrap gap-1.5 flex-1">
-            {Object.entries(cat3Counts).map(([micro, count]) => {
+            {Object.entries(cat3Counts).sort(sortKoreanWithTotalFirst).map(([micro, count]) => {
               const isSelected = filterState.category3 === micro;
               return (
                 <button
@@ -456,7 +462,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
           <span>담당부서</span>
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1 max-h-24 overflow-y-auto pr-1">
-          {Object.entries(deptCounts).slice(0, 15).map(([dept, count]) => {
+          {Object.entries(deptCounts).sort(sortKoreanWithTotalFirst).map(([dept, count]) => {
             const isSelected = filterState.department === dept;
             return (
               <button
