@@ -113,7 +113,7 @@ export default function App() {
 
   const handleSelectDistrictFromOverview = (district: string | null) => {
     setSelectedDistrict(district);
-    setActiveTab(1); // 지역별 비교 탭으로 이동
+    setActiveTab(6); // 공공데이터 지표 탭으로 이동
   };
 
   const handleSelectCluster = (clusterId: number, category?: string, subCategory?: string) => {
@@ -229,23 +229,7 @@ export default function App() {
               {isSidebarOpen && <span>정책 수요 개요</span>}
             </button>
 
-            <button
-              onClick={() => handleTabClick(1)}
-              title="25개 자치구별 시민 제안 수량 및 출생아·보육시설 인프라 비교 지도 분석"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
-                activeTab === 1
-                  ? 'bg-[#134074] text-white border-blue-400'
-                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
-              }`}
-            >
-              <MapPin className="w-4 h-4 shrink-0" />
-              {isSidebarOpen && (
-                <span className="flex items-center gap-1">
-                  <span>지역별 비교</span>
-                  {selectedDistrict && <span className="w-1.5 h-1.5 bg-rose-500 rounded-full animate-ping" />}
-                </span>
-              )}
-            </button>
+
 
             <button
               onClick={() => handleTabClick(2)}
@@ -362,13 +346,7 @@ export default function App() {
               />
             )}
 
-            {activeTab === 1 && (
-              <DistrictComparison 
-                proposals={mockProposals}
-                selectedDistrict={selectedDistrict}
-                onSelectDistrict={setSelectedDistrict}
-              />
-            )}
+
 
             {activeTab === 2 && (
               <CategoryDemand 

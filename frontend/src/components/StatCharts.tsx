@@ -13,7 +13,7 @@ import {
   Legend,
 } from 'recharts';
 import { DistrictData, SEOUL_DISTRICTS_DATA, CATEGORY_METRICS, DEPARTMENT_METRICS } from '../data/seoulData';
-import { BarChart3, TrendingUp, PieChart as PieIcon, HelpCircle } from 'lucide-react';
+import { BarChart3, TrendingUp, PieChart as PieIcon, HelpCircle, Table2 } from 'lucide-react';
 
 interface StatChartsProps {
   selectedDistrict: DistrictData;
@@ -26,7 +26,7 @@ export const StatCharts: React.FC<StatChartsProps> = ({
   onSelectDistrict,
   colorMetric,
 }) => {
-  const [activeTab, setActiveTab] = useState<'ranking' | 'distribution' | 'policy'>('ranking');
+  const [activeTab, setActiveTab] = useState<'ranking' | 'distribution' | 'policy' | 'table'>('ranking');
 
   const chartData = SEOUL_DISTRICTS_DATA.map((d) => ({
     name: d.name,
@@ -111,6 +111,14 @@ export const StatCharts: React.FC<StatChartsProps> = ({
             }`}
           >
             <PieIcon className="w-3.5 h-3.5" /> 정책 공급 현황
+          </button>
+          <button
+            onClick={() => setActiveTab('table')}
+            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
+              activeTab === 'table' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <Table2 className="w-3.5 h-3.5" /> 구별 통계 표
           </button>
         </div>
       </div>
@@ -225,6 +233,47 @@ export const StatCharts: React.FC<StatChartsProps> = ({
                   <Bar dataKey="count" fill="#4f46e5" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'table' && (
+          <div className="w-full h-full flex flex-col gap-4 overflow-y-auto max-h-[360px] p-1">
+            <div className="bg-slate-50 border border-slate-200/80 p-3 rounded-xl text-[11px] text-slate-600 leading-relaxed shrink-0">
+              <span className="font-bold text-slate-800 block mb-1">💡 비교 지표 조정 안내 (3개 축 ➔ 2개 축)</span>
+              기존의 3대 비교 분석 축 중 <span className="font-bold text-red-600">‘시민제안 건수’</span>는 자치구 미지정(미상) 건수가 대다수를 차지하여 특정 자치구 통계에 통합할 경우 데이터 왜곡이 발생합니다. 이에 따라 통계의 신뢰성을 극대화하기 위해 분석 축에서 제외하고, 검증된 <span className="font-bold text-indigo-600">공공 행정 데이터 지표(출생아 수, 보육시설 수, 합계출산율)</span> 중심으로 25개 자치구 비교 테이블을 새롭게 재구성하였습니다.
+            </div>
+            <div className="flex-1 w-full border border-slate-200 rounded-xl overflow-hidden shadow-2xs min-h-[180px]">
+              <div className="max-h-[220px] overflow-y-auto">
+                <table className="w-full text-left border-collapse text-[11px]">
+                  <thead>
+                    <tr className="bg-slate-900 text-white font-semibold sticky top-0 text-[10px] uppercase">
+                      <th className="p-2.5">순위</th>
+                      <th className="p-2.5">자치구명</th>
+                      <th className="p-2.5 text-right">합계출산율 (2025)</th>
+                      <th className="p-2.5 text-right">출생아 수 (2025)</th>
+                      <th className="p-2.5 text-right">보육시설 수 (개소)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chartData.map((row, idx) => (
+                      <tr 
+                        key={row.name}
+                        onClick={() => onSelectDistrict(row.original)}
+                        className={`border-b border-slate-100 cursor-pointer hover:bg-indigo-50/50 transition-colors ${
+                          row.name === selectedDistrict.name ? 'bg-indigo-50 font-bold text-indigo-900' : 'text-slate-700'
+                        }`}
+                      >
+                        <td className="p-2.5 text-slate-400 font-mono">{idx + 1}</td>
+                        <td className="p-2.5 font-bold">{row.name}</td>
+                        <td className="p-2.5 text-right font-mono text-emerald-600">{row.fertility.toFixed(3)}</td>
+                        <td className="p-2.5 text-right font-mono text-purple-600">{row.births.toLocaleString()}명</td>
+                        <td className="p-2.5 text-right font-mono text-amber-600">{row.daycare}개소</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         )}
