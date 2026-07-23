@@ -23,7 +23,8 @@ import {
   AlertTriangle,
   ChevronLeft,
   ChevronRight,
-  MessageSquare
+  MessageSquare,
+  Search
 } from 'lucide-react';
 import rawMongttangData from './data/mongttang.json';
 import { PolicyProposal, DashboardStats } from './types';
@@ -38,6 +39,7 @@ import { ClusterVolumeMap } from './components/ClusterVolumeMap';
 import { SeoulMap } from './components/SeoulMap';
 import { StatCharts } from './components/StatCharts';
 import { PolicyExplorer } from './components/PolicyExplorer';
+import { DemographicsAnalyzer } from './components/DemographicsAnalyzer';
 import { GapMatrixDashboard } from './components/GapMatrixDashboard';
 import { ReportExportModal } from './components/ReportExportModal';
 import { OfficeAssistant } from './components/OfficeAssistant';
@@ -54,11 +56,19 @@ export default function App() {
   const [selectedPublicDistrict, setSelectedPublicDistrict] = useState<DistrictData>(
     SEOUL_DISTRICTS_DATA.find((d) => d.name === '송파구') || SEOUL_DISTRICTS_DATA[0]
   );
-  const [publicColorMetric, setPublicColorMetric] = useState<'proposals' | 'births' | 'daycare' | 'fertility' | 'demandScore'>('fertility');
+  const [publicColorMetric, setPublicColorMetric] = useState<'proposals' | 'births' | 'daycare' | 'fertility' | 'demand' | 'demandScore'>('fertility');
   const [publicSortBy, setPublicSortBy] = useState<'name' | 'value'>('value');
   const [selectedDept, setSelectedDept] = useState<string | null>(null);
   const [isExportModalOpen, setIsExportModalOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
+
+  // 공공데이터 지표 서브탭 상태
+  const [publicSubTab, setPublicSubTab] = useState<'district' | 'demographics'>('district');
+
+  // 시민 제안 목록 필터 상태 (Tab 6)
+  const [publicSearchTerm, setPublicSearchTerm] = useState('');
+  const [publicSortOrder, setPublicSortOrder] = useState<'latest' | 'oldest' | 'title'>('latest');
+  const [publicCategoryFilter, setPublicCategoryFilter] = useState<'전체' | '임신' | '출산' | '보육' | '다자녀'>('전체');
 
   // 실시간 통계 연산
   const stats = useMemo<DashboardStats>(() => {
@@ -127,6 +137,56 @@ export default function App() {
   // 엑셀/CSV 데이터 내보내기 및 맞춤 보고서 생성
   const handleExportData = () => {
     setIsExportModalOpen(true);
+  };
+
+  // 시민 제안 목록 필터링 (Tab 6)
+  const filteredPublicProposals = useMemo(() => {
+    return mockProposals
+      .filter(p => p.district === selectedPublicDistrict.name)
+      .filter(p => {
+        const searchMatch = !publicSearchTerm || 
+          p.title.toLowerCase().includes(publicSearchTerm.toLowerCase()) ||
+          p.content.toLowerCase().includes(publicSearchTerm.toLowerCase());
+        const catMatch = publicCategoryFilter === '전체' || p.category === publicCategoryFilter;
+        return searchMatch && catMatch;
+      })
+      .sort((a, b) => {
+        if (publicSortOrder === 'latest') return new Date(b.reg_date).getTime() - new Date(a.reg_date).getTime();
+        if (publicSortOrder === 'oldest') return new Date(a.reg_date).getTime() - new Date(b.reg_date).getTime();
+        return a.title.localeCompare(b.title);
+      });
+  }, [selectedPublicDistrict.name, publicSearchTerm, publicSortOrder, publicCategoryFilter]);
+
+  const handleExportFilteredProposalsCSV = () => {
+    const csvHeader = "제안ID,카테고리,등록일,제안명,제안내용\n";
+    const csvRows = filteredPublicProposals.map(p => 
+      `"${p.id}","${p.category}","${p.reg_date}","${p.title.replace(/"/g, '""')}","${p.content.replace(/"/g, '""')}"`
+    ).join("\n");
+    
+    const blob = new Blob(["\uFEFF" + csvHeader + csvRows], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", `proposals_${selectedPublicDistrict.name}_filtered.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleExportDistrictStatsCSV = () => {
+    const csvHeader = "자치구명,출생아수(2025 잠정),보육시설수(2025),합계출산율(2025 잠정),시민제안수(건),정책수요점수\n";
+    const csvRows = SEOUL_DISTRICTS_DATA.map(d => 
+      `${d.name},${d.births2025},${d.daycare2025},${d.fertilityRate.toFixed(3)},${d.proposals},${d.demandScore}`
+    ).join("\n");
+    
+    const blob = new Blob(["\uFEFF" + csvHeader + csvRows], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", "seoul_25_districts_key_statistics.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -379,163 +439,236 @@ export default function App() {
 
             {activeTab === 6 && (
               <div className="space-y-6">
-                <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                  <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
-                    <p className="text-[11px] text-slate-500 uppercase tracking-[0.18em] font-semibold">서울시 연간 총 출생아 수</p>
-                    <p className="mt-3 text-2xl font-extrabold text-slate-900">{publicStats.totalBirths.toLocaleString()}</p>
-                    <p className="text-xs text-slate-400">명 / 2025 (잠정)</p>
-                  </div>
-
-                  <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
-                    <p className="text-[11px] text-slate-500 uppercase tracking-[0.18em] font-semibold">서울시 총 보육시설 수</p>
-                    <p className="mt-3 text-2xl font-extrabold text-slate-900">{publicStats.totalDaycare.toLocaleString()}</p>
-                    <p className="text-xs text-slate-400">개소 / 2025</p>
-                  </div>
-
-                  <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
-                    <p className="text-[11px] text-slate-500 uppercase tracking-[0.18em] font-semibold">서울시 평균 합계출산율</p>
-                    <p className="mt-3 text-2xl font-extrabold text-slate-900">{publicStats.avgFertility.toFixed(3)}</p>
-                    <p className="text-xs text-slate-400">자치구별 평균</p>
-                  </div>
-
-                  <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs">
-                    <p className="text-[11px] text-slate-500 uppercase tracking-[0.18em] font-semibold">누적 시민 제안 건수</p>
-                    <p className="mt-3 text-2xl font-extrabold text-slate-900">{publicStats.totalProposals}</p>
-                    <p className="text-xs text-slate-400">서울시 정책 제안</p>
-                  </div>
-                </section>
-                <div className="bg-emerald-600 text-white p-5 rounded-xl shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <div>
-                    <span className="bg-white/25 text-white text-[9px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">
-                      🎉 2025년 최신 인구동향 통계청 잠정 속보 반영 완료
-                    </span>
-                    <h3 className="text-base font-extrabold mt-1.5">
-                      서울시 출생아 수 9.4% 대반등 성공 (45,500명) & 합계출산율 0.63명 반등!
-                    </h3>
-                    <p className="text-[11px] text-emerald-100 mt-0.5">
-                      통계청 2026.02.25 발표 잠정치 기준: 서울시 출생아 증가율(9.4%) 전국 광역시도 중 압도적 1위 기록!
-                    </p>
-                  </div>
-                  <div className="flex gap-2.5">
-                    <div className="bg-white/15 px-3 py-1.5 rounded-lg text-center border border-white/10">
-                      <span className="text-[8px] text-emerald-200 uppercase font-semibold block">전국 TFR</span>
-                      <span className="text-base font-black">0.80명</span>
-                    </div>
-                    <div className="bg-white/15 px-3 py-1.5 rounded-lg text-center border border-white/10">
-                      <span className="text-[8px] text-emerald-200 uppercase font-semibold block">서울 TFR</span>
-                      <span className="text-base font-black">0.63명</span>
-                    </div>
-                  </div>
+                {/* Sub-tab Navigation */}
+                <div className="flex bg-slate-100 p-1 rounded-xl w-fit">
+                  <button
+                    onClick={() => setPublicSubTab('district')}
+                    className={`px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+                      publicSubTab === 'district' ? 'bg-[#0A2351] text-white shadow-sm' : 'text-slate-500 hover:text-slate-800'
+                    }`}
+                  >
+                    <MapPin className="w-3.5 h-3.5" /> 자치구별 정책·제안 비교
+                  </button>
+                  <button
+                    onClick={() => setPublicSubTab('demographics')}
+                    className={`px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+                      publicSubTab === 'demographics' ? 'bg-[#0A2351] text-white shadow-sm' : 'text-slate-500 hover:text-slate-800'
+                    }`}
+                  >
+                    <TrendingUp className="w-3.5 h-3.5" /> 인구동향 분석 (2025 잠정)
+                  </button>
                 </div>
 
-                <section className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                  <div className="lg:col-span-5 space-y-5">
-                    <div className="bg-white rounded-xl border border-slate-200 shadow-xs p-5">
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+                {publicSubTab === 'district' ? (
+                  <div className="space-y-6">
+                    {/* Top combined Metric Filter and Selected District Card */}
+                    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                      {/* Left column (lg:col-span-5): Metric Filters */}
+                      <div className="lg:col-span-5 flex flex-col justify-between space-y-4">
                         <div>
-                          <p className="text-xs text-slate-500 uppercase tracking-[0.2em] font-semibold">메트릭 필터</p>
-                          <h2 className="text-lg font-bold text-slate-900 mt-2">지도 기반 정책 수요 시각화</h2>
+                          <span className="text-[10px] uppercase font-bold text-slate-400 tracking-[0.2em]">메트릭 필터</span>
+                          <h3 className="text-lg font-black text-slate-800 mt-1">지도 기반 정책 수요 시각화</h3>
+                          <p className="text-xs text-slate-500 mt-1">
+                            아래 메트릭 버튼을 클릭하여 지도의 채색 기준 지표와 정렬 순서를 전환할 수 있습니다.
+                          </p>
                         </div>
-                        <button
-                          type="button"
-                          onClick={() => setPublicSortBy(publicSortBy === 'name' ? 'value' : 'name')}
-                          className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-bold text-slate-600 hover:bg-slate-100"
-                        >
-                          정렬: {publicSortBy === 'name' ? '자치구명' : '수치 순'}
-                        </button>
-                      </div>
-
-                      <div className="grid grid-cols-2 gap-2">
-                        {[
-                          { id: 'fertility', label: '합계출산율 (2025년)' },
-                          { id: 'births', label: '출생아 수 (2025년)' },
-                          { id: 'daycare', label: '보육시설 수' },
-                          { id: 'demandScore', label: '정책 수요 점수' },
-                        ].map((item) => (
+                        
+                        <div className="grid grid-cols-2 gap-2 mt-2">
                           <button
-                            key={item.id}
-                            type="button"
-                            onClick={() => setPublicColorMetric(item.id as typeof publicColorMetric)}
-                            className={`rounded-lg border px-3 py-2 text-sm font-semibold transition ${
-                              publicColorMetric === item.id
-                                ? 'bg-[#0A2351] text-white border-[#0A2351]'
-                                : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+                            onClick={() => { setPublicColorMetric('fertility'); setPublicSortBy('value'); }}
+                            className={`px-3 py-2.5 rounded-xl text-xs font-bold border transition-all text-left ${
+                              publicColorMetric === 'fertility'
+                                ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
+                                : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
                             }`}
                           >
-                            {item.label}
+                            합계출산율 (2025년)
                           </button>
-                        ))}
+                          <button
+                            onClick={() => { setPublicColorMetric('births'); setPublicSortBy('value'); }}
+                            className={`px-3 py-2.5 rounded-xl text-xs font-bold border transition-all text-left ${
+                              publicColorMetric === 'births'
+                                ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
+                                : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                            }`}
+                          >
+                            출생아 수 (2025년)
+                          </button>
+                          <button
+                            onClick={() => { setPublicColorMetric('daycare'); setPublicSortBy('value'); }}
+                            className={`px-3 py-2.5 rounded-xl text-xs font-bold border transition-all text-left ${
+                              publicColorMetric === 'daycare'
+                                ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
+                                : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                            }`}
+                          >
+                            보육시설 수
+                          </button>
+                          <button
+                            onClick={() => { setPublicColorMetric('demandScore'); setPublicSortBy('value'); }}
+                            className={`px-3 py-2.5 rounded-xl text-xs font-bold border transition-all text-left ${
+                              publicColorMetric === 'demandScore'
+                                ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
+                                : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                            }`}
+                          >
+                            정책 수요 점수
+                          </button>
+                        </div>
+                      </div>
+                      
+                      {/* Divider */}
+                      <div className="hidden lg:block w-px bg-slate-200 self-stretch my-1 lg:col-span-1 justify-self-center" />
+                      
+                      {/* Right column (lg:col-span-6): Selected District Summary Info */}
+                      <div className="lg:col-span-6 bg-[#0A2351] text-white rounded-xl p-5 shadow-inner border border-slate-800 relative overflow-hidden flex flex-col justify-between">
+                        <div>
+                          <span className="text-[10px] uppercase text-blue-200 tracking-[0.3em] font-bold">SELECTED DISTRICT</span>
+                          <h2 className="text-2xl font-black text-white mt-1">{selectedPublicDistrict.name}</h2>
+                          <p className="mt-1 text-[11px] text-slate-300">
+                            선택된 자치구의 공공 행정 지표 및 시민 민원제안 수요 요약입니다.
+                          </p>
+                        </div>
+                        
+                        <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                          <div className="rounded-lg bg-white/10 border border-white/5 p-3">
+                            <p className="text-[9px] uppercase text-slate-300 tracking-wider">출생아 수</p>
+                            <p className="mt-1 text-base font-bold">{selectedPublicDistrict.births2025.toLocaleString()}명</p>
+                            <p className="text-[9px] text-slate-400">2025 잠정</p>
+                          </div>
+                          <div className="rounded-lg bg-white/10 border border-white/5 p-3">
+                            <p className="text-[9px] uppercase text-slate-300 tracking-wider">보육시설</p>
+                            <p className="mt-1 text-base font-bold">{selectedPublicDistrict.daycare2025.toLocaleString()}개소</p>
+                            <p className="text-[9px] text-slate-400">2025년</p>
+                          </div>
+                          <div className="rounded-lg bg-white/10 border border-white/5 p-3">
+                            <p className="text-[9px] uppercase text-slate-300 tracking-wider">합계출산율</p>
+                            <p className="mt-1 text-base font-bold">{selectedPublicDistrict.fertilityRate.toFixed(3)}</p>
+                            <p className="text-[9px] text-slate-400">2025 잠정</p>
+                          </div>
+                          <div className="rounded-lg bg-white/10 border border-white/5 p-3">
+                            <p className="text-[9px] uppercase text-slate-300 tracking-wider">시민제안수</p>
+                            <p className="mt-1 text-base font-bold">{selectedPublicDistrict.proposals.toLocaleString()}건</p>
+                            <p className="text-[9px] text-slate-400">누적 건수</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
 
-                    <SeoulMap
-                      selectedDistrict={selectedPublicDistrict}
-                      onSelectDistrict={setSelectedPublicDistrict}
-                      colorMetric={publicColorMetric}
-                      showBackground={true}
-                      sortBy={publicSortBy}
-                    />
-                  </div>
+                    {/* Grid for Map (left) and StatCharts (right) */}
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                      {/* Left column (lg:col-span-5): Map */}
+                      <div className="lg:col-span-5 bg-white rounded-2xl border border-slate-200 shadow-sm p-5 space-y-4">
+                        <div className="flex justify-between items-center pb-3 border-b border-slate-100">
+                          <div>
+                            <h4 className="text-sm font-bold text-slate-800">행정구역 지도 (25개 자치구)</h4>
+                            <p className="text-[11px] text-slate-400">지도를 클릭하여 상세 통계를 대조하세요.</p>
+                          </div>
+                          <button
+                            onClick={handleExportDistrictStatsCSV}
+                            className="px-2.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold flex items-center gap-1 transition shadow-2xs cursor-pointer"
+                          >
+                            <Download className="w-3.5 h-3.5" /> 통계 CSV
+                          </button>
+                        </div>
+                        
+                        <SeoulMap
+                          selectedDistrict={selectedPublicDistrict}
+                          onSelectDistrict={setSelectedPublicDistrict}
+                          colorMetric={publicColorMetric}
+                          showBackground={true}
+                          sortBy={publicSortBy}
+                        />
+                      </div>
 
-                  <div className="lg:col-span-7 space-y-6">
-                    <div className="bg-[#0A2351] text-white rounded-xl p-6 shadow-md border border-slate-800 relative overflow-hidden">
-                      <span className="text-[11px] uppercase text-blue-200 tracking-[0.3em] font-bold">Selected district</span>
-                      <h2 className="text-3xl font-black text-white mt-4">{selectedPublicDistrict.name}</h2>
-                      <p className="mt-3 text-sm text-slate-200 max-w-2xl">
-                        선택된 자치구의 출생아 수, 보육시설 현황, 합계출산율, 정책 수요지수를 함께 확인합니다.
-                      </p>
-                      <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
-                        <div className="rounded-xl bg-white/10 border border-white/10 p-4">
-                          <p className="text-[10px] uppercase text-slate-300 tracking-[0.25em]">출생아 수</p>
-                          <p className="mt-3 text-2xl font-bold">{selectedPublicDistrict.births2025.toLocaleString()}</p>
-                          <p className="text-xs text-slate-300">명 / 2025 (잠정)</p>
-                        </div>
-                        <div className="rounded-xl bg-white/10 border border-white/10 p-4">
-                          <p className="text-[10px] uppercase text-slate-300 tracking-[0.25em]">보육시설</p>
-                          <p className="mt-3 text-2xl font-bold">{selectedPublicDistrict.daycare2025.toLocaleString()}</p>
-                          <p className="text-xs text-slate-300">개소 / 2025</p>
-                        </div>
-                        <div className="rounded-xl bg-white/10 border border-white/10 p-4">
-                          <p className="text-[10px] uppercase text-slate-300 tracking-[0.25em]">합계출산율</p>
-                          <p className="mt-3 text-2xl font-bold">{selectedPublicDistrict.fertilityRate.toFixed(3)}</p>
-                          <p className="text-xs text-slate-300">명 / 2025</p>
-                        </div>
-                        <div className="rounded-xl bg-white/10 border border-white/10 p-4">
-                          <p className="text-[10px] uppercase text-slate-300 tracking-[0.25em]">시민제안수</p>
-                          <p className="mt-3 text-2xl font-bold">{selectedPublicDistrict.proposals.toLocaleString()}</p>
-                          <p className="text-xs text-slate-300">건 / 누적</p>
-                        </div>
+                      {/* Right column (lg:col-span-7): Charts */}
+                      <div className="lg:col-span-7 bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col h-[480px]">
+                        <StatCharts
+                          selectedDistrict={selectedPublicDistrict}
+                          onSelectDistrict={setSelectedPublicDistrict}
+                          colorMetric={publicColorMetric}
+                          proposals={mockProposals}
+                        />
                       </div>
                     </div>
 
-                    <div className="h-[480px]">
-                      <StatCharts
-                        selectedDistrict={selectedPublicDistrict}
-                        onSelectDistrict={setSelectedPublicDistrict}
-                        colorMetric={publicColorMetric}
-                      />
-                    </div>
-
-                    <div className="h-[680px]">
-                      <PolicyExplorer selectedDistrict={selectedPublicDistrict} />
-                    </div>
-
-                    <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col p-5 space-y-4">
-                      <div>
-                        <h3 className="text-sm font-semibold text-slate-800 flex items-center gap-2">
-                          <MessageSquare className="w-4 h-4 text-indigo-600" />
-                          {selectedPublicDistrict.name} 시민 제안 목록
-                        </h3>
-                        <p className="text-xs text-slate-500 mt-1">
-                          선택된 자치구명으로 수집 및 라우팅된 시민 정책 제안 리스트입니다.
-                        </p>
+                    {/* Policy Explorer and Citizen Proposals List in single column structure */}
+                    <div className="grid grid-cols-1 gap-6">
+                      <div className="h-[680px]">
+                        <PolicyExplorer selectedDistrict={selectedPublicDistrict} />
                       </div>
-                      <div className="max-h-[350px] overflow-y-auto space-y-3 pr-1 scrollbar-thin">
-                        {mockProposals.filter(p => p.district === selectedPublicDistrict.name).length > 0 ? (
-                          mockProposals
-                            .filter(p => p.district === selectedPublicDistrict.name)
-                            .map(prop => (
-                              <div key={prop.id} className="p-3.5 rounded-xl border border-slate-100 bg-slate-50/50 hover:border-indigo-100 hover:shadow-xs transition">
+
+                      {/* Filterable Citizen Proposals Panel */}
+                      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col p-6 space-y-4">
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-100">
+                          <div>
+                            <h3 className="text-sm font-bold text-slate-800 flex items-center gap-2">
+                              <MessageSquare className="w-4 h-4 text-indigo-600" />
+                              {selectedPublicDistrict.name} 시민 제안 목록
+                            </h3>
+                            <p className="text-xs text-slate-500 mt-1">
+                              선택된 자치구로 수집 및 카테고리 분류된 시민 정책 제안 리스트입니다.
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Search & Filter bar */}
+                        <div className="flex flex-wrap items-center justify-between gap-3 p-3.5 bg-slate-50 rounded-xl border border-slate-200/80">
+                          <div className="relative flex-1 min-w-[200px]">
+                            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+                            <input
+                              type="text"
+                              placeholder="제안 제목, 본문 키워드로 빠른 검색..."
+                              value={publicSearchTerm}
+                              onChange={(e) => setPublicSearchTerm(e.target.value)}
+                              className="w-full pl-9 pr-4 py-1.5 text-xs bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-indigo-500 text-slate-700 font-bold"
+                            />
+                          </div>
+
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <select
+                              value={publicCategoryFilter}
+                              onChange={(e) => setPublicCategoryFilter(e.target.value as any)}
+                              className="bg-white border border-slate-200 text-slate-600 rounded-lg px-2.5 py-1.5 text-xs focus:outline-none font-bold"
+                            >
+                              <option value="전체">카테고리 전체</option>
+                              <option value="임신">임신</option>
+                              <option value="출산">출산</option>
+                              <option value="보육">보육</option>
+                              <option value="다자녀">다자녀</option>
+                            </select>
+
+                            <select
+                              value={publicSortOrder}
+                              onChange={(e) => setPublicSortOrder(e.target.value as any)}
+                              className="bg-white border border-slate-200 text-slate-600 rounded-lg px-2.5 py-1.5 text-xs focus:outline-none font-bold"
+                            >
+                              <option value="latest">최신 등록순</option>
+                              <option value="oldest">오래된 등록순</option>
+                              <option value="title">가나다 제목순</option>
+                            </select>
+
+                            <button
+                              onClick={() => { setPublicSearchTerm(''); setPublicSortOrder('latest'); setPublicCategoryFilter('전체'); }}
+                              className="px-2.5 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 text-slate-600 text-xs font-bold transition cursor-pointer"
+                            >
+                              초기화
+                            </button>
+
+                            <button
+                              onClick={handleExportFilteredProposalsCSV}
+                              className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center gap-1.5 transition shadow-2xs cursor-pointer"
+                            >
+                              <Download className="w-3.5 h-3.5" /> 맞춤 CSV
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Proposal Cards List */}
+                        <div className="max-h-[350px] overflow-y-auto space-y-3 pr-1 scrollbar-thin">
+                          {filteredPublicProposals.length > 0 ? (
+                            filteredPublicProposals.map(prop => (
+                              <div key={prop.id} className="p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:border-indigo-100 hover:shadow-xs transition">
                                 <div className="flex items-center justify-between gap-2 mb-1.5">
                                   <span className="text-[10px] font-bold bg-blue-50 text-blue-600 px-2 py-0.5 rounded border border-blue-100">
                                     {prop.category}
@@ -546,15 +679,18 @@ export default function App() {
                                 <p className="text-[11px] text-slate-600 leading-relaxed mt-1 line-clamp-3">{prop.content}</p>
                               </div>
                             ))
-                        ) : (
-                          <div className="text-center py-8 text-slate-400 text-xs">
-                            해당 자치구에 지정되어 등록된 시민 제안이 없습니다.
-                          </div>
-                        )}
+                          ) : (
+                            <div className="text-center py-10 text-slate-400 text-xs bg-slate-50/40 rounded-xl border border-dashed border-slate-200">
+                              조건에 부합하는 시민 제안이 없습니다.
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </section>
+                ) : (
+                  <DemographicsAnalyzer />
+                )}
               </div>
             )}
 

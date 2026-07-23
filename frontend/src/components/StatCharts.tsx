@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import {
   BarChart,
   Bar,
@@ -11,42 +11,87 @@ import {
   AreaChart,
   Area,
   Legend,
+  ComposedChart,
+  Line,
 } from 'recharts';
 import { DistrictData, SEOUL_DISTRICTS_DATA, CATEGORY_METRICS, DEPARTMENT_METRICS } from '../data/seoulData';
-import { BarChart3, TrendingUp, PieChart as PieIcon, HelpCircle, Table2 } from 'lucide-react';
+import { BarChart3, TrendingUp, PieChart as PieIcon, HelpCircle, Table2, Activity, Download } from 'lucide-react';
 
 interface StatChartsProps {
   selectedDistrict: DistrictData;
   onSelectDistrict: (district: DistrictData) => void;
-  colorMetric: 'proposals' | 'births' | 'daycare' | 'fertility' | 'demandScore';
+  colorMetric: 'proposals' | 'births' | 'daycare' | 'fertility' | 'demand' | 'demandScore';
+  proposals?: any[];
 }
 
 export const StatCharts: React.FC<StatChartsProps> = ({
   selectedDistrict,
   onSelectDistrict,
   colorMetric,
+  proposals,
 }) => {
-  const [activeTab, setActiveTab] = useState<'ranking' | 'distribution' | 'policy' | 'table'>('ranking');
+  const [activeTab, setActiveTab] = useState<'ranking' | 'distribution' | 'policy' | 'table' | 'scaling'>('ranking');
+  const [includeUnassigned, setIncludeUnassigned] = useState(false);
 
-  const chartData = SEOUL_DISTRICTS_DATA.map((d) => ({
-    name: d.name,
-    Value:
-      colorMetric === 'proposals' ? d.proposals :
-      colorMetric === 'births' ? d.births2025 :
-      colorMetric === 'daycare' ? d.daycare2025 :
-      colorMetric === 'demandScore' ? d.demandScore :
-      d.fertilityRate,
-    births: d.births2025,
-    fertility: d.fertilityRate,
-    daycare: d.daycare2025,
-    original: d,
-  })).sort((a, b) => b.Value - a.Value);
+  const chartData = useMemo(() => {
+    return SEOUL_DISTRICTS_DATA.map((d) => ({
+      name: d.name,
+      Value:
+        colorMetric === 'proposals' ? d.proposals :
+        colorMetric === 'births' ? d.births2025 :
+        colorMetric === 'daycare' ? d.daycare2025 :
+        (colorMetric === 'demand' || colorMetric === 'demandScore') ? d.demandScore :
+        d.fertilityRate,
+      births: d.births2025,
+      fertility: d.fertilityRate,
+      daycare: d.daycare2025,
+      original: d,
+    })).sort((a, b) => b.Value - a.Value);
+  }, [colorMetric]);
+
+  const districtChartData = useMemo(() => {
+    const list = [...SEOUL_DISTRICTS_DATA];
+    const chartList = list.map((d) => {
+      const propCount = proposals ? proposals.filter((p: any) => p.district === d.name).length : d.proposals;
+      return {
+        district: d.name,
+        "시민 제안수": propCount,
+        "출생아수(명)": d.births2025,
+        "보육시설수(x10개)": d.daycare2025 * 10,
+        original: d,
+      };
+    });
+
+    if (includeUnassigned && proposals) {
+      const unassignedCount = proposals.filter((p: any) => p.district === "미상" || !p.district).length;
+      chartList.push({
+        district: "서울시 전체 (미상)",
+        "시민 제안수": unassignedCount,
+        "출생아수(명)": 39400,
+        "보육시설수(x10개)": 4310 * 10,
+        original: {
+          name: "미상",
+          engName: "Unassigned",
+          path: "",
+          labelX: 0,
+          labelY: 0,
+          proposals: unassignedCount,
+          births2025: 39400,
+          daycare2025: 4310,
+          demandScore: 0,
+          fertilityRate: 0.55,
+          policyCount: 0
+        }
+      });
+    }
+    return chartList;
+  }, [proposals, includeUnassigned]);
 
   const getMetricLabel = () => {
     if (colorMetric === 'proposals') return '시민제안 건수 (건)';
     if (colorMetric === 'births') return '출생아 수 (명)';
     if (colorMetric === 'daycare') return '보육시설 수 (개소)';
-    if (colorMetric === 'demandScore') return '정책 수요 점수';
+    if (colorMetric === 'demand' || colorMetric === 'demandScore') return '정책 수요 점수';
     return '합계출산율';
   };
 
@@ -54,7 +99,7 @@ export const StatCharts: React.FC<StatChartsProps> = ({
     if (colorMetric === 'proposals') return '#ef4444';
     if (colorMetric === 'births') return '#8b5cf6';
     if (colorMetric === 'daycare') return '#f59e0b';
-    if (colorMetric === 'demandScore') return '#f43f5e';
+    if (colorMetric === 'demand' || colorMetric === 'demandScore') return '#f43f5e';
     return '#10b981';
   };
 
@@ -63,17 +108,63 @@ export const StatCharts: React.FC<StatChartsProps> = ({
       const data = payload[0].payload;
       return (
         <div className="bg-slate-900 text-white p-3 rounded-xl border border-slate-800 shadow-xl text-xs font-mono">
-          <p className="font-bold text-sm text-indigo-300 mb-1">{data.name}</p>
+          <p className="font-bold text-sm text-indigo-300 mb-1">{data.name || data.district}</p>
           <div className="flex flex-col gap-1 text-[11px] text-slate-300">
-            <p>시민제안: <span className="text-red-400 font-bold">{data.original.proposals}건</span></p>
-            <p>출생아 수: <span className="text-purple-300 font-bold">{data.births.toLocaleString()}명</span></p>
-            <p>보육시설: <span className="text-amber-300 font-bold">{data.daycare}개소</span></p>
-            <p>합계출산율: <span className="text-emerald-400 font-bold">{data.fertility.toFixed(3)}</span></p>
+            <p>시민제안: <span className="text-red-400 font-bold">{(data.original ? data.original.proposals : data["시민 제안수"])}건</span></p>
+            <p>출생아 수: <span className="text-purple-300 font-bold">{(data.births || data["출생아수(명)"]).toLocaleString()}명</span></p>
+            <p>보육시설: <span className="text-amber-300 font-bold">{(data.daycare || Math.round(data["보육시설수(x10개)"] / 10))}개소</span></p>
+            {data.fertility && <p>합계출산율: <span className="text-emerald-400 font-bold">{data.fertility.toFixed(3)}</span></p>}
           </div>
         </div>
       );
     }
     return null;
+  };
+
+  const handleExportCSV = () => {
+    let csvContent = "";
+    let fileName = "";
+    
+    if (activeTab === "ranking") {
+      csvContent = "순위,자치구명,지표수치\n" + 
+        chartData
+          .map((d, i) => `${i + 1},${d.name},${d.Value}`)
+          .join("\n");
+      fileName = `seoul_districts_ranking_${colorMetric}.csv`;
+    } else if (activeTab === "distribution") {
+      csvContent = "자치구명,출생아수(명),합계출산율\n" +
+        chartData
+          .map(d => `${d.name},${d.births},${d.fertility}`)
+          .join("\n");
+      fileName = "seoul_districts_distribution.csv";
+    } else if (activeTab === "policy") {
+      csvContent = "부서명,정책수(건)\n" +
+        DEPARTMENT_METRICS
+          .map(d => `${d.name},${d.count}`)
+          .join("\n");
+      fileName = "seoul_policy_department_metrics.csv";
+    } else if (activeTab === "table") {
+      csvContent = "순위,자치구명,합계출산율(2025),출생아수(2025),보육시설수(개소)\n" +
+        chartData
+          .map((d, i) => `${i + 1},${d.name},${d.fertility.toFixed(3)},${d.births},${d.daycare}`)
+          .join("\n");
+      fileName = "seoul_districts_demographics_table.csv";
+    } else if (activeTab === "scaling") {
+      csvContent = "자치구명,시민제안수(건),출생아수(명),보육시설수(개소)\n" +
+        districtChartData
+          .map(d => `${d.district},${d["시민 제안수"]},${d["출생아수(명)"]},${Math.round(d["보육시설수(x10개)"] / 10)}`)
+          .join("\n");
+      fileName = "seoul_proposals_vs_infrastructure_scaling.csv";
+    }
+    
+    const blob = new Blob(["\uFEFF" + csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", fileName);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -87,38 +178,56 @@ export const StatCharts: React.FC<StatChartsProps> = ({
           <p className="text-xs text-slate-500 mt-1">서울시 자치구별 통계를 다양한 차트로 분석해 보세요.</p>
         </div>
 
-        <div className="flex bg-slate-100 p-1 rounded-xl">
+        <div className="flex items-center gap-2">
+          <div className="flex bg-slate-100 p-1 rounded-xl">
+            <button
+              onClick={() => setActiveTab('ranking')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
+                activeTab === 'ranking' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
+              }`}
+            >
+              <BarChart3 className="w-3.5 h-3.5" /> 구별 랭킹
+            </button>
+            <button
+              onClick={() => setActiveTab('distribution')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
+                activeTab === 'distribution' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
+              }`}
+            >
+              <TrendingUp className="w-3.5 h-3.5" /> 출산율 분포
+            </button>
+            <button
+              onClick={() => setActiveTab('policy')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
+                activeTab === 'policy' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
+              }`}
+            >
+              <PieIcon className="w-3.5 h-3.5" /> 정책 공급 현황
+            </button>
+            <button
+              onClick={() => setActiveTab('scaling')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
+                activeTab === 'scaling' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
+              }`}
+            >
+              <Activity className="w-3.5 h-3.5" /> 제안-인프라 비교
+            </button>
+            <button
+              onClick={() => setActiveTab('table')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
+                activeTab === 'table' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
+              }`}
+            >
+              <Table2 className="w-3.5 h-3.5" /> 구별 통계 표
+            </button>
+          </div>
+
           <button
-            onClick={() => setActiveTab('ranking')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
-              activeTab === 'ranking' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
-            }`}
+            onClick={handleExportCSV}
+            className="px-2.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center gap-1 transition shadow-2xs cursor-pointer"
+            title="현재 활성화된 탭의 수치 통계 자료를 CSV 파일로 저장합니다."
           >
-            <BarChart3 className="w-3.5 h-3.5" /> 구별 랭킹
-          </button>
-          <button
-            onClick={() => setActiveTab('distribution')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
-              activeTab === 'distribution' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
-            }`}
-          >
-            <TrendingUp className="w-3.5 h-3.5" /> 출산율 분포
-          </button>
-          <button
-            onClick={() => setActiveTab('policy')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
-              activeTab === 'policy' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
-            }`}
-          >
-            <PieIcon className="w-3.5 h-3.5" /> 정책 공급 현황
-          </button>
-          <button
-            onClick={() => setActiveTab('table')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
-              activeTab === 'table' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
-            }`}
-          >
-            <Table2 className="w-3.5 h-3.5" /> 구별 통계 표
+            <Download className="w-3.5 h-3.5" /> 맞춤 CSV
           </button>
         </div>
       </div>
@@ -232,6 +341,63 @@ export const StatCharts: React.FC<StatChartsProps> = ({
                   <Tooltip formatter={(value: any) => [`${value}개 사업`, '담당 수']} />
                   <Bar dataKey="count" fill="#4f46e5" radius={[4, 4, 0, 0]} />
                 </BarChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'scaling' && (
+          <div className="w-full h-full flex flex-col gap-2">
+            <div className="flex justify-between items-center">
+              <span className="text-[11px] font-semibold text-slate-500 font-mono">★ 자치구별 시민 제안 vs 공공 출생·보육 인프라 지표 비교 분석</span>
+              {proposals && (
+                <button
+                  onClick={() => setIncludeUnassigned(prev => !prev)}
+                  className={`text-[10px] px-2.5 py-1 rounded-md font-bold border transition cursor-pointer ${
+                    includeUnassigned
+                      ? 'bg-indigo-600 text-white border-indigo-700'
+                      : 'bg-slate-50 hover:bg-slate-100 text-slate-600 border-slate-200'
+                  }`}
+                >
+                  {includeUnassigned ? '미상(서울시전체) 포함 중' : '✓ 25개 자치구 전용 보기'}
+                </button>
+              )}
+            </div>
+            <div className="flex-1 w-full min-h-[280px]">
+              <ResponsiveContainer width="100%" height="100%">
+                <ComposedChart
+                  data={districtChartData}
+                  margin={{ top: 10, right: 10, left: -20, bottom: 80 }}
+                  onClick={(state: any) => {
+                    if (state && state.activePayload && state.activePayload[0]) {
+                      const original = state.activePayload[0].payload.original;
+                      if (original && original.name !== "미상") {
+                        onSelectDistrict(original);
+                      }
+                    }
+                  }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+                  <XAxis
+                    dataKey="district"
+                    tick={{ fill: '#64748b', fontSize: 9 }}
+                    axisLine={{ stroke: '#e2e8f0' }}
+                    tickLine={false}
+                    interval={0}
+                    minTickGap={0}
+                    height={70}
+                    angle={-20}
+                    textAnchor="end"
+                    tickMargin={8}
+                  />
+                  <YAxis yAxisId="left" orientation="left" stroke="#2563eb" tick={{ fontSize: 10 }} />
+                  <YAxis yAxisId="right" orientation="right" stroke="#e11d48" tick={{ fontSize: 10 }} />
+                  <Tooltip content={<CustomTooltip />} />
+                  <Legend wrapperStyle={{ fontSize: 11, fontFamily: 'Inter' }} />
+                  <Bar yAxisId="left" dataKey="시민 제안수" fill="#3b82f6" radius={[4, 4, 0, 0]} barSize={14} />
+                  <Line yAxisId="right" type="monotone" dataKey="출생아수(명)" stroke="#e11d48" strokeWidth={2} dot={{ r: 2 }} />
+                  <Line yAxisId="right" type="monotone" dataKey="보육시설수(x10개)" name="보육시설수(x10개소 확대)" stroke="#10b981" strokeWidth={2} strokeDasharray="4 4" dot={{ r: 2 }} />
+                </ComposedChart>
               </ResponsiveContainer>
             </div>
           </div>
