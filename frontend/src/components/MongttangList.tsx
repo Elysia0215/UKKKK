@@ -144,7 +144,7 @@ export const MongttangList: React.FC = () => {
       }
     });
 
-    const sortedCats = Object.keys(countMap).sort((a, b) => countMap[b] - countMap[a]);
+    const sortedCats = Object.keys(countMap).sort((a, b) => a.localeCompare(b, 'ko'));
     return ['전체', ...sortedCats];
   }, [policies]);
 

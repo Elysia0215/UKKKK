@@ -812,7 +812,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               className="w-full text-[11px] p-2 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white text-slate-700 outline-hidden font-medium"
             >
               <option value="전체">전체 대분류</option>
-              {Object.keys(DEPT_MAP).map(cat => (
+              {Object.keys(DEPT_MAP).sort((a, b) => a.localeCompare(b, 'ko')).map(cat => (
                 <option key={cat} value={cat}>{cat}</option>
               ))}
             </select>
@@ -847,7 +847,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               className="w-full text-[11px] p-2 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white text-slate-700 outline-hidden font-medium"
             >
               <option value="전체">전체 부서</option>
-              {Array.from(new Set(Object.values(DEPT_MAP).map(v => v.dept))).map(dept => (
+              {Array.from(new Set(Object.values(DEPT_MAP).map(v => v.dept))).sort((a, b) => a.localeCompare(b, 'ko')).map(dept => (
                 <option key={dept} value={dept}>{dept}</option>
               ))}
             </select>
