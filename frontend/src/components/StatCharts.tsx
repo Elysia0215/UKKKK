@@ -252,9 +252,9 @@ export const StatCharts: React.FC<StatChartsProps> = ({
                     interval={0}
                     minTickGap={0}
                     height={70}
-                    angle={-45}
+                    angle={-20}
                     textAnchor="end"
-                    tickMargin={12}
+                    tickMargin={8}
                   />
                   <YAxis tick={{ fill: '#64748b', fontSize: 10 }} axisLine={false} tickLine={false} />
                   <Tooltip content={<CustomTooltip />} cursor={{ fill: '#f8fafc' }} />
@@ -293,9 +293,9 @@ export const StatCharts: React.FC<StatChartsProps> = ({
                     interval={0}
                     minTickGap={0}
                     height={70}
-                    angle={-45}
+                    angle={-20}
                     textAnchor="end"
-                    tickMargin={12}
+                    tickMargin={8}
                   />
                   <YAxis yAxisId="left" tick={{ fill: '#8b5cf6', fontSize: 10 }} axisLine={false} tickLine={false} />
                   <YAxis yAxisId="right" orientation="right" tick={{ fill: '#10b981', fontSize: 10 }} axisLine={false} tickLine={false} />
@@ -381,9 +381,9 @@ export const StatCharts: React.FC<StatChartsProps> = ({
                     interval={0}
                     minTickGap={0}
                     height={70}
-                    angle={-45}
+                    angle={-20}
                     textAnchor="end"
-                    tickMargin={12}
+                    tickMargin={8}
                   />
                   <YAxis yAxisId="left" orientation="left" stroke="#e11d48" tick={{ fontSize: 10 }} label={{ value: '출생아수(명)', angle: -90, position: 'insideLeft', fontSize: 10 }} />
                   <YAxis yAxisId="right" orientation="right" stroke="#10b981" tick={{ fontSize: 10 }} label={{ value: '보육시설수(개소)', angle: 90, position: 'insideRight', fontSize: 10 }} />

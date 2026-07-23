@@ -719,7 +719,7 @@ export default function App() {
         isOpen={isExportModalOpen}
         onClose={() => setIsExportModalOpen(false)}
         selectedDept={selectedDept}
-        selectedDistrict={selectedDistrict}
+        selectedDistrict={selectedDistrict || selectedPublicDistrict?.name}
         selectedCategory={selectedCategory}
         proposals={mockProposals}
       />
