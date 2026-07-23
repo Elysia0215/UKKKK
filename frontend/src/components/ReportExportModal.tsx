@@ -12,6 +12,7 @@ import {
   FileText,
   Layers,
   X,
+  HelpCircle,
 } from 'lucide-react';
 import { PolicyProposal } from '../types';
 
@@ -90,6 +91,7 @@ export const ReportExportModal: React.FC<Props> = ({
     logs: true,
   });
   const [copySuccess, setCopySuccess] = useState(false);
+  const [selectedAcademicEvidenceForModal, setSelectedAcademicEvidenceForModal] = useState(null);
 
   const { scopedProposals, isDistrictFallback } = useMemo(() => {
     const directMatches = proposals.filter((proposal) => {
@@ -589,12 +591,43 @@ export const ReportExportModal: React.FC<Props> = ({
                           </div>
                         </div>
                         <ul className="space-y-2 text-sm leading-relaxed text-slate-700">
-                          {section.body.map((line, lineIndex) => (
-                            <li key={`${section.key}-${lineIndex}`} className="flex gap-2">
-                              <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
-                              <span>{line}</span>
-                            </li>
-                          ))}
+                          {section.body.map((line, lineIndex) => {
+                            const isAcademic = section.key === 'academic';
+                            let paperTitle = "";
+                            if (isAcademic) {
+                              if (line.includes("오신휘")) paperTitle = "오신휘·김혜진 (2020)";
+                              else if (line.includes("성낙일")) paperTitle = "성낙일·박선권 (2012)";
+                              else if (line.includes("배기련")) paperTitle = "배기련 외 (2021)";
+                              else if (line.includes("육아정책")) paperTitle = "KICCE (2023)";
+                              else if (line.includes("박미경")) paperTitle = "박미경 (2022)";
+                              else if (line.includes("예산정책처")) paperTitle = "NABO 예산정책처";
+                              else if (line.includes("홍향희")) paperTitle = "홍향희·이정화 (2026)";
+                            }
+
+                            return (
+                              <li key={`${section.key}-${lineIndex}`} className="flex gap-2 items-start">
+                                <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
+                                <div className="flex-1">
+                                  <span>{line}</span>
+                                  {isAcademic && paperTitle && (
+                                    <button
+                                      type="button"
+                                      onClick={() => {
+                                        const matchedEvidence = getAcademicEvidenceItemsForModal(paperTitle);
+                                        if (matchedEvidence) {
+                                          setSelectedAcademicEvidenceForModal(matchedEvidence);
+                                        }
+                                      }}
+                                      className="text-slate-400 hover:text-blue-600 cursor-pointer inline-flex items-center justify-center p-0.5 rounded-full hover:bg-slate-100 transition align-middle ml-1.5"
+                                      title={`${paperTitle} 가설 검증 4단계 흐름 보기`}
+                                    >
+                                      <HelpCircle className="w-3 h-3" />
+                                    </button>
+                                  )}
+                                </div>
+                              </li>
+                            );
+                          })}
                         </ul>
                       </section>
                     ))
@@ -629,6 +662,237 @@ export const ReportExportModal: React.FC<Props> = ({
           </button>
         </div>
       </div>
+      
+      {/* 💡 학술 가설 검증 4단계 상세 도움말 모달 */}
+      {selectedAcademicEvidenceForModal && (
+        <AcademicProofDetailModal
+          evidence={selectedAcademicEvidenceForModal}
+          onClose={() => setSelectedAcademicEvidenceForModal(null)}
+        />
+      )}
     </div>
   );
+};
+
+// 🎓 학술 가설 검증 4단계 상세 팝업 모달 컴포넌트
+interface AcademicEvidenceItem {
+  title: string;
+  url: string;
+  detail: string;
+  implication: string;
+  tag: string;
+  hypothesis: string;
+  test: string;
+  result: string;
+  conclusion: string;
+}
+
+interface AcademicModalProps {
+  evidence: AcademicEvidenceItem;
+  onClose: () => void;
+}
+
+const AcademicProofDetailModal: React.FC<AcademicModalProps> = ({ evidence, onClose }) => {
+  return (
+    <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center z-50 p-4">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-xl max-w-lg w-full flex flex-col overflow-hidden max-h-[85vh] animate-in fade-in zoom-in-95 duration-200 text-xs">
+        {/* 헤더 */}
+        <div className="bg-gradient-to-r from-blue-950 to-blue-900 p-4 text-white flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <HelpCircle className="w-5 h-5 text-blue-300" />
+            <h3 className="font-black text-sm">💡 실증적 가설 입증(Hypothesis Proof) 상세</h3>
+          </div>
+          <button
+            onClick={onClose}
+            className="text-white/80 hover:text-white hover:bg-white/10 rounded-lg p-1 transition cursor-pointer"
+            aria-label="닫기"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+
+        {/* 본문 */}
+        <div className="p-5 overflow-y-auto space-y-4 text-xs text-slate-700">
+          <div>
+            <span className="bg-blue-100 text-blue-800 text-[9px] font-black px-2 py-0.5 rounded-full uppercase tracking-wider">
+              {evidence.tag}
+            </span>
+            <h4 className="font-black text-sm text-slate-900 mt-1.5">
+              {evidence.title}
+              {evidence.title.includes("홍향희") && " ⚠️ [주의: 미검증 연구]"}
+            </h4>
+            {evidence.title.includes("홍향희") && (
+              <div className="bg-amber-50 border border-amber-200 rounded-lg p-2.5 text-amber-900 font-semibold mb-2 leading-relaxed">
+                ⚠️ 본 연구는 2026년 7월 기준 KCI·RISS·earticle 등 학술 DB 미색인 상태로 발표 및 공문서 인용 시 각별한 주의 요망.
+              </div>
+            )}
+            <a
+              href={evidence.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline text-[10px] font-semibold block mt-1"
+            >
+              논문 공식 출처 (새 창 열기) ↗
+            </a>
+          </div>
+
+          <div className="border-t border-slate-100 pt-3 space-y-3.5">
+            {/* 1단계: 가설 */}
+            <div className="flex gap-3">
+              <div className="flex flex-col items-center">
+                <div className="w-5 h-5 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center font-bold text-[9px] text-blue-800 shrink-0">
+                  1
+                </div>
+                <div className="w-0.5 flex-1 bg-slate-100 my-1"></div>
+              </div>
+              <div className="flex-1">
+                <h5 className="font-black text-slate-800 text-[10.5px]">연구 가설 (Hypothesis)</h5>
+                <p className="text-slate-600 mt-1 leading-relaxed font-semibold">{evidence.hypothesis}</p>
+              </div>
+            </div>
+
+            {/* 2단계: 검증/테스트 */}
+            <div className="flex gap-3">
+              <div className="flex flex-col items-center">
+                <div className="w-5 h-5 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center font-bold text-[9px] text-blue-800 shrink-0">
+                  2
+                </div>
+                <div className="w-0.5 flex-1 bg-slate-100 my-1"></div>
+              </div>
+              <div className="flex-1">
+                <h5 className="font-black text-slate-800 text-[10.5px]">검증 및 테스트 (Empirical Test)</h5>
+                <p className="text-slate-600 mt-1 leading-relaxed font-semibold">{evidence.test}</p>
+              </div>
+            </div>
+
+            {/* 3단계: 결과 */}
+            <div className="flex gap-3">
+              <div className="flex flex-col items-center">
+                <div className="w-5 h-5 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center font-bold text-[9px] text-blue-800 shrink-0">
+                  3
+                </div>
+                <div className="w-0.5 flex-1 bg-slate-100 my-1"></div>
+              </div>
+              <div className="flex-1">
+                <h5 className="font-black text-slate-800 text-[10.5px]">분석 결과 (Statistical Results)</h5>
+                <p className="text-slate-600 mt-1 leading-relaxed font-semibold">{evidence.result}</p>
+              </div>
+            </div>
+
+            {/* 4단계: 결론 */}
+            <div className="flex gap-3">
+              <div className="flex flex-col items-center">
+                <div className="w-5 h-5 rounded-full bg-blue-600 border border-blue-700 flex items-center justify-center font-bold text-[9px] text-white shrink-0 shadow-2xs">
+                  4
+                </div>
+              </div>
+              <div className="flex-1">
+                <h5 className="font-black text-blue-900 text-[10.5px]">최종 결론 및 대시보드 반영 (Conclusion)</h5>
+                <p className="text-blue-950 font-black mt-1 leading-relaxed">{evidence.conclusion}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 푸터 */}
+        <div className="bg-slate-50 px-4 py-3 border-t border-slate-200 flex justify-end">
+          <button
+            onClick={onClose}
+            className="bg-slate-800 hover:bg-slate-900 text-white font-bold px-3.5 py-1.5 rounded-lg transition cursor-pointer text-[10.5px]"
+          >
+            확인
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// 7대 논문 4단계 매칭 데이터셋 헬퍼 함수
+const getAcademicEvidenceItemsForModal = (title: string): AcademicEvidenceItem | null => {
+  if (title.includes("홍향희")) {
+    return {
+      title: "홍향희·이정화 (2026)",
+      tag: "민원 분석",
+      hypothesis: "현금성 지원보다 보육 인프라 편의성(시간제 보육, 돌봄 공백 해소) 요구가 민원의 주류 쟁점일 것이다.",
+      test: "국민신문고 접수 저출산 민원 수집본 대상 CONCOR 및 텍스트마이닝 클러스터링 적용.",
+      result: "단순 수당 불만 대비 시간제 보육 편의성, 맞벌이 돌봄 공백 해소가 지배 쟁점으로 도출됨.",
+      conclusion: "돌봄 안전망의 연속성 보장을 위한 R&R 조정 및 밀착형 보육 인프라 공급 확대 당위성 확보. (⚠️ 주의: KCI 미색인 상태로 인용 주의)",
+      url: "https://www.kci.go.kr",
+      detail: "", implication: ""
+    };
+  }
+  if (title.includes("성낙일")) {
+    return {
+      title: "성낙일·박선권 (2012)",
+      tag: "계량 분석",
+      hypothesis: "지역 단위 보육 인프라의 공급 규모가 합계출산율을 제고하는 유의미한 경제적 기여를 할 것이다.",
+      test: "전국 232개 시군구의 2009년 횡단면 자료 대상 다중 회귀 분석(Regression Analysis) 수행.",
+      result: "보육시설 접근성 및 공급 밀도가 지역 합계출산율에 통계적으로 유의미한 양(+)의 효과(p < 0.05)를 나타냄을 실증.",
+      conclusion: "양육 환경 편리성 제고를 위해 자치구별 취약 지점 중심 국공립 어린이집을 최우선 공급하는 행정 조정 타당성 검증.",
+      url: "https://www.kci.go.kr",
+      detail: "", implication: ""
+    };
+  }
+  if (title.includes("KICCE") || title.includes("육아정책")) {
+    return {
+      title: "육아정책연구소 (KICCE, 2023)",
+      tag: "GIS 공간진단",
+      hypothesis: "영유아 및 보육 현황 기초 통계 격차가 지역 간 출산 환경 불균형을 유발할 것이다.",
+      test: "2023 영유아 주요 통계 보고서(ES2401) 수록 자치구별 보육 인프라 및 보육 이용율 통계 대조.",
+      result: "지역 간 보육시설 접근성 및 이용률에 뚜렷한 수급 편차와 공간적 불일치 통계 실증.",
+      conclusion: "수요-공급 지리적 격차를 줄이기 위해 취약 자치구에 보육 지원 자원을 재배치하는 행정 공간 조정의 당위성 증명.",
+      url: "https://www.kicce.re.kr",
+      detail: "", implication: ""
+    };
+  }
+  if (title.includes("배기련")) {
+    return {
+      title: "배기련 외 (2021)",
+      tag: "소셜 데이터",
+      hypothesis: "정부의 저출산 대응정책과 대중이 체감하는 핵심 장벽 사이에 구조적 괴리가 존재할 것이다.",
+      test: "제3·4차 기본계획 발표 직후 2주간 뉴스 댓글 대상 빈도분석, 동시출현단어 분석, CONCOR(구조적 등위성) 분석 수행.",
+      result: "대중 여론에서 결혼·출산 관련 연속적 불안 요소로 주거와 고용이 최상위 공백 영역으로 실증 도출됨.",
+      conclusion: "실무 정책 수혜의 갭(Gap)을 메우기 위해 일·가정 양립 및 주거 노동 안정을 우선 R&R 조치해야 함.",
+      url: "https://www.kci.go.kr",
+      detail: "", implication: ""
+    };
+  }
+  if (title.includes("박미경")) {
+    return {
+      title: "박미경 (2022)",
+      tag: "요구도 분석",
+      hypothesis: "MZ세대가 지각하는 저출산 대응정책 요구도에는 영역 간 뚜렷한 우선순위 차이가 존재할 것이다.",
+      test: "청년 세대 설문조사 데이터 기반 Borich 요구도 분석 및 IPA(중요도-수행도) 분석 수행.",
+      result: "Borich 요구도 기준 자녀양육지원(1순위) > 출산지원(2순위) > 일·가정양립 지원(3순위) 순으로 요구도가 높음을 실증.",
+      conclusion: "대시보드 내 시민 제안 공감수 및 시급성 연동 가중합 점수(우선순위 지표) 설계 일치성 확인.",
+      url: "https://www.kci.go.kr",
+      detail: "", implication: ""
+    };
+  }
+  if (title.includes("오신휘")) {
+    return {
+      title: "오신휘·김혜진 (2020)",
+      tag: "메타 분석",
+      hypothesis: "텍스트마이닝 및 동시출현단어 네트워크 분석이 저출산 분야 비정형 텍스트를 체계적으로 분류하는 데 유효할 것이다.",
+      test: "저출산 관련 학술 논문 752편 대상 텍스트마이닝 및 동시출현단어 네트워크 분석 수행.",
+      result: "정부 저출산 정책 추진 시기별 핵심 학술 키워드 군집 변화가 구조적으로 뚜렷이 구분됨을 입증.",
+      conclusion: "여론 분석 및 트렌드 분류 모니터링 도구로서 텍스트마이닝 기법 적용 타당성을 최종 검증.",
+      url: "https://www.kci.go.kr",
+      detail: "", implication: ""
+    };
+  }
+  if (title.includes("예산정책처") || title.includes("NABO")) {
+    return {
+      title: "국회예산정책처 (NABO, 2025)",
+      tag: "재원 배분",
+      hypothesis: "저출생 대응 재정사업의 다부서 분절 운영이 실수혜자의 체감 정책 전달률을 심각하게 왜곡할 것이다.",
+      test: "2025 저출생 대응 사업 분석·평가 시리즈(주거지원 종합평가 + 일·생활 균형 지원정책 평가) 보고서 분석.",
+      result: "재정 투자 확대에도 부처·부서 분절로 예산 사업의 연속성 미확보 및 체감 전달 병목 실증 확인.",
+      conclusion: "유사 정책 통합 분류 모니터링 및 부서 R&R 라우팅을 조율할 대시보드형 컨트롤 타워 도입 시급성 증명.",
+      url: "https://www.assembly.go.kr",
+      detail: "", implication: ""
+    };
+  }
+  return null;
 };
