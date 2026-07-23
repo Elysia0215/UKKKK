@@ -247,7 +247,7 @@ export default function App() {
             className="text-xs bg-slate-800/80 text-white border border-slate-700 hover:bg-slate-700 font-bold px-3 py-1 rounded flex items-center gap-1.5 transition"
           >
             <Download className="w-3.5 h-3.5" />
-            <span>보고서 다운로드</span>
+            <span translate="no" className="notranslate">보고서 다운로드</span>
           </button>
         </div>
       </header>
