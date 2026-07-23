@@ -1879,113 +1879,76 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                     </div>
                   </div>
 
-                  {/* 3열: 기존 정책, 언론 동향 및 근거 논문 상세 보기 */}
-                  <div className="flex-1 flex flex-col gap-4 min-h-0">
+                  {/* 3열: 행정 공급망 및 학술적 대조망 (통합 단일 스크롤 패널) */}
+                  <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex-1 flex flex-col min-h-0">
+                    <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-3 shrink-0">
+                      <h4 className="font-black text-xs text-indigo-900 flex items-center gap-1.5">
+                        <Sparkles className="w-4 h-4 text-indigo-600" />
+                        <span>🔮 행정 공급망 & 학술적 대조망</span>
+                      </h4>
+                      <span className="text-[10px] bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded-full font-bold">
+                        과학적 대조 분석
+                      </span>
+                    </div>
                     
-                    {/* 서울시 정책 */}
-                    <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex-1 flex flex-col min-h-0">
-                      <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-3">
-                        <h4 className="font-black text-xs text-emerald-800 flex items-center gap-1">
-                          <span>🔍 서울시 정책 공급 현황 (몽땅정보통)</span>
-                          <span className="bg-emerald-50 text-emerald-700 px-1.5 py-0.2 rounded text-[9px] font-mono">{selectedIssueRawData.policies.length}건</span>
-                        </h4>
-                      </div>
-                      <div className="flex-1 min-h-0 overflow-y-auto space-y-2.5 pr-1">
-                        {selectedIssueRawData.policies.length === 0 ? (
-                          <p className="text-slate-400 text-center py-10 text-[11px]">해당 분야의 매칭된 서울시 정책이 없습니다.</p>
-                        ) : (
-                          selectedIssueRawData.policies.map((p, idx) => (
-                            <div key={idx} className="bg-emerald-50/20 p-2.5 rounded-lg border border-emerald-100/50 hover:bg-emerald-50/40 transition">
-                              <h5 className="font-black text-slate-800">{p.policy_name}</h5>
-                              <p className="text-slate-500 text-[9px] mt-1">대상: {p.targetGroup}</p>
-                            </div>
-                          ))
-                        )}
-                      </div>
-                    </div>
-
-                    {/* 언론 보도 */}
-                    <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-xs flex-1 flex flex-col min-h-0">
-                      <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-3">
-                        <h4 className="font-black text-xs text-slate-800 flex items-center gap-1">
-                          <span>📰 사회 보도 트렌드 (언론 보도)</span>
-                          <span className="bg-slate-100 text-slate-700 px-1.5 py-0.2 rounded text-[9px] font-mono">{selectedIssueRawData.news.length}건</span>
-                        </h4>
-                      </div>
-                      <div className="flex-1 min-h-0 overflow-y-auto space-y-2.5 pr-1">
-                        {selectedIssueRawData.news.length === 0 ? (
-                          <p className="text-slate-400 text-center py-10 text-[11px]">해당 분야의 매칭된 언론 뉴스가 없습니다.</p>
-                        ) : (
-                          selectedIssueRawData.news.map((n, idx) => (
-                            <div key={idx} className="bg-slate-50 p-2.5 rounded-lg border border-slate-150/60 hover:bg-slate-100 transition">
-                              <h5 className="font-black text-slate-800 leading-snug">{n.title}</h5>
-                              <div className="flex items-center justify-between mt-1 text-[8.5px] text-slate-400">
-                                <span>{n.press} | {n.date}</span>
-                                <span className="bg-rose-50 text-rose-700 px-1.5 rounded font-bold">이슈강도: {n.strength}</span>
+                    <div className="flex-1 min-h-0 overflow-y-auto space-y-5 pr-1">
+                      {/* Section 1: 서울시 정책 공급 현황 */}
+                      <div className="space-y-2">
+                        <h5 className="font-extrabold text-[11px] text-emerald-800 flex items-center gap-1 bg-emerald-50/60 px-2 py-1 rounded-md border border-emerald-100">
+                          🔍 서울시 정책 공급 현황 (몽땅정보통)
+                          <span className="bg-white text-emerald-700 px-1.5 py-0.2 rounded text-[9px] font-mono border border-emerald-200">{selectedIssueRawData.policies.length}건</span>
+                        </h5>
+                        <div className="space-y-2">
+                          {selectedIssueRawData.policies.length === 0 ? (
+                            <p className="text-slate-400 text-center py-4 text-[10px]">해당 분야의 매칭된 서울시 정책이 없습니다.</p>
+                          ) : (
+                            selectedIssueRawData.policies.map((p, idx) => (
+                              <div key={idx} className="bg-emerald-50/10 p-2.5 rounded border border-emerald-100/50 hover:bg-emerald-50/20 transition">
+                                <h6 className="font-black text-[10.5px] text-slate-800">{p.policy_name}</h6>
+                                <p className="text-slate-500 text-[8.5px] mt-0.5 font-medium">대상: {p.targetGroup}</p>
                               </div>
-                            </div>
-                          ))
-                        )}
-                      </div>
-                    </div>
-
-                    {/* 🎓 근거 논문 상세 보기 패널 */}
-                    <div className="bg-white p-3 rounded-xl border border-blue-100 shadow-xs flex-1 flex flex-col min-h-0">
-                      <div className="flex items-center justify-between border-b border-blue-100 pb-2 mb-2">
-                        <h4 className="font-black text-xs text-blue-900 flex items-center gap-1">
-                          <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-                          <span>근거 논문 상세 보기</span>
-                        </h4>
-                        <span className="bg-blue-50 text-blue-700 px-1.5 py-0.2 rounded text-[9px] font-mono">
-                          {evidenceItems.length}건
-                        </span>
+                            ))
+                          )}
+                        </div>
                       </div>
 
-                      <div className="flex gap-1.5 overflow-x-auto pb-1 mb-2">
-                        {evidenceItems.map((item, idx) => (
-                          <button
-                            key={item.title}
-                            type="button"
-                            onClick={() => setSelectedEvidenceIndex(idx)}
-                            className={`px-2 py-1 rounded-full border text-[9px] font-black transition cursor-pointer whitespace-nowrap ${
-                              selectedEvidenceIndex === idx
-                                ? 'bg-blue-600 border-blue-600 text-white shadow-2xs font-extrabold'
-                                : 'bg-blue-50 border-blue-100 text-blue-800 hover:bg-blue-100'
-                            }`}
-                            title={`${item.title} 상세 요약 보기`}
-                          >
-                            {idx + 1}. {item.title}
-                          </button>
-                        ))}
-                      </div>
-
-                      <div className="bg-blue-50/70 border border-blue-100 rounded-lg p-2.5 text-[9.5px] leading-relaxed space-y-1.5">
-                        {selectedAcademicEvidence && (
-                          <>
-                            <div className="flex items-center justify-between gap-2">
-                              <div className="flex items-center gap-1.5">
-                                <strong className="text-blue-950 text-[10px]">{selectedAcademicEvidence.title}</strong>
-                                <a
-                                  href={selectedAcademicEvidence.url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="text-blue-600 hover:underline text-[8.5px] font-bold"
-                                  title={`${selectedAcademicEvidence.title} 논문 원문 새 탭에서 열기`}
-                                >
-                                  [원문 ↗]
-                                </a>
+                      {/* Section 2: 사회 보도 트렌드 (언론 보도) */}
+                      <div className="space-y-2">
+                        <h5 className="font-extrabold text-[11px] text-slate-800 flex items-center gap-1 bg-slate-100 px-2 py-1 rounded-md border border-slate-200">
+                          📰 사회 보도 트렌드 (언론 보도)
+                          <span className="bg-white text-slate-700 px-1.5 py-0.2 rounded text-[9px] font-mono border border-slate-200">{selectedIssueRawData.news.length}건</span>
+                        </h5>
+                        <div className="space-y-2">
+                          {selectedIssueRawData.news.length === 0 ? (
+                            <p className="text-slate-400 text-center py-4 text-[10px]">해당 분야의 매칭된 언론 뉴스가 없습니다.</p>
+                          ) : (
+                            selectedIssueRawData.news.map((n, idx) => (
+                              <div key={idx} className="bg-slate-50 p-2.5 rounded border border-slate-200/60 hover:bg-slate-100 transition cursor-pointer group/news">
+                                <h6 className="font-black text-[10.5px] text-slate-800 leading-snug line-clamp-2 group-hover/news:line-clamp-none transition-all duration-200">{n.title}</h6>
+                                <div className="flex items-center justify-between mt-1 text-[8px] text-slate-400 font-medium">
+                                  <span>{n.press} | {n.date}</span>
+                                  <span className="bg-rose-50 text-rose-700 px-1.5 rounded font-bold">이슈강도: {n.strength}</span>
+                                </div>
                               </div>
-                              <span className="text-[8.5px] font-black text-blue-700 bg-white border border-blue-100 px-1.5 py-0.5 rounded-full shrink-0">
-                                {selectedAcademicEvidence.tag}
-                              </span>
-                            </div>
-                            <p className="text-slate-600 line-clamp-3">{selectedAcademicEvidence.detail}</p>
-                            <p className="text-blue-900 font-bold line-clamp-2">정책 의미: {selectedAcademicEvidence.implication}</p>
-                          </>
-                        )}
+                            ))
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Section 3: 실증적 학술 근거 */}
+                      <div className="space-y-2">
+                        <h5 className="font-extrabold text-[11px] text-blue-900 flex items-center gap-1 bg-blue-50 px-2 py-1 rounded-md border border-blue-150">
+                          🎓 학술 연구 & 실측 데이터 교차 검증 (Academic Proof)
+                          <span className="bg-white text-blue-700 px-1.5 py-0.2 rounded text-[9px] font-mono border border-blue-200">6건</span>
+                        </h5>
+                        <div className="text-slate-700 leading-relaxed font-medium">
+                          {renderAcademicProof(selectedIssue, (title) => {
+                            setSelectedProofPaper(title);
+                            setShowProofModal(true);
+                          })}
+                        </div>
                       </div>
                     </div>
-
                   </div>
 
                 </div>
