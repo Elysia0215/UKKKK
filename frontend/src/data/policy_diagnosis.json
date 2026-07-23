@@ -1,0 +1,148 @@
+{
+  "diagnoses": [
+    {
+      "category": "임신·난임·생식건강",
+      "cluster": "임신·출산 이용기준",
+      "item_count": 85,
+      "source_count": 120,
+      "demand": 82,
+      "policy_gap": 65,
+      "urgency": 75,
+      "feasibility": 80,
+      "evidence_confidence": 88,
+      "priority_score": 78,
+      "status": "제도 개선",
+      "recommended_action": "신청·이용 기준 개선",
+      "representative_titles": [
+        "보건소 난임 주사 대리 투약 허용 요청",
+        "난임 부부 시술비 지원 소득 기준 폐지"
+      ]
+    },
+    {
+      "category": "출산·산후 초기지원",
+      "cluster": "의료비·경제 부담",
+      "item_count": 64,
+      "source_count": 95,
+      "demand": 70,
+      "policy_gap": 40,
+      "urgency": 85,
+      "feasibility": 60,
+      "evidence_confidence": 82,
+      "priority_score": 72,
+      "status": "빠른 개선",
+      "recommended_action": "현장 점검·민원 대응",
+      "representative_titles": [
+        "산모·신생아 건강관리 서비스 본인부담금 감면 요청",
+        "출산 지원금 수혜 자격 거주 기간 완화 청원"
+      ]
+    },
+    {
+      "category": "다자녀·양육비·생활지원",
+      "cluster": "의료비·경제 부담",
+      "item_count": 92,
+      "source_count": 115,
+      "demand": 78,
+      "policy_gap": 50,
+      "urgency": 70,
+      "feasibility": 85,
+      "evidence_confidence": 84,
+      "priority_score": 74,
+      "status": "빠른 개선",
+      "recommended_action": "기존 정책 홍보 강화",
+      "representative_titles": [
+        "다자녀 가구 하수도 요금 및 전기세 감면 자동 연계",
+        "다자녀 카드 이용 가맹점 확대 및 사용 편의성 개선"
+      ]
+    },
+    {
+      "category": "보육·돌봄 인프라",
+      "cluster": "돌봄·보육 접근성",
+      "item_count": 145,
+      "source_count": 180,
+      "demand": 95,
+      "policy_gap": 85,
+      "urgency": 90,
+      "feasibility": 75,
+      "evidence_confidence": 92,
+      "priority_score": 88,
+      "status": "즉시 검토",
+      "recommended_action": "신규 정책 검토",
+      "representative_titles": [
+        "야간 및 휴일 긴급 돌봄 센터 증설",
+        "국공립 어린이집 입소 대기 장기화 해결"
+      ]
+    },
+    {
+      "category": "일·가정 양립·부모 노동",
+      "cluster": "임신·출산 이용기준",
+      "item_count": 98,
+      "source_count": 130,
+      "demand": 88,
+      "policy_gap": 75,
+      "urgency": 82,
+      "feasibility": 70,
+      "evidence_confidence": 86,
+      "priority_score": 80,
+      "status": "제도 개선",
+      "recommended_action": "신청·이용 기준 개선",
+      "representative_titles": [
+        "육아휴직 후 직장 복귀 불이익 근절 감독",
+        "중소기업 워킹맘 시차출퇴근제 도입 지원"
+      ]
+    },
+    {
+      "category": "주거·교통·도시생활환경",
+      "cluster": "주거·이동 환경",
+      "item_count": 112,
+      "source_count": 150,
+      "demand": 90,
+      "policy_gap": 92,
+      "urgency": 88,
+      "feasibility": 68,
+      "evidence_confidence": 90,
+      "priority_score": 86,
+      "status": "즉시 검토",
+      "recommended_action": "신규 정책 검토",
+      "representative_titles": [
+        "다자녀 가구 공공임대 우선 공급 기준 완화",
+        "지하철 유모차 및 휠체어 리프트 개선"
+      ]
+    },
+    {
+      "category": "취약·다양가족 사각지대",
+      "cluster": "의료 접근성",
+      "item_count": 32,
+      "source_count": 45,
+      "demand": 50,
+      "policy_gap": 80,
+      "urgency": 75,
+      "feasibility": 65,
+      "evidence_confidence": 76,
+      "priority_score": 66,
+      "status": "제도 개선",
+      "recommended_action": "부서 협업 검토",
+      "representative_titles": [
+        "한부모 가정 양육비 대지급 및 신속 집행 요청",
+        "위기 임산부 안심 보육 지원시설 입소 기준 완화"
+      ]
+    },
+    {
+      "category": "정보·상담·교육·거버넌스",
+      "cluster": "정보·신청 접근성",
+      "item_count": 75,
+      "source_count": 110,
+      "demand": 75,
+      "policy_gap": 35,
+      "urgency": 60,
+      "feasibility": 90,
+      "evidence_confidence": 85,
+      "priority_score": 62,
+      "status": "빠른 개선",
+      "recommended_action": "기존 정책 홍보 강화",
+      "representative_titles": [
+        "몽땅정보통 신청 절차 및 구비 서류 간소화",
+        "출생 신고 시 혜택 일괄 원스톱 안내 브로셔 배포"
+      ]
+    }
+  ]
+}

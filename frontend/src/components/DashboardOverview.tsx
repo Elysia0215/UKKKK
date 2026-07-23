@@ -302,7 +302,7 @@ export const DashboardOverview: React.FC<Props> = ({
           </div>
 
           <div 
-            onClick={() => onNavigateToTab(2)}
+            onClick={() => onNavigateToTab(1)}
             className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-purple-600 hover:text-purple-800 font-bold cursor-pointer hover:bg-purple-50/30 p-1 rounded transition"
           >
             <span>분야별 전체 분석</span>
@@ -348,7 +348,7 @@ export const DashboardOverview: React.FC<Props> = ({
           </div>
 
           <div 
-            onClick={() => onNavigateToTab(3)}
+            onClick={() => onNavigateToTab(2)}
             className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-amber-600 hover:text-amber-800 font-bold cursor-pointer hover:bg-amber-50/30 p-1 rounded transition"
           >
             <span>인기 이슈 제안 목록</span>
@@ -411,7 +411,7 @@ export const DashboardOverview: React.FC<Props> = ({
               {keywordLimit === 5 ? '➕ 더보기 (TOP 10)' : '➖ 접기 (TOP 5)'}
             </button>
             <button 
-              onClick={() => onNavigateToTab(2)}
+              onClick={() => onNavigateToTab(1)}
               className="text-slate-500 font-medium hover:underline inline-flex items-center gap-1 cursor-pointer"
             >
               상세 원문 분석
@@ -574,7 +574,7 @@ export const DashboardOverview: React.FC<Props> = ({
           {keyGaps.map(gap => (
             <div 
               key={gap.id}
-              onClick={() => onNavigateToTab(3)}
+              onClick={() => onNavigateToTab(2)}
               className="bg-white p-3.5 rounded-xl border border-rose-100 hover:border-rose-300 hover:shadow-md cursor-pointer transition flex flex-col justify-between"
             >
               <div>

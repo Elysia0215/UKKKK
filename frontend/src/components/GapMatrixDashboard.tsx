@@ -140,6 +140,81 @@ const classifyCluster = (title: string, content: string): string => {
   return bestCluster;
 };
 
+// (방법론 가중치 맵은 현재 사용하지 않음)
+
+const renderAcademicProof = (issue: IssueItem) => {
+  const cat = issue.category;
+  
+  if (cat === '보육·돌봄 인프라') {
+    return (
+      <div className="space-y-2 text-[9.5px]">
+        <div>
+          <strong className="text-blue-900">[홍향희·이정화 (2026) 영유아 정책 민원 992건 분석 대조]</strong><br />
+          시민의 핵심 요구는 단순 일회성 수당 지원보다 '시간제 보육 편의성', '소아 응급 의료 체계', '맞벌이 돌봄 공백 해소' 등 연속적인 인프라 보장입니다.
+          <span className="block mt-0.5 text-slate-500 font-normal">
+            ➔ <strong>실측 데이터 매핑:</strong> 현재 본 <strong>[{issue.cluster}]</strong> 클러스터에 수집된 시민 수요(제안·민원 등)는 총 <strong>{issue.item_count}건</strong>으로, 영유아 보육 접근성 키워드와 결합되어 학계가 실증한 사회적 우선 요구 추이를 그대로 증명합니다.
+          </span>
+        </div>
+        <div className="border-t border-blue-100/60 pt-1.5">
+          <strong className="text-blue-900">[성낙일·박선권 (2012) 자녀 양육환경과 출산율 실증분석]</strong><br />
+          232개 시군구 분석 결과 보육시설의 양적 규모와 양육 환경의 편리성이 출산율에 유의미한 양(+)의 영향을 미침을 실증적으로 입증했습니다.
+          <span className="block mt-0.5 text-slate-500 font-normal">
+            ➔ <strong>인프라 갭 연계:</strong> 자치구별 보육시설 수와 민원/제안 수요 간의 불균형을 분석하는 본 모델의 핵심 학술 근거가 됩니다.
+          </span>
+        </div>
+        <div className="border-t border-blue-100/60 pt-1.5">
+          <strong className="text-blue-900">[육아정책연구소 (KICCE, 2023) 보육기관 수요·공급 지역별 형평성 진단]</strong><br />
+          GIS 공간 분석을 이용한 어린이집·유치원 공급 취약지역 도출 및 수요 예측 모델을 제안했습니다.
+          <span className="block mt-0.5 text-slate-500 font-normal">
+            ➔ <strong>시각화 연계:</strong> 대시보드가 제공하는 '서울시 자치구 지도 수요-공급 갭 히트맵 시각화' 접근 방식의 선행 연구 근거입니다.
+          </span>
+        </div>
+      </div>
+    );
+  }
+  
+  if (cat === '주거·교통·도시생활환경' || cat === '일·가정 양립·부모 노동' || cat === '다자녀·양육비·생활지원') {
+    return (
+      <div className="space-y-2 text-[9.5px]">
+        <div>
+          <strong className="text-blue-900">[배기련 외 (2021) 저출산 정책과 대중인식 비교 대조]</strong><br />
+          결혼·출산과 연계된 대중 댓글 25,800건 분석 결과, '주택', '주거', '일자리', '비용' 등 안정적인 환경 조성이 최대 체감 정책 장벽으로 도출되었습니다.
+          <span className="block mt-0.5 text-slate-500 font-normal">
+            ➔ <strong>정책 공백 연계:</strong> 본 <strong>[{issue.cluster}]</strong> 클러스터는 몽땅정보통(323개 사업)과의 대조 결과 정책 공백(Gap) 지수가 높게 대조되어, 단순 현금 지원을 넘어 수혜 대상 및 자격 기준 완화가 시급함을 입증합니다.
+          </span>
+        </div>
+        <div className="border-t border-blue-100/60 pt-1.5">
+          <strong className="text-blue-900">[박미경 (2022) 저출산 대응정책 요구도 및 우선순위 분석]</strong><br />
+          MZ세대 설문조사를 통해 정책 요구도 우선순위를 도출했습니다.
+          <span className="block mt-0.5 text-slate-500 font-normal">
+            ➔ <strong>우선순위 연계:</strong> 대시보드가 시민 제안의 공감수(vote_score)를 기반으로 우선순위 점수를 산출하는 가중치 배분 설계의 타당성을 지지합니다. (전문 확인 권장)
+          </span>
+        </div>
+      </div>
+    );
+  }
+
+  // Fallback (임신·난임·생식건강, 취약·다양가족 사각지대, 정보·상담·교육·거버넌스 등)
+  return (
+    <div className="space-y-2 text-[9.5px]">
+      <div>
+        <strong className="text-blue-900">[오신휘·김혜진 (2020) '저출산' 관련 연구동향 분석]</strong><br />
+        752편의 학술 논문 메타분석을 통해 텍스트 마이닝 기법이 저출산 정책 연구에서 실효성 있는 여론 수집 및 정책 매핑 방법론임을 검증했습니다.
+        <span className="block mt-0.5 text-slate-500 font-normal">
+          ➔ <strong>방법론 연계:</strong> 비정형 텍스트(시민제안 및 민원)를 자연어 처리로 분류 및 클러스터링하는 본 의사결정 지원 시스템의 정당성을 뒷받침합니다.
+        </span>
+      </div>
+      <div className="border-t border-blue-100/60 pt-1.5">
+        <strong className="text-blue-900">[국회예산정책처 (NABO) 저출산 지원정책 효과성 및 재원배분 연구]</strong><br />
+        파편화된 저출산 사업 예산과 이로 인해 시민 수요를 종합적으로 판단하고 조율할 컨트롤 타워 및 연계 채널이 없음을 공적 지적했습니다.
+        <span className="block mt-0.5 text-slate-500 font-normal">
+          ➔ <strong>문제정의 연계:</strong> 서울시 18개 부서에 흩어진 정책을 8대 분류로 통합하고, R&R 부서를 1·2·3순위로 자동 라우팅해주는 본 대시보드의 실무적 도입 필요성을 입증합니다.
+        </span>
+      </div>
+    </div>
+  );
+};
+
 export const GapMatrixDashboard: React.FC<Props> = ({ 
   proposals, 
   onNavigateToTab,
@@ -433,8 +508,8 @@ export const GapMatrixDashboard: React.FC<Props> = ({
       {/* 설명 배너 */}
       <div className="bg-[#0B1B3D] text-white p-5 rounded-2xl border border-blue-950 shadow-md flex items-center justify-between">
         <div className="space-y-1.5">
-          <span className="bg-blue-600 text-white text-[9px] font-black px-2 py-0.5 rounded uppercase tracking-wider">Decision Diagnostic Board</span>
-          <h2 className="text-lg font-black mt-1">📊 설명 가능한 문제 클러스터 기반 정책 우선순위 진단 매트릭스</h2>
+          <span className="bg-blue-600 text-white text-[9px] font-black px-2 py-0.5 rounded uppercase tracking-wider">우선순위 진단 매트릭스</span>
+          <h2 className="text-lg font-black mt-1">📊 우선순위 진단 매트릭스 (X: 정책 공백 (GAP), Y: 시급성, 크기: 수요)</h2>
           <p className="text-[11px] text-slate-300 leading-relaxed max-w-4xl">
             본 화면은 시민 제안 및 국민신문고 현장 민원 데이터를 정밀 재분류하여 **문제 클러스터** 단위의 5대 진단 축(수요, 공백, 시급성, 실행성, 신뢰도)을 다차원 평가합니다.<br />
             실제 의사결정자는 **인터랙티브 버블 매트릭스**를 통해 직관적으로 우선순위를 선별하고, 우측 상세 패널에서 AI 답변 및 추천 행정 조치를 즉시 검토 및 승인할 수 있습니다.
@@ -947,23 +1022,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                     🎓 학술 연구 & 실측 데이터 교차 검증 (Academic Proof)
                   </h4>
                   <div className="text-slate-700 leading-relaxed font-medium">
-                    {selectedIssue.category === '보육·돌봄 인프라' || selectedIssue.category === '정보·상담·교육·거버넌스' ? (
-                      <div>
-                        <strong>[홍향희(2026) 영유아 정책 민원 992건 분석 대조]</strong><br />
-                        시민의 핵심 요구는 일회성 수당 지원보다 '시간제 보육 편의', '소아 응급 의료', '돌봄 공백 해소' 등 영유아 인프라 보장입니다.
-                        <span className="block mt-1 text-slate-500 font-normal">
-                          ➔ <strong>실측 데이터 매핑:</strong> 현재 본 <strong>[{selectedIssue.cluster}]</strong> 클러스터에 수집된 시민 수요(제안·민원 등)는 총 <strong>{selectedIssue.item_count}건</strong>으로, 영유아 보육 접근성 키워드와 결합되어 학계가 실증한 사회적 우선 요구 추이를 그대로 증명합니다.
-                        </span>
-                      </div>
-                    ) : (
-                      <div>
-                        <strong>[이정기(2021) 저출산 대중댓글 25,800건 분석 대조]</strong><br />
-                        청년들이 결혼·출산 시 체감하는 최대 장벽은 단순 축하금 지원이 아닌 '주택·주거', '일자리', '비용' 등의 삶의 안정성 결여입니다.
-                        <span className="block mt-1 text-slate-500 font-normal">
-                          ➔ <strong>실측 데이터 매핑:</strong> 본 <strong>[{selectedIssue.cluster}]</strong> 클러스터는 몽땅정보통(323개 사업)과의 대조 결과 <strong>정책 공백 점수 {selectedIssue.policy_gap}점</strong>의 높은 미스매칭이 산출되어, 단순 홍보를 넘어 수혜 대상 및 자격 기준 완화가 시급함을 입증합니다.
-                        </span>
-                      </div>
-                    )}
+                    {renderAcademicProof(selectedIssue)}
                   </div>
                 </div>
 

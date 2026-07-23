@@ -343,7 +343,7 @@ export const OfficeAssistant: React.FC<Props> = ({ selectedDept, activeTab, onNa
                   {selectedDept && (
                     <button
                       onClick={() => {
-                        onNavigateToTab(7); // Gap Matrix 탭으로 이동
+                        onNavigateToTab(6); // Gap Matrix 탭으로 이동
                         setBubbleText('종합 의사결정 분석표로 이동했습니다! 부서 소관 카테고리 행에 포커싱된 갭 진단을 시작해 주십시오.');
                         setActiveScreen('menu');
                       }}
@@ -368,11 +368,11 @@ export const OfficeAssistant: React.FC<Props> = ({ selectedDept, activeTab, onNa
                     실시간 민원 키워드 급증세 및 8대 분야 시민 제안 모니터링
                   </div>
                   <div className="border-b border-slate-200 pb-1.5">
-                    <strong className="text-slate-900 block mb-0.5">2. 지역별 비교 (3D 지도)</strong>
-                    구별 출산율/보육시설 공급도 점수 매핑을 통한 공백 지역 진단
+                    <strong className="text-slate-900 block mb-0.5">2. 공공데이터 지표 (지도 및 비교 차트)</strong>
+                    구별 출생아 수, 보육시설 수, 합계출산율의 시각화 및 비교 분석
                   </div>
                   <div className="border-b border-slate-200 pb-1.5">
-                    <strong className="text-slate-900 block mb-0.5">3. 정책 우선순위 상세 (Gap Matrix)</strong>
+                    <strong className="text-slate-900 block mb-0.5">3. 의사결정 갭 분석표 (Gap Matrix)</strong>
                     행정 R&R 연동, 실무자 피드백 승인 패널 및 <strong>[맞춤형 HWP 공문 기안서 생성]</strong> 지원
                   </div>
                 </div>
