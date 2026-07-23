@@ -15,6 +15,62 @@ import {
   HelpCircle,
 } from 'lucide-react';
 import { PolicyProposal } from '../types';
+const REPRESENTATIVE_PROPOSALS = [
+  {
+    category: '교통',
+    title: '서소문 고가의 문제점 개선 요청',
+    quote: '“시민 통행이 많은 경의선은 지하화 해야 합니다”',
+    content: '서소문 고가도로와 경의선 서소문 구간의 안전 문제가 오래전부터 우려되어 왔습니다. 최근 사고를 계기로 노후 시설에 대한 근본적인 대책 마련이 필요합니다. 서소문 구간은 지하화를 검토하고 철거 또는 안전성 재검토를 추진하여 시민 안전을 최우선으로 개선해주길 바랍니다.'
+  },
+  {
+    category: '문화',
+    title: '감사의 정원에 대한 건의사항',
+    quote: '“감사의 마음을 기억하고 나눕시다”',
+    content: '광화문 감사의 정원은 우리나라를 도와준 국가들에 대한 감사의 마음을 나눌 수 있는 의미 있는 공간입니다. 각 조형물에 QR코드를 부착해 홈페이지로 연결하고 다국어 방명록과 방문 현황을 제공하면 참여와 소통이 훨씬 활발해질 것입니다.'
+  },
+  {
+    category: '교통',
+    title: '따릉이 대여소 내 안장 물기 제거기 비치',
+    quote: '“모두의 대중교통을 위해”',
+    content: '따릉이를 이용할 때 비나 이슬로 젖은 안장 때문에 시민들이 겪는 불편이 큽니다. 대여소마다 간단한 물기 제거 스퀴지나 시트를 비치하면 안장을 손쉽게 닦고 쾌적하게 자전거를 이용해 만족도와 편의성이 대폭 올라갈 것입니다.'
+  },
+  {
+    category: '문화',
+    title: '감사의 정원 관광화 개선 사업 제안',
+    quote: '“아름다운 시간을 공유해주세요”',
+    content: '감사의 정원은 야간 조명이 켜질 때 상징성이 더욱 돋보입니다. 시민들이 점등 시간을 쉽게 알 수 있도록 일몰 후 작동하는 조명 현장 안내를 제공하고 야간 명소로 발전시키면 도시 브랜드 제고에 긍정적인 효과가 기대됩니다.'
+  },
+  {
+    category: '환경',
+    title: '서울시 그린빌딩 도입 확대 제안',
+    quote: '“서울에 그린빌딩이 있다면”',
+    content: '건물 부문의 탄소 배출을 줄이기 위해 재개발 지역에 빗물 재활용, 친환경 자재 활용, 열회수 장치 등을 확대 도입해야 합니다. 서울시 차원의 그린빌딩 확산 조례와 혜택 등 정책적 제도 마련이 시급합니다.'
+  },
+  {
+    category: '행정',
+    title: '친환경 플랫폼 및 제로웨이스트 지도 구축',
+    quote: '“친환경 서울시를 위한 정보 모음”',
+    content: '친환경 정보(리필 스테이션, 다회용기 매장 등)를 한눈에 볼 수 있는 플랫폼과 지도 앱을 구축해주길 제안합니다. 정보 접근성을 개선하면 시민들이 더 쉽게 자원순환을 실천하고 제로웨이스트 문화가 빠르게 퍼질 것입니다.'
+  },
+  {
+    category: '환경',
+    title: '지자체의 이동노동자 쉼터 조례 제정',
+    quote: '“이동노동자를 위한 서울”',
+    content: '이동노동자 쉼터는 노동자의 휴식권 보장을 위해 필수적이나 자치구별 설치 편차가 심해 쉼터 조성을 의무화하는 표준 조례 제정이 필요합니다. 보다 안정적인 설치·운영 기반을 갖추는 노동친화 정책이 권고됩니다.'
+  },
+  {
+    category: '교통',
+    title: '개인형 이동장치 안전 및 위생 개선',
+    quote: '“안전사고 없는 서울을 위해”',
+    content: '전동킥보드·자전거 무단 방치로 인한 보행 불편과 안전사고를 해소하기 위해 지정 반납 구역을 운영하고, 공용 헬멧의 위생 소독 필터링 등 철저한 안전 관리 체계를 구축해 보행 환경을 개선해주길 제안합니다.'
+  },
+  {
+    category: '교통',
+    title: '찾아나서는 바닥신호등 고장 수리 지원',
+    quote: '“어린이가 위험해요! 안전한 서울을 위해”',
+    content: '초등학교와 유치원 주변 어린이 보호구역에 설치된 바닥신호등이 장시간 고장 방치되는 사례가 많습니다. 정기 점검 기간을 선제 가동해 신속히 보수하는 스마트 어린이 교통안전 체계 구축이 강력히 요구됩니다.'
+  }
+];
 
 interface Props {
   isOpen: boolean;
@@ -26,7 +82,7 @@ interface Props {
   customActions?: Record<string, { action: string; status: string; overrideSatisfaction?: string }>;
 }
 
-type ReportType = 'detailed' | 'executive';
+type ReportType = 'detailed' | 'executive' | 'public-share';
 type ExportFormat = 'hwp' | 'pdf' | 'excel';
 type SectionKey = 'background' | 'stats' | 'gaps' | 'ai' | 'academic' | 'logs';
 
@@ -440,24 +496,34 @@ export const ReportExportModal: React.FC<Props> = ({
           <div className="w-full shrink-0 space-y-5 overflow-y-auto border-r border-slate-200 bg-slate-50 p-5 text-sm md:w-[344px]">
             <div className="space-y-2">
               <label className="block font-extrabold text-slate-800">1. 검토사항</label>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="flex flex-col gap-2">
                 {[
-                  { id: 'detailed' as const, label: '담당자 상세용' },
-                  { id: 'executive' as const, label: '간부 보고용' },
-                ].map((item) => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    onClick={() => setReportType(item.id)}
-                    className={`rounded-xl border px-3 py-3 text-center font-extrabold transition ${
-                      reportType === item.id
-                        ? 'border-blue-400 bg-blue-50 text-blue-700'
-                        : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-100'
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                ))}
+                  { id: 'detailed' as const, label: '담당자 상세용 (한글/줄글)' },
+                  { id: 'executive' as const, label: '간부 브리핑용 (요약형)' },
+                  { id: 'public-share' as const, label: '외부 공유용 (PDF 인포그래픽)' },
+                ].map((item) => {
+                  const isSelected = reportType === item.id;
+                  return (
+                    <button
+                      key={item.id}
+                      type="button"
+                      onClick={() => {
+                        setReportType(item.id);
+                        if (item.id === 'public-share') {
+                          setFormat('pdf'); // 외부 공유용은 PDF 출력이 강제됩니다.
+                        }
+                      }}
+                      className={`w-full rounded-xl border px-3 py-2.5 text-left font-black transition cursor-pointer text-xs flex justify-between items-center ${
+                        isSelected
+                          ? 'border-blue-500 bg-blue-50 text-blue-700 shadow-3xs'
+                          : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-100'
+                      }`}
+                    >
+                      <span>{item.label}</span>
+                      {isSelected && <span className="bg-blue-600 text-white rounded-full p-0.5 text-[8px] font-bold">✓</span>}
+                    </button>
+                  );
+                })}
               </div>
             </div>
 

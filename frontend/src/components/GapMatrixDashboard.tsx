@@ -1177,7 +1177,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                   <span className="font-extrabold block text-indigo-400 mb-1">📊 의사결정 상태 판정 로직 정의</span>
                   본 점수는 적용된 방법론의 논문 가중치 모델을 기반으로 계산됩니다:
                   <ul className="list-disc pl-3 mt-1.5 space-y-1 font-medium">
-                    <li><strong className="text-rose-300">즉시 검토 (65점~100점)</strong>: 긴급 공백 사각지대</li>
+                    <li><strong className="text-rose-300">즉시 검토 (65점~100점)</strong>: 시민 요구(민원/제안)는 최고조이나 매칭 복지 정책이 없는 정책 사각지대</li>
                     <li><strong className="text-amber-300">제도 개선 (50점~64점)</strong>: 조례 수정 및 부서 연계</li>
                     <li><strong className="text-emerald-300">빠른 개선 (40점~49점)</strong>: 소액 고효율 생활 조치</li>
                     <li><strong className="text-slate-300">모니터링 (40점 미만)</strong>: 일반 주기 관찰 대상</li>
@@ -2260,7 +2260,7 @@ const PriorityStandardModal: React.FC<PriorityStandardModalProps> = ({ isOpen, o
                       <span className="w-2.5 h-2.5 bg-rose-500 rounded-full" /> 즉시 검토
                     </td>
                     <td className="py-2.5 px-3 font-mono font-bold">65점 이상</td>
-                    <td className="py-2.5 px-3 text-[10px] leading-relaxed">사각지대 신규 대안 예산 편성 및 행정 조치 권고</td>
+                    <td className="py-2.5 px-3 text-[10px] leading-relaxed">시민 요구(민원/제안)는 최고조이나 매칭 복지 정책이 없는 정책 사각지대 (신규 예산/행정 개입 적극 검토 권고)</td>
                   </tr>
                   <tr>
                     <td className="py-2.5 px-3 flex items-center gap-1.5 font-bold text-amber-600">
