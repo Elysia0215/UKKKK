@@ -721,7 +721,7 @@ export default function App() {
         isOpen={isExportModalOpen}
         onClose={() => setIsExportModalOpen(false)}
         selectedDept={selectedDept}
-        selectedDistrict={selectedDistrict || selectedPublicDistrict?.name}
+        selectedDistrict={activeTab === 'publicData' ? (selectedDistrict || selectedPublicDistrict?.name) : selectedDistrict}
         selectedCategory={selectedCategory}
         proposals={mockProposals}
       />

@@ -622,85 +622,224 @@ export const ReportExportModal: React.FC<Props> = ({
               </pre>
             ) : (
               <div id="printable-report-area" className="mt-4 min-h-0 flex-1 overflow-y-auto rounded-xl bg-white p-6 text-slate-900">
-                <div className="border-b border-slate-200 pb-4">
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-blue-700">
-                    {reportType === 'detailed' ? '실무자 상세 보고용' : '시장단 및 간부 브리핑용'}
-                  </p>
-                  <h3 className="mt-2 text-xl font-black leading-snug text-slate-950">
-                    [{selectedDept || selectedCategory || (selectedDistrict ? `${selectedDistrict}${isDistrictFallback ? ' (미상 연계)' : ''}` : '여성가족실 전체')}] 출산·양육 정책 수요 및 공급 Gap 종합보고서
-                  </h3>
-                  <div className="mt-3 flex flex-wrap gap-2 text-xs">
-                    <span className="rounded-full bg-slate-100 px-3 py-1 font-bold text-slate-700">
-                      수요 {scopedProposals.length.toLocaleString()}건
-                    </span>
-                    <span className="rounded-full bg-slate-100 px-3 py-1 font-bold text-slate-700">
-                      미답변 {reportData.unansweredCount.toLocaleString()}건
-                    </span>
-                    <span className="rounded-full bg-slate-100 px-3 py-1 font-bold text-slate-700">
-                      Gap {reportData.gapScore}점
-                    </span>
-                  </div>
-                </div>
-
-                <div className="mt-5 space-y-5">
-                  {selectedSections.length > 0 ? (
-                    selectedSections.map((section, index) => (
-                      <section key={section.key} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                        <div className="mb-3 flex items-center gap-2">
-                          <span className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-xs font-black text-white">
-                            {index + 1}
-                          </span>
-                          <div>
-                            <h4 className="text-sm font-black text-slate-950">{section.title}</h4>
-                            <p className="mt-0.5 text-xs text-slate-500">{section.summary}</p>
-                          </div>
+                {reportType === 'public-share' ? (
+                  /* 2026년 5월 성과 인포그래픽 공유 보고서 템플릿 */
+                  <div className="space-y-10 text-slate-800" style={{ fontFamily: 'Pretendard, Inter, sans-serif' }}>
+                    
+                    {/* [PAGE 1] */}
+                    <div className="page-break" style={{ pageBreakAfter: 'always' }}>
+                      {/* 헤더 */}
+                      <div className="flex justify-between items-baseline border-b-4 border-emerald-500 pb-3">
+                        <div>
+                          <h2 className="text-3xl font-black text-slate-900 tracking-tight">상상대로서울</h2>
+                          <p className="text-sm font-extrabold text-emerald-600 mt-1">데이터로 보는 상상대로서울</p>
                         </div>
-                        <ul className="space-y-2 text-sm leading-relaxed text-slate-700">
-                          {section.body.map((line, lineIndex) => {
-                            const isAcademic = section.key === 'academic';
-                            let paperTitle = "";
-                            if (isAcademic) {
-                              if (line.includes("오신휘")) paperTitle = "오신휘·김혜진 (2020)";
-                              else if (line.includes("성낙일")) paperTitle = "성낙일·박선권 (2012)";
-                              else if (line.includes("배기련")) paperTitle = "배기련 외 (2021)";
-                              else if (line.includes("육아정책")) paperTitle = "KICCE (2023)";
-                              else if (line.includes("박미경")) paperTitle = "박미경 (2022)";
-                              else if (line.includes("예산정책처")) paperTitle = "NABO 예산정책처";
-                            }
+                        <span className="text-lg font-black text-slate-400 font-mono">2026.05</span>
+                      </div>
 
-                            return (
-                              <li key={`${section.key}-${lineIndex}`} className="flex gap-2 items-start">
-                                <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
-                                <div className="flex-1">
-                                  <span>{line}</span>
-                                  {isAcademic && paperTitle && (
-                                    <button
-                                      type="button"
-                                      onClick={() => {
-                                        const matchedEvidence = getAcademicEvidenceItemsForModal(paperTitle);
-                                        if (matchedEvidence) {
-                                          setSelectedAcademicEvidenceForModal(matchedEvidence);
-                                        }
-                                      }}
-                                      className="text-slate-400 hover:text-blue-600 cursor-pointer inline-flex items-center justify-center p-0.5 rounded-full hover:bg-slate-100 transition align-middle ml-1.5"
-                                      title={`${paperTitle} 가설 검증 4단계 흐름 보기`}
-                                    >
-                                      <HelpCircle className="w-3 h-3" />
-                                    </button>
-                                  )}
-                                </div>
-                              </li>
-                            );
-                          })}
-                        </ul>
-                      </section>
-                    ))
-                  ) : (
-                    <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-8 text-center text-sm font-bold text-slate-500">
-                      추천 섹션을 하나 이상 선택하면 보고서 미리보기가 생성됩니다.
+                      {/* 3D 느낌의 메인 일러스트레이션 엠블럼 데코 */}
+                      <div className="my-8 bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-blue-500/10 p-6 rounded-2xl border border-emerald-100 flex items-center justify-between shadow-xs">
+                        <div className="space-y-2 max-w-md">
+                          <span className="bg-emerald-600 text-white font-bold text-[10px] px-2.5 py-0.5 rounded-full">성과 브리핑</span>
+                          <h3 className="text-xl font-black text-slate-800 leading-snug">
+                            시민이 제안하고 서울이 답하는<br />
+                            상상대로서울 5월 종합 현황
+                          </h3>
+                          <p className="text-[10.5px] text-slate-500 font-medium leading-relaxed">
+                            본 보고서는 실무진 외부 공유 및 부서 간 의사결정을 위해 시민 제안, 민원 키워드 및 행정 R&R 데이터를 기반으로 가공된 공식 공유 본부 보고서입니다.
+                          </p>
+                        </div>
+                        <div className="text-6xl select-none shrink-0">📊</div>
+                      </div>
+
+                      {/* 4대 주요 핵심 지표 카드 */}
+                      <div className="grid grid-cols-4 gap-3 my-6">
+                        {[
+                          { title: '총 활성 사용자', value: '7,259명', stat: '▼ 26.1% 감소', color: 'border-blue-200 bg-blue-50/30 text-blue-700' },
+                          { title: '재방문자', value: '3,592명', stat: '▼ 19.43% 감소', color: 'border-cyan-200 bg-cyan-50/30 text-cyan-700' },
+                          { title: '신규 방문자', value: '6,648명', stat: '▼ 26.08% 감소', color: 'border-emerald-200 bg-emerald-50/30 text-emerald-700' },
+                          { title: '조회수', value: '110,015건', stat: '▼ 25% 감소', color: 'border-slate-200 bg-slate-50 text-slate-700' }
+                        ].map((card, idx) => (
+                          <div key={idx} className={`p-4 rounded-xl border flex flex-col justify-between h-28 shadow-3xs ${card.color}`}>
+                            <span className="text-[10px] font-black opacity-80">{card.title}</span>
+                            <div>
+                              <div className="text-lg font-black tracking-tight">{card.value}</div>
+                              <span className="text-[9px] font-bold block mt-1 opacity-90">{card.stat}</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* 제안 현황 분석 카드 */}
+                      <div className="grid grid-cols-3 gap-4 my-6">
+                        <div className="col-span-1 p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex flex-col justify-between h-28">
+                          <span className="text-[10px] font-black text-slate-500">제안 수</span>
+                          <div className="text-3xl font-black text-slate-800 tracking-tight">144</div>
+                          <span className="text-[9.5px] font-semibold text-slate-400">신규 등록 건수</span>
+                        </div>
+                        <div className="col-span-1 p-4 rounded-xl border border-emerald-100 bg-emerald-50/20 flex flex-col justify-between h-28">
+                          <span className="text-[10px] font-black text-emerald-700">제안이 가장 많은 정책 분야</span>
+                          <div className="text-2xl font-black text-emerald-900 tracking-tight">교통</div>
+                          <span className="text-[9.5px] font-semibold text-emerald-600">지표 및 키워드 집중 분석</span>
+                        </div>
+                        <div className="col-span-1 p-4 rounded-xl border border-amber-100 bg-amber-50/20 flex flex-col justify-between h-28">
+                          <span className="text-[10px] font-black text-amber-700">공감이 가장 많은 정책 분야</span>
+                          <div className="text-2xl font-black text-amber-900 tracking-tight">교통</div>
+                          <span className="text-[9.5px] font-semibold text-amber-600">시민 여론 핵심 채널</span>
+                        </div>
+                      </div>
+
+                      <div className="border-t border-slate-150 pt-3 text-[10px] text-slate-400 flex justify-between font-medium">
+                        <span>상상대로서울 — 데이터로 보는 상상대로서울</span>
+                        <span>Page 01</span>
+                      </div>
                     </div>
-                  )}
-                </div>
+
+                    {/* [PAGE 2] */}
+                    <div className="page-break pt-4" style={{ pageBreakAfter: 'always' }}>
+                      <div className="flex justify-between items-baseline border-b-2 border-slate-200 pb-2 mb-6">
+                        <h3 className="text-xl font-black text-slate-900">이런 제안은 어때요? (1/2)</h3>
+                        <span className="text-[10px] font-bold text-slate-400">상상대로서울 5월 우수 제안 리스트</span>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-4">
+                        {REPRESENTATIVE_PROPOSALS.slice(0, 4).map((prop, idx) => (
+                          <div key={idx} className="bg-slate-50/50 p-4.5 rounded-xl border border-slate-200/60 flex flex-col justify-between min-h-[160px]">
+                            <div>
+                              <span className={`inline-block text-[8.5px] font-bold px-2 py-0.5 rounded-full mb-2 ${
+                                prop.category === '교통' ? 'bg-blue-50 text-blue-700 border border-blue-150' : 'bg-emerald-50 text-emerald-700 border border-emerald-150'
+                              }`}>
+                                {prop.category}
+                              </span>
+                              <h4 className="font-black text-[12px] text-slate-800 leading-snug">{prop.title}</h4>
+                              <p className="text-[10px] font-extrabold text-indigo-700 mt-1.5 leading-relaxed">{prop.quote}</p>
+                            </div>
+                            <p className="text-[9.5px] text-slate-600 mt-2 font-medium leading-relaxed">{prop.content}</p>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="border-t border-slate-150 pt-3 mt-16 text-[10px] text-slate-400 flex justify-between font-medium">
+                        <span>상상대로서울 — 데이터로 보는 상상대로서울</span>
+                        <span>Page 02</span>
+                      </div>
+                    </div>
+
+                    {/* [PAGE 3] */}
+                    <div className="page-break pt-4">
+                      <div className="flex justify-between items-baseline border-b-2 border-slate-200 pb-2 mb-6">
+                        <h3 className="text-xl font-black text-slate-900">이런 제안은 어때요? (2/2)</h3>
+                        <span className="text-[10px] font-bold text-slate-400">상상대로서울 5월 우수 제안 리스트</span>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-4">
+                        {REPRESENTATIVE_PROPOSALS.slice(4, 9).map((prop, idx) => (
+                          <div key={idx} className="bg-slate-50/50 p-4.5 rounded-xl border border-slate-200/60 flex flex-col justify-between min-h-[160px]">
+                            <div>
+                              <span className={`inline-block text-[8.5px] font-bold px-2 py-0.5 rounded-full mb-2 ${
+                                prop.category === '환경' ? 'bg-emerald-50 text-emerald-700 border border-emerald-150' : prop.category === '행정' ? 'bg-purple-50 text-purple-700 border border-purple-150' : 'bg-blue-50 text-blue-700 border border-blue-150'
+                              }`}>
+                                {prop.category}
+                              </span>
+                              <h4 className="font-black text-[12px] text-slate-800 leading-snug">{prop.title}</h4>
+                              <p className="text-[10px] font-extrabold text-indigo-700 mt-1.5 leading-relaxed">{prop.quote}</p>
+                            </div>
+                            <p className="text-[9.5px] text-slate-600 mt-2 font-medium leading-relaxed">{prop.content}</p>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="border-t border-slate-150 pt-3 mt-8 text-[10px] text-slate-400 flex justify-between font-medium">
+                        <span>상상대로서울 — 데이터로 보는 상상대로서울</span>
+                        <span>Page 03</span>
+                      </div>
+                    </div>
+
+                  </div>
+                ) : (
+                  /* 기존 담당자/간부 줄글 문서 보고서 템플릿 */
+                  <>
+                    <div className="border-b border-slate-200 pb-4">
+                      <p className="text-xs font-bold uppercase tracking-[0.2em] text-blue-700">
+                        {reportType === 'detailed' ? '실무자 상세 보고용' : '시장단 및 간부 브리핑용'}
+                      </p>
+                      <h3 className="mt-2 text-xl font-black leading-snug text-slate-950">
+                        [{selectedDept || selectedCategory || (selectedDistrict ? `${selectedDistrict}${isDistrictFallback ? ' (미상 연계)' : ''}` : '여성가족실 전체')}] 출산·양육 정책 수요 및 공급 Gap 종합보고서
+                      </h3>
+                      <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                        <span className="rounded-full bg-slate-100 px-3 py-1 font-bold text-slate-700">
+                          수요 {scopedProposals.length.toLocaleString()}건
+                        </span>
+                        <span className="rounded-full bg-slate-100 px-3 py-1 font-bold text-slate-700">
+                          미답변 {reportData.unansweredCount.toLocaleString()}건
+                        </span>
+                        <span className="rounded-full bg-slate-100 px-3 py-1 font-bold text-slate-700">
+                          Gap {reportData.gapScore}점
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="mt-5 space-y-5">
+                      {selectedSections.length > 0 ? (
+                        selectedSections.map((section, index) => (
+                          <section key={section.key} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                            <div className="mb-3 flex items-center gap-2">
+                              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-600 text-xs font-black text-white">
+                                {index + 1}
+                              </span>
+                              <div>
+                                <h4 className="text-sm font-black text-slate-950">{section.title}</h4>
+                                <p className="mt-0.5 text-xs text-slate-500">{section.summary}</p>
+                              </div>
+                            </div>
+                            <ul className="space-y-2 text-sm leading-relaxed text-slate-700">
+                              {section.body.map((line, lineIndex) => {
+                                const isAcademic = section.key === 'academic';
+                                let paperTitle = "";
+                                if (isAcademic) {
+                                  if (line.includes("오신휘")) paperTitle = "오신휘·김혜진 (2020)";
+                                  else if (line.includes("성낙일")) paperTitle = "성낙일·박선권 (2012)";
+                                  else if (line.includes("배기련")) paperTitle = "배기련 외 (2021)";
+                                  else if (line.includes("육아정책")) paperTitle = "KICCE (2023)";
+                                  else if (line.includes("박미경")) paperTitle = "박미경 (2022)";
+                                  else if (line.includes("예산정책처")) paperTitle = "NABO 예산정책처";
+                                }
+
+                                return (
+                                  <li key={`${section.key}-${lineIndex}`} className="flex gap-2 items-start">
+                                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" />
+                                    <div className="flex-1">
+                                      <span>{line}</span>
+                                      {isAcademic && paperTitle && (
+                                        <button
+                                          type="button"
+                                          onClick={() => {
+                                            const matchedEvidence = getAcademicEvidenceItemsForModal(paperTitle);
+                                            if (matchedEvidence) {
+                                              setSelectedAcademicEvidenceForModal(matchedEvidence);
+                                            }
+                                          }}
+                                          className="text-slate-400 hover:text-blue-600 cursor-pointer inline-flex items-center justify-center p-0.5 rounded-full hover:bg-slate-100 transition align-middle ml-1.5"
+                                          title={`${paperTitle} 가설 검증 4단계 흐름 보기`}
+                                        >
+                                          <HelpCircle className="w-3 h-3" />
+                                        </button>
+                                      )}
+                                    </div>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          </section>
+                        ))
+                      ) : (
+                        <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-8 text-center text-sm font-bold text-slate-500">
+                          추천 섹션을 하나 이상 선택하면 보고서 미리보기가 생성됩니다.
+                        </div>
+                      )}
+                    </div>
+                  </>
+                )}
               </div>
             )}
           </div>
