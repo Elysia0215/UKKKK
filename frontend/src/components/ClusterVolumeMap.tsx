@@ -85,22 +85,22 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
       <div className="bg-gradient-to-r from-[#0A2351] to-indigo-900 text-white p-6 rounded-2xl shadow-md flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="bg-rose-500 text-white text-[10px] font-extrabold px-2 py-0.5 rounded uppercase">KR-SBERT 의미적 분석</span>
-            <h3 className="text-lg font-black">의미적 군집 볼륨 지도 (Demand vs Supply 갭 탐색)</h3>
+            <span className="bg-rose-500 text-white text-[10px] font-extrabold px-2 py-0.5 rounded uppercase">AI 자연어 분석 기반</span>
+            <h3 className="text-lg font-black">시민 요구(제안·민원) 대비 행정 정책(공급) 사각지대 분포 지도</h3>
           </div>
           <p className="text-xs text-blue-100 font-medium">
-            426건 시민 제안의 의미적 49개 군집별 **수요 볼륨(제안수/공감도)**과 **몽땅정보 연관 정책 사업(공급)**을 비교 시각화합니다.
+            시민 제안 426건을 의미적으로 묶은 49개 요구 주제별 **시민 관심도(요청량)**와 서울시가 실제 공급 중인 **양육 정책 수** 간 격차를 시각화합니다.
           </p>
         </div>
         <div className="flex items-center gap-3 bg-white/10 backdrop-blur-xs px-4 py-2.5 rounded-xl border border-white/20 font-mono text-xs">
           <div>
-            <span className="block text-[10px] text-blue-200 font-sans">도출 군집 수</span>
-            <span className="font-bold text-base text-yellow-300">{clusterData.length}개 군집</span>
+            <span className="block text-[10px] text-blue-200 font-sans">분석된 시민 요구 주제</span>
+            <span className="font-bold text-base text-yellow-300">{clusterData.length}개 분야</span>
           </div>
           <div className="w-px h-6 bg-white/20" />
           <div>
-            <span className="block text-[10px] text-blue-200 font-sans">최고 공감 제안</span>
-            <span className="font-bold text-base text-emerald-300">5,346표 (#10)</span>
+            <span className="block text-[10px] text-blue-200 font-sans">최다 지지 제안</span>
+            <span className="font-bold text-base text-emerald-300">5,346표 (군집 #10)</span>
           </div>
         </div>
       </div>
@@ -110,9 +110,9 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
         <div className="flex justify-between items-center mb-2.5">
           <h4 className="text-xs font-extrabold text-rose-800 flex items-center gap-1.5">
             <AlertTriangle className="w-4 h-4 text-rose-600 animate-bounce" />
-            행정 최우선 대응 필요: 수요 대비 공급 부족 "정책 사각지대 Top 3 군집"
+            🚨 행정 최우선 대응 권고: 시민 요구 대비 정책 공급이 가장 부족한 "정책 사각지대 Top 3 문제"
           </h4>
-          <span className="text-[11px] text-rose-700 font-mono font-bold">실제 몽땅정보 322건 매칭 결과</span>
+          <span className="text-[11px] text-rose-700 font-mono font-bold">실제 서울시 양육 정책 322건 대조 결과</span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {topGapClusters.map((c, idx) => (
@@ -123,14 +123,14 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
             >
               <div className="flex justify-between items-center mb-1">
                 <span className="text-[10px] bg-rose-600 text-white font-bold px-1.5 py-0.5 rounded">
-                  사각지대 #{idx + 1}
+                  정책 공백 #{idx + 1}
                 </span>
-                <span className="text-[10px] text-slate-400 font-mono font-bold">군집 #{c.clusterId}</span>
+                <span className="text-[10px] text-slate-400 font-mono font-bold">주제 #{c.clusterId}</span>
               </div>
               <h5 className="text-xs font-bold text-slate-900 truncate mb-1.5">{c.representativeTitle}</h5>
               <div className="flex justify-between items-center text-[11px] font-mono border-t border-slate-100 pt-1.5">
-                <span className="text-slate-600">제안 {c.volume}건 (공감 {c.totalVotes.toLocaleString()}표)</span>
-                <span className="text-rose-600 font-bold bg-rose-50 px-1.5 py-0.5 rounded">연관사업 {c.supplyCount}개</span>
+                <span className="text-slate-600">요구 제안 {c.volume}건 (공감 {c.totalVotes.toLocaleString()}표)</span>
+                <span className="text-rose-600 font-bold bg-rose-50 px-1.5 py-0.5 rounded">시행 정책 {c.supplyCount}개</span>
               </div>
             </div>
           ))}
@@ -143,23 +143,23 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
           <div>
             <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
               <Layers className="text-blue-600 w-5 h-5" />
-              군집별 제안 수량(X축) vs 시민 총 공감도(Y축 - 로그스케일) 분포 지도
+              시민 요구 주제별 제안 건수(X축) vs 시민 공감 지수(Y축) 분포 현황
             </h4>
             <p className="text-xs text-slate-500 mt-0.5">
-              5,346표 최고 이상치가 넓게 조율되도록 로그 스케일을 적용했습니다. 버블 크기가 클수록 정책 사각지대 갭 지수가 높습니다.
+              공감도가 가장 높은 제안(5,346표)의 이상치를 왜곡 없이 표현하기 위해 로그 스케일을 적용했습니다. 버블 크기가 클수록 정책 공급 격차가 큽니다.
             </p>
           </div>
 
           {/* 색상 범례 (Legend) */}
           <div className="flex items-center gap-3 text-[11px] font-bold bg-slate-50 p-2 rounded-lg border border-slate-200">
-            <span className="text-slate-500 font-normal">위험도 범례:</span>
+            <span className="text-slate-500 font-normal">사각지대 위험 수준:</span>
             <div className="flex items-center gap-1 text-rose-600">
               <span className="w-2.5 h-2.5 rounded-full bg-rose-500" />
-              <span>🔴 고위험 (갭≥100)</span>
+              <span>🔴 정책 시급 (격차점수≥100)</span>
             </div>
             <div className="flex items-center gap-1 text-amber-600">
               <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
-              <span>🟡 중위험 (갭≥40)</span>
+              <span>🟡 보완 권장 (격차점수≥40)</span>
             </div>
             <div className="flex items-center gap-1 text-blue-600">
               <span className="w-2.5 h-2.5 rounded-full bg-blue-500" />
@@ -222,7 +222,7 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
                   return null;
                 }}
               />
-              <Scatter data={clusterData} onClick={(entry) => onSelectCluster?.(entry.clusterId, entry.category, entry.subCategory, entry.representativeTitle)} cursor="pointer">
+              <Scatter data={clusterData}>
                 {clusterData.map((entry) => {
                   let fillColor = '#3B82F6';
                   if (entry.riskLevel === 'HIGH') fillColor = '#EF4444';
@@ -234,6 +234,11 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
                       fillOpacity={0.75} 
                       stroke="#ffffff" 
                       strokeWidth={1.5}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onSelectCluster?.(entry.clusterId, entry.category, entry.subCategory, entry.representativeTitle);
+                      }}
+                      className="cursor-pointer hover:fill-opacity-100 transition-all duration-200"
                     />
                   );
                 })}
@@ -245,14 +250,36 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
         {/* 49개 전체 군집 탐색 아코디언 테이블 */}
         <div className="pt-2 border-t border-slate-200">
           <button
-            onClick={() => setShowAllClusters(!showAllClusters)}
-            className="w-full flex items-center justify-between p-3 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-200 text-xs font-bold text-slate-800 transition cursor-pointer"
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowAllClusters(!showAllClusters);
+            }}
+            className={`w-full flex items-center justify-between p-3.5 rounded-xl border transition-all duration-300 cursor-pointer shadow-3xs hover:shadow-2xs ${
+              showAllClusters 
+                ? 'bg-slate-100 hover:bg-slate-200 border-slate-300 text-slate-800' 
+                : 'bg-gradient-to-r from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border-blue-200 text-blue-900'
+            }`}
+            style={{ 
+              animation: !showAllClusters ? 'pulse 2s infinite' : 'none'
+            }}
           >
             <span className="flex items-center gap-2">
-              <Layers className="w-4 h-4 text-blue-600" />
-              전체 {clusterData.length}개 군집 수요-공급 갭지수 리스트 {showAllClusters ? '접기' : '전체보기'}
+              <Layers className="w-4 h-4 text-indigo-600 shrink-0" />
+              <span className="text-xs font-black">
+                📋 전체 {clusterData.length}개 시민 요구 주제별 정책 부족 격차 순위표
+              </span>
+              <span className={`text-[9.5px] font-extrabold px-2 py-0.5 rounded-full ml-1.5 transition-all ${
+                showAllClusters ? 'bg-slate-200 text-slate-700' : 'bg-blue-600 text-white'
+              }`}>
+                {showAllClusters ? '접기 ▴' : '💡 클릭해서 전체 목록 펼쳐보기 ▾'}
+              </span>
             </span>
-            {showAllClusters ? <ChevronUp className="w-4 h-4 text-slate-500" /> : <ChevronDown className="w-4 h-4 text-slate-500" />}
+            {showAllClusters ? (
+              <ChevronUp className="w-4 h-4 text-slate-600 stroke-[3]" />
+            ) : (
+              <ChevronDown className="w-4 h-4 text-indigo-600 stroke-[3]" />
+            )}
           </button>
 
           <AnimatePresence>
@@ -267,13 +294,26 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
                   <table className="w-full text-left text-xs">
                     <thead className="bg-slate-100 text-slate-700 font-bold sticky top-0 border-b border-slate-200">
                       <tr>
-                        <th className="p-2.5">군집 ID</th>
-                        <th className="p-2.5">위험도</th>
-                        <th className="p-2.5">대표 제안 제목</th>
-                        <th className="p-2.5 text-right">제안 수량</th>
-                        <th className="p-2.5 text-right">총 공감표</th>
-                        <th className="p-2.5 text-right">몽땅정보 사업수</th>
-                        <th className="p-2.5 text-right">갭지수</th>
+                        <th className="p-2.5">요구 주제 번호</th>
+                        <th className="p-2.5">사각지대 위험도</th>
+                        <th className="p-2.5">대표 시민 제안(수요)</th>
+                        <th className="p-2.5 text-right">제안 건수</th>
+                        <th className="p-2.5 text-right">공감 수</th>
+                        <th className="p-2.5 text-right">맞춤 정책 공급수</th>
+                        <th className="p-2.5 text-right relative group">
+                          <div className="inline-flex items-center gap-1 cursor-help justify-end w-full">
+                            <span>정책 부족 격차점수</span>
+                            <Info className="w-3.5 h-3.5 text-slate-400 group-hover:text-blue-600 transition" />
+                          </div>
+                          {/* 갭지수 한글 안내 설명 툴팁 */}
+                          <div className="absolute hidden group-hover:block bg-slate-900 text-white text-[9.5px] p-3 rounded-lg shadow-xl z-50 w-72 top-8 right-0 leading-relaxed border border-slate-700 pointer-events-none text-left font-sans normal-case tracking-normal">
+                            <span className="font-extrabold block text-rose-400 mb-1">🧮 정책 부족 격차점수 (Gap Score) 정의</span>
+                            시민들이 제안 및 민원으로 요청한 <strong className="text-rose-300">수요 강도</strong>에 비해 서울시가 공급하고 있는 <strong className="text-emerald-300">복지 정책 수</strong>의 불균형을 계량화한 점수입니다. 
+                            <p className="mt-1.5 text-slate-300 border-t border-slate-800 pt-1.5">
+                              * 격차 점수가 높을수록 시민 요구 대비 복지 공급망이 부족한 <strong>사각지대</strong>임을 뜻하여 행정 개입이 시급함을 의미합니다.
+                            </p>
+                          </div>
+                        </th>
                         <th className="p-2.5 text-center">이동</th>
                       </tr>
                     </thead>

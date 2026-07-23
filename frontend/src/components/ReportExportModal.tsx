@@ -15,60 +15,60 @@ import {
   HelpCircle,
 } from 'lucide-react';
 import { PolicyProposal } from '../types';
-const REPRESENTATIVE_PROPOSALS = [
+const FALLBACK_PROPOSALS = [
   {
-    category: '교통',
-    title: '서소문 고가의 문제점 개선 요청',
-    quote: '“시민 통행이 많은 경의선은 지하화 해야 합니다”',
-    content: '서소문 고가도로와 경의선 서소문 구간의 안전 문제가 오래전부터 우려되어 왔습니다. 최근 사고를 계기로 노후 시설에 대한 근본적인 대책 마련이 필요합니다. 서소문 구간은 지하화를 검토하고 철거 또는 안전성 재검토를 추진하여 시민 안전을 최우선으로 개선해주길 바랍니다.'
+    category: '임신·출산',
+    title: '임산부 스마트 배려 뱃지 도입 제안',
+    quote: '“대중교통 이용 시 눈치 보지 않고 배려받고 싶습니다”',
+    content: '초기 임산부는 외관상 구분이 어려워 대중교통 교통약자석 이용에 큰 불편을 겪습니다. 블루투스 비콘 기반의 스마트 배려 뱃지를 도입하여 임산부가 접근 시 좌석 LED 표시등이 켜지는 뱃지 태그 시스템을 구축해 주시기 바랍니다.'
   },
   {
-    category: '문화',
-    title: '감사의 정원에 대한 건의사항',
-    quote: '“감사의 마음을 기억하고 나눕시다”',
-    content: '광화문 감사의 정원은 우리나라를 도와준 국가들에 대한 감사의 마음을 나눌 수 있는 의미 있는 공간입니다. 각 조형물에 QR코드를 부착해 홈페이지로 연결하고 다국어 방명록과 방문 현황을 제공하면 참여와 소통이 훨씬 활발해질 것입니다.'
+    category: '보육·돌봄',
+    title: '아동식당 및 키즈 오케이존 지정 확대',
+    quote: '“아이와 함께 안심하고 외식할 수 있는 환경을”',
+    content: '노키즈존 확산으로 영유아 동반 부모들이 외식 시 겪는 심리적 위축이 큽니다. 서울시가 친아동 인증(키즈 오케이존) 식당을 전폭적으로 확대 지원하고 혜택을 부여하여 가족 친화적 지역 문화를 조성해야 합니다.'
   },
   {
-    category: '교통',
-    title: '따릉이 대여소 내 안장 물기 제거기 비치',
-    quote: '“모두의 대중교통을 위해”',
-    content: '따릉이를 이용할 때 비나 이슬로 젖은 안장 때문에 시민들이 겪는 불편이 큽니다. 대여소마다 간단한 물기 제거 스퀴지나 시트를 비치하면 안장을 손쉽게 닦고 쾌적하게 자전거를 이용해 만족도와 편의성이 대폭 올라갈 것입니다.'
+    category: '보육·돌봄',
+    title: '초등 돌봄교실 셔틀버스 원스톱 운영 건의',
+    quote: '“방과 후 학원과 돌봄교실 이동을 안전하게”',
+    content: '맞벌이 부부의 가장 큰 고민은 방과 후 아이의 돌봄 교실과 사설 학원 간의 이동 공백입니다. 권역별 초등 돌봄 원스톱 안심 셔틀버스를 운행하여 아동 교통사고 예방과 학부모의 인계 부담을 해소해 주시길 바랍니다.'
   },
   {
-    category: '문화',
-    title: '감사의 정원 관광화 개선 사업 제안',
-    quote: '“아름다운 시간을 공유해주세요”',
-    content: '감사의 정원은 야간 조명이 켜질 때 상징성이 더욱 돋보입니다. 시민들이 점등 시간을 쉽게 알 수 있도록 일몰 후 작동하는 조명 현장 안내를 제공하고 야간 명소로 발전시키면 도시 브랜드 제고에 긍정적인 효과가 기대됩니다.'
+    category: '임신·출산',
+    title: '다자녀 기준 완화 및 공공시설 할인 통합 제안',
+    quote: '“두 자녀 가구도 실질적인 다자녀 혜택을”',
+    content: '현행 다자녀 혜택이 3자녀 위주로 묶여 있어 체감 효과가 낮습니다. 서울시 다자녀 기준을 2자녀로 명확히 통일하고, 공영주차장, 박물관, 문화시설 등 공공 요금 감면 혜택을 모바일 다둥이 카드로 즉시 자동 적용해 주십시오.'
   },
   {
-    category: '환경',
-    title: '서울시 그린빌딩 도입 확대 제안',
-    quote: '“서울에 그린빌딩이 있다면”',
-    content: '건물 부문의 탄소 배출을 줄이기 위해 재개발 지역에 빗물 재활용, 친환경 자재 활용, 열회수 장치 등을 확대 도입해야 합니다. 서울시 차원의 그린빌딩 확산 조례와 혜택 등 정책적 제도 마련이 시급합니다.'
+    category: '일·생활 균형',
+    title: '남성 육아휴직 장려금 지급 기준 완화',
+    quote: '“아빠의 육아 참여가 자연스러운 사회를 위해”',
+    content: '중소기업에 재직 중인 남성 근로자는 소득 감소 우려와 사내 눈치로 육아휴직 사용율이 극히 저조합니다. 남성 육아휴직 동반 사용 시 서울시 차원의 추가 장려금 지원 요건을 대폭 완화하여 소득 공백을 메워주시기 바랍니다.'
   },
   {
-    category: '행정',
-    title: '친환경 플랫폼 및 제로웨이스트 지도 구축',
-    quote: '“친환경 서울시를 위한 정보 모음”',
-    content: '친환경 정보(리필 스테이션, 다회용기 매장 등)를 한눈에 볼 수 있는 플랫폼과 지도 앱을 구축해주길 제안합니다. 정보 접근성을 개선하면 시민들이 더 쉽게 자원순환을 실천하고 제로웨이스트 문화가 빠르게 퍼질 것입니다.'
+    category: '보육·돌봄',
+    title: '야간·주말 긴급 돌봄 거점 어린이집 증설',
+    quote: '“갑작스러운 야근이나 경조사에도 안심 돌봄을”',
+    content: '야간이나 주말에 긴급한 사정이 생겼을 때 아이를 맡길 곳이 없어 난감한 경우가 많습니다. 자치구별 최소 3개소 이상의 24시간 시간제 보육 지정 어린이집을 확보하고 모바일 예약 플랫폼 기능을 강화해 주시기 바랍니다.'
   },
   {
-    category: '환경',
-    title: '지자체의 이동노동자 쉼터 조례 제정',
-    quote: '“이동노동자를 위한 서울”',
-    content: '이동노동자 쉼터는 노동자의 휴식권 보장을 위해 필수적이나 자치구별 설치 편차가 심해 쉼터 조성을 의무화하는 표준 조례 제정이 필요합니다. 보다 안정적인 설치·운영 기반을 갖추는 노동친화 정책이 권고됩니다.'
+    category: '주거·생활',
+    title: '신혼부부 임차보증금 이자 지원 한도 확대',
+    quote: '“높은 전세자금 대출 이자 장벽을 허물어 주세요”',
+    content: '주거 비용 부담은 청년층이 결혼과 출산을 기피하는 가장 큰 원인입니다. 서울시 신혼부부 전세자금 대출 이자 지원 한도를 확대하고 소득 요건을 합산 1억 2천만 원 이하로 상향하여 주거 안정을 우선 보장해야 합니다.'
   },
   {
-    category: '교통',
-    title: '개인형 이동장치 안전 및 위생 개선',
-    quote: '“안전사고 없는 서울을 위해”',
-    content: '전동킥보드·자전거 무단 방치로 인한 보행 불편과 안전사고를 해소하기 위해 지정 반납 구역을 운영하고, 공용 헬멧의 위생 소독 필터링 등 철저한 안전 관리 체계를 구축해 보행 환경을 개선해주길 제안합니다.'
+    category: '정보·상담',
+    title: '출산양육 지원금 원스톱 자동 신청 시스템 구축',
+    quote: '“몰라서 신청 못 하는 혜택이 없도록”',
+    content: '출산축하금, 첫만남이용권, 아동수당 등 지급 주체와 신청 경로가 너무 파편화되어 있습니다. 주민등록 출생 신고와 동시에 모든 수당 및 서비스가 원스톱으로 일괄 자동 신청·지급되도록 행정 전산망을 연계해 주십시오.'
   },
   {
-    category: '교통',
-    title: '찾아나서는 바닥신호등 고장 수리 지원',
-    quote: '“어린이가 위험해요! 안전한 서울을 위해”',
-    content: '초등학교와 유치원 주변 어린이 보호구역에 설치된 바닥신호등이 장시간 고장 방치되는 사례가 많습니다. 정기 점검 기간을 선제 가동해 신속히 보수하는 스마트 어린이 교통안전 체계 구축이 강력히 요구됩니다.'
+    category: '임신·출산',
+    title: '임산부 교통비 및 친환경 농산물 꾸러미 통합 지원',
+    quote: '“건강한 출산 준비를 서울시가 함께”',
+    content: '임산부를 위한 교통비 바우처와 영양 지원을 위한 친환경 꾸러미 사업 신청 절차가 복잡합니다. 보건소 임산부 등록과 동시에 이 두 혜택이 원스톱 자동 배송 및 포인트 지급이 연동되도록 대민 안내를 개편해야 합니다.'
   }
 ];
 
@@ -209,6 +209,25 @@ export const ReportExportModal: React.FC<Props> = ({
       gapScore,
     };
   }, [scopedProposals, selectedCategory, selectedDept, selectedDistrict]);
+
+  const mergedProposals = useMemo(() => {
+    const dynamicItems = scopedProposals.map((p) => ({
+      category: String(p.category || '보육·돌봄'),
+      title: String(p.title),
+      quote: p.title.length > 25 ? `“${p.title.slice(0, 25)}...”` : `“${p.title}”`,
+      content: String(p.content || '지원 조건 및 상세 추진 방안을 수렴하여 개선 조치를 검토합니다.')
+    }));
+    const combined = [...dynamicItems, ...FALLBACK_PROPOSALS];
+    return combined.slice(0, 9);
+  }, [scopedProposals]);
+
+  const topCategoryName = useMemo(() => {
+    return reportData.topCategories[0]?.[0] || '보육·돌봄';
+  }, [reportData.topCategories]);
+
+  const topVotedCategory = useMemo(() => {
+    return reportData.topProposal?.category || '임신·출산';
+  }, [reportData.topProposal]);
 
   const sections = useMemo<ReportSection[]>(() => {
     const today = new Date().toLocaleDateString('ko-KR', {
@@ -674,17 +693,19 @@ export const ReportExportModal: React.FC<Props> = ({
                       <div className="grid grid-cols-3 gap-4 my-6">
                         <div className="col-span-1 p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex flex-col justify-between h-28">
                           <span className="text-[10px] font-black text-slate-500">제안 수</span>
-                          <div className="text-3xl font-black text-slate-800 tracking-tight">144</div>
+                          <div className="text-3xl font-black text-slate-800 tracking-tight">
+                            {scopedProposals.length > 0 ? scopedProposals.length.toLocaleString() : '144'}
+                          </div>
                           <span className="text-[9.5px] font-semibold text-slate-400">신규 등록 건수</span>
                         </div>
                         <div className="col-span-1 p-4 rounded-xl border border-emerald-100 bg-emerald-50/20 flex flex-col justify-between h-28">
                           <span className="text-[10px] font-black text-emerald-700">제안이 가장 많은 정책 분야</span>
-                          <div className="text-2xl font-black text-emerald-900 tracking-tight">교통</div>
+                          <div className="text-2xl font-black text-emerald-900 tracking-tight">{topCategoryName}</div>
                           <span className="text-[9.5px] font-semibold text-emerald-600">지표 및 키워드 집중 분석</span>
                         </div>
                         <div className="col-span-1 p-4 rounded-xl border border-amber-100 bg-amber-50/20 flex flex-col justify-between h-28">
                           <span className="text-[10px] font-black text-amber-700">공감이 가장 많은 정책 분야</span>
-                          <div className="text-2xl font-black text-amber-900 tracking-tight">교통</div>
+                          <div className="text-2xl font-black text-amber-900 tracking-tight">{topVotedCategory}</div>
                           <span className="text-[9.5px] font-semibold text-amber-600">시민 여론 핵심 채널</span>
                         </div>
                       </div>
@@ -703,11 +724,15 @@ export const ReportExportModal: React.FC<Props> = ({
                       </div>
 
                       <div className="grid grid-cols-2 gap-4">
-                        {REPRESENTATIVE_PROPOSALS.slice(0, 4).map((prop, idx) => (
+                        {mergedProposals.slice(0, 4).map((prop, idx) => (
                           <div key={idx} className="bg-slate-50/50 p-4.5 rounded-xl border border-slate-200/60 flex flex-col justify-between min-h-[160px]">
                             <div>
                               <span className={`inline-block text-[8.5px] font-bold px-2 py-0.5 rounded-full mb-2 ${
-                                prop.category === '교통' ? 'bg-blue-50 text-blue-700 border border-blue-150' : 'bg-emerald-50 text-emerald-700 border border-emerald-150'
+                                prop.category.includes('출산') || prop.category.includes('임신') 
+                                  ? 'bg-rose-50 text-rose-700 border border-rose-150' 
+                                  : prop.category.includes('돌봄') || prop.category.includes('보육')
+                                    ? 'bg-blue-50 text-blue-700 border border-blue-150' 
+                                    : 'bg-emerald-50 text-emerald-700 border border-emerald-150'
                               }`}>
                                 {prop.category}
                               </span>
@@ -733,11 +758,15 @@ export const ReportExportModal: React.FC<Props> = ({
                       </div>
 
                       <div className="grid grid-cols-2 gap-4">
-                        {REPRESENTATIVE_PROPOSALS.slice(4, 9).map((prop, idx) => (
+                        {mergedProposals.slice(4, 9).map((prop, idx) => (
                           <div key={idx} className="bg-slate-50/50 p-4.5 rounded-xl border border-slate-200/60 flex flex-col justify-between min-h-[160px]">
                             <div>
                               <span className={`inline-block text-[8.5px] font-bold px-2 py-0.5 rounded-full mb-2 ${
-                                prop.category === '환경' ? 'bg-emerald-50 text-emerald-700 border border-emerald-150' : prop.category === '행정' ? 'bg-purple-50 text-purple-700 border border-purple-150' : 'bg-blue-50 text-blue-700 border border-blue-150'
+                                prop.category.includes('출산') || prop.category.includes('임신') 
+                                  ? 'bg-rose-50 text-rose-700 border border-rose-150' 
+                                  : prop.category.includes('돌봄') || prop.category.includes('보육')
+                                    ? 'bg-blue-50 text-blue-700 border border-blue-150' 
+                                    : 'bg-emerald-50 text-emerald-700 border border-emerald-150'
                               }`}>
                                 {prop.category}
                               </span>

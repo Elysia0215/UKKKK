@@ -606,7 +606,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
     }));
   }, [periodFilteredDiagnoses]);
 
-  // 테이블 그룹화
+  // 테이블 그룹화 및 내부 클러스터 점수별 정렬
   const groupedDiagnoses = useMemo(() => {
     const groups: Record<string, typeof periodFilteredDiagnoses> = {};
     periodFilteredDiagnoses.forEach(d => {
@@ -614,6 +614,10 @@ export const GapMatrixDashboard: React.FC<Props> = ({
         groups[d.category] = [];
       }
       groups[d.category].push(d);
+    });
+    // 각 카테고리 그룹 내부의 세부 클러스터들을 priority_score 내림차순으로 정렬!
+    Object.keys(groups).forEach(cat => {
+      groups[cat].sort((a, b) => b.priority_score - a.priority_score);
     });
     return groups;
   }, [periodFilteredDiagnoses]);
@@ -1302,8 +1306,8 @@ export const GapMatrixDashboard: React.FC<Props> = ({
           </div>
         </div>
 
-        {/* 4. 오른쪽 영역: 문제 클러스터 진단 상세 패널 */}
-        <div className="bg-white rounded-xl border border-slate-200 shadow-2xs overflow-hidden flex flex-col justify-between h-[calc(100vh-140px)] sticky top-24 self-start w-full min-h-[500px]">
+        {/* 4. 오른쪽 영역: 문제 클러스터 진단 상세 패널 (높이 가두기 및 sticky 네비게이터화) */}
+        <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between h-[calc(100vh-100px)] max-h-[calc(100vh-100px)] sticky top-20 self-start w-full min-h-[460px] pb-0.5">
           {!selectedIssue ? (
             <div className="p-8 text-center my-auto flex flex-col items-center justify-center space-y-3">
               <HelpCircle className="w-10 h-10 text-slate-300 animate-bounce" />
@@ -1404,21 +1408,46 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                         className="text-[10px] px-2 py-1 bg-blue-600 text-white rounded-md font-bold"
                       >적용</button>
                     </div>
-                    <div className="text-[9px] text-slate-500 flex items-center gap-1">
+                    <div className="text-[9px] text-slate-500 flex items-center gap-1 relative group">
                       적용된 방법론: <strong className="text-slate-700">{PAPER_METHODS[appliedMethod]?.label || '기본'}</strong>
-                      {appliedMethod !== 'default' && (
-                        <button
-                          onClick={() => {
-                            const title = appliedMethod === 'park2022' ? '박미경 (2022)' : 'KICCE (2023)';
-                            setSelectedProofPaper(title);
-                            setShowProofModal(true);
-                          }}
-                          className="text-slate-400 hover:text-indigo-600 cursor-pointer flex items-center"
-                          title="적용 방법론의 4단계 가설 실증 흐름 보기"
-                        >
-                          <Info className="w-3.5 h-3.5 text-indigo-500 animate-pulse" />
-                        </button>
-                      )}
+                      <button
+                        onClick={() => {
+                          const title = 
+                            appliedMethod === 'park2022' ? '박미경 (2022)' : 
+                            appliedMethod === 'kicce2023' ? 'KICCE (2023)' : '기본 가중치';
+                          setSelectedProofPaper(title);
+                          setShowProofModal(true);
+                        }}
+                        className="text-slate-400 hover:text-indigo-600 cursor-pointer flex items-center"
+                        title="적용 방법론의 4단계 가설 실증 흐름 보기"
+                      >
+                        <Info className="w-3.5 h-3.5 text-indigo-500 animate-pulse" />
+                      </button>
+                      
+                      {/* 가중치 설명 호버 툴팁 */}
+                      <div className="absolute hidden group-hover:block bg-slate-900 text-white text-[9.5px] p-3 rounded-lg shadow-xl z-50 w-72 -top-24 -left-60 leading-relaxed border border-slate-700 pointer-events-none text-left animate-in fade-in duration-200">
+                        {appliedMethod === 'default' && (
+                          <>
+                            <span className="font-extrabold block text-indigo-300 mb-1">⚖️ 기본 균형 가중치</span>
+                            시민 수요(30%), 정책 공백(25%), 시급성(25%), 실행성(10%), 신뢰도(10%)를 고르게 혼합하여 종합 우선순위를 도출하는 표준 가중치 모델입니다.
+                          </>
+                        )}
+                        {appliedMethod === 'park2022' && (
+                          <>
+                            <span className="font-extrabold block text-blue-300 mb-1">👶 박미경 (2022) 우선순위 모델</span>
+                            Borich 및 IPA 요구도 분석에 기반하여, 시민들의 직접적인 돌봄/보육 수요 강도(40%)와 시급성(20%), 공백도(20%)에 가장 높은 우선권을 배정하여 현장 요구에 부응하는 가중치 모델입니다.
+                          </>
+                        )}
+                        {appliedMethod === 'kicce2023' && (
+                          <>
+                            <span className="font-extrabold block text-rose-300 mb-1">🗺️ KICCE (2023) 지역형 형평성 가중치</span>
+                            육아정책연구소 통계 지표에 기반하여, 자치구별 양육 인프라 공급 공백 격차(40%)와 수요(20%), 시급성(20%)에 가중치를 두어 행정 공급망의 공간적 불균형 해소에 초점을 맞춘 가중치 모델입니다.
+                          </>
+                        )}
+                        <span className="block mt-1.5 text-[8.5px] text-slate-400 border-t border-slate-800 pt-1">
+                          * 클릭 시 4단계 실증 분석 시각화 팝업이 노출됩니다.
+                        </span>
+                      </div>
                     </div>
                   </div>
                   <h4 className="text-[10px] font-black text-slate-800">📊 5대 진단 축 상세 분석</h4>
@@ -1427,14 +1456,14 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                     {([
                       {
                         key: 'demand',
-                        label: '수요 강도 (Demand Strength)',
+                        label: '시민 요구 강도 (Demand Strength)',
                         value: selectedIssue.demand,
                         bar: 'bg-[#0A2351]',
                         evidence: `이 클러스터로 분류된 제안·민원 건수(${selectedIssue.item_count}건)를 기준으로 산정합니다. 공식: 25 + 75 × log(1+건수) / log(1+동일 카테고리 내 최다 건수 클러스터). 건수가 많을수록 높아지되, 특정 클러스터로의 쏠림을 완화하기 위해 로그 스케일을 사용합니다.`
                       },
                       {
                         key: 'policy_gap',
-                        label: '정책 공백 (Policy Gap)',
+                        label: '정책 공급 공백 (Policy Gap)',
                         value: selectedIssue.policy_gap,
                         bar: 'bg-rose-500',
                         evidence: `공식: 0.6 × 미해결도(unresolved) + 0.4 × (100 − 기존 정책 커버리지). 그룹 내 건들의 '아직 해결되지 않았는가'와 '현행 정책이 이미 다루고 있는가'를 평균 내어, 미해결이면서 현행 정책이 못 미치는 문제일수록 공백 점수가 높게 나옵니다.`
@@ -1448,14 +1477,14 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                       },
                       {
                         key: 'feasibility',
-                        label: '실행 가능성 (Feasibility)',
+                        label: '행정 실행 가능성 (Feasibility)',
                         value: selectedIssue.feasibility,
                         bar: 'bg-blue-600',
                         evidence: `건별로 입력된 실행가능성 점수가 있으면 그 평균을, 없으면 '안내·홍보·기준·절차·신청·정보·개선' 등 비교적 실행이 쉬운 키워드 포함 여부로 기본값(45~60)을 추정해 반영합니다.`
                       },
                       {
                         key: 'evidence_confidence',
-                        label: '근거 신뢰도 (Evidence Confidence)',
+                        label: 'AI 분석 신뢰도 (Evidence Confidence)',
                         value: selectedIssue.evidence_confidence,
                         bar: 'bg-indigo-600',
                         evidence: `공식: 35 + 0.35 × 출처 다양성 + 30 × 데이터 완성도. 출처 다양성은 서로 다른 출처 수(현재 ${selectedIssue.source_count}개) × 20(최대 100)으로 계산하고, 완성도는 각 건에 시급성·실행가능성·미해결·정책커버리지 값이 얼마나 채워져 있는지 비율입니다. 표본이 적거나 출처가 한 곳뿐이면 신뢰도가 낮게 나옵니다.`

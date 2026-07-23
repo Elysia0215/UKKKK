@@ -535,41 +535,39 @@ export default function App() {
                         </div>
 
                         {/* Right Column (lg:col-span-5): SELECTED DISTRICT Summary Card */}
-                        <div className="lg:col-span-5 bg-[#0A2351] text-white rounded-xl p-6 shadow-inner border border-slate-800 flex flex-col justify-between h-full">
+                        <div className="lg:col-span-5 bg-[#0A2351] text-white rounded-xl p-5 shadow-inner border border-slate-800 flex flex-col justify-between h-full min-h-[340px]">
                           <div>
-                            <span className="text-[10px] uppercase text-blue-200 tracking-[0.3em] font-bold">SELECTED DISTRICT</span>
-                            <h2 className="text-3xl font-black text-white mt-2">{selectedPublicDistrict.name}</h2>
-                            <p className="mt-2 text-xs text-slate-300">
-                              지도 구역 또는 아래 칩 버튼을 클릭하면 해당 자치구의 통계 요약이 즉시 갱신됩니다.
-                            </p>
+                            <span className="text-[10px] uppercase text-indigo-300 tracking-[0.3em] font-bold">SELECTED DISTRICT</span>
+                            <h2 className="text-3xl font-black text-white mt-1.5">{selectedPublicDistrict.name}</h2>
                           </div>
 
-                          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div className="rounded-xl bg-white text-slate-800 p-4 shadow-sm">
-                              <p className="text-[10px] uppercase text-slate-400 font-bold tracking-wider">출생아 수</p>
-                              <p className="mt-2 text-2xl font-black text-[#0A2351]">{selectedPublicDistrict.births2025.toLocaleString()}명</p>
-                              <p className="text-[10px] text-slate-400 mt-1">2025년 기준 (잠정)</p>
+                          <div className="grid grid-cols-3 gap-3">
+                            <div className="rounded-lg bg-white/95 text-slate-800 p-3 shadow-xs border border-white/10 flex flex-col justify-between">
+                              <p className="text-[9px] uppercase text-slate-500 font-extrabold tracking-wider">출생아 수</p>
+                              <p className="mt-1.5 text-base sm:text-lg font-black text-[#0A2351] tracking-tight">{selectedPublicDistrict.births2025.toLocaleString()}명</p>
+                              <p className="text-[8px] text-slate-400 mt-1">2025년 잠정</p>
                             </div>
                             
-                            <div className="rounded-xl bg-white text-slate-800 p-4 shadow-sm">
-                              <p className="text-[10px] uppercase text-slate-400 font-bold tracking-wider">보육시설 수</p>
-                              <p className="mt-2 text-2xl font-black text-[#0A2351]">{selectedPublicDistrict.daycare2025.toLocaleString()}개소</p>
-                              <p className="text-[10px] text-slate-400 mt-1">2025년 기준</p>
+                            <div className="rounded-lg bg-white/95 text-slate-800 p-3 shadow-xs border border-white/10 flex flex-col justify-between">
+                              <p className="text-[9px] uppercase text-slate-500 font-extrabold tracking-wider">보육시설</p>
+                              <p className="mt-1.5 text-base sm:text-lg font-black text-[#0A2351] tracking-tight">{selectedPublicDistrict.daycare2025.toLocaleString()}개소</p>
+                              <p className="text-[8px] text-slate-400 mt-1">2025년 기준</p>
                             </div>
 
-                            <div className="rounded-xl bg-white text-slate-800 p-4 shadow-sm sm:col-span-2">
-                              <p className="text-[10px] uppercase text-slate-400 font-bold tracking-wider">합계출산율</p>
-                              <p className="mt-2 text-2xl font-black text-[#0A2351]">{selectedPublicDistrict.fertilityRate.toFixed(3)}명</p>
-                              <p className="text-[10px] text-slate-400 mt-1">2025년 기준 (잠정)</p>
+                            <div className="rounded-lg bg-white/95 text-slate-800 p-3 shadow-xs border border-white/10 flex flex-col justify-between">
+                              <p className="text-[9px] uppercase text-slate-500 font-extrabold tracking-wider">합계출산율</p>
+                              <p className="mt-1.5 text-base sm:text-lg font-black text-rose-600 tracking-tight">{selectedPublicDistrict.fertilityRate.toFixed(3)}</p>
+                              <p className="text-[8px] text-slate-400 mt-1">2025년 잠정</p>
                             </div>
                           </div>
 
-                          <div className="mt-6 pt-4 border-t border-white/10 text-[11px] text-slate-300">
-                            💡 공공데이터 지표 비교분석 가이드: 위 2D 행정구역 지도는 실시간 동기화되어 움직입니다. 2D 지도의 음영은 해당 자치구의{' '}
-                            <strong className="text-white">
-                              "{publicColorMetric === 'fertility' ? '합계출산율' : publicColorMetric === 'births' ? '출생아 수' : publicColorMetric === 'daycare' ? '보육시설 수' : '정책 수요 점수'}"
-                            </strong>{' '}
-                            지표에 비례하여 진행됩니다.
+                          <div className="pt-3 border-t border-white/10 text-[10px] text-indigo-200 leading-normal flex items-start gap-1">
+                            <span className="shrink-0 mt-0.5">💡</span>
+                            <span>2D 지도의 음영은 선택한 지표 "{
+                              publicColorMetric === 'fertility' ? '합계출산율' : 
+                              publicColorMetric === 'births' ? '출생아 수' : 
+                              publicColorMetric === 'daycare' ? '보육시설 수' : '정책 수요 점수'
+                            }"의 강도에 비례합니다.</span>
                           </div>
                         </div>
                       </div>
