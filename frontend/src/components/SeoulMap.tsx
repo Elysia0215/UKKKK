@@ -66,7 +66,7 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
     <div className="w-full flex items-center justify-center">
       <svg 
         viewBox="0 0 800 520" 
-        className="w-full h-auto max-h-[380px] bg-transparent" 
+        className="w-full h-auto max-h-[460px] bg-transparent" 
         role="img" 
         aria-label="서울시 자치구 실제 행정구역 지도"
       >

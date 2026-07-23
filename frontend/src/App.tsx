@@ -521,8 +521,8 @@ export default function App() {
                       </div>
 
                       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-                        {/* Left Column (lg:col-span-5): Map */}
-                        <div className="lg:col-span-5 bg-slate-50/20 rounded-xl border border-slate-200/50 flex items-center justify-center p-2">
+                        {/* Left Column (lg:col-span-7): Map (기존 대비 시각적 크기를 확대) */}
+                        <div className="lg:col-span-7 bg-slate-50/20 rounded-xl border border-slate-200/50 flex items-center justify-center p-4">
                           <SeoulMap
                             selectedDistrict={selectedPublicDistrict}
                             onSelectDistrict={setSelectedPublicDistrict}
@@ -532,8 +532,8 @@ export default function App() {
                           />
                         </div>
 
-                        {/* Right Column (lg:col-span-7): SELECTED DISTRICT Summary Card */}
-                        <div className="lg:col-span-7 bg-[#0A2351] text-white rounded-xl p-6 shadow-inner border border-slate-800 flex flex-col justify-between h-full">
+                        {/* Right Column (lg:col-span-5): SELECTED DISTRICT Summary Card */}
+                        <div className="lg:col-span-5 bg-[#0A2351] text-white rounded-xl p-6 shadow-inner border border-slate-800 flex flex-col justify-between h-full">
                           <div>
                             <span className="text-[10px] uppercase text-blue-200 tracking-[0.3em] font-bold">SELECTED DISTRICT</span>
                             <h2 className="text-3xl font-black text-white mt-2">{selectedPublicDistrict.name}</h2>
