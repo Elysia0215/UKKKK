@@ -1,0 +1,152 @@
+[
+  {
+    "district": "종로구",
+    "tfr": 0.448,
+    "births_total": 437,
+    "childcare_facility_count": 61
+  },
+  {
+    "district": "중구",
+    "tfr": 0.59,
+    "births_total": 612,
+    "childcare_facility_count": 64
+  },
+  {
+    "district": "용산구",
+    "tfr": 0.575,
+    "births_total": 1045,
+    "childcare_facility_count": 84
+  },
+  {
+    "district": "성동구",
+    "tfr": 0.714,
+    "births_total": 1666,
+    "childcare_facility_count": 133
+  },
+  {
+    "district": "광진구",
+    "tfr": 0.462,
+    "births_total": 1263,
+    "childcare_facility_count": 119
+  },
+  {
+    "district": "동대문구",
+    "tfr": 0.589,
+    "births_total": 1441,
+    "childcare_facility_count": 169
+  },
+  {
+    "district": "중랑구",
+    "tfr": 0.61,
+    "births_total": 1733,
+    "childcare_facility_count": 161
+  },
+  {
+    "district": "성북구",
+    "tfr": 0.603,
+    "births_total": 1710,
+    "childcare_facility_count": 174
+  },
+  {
+    "district": "강북구",
+    "tfr": 0.446,
+    "births_total": 751,
+    "childcare_facility_count": 103
+  },
+  {
+    "district": "도봉구",
+    "tfr": 0.568,
+    "births_total": 1046,
+    "childcare_facility_count": 138
+  },
+  {
+    "district": "노원구",
+    "tfr": 0.671,
+    "births_total": 2063,
+    "childcare_facility_count": 253
+  },
+  {
+    "district": "은평구",
+    "tfr": 0.54,
+    "births_total": 1837,
+    "childcare_facility_count": 181
+  },
+  {
+    "district": "서대문구",
+    "tfr": 0.625,
+    "births_total": 1411,
+    "childcare_facility_count": 123
+  },
+  {
+    "district": "마포구",
+    "tfr": 0.515,
+    "births_total": 1721,
+    "childcare_facility_count": 159
+  },
+  {
+    "district": "양천구",
+    "tfr": 0.592,
+    "births_total": 1588,
+    "childcare_facility_count": 179
+  },
+  {
+    "district": "강서구",
+    "tfr": 0.583,
+    "births_total": 2793,
+    "childcare_facility_count": 261
+  },
+  {
+    "district": "구로구",
+    "tfr": 0.702,
+    "births_total": 2110,
+    "childcare_facility_count": 219
+  },
+  {
+    "district": "금천구",
+    "tfr": 0.52,
+    "births_total": 884,
+    "childcare_facility_count": 100
+  },
+  {
+    "district": "영등포구",
+    "tfr": 0.627,
+    "births_total": 2174,
+    "childcare_facility_count": 196
+  },
+  {
+    "district": "동작구",
+    "tfr": 0.609,
+    "births_total": 1793,
+    "childcare_facility_count": 152
+  },
+  {
+    "district": "관악구",
+    "tfr": 0.396,
+    "births_total": 1521,
+    "childcare_facility_count": 149
+  },
+  {
+    "district": "서초구",
+    "tfr": 0.605,
+    "births_total": 1858,
+    "childcare_facility_count": 160
+  },
+  {
+    "district": "강남구",
+    "tfr": 0.618,
+    "births_total": 2614,
+    "childcare_facility_count": 166
+  },
+  {
+    "district": "송파구",
+    "tfr": 0.58,
+    "births_total": 3166,
+    "childcare_facility_count": 280
+  },
+  {
+    "district": "강동구",
+    "tfr": 0.664,
+    "births_total": 2368,
+    "childcare_facility_count": 226
+  }
+]
