@@ -52,30 +52,26 @@ export const StatCharts: React.FC<StatChartsProps> = ({
   const districtChartData = useMemo(() => {
     const list = [...SEOUL_DISTRICTS_DATA];
     const chartList = list.map((d) => {
-      const propCount = proposals ? proposals.filter((p: any) => p.district === d.name).length : d.proposals;
       return {
         district: d.name,
-        "시민 제안수": propCount,
         "출생아수(명)": d.births2025,
-        "보육시설수(x10개)": d.daycare2025 * 10,
+        "보육시설수(개소)": d.daycare2025,
         original: d,
       };
     });
 
     if (includeUnassigned && proposals) {
-      const unassignedCount = proposals.filter((p: any) => p.district === "미상" || !p.district).length;
       chartList.push({
         district: "서울시 전체 (미상)",
-        "시민 제안수": unassignedCount,
         "출생아수(명)": 39400,
-        "보육시설수(x10개)": 4310 * 10,
+        "보육시설수(개소)": 4310,
         original: {
           name: "미상",
           engName: "Unassigned",
           path: "",
           labelX: 0,
           labelY: 0,
-          proposals: unassignedCount,
+          proposals: 0,
           births2025: 39400,
           daycare2025: 4310,
           demandScore: 0,
@@ -110,9 +106,8 @@ export const StatCharts: React.FC<StatChartsProps> = ({
         <div className="bg-slate-900 text-white p-3 rounded-xl border border-slate-800 shadow-xl text-xs font-mono">
           <p className="font-bold text-sm text-indigo-300 mb-1">{data.name || data.district}</p>
           <div className="flex flex-col gap-1 text-[11px] text-slate-300">
-            <p>시민제안: <span className="text-red-400 font-bold">{(data.original ? data.original.proposals : data["시민 제안수"])}건</span></p>
             <p>출생아 수: <span className="text-purple-300 font-bold">{(data.births || data["출생아수(명)"]).toLocaleString()}명</span></p>
-            <p>보육시설: <span className="text-amber-300 font-bold">{(data.daycare || Math.round(data["보육시설수(x10개)"] / 10))}개소</span></p>
+            <p>보육시설: <span className="text-amber-300 font-bold">{(data.daycare || data["보육시설수(개소)"])}개소</span></p>
             {data.fertility && <p>합계출산율: <span className="text-emerald-400 font-bold">{data.fertility.toFixed(3)}</span></p>}
           </div>
         </div>
@@ -150,11 +145,11 @@ export const StatCharts: React.FC<StatChartsProps> = ({
           .join("\n");
       fileName = "seoul_districts_demographics_table.csv";
     } else if (activeTab === "scaling") {
-      csvContent = "자치구명,시민제안수(건),출생아수(명),보육시설수(개소)\n" +
+      csvContent = "자치구명,출생아수(명),보육시설수(개소)\n" +
         districtChartData
-          .map(d => `${d.district},${d["시민 제안수"]},${d["출생아수(명)"]},${Math.round(d["보육시설수(x10개)"] / 10)}`)
+          .map(d => `${d.district},${d["출생아수(명)"]},${d["보육시설수(개소)"]}`)
           .join("\n");
-      fileName = "seoul_proposals_vs_infrastructure_scaling.csv";
+      fileName = "seoul_infrastructure_comparison.csv";
     }
     
     const blob = new Blob(["\uFEFF" + csvContent], { type: "text/csv;charset=utf-8;" });
@@ -182,7 +177,7 @@ export const StatCharts: React.FC<StatChartsProps> = ({
           <div className="flex bg-slate-100 p-1 rounded-xl">
             <button
               onClick={() => setActiveTab('ranking')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 cursor-pointer ${
                 activeTab === 'ranking' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -190,7 +185,7 @@ export const StatCharts: React.FC<StatChartsProps> = ({
             </button>
             <button
               onClick={() => setActiveTab('distribution')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 cursor-pointer ${
                 activeTab === 'distribution' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -198,7 +193,7 @@ export const StatCharts: React.FC<StatChartsProps> = ({
             </button>
             <button
               onClick={() => setActiveTab('policy')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 cursor-pointer ${
                 activeTab === 'policy' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -206,7 +201,7 @@ export const StatCharts: React.FC<StatChartsProps> = ({
             </button>
             <button
               onClick={() => setActiveTab('scaling')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 cursor-pointer ${
                 activeTab === 'scaling' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -214,7 +209,7 @@ export const StatCharts: React.FC<StatChartsProps> = ({
             </button>
             <button
               onClick={() => setActiveTab('table')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 cursor-pointer ${
                 activeTab === 'table' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-800'
               }`}
             >
@@ -257,9 +252,9 @@ export const StatCharts: React.FC<StatChartsProps> = ({
                     interval={0}
                     minTickGap={0}
                     height={70}
-                    angle={-20}
+                    angle={-45}
                     textAnchor="end"
-                    tickMargin={8}
+                    tickMargin={12}
                   />
                   <YAxis tick={{ fill: '#64748b', fontSize: 10 }} axisLine={false} tickLine={false} />
                   <Tooltip content={<CustomTooltip />} cursor={{ fill: '#f8fafc' }} />
@@ -298,9 +293,9 @@ export const StatCharts: React.FC<StatChartsProps> = ({
                     interval={0}
                     minTickGap={0}
                     height={70}
-                    angle={-20}
+                    angle={-45}
                     textAnchor="end"
-                    tickMargin={8}
+                    tickMargin={12}
                   />
                   <YAxis yAxisId="left" tick={{ fill: '#8b5cf6', fontSize: 10 }} axisLine={false} tickLine={false} />
                   <YAxis yAxisId="right" orientation="right" tick={{ fill: '#10b981', fontSize: 10 }} axisLine={false} tickLine={false} />
@@ -349,7 +344,7 @@ export const StatCharts: React.FC<StatChartsProps> = ({
         {activeTab === 'scaling' && (
           <div className="w-full h-full flex flex-col gap-2">
             <div className="flex justify-between items-center">
-              <span className="text-[11px] font-semibold text-slate-500 font-mono">★ 자치구별 시민 제안 vs 공공 출생·보육 인프라 지표 비교 분석</span>
+              <span className="text-[11px] font-semibold text-slate-500 font-mono">★ 자치구별 출생아 수 vs 보육시설 수 비교 분석</span>
               {proposals && (
                 <button
                   onClick={() => setIncludeUnassigned(prev => !prev)}
@@ -386,17 +381,16 @@ export const StatCharts: React.FC<StatChartsProps> = ({
                     interval={0}
                     minTickGap={0}
                     height={70}
-                    angle={-20}
+                    angle={-45}
                     textAnchor="end"
-                    tickMargin={8}
+                    tickMargin={12}
                   />
-                  <YAxis yAxisId="left" orientation="left" stroke="#2563eb" tick={{ fontSize: 10 }} />
-                  <YAxis yAxisId="right" orientation="right" stroke="#e11d48" tick={{ fontSize: 10 }} />
+                  <YAxis yAxisId="left" orientation="left" stroke="#e11d48" tick={{ fontSize: 10 }} label={{ value: '출생아수(명)', angle: -90, position: 'insideLeft', fontSize: 10 }} />
+                  <YAxis yAxisId="right" orientation="right" stroke="#10b981" tick={{ fontSize: 10 }} label={{ value: '보육시설수(개소)', angle: 90, position: 'insideRight', fontSize: 10 }} />
                   <Tooltip content={<CustomTooltip />} />
                   <Legend wrapperStyle={{ fontSize: 11, fontFamily: 'Inter' }} />
-                  <Bar yAxisId="left" dataKey="시민 제안수" fill="#3b82f6" radius={[4, 4, 0, 0]} barSize={14} />
-                  <Line yAxisId="right" type="monotone" dataKey="출생아수(명)" stroke="#e11d48" strokeWidth={2} dot={{ r: 2 }} />
-                  <Line yAxisId="right" type="monotone" dataKey="보육시설수(x10개)" name="보육시설수(x10개소 확대)" stroke="#10b981" strokeWidth={2} strokeDasharray="4 4" dot={{ r: 2 }} />
+                  <Line yAxisId="left" type="monotone" dataKey="출생아수(명)" stroke="#e11d48" strokeWidth={2.5} dot={{ r: 2 }} />
+                  <Line yAxisId="right" type="monotone" dataKey="보육시설수(개소)" stroke="#10b981" strokeWidth={2.5} dot={{ r: 2 }} />
                 </ComposedChart>
               </ResponsiveContainer>
             </div>

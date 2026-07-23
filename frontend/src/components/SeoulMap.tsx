@@ -6,7 +6,7 @@ import { MapPin } from 'lucide-react';
 interface Props {
   selectedDistrict: DistrictData;
   onSelectDistrict: (district: DistrictData) => void;
-  colorMetric: 'proposals' | 'births' | 'daycare' | 'fertility' | 'demandScore';
+  colorMetric: 'proposals' | 'births' | 'daycare' | 'fertility' | 'demand' | 'demandScore';
   showBackground: boolean;
   sortBy: 'name' | 'value';
 }
@@ -16,6 +16,7 @@ const metricFill = {
   births: ['#ecfdf5', '#bbf7d0', '#86efac', '#4ade80', '#22c55e'],
   daycare: ['#fffbeb', '#fde68a', '#fcd34d', '#fbbf24', '#f59e0b'],
   fertility: ['#f0f9ff', '#bae6fd', '#7dd3fc', '#38bdf8', '#0ea5e9'],
+  demand: ['#fff1f2', '#fecdd3', '#fda4af', '#fb7185', '#f43f5e'],
   demandScore: ['#fff1f2', '#fecdd3', '#fda4af', '#fb7185', '#f43f5e'],
 };
 
@@ -27,6 +28,7 @@ const getMetricValue = (district: DistrictData, metric: Props['colorMetric']) =>
       return district.births2025;
     case 'daycare':
       return district.daycare2025;
+    case 'demand':
     case 'demandScore':
       return district.demandScore;
     case 'fertility':
@@ -40,7 +42,7 @@ const formatMetricValue = (district: DistrictData, metric: Props['colorMetric'])
   const value = getMetricValue(district, metric);
 
   if (metric === 'fertility') return district.fertilityRate.toFixed(3);
-  if (metric === 'demandScore') return `${value}점`;
+  if (metric === 'demand' || metric === 'demandScore') return `${value}점`;
   if (metric === 'proposals') return `${value}건`;
   if (metric === 'births') return `${value.toLocaleString()}명`;
   return `${value.toLocaleString()}개소`;

@@ -461,135 +461,126 @@ export default function App() {
 
                 {publicSubTab === 'district' ? (
                   <div className="space-y-6">
-                    {/* Top combined Metric Filter and Selected District Card */}
-                    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden p-6 grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-                      {/* Left column (lg:col-span-5): Metric Filters */}
-                      <div className="lg:col-span-5 flex flex-col justify-between space-y-4">
-                        <div>
-                          <span className="text-[10px] uppercase font-bold text-slate-400 tracking-[0.2em]">메트릭 필터</span>
-                          <h3 className="text-lg font-black text-slate-800 mt-1">지도 기반 정책 수요 시각화</h3>
-                          <p className="text-xs text-slate-500 mt-1">
-                            아래 메트릭 버튼을 클릭하여 지도의 채색 기준 지표와 정렬 순서를 전환할 수 있습니다.
-                          </p>
-                        </div>
-                        
-                        <div className="grid grid-cols-2 gap-2 mt-2">
-                          <button
-                            onClick={() => { setPublicColorMetric('fertility'); setPublicSortBy('value'); }}
-                            className={`px-3 py-2.5 rounded-xl text-xs font-bold border transition-all text-left ${
-                              publicColorMetric === 'fertility'
-                                ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
-                                : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
-                            }`}
-                          >
-                            합계출산율 (2025년)
-                          </button>
-                          <button
-                            onClick={() => { setPublicColorMetric('births'); setPublicSortBy('value'); }}
-                            className={`px-3 py-2.5 rounded-xl text-xs font-bold border transition-all text-left ${
-                              publicColorMetric === 'births'
-                                ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
-                                : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
-                            }`}
-                          >
-                            출생아 수 (2025년)
-                          </button>
-                          <button
-                            onClick={() => { setPublicColorMetric('daycare'); setPublicSortBy('value'); }}
-                            className={`px-3 py-2.5 rounded-xl text-xs font-bold border transition-all text-left ${
-                              publicColorMetric === 'daycare'
-                                ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
-                                : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
-                            }`}
-                          >
-                            보육시설 수
-                          </button>
-                          <button
-                            onClick={() => { setPublicColorMetric('demandScore'); setPublicSortBy('value'); }}
-                            className={`px-3 py-2.5 rounded-xl text-xs font-bold border transition-all text-left ${
-                              publicColorMetric === 'demandScore'
-                                ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
-                                : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
-                            }`}
-                          >
-                            정책 수요 점수
-                          </button>
+                    {/* Metric Filter Bar (기존 정책 우선순위 상세 필터처럼 위로 올림) */}
+                    <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs flex flex-wrap items-center justify-between gap-4">
+                      <div className="flex items-center gap-3">
+                        <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">지도 시각화 지표 선택:</span>
+                        <div className="flex flex-wrap gap-1.5">
+                          {[
+                            { id: 'fertility', label: '합계출산율 (2025년)' },
+                            { id: 'births', label: '출생아 수 (2025년)' },
+                            { id: 'daycare', label: '보육시설 수' },
+                            { id: 'demandScore', label: '정책 수요 점수' },
+                          ].map((item) => (
+                            <button
+                              key={item.id}
+                              type="button"
+                              onClick={() => {
+                                setPublicColorMetric(item.id as any);
+                                setPublicSortBy('value');
+                              }}
+                              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all border cursor-pointer ${
+                                publicColorMetric === item.id
+                                  ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
+                                  : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100 hover:text-slate-800'
+                              }`}
+                            >
+                              {item.label}
+                            </button>
+                          ))}
                         </div>
                       </div>
                       
-                      {/* Divider */}
-                      <div className="hidden lg:block w-px bg-slate-200 self-stretch my-1 lg:col-span-1 justify-self-center" />
-                      
-                      {/* Right column (lg:col-span-6): Selected District Summary Info */}
-                      <div className="lg:col-span-6 bg-[#0A2351] text-white rounded-xl p-5 shadow-inner border border-slate-800 relative overflow-hidden flex flex-col justify-between">
-                        <div>
-                          <span className="text-[10px] uppercase text-blue-200 tracking-[0.3em] font-bold">SELECTED DISTRICT</span>
-                          <h2 className="text-2xl font-black text-white mt-1">{selectedPublicDistrict.name}</h2>
-                          <p className="mt-1 text-[11px] text-slate-300">
-                            선택된 자치구의 공공 행정 지표 및 시민 민원제안 수요 요약입니다.
-                          </p>
+                      <div className="flex items-center gap-2">
+                        <button
+                          type="button"
+                          onClick={() => setPublicSortBy(publicSortBy === 'name' ? 'value' : 'name')}
+                          className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-600 hover:bg-slate-100 cursor-pointer"
+                        >
+                          정렬: {publicSortBy === 'name' ? '자치구명' : '수치 순'}
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Combined Map and Selected District Card (2번째 사진 형태) */}
+                    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 space-y-4">
+                      <div className="flex justify-between items-center pb-3 border-b border-slate-100">
+                        <div className="flex items-center gap-2">
+                          <MapPin className="text-indigo-600 w-5 h-5" />
+                          <div>
+                            <h4 className="text-sm font-bold text-slate-800">서울시 행정구역 지도 (2D 경계선)</h4>
+                            <p className="text-[11px] text-slate-400">지도 구역 또는 아래 칩 버튼을 클릭하면 해당 자치구의 통계 요약이 즉시 갱신됩니다.</p>
+                          </div>
                         </div>
-                        
-                        <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                          <div className="rounded-lg bg-white/10 border border-white/5 p-3">
-                            <p className="text-[9px] uppercase text-slate-300 tracking-wider">출생아 수</p>
-                            <p className="mt-1 text-base font-bold">{selectedPublicDistrict.births2025.toLocaleString()}명</p>
-                            <p className="text-[9px] text-slate-400">2025 잠정</p>
+                        <button
+                          onClick={handleExportDistrictStatsCSV}
+                          className="px-3 py-1.5 rounded-lg bg-[#0A2351] hover:bg-[#123677] text-white text-xs font-bold flex items-center gap-1 transition shadow-2xs cursor-pointer"
+                        >
+                          <Download className="w-3.5 h-3.5" /> 통계 CSV
+                        </button>
+                      </div>
+
+                      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+                        {/* Left Column (lg:col-span-5): Map */}
+                        <div className="lg:col-span-5 bg-slate-50/40 rounded-xl p-3 border border-slate-100">
+                          <SeoulMap
+                            selectedDistrict={selectedPublicDistrict}
+                            onSelectDistrict={setSelectedPublicDistrict}
+                            colorMetric={publicColorMetric}
+                            showBackground={true}
+                            sortBy={publicSortBy}
+                          />
+                        </div>
+
+                        {/* Right Column (lg:col-span-7): SELECTED DISTRICT Summary Card */}
+                        <div className="lg:col-span-7 bg-[#0A2351] text-white rounded-xl p-6 shadow-inner border border-slate-800 flex flex-col justify-between h-full min-h-[420px]">
+                          <div>
+                            <span className="text-[10px] uppercase text-blue-200 tracking-[0.3em] font-bold">SELECTED DISTRICT</span>
+                            <h2 className="text-3xl font-black text-white mt-2">{selectedPublicDistrict.name}</h2>
+                            <p className="mt-2 text-xs text-slate-300">
+                              지도 구역 또는 아래 칩 버튼을 클릭하면 해당 자치구의 통계 요약이 즉시 갱신됩니다.
+                            </p>
                           </div>
-                          <div className="rounded-lg bg-white/10 border border-white/5 p-3">
-                            <p className="text-[9px] uppercase text-slate-300 tracking-wider">보육시설</p>
-                            <p className="mt-1 text-base font-bold">{selectedPublicDistrict.daycare2025.toLocaleString()}개소</p>
-                            <p className="text-[9px] text-slate-400">2025년</p>
+
+                          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div className="rounded-xl bg-white text-slate-800 p-4 shadow-sm">
+                              <p className="text-[10px] uppercase text-slate-400 font-bold tracking-wider">출생아 수</p>
+                              <p className="mt-2 text-2xl font-black text-[#0A2351]">{selectedPublicDistrict.births2025.toLocaleString()}명</p>
+                              <p className="text-[10px] text-slate-400 mt-1">2025년 기준 (잠정)</p>
+                            </div>
+                            
+                            <div className="rounded-xl bg-white text-slate-800 p-4 shadow-sm">
+                              <p className="text-[10px] uppercase text-slate-400 font-bold tracking-wider">보육시설 수</p>
+                              <p className="mt-2 text-2xl font-black text-[#0A2351]">{selectedPublicDistrict.daycare2025.toLocaleString()}개소</p>
+                              <p className="text-[10px] text-slate-400 mt-1">2025년 기준</p>
+                            </div>
+
+                            <div className="rounded-xl bg-white text-slate-800 p-4 shadow-sm sm:col-span-2">
+                              <p className="text-[10px] uppercase text-slate-400 font-bold tracking-wider">합계출산율</p>
+                              <p className="mt-2 text-2xl font-black text-[#0A2351]">{selectedPublicDistrict.fertilityRate.toFixed(3)}명</p>
+                              <p className="text-[10px] text-slate-400 mt-1">2025년 기준 (잠정)</p>
+                            </div>
                           </div>
-                          <div className="rounded-lg bg-white/10 border border-white/5 p-3">
-                            <p className="text-[9px] uppercase text-slate-300 tracking-wider">합계출산율</p>
-                            <p className="mt-1 text-base font-bold">{selectedPublicDistrict.fertilityRate.toFixed(3)}</p>
-                            <p className="text-[9px] text-slate-400">2025 잠정</p>
-                          </div>
-                          <div className="rounded-lg bg-white/10 border border-white/5 p-3">
-                            <p className="text-[9px] uppercase text-slate-300 tracking-wider">시민제안수</p>
-                            <p className="mt-1 text-base font-bold">{selectedPublicDistrict.proposals.toLocaleString()}건</p>
-                            <p className="text-[9px] text-slate-400">누적 건수</p>
+
+                          <div className="mt-6 pt-4 border-t border-white/10 text-[11px] text-slate-300">
+                            💡 공공데이터 지표 비교분석 가이드: 위 2D 행정구역 지도는 실시간 동기화되어 움직입다. 2D 지도의 음영은 해당 자치구의{' '}
+                            <strong className="text-white">
+                              "{publicColorMetric === 'fertility' ? '합계출산율' : publicColorMetric === 'births' ? '출생아 수' : publicColorMetric === 'daycare' ? '보육시설 수' : '정책 수요 점수'}"
+                            </strong>{' '}
+                            지표에 비례하여 진행됩니다.
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    {/* Grid for Map (left) and StatCharts (right) */}
-                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                      {/* Left column (lg:col-span-5): Map */}
-                      <div className="lg:col-span-5 bg-white rounded-2xl border border-slate-200 shadow-sm p-5 space-y-4">
-                        <div className="flex justify-between items-center pb-3 border-b border-slate-100">
-                          <div>
-                            <h4 className="text-sm font-bold text-slate-800">행정구역 지도 (25개 자치구)</h4>
-                            <p className="text-[11px] text-slate-400">지도를 클릭하여 상세 통계를 대조하세요.</p>
-                          </div>
-                          <button
-                            onClick={handleExportDistrictStatsCSV}
-                            className="px-2.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold flex items-center gap-1 transition shadow-2xs cursor-pointer"
-                          >
-                            <Download className="w-3.5 h-3.5" /> 통계 CSV
-                          </button>
-                        </div>
-                        
-                        <SeoulMap
-                          selectedDistrict={selectedPublicDistrict}
-                          onSelectDistrict={setSelectedPublicDistrict}
-                          colorMetric={publicColorMetric}
-                          showBackground={true}
-                          sortBy={publicSortBy}
-                        />
-                      </div>
-
-                      {/* Right column (lg:col-span-7): Charts */}
-                      <div className="lg:col-span-7 bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col h-[480px]">
-                        <StatCharts
-                          selectedDistrict={selectedPublicDistrict}
-                          onSelectDistrict={setSelectedPublicDistrict}
-                          colorMetric={publicColorMetric}
-                          proposals={mockProposals}
-                        />
-                      </div>
+                    {/* StatCharts container (underneath combined Map & Selected District container) */}
+                    <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col h-[480px]">
+                      <StatCharts
+                        selectedDistrict={selectedPublicDistrict}
+                        onSelectDistrict={setSelectedPublicDistrict}
+                        colorMetric={publicColorMetric}
+                        proposals={mockProposals}
+                      />
                     </div>
 
                     {/* Policy Explorer and Citizen Proposals List in single column structure */}
