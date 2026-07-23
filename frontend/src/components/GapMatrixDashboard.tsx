@@ -170,68 +170,60 @@ const PAPER_METHODS: Record<string, { label: string; weights: { demand: number; 
   }
 };
 
-const renderAcademicProof = (issue: IssueItem) => {
-  const cat = issue.category;
-  
-  if (cat === '보육·돌봄 인프라') {
-    return (
-      <div className="space-y-2 text-[9.5px]">
-        <div>
-          <strong className="text-blue-900">[성낙일·박선권 (2012) 자녀 양육환경과 출산율 실증분석]</strong><br />
-          전국 232개 시군구 패널 데이터의 다중 회귀 분석(Regression Analysis) 결과 지역 내 보육시설 인프라의 양적 공급 규모와 육아 편의 환경 확충이 지역 합계출산율에 통계적으로 유의미한 양(+)의 경제적 효과(p &lt; 0.05)를 미침을 계량적으로 입증했습니다.
-          <span className="block mt-0.5 text-slate-500 font-normal">
-            ➔ <strong>가설 입증 연계:</strong> 자치구별 실측 보육 인프라 수와 시민 갭 수요 간의 불균형을 다차원 분석하는 본 대시보드 모델의 핵심 가설을 입증합니다.
-          </span>
-        </div>
-        <div className="border-t border-blue-100/60 pt-1.5">
-          <strong className="text-blue-900">[육아정책연구소 (KICCE, 2023) 보육기관 수요·공급 지역별 형평성 진단]</strong><br />
-          보육 수요-공급 현황 데이터를 활용하여 공간 미스매치 지수(Spatial Mismatch Index) 및 GIS 커널 밀도 분석을 테스트하여, 수요(영유아 인구 및 민원) 대비 인프라의 지리적 불균형이 출산율 정체의 통계적 선행 인자임을 공간 통계학적으로 규명했습니다.
-          <span className="block mt-0.5 text-slate-500 font-normal">
-            ➔ <strong>가설 입증 연계:</strong> 대시보드가 제공하는 '서울시 자치구 지도 수요-공급 갭 히트맵 시각화' 설계의 정당성을 최종 보증합니다.
-          </span>
-        </div>
-      </div>
-    );
-  }
-  
-  if (cat === '주거·교통·도시생활환경' || cat === '일·가정 양립·부모 노동' || cat === '다자녀·양육비·생활지원') {
-    return (
-      <div className="space-y-2 text-[9.5px]">
-        <div>
-          <strong className="text-blue-900">[배기련 외 (2021) 저출산 정책과 대중인식 비교 대조]</strong><br />
-          결혼·출산 대중 의견 댓글 25,800건의 비정형 코퍼스 분석 및 감성어 딥마이닝 임베딩 테스트 결과 청년층 체감 정책 장벽의 73% 이상이 일자리 안정과 내 집 마련 주거 안정망 결여에 기인함을 실증 검증했습니다.
-          <span className="block mt-0.5 text-slate-500 font-normal">
-            ➔ <strong>가설 입증 연계:</strong> 본 <strong>[{issue.cluster}]</strong> 클러스터는 몽땅정보통(323개 사업)과의 대조 결과 정책 공백(Gap) 지수가 높게 대조되어, 단순 현금 지원을 넘어 수혜 대상 및 자격 기준 완화가 시급함을 입증합니다.
-          </span>
-        </div>
-        <div className="border-t border-blue-100/60 pt-1.5">
-          <strong className="text-blue-900">[박미경 (2022) 저출산 대응정책 요구도 및 우선순위 분석]</strong><br />
-          미혼·기혼 청년 세대 500명을 대상으로 정책 요구도를 설문조사하고 AHP(계층화분석법) 우선순위 일치성 검증 테스트를 거쳐, 주거 안정(임대 공급 및 금융 지원)과 일·가정 양립 지원이 타 복지 영역 대비 통계적으로 압도적인 중요도 가중치를 가짐을 규명했습니다.
-          <span className="block mt-0.5 text-slate-500 font-normal">
-            ➔ <strong>가설 입증 연계:</strong> 대시보드가 시민 제안의 공감수(vote_score)를 기반으로 우선순위 점수를 산출하는 가중치 배분 설계의 타당성을 지지하며 설계의 일관성을 검증합니다.
-          </span>
-        </div>
-      </div>
-    );
-  }
+const renderAcademicProof = (issue: IssueItem, onOpenModal: (title: string) => void) => {
+  const allPapers = [
+    {
+      title: "성낙일·박선권 (2012)",
+      desc: "전국 232개 시군구의 2009년 횡단면 자료를 토대로 다중 회귀 분석을 수행하여 보육시설 인프라 양적 규모가 합계출산율 제고에 유의미한 양(+)의 효과(p < 0.05)를 미침을 규명했습니다.",
+      implication: "보육시설 인프라 취약 지점과 시민 갭 수요가 높은 자치구에 국공립 및 돌봄 자원을 신속 배치하는 개입의 실효성을 입증합니다."
+    },
+    {
+      title: "KICCE (2023)",
+      desc: "통계청 및 공공 빅데이터 기반 2023 영유아 주요 통계 보고서(ES2401)를 대조 분석하여, 영유아 밀집 지역 대비 실제 보육 인프라 공급 격차가 뚜렷이 나타남을 공간적으로 진단했습니다.",
+      implication: "수요(영유아 인구) 대비 인프라의 지리적 불균형을 해결하기 위해 자치구 갭 분석 히트맵에 준한 자원 조율 당위성을 증명합니다."
+    },
+    {
+      title: "배기련 외 (2021)",
+      desc: "뉴스 댓글 25,800건 대상 CONCOR 분석을 적용하여, 청년층이 체감하는 정책과의 괴리(Gap) 최상위 요인이 일자리 및 주거 불안정에 기인함을 실증 규명했습니다.",
+      implication: "단순 혜택을 넘어, 무자녀 신혼가구 시기부터 노동 고용 안정성과 청약/주택 대출 요건을 파격 개선해야 합니다."
+    },
+    {
+      title: "박미경 (2022)",
+      desc: "Borich 요구도 분석 및 IPA 분석을 수행하여, 청년 요구도 1순위가 자녀양육지원(돌봄), 2순위가 출산지원, 3순위가 일·가정양립 순임을 계량화했습니다.",
+      implication: "지표 가중합 산출 시 주거·생활 조건 완화와 자녀양육 및 돌봄 인프라에 가장 높은 가중치를 배정하는 알고리즘 타당성을 검증합니다."
+    },
+    {
+      title: "오신휘·김혜진 (2020)",
+      desc: "국내 저출산 연구 논문 752편에 대해 텍스트마이닝 및 동시출현단어 네트워크 분석을 가동해, 비정형 학술 문헌 키워드가 저출산 추진 시기별로 뚜렷이 구분됨을 실증했습니다.",
+      implication: "시민 제안과 민원 원문을 NLP 텍스트마이닝으로 분석해 8대 카테고리로 자동 매핑 및 라우팅하는 본 대시보드 방법론의 당위성을 보증합니다."
+    },
+    {
+      title: "NABO 예산정책처",
+      desc: "국회예산정책처의 2025 저출생 대응 사업 분석·평가 보고서에 근거하여, 다부서 파편화 분절로 인해 실수혜자 정책 전달률이 40% 하락하는 예산 병목 현상을 진단했습니다.",
+      implication: "18개 부서의 파편화된 사업을 대분류로 통합해 갭을 분석하고 R&R 담당 부서를 1·2·3순위로 자동 조율하는 컨트롤 타워가 필수적임을 입증합니다."
+    }
+  ];
 
-  // Fallback (임신·난임·생식건강, 취약·다양가족 사각지대, 정보·상담·교육·거버넌스 등)
   return (
-    <div className="space-y-2 text-[9.5px]">
-      <div>
-        <strong className="text-blue-900">[오신휘·김혜진 (2020) '저출산' 관련 연구동향 분석]</strong><br />
-        국내 저출산 연구동향 752편의 학술 논문을 메타 데이터 네트워크 분석하고 LDA 토픽 모델링 기법의 예측력을 테스트하여, 비정형 시민 여론/제안 데이터를 활용해 갭 분석을 추진하는 것이 전통적 통계 모델의 한계를 극복하는 유의미한 방법론임을 검증했습니다.
-        <span className="block mt-0.5 text-slate-500 font-normal">
-          ➔ <strong>가설 입증 연계:</strong> 비정형 텍스트(시민제안 및 민원)를 자연어 처리로 분류 및 클러스터링하는 본 의사결정 지원 시스템의 방법론적 타당성을 정당화합니다.
-        </span>
-      </div>
-      <div className="border-t border-blue-100/60 pt-1.5">
-        <strong className="text-blue-900">[국회예산정책처 (NABO) 저출산 지원정책 효과성 및 재원배분 연구]</strong><br />
-        5대 정책 분야 30여 개 저출생 재정 지원 사업의 예산 효율성 및 파편화 지수 테스트를 거쳐, 부서 및 사업 간 분절성으로 인해 실수혜자가 느끼는 체감 정책 전달률이 40% 이상 하락하는 예산 병목 현상이 실증적으로 나타남을 보고했습니다.
-        <span className="block mt-0.5 text-slate-500 font-normal">
-          ➔ <strong>가설 입증 연계:</strong> 서울시 18개 부서에 흩어진 정책을 8대 분류로 통합하고, R&R 부서를 1·2·3순위로 자동 라우팅해주는 본 대시보드의 실무적 도입 당위성을 입증합니다.
-        </span>
-      </div>
+    <div className="space-y-2 flex-1 overflow-y-auto pr-1">
+      {allPapers.map((paper, idx) => (
+        <div key={idx} className="bg-slate-50 hover:bg-indigo-50/40 p-2.5 rounded-xl border border-slate-100 hover:border-indigo-100 transition duration-150 relative">
+          <div className="flex justify-between items-start gap-2">
+            <span className="text-[10px] font-black text-indigo-900">{paper.title}</span>
+            <button
+              onClick={() => onOpenModal(paper.title)}
+              className="text-slate-400 hover:text-indigo-600 transition cursor-pointer flex items-center gap-0.5 bg-white border border-slate-200 hover:border-indigo-300 rounded px-1 py-0.5 text-[8.5px] font-black shadow-3xs"
+              title="4단계 가설 검증 흐름 보기"
+            >
+              <Info className="w-2.5 h-2.5 text-indigo-500" /> 실증 흐름
+            </button>
+          </div>
+          <p className="text-[9px] text-slate-600 mt-1 leading-relaxed">{paper.desc}</p>
+          <div className="text-[8.5px] text-slate-500 mt-1 pt-1 border-t border-slate-200/50 font-normal">
+            ➔ <strong>가설 입증 연계:</strong> {paper.implication}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
@@ -249,64 +241,51 @@ interface AcademicEvidenceItem {
 }
 
 const getAcademicEvidenceItems = (issue: IssueItem): AcademicEvidenceItem[] => {
-  const cat = issue.category;
-  
-  if (cat === '보육·돌봄 인프라') {
-    return [
-      {
-        title: "성낙일·박선권 (2012)",
-        url: "https://www.kci.go.kr",
-        detail: "전국 232개 시군구의 2009년 횡단면 자료를 토대로 다중 회귀 분석(Regression Analysis)을 수행한 결과, 지역 내 보육시설 인프라의 공급 규모와 양육 여건의 확충이 지역 합계출산율에 통계적으로 유의미한 양(+)의 경제적 효과(p < 0.05)를 미침을 실증 규명했습니다.",
-        implication: "보육시설 인프라 취약 지점과 시민 갭 수요가 높은 자치구에 국공립 및 돌봄 자원을 신속 배치하는 개입이 가장 실효적입니다.",
-        tag: "계량 분석",
-        hypothesis: "지역 단위 보육 인프라의 공급 규모가 합계출산율을 제고하는 유의미한 경제적 기여를 할 것이다.",
-        test: "전국 232개 시군구의 2009년 횡단면 자료 대상 다중 회귀 분석(Regression Analysis) 수행.",
-        result: "보육시설 접근성 및 공급 밀도가 지역 합계출산율에 통계적으로 유의미한 양(+)의 효과(p &lt; 0.05)를 나타냄을 실증.",
-        conclusion: "양육 환경 편리성 제고를 위해 자치구별 취약 지점 중심 국공립 어린이집을 최우선 공급하는 행정 조정 타당성 검증."
-      },
-      {
-        title: "KICCE (2023)",
-        url: "https://www.kicce.re.kr",
-        detail: "통계청 및 공공 빅데이터 기반 2023 영유아 주요 통계 보고서(ES2401)를 대조 분석한 결과, 자치구별 영유아 밀집 지역 대비 실제 보육 인프라 수급 격차가 뚜렷이 나타남을 공간적으로 진단했습니다.",
-        implication: "수요(영유아 인구) 대비 인프라의 지리적 불균형을 해결하기 위해 자치구 갭 분석 히트맵에 준한 자원 조율이 필요합니다.",
-        tag: "GIS 공간진단",
-        hypothesis: "영유아 및 보육 현황 기초 통계 격차가 지역 간 출산 환경 불균형을 유발할 것이다.",
-        test: "2023 영유아 주요 통계 보고서(ES2401) 수록 자치구별 보육 인프라 및 보육 이용율 통계 대조.",
-        result: "지역 간 보육시설 접근성 및 이용률에 뚜렷한 수급 편차와 공간적 불일치 통계 실증.",
-        conclusion: "수요-공급 지리적 격차를 줄이기 위해 취약 자치구에 보육 지원 자원을 재배치하는 행정 공간 조정의 당위성 증명."
-      }
-    ];
-  }
-  
-  if (cat === '주거·교통·도시생활환경' || cat === '일·가정 양립·부모 노동' || cat === '다자녀·양육비·생활지원') {
-    return [
-      {
-        title: "배기련 외 (2021)",
-        url: "https://www.kci.go.kr",
-        detail: "제3·4차 기본계획 발표 직후 2주간 뉴스 댓글을 수집해 빈도분석, 동시출현단어 분석, 구조적 등위성(CONCOR) 분석을 적용한 결과, 대중은 주거 및 고용 안정 결여에서 정책과의 괴리(Gap)를 가장 뼈아프게 느끼고 있음을 실증했습니다.",
-        implication: "단순 다자녀 위주 혜택을 넘어, 무자녀 신혼가구 시기부터 노동 고용 안정성과 청약/주택 대출 요건을 파격 개선해야 합니다.",
-        tag: "소셜 데이터",
-        hypothesis: "정부의 저출산 대응정책과 대중이 체감하는 핵심 장벽 사이에 구조적 괴리가 존재할 것이다.",
-        test: "제3·4차 기본계획 발표 직후 2주간 뉴스 댓글 대상 빈도분석, 동시출현단어 분석, CONCOR(구조적 등위성) 분석 수행.",
-        result: "대중 여론에서 결혼·출산 관련 연속적 불안 요소로 주거와 고용이 최상위 공백 영역으로 실증 도출됨.",
-        conclusion: "실무 정책 수혜의 갭(Gap)을 메우기 위해 일·가정 양립 및 주거 노동 안정을 우선 R&R 조치해야 함."
-      },
-      {
-        title: "박미경 (2022)",
-        url: "https://www.kci.go.kr",
-        detail: "청년 세대 정책 요구도 설문 데이터를 기반으로 Borich 요구도 분석 및 IPA(중요도-수행도) 분석을 수행한 결과, 요구도 1순위는 자녀양육지원, 2순위는 출산지원, 3순위는 일·가정양립 순으로 강하게 도출되었습니다.",
-        implication: "지표 가중합 산출 시 주거·생활 조건 완화와 자녀양육 및 돌봄 인프라에 가장 높은 가중치를 배정하는 알고리즘 타당성을 검증합니다.",
-        tag: "요구도 분석",
-        hypothesis: "MZ세대가 지각하는 저출산 대응정책 요구도에는 영역 간 뚜렷한 우선순위 차이가 존재할 것이다.",
-        test: "청년 세대 설문조사 데이터 기반 Borich 요구도 분석 및 IPA(중요도-수행도) 분석 수행.",
-        result: "Borich 요구도 기준 자녀양육지원(1순위) > 출산지원(2순위) > 일·가정양립 지원(3순위) 순으로 요구도가 높음을 실증. (주택은 상대적 하위)",
-        conclusion: "대시보드 내 시민 제안 공감수 및 시급성 연동 가중합 점수(우선순위 지표) 설계 일치성 확인."
-      }
-    ];
-  }
-
-  // Fallback
   return [
+    {
+      title: "성낙일·박선권 (2012)",
+      url: "https://www.kci.go.kr",
+      detail: "전국 232개 시군구의 2009년 횡단면 자료를 토대로 다중 회귀 분석(Regression Analysis)을 수행한 결과, 지역 내 보육시설 인프라의 공급 규모와 양육 여건의 확충이 지역 합계출산율에 통계적으로 유의미한 양(+)의 경제적 효과(p < 0.05)를 미침을 실증 규명했습니다.",
+      implication: "보육시설 인프라 취약 지점과 시민 갭 수요가 높은 자치구에 국공립 및 돌봄 자원을 신속 배치하는 개입이 가장 실효적입니다.",
+      tag: "계량 분석",
+      hypothesis: "지역 단위 보육 인프라의 공급 규모가 합계출산율을 제고하는 유의미한 경제적 기여를 할 것이다.",
+      test: "전국 232개 시군구의 2009년 횡단면 자료 대상 다중 회귀 분석(Regression Analysis) 수행.",
+      result: "보육시설 접근성 및 공급 밀도가 지역 합계출산율에 통계적으로 유의미한 양(+)의 효과(p &lt; 0.05)를 나타냄을 실증.",
+      conclusion: "양육 환경 편리성 제고를 위해 자치구별 취약 지점 중심 국공립 어린이집을 최우선 공급하는 행정 조정 타당성 검증."
+    },
+    {
+      title: "KICCE (2023)",
+      url: "https://www.kicce.re.kr",
+      detail: "통계청 및 공공 빅데이터 기반 2023 영유아 주요 통계 보고서(ES2401)를 대조 분석한 결과, 자치구별 영유아 밀집 지역 대비 실제 보육 인프라 수급 격차가 뚜렷이 나타남을 공간적으로 진단했습니다.",
+      implication: "수요(영유아 인구) 대비 인프라의 지리적 불균형을 해결하기 위해 자치구 갭 분석 히트맵에 준한 자원 조율이 필요합니다.",
+      tag: "GIS 공간진단",
+      hypothesis: "영유아 및 보육 현황 기초 통계 격차가 지역 간 출산 환경 불균형을 유발할 것이다.",
+      test: "2023 영유아 주요 통계 보고서(ES2401) 수록 자치구별 보육 인프라 및 보육 이용율 통계 대조.",
+      result: "지역 간 보육시설 접근성 및 이용률에 뚜렷한 수급 편차와 공간적 불일치 통계 실증.",
+      conclusion: "수요-공급 지리적 격차를 줄이기 위해 취약 자치구에 보육 지원 자원을 재배치하는 행정 공간 조정의 당위성 증명."
+    },
+    {
+      title: "배기련 외 (2021)",
+      url: "https://www.kci.go.kr",
+      detail: "제3·4차 기본계획 발표 직후 2주간 뉴스 댓글을 수집해 빈도분석, 동시출현단어 분석, 구조적 등위성(CONCOR) 분석을 적용한 결과, 대중은 주거 및 고용 안정 결여에서 정책과의 괴리(Gap)를 가장 뼈아프게 느끼고 있음을 실증했습니다.",
+      implication: "단순 다자녀 위주 혜택을 넘어, 무자녀 신혼가구 시기부터 노동 고용 안정성과 청약/주택 대출 요건을 파격 개선해야 합니다.",
+      tag: "소셜 데이터",
+      hypothesis: "정부의 저출산 대응정책과 대중이 체감하는 핵심 장벽 사이에 구조적 괴리가 존재할 것이다.",
+      test: "제3·4차 기본계획 발표 직후 2주간 뉴스 댓글 대상 빈도분석, 동시출현단어 분석, CONCOR(구조적 등위성) 분석 수행.",
+      result: "대중 여론에서 결혼·출산 관련 연속적 불안 요소로 주거와 고용이 최상위 공백 영역으로 실증 도출됨.",
+      conclusion: "실무 정책 수혜의 갭(Gap)을 메우기 위해 일·가정 양립 및 주거 노동 안정을 우선 R&R 조치해야 함."
+    },
+    {
+      title: "박미경 (2022)",
+      url: "https://www.kci.go.kr",
+      detail: "청년 세대 정책 요구도 설문 데이터를 기반으로 Borich 요구도 분석 및 IPA(중요도-수행도) 분석을 수행한 결과, 요구도 1순위는 자녀양육지원, 2순위는 출산지원, 3순위는 일·가정양립 순으로 강하게 도출되었습니다.",
+      implication: "지표 가중합 산출 시 주거·생활 조건 완화와 자녀양육 및 돌봄 인프라에 가장 높은 가중치를 배정하는 알고리즘 타당성을 검증합니다.",
+      tag: "요구도 분석",
+      hypothesis: "MZ세대가 지각하는 저출산 대응정책 요구도에는 영역 간 뚜렷한 우선순위 차이가 존재할 것이다.",
+      test: "청년 세대 설문조사 데이터 기반 Borich 요구도 분석 및 IPA(중요도-수행도) 분석 수행.",
+      result: "Borich 요구도 기준 자녀양육지원(1순위) > 출산지원(2순위) > 일·가정양립 지원(3순위) 순으로 요구도가 높음을 실증. (주택은 상대적 하위)",
+      conclusion: "대시보드 내 시민 제안 공감수 및 시급성 연동 가중합 점수(우선순위 지표) 설계 일치성 확인."
+    },
     {
       title: "오신휘·김혜진 (2020)",
       url: "https://www.kci.go.kr",
@@ -440,13 +419,23 @@ export const GapMatrixDashboard: React.FC<Props> = ({
       selectedIssue.feasibility * w.feasibility +
       selectedIssue.evidence_confidence * w.evidence_confidence
     );
-    setSelectedIssue(prev => prev ? { ...prev, priority_score: calc } : prev);
+
+    let newStatus = '모니터링';
+    if (calc >= 65) {
+      newStatus = '즉시 검토';
+    } else if (calc >= 50) {
+      newStatus = '제도 개선';
+    } else if (calc >= 40) {
+      newStatus = '빠른 개선';
+    }
+
+    setSelectedIssue(prev => prev ? { ...prev, priority_score: calc, status: newStatus } : prev);
     setAppliedMethod(methodKey);
     setCustomActions(prev => ({
       ...prev,
       [selectedIssue.cluster]: {
         action: `방법론 적용: ${method.label}`,
-        status: prev[selectedIssue.cluster]?.status || selectedIssue.status
+        status: newStatus
       }
     }));
   };
@@ -458,6 +447,8 @@ export const GapMatrixDashboard: React.FC<Props> = ({
   const [showComparisonModal, setShowComparisonModal] = useState<boolean>(false);
   const [selectedEvidenceIndex, setSelectedEvidenceIndex] = useState<number>(0);
   const [isLocalExportOpen, setIsLocalExportOpen] = useState<boolean>(false);
+  const [showProofModal, setShowProofModal] = useState<boolean>(false);
+  const [selectedProofPaper, setSelectedProofPaper] = useState<string>('');
 
   // 상단 필터 상태값
   const [selectedPeriod, setSelectedPeriod] = useState<string>('전체');
@@ -503,6 +494,34 @@ export const GapMatrixDashboard: React.FC<Props> = ({
   const allDiagnoses = useMemo(() => {
     return rawDiagnoses.map((d, idx) => {
       const deptInfo = DEPT_MAP[d.category] || { dept: '가족지원팀', phone: '02-2133-5040' };
+
+      // 가중치 방법론에 맞춰 실시간 우선순위 점수 계산
+      const method = PAPER_METHODS[appliedMethod] || PAPER_METHODS['default'];
+      const w = method.weights;
+      const priority_score = Math.round(
+        d.demand * w.demand +
+        d.policy_gap * w.policy_gap +
+        d.urgency * w.urgency +
+        d.feasibility * w.feasibility +
+        d.evidence_confidence * w.evidence_confidence
+      );
+
+      // 점수 구간에 따라 4단계 상태 라벨을 유기적으로 판별
+      let status = '모니터링';
+      if (priority_score >= 65) {
+        status = '즉시 검토';
+      } else if (priority_score >= 50) {
+        status = '제도 개선';
+      } else if (priority_score >= 40) {
+        status = '빠른 개선';
+      }
+
+      // 수동 승인/수정 후 승인 오버라이드
+      const custom = customActions[`GAP-${idx + 1}`];
+      if (custom && custom.status) {
+        status = custom.status;
+      }
+
       return {
         id: `GAP-${idx + 1}`,
         category: d.category,
@@ -514,15 +533,15 @@ export const GapMatrixDashboard: React.FC<Props> = ({
         urgency: d.urgency,
         feasibility: d.feasibility,
         evidence_confidence: d.evidence_confidence,
-        priority_score: d.priority_score,
-        status: d.status,
+        priority_score,
+        status,
         recommended_action: d.recommended_action,
         representative_titles: d.representative_titles || [],
         primaryDept: deptInfo.dept,
         deptPhone: deptInfo.phone
       };
     });
-  }, [rawDiagnoses]);
+  }, [rawDiagnoses, appliedMethod, customActions]);
 
   // 필터링 적용 로직
   const filteredDiagnoses = useMemo(() => {
@@ -1097,14 +1116,66 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               )}
             </div>
             
-            <div className="flex justify-between items-center text-[9px] text-slate-400 border-t border-slate-100 pt-2.5 mt-2">
-              <div className="flex items-center gap-3">
-                <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 bg-rose-500 rounded-full" /> 즉시 검토</span>
-                <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 bg-amber-500 rounded-full" /> 제도 개선</span>
-                <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 bg-emerald-500 rounded-full" /> 빠른 개선</span>
-                <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 bg-slate-500 rounded-full" /> 모니터링</span>
+            <div className="flex justify-between items-center text-[9px] text-slate-400 border-t border-slate-100 pt-2.5 mt-2 select-none">
+              <div className="flex items-center gap-3.5">
+                {/* 1. 즉시 검토 툴팁 */}
+                <div className="relative group cursor-help flex items-center gap-1 hover:text-rose-600 transition duration-150">
+                  <span className="w-2.5 h-2.5 bg-rose-500 rounded-full" />
+                  <span className="font-bold">즉시 검토</span>
+                  <div className="absolute hidden group-hover:block bg-slate-900 text-white text-[9.5px] p-3 rounded-lg shadow-xl z-50 w-64 -top-28 -left-2 leading-relaxed border border-slate-700 pointer-events-none animate-in fade-in duration-200">
+                    <span className="font-extrabold block text-rose-400 mb-1">🚨 즉시 검토 (65점 이상)</span>
+                    시민 요구 강도가 극도로 높으면서 정책 공급망 공백이 뚜렷한 최우선 개입 사안. 즉시 신규 대안 예산 수립 및 행정 처리가 권고됩니다.
+                  </div>
+                </div>
+
+                {/* 2. 제도 개선 툴팁 */}
+                <div className="relative group cursor-help flex items-center gap-1 hover:text-amber-600 transition duration-150">
+                  <span className="w-2.5 h-2.5 bg-amber-500 rounded-full" />
+                  <span className="font-bold">제도 개선</span>
+                  <div className="absolute hidden group-hover:block bg-slate-900 text-white text-[9.5px] p-3 rounded-lg shadow-xl z-50 w-64 -top-28 -left-12 leading-relaxed border border-slate-700 pointer-events-none animate-in fade-in duration-200">
+                    <span className="font-extrabold block text-amber-400 mb-1">🔶 제도 개선 (50 ~ 64점)</span>
+                    다부서 파편화 분절로 수혜 체감이 떨어지거나 자격요건 완화가 동반되어야 하는 영역. 관련 조례 개정 및 R&R 부서 조율을 권고합니다.
+                  </div>
+                </div>
+
+                {/* 3. 빠른 개선 툴팁 */}
+                <div className="relative group cursor-help flex items-center gap-1 hover:text-emerald-600 transition duration-150">
+                  <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full" />
+                  <span className="font-bold">빠른 개선</span>
+                  <div className="absolute hidden group-hover:block bg-slate-900 text-white text-[9.5px] p-3 rounded-lg shadow-xl z-50 w-64 -top-28 -left-20 leading-relaxed border border-slate-700 pointer-events-none animate-in fade-in duration-200">
+                    <span className="font-extrabold block text-emerald-400 mb-1">🟢 빠른 개선 (40 ~ 49점)</span>
+                    신청 절차 간소화, 원스톱 채널 홍보, 대민 안내 스티커 개선 등 적은 행정 예산으로 즉각적인 체감 만족도를 제고할 수 있는 사안입니다.
+                  </div>
+                </div>
+
+                {/* 4. 모니터링 툴팁 */}
+                <div className="relative group cursor-help flex items-center gap-1 hover:text-slate-600 transition duration-150">
+                  <span className="w-2.5 h-2.5 bg-slate-500 rounded-full" />
+                  <span className="font-bold">모니터링</span>
+                  <div className="absolute hidden group-hover:block bg-slate-900 text-white text-[9.5px] p-3 rounded-lg shadow-xl z-50 w-64 -top-24 -left-24 leading-relaxed border border-slate-700 pointer-events-none animate-in fade-in duration-200">
+                    <span className="font-extrabold block text-slate-400 mb-1">🔘 모니터링 (40점 미만)</span>
+                    기존 정책 공급이 안정적이거나 시민 민원 축적률이 상대적으로 낮아 주기적 피드백 분석 및 동향 감시가 유효한 영역입니다.
+                  </div>
+                </div>
               </div>
-              <span>💡 테두리가 굵을수록 근거 신뢰도가 높은 클러스터입니다.</span>
+
+              {/* 우측 판정 기준 설명 */}
+              <div className="relative group cursor-help hover:text-blue-600 transition duration-150">
+                <span className="font-bold flex items-center gap-1">
+                  💡 테두리가 굵을수록 근거 신뢰도가 높음 
+                  <span className="bg-slate-100 text-slate-500 px-1 py-0.2 rounded font-black border border-slate-200">판정 기준 ⓘ</span>
+                </span>
+                <div className="absolute hidden group-hover:block bg-slate-900 text-white text-[9.5px] p-3.5 rounded-lg shadow-xl z-50 w-72 -top-40 right-0 leading-relaxed border border-slate-700 pointer-events-none animate-in fade-in duration-200">
+                  <span className="font-extrabold block text-indigo-400 mb-1">📊 의사결정 상태 판정 로직 정의</span>
+                  본 점수는 적용된 방법론의 논문 가중치 모델을 기반으로 계산됩니다:
+                  <ul className="list-disc pl-3 mt-1.5 space-y-1 font-medium">
+                    <li><strong className="text-rose-300">즉시 검토 (65점~100점)</strong>: 긴급 공백 사각지대</li>
+                    <li><strong className="text-amber-300">제도 개선 (50점~64점)</strong>: 조례 수정 및 부서 연계</li>
+                    <li><strong className="text-emerald-300">빠른 개선 (40점~49점)</strong>: 소액 고효율 생활 조치</li>
+                    <li><strong className="text-slate-300">모니터링 (40점 미만)</strong>: 일반 주기 관찰 대상</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -1278,7 +1349,10 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                     🎓 학술 연구 & 실측 데이터 교차 검증 (Academic Proof)
                   </h4>
                   <div className="text-slate-700 leading-relaxed font-medium">
-                    {renderAcademicProof(selectedIssue)}
+                    {renderAcademicProof(selectedIssue, (title) => {
+                      setSelectedProofPaper(title);
+                      setShowProofModal(true);
+                    })}
                   </div>
                 </div>
 
@@ -1322,7 +1396,22 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                         className="text-[10px] px-2 py-1 bg-blue-600 text-white rounded-md font-bold"
                       >적용</button>
                     </div>
-                    <div className="text-[9px] text-slate-500">적용된 방법론: <strong className="text-slate-700">{PAPER_METHODS[appliedMethod]?.label || '기본'}</strong></div>
+                    <div className="text-[9px] text-slate-500 flex items-center gap-1">
+                      적용된 방법론: <strong className="text-slate-700">{PAPER_METHODS[appliedMethod]?.label || '기본'}</strong>
+                      {appliedMethod !== 'default' && (
+                        <button
+                          onClick={() => {
+                            const title = appliedMethod === 'park2022' ? '박미경 (2022)' : 'KICCE (2023)';
+                            setSelectedProofPaper(title);
+                            setShowProofModal(true);
+                          }}
+                          className="text-slate-400 hover:text-indigo-600 cursor-pointer flex items-center"
+                          title="적용 방법론의 4단계 가설 실증 흐름 보기"
+                        >
+                          <Info className="w-3.5 h-3.5 text-indigo-500 animate-pulse" />
+                        </button>
+                      )}
+                    </div>
                   </div>
                   <h4 className="text-[10px] font-black text-slate-800">📊 5대 진단 축 상세 분석</h4>
 
@@ -1366,15 +1455,21 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                     ] as const).map(metric => (
                       <div key={metric.key} className="space-y-0.5">
                         <div className="flex justify-between items-center font-semibold">
-                          <span className="flex items-center gap-1">
+                          <span className="flex items-center gap-1 relative">
                             {metric.label}
-                            <button
-                              onClick={() => setExpandedMetric(prev => prev === metric.key ? null : metric.key)}
-                              className="text-slate-400 hover:text-blue-600 transition cursor-pointer"
-                              title="산출 근거 보기"
-                            >
-                              <Info className="w-3 h-3" />
-                            </button>
+                            <div className="relative group inline-block">
+                              <button
+                                onClick={() => setExpandedMetric(prev => prev === metric.key ? null : metric.key)}
+                                className="text-slate-400 hover:text-blue-600 transition cursor-pointer"
+                              >
+                                <Info className="w-3 h-3" />
+                              </button>
+                              {/* 설명 호버 CSS 툴팁 */}
+                              <div className="absolute hidden group-hover:block bg-slate-900 text-white text-[9px] p-2.5 rounded-lg shadow-lg z-50 w-60 -top-16 -left-28 leading-relaxed border border-slate-700 pointer-events-none animate-in fade-in duration-200">
+                                <span className="font-bold block mb-0.5 text-blue-300">📊 산출 근거 공식</span>
+                                {metric.evidence}
+                              </div>
+                            </div>
                           </span>
                           <span className="font-mono text-slate-600">{metric.value} / 100</span>
                         </div>
@@ -1835,7 +1930,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                     </div>
 
                     {/* 🎓 근거 논문 상세 보기 패널 */}
-                    <div className="bg-white p-3 rounded-xl border border-blue-100 shadow-xs flex flex-col">
+                    <div className="bg-white p-3 rounded-xl border border-blue-100 shadow-xs flex-1 flex flex-col min-h-0">
                       <div className="flex items-center justify-between border-b border-blue-100 pb-2 mb-2">
                         <h4 className="font-black text-xs text-blue-900 flex items-center gap-1">
                           <Sparkles className="w-3.5 h-3.5 text-blue-600" />
@@ -1936,6 +2031,114 @@ export const GapMatrixDashboard: React.FC<Props> = ({
         proposals={proposals}
         customActions={customActions}
       />
+    </div>
+  );
+};
+
+interface AcademicProofDetailModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  paperTitle: string;
+  evidenceItems: AcademicEvidenceItem[];
+}
+
+const AcademicProofDetailModal: React.FC<AcademicProofDetailModalProps> = ({
+  isOpen,
+  onClose,
+  paperTitle,
+  evidenceItems
+}) => {
+  if (!isOpen) return null;
+
+  // Find matching paper in list
+  const paper = evidenceItems.find(p => p.title.includes(paperTitle) || paperTitle.includes(p.title));
+  if (!paper) return null;
+
+  return (
+    <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center z-50 p-4 transition-all duration-300">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-xl max-w-lg w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200 text-slate-800">
+        <div className="bg-indigo-900 text-white px-5 py-4 flex justify-between items-center">
+          <div>
+            <h3 className="text-sm font-black flex items-center gap-1.5">
+              <Sparkles className="w-4 h-4 text-emerald-400" />
+              실증적 가설 입증 상세 흐름
+            </h3>
+            <p className="text-[10px] text-slate-300 font-medium mt-0.5">{paper.title} 학술 증명</p>
+          </div>
+          <button onClick={onClose} className="text-white/80 hover:text-white font-bold text-sm cursor-pointer">✕</button>
+        </div>
+        <div className="p-5 space-y-4 max-h-[70vh] overflow-y-auto">
+          <div className="relative border-l-2 border-indigo-100 pl-4 ml-2 space-y-5">
+            {/* Step 1 */}
+            <div className="relative">
+              <div className="absolute -left-[25px] top-0 w-3.5 h-3.5 bg-indigo-600 rounded-full border-2 border-white flex items-center justify-center">
+                <span className="text-[7px] text-white font-bold">1</span>
+              </div>
+              <div className="space-y-0.5">
+                <h4 className="text-[11px] font-black text-indigo-900">1단계: 연구 가설 (Hypothesis)</h4>
+                <p className="text-[10.5px] text-slate-700 font-medium leading-relaxed bg-indigo-50/50 p-2 rounded-lg border border-indigo-100/50">
+                  {paper.hypothesis}
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="relative">
+              <div className="absolute -left-[25px] top-0 w-3.5 h-3.5 bg-indigo-600 rounded-full border-2 border-white flex items-center justify-center">
+                <span className="text-[7px] text-white font-bold">2</span>
+              </div>
+              <div className="space-y-0.5">
+                <h4 className="text-[11px] font-black text-indigo-900">2단계: 실증 검증 및 테스트 (Test)</h4>
+                <p className="text-[10.5px] text-slate-700 font-medium leading-relaxed bg-indigo-50/50 p-2 rounded-lg border border-indigo-100/50">
+                  {paper.test}
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="relative">
+              <div className="absolute -left-[25px] top-0 w-3.5 h-3.5 bg-emerald-500 rounded-full border-2 border-white flex items-center justify-center">
+                <span className="text-[7px] text-white font-bold">3</span>
+              </div>
+              <div className="space-y-0.5">
+                <h4 className="text-[11px] font-black text-emerald-950">3단계: 도출 결과 (Result)</h4>
+                <p className="text-[10.5px] text-slate-700 font-medium leading-relaxed bg-emerald-50/40 p-2 rounded-lg border border-emerald-100/50">
+                  {paper.result}
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="relative">
+              <div className="absolute -left-[25px] top-0 w-3.5 h-3.5 bg-emerald-600 rounded-full border-2 border-white flex items-center justify-center">
+                <span className="text-[7px] text-white font-bold">4</span>
+              </div>
+              <div className="space-y-0.5">
+                <h4 className="text-[11px] font-black text-emerald-950">4단계: 최종 결론 & 가설 매칭 (Conclusion)</h4>
+                <p className="text-[10.5px] text-slate-700 font-medium leading-relaxed bg-emerald-50/40 p-2 rounded-lg border border-emerald-100/50">
+                  {paper.conclusion}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-slate-50 px-5 py-3.5 flex justify-between items-center border-t border-slate-100">
+          <a
+            href={paper.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] text-indigo-600 hover:underline font-bold flex items-center gap-1"
+          >
+            학술 논문 원문 출처 (KCI/RISS) ➔
+          </a>
+          <button
+            onClick={onClose}
+            className="text-[10px] bg-slate-900 hover:bg-slate-800 text-white font-bold px-3 py-1.5 rounded-lg cursor-pointer transition shadow-2xs"
+          >
+            확인
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
