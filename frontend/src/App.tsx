@@ -22,7 +22,8 @@ import {
   Download,
   AlertTriangle,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  MessageSquare
 } from 'lucide-react';
 import rawMongttangData from './data/mongttang.json';
 import { PolicyProposal, DashboardStats } from './types';
@@ -483,7 +484,7 @@ export default function App() {
                       <p className="mt-3 text-sm text-slate-200 max-w-2xl">
                         선택된 자치구의 출생아 수, 보육시설 현황, 합계출산율, 정책 수요지수를 함께 확인합니다.
                       </p>
-                      <div className="mt-6 grid grid-cols-2 gap-3">
+                      <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
                         <div className="rounded-xl bg-white/10 border border-white/10 p-4">
                           <p className="text-[10px] uppercase text-slate-300 tracking-[0.25em]">출생아 수</p>
                           <p className="mt-3 text-2xl font-bold">{selectedPublicDistrict.births2025.toLocaleString()}</p>
@@ -493,6 +494,16 @@ export default function App() {
                           <p className="text-[10px] uppercase text-slate-300 tracking-[0.25em]">보육시설</p>
                           <p className="mt-3 text-2xl font-bold">{selectedPublicDistrict.daycare2025.toLocaleString()}</p>
                           <p className="text-xs text-slate-300">개소 / 2025</p>
+                        </div>
+                        <div className="rounded-xl bg-white/10 border border-white/10 p-4">
+                          <p className="text-[10px] uppercase text-slate-300 tracking-[0.25em]">합계출산율</p>
+                          <p className="mt-3 text-2xl font-bold">{selectedPublicDistrict.fertilityRate.toFixed(3)}</p>
+                          <p className="text-xs text-slate-300">명 / 2025</p>
+                        </div>
+                        <div className="rounded-xl bg-white/10 border border-white/10 p-4">
+                          <p className="text-[10px] uppercase text-slate-300 tracking-[0.25em]">시민제안수</p>
+                          <p className="mt-3 text-2xl font-bold">{selectedPublicDistrict.proposals.toLocaleString()}</p>
+                          <p className="text-xs text-slate-300">건 / 누적</p>
                         </div>
                       </div>
                     </div>
@@ -507,6 +518,40 @@ export default function App() {
 
                     <div className="h-[680px]">
                       <PolicyExplorer selectedDistrict={selectedPublicDistrict} />
+                    </div>
+
+                    <div className="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-hidden flex flex-col p-5 space-y-4">
+                      <div>
+                        <h3 className="text-sm font-semibold text-slate-800 flex items-center gap-2">
+                          <MessageSquare className="w-4 h-4 text-indigo-600" />
+                          {selectedPublicDistrict.name} 시민 제안 목록
+                        </h3>
+                        <p className="text-xs text-slate-500 mt-1">
+                          선택된 자치구명으로 수집 및 라우팅된 시민 정책 제안 리스트입니다.
+                        </p>
+                      </div>
+                      <div className="max-h-[350px] overflow-y-auto space-y-3 pr-1 scrollbar-thin">
+                        {mockProposals.filter(p => p.district === selectedPublicDistrict.name).length > 0 ? (
+                          mockProposals
+                            .filter(p => p.district === selectedPublicDistrict.name)
+                            .map(prop => (
+                              <div key={prop.id} className="p-3.5 rounded-xl border border-slate-100 bg-slate-50/50 hover:border-indigo-100 hover:shadow-xs transition">
+                                <div className="flex items-center justify-between gap-2 mb-1.5">
+                                  <span className="text-[10px] font-bold bg-blue-50 text-blue-600 px-2 py-0.5 rounded border border-blue-100">
+                                    {prop.category}
+                                  </span>
+                                  <span className="text-[10px] text-slate-400 font-mono">{prop.reg_date}</span>
+                                </div>
+                                <h4 className="text-xs font-bold text-slate-800">{prop.title}</h4>
+                                <p className="text-[11px] text-slate-600 leading-relaxed mt-1 line-clamp-3">{prop.content}</p>
+                              </div>
+                            ))
+                        ) : (
+                          <div className="text-center py-8 text-slate-400 text-xs">
+                            해당 자치구에 지정되어 등록된 시민 제안이 없습니다.
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </section>
