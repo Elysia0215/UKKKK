@@ -202,11 +202,13 @@ export default function App() {
             <div className="w-5 h-5 border-2 border-[#0A2351] rounded-sm"></div>
           </div>
           <div>
-            <h1 className="text-lg font-bold leading-tight flex items-center gap-2 group-hover:text-blue-200 transition">
-              서울시 출산·양육 정책 수요 분석 시스템
+            <h1 className="text-lg font-black leading-tight flex items-center gap-2 group-hover:text-blue-200 transition tracking-wider">
+              UKKKK
               <span className="text-[10px] bg-blue-600 text-white px-1.5 py-0.5 rounded font-bold">MVP</span>
             </h1>
-            <p className="text-xs text-slate-300">Seoul Maternity & Childcare Policy Dashboard v1.0</p>
+            <p className="text-xs text-slate-300 font-semibold">
+              Unified Key-Knowledge Kit — 서울시 출산·양육 정책 수요 분석 시스템
+            </p>
           </div>
         </div>
 
