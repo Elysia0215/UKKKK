@@ -449,6 +449,9 @@ export const GapMatrixDashboard: React.FC<Props> = ({
   const [isLocalExportOpen, setIsLocalExportOpen] = useState<boolean>(false);
   const [showProofModal, setShowProofModal] = useState<boolean>(false);
   const [selectedProofPaper, setSelectedProofPaper] = useState<string>('');
+  const [expandedPolicyName, setExpandedPolicyName] = useState<string | null>(null);
+  const [expandedNewsTitle, setExpandedNewsTitle] = useState<string | null>(null);
+  const [showPriorityStandardModal, setShowPriorityStandardModal] = useState<boolean>(false);
 
   // 상단 필터 상태값
   const [selectedPeriod, setSelectedPeriod] = useState<string>('전체');
@@ -1160,10 +1163,15 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               </div>
 
               {/* 우측 판정 기준 설명 */}
-              <div className="relative group cursor-help hover:text-blue-600 transition duration-150">
-                <span className="font-bold flex items-center gap-1">
+              <div className="relative group cursor-pointer hover:text-blue-600 transition duration-150">
+                <span 
+                  onClick={() => setShowPriorityStandardModal(true)}
+                  className="font-bold flex items-center gap-1 cursor-pointer select-none"
+                >
                   💡 테두리가 굵을수록 근거 신뢰도가 높음 
-                  <span className="bg-slate-100 text-slate-500 px-1 py-0.2 rounded font-black border border-slate-200">판정 기준 ⓘ</span>
+                  <span className="bg-slate-100 hover:bg-blue-50 text-slate-500 hover:text-blue-700 px-1.5 py-0.5 rounded font-black border border-slate-200 transition">
+                    판정 기준 ⓘ
+                  </span>
                 </span>
                 <div className="absolute hidden group-hover:block bg-slate-900 text-white text-[9.5px] p-3.5 rounded-lg shadow-xl z-50 w-72 -top-40 right-0 leading-relaxed border border-slate-700 pointer-events-none animate-in fade-in duration-200">
                   <span className="font-extrabold block text-indigo-400 mb-1">📊 의사결정 상태 판정 로직 정의</span>
@@ -1902,12 +1910,52 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                           {selectedIssueRawData.policies.length === 0 ? (
                             <p className="text-slate-400 text-center py-4 text-[10px]">해당 분야의 매칭된 서울시 정책이 없습니다.</p>
                           ) : (
-                            selectedIssueRawData.policies.map((p, idx) => (
-                              <div key={idx} className="bg-emerald-50/10 p-2.5 rounded border border-emerald-100/50 hover:bg-emerald-50/20 transition">
-                                <h6 className="font-black text-[10.5px] text-slate-800">{p.policy_name}</h6>
-                                <p className="text-slate-500 text-[8.5px] mt-0.5 font-medium">대상: {p.targetGroup}</p>
-                              </div>
-                            ))
+                            selectedIssueRawData.policies.map((p, idx) => {
+                              const isExpanded = expandedPolicyName === p.policy_name;
+                              return (
+                                <div 
+                                  key={idx} 
+                                  onClick={() => setExpandedPolicyName(isExpanded ? null : p.policy_name)}
+                                  className={`p-2.5 rounded border transition cursor-pointer text-slate-800 ${
+                                    isExpanded 
+                                      ? 'bg-emerald-50 border-emerald-300 shadow-3xs' 
+                                      : 'bg-emerald-50/10 border-emerald-100/50 hover:bg-emerald-50/20'
+                                  }`}
+                                >
+                                  <div className="flex justify-between items-center gap-2">
+                                    <h6 className="font-black text-[10.5px] text-slate-800 flex-1">{p.policy_name}</h6>
+                                    <span className="text-[8.5px] font-bold text-emerald-700 bg-white border border-emerald-200 px-1 py-0.2 rounded shrink-0">
+                                      {isExpanded ? '접기 ▴' : '상세보기 ▾'}
+                                    </span>
+                                  </div>
+                                  <p className="text-slate-500 text-[8.5px] mt-0.5 font-medium">대상: {p.targetGroup}</p>
+                                  
+                                  {isExpanded && (
+                                    <div className="mt-2 pt-2 border-t border-emerald-200/60 text-[9px] text-slate-700 space-y-1.5 animate-in fade-in slide-in-from-top-1 duration-150">
+                                      <p className="leading-relaxed font-medium">
+                                        <strong className="text-emerald-950 font-bold block mb-0.5">ℹ️ 지원 상세</strong>
+                                        {p.supportDetail}
+                                      </p>
+                                      <p className="leading-relaxed font-medium">
+                                        <strong className="text-emerald-950 font-bold block mb-0.5">⚙️ 신청 방법</strong>
+                                        {p.apply_method}
+                                      </p>
+                                      {p.url && (
+                                        <a
+                                          href={p.url}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          onClick={(e) => e.stopPropagation()}
+                                          className="inline-block text-[8.5px] bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-2 py-0.5 rounded shadow-3xs mt-1 transition"
+                                        >
+                                          자세히 보기 (몽땅정보통) ↗
+                                        </a>
+                                      )}
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            })
                           )}
                         </div>
                       </div>
@@ -1922,15 +1970,52 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                           {selectedIssueRawData.news.length === 0 ? (
                             <p className="text-slate-400 text-center py-4 text-[10px]">해당 분야의 매칭된 언론 뉴스가 없습니다.</p>
                           ) : (
-                            selectedIssueRawData.news.map((n, idx) => (
-                              <div key={idx} className="bg-slate-50 p-2.5 rounded border border-slate-200/60 hover:bg-slate-100 transition cursor-pointer group/news">
-                                <h6 className="font-black text-[10.5px] text-slate-800 leading-snug line-clamp-2 group-hover/news:line-clamp-none transition-all duration-200">{n.title}</h6>
-                                <div className="flex items-center justify-between mt-1 text-[8px] text-slate-400 font-medium">
-                                  <span>{n.press} | {n.date}</span>
-                                  <span className="bg-rose-50 text-rose-700 px-1.5 rounded font-bold">이슈강도: {n.strength}</span>
+                            selectedIssueRawData.news.map((n, idx) => {
+                              const isExpanded = expandedNewsTitle === n.title;
+                              return (
+                                <div 
+                                  key={idx} 
+                                  onClick={() => setExpandedNewsTitle(isExpanded ? null : n.title)}
+                                  className={`p-2.5 rounded border transition cursor-pointer text-slate-800 ${
+                                    isExpanded 
+                                      ? 'bg-slate-100 border-slate-350 shadow-3xs' 
+                                      : 'bg-slate-50 border-slate-200/60 hover:bg-slate-100'
+                                  }`}
+                                >
+                                  <div className="flex justify-between items-start gap-2">
+                                    <h6 className={`font-black text-[10.5px] text-slate-800 leading-snug flex-1 ${isExpanded ? '' : 'line-clamp-2'}`}>
+                                      {n.title}
+                                    </h6>
+                                    <span className="text-[8.5px] font-bold text-slate-500 bg-white border border-slate-300 px-1 py-0.2 rounded shrink-0 mt-0.5">
+                                      {isExpanded ? '접기 ▴' : '요약보기 ▾'}
+                                    </span>
+                                  </div>
+                                  <div className="flex items-center justify-between mt-1 text-[8px] text-slate-400 font-medium">
+                                    <span>{n.press} | {n.date}</span>
+                                    <span className="bg-rose-50 text-rose-700 px-1.5 rounded font-bold">이슈강도: {n.strength}</span>
+                                  </div>
+
+                                  {isExpanded && (
+                                    <div className="mt-2 pt-2 border-t border-slate-300/60 text-[9px] text-slate-700 space-y-1.5 animate-in fade-in slide-in-from-top-1 duration-150">
+                                      <p className="leading-relaxed font-medium text-slate-600 bg-white/60 p-1.5 rounded border border-slate-200/40">
+                                        {n.snippet || '요약 데이터가 없습니다.'}
+                                      </p>
+                                      {n.url && (
+                                        <a
+                                          href={n.url}
+                                          target="_blank"
+                                          rel="noopener noreferrer"
+                                          onClick={(e) => e.stopPropagation()}
+                                          className="inline-block text-[8.5px] bg-slate-800 hover:bg-slate-900 text-white font-bold px-2 py-0.5 rounded shadow-3xs mt-1 transition"
+                                        >
+                                          기사 원문 읽기 ↗
+                                        </a>
+                                      )}
+                                    </div>
+                                  )}
                                 </div>
-                              </div>
-                            ))
+                              );
+                            })
                           )}
                         </div>
                       </div>
@@ -1993,6 +2078,12 @@ export const GapMatrixDashboard: React.FC<Props> = ({
         selectedDept={selectedDept}
         proposals={proposals}
         customActions={customActions}
+      />
+
+      {/* 의사결정 판정 기준 모달 */}
+      <PriorityStandardModal
+        isOpen={showPriorityStandardModal}
+        onClose={() => setShowPriorityStandardModal(false)}
       />
     </div>
   );
@@ -2099,6 +2190,112 @@ const AcademicProofDetailModal: React.FC<AcademicProofDetailModalProps> = ({
             className="text-[10px] bg-slate-900 hover:bg-slate-800 text-white font-bold px-3 py-1.5 rounded-lg cursor-pointer transition shadow-2xs"
           >
             확인
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+interface PriorityStandardModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const PriorityStandardModal: React.FC<PriorityStandardModalProps> = ({ isOpen, onClose }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center z-50 p-4 animate-in fade-in duration-250">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-2xl max-w-lg w-full overflow-hidden animate-in zoom-in-95 duration-200">
+        {/* Header */}
+        <div className="p-4 bg-slate-900 text-white flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <span className="text-base">📊</span>
+            <div>
+              <h3 className="font-extrabold text-sm leading-none text-white">의사결정 우선순위 판정 기준</h3>
+              <p className="text-[10px] text-slate-300 mt-1">Unified Key-Knowledge Kit (UKKKK) Decision Matrix</p>
+            </div>
+          </div>
+          <button 
+            onClick={onClose}
+            className="text-slate-400 hover:text-white transition text-lg font-bold p-1 cursor-pointer"
+          >
+            &times;
+          </button>
+        </div>
+
+        {/* Content */}
+        <div className="p-5 space-y-4 text-slate-700">
+          <div className="space-y-1.5">
+            <h4 className="font-extrabold text-xs text-slate-900 flex items-center gap-1.5">
+              <span>🧮 우선순위 산출 공식</span>
+            </h4>
+            <div className="bg-slate-50 p-3 rounded-lg border border-slate-200/60 font-mono text-[10px] text-slate-600 leading-relaxed">
+              <strong className="text-indigo-900">우선순위 지수 (Score)</strong>
+              <div className="mt-1 pl-2 border-l-2 border-indigo-400 space-y-0.5 font-semibold">
+                = (시민 요구 강도 &times; w₁) + (정책 공급망 격차 &times; w₂)<br />
+                &nbsp;&nbsp;+ (행정 긴급성 &times; w₃) + (현실적 실현가능성 &times; w₄)
+              </div>
+              <p className="text-[9px] text-slate-400 mt-1.5">
+                * 가중치(w₁, w₂, w₃, w₄)는 상단에서 선택된 학술 연구 방법론에 의해 결정됩니다.
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-1.5">
+            <h4 className="font-extrabold text-xs text-slate-900">🚦 4단계 의사결정 상태 판정 기준</h4>
+            <div className="border border-slate-150 rounded-xl overflow-hidden text-[10.5px]">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-slate-50 text-[9px] font-black text-slate-400 uppercase tracking-wider border-b border-slate-150">
+                    <th className="py-2 px-3">등급</th>
+                    <th className="py-2 px-3">점수 구간</th>
+                    <th className="py-2 px-3">행정 조치 권고 사항</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 font-medium text-slate-600">
+                  <tr>
+                    <td className="py-2.5 px-3 flex items-center gap-1.5 font-bold text-rose-600">
+                      <span className="w-2.5 h-2.5 bg-rose-500 rounded-full" /> 즉시 검토
+                    </td>
+                    <td className="py-2.5 px-3 font-mono font-bold">65점 이상</td>
+                    <td className="py-2.5 px-3 text-[10px] leading-relaxed">사각지대 신규 대안 예산 편성 및 행정 조치 권고</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2.5 px-3 flex items-center gap-1.5 font-bold text-amber-600">
+                      <span className="w-2.5 h-2.5 bg-amber-500 rounded-full" /> 제도 개선
+                    </td>
+                    <td className="py-2.5 px-3 font-mono font-bold">50점 ~ 64점</td>
+                    <td className="py-2.5 px-3 text-[10px] leading-relaxed">다부서 R&R 조율 및 조례 규정 완화 개정</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2.5 px-3 flex items-center gap-1.5 font-bold text-emerald-600">
+                      <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full" /> 빠른 개선
+                    </td>
+                    <td className="py-2.5 px-3 font-mono font-bold">40점 ~ 49점</td>
+                    <td className="py-2.5 px-3 text-[10px] leading-relaxed">안내 절차 간소화, 수혜 홍보 강화 등 고효율 처방</td>
+                  </tr>
+                  <tr>
+                    <td className="py-2.5 px-3 flex items-center gap-1.5 font-bold text-slate-500">
+                      <span className="w-2.5 h-2.5 bg-slate-500 rounded-full" /> 모니터링
+                    </td>
+                    <td className="py-2.5 px-3 font-mono font-bold">40점 미만</td>
+                    <td className="py-2.5 px-3 text-[10px] leading-relaxed">신고 누적 추이 관찰 및 주기적 동향 감사</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="p-3 bg-slate-50 border-t border-slate-100 flex justify-end">
+          <button
+            onClick={onClose}
+            className="bg-slate-800 hover:bg-slate-900 text-white font-extrabold text-[10.5px] px-4 py-2 rounded-lg cursor-pointer transition"
+          >
+            확인 및 닫기
           </button>
         </div>
       </div>
