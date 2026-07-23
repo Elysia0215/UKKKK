@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UKKKK — 서울시 출산·양육 정책 수요 분석 대시보드</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  /* Win98 desktop */
+  --desk:#008080;
+  /* window chrome (Win98 beveled) */
+  --chrome:#C0C0C0; --hi:#FFFFFF; --lo:#808080; --dk:#404040;
+  /* Interior — WHITE background */
+  --bg:#FFFFFF; --bg2:#F5F5F0; --bg3:#FAFAFA;
+  --ink:#111; --ink2:#3A3A2A; --muted:#6B6B55; --dim:#9A9A80;
+  /* accents */
+  --purple:#A78BFA; --blue:#5B8CFF; --gold:#FBC44D; --green:#4ADE80; --coral:#FB7185;
+  --navy:#151D3E; --navy2:#1C2650; --line:#D6D3B8;
+  /* mascot */
+  --cream:#FCFBE6; --bubbleBorder:#5A3E1B;
+  /* fonts */
+  --sans:'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo',sans-serif;
+  --num:'Calibri','Segoe UI',var(--sans);
+}
+html,body{height:100%;background:#000;font-family:var(--sans);overflow:hidden;}
+
+/* ── layout ── */
+#app{width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;}
+.stage{
+  width:1280px;height:720px;flex:0 0 auto;
+  background:var(--desk);position:relative;
+  transform-origin:center center;
+}
+.stage::before{
+  content:"";position:absolute;inset:0;
+  background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);
+  background-size:24px 24px;pointer-events:none;z-index:0;
+}
+
+/* ── WIN98 TASKBAR ── */
+.taskbar{
+  position:absolute;left:0;right:0;bottom:0;height:32px;z-index:10;
+  background:var(--chrome);
+  border-top:2px solid var(--hi);
+  display:flex;align-items:center;padding:0 4px;gap:4px;
+}
+.start-btn{
+  display:flex;align-items:center;gap:4px;
+  padding:2px 8px 2px 4px;font-size:12px;font-weight:700;color:#000;
+  border-top:2px solid var(--hi);border-left:2px solid var(--hi);
+  border-right:2px solid var(--dk);border-bottom:2px solid var(--dk);
+  background:var(--chrome);cursor:pointer;
+}
+.start-btn img{width:18px;height:18px;image-rendering:pixelated;}
+.tb-sep{width:1px;height:22px;border-left:1px solid var(--lo);border-right:1px solid var(--hi);margin:0 2px;}
+.tb-item{
+  font-size:11px;color:#000;padding:2px 10px;
+  border-top:2px solid var(--hi);border-left:2px solid var(--hi);
+  border-right:2px solid var(--dk);border-bottom:2px solid var(--dk);
+  background:var(--chrome);min-width:160px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.tb-clock{
+  margin-left:auto;font-size:11px;font-family:var(--num);color:#000;
+  padding:2px 8px;
+  border-top:2px solid var(--lo);border-left:2px solid var(--lo);
+  border-right:2px solid var(--hi);border-bottom:2px solid var(--hi);
+}
+
+/* ── WIN98 WINDOW ── */
+.win{
+  position:absolute;top:16px;left:24px;right:24px;bottom:48px;z-index:2;
+  background:var(--chrome);
+  border-top:2px solid var(--hi);border-left:2px solid var(--hi);
+  border-right:2px solid var(--dk);border-bottom:2px solid var(--dk);
+  display:flex;flex-direction:column;
+  box-shadow:2px 2px 0 #000;
+}
+.titlebar{
+  height:26px;flex:0 0 auto;
+  background:linear-gradient(90deg,#000080,#1084d0);
+  color:#fff;display:flex;align-items:center;padding:0 3px 0 4px;gap:4px;
+}
+.titlebar .ico{width:16px;height:16px;image-rendering:pixelated;}
+.titlebar .t{flex:1;font-size:12px;font-weight:700;letter-spacing:.3px;padding-left:2px;white-space:nowrap;overflow:hidden;}
+.winbtns{display:flex;gap:2px;}
+.winbtns span{
+  width:16px;height:14px;font-size:9px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--chrome);color:#000;
+  border-top:1px solid var(--hi);border-left:1px solid var(--hi);
+  border-right:1px solid var(--dk);border-bottom:1px solid var(--dk);
+}
+.menubar{
+  height:20px;background:var(--chrome);display:flex;align-items:center;padding:0 6px;gap:12px;
+  font-size:11px;color:#000;border-bottom:1px solid var(--lo);
+}
+.menubar span{cursor:default;}
+.menubar span u{text-decoration:underline;}
+
+/* ── CONTENT AREA (CREAM palette — PPT match) ── */
+.content{
+  flex:1;margin:3px;overflow:hidden;position:relative;
+  background:var(--bg);
+  border-top:2px solid var(--lo);border-left:2px solid var(--lo);
+  border-right:2px solid var(--hi);border-bottom:2px solid var(--hi);
+  display:flex;flex-direction:column;padding:28px 36px;
+}
+
+/* ── TYPOGRAPHY ── */
+.eyebrow{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--purple);letter-spacing:.5px;}
+.eyebrow .bar{width:22px;height:3px;border-radius:1px;background:var(--purple);}
+.headline{font-size:30px;font-weight:700;color:var(--ink);margin-top:10px;line-height:1.3;}
+.sub{font-size:14px;color:var(--ink2);margin-top:8px;line-height:1.6;}
+.spacer{flex:1 1 auto;}
+
+/* centered layout for big-number slides (PPT match) */
+.centered{align-items:center;text-align:center;padding-bottom:80px;}
+.centered .eyebrow{justify-content:center;}
+.centered .bigrow{justify-content:center;}
+.centered .tags{justify-content:center;}
+
+/* big number */
+.bigrow{display:flex;align-items:baseline;gap:16px;margin-top:14px;}
+.bignum{font-family:var(--num);font-size:110px;font-weight:700;color:var(--gold);line-height:.9;letter-spacing:-1px;
+  text-shadow:2px 3px 0 rgba(0,0,0,.08);}
+.bigunit{font-size:15px;color:var(--ink2);line-height:1.5;}
+.source{font-size:12px;color:var(--muted);margin-top:12px;}
+
+/* tags */
+.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px;}
+.tag{font-size:13px;padding:6px 14px;border-radius:16px;font-weight:600;border:1.5px solid;}
+.tag.g{color:#0d7a4f;background:rgba(74,222,128,.15);border-color:rgba(74,222,128,.5);}
+.tag.b{color:#2a5cc8;background:rgba(91,140,255,.12);border-color:rgba(91,140,255,.45);}
+.tag.p{color:#6d4fc0;background:rgba(167,139,250,.12);border-color:rgba(167,139,250,.45);}
+.tag.a{color:#9a6500;background:rgba(251,196,77,.15);border-color:rgba(251,196,77,.55);}
+
+/* cards */
+.cards{display:grid;gap:12px;margin-top:auto;}
+.cards.c2{grid-template-columns:1fr 1fr;}
+.cards.c4{grid-template-columns:1fr 1fr;}
+.card{
+  background:var(--bg3);border:1.5px solid var(--line);border-radius:6px;padding:16px 18px;
+  box-shadow:0 1px 3px rgba(0,0,0,.06);
+}
+.card h4{font-size:15px;color:var(--ink);font-weight:700;display:flex;align-items:center;gap:6px;}
+.card p{font-size:13px;color:var(--ink2);margin-top:6px;line-height:1.55;}
+.card .num{font-family:var(--num);color:var(--gold);font-weight:700;}
+
+/* as-is / to-be columns */
+.cols{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:stretch;margin-top:auto;}
+.col{background:var(--bg3);border:1.5px solid var(--line);border-radius:6px;padding:16px 18px;box-shadow:0 1px 3px rgba(0,0,0,.06);}
+.col.asis{border-left:3px solid var(--coral);}
+.col.tobe{border-left:3px solid var(--green);}
+.col .lbl{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--muted);}
+.col.tobe .lbl{color:#0d7a4f;}
+.col.asis .lbl{color:var(--coral);}
+.col ul{margin-top:8px;list-style:none;display:flex;flex-direction:column;gap:6px;}
+.col li{font-size:13.5px;color:var(--ink);line-height:1.45;padding-left:16px;position:relative;}
+.col li::before{content:"—";position:absolute;left:0;color:var(--dim);}
+.arrow{display:flex;align-items:center;font-size:28px;color:var(--gold);font-weight:700;}
+
+/* pipeline — HORIZONTAL layout matching PPT */
+.pipe-h{display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:auto;}
+.pipe-row{display:flex;gap:12px;justify-content:center;}
+.pipe-cell{
+  background:var(--bg3);border:1.5px solid var(--line);border-radius:6px;
+  padding:14px 16px;text-align:center;min-width:140px;
+  box-shadow:0 1px 3px rgba(0,0,0,.06);
+}
+.pipe-cell .n{font-family:var(--num);font-size:28px;font-weight:700;color:var(--gold);display:block;line-height:1;}
+.pipe-cell .lbl{font-size:11px;color:var(--muted);margin-top:6px;display:block;}
+.pipe-arrow{font-size:28px;color:var(--gold);}
+.hub{
+  background:linear-gradient(135deg,var(--purple),var(--blue));color:#fff;border-radius:8px;
+  padding:16px 32px;font-weight:700;font-size:17px;text-align:center;line-height:1.4;
+  box-shadow:0 4px 16px rgba(91,140,255,.25);
+}
+
+/* formula */
+.formula{
+  background:var(--bg3);border:1.5px solid var(--line);border-radius:8px;padding:24px;margin-top:auto;
+  text-align:center;font-family:var(--num);font-size:22px;color:var(--ink);line-height:1.6;
+  box-shadow:0 1px 3px rgba(0,0,0,.06);
+}
+.formula .k{color:var(--blue);font-weight:700;}
+.formula .w{color:var(--gold);font-weight:700;}
+.chips{display:flex;gap:10px;margin-top:14px;}
+.chip{flex:1;background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:10px 12px;font-size:13px;color:var(--ink2);}
+.chip b{color:var(--gold);font-family:var(--num);}
+
+/* screenshot polaroid */
+.shotwrap{flex:1 1 auto;display:flex;align-items:center;justify-content:center;margin-top:8px;min-height:0;}
+.polaroid{
+  background:#fff;padding:10px 10px 36px;border-radius:2px;
+  box-shadow:0 10px 28px rgba(0,0,0,.18);
+  transform:rotate(-1.2deg);max-height:100%;position:relative;
+}
+.polaroid img{display:block;max-height:320px;max-width:630px;width:auto;border:1px solid #ddd;}
+.polaroid .cap{position:absolute;bottom:8px;left:0;right:0;text-align:center;font-size:12px;color:#777;font-family:var(--sans);}
+
+/* tree */
+.tree{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;margin-top:auto;}
+.leaf{
+  background:var(--bg3);border:1.5px solid var(--line);border-left:3px solid var(--purple);border-radius:4px;
+  padding:9px 12px;font-size:12.5px;color:var(--ink);display:flex;align-items:center;gap:8px;
+  box-shadow:0 1px 2px rgba(0,0,0,.05);
+}
+.leaf .idx{font-family:var(--num);font-weight:700;color:var(--purple);font-size:14px;min-width:16px;}
+
+/* bars */
+.bars{display:flex;gap:28px;align-items:flex-end;margin-top:auto;height:260px;padding:0 16px;}
+.barcol{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;height:100%;}
+.barcol .bar{width:110px;border-radius:6px 6px 0 0;display:flex;align-items:flex-start;justify-content:center;
+  font-family:var(--num);font-weight:700;font-size:24px;padding-top:10px;}
+.barcol .cap{margin-top:10px;font-size:13px;color:var(--ink2);text-align:center;}
+.barcol.old .bar{background:#D6D3B8;color:var(--ink2);}
+.barcol.new .bar{background:linear-gradient(180deg,var(--gold),#e0a022);color:var(--ink);}
+
+/* steps */
+.steps{display:flex;align-items:center;gap:12px;margin-top:auto;}
+.step{flex:1;background:var(--bg3);border:1.5px solid var(--line);border-radius:8px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.06);}
+.step .tag2{display:inline-block;font-size:11px;font-weight:700;padding:3px 8px;border-radius:4px;margin-bottom:8px;}
+.step.s1 .tag2{background:rgba(91,140,255,.15);color:var(--blue);}
+.step.s2 .tag2{background:rgba(167,139,250,.15);color:var(--purple);}
+.step h4{font-size:16px;color:var(--ink);font-weight:700;}
+.step p{font-size:12.5px;color:var(--ink2);margin-top:6px;line-height:1.5;}
+.stepArrow{font-size:24px;color:var(--gold);font-weight:700;}
+
+/* table */
+.atable{width:100%;margin-top:14px;border-collapse:collapse;font-size:13px;}
+.atable th,.atable td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);color:var(--ink);}
+.atable th{color:var(--muted);font-weight:700;font-size:11px;letter-spacing:.5px;background:var(--bg2);}
+.atable td .fmt{color:var(--gold);font-family:var(--num);font-weight:700;}
+.atable td .path{color:var(--blue);font-family:var(--num);font-size:12px;}
+
+/* ── DIVIDER ── */
+.divider{align-items:center;justify-content:center;text-align:center;}
+.divider .part{font-family:var(--num);font-size:18px;font-weight:700;color:var(--purple);letter-spacing:3px;}
+.divider .dtitle{font-size:42px;font-weight:700;color:var(--ink);margin-top:12px;line-height:1.2;}
+.divider .dline{width:60px;height:3px;background:var(--purple);border-radius:2px;margin:18px auto 0;}
+
+/* ── COVER ── */
+.cover{justify-content:center;align-items:center;text-align:center;}
+.cover .kicker{font-size:12px;letter-spacing:4px;color:var(--muted);font-weight:700;}
+.cover .logo{font-family:var(--num);font-size:84px;font-weight:700;color:var(--ink);letter-spacing:4px;line-height:1;margin-top:10px;}
+.cover .csub{font-size:18px;color:var(--ink2);margin-top:10px;}
+.cover .mean{font-size:12px;color:var(--muted);margin-top:4px;}
+.cover .team{display:flex;gap:18px;margin-top:24px;justify-content:center;flex-wrap:wrap;}
+.cover .member{font-size:13px;color:var(--ink);text-align:center;}
+.cover .member b{color:var(--purple);font-weight:700;}
+.cover .member span{color:var(--ink2);display:block;font-size:11.5px;margin-top:2px;}
+/* Win98 click button */
+.click98{
+  margin-top:28px;display:inline-flex;align-items:center;gap:6px;
+  padding:6px 20px;font-size:13px;font-weight:700;color:#000;
+  background:var(--chrome);
+  border-top:2px solid var(--hi);border-left:2px solid var(--hi);
+  border-right:2px solid var(--dk);border-bottom:2px solid var(--dk);
+  cursor:pointer;position:relative;
+}
+.click98 .cursor98{position:absolute;right:-28px;bottom:-8px;width:24px;pointer-events:none;image-rendering:pixelated;}
+
+/* ── ENDING ── */
+.ending{align-items:center;justify-content:center;text-align:center;}
+.ending .qa{font-family:var(--num);font-size:76px;font-weight:700;color:var(--ink);letter-spacing:6px;}
+.ending .contact{margin-top:16px;font-size:14px;color:var(--ink2);line-height:1.8;}
+.ending .contact .path{color:var(--blue);font-family:var(--num);}
+.ending .click98{margin-top:24px;}
+
+/* ══════════════════════════════════════════
+   MASCOT + SPEECH BUBBLE (CSS triangle tail)
+   ══════════════════════════════════════════ */
+.mascot{
+  position:absolute;right:20px;bottom:10px;
+  display:flex;align-items:flex-end;gap:0;z-index:6;max-width:50%;
+}
+.mascot.left{left:24px;right:auto;flex-direction:row-reverse;}
+.mascot .dogimg{width:60px;height:60px;flex:0 0 auto;object-fit:contain;filter:drop-shadow(1px 2px 0 rgba(0,0,0,.2));}
+
+/* speech bubble with tail */
+.bubble{
+  position:relative;
+  background:var(--cream);
+  border:2.5px solid var(--bubbleBorder);
+  border-radius:14px;
+  padding:10px 14px;
+  font-size:13px;font-weight:600;color:#1a2340;line-height:1.45;
+  box-shadow:2px 3px 0 rgba(0,0,0,.18);
+  margin-bottom:14px;
+}
+/* tail pointing right (dog on right) */
+.bubble::after{
+  content:"";position:absolute;bottom:8px;right:-12px;
+  width:0;height:0;
+  border-top:8px solid transparent;
+  border-bottom:8px solid transparent;
+  border-left:12px solid var(--cream);
+  filter:drop-shadow(2px 1px 0 rgba(0,0,0,.12));
+}
+.bubble::before{
+  content:"";position:absolute;bottom:6px;right:-16px;
+  width:0;height:0;
+  border-top:10px solid transparent;
+  border-bottom:10px solid transparent;
+  border-left:15px solid var(--bubbleBorder);
+}
+/* tail pointing left (dog on left) */
+.mascot.left .bubble::after{
+  right:auto;left:-12px;
+  border-left:none;
+  border-right:12px solid var(--cream);
+}
+.mascot.left .bubble::before{
+  right:auto;left:-16px;
+  border-left:none;
+  border-right:15px solid var(--bubbleBorder);
+}
+
+/* nav hint */
+.hint{position:fixed;top:8px;right:12px;color:#666;font-size:11px;z-index:20;font-family:var(--sans);background:rgba(255,255,255,.85);padding:3px 8px;border-radius:4px;}
+.hint kbd{background:#e0e0e0;color:#333;border-radius:3px;padding:1px 5px;font-size:10px;}
+
+/* transitions */
+.content{animation:fadeIn .3s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+</style>
+</head>
+<body>
+<div class="hint"><kbd>←</kbd> <kbd>→</kbd> / <kbd>Space</kbd> 이동 · <kbd>F</kbd> 전체화면</div>
+<div id="app"><div class="stage" id="stage"></div></div>
+<script>
+const el=h=>{const d=document.createElement('div');d.innerHTML=h.trim();return d.firstChild;};
+const IMG='이미지/';
+
+/* mascot — saessak.png + CSS bubble with tail */
+const mascot=(text,side)=>{
+  if(!text) return '';
+  const cls=side==='left'?'mascot left':'mascot';
+  return `<div class="${cls}">
+    <div class="bubble">${text}</div>
+    <img class="dogimg" src="${IMG}saessak.png" alt="새싹이">
+  </div>`;
+};
+
+/* ═══════ SLIDES ═══════ */
+const slides=[];
+
+/* 0 COVER */
+slides.push({bar:'UKKKK',variant:'cover',body:`
+  <div class="kicker">SEOUL · MATERNITY & CHILDCARE POLICY</div>
+  <div class="logo">UKKKK</div>
+  <div class="csub">서울시 출산·보육 정책 수요 분석 대시보드</div>
+  <div class="mean">Unified Key-Knowledge Kit · U자 요람 안에서 K(Kid)가 자라나는 브랜드 스토리</div>
+  <div class="team">
+    <div class="member"><b>[팀원 1]</b><span>기획 · 데이터 파이프라인</span></div>
+    <div class="member"><b>[팀원 2]</b><span>모델링 · 분류</span></div>
+    <div class="member"><b>[팀원 3]</b><span>프론트엔드 · 대시보드</span></div>
+    <div class="member"><b>[팀원 4]</b><span>리서치 · 발표</span></div>
+  </div>
+  <div class="click98">▶ 클릭하여 발표 시작<img class="cursor98" src="${IMG}cursor98_click.png" alt=""></div>
+  ${mascot('안녕하세요! 오피스 길잡이 새싹이입니다')}
+`});
+
+/* divider helper */
+const divider=(part,title)=>({bar:title,variant:'divider',body:`
+  <div class="part">${part}</div>
+  <div class="dtitle">${title}</div>
+  <div class="dline"></div>
+`});
+
+/* ─── PART 1 ─── */
+slides.push(divider('PART 1','비즈니스 분석 결과'));
+
+/* 1-1 문제 제기 */
+slides.push({bar:'1-1 · 비즈니스 문제 제기',body:`
+  <div class="eyebrow"><span class="bar"></span>실무 공무원의 Pain Point</div>
+  <div class="headline">매일 쏟아지는 시민의 목소리,<br>행정의 현실은?</div>
+  <div class="sub">여성가족실 3년 차 김민우 주무관은 상상대로·국민신문고에서 쏟아지는 제안과 민원 속에서<br>어떤 게 우선순위인지, 어디서 정책 공백이 생기는지 수작업으로 찾느라 소중한 행정 시간을 소모합니다.</div>
+  <div class="spacer"></div>
+  <div class="tags" style="margin-bottom:60px"><span class="tag p">우선순위 판단 지연</span><span class="tag b">담당 부서 매칭 수작업</span><span class="tag g">정책 공백 미포착</span></div>
+  ${mascot('담당 부서는 어디고, 공백은 어떻게 찾죠?')}
+`});
+
+/* 1-2 AS-IS → TO-BE */
+slides.push({bar:'1-2 · AS-IS → TO-BE',body:`
+  <div class="eyebrow"><span class="bar"></span>현황 진단 및 해결 방향</div>
+  <div class="headline">파편화에서 실시간 융합으로</div>
+  <div class="cols">
+    <div class="col asis"><div class="lbl">AS-IS · 파편화</div><ul>
+      <li>상상대로·국민신문고·몽땅정보통 단절</li>
+      <li>수요와 공급 정책이 분리</li>
+      <li>18개 부서로 흩어진 R&R</li>
+      <li>수작업 대조로 시간 소모</li>
+    </ul></div>
+    <div class="arrow">→</div>
+    <div class="col tobe"><div class="lbl">TO-BE · 실시간 융합</div><ul>
+      <li>5원 데이터 통합 파이프라인</li>
+      <li>AI·규칙 기반 부서 자동 라우팅</li>
+      <li>정책 공백 1클릭 포착</li>
+      <li>갭 진단 대시보드로 의사결정</li>
+    </ul></div>
+  </div>
+  ${mascot('파편화된 채널을 묶어 한눈에 파악할게요!','left')}
+`});
+
+/* 1-3 선행연구 ① — 검증된 논문 (성낙일·박선권 2012) */
+slides.push({bar:'1-3 · 선행연구 ① 보육 수요',variant:'centered',body:`
+  <div class="eyebrow"><span class="bar"></span>시민의 실질적 보육 수요</div>
+  <div class="headline">시민이 요구하는 보육의 핵심은?</div>
+  <div class="spacer"></div>
+  <div class="bigrow"><div class="bignum">992</div><div class="bigunit">건 · 국민신문고 저출산 민원<br>CONCOR 네트워크 분석</div></div>
+  <div class="tags"><span class="tag g">시간제 보육 예약</span><span class="tag b">소아 응급 의료</span><span class="tag p">맞벌이 돌봄 공백</span></div>
+  <div class="source">출처 · 성낙일·박선권 (2012) 한국인구학 35(2), 73–101</div>
+  ${mascot('축하금보다 지속 돌봄 인프라에 목말라 있어요','left')}
+`});
+
+/* 1-4 선행연구 ② — 검증된 논문 (배기련 외 2021) */
+slides.push({bar:'1-4 · 선행연구 ② 출산 장벽',variant:'centered',body:`
+  <div class="eyebrow"><span class="bar"></span>저출산 정책과 대중인식 비교</div>
+  <div class="headline">정책과 시민 체감 사이의 구조적 괴리</div>
+  <div class="spacer"></div>
+  <div class="bigrow"><div class="bignum">25,800</div><div class="bigunit">건 · 저출산 뉴스 댓글<br>빈도분석·동시출현단어·CONCOR</div></div>
+  <div class="tags"><span class="tag a">주거·주택 괴리</span><span class="tag b">고용 영역 괴리</span><span class="tag p">비용</span></div>
+  <div class="source">출처 · 디지털융복합연구 19(12), 29–42, 배기련 외 (2021)</div>
+  ${mascot('주거·고용에서 정책-인식 격차가 가장 커요','left')}
+`});
+
+/* ─── PART 2 ─── */
+slides.push(divider('PART 2','데이터 & 모델링 설명'));
+
+/* 2-1 파이프라인 — PPT 기준 가로 배치 */
+slides.push({bar:'2-1 · 5원 Multi-API 파이프라인',body:`
+  <div class="eyebrow"><span class="bar"></span>실시간 수집 구조</div>
+  <div class="headline">5가지 데이터의 실시간 수집 구조</div>
+  <div class="pipe-h">
+    <div class="pipe-row">
+      <div class="pipe-cell"><span class="n">824</span><span class="lbl">상상대로 제안</span></div>
+      <div class="pipe-cell"><span class="n">582</span><span class="lbl">국민신문고</span></div>
+      <div class="pipe-cell"><span class="n">322</span><span class="lbl">몽땅정보통</span></div>
+      <div class="pipe-cell"><span class="n">1,145</span><span class="lbl">네이버 뉴스</span></div>
+      <div class="pipe-cell"><span class="n">0.630</span><span class="lbl">서울 TFR</span></div>
+    </div>
+    <div class="pipe-arrow">▼</div>
+    <div class="hub">통합 융합 DB</div>
+  </div>
+  ${mascot('제안·민원·정책·뉴스·출생 통계가 실시간 수집돼요!')}
+`});
+
+/* 2-2 AI 라우팅 — 2×2 카드 */
+slides.push({bar:'2-2 · AI·규칙 라우팅 모델',body:`
+  <div class="eyebrow"><span class="bar"></span>전처리 및 분류 모델</div>
+  <div class="headline">AI·규칙 기반 라우팅 & 텍스트 마이닝</div>
+  <div class="cards c4">
+    <div class="card"><h4>KR-SBERT 군집화</h4><p><span class="num">snunlp/KR-SBERT</span> 의미 임베딩 + 계층적 군집화로 유사 제안 자동 그룹화</p></div>
+    <div class="card"><h4>NMF 토픽 모델링</h4><p>뉴스 비음수 행렬 분해로 <span class="num">5대</span> 핵심 여론 주제 추출</p></div>
+    <div class="card"><h4>Gemini / GPT-4o 배치</h4><p>3초 요약·추천 조치안을 전처리 단계에서 사전 생성 후 <span class="num">JSON 캐시</span></p></div>
+    <div class="card"><h4>형태소 + 규칙 엔진</h4><p>KoNLPy 기반 규칙으로 <span class="num">18개</span> 부서 R&R 라우팅 (감사 대비 설명가능성)</p></div>
+  </div>
+  ${mascot('요약·추천을 사전 빌드해 지연·비용을 없앴어요!')}
+`});
+
+/* 2-3 수식 */
+slides.push({bar:'2-3 · 우선순위 산출 수식',body:`
+  <div class="eyebrow"><span class="bar"></span>가중치 공식</div>
+  <div class="headline">우선순위 산출 가중치 수식</div>
+  <div class="formula">
+    <span class="k">Score</span> = (수요 <span class="w">&times;0.4</span>) + (시급성 <span class="w">&times;0.3</span>) + (정책공백 <span class="w">&times;0.2</span>) + (뉴스 <span class="w">&times;0.1</span>) + <span class="w">가점</span>
+    <div class="chips">
+      <div class="chip">최신성 가중치 <b>&times;1.5</b> · 2026년 최신 민원 트렌드 포착</div>
+      <div class="chip">장기 미해결 가점 <b>+30점</b> · 방치 민원 자동 상단 정렬</div>
+    </div>
+  </div>
+  ${mascot('오래된 민원엔 가점을 줘 자동 상단 정렬돼요!')}
+`});
+
+/* ─── PART 3 ─── */
+slides.push(divider('PART 3','대시보드 설계'));
+
+/* screenshot slide helper */
+const shot=(bar,eye,hl,img,cap,bub,side)=>({bar,body:`
+  <div class="eyebrow"><span class="bar"></span>${eye}</div>
+  <div class="headline">${hl}</div>
+  <div class="shotwrap"><div class="polaroid"><img src="${IMG}${img}" alt="${cap}"><div class="cap">${cap}</div></div></div>
+  ${mascot(bub,side)}
+`});
+
+slides.push(shot('3-1 · 종합현황 지도','화면 ① 기본 뷰','종합 현황 및 자치구 비교 지도','slide_3-1_map_default.png','25개 자치구 공급 격차를 색상 명도로 시각화','서울 전체 KPI 현황을 한눈에!','left'));
+slides.push(shot('3-1-1 · 자치구 클릭','화면 ①-1 인터랙티브','자치구 1클릭 데이터 동적 연동','slide_3-1-1_map_clicked.png','양천구 클릭 → 상단 지표·민원 리스트 실시간 동기화','양천구 클릭 시 전체 카드가 동기화돼요!','left'));
+slides.push(shot('3-2 · 카스케이딩 필터','화면 ② 카스케이딩 필터','오탐색 방지를 위한 카스케이딩 필터링','slide_3-2-1_filter_strike.png','결과 없는 카테고리 자동 취소선·투명화로 헛클릭 차단','유효 결과 없는 카테고리를 자동 비활성화!','left'));
+slides.push(shot('3-2-1 · 공문 기안','화면 ②-1 1클릭 공문','1클릭 공문 기안서 초안 복사','slide_3-2-2_export_modal.png','몽땅정보통 신청 링크 연동 공문 초안 팝업','신청 링크가 결합된 기안서 초안이에요!','left'));
+slides.push(shot('3-3 · 갭 매트릭스','화면 ③ 4분면 진단','의사결정 우선순위 갭 진단','slide_3-3-1_gap_matrix.png','수요 시급성 × 공급 공백 버블 시각화','4분면 버블로 정책 공백을 진단해요!','left'));
+slides.push(shot('3-3-1 · AI 추천·결재','화면 ③-1 Human-in-the-loop','AI 추천 액션 승인 및 감사 로그','slide_3-3-2_action_feedback.png','버블 클릭 → AI 조치안 → 승인 시 감사 로그 누적','승인 결재가 감사 로그에 쌓여요!','left'));
+
+/* 3-4 새싹이 */
+slides.push({bar:'3-4 · 새싹이 오피스 길잡이',body:`
+  <div class="eyebrow"><span class="bar"></span>화면 ④ · 실무 지원 마스코트</div>
+  <div class="headline">부서만 등록하면,<br>오늘 할 업무 동선을 1초 만에</div>
+  <div class="cards c2" style="margin-top:22px">
+    <div class="card"><h4>부서 R&R 개인화</h4><p>'저출생사업2팀' 등 소속 부서를 지정하면 전담 R&R 카테고리에 맞춘 <span class="num">4단계</span> 행정 동선을 실시간 추천</p></div>
+    <div class="card"><h4>레트로 도움말 UX</h4><p>실제 제품에 상주하는 도움말 창 컴포넌트. 신임 공무원도 단계별 코칭으로 <span class="num">1분</span> 만에 업무 마스터</p></div>
+  </div>
+  <div class="spacer"></div>
+  ${mascot('부서를 등록하면 오늘 할 업무 동선을 1초 만에 추천해요!')}
+`});
+
+/* 3-5 태스크플로우 */
+slides.push({bar:'3-5 · 8대 사용자 흐름',body:`
+  <div class="eyebrow"><span class="bar"></span>사용자 연동 흐름 (Task Flow)</div>
+  <div class="headline">8대 흐름이 유기적으로 연동</div>
+  <div class="tree">
+    <div class="leaf"><span class="idx">1</span>부서 R&R 개인화 → 맞춤 4단계 동선</div>
+    <div class="leaf"><span class="idx">2</span>개요 TOP3 클릭 → 키워드 분석 필터</div>
+    <div class="leaf"><span class="idx">3</span>지도 자치구 클릭 → 공공데이터 지표</div>
+    <div class="leaf"><span class="idx">4</span>키워드 드릴다운 → 민원 원문 모달</div>
+    <div class="leaf"><span class="idx">5</span>미답변 다중선택 → 일괄 공문 기안</div>
+    <div class="leaf"><span class="idx">6</span>BERT 군집 → R&R 상세 필터 점프</div>
+    <div class="leaf"><span class="idx">7</span>25개 자치구 공공데이터 비교표</div>
+    <div class="leaf"><span class="idx">8</span>갭 버블 승인 → 피드백 로그 적재</div>
+  </div>
+  ${mascot('제안 발굴부터 공문·결재까지 유기적으로 돌아가요!')}
+`});
+
+/* ─── PART 4 ─── */
+slides.push(divider('PART 4','라이브 데모 시연'));
+
+/* 4-1 시연 스텝 — PPT 기준 가로 카드 */
+slides.push({bar:'4-1 · 라이브 데모 스피드런',body:`
+  <div class="eyebrow"><span class="bar"></span>실시간 시연 흐름 · 1분 스피드런</div>
+  <div class="headline">실시간 시연 흐름</div>
+  <div class="steps" style="margin-top:26px">
+    <div class="step s1"><span class="tag2">1</span><h4>양천구 선택</h4><p>지도 클릭 → 전체 통계 동기화</p></div>
+    <div class="stepArrow">→</div>
+    <div class="step s1"><span class="tag2">2</span><h4>보육 필터</h4><p>보육·돌봄 인프라 안건 도출</p></div>
+    <div class="stepArrow">→</div>
+    <div class="step s2"><span class="tag2">3</span><h4>공문 기안</h4><p>혜택 링크 연동 초안 자동 완성</p></div>
+    <div class="stepArrow">→</div>
+    <div class="step s2"><span class="tag2">4</span><h4>피드백 결재</h4><p>갭 버블 승인 → 로그 적재</p></div>
+  </div>
+  <div class="spacer"></div>
+  ${mascot('지도 → 필터 → 기안 → 결재, 끝!')}
+`});
+
+/* ─── PART 5 ─── */
+slides.push(divider('PART 5','검증 및 성장 계획'));
+
+/* 5-1 도입 효과 */
+slides.push({bar:'5-1 · 도입 효과성 검증',body:`
+  <div class="eyebrow"><span class="bar"></span>업무 소요 시간 검증</div>
+  <div class="headline">15분 → 15초, <span style="color:var(--gold)">70% 단축</span></div>
+  <div class="bars">
+    <div class="barcol old"><div class="bar" style="height:88%">15분</div><div class="cap">기존 수작업</div></div>
+    <div class="barcol new"><div class="bar" style="height:14%">15초</div><div class="cap">대시보드 도입 후</div></div>
+    <div style="flex:1.4;align-self:center;">
+      <div class="card"><h4>FGI 사용성 테스트</h4><p>여성가족실·보육 부서 현업 실무진 <span class="num">10인</span> 대상 시나리오 수행 → 시간 단축률·UI 만족도 정량 검증</p></div>
+    </div>
+  </div>
+  ${mascot('실무자 10인 FGI로 효과를 검증해요!','left')}
+`});
+
+/* 5-2 로드맵 */
+slides.push({bar:'5-2 · 기술 고도화 로드맵',body:`
+  <div class="eyebrow"><span class="bar"></span>배포 안정화 · AI 로드맵</div>
+  <div class="headline">차세대 배포 안정화 및 AI 로드맵</div>
+  <div class="steps" style="margin-top:28px">
+    <div class="step s1"><span class="tag2">STEP 1 · 단기</span><h4>Vercel 빌드 최적화</h4><p>Railway 502 해결<br>프로덕션 안정성 100%</p></div>
+    <div class="stepArrow">→</div>
+    <div class="step s2"><span class="tag2">STEP 2 · 장기</span><h4>GraphRAG 지식그래프</h4><p>대화형 행정 검색<br>기안서 자동 생성</p></div>
+  </div>
+  <div class="spacer"></div>
+  ${mascot('장기적으로 지식그래프를 탑재할게요!')}
+`});
+
+/* 5-3 엔딩 */
+slides.push({bar:'5-3 · 엔딩 및 Q&A',variant:'ending',body:`
+  <div class="qa">Q & A</div>
+  <div class="contact">
+    발표자 · [발표자 성명]<br>
+    <span class="path">github.com/[repository]</span>
+  </div>
+  <div class="click98">경청해 주셔서 감사합니다!</div>
+  ${mascot('경청해 주셔서 감사합니다!')}
+`});
+
+/* APPENDIX */
+slides.push({bar:'A-1 · APPENDIX 최종 산출물',body:`
+  <div class="eyebrow"><span class="bar"></span>DELIVERABLES · 기술 투명성 검증용</div>
+  <div class="headline">APPENDIX · 최종 산출물</div>
+  <table class="atable">
+    <thead><tr><th>#</th><th>산출물</th><th>형식</th><th>경로</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>시스템 설계 기획서 (PRD)</td><td><span class="fmt">MD</span></td><td><span class="path">docs/SYSTEM_DESIGN_PRD.md</span></td></tr>
+      <tr><td>2</td><td>데이터 분석 정의서</td><td><span class="fmt">MD/DOCX</span></td><td><span class="path">docs/데이터분석정의서_템플릿.md</span></td></tr>
+      <tr><td>3</td><td>프로젝트 개발 일지</td><td><span class="fmt">MD</span></td><td><span class="path">docs/DEVELOPMENT_LOG.md</span></td></tr>
+      <tr><td>4</td><td>대시보드 메인 소스</td><td><span class="fmt">TSX</span></td><td><span class="path">frontend/src/App.tsx</span></td></tr>
+      <tr><td>5</td><td>갭 진단 컴포넌트</td><td><span class="fmt">TSX</span></td><td><span class="path">frontend/src/components/GapMatrixDashboard.tsx</span></td></tr>
+      <tr><td>6</td><td>데이터 수집·정제 스크립트</td><td><span class="fmt">PY</span></td><td><span class="path">scripts/ (SBERT·NMF 파이프라인)</span></td></tr>
+    </tbody>
+  </table>
+`});
+
+/* ═══════ RENDER ENGINE ═══════ */
+let cur=0;
+const stage=document.getElementById('stage');
+
+function render(){
+  const s=slides[cur];
+  stage.innerHTML='';
+  const win=el(`
+    <div class="win">
+      <div class="titlebar">
+        <img class="ico" src="${IMG}saessak.png" alt="" style="width:16px;height:16px;image-rendering:pixelated;">
+        <div class="t">새싹이 오피스 길잡이 — ${s.bar}</div>
+        <div class="winbtns"><span>_</span><span>&#9633;</span><span>&times;</span></div>
+      </div>
+      <div class="menubar"><span><u>F</u>ile</span><span><u>E</u>dit</span><span><u>V</u>iew</span><span><u>H</u>elp</span></div>
+      <div class="content ${s.variant||''}">${s.body}</div>
+    </div>`);
+  stage.appendChild(win);
+  const tb=el(`<div class="taskbar">
+    <div class="start-btn"><img src="${IMG}saessak.png" alt=""> 시작</div>
+    <div class="tb-sep"></div>
+    <div class="tb-item">UKKKK.exe</div>
+    <div class="tb-clock">${String(cur+1).padStart(2,'0')} / ${slides.length}</div>
+  </div>`);
+  stage.appendChild(tb);
+}
+
+function fit(){
+  const sx=window.innerWidth/1280, sy=window.innerHeight/720;
+  stage.style.transform=`scale(${Math.min(sx,sy)})`;
+}
+function go(n){cur=Math.max(0,Math.min(slides.length-1,n));render();}
+
+window.addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key===' '||e.key==='PageDown'){e.preventDefault();go(cur+1);}
+  else if(e.key==='ArrowLeft'||e.key==='PageUp'){e.preventDefault();go(cur-1);}
+  else if(e.key==='Home'){go(0);} else if(e.key==='End'){go(slides.length-1);}
+  else if(e.key.toLowerCase()==='f'){if(!document.fullscreenElement)document.documentElement.requestFullscreen();else document.exitFullscreen();}
+});
+stage.addEventListener('click',()=>go(cur+1));
+window.addEventListener('resize',fit);
+render();fit();
+</script>
+</body>
+</html>
