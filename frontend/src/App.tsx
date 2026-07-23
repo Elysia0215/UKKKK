@@ -49,18 +49,24 @@ import { exportToCsv } from './utils/exportCsv';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<number>(0);
-  const [selectedDistrict, setSelectedDistrict] = useState<string | null>(null);
+  const [selectedDistrict, setSelectedDistrict] = useState<string | null>('종로구');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedSubCategory, setSelectedSubCategory] = useState<string | null>(null);
   const [selectedClusterId, setSelectedClusterId] = useState<number | null>(null);
   const [selectedPublicDistrict, setSelectedPublicDistrict] = useState<DistrictData>(
-    SEOUL_DISTRICTS_DATA.find((d) => d.name === '송파구') || SEOUL_DISTRICTS_DATA[0]
+    SEOUL_DISTRICTS_DATA.find((d) => d.name === '종로구') || SEOUL_DISTRICTS_DATA[0]
   );
   const [publicColorMetric, setPublicColorMetric] = useState<'proposals' | 'births' | 'daycare' | 'fertility' | 'demand' | 'demandScore'>('fertility');
   const [publicSortBy, setPublicSortBy] = useState<'name' | 'value'>('value');
   const [selectedDept, setSelectedDept] = useState<string | null>(null);
   const [isExportModalOpen, setIsExportModalOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
+
+  // 자치구 선택 동기화 핸들러
+  const handleSelectDistrict = (district: DistrictData) => {
+    setSelectedPublicDistrict(district);
+    setSelectedDistrict(district.name);
+  };
 
   // 공공데이터 지표 서브탭 상태
   const [publicSubTab, setPublicSubTab] = useState<'district' | 'demographics'>('district');
@@ -527,7 +533,7 @@ export default function App() {
                         <div className="lg:col-span-7 bg-slate-50/20 rounded-xl border border-slate-200/50 flex items-center justify-center p-4">
                           <SeoulMap
                             selectedDistrict={selectedPublicDistrict}
-                            onSelectDistrict={setSelectedPublicDistrict}
+                            onSelectDistrict={handleSelectDistrict}
                             colorMetric={publicColorMetric}
                             showBackground={false}
                             sortBy={publicSortBy}
@@ -577,7 +583,7 @@ export default function App() {
                     <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col h-[480px]">
                       <StatCharts
                         selectedDistrict={selectedPublicDistrict}
-                        onSelectDistrict={setSelectedPublicDistrict}
+                        onSelectDistrict={handleSelectDistrict}
                         colorMetric={publicColorMetric}
                         proposals={mockProposals}
                       />
