@@ -80,57 +80,60 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
   const topGapClusters = clusterData.slice(0, 3);
 
   return (
-    <div className="space-y-6">
-      {/* Header Info */}
-      <div className="bg-gradient-to-r from-[#0A2351] to-indigo-900 text-white p-6 rounded-2xl shadow-md flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+    <div className="space-y-2.5">
+      {/* 4분면 버블 차트 대시보드 헤더 */}
+      <div className="bg-[#0A2351] text-white p-3 rounded-xl shadow-md border border-slate-800 flex flex-wrap items-center justify-between gap-3">
         <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="bg-rose-500 text-white text-[10px] font-extrabold px-2 py-0.5 rounded uppercase">AI 자연어 분석 기반</span>
-            <h3 className="text-lg font-black">시민 요구(제안·민원) 대비 행정 정책(공급) 사각지대 분포 지도</h3>
+          <div className="flex items-center gap-2">
+            <span className="text-[9px] uppercase bg-rose-500/20 text-rose-200 border border-rose-400/30 px-2 py-0.5 rounded font-mono font-bold">
+              시각지대 분석실
+            </span>
+            <h2 className="text-sm sm:text-base font-black text-white">시민 요구(체감·인권) 대비 행정 정책(공급) 사각지대 군집 시각화</h2>
           </div>
-          <p className="text-xs text-blue-100 font-medium">
+          <p className="text-[10.5px] text-slate-300 mt-0.5">
             시민 제안 426건을 의미적으로 묶은 49개 요구 주제별 **시민 관심도(요청량)**와 서울시가 실제 공급 중인 **양육 정책 수** 간 격차를 시각화합니다.
           </p>
         </div>
-        <div className="flex items-center gap-3 bg-white/10 backdrop-blur-xs px-4 py-2.5 rounded-xl border border-white/20 font-mono text-xs">
+
+        <div className="flex items-center gap-3 text-xs bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">
           <div>
-            <span className="block text-[10px] text-blue-200 font-sans">분석된 시민 요구 주제</span>
-            <span className="font-bold text-base text-yellow-300">{clusterData.length}개 분야</span>
+            <span className="block text-[9px] text-slate-300 font-sans">분석 대분류 주제</span>
+            <span className="font-bold text-sm text-white">30개 분야</span>
           </div>
           <div className="w-px h-6 bg-white/20" />
           <div>
-            <span className="block text-[10px] text-blue-200 font-sans">최다 지지 제안</span>
-            <span className="font-bold text-base text-emerald-300">5,346표 (군집 #10)</span>
+            <span className="block text-[9px] text-blue-200 font-sans">최다 지지 제안</span>
+            <span className="font-bold text-sm text-emerald-300">5,346표 (군집 #10)</span>
           </div>
         </div>
       </div>
 
       {/* Top 3 High Gap Alert */}
-      <div className="bg-rose-50 border border-rose-200 rounded-xl p-4">
-        <div className="flex justify-between items-center mb-2.5">
+      <div className="bg-rose-50 border border-rose-200 rounded-xl p-2.5">
+        <div className="flex justify-between items-center mb-1.5">
           <h4 className="text-xs font-extrabold text-rose-800 flex items-center gap-1.5">
-            <AlertTriangle className="w-4 h-4 text-rose-600 animate-bounce" />
+            <AlertTriangle className="w-3.5 h-3.5 text-rose-600 animate-bounce" />
             🚨 행정 최우선 대응 권고: 시민 요구 대비 정책 공급이 가장 부족한 "정책 사각지대 Top 3 문제"
           </h4>
-          <span className="text-[11px] text-rose-700 font-mono font-bold">실제 서울시 양육 정책 322건 대조 결과</span>
+          <span className="text-[10px] text-rose-700 font-mono font-bold">실제 서울시 양육 정책 322건 대조 결과</span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
           {topGapClusters.map((c, idx) => (
             <div
               key={c.clusterId}
               onClick={() => onSelectCluster?.(c.clusterId, c.category, c.subCategory, c.representativeTitle)}
-              className="bg-white p-3.5 rounded-xl border border-rose-200 shadow-2xs hover:border-rose-400 cursor-pointer transition-all hover:scale-[1.01]"
+              className="bg-white p-2 rounded-lg border border-rose-200 shadow-2xs hover:border-rose-400 cursor-pointer transition-all hover:scale-[1.01]"
             >
-              <div className="flex justify-between items-center mb-1">
-                <span className="text-[10px] bg-rose-600 text-white font-bold px-1.5 py-0.5 rounded">
+              <div className="flex justify-between items-center mb-0.5">
+                <span className="text-[9px] bg-rose-600 text-white font-bold px-1.5 py-0.5 rounded">
                   정책 공백 #{idx + 1}
                 </span>
-                <span className="text-[10px] text-slate-400 font-mono font-bold">주제 #{c.clusterId}</span>
+                <span className="text-[9px] text-slate-400 font-mono font-bold">주제 #{c.clusterId}</span>
               </div>
-              <h5 className="text-xs font-bold text-slate-900 truncate mb-1.5">{c.representativeTitle}</h5>
-              <div className="flex justify-between items-center text-[11px] font-mono border-t border-slate-100 pt-1.5">
+              <h5 className="text-[11px] font-bold text-slate-900 truncate mb-1">{c.representativeTitle}</h5>
+              <div className="flex justify-between items-center text-[10px] font-mono border-t border-slate-100 pt-1">
                 <span className="text-slate-600">요구 제안 {c.volume}건 (공감 {c.totalVotes.toLocaleString()}표)</span>
-                <span className="text-rose-600 font-bold bg-rose-50 px-1.5 py-0.5 rounded">시행 정책 {c.supplyCount}개</span>
+                <span className="text-rose-600 font-bold bg-rose-50 px-1 py-0.5 rounded">시행 정책 {c.supplyCount}개</span>
               </div>
             </div>
           ))}
@@ -138,27 +141,27 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
       </div>
 
       {/* Cluster Scatter/Bubble Chart & Legend */}
-      <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-200/80">
+      <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-2">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-slate-200/80">
           <div>
-            <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-              <Layers className="text-blue-600 w-5 h-5" />
+            <h4 className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+              <Layers className="text-blue-600 w-4 h-4" />
               시민 요구 주제별 제안 건수(X축) vs 시민 공감 지수(Y축) 분포 현황
             </h4>
-            <p className="text-xs text-slate-500 mt-0.5">
+            <p className="text-[10px] text-slate-500 mt-0.5">
               공감도가 가장 높은 제안(5,346표)의 이상치를 왜곡 없이 표현하기 위해 로그 스케일을 적용했습니다. 버블 크기가 클수록 정책 공급 격차가 큽니다.
             </p>
           </div>
 
           {/* 색상 범례 (Legend) */}
-          <div className="flex items-center gap-3 text-[11px] font-bold bg-slate-50 p-2 rounded-lg border border-slate-200">
+          <div className="flex items-center gap-2 text-[10px] font-bold bg-slate-50 p-1.5 rounded-lg border border-slate-200">
             <span className="text-slate-500 font-normal">사각지대 위험 수준:</span>
             <div className="flex items-center gap-1 text-rose-600">
-              <span className="w-2.5 h-2.5 rounded-full bg-rose-500" />
+              <span className="w-2 h-2 rounded-full bg-rose-500" />
               <span>🔴 정책 시급 (격차점수≥100)</span>
             </div>
             <div className="flex items-center gap-1 text-amber-600">
-              <span className="w-2.5 h-2.5 rounded-full bg-amber-500" />
+              <span className="w-2 h-2 rounded-full bg-amber-500" />
               <span>🟡 보완 권장 (격차점수≥40)</span>
             </div>
             <div className="flex items-center gap-1 text-blue-600">

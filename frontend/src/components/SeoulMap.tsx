@@ -73,154 +73,155 @@ export const SeoulMap: React.FC<Props> = ({ selectedDistrict, onSelectDistrict, 
 
   return (
     <div className="relative w-full h-full">
-      <div className="rounded-[32px] overflow-hidden border border-slate-200 bg-white shadow-sm">
-        <div className="bg-slate-950 text-white px-5 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <div>
-            <div className="text-[11px] uppercase text-slate-400 tracking-[0.32em] font-semibold">서울시 자치구 클릭형 지도</div>
-            <h2 className="mt-2 text-lg font-bold">
-              {colorMetric === 'births' ? '2025년 출생아 수' : 
-               colorMetric === 'daycare' ? '2025년 보육시설 수' : 
-               colorMetric === 'proposals' ? '시민제안 건수' : 
-               colorMetric === 'demandScore' ? '정책수요점수(시민요구도)' : 
-               '2025년 합계출산율'} 기준
-            </h2>
+      <div className="rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-xs p-2">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 items-stretch">
+          
+          {/* [좌측 10열] 기존 대형 크기 시원한 서울시 지도 */}
+          <div className="lg:col-span-10 rounded-xl overflow-hidden border border-slate-200/60 bg-slate-50">
+            <svg viewBox="0 0 800 550" className="w-full h-[480px] bg-slate-50" role="img" aria-label="서울시 자치구 실제 행정구역 지도">
+              {showBackground && (
+                <g opacity="0.28">
+                  <rect x="24" y="24" width="752" height="502" rx="30" fill="#e2e8f0" />
+                  <g stroke="#ffffff" strokeWidth="1.4" strokeDasharray="6 7">
+                    <line x1="80" y1="110" x2="720" y2="110" />
+                    <line x1="80" y1="220" x2="720" y2="220" />
+                    <line x1="80" y1="330" x2="720" y2="330" />
+                    <line x1="80" y1="440" x2="720" y2="440" />
+                  </g>
+                </g>
+              )}
+
+              <defs>
+                <filter id="publicMapShadow" x="-10%" y="-10%" width="120%" height="120%">
+                  <feDropShadow dx="0" dy="3" stdDeviation="4" floodOpacity="0.16" />
+                </filter>
+              </defs>
+
+              {districtMapLayout.map((boundary) => {
+                const district = SEOUL_DISTRICTS_DATA.find((item) => item.name === boundary.name);
+                const isSelected = boundary.name === selectedDistrict.name;
+                const fill = isSelected ? '#0A2351' : (district ? getFill(district) : '#f8fafc');
+                const metricText = district ? formatMetricValue(district, colorMetric) : 'N/A';
+
+                return (
+                  <g
+                    key={boundary.name}
+                    className="cursor-pointer"
+                    tabIndex={0}
+                    role="button"
+                    style={{
+                      opacity: selectedDistrict?.name ? (isSelected ? 1 : 0.6) : 1,
+                      transition: 'opacity 0.25s ease-in-out'
+                    }}
+                    onClick={() => district && onSelectDistrict(district)}
+                    onKeyDown={(event) => {
+                      if (district && (event.key === 'Enter' || event.key === ' ')) {
+                        event.preventDefault();
+                        onSelectDistrict(district);
+                      }
+                    }}
+                  >
+                    <path
+                      d={boundary.d}
+                      fill={fill}
+                      stroke={isSelected ? '#ef4444' : '#475569'}
+                      strokeWidth={isSelected ? 3.4 : 1.2}
+                      filter={isSelected ? 'url(#publicMapShadow)' : undefined}
+                      opacity="0.96"
+                      className="transition-all duration-150 hover:brightness-95"
+                    />
+                    <text
+                      x={boundary.labelX}
+                      y={boundary.labelY - 5}
+                      textAnchor="middle"
+                      dominantBaseline="middle"
+                      fontSize="10.5"
+                      fontWeight="900"
+                      fill={isSelected ? '#ffffff' : '#0f172a'}
+                      style={{
+                        paintOrder: 'stroke fill',
+                        stroke: isSelected ? '#0A2351' : '#ffffff',
+                        strokeWidth: '2.5px',
+                        strokeLinejoin: 'round'
+                      }}
+                      className="pointer-events-none"
+                    >
+                      {boundary.name}
+                    </text>
+                    <text
+                      x={boundary.labelX}
+                      y={boundary.labelY + 9}
+                      textAnchor="middle"
+                      dominantBaseline="middle"
+                      fontSize="9.5"
+                      fontWeight="900"
+                      fill={isSelected ? '#fde047' : '#1e3a8a'}
+                      style={{
+                        paintOrder: 'stroke fill',
+                        stroke: isSelected ? '#0A2351' : '#ffffff',
+                        strokeWidth: '2px',
+                        strokeLinejoin: 'round'
+                      }}
+                      className="pointer-events-none"
+                    >
+                      {metricText}
+                    </text>
+                  </g>
+                );
+              })}
+            </svg>
           </div>
-          <div className="text-right text-[11px] text-slate-400">
-            <p>{selectedDistrict.name} 선택됨</p>
-            <p className="mt-1 text-slate-300">선택하면 오른쪽 데이터 패널에 반영됩니다.</p>
-          </div>
-        </div>
 
-        <svg viewBox="0 0 800 550" className="w-full h-[500px] bg-slate-50" role="img" aria-label="서울시 자치구 실제 행정구역 지도">
-          {showBackground && (
-            <g opacity="0.28">
-              <rect x="24" y="24" width="752" height="502" rx="30" fill="#e2e8f0" />
-              <g stroke="#ffffff" strokeWidth="1.4" strokeDasharray="6 7">
-                <line x1="80" y1="110" x2="720" y2="110" />
-                <line x1="80" y1="220" x2="720" y2="220" />
-                <line x1="80" y1="330" x2="720" y2="330" />
-                <line x1="80" y1="440" x2="720" y2="440" />
-              </g>
-            </g>
-          )}
+          {/* [우측 2열] 🏆 TOP 6 자치구 지도 오른쪽 세로 6행 패널 (Right Sidebar 6-Row Panel) */}
+          <div className="lg:col-span-2 bg-slate-50/70 border border-slate-200/80 rounded-xl p-2.5 flex flex-col justify-between h-full">
+            <div className="pb-1.5 border-b border-slate-200 text-center">
+              <span className="text-[10px] font-black text-slate-600 uppercase tracking-wider block">
+                🏆 TOP 6 자치구
+              </span>
+              <span className="text-[9px] text-slate-400 font-bold block mt-0.5">
+                (1클릭 빠른 선택)
+              </span>
+            </div>
 
-          <defs>
-            <filter id="publicMapShadow" x="-10%" y="-10%" width="120%" height="120%">
-              <feDropShadow dx="0" dy="3" stdDeviation="4" floodOpacity="0.16" />
-            </filter>
-          </defs>
-
-          {districtMapLayout.map((boundary) => {
-            const district = SEOUL_DISTRICTS_DATA.find((item) => item.name === boundary.name);
-            const isSelected = boundary.name === selectedDistrict.name;
-            const fill = isSelected ? '#0A2351' : (district ? getFill(district) : '#f8fafc');
-            const metricText = district ? formatMetricValue(district, colorMetric) : 'N/A';
-
-            return (
-              <g
-                key={boundary.name}
-                className="cursor-pointer"
-                tabIndex={0}
-                role="button"
-                style={{
-                  opacity: selectedDistrict?.name ? (isSelected ? 1 : 0.6) : 1,
-                  transition: 'opacity 0.25s ease-in-out'
-                }}
-                onClick={() => district && onSelectDistrict(district)}
-                onKeyDown={(event) => {
-                  if (district && (event.key === 'Enter' || event.key === ' ')) {
-                    event.preventDefault();
-                    onSelectDistrict(district);
-                  }
-                }}
-              >
-                <path
-                  d={boundary.d}
-                  fill={fill}
-                  stroke={isSelected ? '#ef4444' : '#475569'}
-                  strokeWidth={isSelected ? 3.4 : 1.2}
-                  filter={isSelected ? 'url(#publicMapShadow)' : undefined}
-                  opacity="0.96"
-                  className="transition-all duration-150 hover:brightness-95"
-                />
-                <text
-                  x={boundary.labelX}
-                  y={boundary.labelY - 5}
-                  textAnchor="middle"
-                  dominantBaseline="middle"
-                  fontSize="10.5"
-                  fontWeight="900"
-                  fill={isSelected ? '#ffffff' : '#0f172a'}
-                  style={{
-                    paintOrder: 'stroke fill',
-                    stroke: isSelected ? '#0A2351' : '#ffffff',
-                    strokeWidth: '2.5px',
-                    strokeLinejoin: 'round'
-                  }}
-                  className="pointer-events-none"
+            <div className="flex flex-col gap-1.5 my-auto py-1">
+              {topDistricts.map((district, idx) => (
+                <button
+                  key={district.name}
+                  type="button"
+                  onClick={() => onSelectDistrict(district)}
+                  className={`w-full rounded-lg border p-2 text-left transition cursor-pointer shadow-2xs flex items-center justify-between gap-1 ${
+                    district.name === selectedDistrict.name
+                      ? 'border-indigo-600 bg-indigo-600 text-white font-black ring-2 ring-indigo-200'
+                      : 'border-slate-200 bg-white text-slate-700 hover:border-indigo-300 hover:bg-slate-50 font-bold'
+                  }`}
                 >
-                  {boundary.name}
-                </text>
-                <text
-                  x={boundary.labelX}
-                  y={boundary.labelY + 9}
-                  textAnchor="middle"
-                  dominantBaseline="middle"
-                  fontSize="9.5"
-                  fontWeight="900"
-                  fill={isSelected ? '#fde047' : '#1e3a8a'}
-                  style={{
-                    paintOrder: 'stroke fill',
-                    stroke: isSelected ? '#0A2351' : '#ffffff',
-                    strokeWidth: '2px',
-                    strokeLinejoin: 'round'
-                  }}
-                  className="pointer-events-none"
-                >
-                  {metricText}
-                </text>
-              </g>
-            );
-          })}
-        </svg>
+                  <div className="flex items-center gap-1.5 min-w-0">
+                    <span className={`text-[9px] font-mono px-1 rounded font-black ${
+                      district.name === selectedDistrict.name ? 'bg-indigo-700 text-indigo-100' : 'bg-slate-100 text-slate-500'
+                    }`}>
+                      0{idx + 1}
+                    </span>
+                    <span className="text-[11px] truncate font-bold">{district.name}</span>
+                  </div>
 
-        <div className="px-5 pb-5 pt-4">
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-            {topDistricts.map((district) => (
-              <button
-                key={district.name}
-                type="button"
-                onClick={() => onSelectDistrict(district)}
-                className={`rounded-2xl border px-4 py-3 text-left transition ${
-                  district.name === selectedDistrict.name
-                    ? 'border-indigo-600 bg-indigo-50 text-slate-900 shadow-sm'
-                    : 'border-slate-200 bg-white text-slate-700 hover:border-indigo-300 hover:bg-slate-50'
-                }`}
-              >
-                <div className="flex items-center justify-between gap-3">
-                  <span className="text-sm font-semibold">{district.name}</span>
-                  <span className="text-[11px] text-slate-500 uppercase tracking-[0.18em]">TOP</span>
-                </div>
-                <p className="mt-2 text-xs text-slate-500">
-                  {colorMetric === 'births' ? `${district.births2025.toLocaleString()}명 출생` :
-                    colorMetric === 'daycare' ? `${district.daycare2025.toLocaleString()}개소` :
-                    colorMetric === 'proposals' ? `${(district.proposals || 0).toLocaleString()}건 제안` :
-                    colorMetric === 'demandScore' ? `정책수요점수 ${(district.demandScore || 0).toFixed(1)}점` :
-                    `합계출산율 ${district.fertilityRate.toFixed(3)}`}
-                </p>
-              </button>
-            ))}
-          </div>
-          <div className="mt-4 rounded-3xl border border-slate-200 bg-slate-50 p-4 flex items-center gap-3">
-            <MapPin className="w-5 h-5 text-indigo-600" />
-            <div>
-              <p className="text-xs text-slate-500">현재 선택된 자치구</p>
-              <p className="text-sm font-semibold text-slate-900">{selectedDistrict.name}</p>
+                  <span className={`text-[10px] font-mono shrink-0 ${district.name === selectedDistrict.name ? 'text-indigo-100' : 'text-slate-600 font-extrabold'}`}>
+                    {colorMetric === 'births' ? `${district.births2025}명` :
+                      colorMetric === 'daycare' ? `${district.daycare2025}개` :
+                      colorMetric === 'proposals' ? `${district.proposals || 0}건` :
+                      colorMetric === 'demandScore' ? `${(district.demandScore || 0).toFixed(1)}점` :
+                      `${district.fertilityRate.toFixed(3)}`}
+                  </span>
+                </button>
+              ))}
+            </div>
+
+            <div className="pt-1.5 border-t border-slate-200 text-center text-[9px] text-slate-400 font-medium">
+              💡 순위 선택 시 지도 구역 강조
             </div>
           </div>
+
         </div>
       </div>
-
     </div>
   );
 };

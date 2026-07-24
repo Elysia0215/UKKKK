@@ -71,7 +71,7 @@ export const PolicyExplorer: React.FC<PolicyExplorerProps> = ({ selectedDistrict
         </div>
       </div>
 
-      <div className="flex-1 p-5 overflow-y-auto max-h-[450px] space-y-4 scrollbar-thin">
+      <div className="flex-1 p-5 overflow-y-auto max-h-[560px] space-y-3.5 scrollbar-thin">
         <AnimatePresence mode="popLayout">
           {filteredPolicies.length > 0 ? (
             filteredPolicies.map((policy) => (

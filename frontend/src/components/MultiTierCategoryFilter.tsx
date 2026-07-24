@@ -108,83 +108,98 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
   filterState,
   onFilterChange,
 }) => {
-  // 1. 연도별 수량 계산
+  const [isCat2Expanded, setIsCat2Expanded] = React.useState<boolean>(false);
+  const hasParentFilter = filterState.category1 !== '전체' || filterState.lifecycle !== '전체';
+
+  // 공통 헬퍼: 특정한 필터 축들을 제외하고 나머지 조건으로 필터링된 proposals 반환
+  const filterProposalsExcept = (excludeKey?: keyof FilterState) => {
+    return proposals.filter(p => {
+      if (excludeKey !== 'year' && filterState.year !== '전체년') {
+        if (filterState.year === '2026' && !p.reg_date?.startsWith('2026')) return false;
+        if (filterState.year === '2025' && !p.reg_date?.startsWith('2025')) return false;
+        if (filterState.year === '2024' && !p.reg_date?.startsWith('2024')) return false;
+        if (filterState.year === '2023' && !p.reg_date?.startsWith('2023')) return false;
+        if (filterState.year === '2022이전' && (!p.reg_date || p.reg_date >= '2023')) return false;
+      }
+      if (excludeKey !== 'lifecycle' && filterState.lifecycle !== '전체' && p.policy_flow !== filterState.lifecycle) {
+        return false;
+      }
+      if (excludeKey !== 'category1' && filterState.category1 !== '전체' && p.category !== filterState.category1) {
+        return false;
+      }
+      if (excludeKey !== 'category2' && filterState.category2 !== '전체' && p.sub_category !== filterState.category2) {
+        return false;
+      }
+      if (excludeKey !== 'department' && filterState.department !== '전체' && (!p.department || !p.department.includes(filterState.department))) {
+        return false;
+      }
+      return true;
+    });
+  };
+
+  // 1. 연도별 수량 계산 (연도 축 제외 나머지 조건 교차 적용)
   const yearCounts = useMemo(() => {
+    const base = filterProposalsExcept('year');
     const counts: Record<string, number> = {
-      전체년: proposals.length,
-      '2026': proposals.filter(p => p.reg_date?.startsWith('2026')).length,
-      '2025': proposals.filter(p => p.reg_date?.startsWith('2025')).length,
-      '2024': proposals.filter(p => p.reg_date?.startsWith('2024')).length,
-      '2023': proposals.filter(p => p.reg_date?.startsWith('2023')).length,
-      '2022이전': proposals.filter(p => p.reg_date && p.reg_date < '2023').length,
+      전체년: base.length,
+      '2026': base.filter(p => p.reg_date?.startsWith('2026')).length,
+      '2025': base.filter(p => p.reg_date?.startsWith('2025')).length,
+      '2024': base.filter(p => p.reg_date?.startsWith('2024')).length,
+      '2023': base.filter(p => p.reg_date?.startsWith('2023')).length,
+      '2022이전': base.filter(p => p.reg_date && p.reg_date < '2023').length,
     };
     return counts;
-  }, [proposals]);
+  }, [proposals, filterState]);
 
-  // 2. 생애주기 수량
+  // 2. 생애주기 수량 (생애주기 축 제외 나머지 조건 교차 적용)
   const lifecycleCounts = useMemo(() => {
-    const map: Record<string, number> = { 전체: proposals.length };
-    proposals.forEach(p => {
+    const base = filterProposalsExcept('lifecycle');
+    const map: Record<string, number> = { 전체: base.length };
+    base.forEach(p => {
       const flow = p.policy_flow || '기타';
       map[flow] = (map[flow] || 0) + 1;
     });
     return map;
-  }, [proposals]);
+  }, [proposals, filterState]);
 
-  // 3. 1차 대분류 목록 및 수량 (생애주기 선택 시 해당 생애주기 내 대분류만)
+  // 3. 1차 대분류 수량 (대분류 축 제외 나머지 조건 교차 적용)
   const cat1Counts = useMemo(() => {
-    const baseList = filterState.lifecycle === '전체'
-      ? proposals
-      : proposals.filter(p => p.policy_flow === filterState.lifecycle);
-
-    const map: Record<string, number> = { 전체: baseList.length };
-    baseList.forEach(p => {
+    const base = filterProposalsExcept('category1');
+    const map: Record<string, number> = { 전체: base.length };
+    base.forEach(p => {
       const cat = p.category || '기타';
       map[cat] = (map[cat] || 0) + 1;
     });
     return map;
-  }, [proposals, filterState.lifecycle]);
+  }, [proposals, filterState]);
 
-  // 4. 2차 중분류 목록 및 수량 (1차 대분류가 선택되어 있으면 해당 대분류 소속 중분류만 좁혀서 렌더링!)
+  // 4. 2차 중분류 수량 (중분류 축 제외 나머지 조건 교차 적용)
   const cat2Counts = useMemo(() => {
-    let baseList = proposals;
-
-    if (filterState.category1 !== '전체') {
-      baseList = proposals.filter(p => p.category === filterState.category1);
-    } else if (filterState.lifecycle !== '전체') {
-      baseList = proposals.filter(p => p.policy_flow === filterState.lifecycle);
-    }
-
-    const map: Record<string, number> = { 전체: baseList.length };
-    baseList.forEach(p => {
+    const base = filterProposalsExcept('category2');
+    const map: Record<string, number> = { 전체: base.length };
+    base.forEach(p => {
       const sub = p.sub_category || '기타';
       map[sub] = (map[sub] || 0) + 1;
     });
     return map;
-  }, [proposals, filterState.category1, filterState.lifecycle]);
+  }, [proposals, filterState]);
 
-  // 5. 3차 세분류 목록 및 수량 (2차 중분류 선택 시 해당 중분류 소속 세분류만 좁혀서 렌더링!)
+  // 5. 3차 세분류 수량
   const cat3Counts = useMemo(() => {
-    let baseList = proposals;
-
-    if (filterState.category2 !== '전체') {
-      baseList = proposals.filter(p => p.sub_category === filterState.category2);
-    } else if (filterState.category1 !== '전체') {
-      baseList = proposals.filter(p => p.category === filterState.category1);
-    }
-
-    const map: Record<string, number> = { 전체: baseList.length };
-    baseList.forEach(p => {
+    const base = filterProposalsExcept('category3');
+    const map: Record<string, number> = { 전체: base.length };
+    base.forEach(p => {
       const micro = p.micro_category || p.title || '기타';
       map[micro] = (map[micro] || 0) + 1;
     });
     return map;
-  }, [proposals, filterState.category1, filterState.category2]);
+  }, [proposals, filterState]);
 
-  // 6. 담당부서 수량
+  // 6. 담당부서 수량 (부서 축 제외 나머지 조건 교차 적용)
   const deptCounts = useMemo(() => {
-    const map: Record<string, number> = { 전체: proposals.length };
-    proposals.forEach(p => {
+    const base = filterProposalsExcept('department');
+    const map: Record<string, number> = { 전체: base.length };
+    base.forEach(p => {
       if (p.department && p.department.length > 0) {
         p.department.forEach(d => {
           map[d] = (map[d] || 0) + 1;
@@ -194,7 +209,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       }
     });
     return map;
-  }, [proposals]);
+  }, [proposals, filterState]);
 
   const activeFilterCount = useMemo(() => {
     let count = 0;
@@ -354,78 +369,116 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
           <span>생애주기</span>
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1">
-          {Object.entries(lifecycleCounts).sort(sortKoreanWithTotalFirst).map(([lf, count]) => {
-            const isSelected = filterState.lifecycle === lf;
-            return (
-              <button
-                key={lf}
-                onClick={() => handleLifecycleClick(lf)}
-                className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] ${
-                  isSelected
-                    ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs font-extrabold'
-                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
-                }`}
-              >
-                {lf} ({count}건)
-              </button>
-            );
-          })}
+          {Object.entries(lifecycleCounts)
+            .filter(([lf, count]: [string, number]) => lf === '전체' || count > 0 || filterState.lifecycle === lf)
+            .sort(sortKoreanWithTotalFirst)
+            .map(([lf, count]) => {
+              const isSelected = filterState.lifecycle === lf;
+              return (
+                <button
+                  key={lf}
+                  onClick={() => handleLifecycleClick(lf)}
+                  className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] ${
+                    isSelected
+                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs font-extrabold'
+                      : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
+                  }`}
+                >
+                  {lf} ({count}건)
+                </button>
+              );
+            })}
         </div>
       </div>
 
-      {/* 3. 1차 대분류 (중분류 선택 시 부모 대분류 자동 선택 동기화) */}
+      {/* 3. 1차 대분류 (상위 생애주기 및 다른 필터 매핑에 따라 0건 자동 제외 좁혀진 렌더링!) */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-2">
         <div className="w-24 shrink-0 font-bold text-slate-700 flex items-center text-[11px]">
           <span>1차 대분류</span>
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1">
-          {Object.entries(cat1Counts).sort(sortKoreanWithTotalFirst).map(([cat, count]) => {
-            const isSelected = filterState.category1 === cat;
-            return (
-              <button
-                key={cat}
-                onClick={() => handleCat1Click(cat)}
-                className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] flex items-center gap-1 ${
-                  isSelected
-                    ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs font-extrabold'
-                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
-                }`}
-              >
-                {isSelected && cat !== '전체' && <Link2 className="w-3 h-3 text-emerald-400" />}
-                <span>{cat} ({count}건)</span>
-              </button>
-            );
-          })}
+          {Object.entries(cat1Counts)
+            .filter(([cat, count]: [string, number]) => cat === '전체' || count > 0 || filterState.category1 === cat)
+            .sort(sortKoreanWithTotalFirst)
+            .map(([cat, count]) => {
+              const isSelected = filterState.category1 === cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => handleCat1Click(cat)}
+                  className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] flex items-center gap-1 ${
+                    isSelected
+                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs font-extrabold'
+                      : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
+                  }`}
+                >
+                  {isSelected && cat !== '전체' && <Link2 className="w-3 h-3 text-emerald-400" />}
+                  <span>{cat} ({count}건)</span>
+                </button>
+              );
+            })}
         </div>
       </div>
 
-      {/* 4. 2차 중분류 (1차 대분류 선택 시 해당 대분류 연관 중분류만 좁혀 노출, 클릭 시 상위 대분류 자동 연동!) */}
+      {/* 4. 2차 중분류 (0건 자동 제외 & 상위 필터 선택 시 자동 연동 좁혀서 노출) */}
       <div className="flex flex-col sm:flex-row sm:items-start gap-2 pt-1 border-t border-slate-100">
-        <div className="w-24 shrink-0 font-bold text-slate-500 flex items-center pl-3 pt-0.5 text-[11px]">
+        <div className="w-24 shrink-0 font-bold text-slate-500 flex items-center justify-between pl-3 pt-0.5 text-[11px]">
           <span>ㄴ 2차 중분류</span>
         </div>
-        <div className="flex flex-wrap gap-1.5 flex-1 max-h-32 overflow-y-auto pr-1">
-          {Object.entries(cat2Counts).sort(sortKoreanWithTotalFirst).map(([sub, count]) => {
-            const isSelected = filterState.category2 === sub;
-            return (
-              <button
-                key={sub}
-                onClick={() => handleCat2Click(sub)}
-                className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] ${
-                  isSelected
-                    ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs font-extrabold'
-                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
-                }`}
-                title={sub !== '전체' && SUB_TO_PARENT_MAP[sub] ? `상위 1차 대분류: ${SUB_TO_PARENT_MAP[sub].cat1}` : ''}
-              >
-                {sub} ({count}건)
-              </button>
-            );
-          })}
+        
+        <div className="flex-1 space-y-1.5">
+          <div className="flex flex-wrap gap-1.5 items-center">
+            {(() => {
+              const cat2Entries = Object.entries(cat2Counts)
+                .filter(([sub, count]: [string, number]) => sub === '전체' || count > 0 || filterState.category2 === sub)
+                .sort(sortKoreanWithTotalFirst);
+              
+              const visibleEntries = (!hasParentFilter && !isCat2Expanded)
+                ? cat2Entries.slice(0, 6)
+                : cat2Entries;
+
+              return (
+                <>
+                  {visibleEntries.map(([sub, count]) => {
+                    const isSelected = filterState.category2 === sub;
+                    return (
+                      <button
+                        key={sub}
+                        onClick={() => handleCat2Click(sub)}
+                        className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] ${
+                          isSelected
+                            ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs font-extrabold'
+                            : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
+                        }`}
+                        title={sub !== '전체' && SUB_TO_PARENT_MAP[sub] ? `상위 1차 대분류: ${SUB_TO_PARENT_MAP[sub].cat1}` : ''}
+                      >
+                        {sub} ({count}건)
+                      </button>
+                    );
+                  })}
+
+                  {/* ➕ 상위 분류 미선택 시 펼치기/접기 버튼 */}
+                  {!hasParentFilter && cat2Entries.length > 6 && (
+                    <button
+                      type="button"
+                      onClick={() => setIsCat2Expanded(!isCat2Expanded)}
+                      className="px-3 py-1 rounded-full border border-indigo-200 bg-indigo-50/80 text-indigo-700 font-extrabold hover:bg-indigo-100 transition cursor-pointer text-[11px] flex items-center gap-1 shadow-2xs"
+                    >
+                      {isCat2Expanded ? (
+                        <><span>➖ 접기</span></>
+                      ) : (
+                        <><span>➕ 2차 중분류 ({cat2Entries.length - 6}개) 더보기</span></>
+                      )}
+                    </button>
+                  )}
+                </>
+              );
+            })()}
+          </div>
         </div>
       </div>
 
-      {/* 5. 3차 세분류 (중분류 선택 시 딥 세분류 칩 노출) */}
+      {/* 5. 3차 세분류 */}
       {filterState.category2 !== '전체' && Object.keys(cat3Counts).length > 1 && (
         <div className="flex flex-col sm:flex-row sm:items-start gap-2 bg-emerald-50/60 p-2.5 rounded-xl border border-emerald-200">
           <div className="w-24 shrink-0 font-bold text-emerald-800 flex items-center gap-1.5 bg-emerald-200 px-2.5 py-1 rounded-md border border-emerald-300">
@@ -433,48 +486,54 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
             <span>3차 세분류</span>
           </div>
           <div className="flex flex-wrap gap-1.5 flex-1">
-            {Object.entries(cat3Counts).sort(sortKoreanWithTotalFirst).map(([micro, count]) => {
-              const isSelected = filterState.category3 === micro;
-              return (
-                <button
-                  key={micro}
-                  onClick={() => handleCat3Click(micro)}
-                  className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] ${
-                    isSelected
-                      ? 'bg-emerald-600 text-white border-emerald-600 shadow-xs'
-                      : 'bg-white text-emerald-900 border-emerald-200 hover:bg-emerald-100'
-                  }`}
-                >
-                  {micro} ({count}건)
-                </button>
-              );
-            })}
+            {Object.entries(cat3Counts)
+              .filter(([micro, count]: [string, number]) => micro === '전체' || count > 0 || filterState.category3 === micro)
+              .sort(sortKoreanWithTotalFirst)
+              .map(([micro, count]) => {
+                const isSelected = filterState.category3 === micro;
+                return (
+                  <button
+                    key={micro}
+                    onClick={() => handleCat3Click(micro)}
+                    className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] ${
+                      isSelected
+                        ? 'bg-emerald-600 text-white border-emerald-600 shadow-xs'
+                        : 'bg-white text-emerald-900 border-emerald-200 hover:bg-emerald-100'
+                    }`}
+                  >
+                    {micro} ({count}건)
+                  </button>
+                );
+              })}
           </div>
         </div>
       )}
 
-      {/* 6. 담당부서 */}
+      {/* 6. 담당부서 (0건 항목 자동 제외 & 좁혀진 실제 담당부서만 노출) */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-2 pt-1 border-t border-slate-100">
         <div className="w-24 shrink-0 font-bold text-slate-700 flex items-center text-[11px]">
           <span>담당부서</span>
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1 max-h-24 overflow-y-auto pr-1">
-          {Object.entries(deptCounts).sort(sortKoreanWithTotalFirst).map(([dept, count]) => {
-            const isSelected = filterState.department === dept;
-            return (
-              <button
-                key={dept}
-                onClick={() => onFilterChange({ ...filterState, department: dept })}
-                className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] ${
-                  isSelected
-                    ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs font-extrabold'
-                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
-                }`}
-              >
-                {dept} ({count}건)
-              </button>
-            );
-          })}
+          {Object.entries(deptCounts)
+            .filter(([dept, count]: [string, number]) => dept === '전체' || count > 0 || filterState.department === dept)
+            .sort(sortKoreanWithTotalFirst)
+            .map(([dept, count]) => {
+              const isSelected = filterState.department === dept;
+              return (
+                <button
+                  key={dept}
+                  onClick={() => onFilterChange({ ...filterState, department: dept })}
+                  className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] ${
+                    isSelected
+                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs font-extrabold'
+                      : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
+                  }`}
+                >
+                  {dept} ({count}건)
+                </button>
+              );
+            })}
         </div>
       </div>
     </div>

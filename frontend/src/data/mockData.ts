@@ -1,5 +1,6 @@
-// 100% 규칙 기반(Rule-based) 2단계 확장 수집 및 몽땅정보통 323개 사업/조직도 실무부서 100% 연동 (824건)
+// 100% 규칙 기반(Rule-based) 2단계 확장 수집 및 몽땅정보통 322개 사업/조직도 실무부서 100% 연동 (824건)
 import { PolicyProposal, DistrictStat, DashboardStats, CivilRequest } from '../types';
+import { extractNormalizedKeywords } from '../utils/textMining';
 
 export type { PolicyProposal as Proposal };
 
@@ -101,29 +102,17 @@ export function getDepartmentStats(proposals: PolicyProposal[]) {
 }
 
 export function extractTopKeywords(proposals: PolicyProposal[], count: number = 30): { keyword: string; count: number }[] {
-  const keywordMap: Record<string, number> = {};
-  const stopWords = new Set([
-    '서울시', '서울', '지원', '관한', '위한', '대해', '관하여', '합니다', 
-    '해주세요', '부탁드립니다', '제안합니다', '생각합니다', '경우', '관련',
-    '있는', '있습니다', '제안', '대한', '하는', '있도록', '위해', 
-    '많이', '좋겠습니다', '현재', '많은', '너무', '같습니다', '하고', 
-    '안녕하세요', '갈습니다', '합니다', '없습니다', '때문에', '통해', '아래', '경우', '위해',
-    '또한', '있게', '혜택을', '주세요', '저는', '것입니다', '그리고', '아이들이', 
-    '다른', '서울시에서', '같은', '그래서', '것이', '것을', '해서', '하며'
-  ]);
+  const merged: Record<string, number> = {};
 
   proposals.forEach(p => {
-    const text = (p.title + ' ' + (p.content || '')).replace(/[^가-힣a-zA-Z0-9\s]/g, ' ');
-    const words = text.split(/\s+/);
-
-    words.forEach(w => {
-      if (w.length >= 2 && !stopWords.has(w)) {
-        keywordMap[w] = (keywordMap[w] || 0) + 1;
-      }
-    });
+    const text = p.title + ' ' + (p.content || '');
+    const kws = extractNormalizedKeywords(text);
+    for (const [k, v] of Object.entries(kws)) {
+      merged[k] = (merged[k] || 0) + v;
+    }
   });
 
-  return Object.entries(keywordMap)
+  return Object.entries(merged)
     .map(([keyword, count]) => ({ keyword, count }))
     .sort((a, b) => b.count - a.count)
     .slice(0, count);

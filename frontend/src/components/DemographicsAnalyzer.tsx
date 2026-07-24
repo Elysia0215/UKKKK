@@ -142,15 +142,15 @@ export const DemographicsAnalyzer: React.FC<DemographicsAnalyzerProps> = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-3.5">
       {/* Region Selector and Top Controls */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 flex flex-col md:flex-row md:items-center justify-between gap-3">
         <div>
-          <h2 className="text-base font-bold text-slate-800 flex items-center gap-2">
-            <Calendar className="w-5 h-5 text-indigo-500" />
+          <h2 className="text-sm font-bold text-slate-800 flex items-center gap-2">
+            <Calendar className="w-4 h-4 text-indigo-500" />
             2025년 인구동향조사 잠정 결과 분석
           </h2>
-          <p className="text-xs text-slate-500 mt-1">
+          <p className="text-[11px] text-slate-500 mt-0.5">
             국가데이터처에서 공표한 2025년 출생·사망통계(잠정) 데이터를 기반으로 장기 트렌드와 시도별 지표를 분석합니다.
           </p>
         </div>
@@ -160,7 +160,7 @@ export const DemographicsAnalyzer: React.FC<DemographicsAnalyzerProps> = () => {
           <select
             value={selectedRegion}
             onChange={(e) => setSelectedRegion(e.target.value)}
-            className="bg-white border border-slate-200 text-slate-700 rounded-xl px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500 font-bold"
+            className="bg-white border border-slate-200 text-slate-700 rounded-xl px-2.5 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500 font-bold"
           >
             {regions.map(r => (
               <option key={r} value={r}>{r}</option>
@@ -169,39 +169,39 @@ export const DemographicsAnalyzer: React.FC<DemographicsAnalyzerProps> = () => {
 
           <button
             onClick={handleExportCSV}
-            className="px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center gap-1.5 transition shadow-2xs cursor-pointer"
+            className="px-2.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center gap-1 transition shadow-2xs cursor-pointer"
           >
-            <Download className="w-3.5 h-3.5" /> 추이 CSV 다운로드
+            <Download className="w-3.5 h-3.5" /> 추이 CSV
           </button>
         </div>
       </div>
 
       {/* KPI Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         {/* Card 1: Births */}
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between relative overflow-hidden">
+        <div className="bg-white rounded-xl border border-slate-200 shadow-xs p-3.5 flex flex-col justify-between relative overflow-hidden">
           <div className="flex justify-between items-start">
             <div>
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">연간 출생아 수</span>
-              <h3 className="text-2xl font-black text-slate-800 mt-1">
+              <span className="text-[9.5px] font-bold text-slate-400 uppercase tracking-wider">연간 출생아 수</span>
+              <h3 className="text-xl font-black text-slate-800 mt-0.5">
                 {kpis.births.val.toLocaleString()}명
               </h3>
             </div>
-            <span className="bg-amber-50 text-amber-600 text-[9px] font-bold px-2 py-0.5 rounded-md border border-amber-200">
+            <span className="bg-amber-50 text-amber-600 text-[8.5px] font-bold px-1.5 py-0.5 rounded border border-amber-200">
               2025 잠정
             </span>
           </div>
 
-          <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+          <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px]">
             <span className="text-slate-500">전년 대비</span>
             <div className="flex items-center gap-1">
               {kpis.births.diff.direction === 'up' ? (
                 <span className="text-emerald-600 font-bold flex items-center">
-                  <ArrowUpRight className="w-3.5 h-3.5" /> +{kpis.births.diff.val.toLocaleString()}명 ({kpis.births.diff.pct.toFixed(1)}%)
+                  <ArrowUpRight className="w-3 h-3" /> +{kpis.births.diff.val.toLocaleString()}명 ({kpis.births.diff.pct.toFixed(1)}%)
                 </span>
               ) : (
                 <span className="text-rose-600 font-bold flex items-center">
-                  <ArrowDownRight className="w-3.5 h-3.5" /> {kpis.births.diff.val.toLocaleString()}명 ({kpis.births.diff.pct.toFixed(1)}%)
+                  <ArrowDownRight className="w-3 h-3" /> {kpis.births.diff.val.toLocaleString()}명 ({kpis.births.diff.pct.toFixed(1)}%)
                 </span>
               )}
             </div>
@@ -209,29 +209,29 @@ export const DemographicsAnalyzer: React.FC<DemographicsAnalyzerProps> = () => {
         </div>
 
         {/* Card 2: Fertility Rate */}
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between relative overflow-hidden">
+        <div className="bg-white rounded-xl border border-slate-200 shadow-xs p-3.5 flex flex-col justify-between relative overflow-hidden">
           <div className="flex justify-between items-start">
             <div>
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">합계출산율</span>
-              <h3 className="text-2xl font-black text-slate-800 mt-1">
+              <span className="text-[9.5px] font-bold text-slate-400 uppercase tracking-wider">합계출산율</span>
+              <h3 className="text-xl font-black text-slate-800 mt-0.5">
                 {kpis.fertilityRate.val.toFixed(3)}명
               </h3>
             </div>
-            <span className="bg-amber-50 text-amber-600 text-[9px] font-bold px-2 py-0.5 rounded-md border border-amber-200">
+            <span className="bg-amber-50 text-amber-600 text-[8.5px] font-bold px-1.5 py-0.5 rounded border border-amber-200">
               2025 잠정
             </span>
           </div>
 
-          <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+          <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px]">
             <span className="text-slate-500">전년 대비</span>
             <div className="flex items-center gap-1">
               {kpis.fertilityRate.diff.direction === 'up' ? (
                 <span className="text-emerald-600 font-bold flex items-center">
-                  <ArrowUpRight className="w-3.5 h-3.5" /> +{kpis.fertilityRate.diff.val.toFixed(3)} ({kpis.fertilityRate.diff.pct.toFixed(1)}%)
+                  <ArrowUpRight className="w-3 h-3" /> +{kpis.fertilityRate.diff.val.toFixed(3)} ({kpis.fertilityRate.diff.pct.toFixed(1)}%)
                 </span>
               ) : (
                 <span className="text-rose-600 font-bold flex items-center">
-                  <ArrowDownRight className="w-3.5 h-3.5" /> {kpis.fertilityRate.diff.val.toFixed(3)} ({kpis.fertilityRate.diff.pct.toFixed(1)}%)
+                  <ArrowDownRight className="w-3 h-3" /> {kpis.fertilityRate.diff.val.toFixed(3)} ({kpis.fertilityRate.diff.pct.toFixed(1)}%)
                 </span>
               )}
             </div>
@@ -239,29 +239,29 @@ export const DemographicsAnalyzer: React.FC<DemographicsAnalyzerProps> = () => {
         </div>
 
         {/* Card 3: Deaths */}
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between relative overflow-hidden">
+        <div className="bg-white rounded-xl border border-slate-200 shadow-xs p-3.5 flex flex-col justify-between relative overflow-hidden">
           <div className="flex justify-between items-start">
             <div>
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">연간 사망자 수</span>
-              <h3 className="text-2xl font-black text-slate-800 mt-1">
+              <span className="text-[9.5px] font-bold text-slate-400 uppercase tracking-wider">연간 사망자 수</span>
+              <h3 className="text-xl font-black text-slate-800 mt-0.5">
                 {kpis.deaths.val.toLocaleString()}명
               </h3>
             </div>
-            <span className="bg-amber-50 text-amber-600 text-[9px] font-bold px-2 py-0.5 rounded-md border border-amber-200">
+            <span className="bg-amber-50 text-amber-600 text-[8.5px] font-bold px-1.5 py-0.5 rounded border border-amber-200">
               2025 잠정
             </span>
           </div>
 
-          <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+          <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px]">
             <span className="text-slate-500">전년 대비</span>
             <div className="flex items-center gap-1">
               {kpis.deaths.diff.direction === 'up' ? (
                 <span className="text-rose-600 font-bold flex items-center">
-                  <ArrowUpRight className="w-3.5 h-3.5" /> +{kpis.deaths.diff.val.toLocaleString()}명 ({kpis.deaths.diff.pct.toFixed(1)}%)
+                  <ArrowUpRight className="w-3 h-3" /> +{kpis.deaths.diff.val.toLocaleString()}명 ({kpis.deaths.diff.pct.toFixed(1)}%)
                 </span>
               ) : (
                 <span className="text-emerald-600 font-bold flex items-center">
-                  <ArrowDownRight className="w-3.5 h-3.5" /> {kpis.deaths.diff.val.toLocaleString()}명 ({kpis.deaths.diff.pct.toFixed(1)}%)
+                  <ArrowDownRight className="w-3 h-3" /> {kpis.deaths.diff.val.toLocaleString()}명 ({kpis.deaths.diff.pct.toFixed(1)}%)
                 </span>
               )}
             </div>
@@ -269,29 +269,29 @@ export const DemographicsAnalyzer: React.FC<DemographicsAnalyzerProps> = () => {
         </div>
 
         {/* Card 4: Natural Increase */}
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between relative overflow-hidden">
+        <div className="bg-white rounded-xl border border-slate-200 shadow-xs p-3.5 flex flex-col justify-between relative overflow-hidden">
           <div className="flex justify-between items-start">
             <div>
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">인구 자연증가</span>
-              <h3 className={`text-2xl font-black mt-1 ${kpis.naturalIncrease.val < 0 ? 'text-rose-600' : 'text-emerald-600'}`}>
+              <span className="text-[9.5px] font-bold text-slate-400 uppercase tracking-wider">인구 자연증가</span>
+              <h3 className={`text-xl font-black mt-0.5 ${kpis.naturalIncrease.val < 0 ? 'text-rose-600' : 'text-emerald-600'}`}>
                 {kpis.naturalIncrease.val.toLocaleString()}명
               </h3>
             </div>
-            <span className="bg-amber-50 text-amber-600 text-[9px] font-bold px-2 py-0.5 rounded-md border border-amber-200">
+            <span className="bg-amber-50 text-amber-600 text-[8.5px] font-bold px-1.5 py-0.5 rounded border border-amber-200">
               2025 잠정
             </span>
           </div>
 
-          <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+          <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px]">
             <span className="text-slate-500">전년 대비</span>
             <div className="flex items-center gap-1">
               {kpis.naturalIncrease.diff.val > 0 ? (
                 <span className="text-emerald-600 font-bold flex items-center">
-                  <ArrowUpRight className="w-3.5 h-3.5" /> 자연감소 {Math.abs(kpis.naturalIncrease.diff.val).toLocaleString()}명 완화
+                  <ArrowUpRight className="w-3 h-3" /> 자연감소 {Math.abs(kpis.naturalIncrease.diff.val).toLocaleString()}명 완화
                 </span>
               ) : (
                 <span className="text-rose-600 font-bold flex items-center">
-                  <ArrowDownRight className="w-3.5 h-3.5" /> 자연감소 {Math.abs(kpis.naturalIncrease.diff.val).toLocaleString()}명 심화
+                  <ArrowDownRight className="w-3 h-3" /> 자연감소 {Math.abs(kpis.naturalIncrease.diff.val).toLocaleString()}명 심화
                 </span>
               )}
             </div>
@@ -300,20 +300,20 @@ export const DemographicsAnalyzer: React.FC<DemographicsAnalyzerProps> = () => {
       </div>
 
       {/* Main Charts & Analytics Row */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
         {/* Long-term Trend Chart */}
-        <div className="lg:col-span-7 bg-white rounded-2xl border border-slate-200 shadow-sm p-5 flex flex-col justify-between">
+        <div className="lg:col-span-7 bg-white rounded-2xl border border-slate-200 shadow-sm p-4 flex flex-col justify-between">
           <div>
-            <h4 className="text-sm font-bold text-slate-800 flex items-center gap-2">
-              <BarChart2 className="w-4 h-4 text-indigo-500" />
+            <h4 className="text-xs font-extrabold text-slate-800 flex items-center gap-1.5">
+              <BarChart2 className="w-3.5 h-3.5 text-indigo-500" />
               {selectedRegion} 인구동향 장기 추이 (1981 ~ 2025p)
             </h4>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <p className="text-[10px] text-slate-400 mt-0.5">
               출생아 수(파란색), 사망자 수(빨간색) 및 자연감소 추세의 장기 변화를 시각화합니다. (우측 축: 합계출산율)
             </p>
           </div>
 
-          <div className="h-[280px] w-full pt-3">
+          <div className="h-[210px] w-full pt-2">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={regionHistory} margin={{ top: 10, right: 30, left: -10, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />

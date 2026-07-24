@@ -1,20 +1,22 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  X, 
-  CheckCircle2, 
-  Building2, 
-  ExternalLink, 
-  FileText, 
-  Send, 
-  Sparkles, 
-  ChevronDown, 
-  ChevronUp, 
-  CheckSquare, 
-  Square, 
+import {
+  X,
+  CheckCircle2,
+  Building2,
+  ExternalLink,
+  FileText,
+  Send,
+  Sparkles,
+  ChevronDown,
+  ChevronUp,
+  CheckSquare,
+  Square,
   AlertCircle,
   Calendar,
-  ThumbsUp
+  ThumbsUp,
+  RefreshCw,
+  Zap
 } from 'lucide-react';
 import { PolicyProposal } from '../types';
 import { formatProposalContent } from '../utils/formatText';
@@ -81,6 +83,80 @@ ${matchedPolicies.length > 0
 
   const [replyText, setReplyText] = useState(defaultTemplate);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isAiGenerating, setIsAiGenerating] = useState(false);
+
+  // AI 공문 초안 생성 (Gemini API or Fallback)
+  const handleAiGenerate = async () => {
+    setIsAiGenerating(true);
+    try {
+      const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+      if (apiKey) {
+        const { GoogleGenAI } = await import('@google/genai');
+        const ai = new GoogleGenAI({ apiKey });
+        const prompt = `당신은 서울특별시 행정 공무원을 보조하는 수석 정책 분석 AI입니다.
+다음 시민 제안 ${selectedItems.length}건에 대해 부서 제출용 '공식 공문 기안 초안'을 작성해주세요.
+
+[검토 부서]: ${primaryDept.full_dept} ${primaryDept.dept_name}
+
+[선택된 시민 제안]:
+${selectedItems.map((p, idx) => `${idx + 1}. 제목: ${p.title}\n   카테고리: ${p.category}\n   공감수: ${p.vote_score}, 댓글수: ${p.comment_cnt}\n   자치구: ${p.district}\n   내용: ${p.content.slice(0, 200)}`).join('\n\n')}
+
+${matchedPolicies.length > 0 ? `[연계 정책]: ${matchedPolicies.map(m => m.policy_name).join(', ')}` : ''}
+
+[작성 가이드]:
+1. 표준 행정 공문 형식 (제목, 수신, 1. 배경, 2. 제안 분석, 3. 검토 의견 및 정책안, 4. 향후 계획)
+2. 몽땅정보통 연계 정책 URL 포함
+3. 전문적이고 간결한 행정 용어 사용`;
+
+        const response = await ai.models.generateContent({
+          model: 'gemini-2.5-flash',
+          contents: prompt,
+        });
+        setReplyText(response.text || defaultTemplate);
+      } else {
+        // Fallback: 향상된 템플릿 생성
+        await new Promise(resolve => setTimeout(resolve, 1200));
+        const enhanced = `[서울특별시 ${primaryDept.dept_name} AI 자동 생성 공식 답변 공문]
+
+수신: 서울특별시장 귀하
+참조: ${primaryDept.full_dept}
+제목: 시민제안 일괄 검토 및 정책 반영 보고 (${selectedItems.length}건)
+
+1. 추진 배경 및 목적
+상상대로 서울 시민 참여 플랫폼을 통해 접수된 주요 시민 제안 ${selectedItems.length}건에 대한 종합 검토 결과를 보고드립니다.
+해당 제안들은 총 공감 ${selectedItems.reduce((s, p) => s + p.vote_score, 0)}표를 기록하며 높은 시민 관심도를 보이고 있습니다.
+
+2. 주요 제안 종합 분석
+${selectedItems.map((p, idx) => `  ${idx + 1}) [${p.category}] ${p.title}
+     - 공감 ${p.vote_score}표 / 댓글 ${p.comment_cnt}건 / 등록일 ${p.reg_date}
+     - 지역: ${p.district}`).join('\n')}
+
+3. 부서 검토 의견 및 대응 정책
+${matchedPolicies.length > 0
+  ? `현재 시행 중인 연계 정책:\n${matchedPolicies.map(m => {
+      const url = (!m.apply_url || m.apply_url.trim() === '.' || !m.apply_url.startsWith('http')) ? 'https://umppa.seoul.go.kr/' : m.apply_url.trim();
+      return `  - ${m.policy_name}: ${m.summary}\n    (신청: ${url})`;
+    }).join('\n')}`
+  : '  - 서울시 임신 사전건강관리 및 아기 건강 첫걸음 지원사업 연계 지원 중'}
+
+상기 제안들의 높은 시민 공감대를 고려하여, 관련 정책 강화 및 신규 사업 반영을 적극 검토하겠습니다.
+
+4. 향후 이행 계획
+  - 관련 자치구 및 유관 부서 간 실무 협의회 개최 (2주 이내)
+  - 2026년 하반기 예산 및 사업 지침 개정 반영 검토
+  - 시민 답변 공개 및 이행 결과 주기적 공개
+
+문의: ${primaryDept.full_dept} ${primaryDept.dept_name} (☎ ${primaryDept.phone})
+
+※ 본 공문은 UKKKK 정책 수요 분석 시스템의 AI 일괄 공문 기안 기능으로 자동 생성되었습니다.`;
+        setReplyText(enhanced);
+      }
+    } catch {
+      setReplyText(defaultTemplate);
+    } finally {
+      setIsAiGenerating(false);
+    }
+  };
 
   // 개별 체크박스 토글
   const toggleSelect = (id: string) => {
@@ -278,9 +354,31 @@ ${matchedPolicies.length > 0
                       <FileText className="w-4 h-4 text-blue-600" />
                       공식 행정 답변 공문 (선택된 {selectedIds.length}건 적용)
                     </label>
-                    <span className="text-[11px] text-blue-600 font-bold flex items-center gap-1">
-                      <Sparkles className="w-3.5 h-3.5" /> AI 자동 생성
-                    </span>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={handleAiGenerate}
+                        disabled={isAiGenerating || selectedIds.length === 0}
+                        className="text-[11px] bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 text-white font-bold px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition cursor-pointer shadow-2xs"
+                      >
+                        {isAiGenerating ? (
+                          <>
+                            <RefreshCw className="w-3 h-3 animate-spin" />
+                            AI 생성 중...
+                          </>
+                        ) : (
+                          <>
+                            <Zap className="w-3 h-3" />
+                            AI 공문 재생성
+                          </>
+                        )}
+                      </button>
+                      <button
+                        onClick={() => setReplyText(defaultTemplate)}
+                        className="text-[11px] text-slate-500 hover:text-slate-700 font-bold px-2 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-50 transition cursor-pointer"
+                      >
+                        기본 템플릿
+                      </button>
+                    </div>
                   </div>
                   <textarea
                     rows={8}

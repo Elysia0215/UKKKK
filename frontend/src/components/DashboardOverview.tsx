@@ -43,6 +43,7 @@ interface Props {
   onNavigateToTab: (tabIndex: number) => void;
   onSelectCategory: (category: string) => void;
   selectedDept?: string | null;
+  onSelectDept?: (dept: string | null) => void;
 }
 
 export const DashboardOverview: React.FC<Props> = ({ 
@@ -50,7 +51,8 @@ export const DashboardOverview: React.FC<Props> = ({
   stats, 
   onNavigateToTab,
   onSelectCategory,
-  selectedDept
+  selectedDept,
+  onSelectDept
 }) => {
   const [selectedKeywordModal, setSelectedKeywordModal] = React.useState<string | null>(null);
   const [keywordLimit, setKeywordLimit] = React.useState<number>(5);
@@ -103,191 +105,176 @@ export const DashboardOverview: React.FC<Props> = ({
 
   const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#ec4899', '#06b6d4', '#6366f1', '#64748b'];
 
-  // 공감수가 높은 미답변 핵심 현안 (정책 공백 3건 간략 요약)
-  const keyGaps = [...filteredProposals]
-    .filter(p => p.reply_yn === 'N')
-    .sort((a, b) => b.vote_score - a.vote_score)
-    .slice(0, 3);
+  const keyGaps = useMemo(() => {
+    return [...filteredProposals]
+      .filter(p => p.reply_yn === 'N')
+      .sort((a, b) => b.vote_score - a.vote_score)
+      .slice(0, 3);
+  }, [filteredProposals]);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-2.5">
       {/* 부서 전용 필터 경고 배너 */}
       {selectedDept && (
-        <div className="bg-blue-50/80 border border-blue-200/80 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 animate-fade-in">
-          <div className="flex items-center gap-3">
-            <div className="p-2 bg-blue-600 rounded-lg text-white">
-              <Building2 className="w-5 h-5" />
+        <div className="bg-blue-50/80 border border-blue-200/80 rounded-xl p-3 flex flex-col sm:flex-row items-center justify-between gap-3 animate-fade-in">
+          <div className="flex items-center gap-2.5">
+            <div className="p-1.5 bg-blue-600 rounded-lg text-white">
+              <Building2 className="w-4 h-4" />
             </div>
             <div>
-              <h3 className="text-sm font-extrabold text-slate-900">
+              <h3 className="text-xs font-extrabold text-slate-900">
                 🏢 {selectedDept} R&R 업무 모니터링 모드 활성화
               </h3>
-              <p className="text-[11px] text-slate-500 mt-0.5">
+              <p className="text-[10px] text-slate-500 mt-0.5">
                 해당 부서 전담 카테고리에 연관된 총 {filteredProposals.length}건의 제안 및 민원 위주로 필터링되었습니다.
               </p>
             </div>
           </div>
-          <div className="text-xs font-mono font-bold text-blue-600 bg-white border border-blue-200 px-3 py-1.5 rounded-lg shadow-2xs">
+          <div className="text-[11px] font-mono font-bold text-blue-600 bg-white border border-blue-200 px-2.5 py-1 rounded-lg shadow-2xs">
             담당 우선검토 안건: {filteredProposals.filter(p => p.reply_yn === 'N').length}건 미답변
           </div>
         </div>
       )}
 
       {/* 4대 주요 지표 가로형 슬림 스트레이트 바 */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 bg-white p-4 rounded-xl border border-slate-200 shadow-2xs">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 bg-white p-2.5 rounded-xl border border-slate-200 shadow-2xs">
         {/* 1. 총 분석 제안 */}
-        <div className="p-3 bg-slate-50/50 rounded-lg border border-slate-100 flex items-center justify-between">
+        <div className="p-2 bg-slate-50/50 rounded-lg border border-slate-100 flex items-center justify-between">
           <div className="min-w-0 flex-1">
-            <p className="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider">총 분석 제안</p>
-            <div className="flex items-baseline gap-1.5 mt-1.5">
-              <span className="text-lg font-black text-slate-900 font-mono">
+            <p className="text-[9.5px] text-slate-500 font-extrabold uppercase tracking-wider">총 분석 제안</p>
+            <div className="flex items-baseline gap-1 mt-1">
+              <span className="text-base font-black text-slate-900 font-mono">
                 {selectedDept ? filteredProposals.length.toLocaleString() : proposals.length.toLocaleString()}
               </span>
-              <span className="text-[10px] text-slate-500 font-medium">건</span>
+              <span className="text-[9px] text-slate-500 font-medium">건</span>
               {selectedDept && (
-                <span className="text-[9px] text-slate-400 font-medium ml-1">
+                <span className="text-[8px] text-slate-400 font-medium ml-1">
                   / {proposals.length.toLocaleString()}건 (전체)
                 </span>
               )}
             </div>
-            {selectedDept && (
-              <span className="text-[8px] bg-blue-100/70 text-blue-700 font-bold px-1.5 py-0.2 rounded-full mt-1 inline-block">
-                부서 비중 {Math.round((filteredProposals.length / (proposals.length || 1)) * 100)}%
-              </span>
-            )}
           </div>
-          <div className="w-8 h-8 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center font-bold shrink-0 ml-2">
-            <FileText className="w-4 h-4" />
+          <div className="w-7 h-7 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center font-bold shrink-0 ml-1">
+            <FileText className="w-3.5 h-3.5" />
           </div>
         </div>
 
         {/* 2. 평균 시민 공감도 */}
-        <div className="p-3 bg-slate-50/50 rounded-lg border border-slate-100 flex items-center justify-between">
+        <div className="p-2 bg-slate-50/50 rounded-lg border border-slate-100 flex items-center justify-between">
           <div className="min-w-0 flex-1">
-            <p className="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider">평균 시민 공감도</p>
-            <div className="flex items-baseline gap-1.5 mt-1.5">
-              <span className="text-lg font-black text-slate-900 font-mono">
-                {selectedDept 
-                  ? Math.round(filteredProposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (filteredProposals.length || 1)).toLocaleString()
-                  : Math.round(proposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (proposals.length || 1)).toLocaleString()}
+            <p className="text-[9.5px] text-slate-500 font-extrabold uppercase tracking-wider">평균 시민 공감도</p>
+            <div className="flex items-baseline gap-1 mt-1">
+              <span className="text-base font-black text-amber-600 font-mono">
+                {selectedDept
+                  ? Math.round(filteredProposals.reduce((sum, p) => sum + p.vote_score, 0) / (filteredProposals.length || 1))
+                  : Math.round(proposals.reduce((sum, p) => sum + p.vote_score, 0) / (proposals.length || 1))}
               </span>
-              <span className="text-[10px] text-slate-500 font-medium">표</span>
-              {selectedDept && (
-                <span className="text-[9px] text-slate-400 font-medium ml-1">
-                  / 전체 {Math.round(proposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (proposals.length || 1)).toLocaleString()}표
-                </span>
-              )}
+              <span className="text-[9px] text-slate-500 font-medium">표</span>
             </div>
-            {selectedDept && (
-              <span className="text-[8px] bg-amber-100/70 text-amber-700 font-bold px-1.5 py-0.2 rounded-full mt-1 inline-block">
-                격차 {Math.round(filteredProposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (filteredProposals.length || 1)) - Math.round(proposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (proposals.length || 1)) >= 0 ? `+${Math.round(filteredProposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (filteredProposals.length || 1)) - Math.round(proposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (proposals.length || 1))}` : Math.round(filteredProposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (filteredProposals.length || 1)) - Math.round(proposals.reduce((acc, curr) => acc + curr.vote_score, 0) / (proposals.length || 1))}표
-              </span>
-            )}
           </div>
-          <div className="w-8 h-8 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center font-bold shrink-0 ml-2">
-            <ThumbsUp className="w-4 h-4" />
+          <div className="w-7 h-7 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center font-bold shrink-0 ml-1">
+            <ThumbsUp className="w-3.5 h-3.5" />
           </div>
         </div>
 
         {/* 3. 미답변 행정 건수 */}
-        <div className="p-3 bg-slate-50/50 rounded-lg border border-slate-100 flex items-center justify-between">
+        <div className="p-2 bg-slate-50/50 rounded-lg border border-slate-100 flex items-center justify-between">
           <div className="min-w-0 flex-1">
-            <p className="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider">미답변 행정 건수</p>
-            <div className="flex items-baseline gap-1.5 mt-1.5">
-              <span className="text-lg font-black text-rose-600 font-mono">
+            <p className="text-[9.5px] text-slate-500 font-extrabold uppercase tracking-wider">미답변 행정 건수</p>
+            <div className="flex items-baseline gap-1 mt-1">
+              <span className="text-base font-black text-rose-600 font-mono">
                 {selectedDept 
                   ? filteredProposals.filter(p => p.reply_yn === 'N').length.toLocaleString()
                   : proposals.filter(p => p.reply_yn === 'N').length.toLocaleString()}
               </span>
-              <span className="text-[10px] text-slate-500 font-medium">건</span>
-              {selectedDept && (
-                <span className="text-[9px] text-slate-400 font-medium ml-1">
-                  / {proposals.filter(p => p.reply_yn === 'N').length.toLocaleString()}건 (전체)
-                </span>
-              )}
+              <span className="text-[9px] text-slate-500 font-medium">건</span>
             </div>
-            {selectedDept ? (
-              <span className="text-[8px] bg-rose-100/70 text-rose-700 font-bold px-1.5 py-0.2 rounded-full mt-1 inline-block">
-                부서 미답변 비중 {Math.round((filteredProposals.filter(p => p.reply_yn === 'N').length / (proposals.filter(p => p.reply_yn === 'N').length || 1)) * 100)}%
-              </span>
-            ) : (
-              <span className="text-[8px] text-rose-500 font-bold mt-1 inline-block">
-                전체 제안의 약 {Math.round((proposals.filter(p => p.reply_yn === 'N').length / (proposals.length || 1)) * 100)}% 검토 대기중
-              </span>
-            )}
           </div>
-          <div className="w-8 h-8 bg-rose-50 text-rose-600 rounded-lg flex items-center justify-center font-bold shrink-0 ml-2">
-            <Clock className="w-4 h-4" />
+          <div className="w-7 h-7 bg-rose-50 text-rose-600 rounded-lg flex items-center justify-center font-bold shrink-0 ml-1">
+            <Clock className="w-3.5 h-3.5" />
           </div>
         </div>
 
         {/* 4. 행정 답변율 */}
-        <div className="p-3 bg-slate-50/50 rounded-lg border border-slate-100 flex items-center justify-between">
+        <div className="p-2 bg-slate-50/50 rounded-lg border border-slate-100 flex items-center justify-between">
           <div className="min-w-0 flex-1">
-            <p className="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider">행정 답변율</p>
-            <div className="flex items-baseline gap-1.5 mt-1.5">
-              <span className="text-lg font-black text-emerald-600 font-mono">
+            <p className="text-[9.5px] text-slate-500 font-extrabold uppercase tracking-wider">행정 답변율</p>
+            <div className="flex items-baseline gap-1 mt-1">
+              <span className="text-base font-black text-emerald-600 font-mono">
                 {selectedDept
                   ? ((filteredProposals.filter(p => p.reply_yn === 'Y').length / (filteredProposals.length || 1)) * 100).toFixed(1)
                   : ((proposals.filter(p => p.reply_yn === 'Y').length / (proposals.length || 1)) * 100).toFixed(1)}
               </span>
-              <span className="text-[10px] text-slate-500 font-medium">%</span>
-              {selectedDept && (
-                <span className="text-[9px] text-slate-400 font-medium ml-1">
-                  / 전체 {((proposals.filter(p => p.reply_yn === 'Y').length / (proposals.length || 1)) * 100).toFixed(1)}%
-                </span>
-              )}
+              <span className="text-[9px] text-slate-500 font-medium">%</span>
             </div>
-            {selectedDept && (
-              <span className="text-[8px] bg-emerald-100/70 text-emerald-700 font-bold px-1.5 py-0.2 rounded-full mt-1 inline-block">
-                답변 격차 {(((filteredProposals.filter(p => p.reply_yn === 'Y').length / (filteredProposals.length || 1)) * 100) - ((proposals.filter(p => p.reply_yn === 'Y').length / (proposals.length || 1)) * 100)).toFixed(1)}%p
-              </span>
-            )}
           </div>
-          <div className="w-8 h-8 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center font-bold shrink-0 ml-2">
-            <CheckCircle2 className="w-4 h-4" />
+          <div className="w-7 h-7 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center font-bold shrink-0 ml-1">
+            <CheckCircle2 className="w-3.5 h-3.5" />
           </div>
         </div>
       </div>
 
-      {/* 🏛️ [신규 개발] 서울시 실무 부서별 제안 수 수치 & 답변율 현황 대시보드 */}
-      <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-100">
+      {/* ── [구분선 1] 주요 지표 <-> 부서별 현황 ── */}
+      <div className="relative py-0.5 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center" aria-hidden="true">
+          <div className="w-full border-t border-slate-200/80" />
+        </div>
+      </div>
+
+      {/* 🏛️ 서울시 실무 부서별 제안 수 & 답변율 수치 현황 */}
+      <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-xs space-y-2">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 pb-2 border-b border-slate-100">
           <div>
-            <h3 className="text-sm font-black text-slate-900 flex items-center gap-2">
-              <Building2 className="w-4 h-4 text-blue-600" />
+            <h3 className="text-xs font-black text-slate-900 flex items-center gap-1.5">
+              <Building2 className="w-3.5 h-3.5 text-blue-600" />
               서울시 18개 저출생·보육 실무 부서별 제안 수 & 답변율 수치 현황
             </h3>
-            <p className="text-[11px] text-slate-500 mt-0.5">
+            <p className="text-[10px] text-slate-500 mt-0.5">
               각 부서 소관 제안의 처리 현황을 실시간 파악하고, 부서 답변 불균형 및 미답변 공백을 시스템적으로 관리합니다.
             </p>
           </div>
-          <span className="text-[10px] bg-blue-50 text-blue-700 font-extrabold px-2.5 py-1 rounded-full border border-blue-100 self-start sm:self-auto">
-            부서 필터 연동 활성화
-          </span>
+          {selectedDept ? (
+            <button 
+              onClick={() => onSelectDept && onSelectDept(null)}
+              className="text-[9px] bg-blue-600 hover:bg-blue-700 text-white font-extrabold px-2.5 py-0.5 rounded-full border border-blue-500 shadow-xs transition flex items-center gap-1 cursor-pointer"
+            >
+              <span>🏢 {selectedDept} 필터 적용중</span>
+              <span className="bg-blue-800 text-blue-100 rounded-full w-3 h-3 flex items-center justify-center text-[8px]">✕</span>
+            </button>
+          ) : (
+            <span className="text-[9px] bg-blue-50 text-blue-700 font-extrabold px-2 py-0.5 rounded-full border border-blue-100 self-start sm:self-auto flex items-center gap-1">
+              <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-ping" />
+              부서 카드 클릭 시 실시간 필터 연동
+            </span>
+          )}
         </div>
 
         {/* 부서별 수치 Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2.5">
-          {deptStatsProcessed.map((d) => {
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
+          {deptStatsProcessed.slice(0, 5).map((d) => {
             const answerRate = d.total > 0 ? Math.round((d.answered / d.total) * 100) : 0;
             const isSelected = selectedDept === d.dept;
             return (
               <div
                 key={d.dept}
-                onClick={() => onNavigateToTab(0)}
-                className={`p-3 rounded-lg border transition cursor-pointer flex flex-col justify-between ${
+                onClick={() => {
+                  if (onSelectDept) {
+                    onSelectDept(isSelected ? null : d.dept);
+                  }
+                }}
+                title={isSelected ? `${d.dept} 필터 해제` : `${d.dept} 업무 대시보드로 연동 필터링`}
+                className={`p-2 rounded-lg border transition cursor-pointer flex flex-col justify-between ${
                   isSelected 
-                    ? 'bg-blue-950 text-white border-blue-600 shadow-md ring-2 ring-blue-400' 
-                    : 'bg-slate-50/80 hover:bg-white border-slate-200 hover:border-blue-300 hover:shadow-xs'
+                    ? 'bg-blue-950 text-white border-blue-600 shadow-md ring-1 ring-blue-400 scale-[1.01]' 
+                    : 'bg-slate-50/80 hover:bg-white border-slate-200 hover:border-blue-400 hover:shadow-xs'
                 }`}
               >
                 <div>
-                  <div className="flex items-center justify-between gap-1 mb-1">
-                    <span className={`text-[11px] font-black truncate ${isSelected ? 'text-blue-200' : 'text-slate-800'}`}>
+                  <div className="flex items-center justify-between gap-1 mb-0.5">
+                    <span className={`text-[10.5px] font-black truncate ${isSelected ? 'text-blue-200' : 'text-slate-800'}`}>
                       {d.dept}
                     </span>
-                    <span className={`text-[9px] font-extrabold px-1.5 py-0.2 rounded font-mono ${
+                    <span className={`text-[8.5px] font-extrabold px-1 py-0.2 rounded font-mono ${
                       answerRate === 0 ? 'bg-rose-100 text-rose-700' :
                       answerRate < 50 ? 'bg-amber-100 text-amber-800' :
                       'bg-emerald-100 text-emerald-800'
@@ -295,15 +282,15 @@ export const DashboardOverview: React.FC<Props> = ({
                       {answerRate}%
                     </span>
                   </div>
-                  <div className="flex items-baseline gap-1 mt-1">
-                    <span className={`text-base font-black font-mono ${isSelected ? 'text-white' : 'text-slate-900'}`}>
+                  <div className="flex items-baseline gap-1 mt-0.5">
+                    <span className={`text-sm font-black font-mono ${isSelected ? 'text-white' : 'text-slate-900'}`}>
                       {d.total}
                     </span>
-                    <span className={`text-[10px] ${isSelected ? 'text-slate-300' : 'text-slate-500'}`}>건</span>
+                    <span className={`text-[9px] ${isSelected ? 'text-slate-300' : 'text-slate-500'}`}>건</span>
                   </div>
                 </div>
 
-                <div className="mt-2 pt-2 border-t border-slate-200/50 flex items-center justify-between text-[9px] font-mono">
+                <div className="mt-1 pt-1 border-t border-slate-200/50 flex items-center justify-between text-[8.5px] font-mono">
                   <span className={isSelected ? 'text-emerald-300' : 'text-emerald-600'}>답변 {d.answered}</span>
                   <span className={isSelected ? 'text-rose-300' : 'text-rose-600 font-bold'}>미답변 {d.unanswered}</span>
                 </div>
@@ -313,44 +300,58 @@ export const DashboardOverview: React.FC<Props> = ({
         </div>
       </div>
 
-      {/* 📊 [신규 개발] 상상대로 자치구 미상 결측치 명확화 & 데이터 융합 복원율 안내 카드 */}
-      <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-4 rounded-xl shadow-sm border border-indigo-900/50 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-        <div className="space-y-1 max-w-2xl">
-          <div className="flex items-center gap-2">
-            <span className="bg-amber-500/20 text-amber-300 text-[10px] font-extrabold px-2 py-0.5 rounded border border-amber-500/30">
+      {/* ── [구분선 2] 부서별 현황 <-> 데이터 품질 정제 보고 ── */}
+      <div className="relative py-0.5 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center" aria-hidden="true">
+          <div className="w-full border-t border-slate-200/80" />
+        </div>
+      </div>
+
+      {/* 📊 상상대로 자치구 미상 결측치 명확화 & 데이터 융합 복원율 안내 카드 */}
+      <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-2.5 rounded-xl shadow-sm border border-indigo-900/50 flex flex-col md:flex-row items-start md:items-center justify-between gap-2.5">
+        <div className="space-y-0.5 max-w-2xl">
+          <div className="flex items-center gap-1.5">
+            <span className="bg-amber-500/20 text-amber-300 text-[9px] font-extrabold px-1.5 py-0.2 rounded border border-amber-500/30">
               데이터 품질 정제 보고
             </span>
-            <h4 className="text-xs font-black text-slate-100">
+            <h4 className="text-[11px] font-black text-slate-100">
               상상대로 제안의 거주 자치구 결측치(90.4%) 명확화 및 데이터 융합 복원
             </h4>
           </div>
-          <p className="text-[11px] text-slate-300 leading-relaxed">
-            상상대로 시민 제안 426건 중 <strong className="text-amber-300">385건(90.4%)이 자치구 '미상(서울시 전체)'</strong>으로 작성되었습니다. UKKKK는 이를 단순 왜곡하지 않고, 텍스트 키워드 기반 위치 추정 및 몽땅정보통·공공통계 5원 융합을 통해 자치구별 실제 정책 공백을 명확히 복원하여 시각화합니다.
+          <p className="text-[10px] text-slate-300 leading-relaxed">
+            상상대로 시민 제안 426건 중 <strong className="text-amber-300">385건(90.4%)이 자치구 '미상(서울시 전체)'</strong>으로 작성되었습니다. UKKKK는 텍스트 위치 추정 및 5원 융합을 통해 자치구별 실제 정책 공백을 명확히 복원하여 시각화합니다.
           </p>
         </div>
 
-        <div className="flex items-center gap-3 shrink-0 bg-white/5 p-2.5 rounded-lg border border-white/10 w-full md:w-auto justify-around md:justify-start">
-          <div className="text-center px-2">
-            <span className="text-[9px] text-slate-400 block font-semibold">구 미상 (서울시 전체)</span>
-            <span className="text-sm font-black font-mono text-amber-400">385건 (90.4%)</span>
+        <div className="flex items-center gap-2 shrink-0 bg-white/5 p-1.5 rounded-lg border border-white/10 w-full md:w-auto justify-around md:justify-start">
+          <div className="text-center px-1.5">
+            <span className="text-[8.5px] text-slate-400 block font-semibold">구 미상 (서울 전체)</span>
+            <span className="text-xs font-black font-mono text-amber-400">385건 (90.4%)</span>
           </div>
-          <div className="h-6 w-px bg-white/20" />
-          <div className="text-center px-2">
-            <span className="text-[9px] text-slate-400 block font-semibold">특정 자치구 지정</span>
-            <span className="text-sm font-black font-mono text-blue-400">41건 (9.6%)</span>
+          <div className="h-5 w-px bg-white/20" />
+          <div className="text-center px-1.5">
+            <span className="text-[8.5px] text-slate-400 block font-semibold">특정 자치구 지정</span>
+            <span className="text-xs font-black font-mono text-blue-400">41건 (9.6%)</span>
           </div>
-          <div className="h-6 w-px bg-white/20" />
-          <div className="text-center px-2">
-            <span className="text-[9px] text-slate-400 block font-semibold">5원 융합 복원율</span>
-            <span className="text-sm font-black font-mono text-emerald-400">100% 보완</span>
+          <div className="h-5 w-px bg-white/20" />
+          <div className="text-center px-1.5">
+            <span className="text-[8.5px] text-slate-400 block font-semibold">5원 융합 복원율</span>
+            <span className="text-xs font-black font-mono text-emerald-400">100% 보완</span>
           </div>
+        </div>
+      </div>
+
+      {/* ── [구분선 3] 데이터 품질 보고 <-> 시민 제안 핵심 인사이트 TOP 3 ── */}
+      <div className="relative py-0.5 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center" aria-hidden="true">
+          <div className="w-full border-t border-slate-200/80" />
         </div>
       </div>
 
       {/* 시민 제안 핵심 인사이트 (최다 제안 분야 / 최고 공감 제안 좌우 배치) */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
         {/* 1번 카드: 최다 제안 분야 TOP 3 */}
-        <div className="bg-white p-4 rounded-xl border border-purple-100 shadow-2xs flex flex-col justify-between hover:shadow-xs transition h-full">
+        <div className="bg-white p-2.5 rounded-xl border border-purple-100 shadow-2xs flex flex-col justify-between hover:shadow-xs transition h-full">
           <div>
             <div className="flex justify-between items-center mb-3">
               <span className="inline-flex items-center gap-1.5 text-xs font-bold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-md">

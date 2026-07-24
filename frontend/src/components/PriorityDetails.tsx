@@ -206,11 +206,12 @@ export const PriorityDetails: React.FC<Props> = ({
     return `https://${trimmed}`;
   };
 
-  // 국민신문고 연관 민원 모달 상태
   const [civilModalState, setCivilModalState] = useState<{
     proposal: PolicyProposal;
     requests: CivilRequestItem[];
   } | null>(null);
+
+  const [expandedDetailId, setExpandedDetailId] = useState<string | null>(null);
 
   // 시민 제안 ↔ 국민신문고 연관 민원 정밀 교차 매칭 함수
   const getMatchingCivilRequests = useMemo(() => {
@@ -410,7 +411,7 @@ export const PriorityDetails: React.FC<Props> = ({
     proposals.forEach(p => {
       if (p.category) set.add(p.category);
     });
-    return ['전체', ...Array.from(set)];
+    return ['전체', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ko'))];
   }, [proposals]);
 
   // 계층형 중분류 목록 (선택된 대분류에 연동)
@@ -421,7 +422,7 @@ export const PriorityDetails: React.FC<Props> = ({
         set.add(p.sub_category);
       }
     });
-    return ['전체', ...Array.from(set)];
+    return ['전체', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ko'))];
   }, [proposals, selectedCategories]);
 
   // 계층형 세분류 목록 (선택된 중분류에 연동)
@@ -434,7 +435,7 @@ export const PriorityDetails: React.FC<Props> = ({
         set.add(p.micro_category);
       }
     });
-    return ['전체', ...Array.from(set)];
+    return ['전체', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ko'))];
   }, [proposals, selectedCategories, selectedSubCategories]);
 
   // 생애주기 정책 흐름 목록
@@ -443,7 +444,7 @@ export const PriorityDetails: React.FC<Props> = ({
     proposals.forEach(p => {
       if (p.policy_flow) set.add(p.policy_flow);
     });
-    return ['전체', ...Array.from(set)];
+    return ['전체', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ko'))];
   }, [proposals]);
 
   // 1순위 주관부서 동적 목록
@@ -453,7 +454,7 @@ export const PriorityDetails: React.FC<Props> = ({
       const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0];
       if (primaryDept) set.add(primaryDept);
     });
-    return ['전체', ...Array.from(set)];
+    return ['전체', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ko'))];
   }, [proposals]);
 
   // --- 타 필터 선택 시 교차 연동 건수 실시간 계산 맵 ---
@@ -1128,73 +1129,109 @@ export const PriorityDetails: React.FC<Props> = ({
                                 })()}
 
                                 {/* 몽땅정보 연관 기존 사업 & 부서 랭킹 정보 */}
-                                <div className="bg-slate-50 p-3 rounded-lg border border-slate-100 my-2.5 space-y-2 text-xs">
-                                  {item.department_rankings && item.department_rankings.length > 0 && (
-                                    <div className="flex flex-wrap items-center gap-2">
-                                      <span className="text-[10px] font-bold text-slate-400 uppercase">매칭 부서 R&R:</span>
-                                      {item.department_rankings.map(rank => (
-                                        <span
-                                          key={rank.dept_name}
-                                          className={`text-[10px] px-2 py-0.5 rounded flex items-center gap-1 font-bold ${
-                                            rank.rank === 1
-                                              ? 'bg-blue-600 text-white shadow-2xs'
-                                              : 'bg-slate-200 text-slate-700'
-                                          }`}
-                                          title={`${rank.full_dept} (☎ ${rank.phone})\n• 업무: ${rank.duty_summary}\n• 근거: ${rank.matching_reason || '규칙기반 키워드 매칭'}`}
-                                        >
-                                          <Building2 className="w-2.5 h-2.5" />
-                                          [{rank.role_type}] {rank.dept_name} {rank.phone && `(☎ ${rank.phone})`}
-                                        </span>
-                                      ))}
-                                    </div>
-                                  )}
+                                {/* 몽땅정보 연관 기존 사업 & 부서 랭킹 정보 (슬림 뷰 + 접기/펼치기 토글 UX) */}
+                                 {(() => {
+                                   const reqs = getMatchingCivilRequests(item);
+                                   const isDetailOpen = expandedDetailId === item.id;
+                                   const primaryRank = item.department_rankings && item.department_rankings.length > 0 ? item.department_rankings[0] : null;
+                                   const primaryPolicy = item.matched_policies && item.matched_policies.length > 0 ? item.matched_policies[0] : null;
 
-                                  {item.matched_policies && item.matched_policies.length > 0 && (
-                                    <div className="flex flex-wrap items-center gap-2 pt-1.5 border-t border-slate-200/60">
-                                      <span className="text-[10px] font-bold text-emerald-700 uppercase">몽땅정보 연관혜택:</span>
-                                      {item.matched_policies.map(pol => (
-                                        <a
-                                          key={pol.policy_id}
-                                          href={formatPolicyLink(pol.apply_url)}
-                                          target="_blank"
-                                          rel="noopener noreferrer"
-                                          className="text-[10px] bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded flex items-center gap-1 font-semibold transition"
-                                          title={pol.summary}
-                                        >
-                                          🎁 {pol.policy_name} ↗
-                                        </a>
-                                      ))}
-                                    </div>
-                                  )}
+                                   return (
+                                     <div className="bg-slate-50/80 p-2.5 rounded-lg border border-slate-200/60 my-2 space-y-2 text-xs">
+                                       {/* 기본 요약 1줄 바 (주관부서 1개 + 몽땅혜택 1개 + 국민신문고 뱃지 + 상세토글) */}
+                                       <div className="flex flex-wrap items-center justify-between gap-2">
+                                         <div className="flex flex-wrap items-center gap-2">
+                                           {primaryRank && (
+                                             <span className="text-[10px] bg-blue-600 text-white font-black px-2 py-0.5 rounded flex items-center gap-1 shadow-2xs">
+                                               <Building2 className="w-2.5 h-2.5" />
+                                               [주관부서] {primaryRank.dept_name} {primaryRank.phone && `(☎ ${primaryRank.phone})`}
+                                             </span>
+                                           )}
 
-                                  {(() => {
-                                    const reqs = getMatchingCivilRequests(item);
-                                    if (reqs.length > 0) {
-                                      return (
-                                        <div className="pt-1.5 border-t border-slate-200/60 flex items-center justify-between flex-wrap gap-1">
-                                          <div className="flex items-center gap-1.5">
-                                            <span className="text-[10px] font-bold text-indigo-700 uppercase">국민신문고 연관 민원:</span>
-                                            <span className="text-[10px] bg-indigo-50 text-indigo-800 border border-indigo-200 px-2 py-0.5 rounded font-bold">
-                                              실시간 접수 민원 {reqs.length}건 연동 완료
-                                            </span>
-                                          </div>
-                                          <button
-                                            type="button"
-                                            onClick={(e) => {
-                                              e.stopPropagation();
-                                              setCivilModalState({ proposal: item, requests: reqs });
-                                            }}
-                                            className="text-[10px] bg-indigo-600 hover:bg-indigo-700 text-white px-2.5 py-0.5 rounded-md font-extrabold transition flex items-center gap-1 cursor-pointer shadow-2xs"
-                                          >
-                                            <span>📩 국민신문고 민원 원문 보기 ({reqs.length}건)</span>
-                                            <ExternalLink className="w-2.5 h-2.5" />
-                                          </button>
-                                        </div>
-                                      );
-                                    }
-                                    return null;
-                                  })()}
-                                </div>
+                                           {primaryPolicy && (
+                                             <a
+                                               href={formatPolicyLink(primaryPolicy.apply_url)}
+                                               target="_blank"
+                                               rel="noopener noreferrer"
+                                               className="text-[10px] bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded font-bold transition flex items-center gap-1"
+                                               title={primaryPolicy.summary}
+                                             >
+                                               🎁 {primaryPolicy.policy_name}
+                                               {item.matched_policies.length > 1 && (
+                                                 <span className="bg-emerald-200/70 text-emerald-900 px-1 py-0.2 rounded text-[8.5px]">
+                                                   +{item.matched_policies.length - 1}개
+                                                 </span>
+                                               )}
+                                             </a>
+                                           )}
+                                         </div>
+
+                                         <div className="flex items-center gap-1.5">
+                                           {reqs.length > 0 && (
+                                             <button
+                                               type="button"
+                                               onClick={(e) => {
+                                                 e.stopPropagation();
+                                                 setCivilModalState({ proposal: item, requests: reqs });
+                                               }}
+                                               className="text-[9.5px] bg-indigo-600 hover:bg-indigo-700 text-white px-2 py-0.5 rounded font-black transition flex items-center gap-1 cursor-pointer shadow-2xs"
+                                             >
+                                               <span>📩 민원 {reqs.length}건 ↗</span>
+                                             </button>
+                                           )}
+
+                                           <button
+                                             type="button"
+                                             onClick={(e) => {
+                                               e.stopPropagation();
+                                               setExpandedDetailId(isDetailOpen ? null : item.id);
+                                             }}
+                                             className="text-[9.5px] bg-slate-200/80 hover:bg-slate-300/80 text-slate-700 font-extrabold px-2 py-0.5 rounded transition flex items-center gap-0.5 cursor-pointer"
+                                           >
+                                             <span>{isDetailOpen ? '상세 접기 ▴' : '연관 R&R/혜택 ▾'}</span>
+                                           </button>
+                                         </div>
+                                       </div>
+
+                                       {/* 토글 클릭 시 펼쳐지는 세부 협조부서 및 몽땅혜택 풀목록 */}
+                                       {isDetailOpen && (
+                                         <div className="pt-2 border-t border-slate-200/70 space-y-2 animate-fade-in text-[10px]">
+                                           {item.department_rankings && item.department_rankings.length > 1 && (
+                                             <div className="space-y-1">
+                                               <span className="font-extrabold text-slate-500 block">🏢 협조 부서 랭킹 (2, 3순위):</span>
+                                               <div className="flex flex-wrap gap-1.5">
+                                                 {item.department_rankings.slice(1).map(rank => (
+                                                   <span key={rank.dept_name} className="bg-slate-200/80 text-slate-700 px-2 py-0.5 rounded font-bold">
+                                                     [{rank.role_type}] {rank.dept_name} {rank.phone && `(☎ ${rank.phone})`}
+                                                   </span>
+                                                 ))}
+                                               </div>
+                                             </div>
+                                           )}
+
+                                           {item.matched_policies && item.matched_policies.length > 0 && (
+                                             <div className="space-y-1">
+                                               <span className="font-extrabold text-emerald-800 block">🎁 몽땅정보 연관혜택 풀목록 ({item.matched_policies.length}건):</span>
+                                               <div className="flex flex-wrap gap-1.5">
+                                                 {item.matched_policies.map(pol => (
+                                                   <a
+                                                     key={pol.policy_id}
+                                                     href={formatPolicyLink(pol.apply_url)}
+                                                     target="_blank"
+                                                     rel="noopener noreferrer"
+                                                     className="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded font-semibold transition"
+                                                   >
+                                                     {pol.policy_name} ↗
+                                                   </a>
+                                                 ))}
+                                               </div>
+                                             </div>
+                                           )}
+                                         </div>
+                                       )}
+                                     </div>
+                                   );
+                                 })()}
 
                                 <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-100">
                                   <div className="flex items-center gap-2">

@@ -248,7 +248,7 @@ export const StatCharts: React.FC<StatChartsProps> = ({
                 !isGridView && activeTab === 'scaling' ? 'bg-white text-slate-800 shadow-sm font-bold' : 'text-slate-500 hover:text-slate-800'
               }`}
             >
-              <Activity className="w-3.5 h-3.5" /> 제안-인프라 비교
+              <Activity className="w-3.5 h-3.5" /> 수요-인프라 상관 분석
             </button>
             <button
               onClick={() => { setActiveTab('table'); setIsGridView(false); }}
@@ -270,26 +270,26 @@ export const StatCharts: React.FC<StatChartsProps> = ({
         </div>
       </div>
 
-      <div className="p-5 flex-1 min-h-[380px] overflow-y-auto bg-slate-50/20">
+      <div className="p-4 flex-1 bg-slate-50/20">
         {isGridView ? (
           /* 5대 차트 요약 포털 그리드 레이아웃 */
-          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-5 animate-in fade-in duration-200 pb-4">
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 animate-in fade-in duration-200">
             
             {/* 카드 1: 구별 랭킹 */}
             <div 
               onClick={() => { setActiveTab('ranking'); setIsGridView(false); }}
-              className="bg-white p-4.5 rounded-xl border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-1 hover:shadow-md transition-all duration-200 cursor-pointer flex flex-col justify-between"
+              className="bg-white p-3.5 rounded-xl border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200 cursor-pointer flex flex-col justify-between"
             >
               <div>
-                <div className="flex justify-between items-center mb-2">
+                <div className="flex justify-between items-center mb-1">
                   <h4 className="text-xs font-extrabold text-slate-800 flex items-center gap-1.5">
                     <span className="text-sm">📊</span> 구별 {getMetricLabel().split(' ')[0]} 랭킹
                   </h4>
                   <span className="text-[9px] font-black text-indigo-500 bg-indigo-50 px-1.5 py-0.5 rounded-sm">Zoom-in ↗</span>
                 </div>
-                <p className="text-[10px] text-slate-400 leading-normal mb-3">자치구별 지표 데이터를 내림차순 및 오름차순으로 정렬한 비교 랭킹 차트입니다.</p>
+                <p className="text-[9.5px] text-slate-400 leading-tight mb-2">자치구별 지표 데이터를 내림차순 및 오름차순으로 정렬한 비교 랭킹 차트입니다.</p>
               </div>
-              <div className="h-28 w-full pointer-events-none opacity-85">
+              <div className="h-20 w-full pointer-events-none opacity-85">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={chartData.slice(0, 10)} margin={{ top: 5, right: 5, left: -30, bottom: 5 }}>
                     <Bar dataKey="Value" fill={getMetricColor()} radius={[2, 2, 0, 0]} />
@@ -301,18 +301,18 @@ export const StatCharts: React.FC<StatChartsProps> = ({
             {/* 카드 2: 출산율 분포 */}
             <div 
               onClick={() => { setActiveTab('distribution'); setIsGridView(false); }}
-              className="bg-white p-4.5 rounded-xl border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-1 hover:shadow-md transition-all duration-200 cursor-pointer flex flex-col justify-between"
+              className="bg-white p-3.5 rounded-xl border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200 cursor-pointer flex flex-col justify-between"
             >
               <div>
-                <div className="flex justify-between items-center mb-2">
+                <div className="flex justify-between items-center mb-1">
                   <h4 className="text-xs font-extrabold text-slate-800 flex items-center gap-1.5">
                     <span className="text-sm">📈</span> 출산율 & 출생아 분포
                   </h4>
                   <span className="text-[9px] font-black text-indigo-500 bg-indigo-50 px-1.5 py-0.5 rounded-sm">Zoom-in ↗</span>
                 </div>
-                <p className="text-[10px] text-slate-400 leading-normal mb-3">출생율 선그래프와 출생아수 면그래프를 겹쳐 자치구별 집중 분포를 조감합니다.</p>
+                <p className="text-[9.5px] text-slate-400 leading-tight mb-2">출생율 선그래프와 출생아수 면그래프를 겹쳐 자치구별 집중 분포를 조감합니다.</p>
               </div>
-              <div className="h-28 w-full pointer-events-none opacity-85">
+              <div className="h-20 w-full pointer-events-none opacity-85">
                 <ResponsiveContainer width="100%" height="100%">
                   <AreaChart data={chartData.slice(0, 12)} margin={{ top: 5, right: 5, left: -30, bottom: 5 }}>
                     <Area type="monotone" dataKey="births" fill="#c084fc" stroke="#8b5cf6" fillOpacity={0.25} />
@@ -324,18 +324,18 @@ export const StatCharts: React.FC<StatChartsProps> = ({
             {/* 카드 3: 요구 대비 정책 공급 격차 */}
             <div 
               onClick={() => { setActiveTab('policy'); setIsGridView(false); }}
-              className="bg-white p-4.5 rounded-xl border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-1 hover:shadow-md transition-all duration-200 cursor-pointer flex flex-col justify-between"
+              className="bg-white p-3.5 rounded-xl border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200 cursor-pointer flex flex-col justify-between"
             >
               <div>
-                <div className="flex justify-between items-center mb-2">
+                <div className="flex justify-between items-center mb-1">
                   <h4 className="text-xs font-extrabold text-slate-800 flex items-center gap-1.5">
                     <span className="text-sm">🍕</span> 요구 대비 정책 공급 격차
                   </h4>
                   <span className="text-[9px] font-black text-indigo-500 bg-indigo-50 px-1.5 py-0.5 rounded-sm">Zoom-in ↗</span>
                 </div>
-                <p className="text-[10px] text-slate-400 leading-normal mb-3">대분류 키워드별 시민 제안(수요) 건수와 서울시 양육 지원 정책(공급) 수의 1:1 대조 분석입니다.</p>
+                <p className="text-[9.5px] text-slate-400 leading-tight mb-2">대분류 키워드별 시민 제안(수요) 건수와 서울시 양육 지원 정책(공급) 수의 1:1 대조 분석입니다.</p>
               </div>
-              <div className="h-28 w-full pointer-events-none opacity-85">
+              <div className="h-20 w-full pointer-events-none opacity-85">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={categoryCompareData.slice(0, 5)} margin={{ top: 5, right: 5, left: -30, bottom: 5 }}>
                     <Bar dataKey="시민 제안 수" fill="#f43f5e" radius={[2, 2, 0, 0]} />
@@ -348,18 +348,18 @@ export const StatCharts: React.FC<StatChartsProps> = ({
             {/* 카드 4: 제안-인프라 비교 */}
             <div 
               onClick={() => { setActiveTab('scaling'); setIsGridView(false); }}
-              className="bg-white p-4.5 rounded-xl border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-1 hover:shadow-md transition-all duration-200 cursor-pointer flex flex-col justify-between"
+              className="bg-white p-3.5 rounded-xl border border-slate-200/80 hover:border-indigo-400 hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200 cursor-pointer flex flex-col justify-between"
             >
               <div>
-                <div className="flex justify-between items-center mb-2">
+                <div className="flex justify-between items-center mb-1">
                   <h4 className="text-xs font-extrabold text-slate-800 flex items-center gap-1.5">
                     <span className="text-sm">⚡</span> 수요-보육시설 상관 분석
                   </h4>
                   <span className="text-[9px] font-black text-indigo-500 bg-indigo-50 px-1.5 py-0.5 rounded-sm">Zoom-in ↗</span>
                 </div>
-                <p className="text-[10px] text-slate-400 leading-normal mb-3">출생아 통계 수요와 현행 보육시설(어린이집 등) 인프라 간의 정밀 상관 곡선입니다.</p>
+                <p className="text-[9.5px] text-slate-400 leading-tight mb-2">출생아 통계 수요와 현행 보육시설(어린이집 등) 인프라 간의 정밀 상관 곡선입니다.</p>
               </div>
-              <div className="h-28 w-full pointer-events-none opacity-85">
+              <div className="h-20 w-full pointer-events-none opacity-85">
                 <ResponsiveContainer width="100%" height="100%">
                   <AreaChart data={chartData.slice(0, 15)} margin={{ top: 5, right: 5, left: -30, bottom: 5 }}>
                     <Area type="monotone" dataKey="daycare" fill="#34d399" stroke="#10b981" fillOpacity={0.2} />
@@ -419,11 +419,11 @@ export const StatCharts: React.FC<StatChartsProps> = ({
           </div>
         ) : (
           /* 기존 상세 차트 뷰 렌더러 (activeTab 분기) */
-          <div className="w-full h-full flex flex-col animate-in fade-in duration-200">
+          <div className="w-full flex flex-col animate-in fade-in duration-200">
             {activeTab === 'ranking' && (
-              <div className="w-full h-full flex flex-col gap-2">
+              <div className="w-full flex flex-col gap-2">
                 <span className="text-[11px] font-semibold text-slate-500 font-mono">★ 자치구별 {getMetricLabel()} 내림차순 랭킹</span>
-                <div className="flex-1 w-full min-h-[280px]">
+                <div className="w-full h-[360px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart
                       data={chartData}
@@ -471,9 +471,9 @@ export const StatCharts: React.FC<StatChartsProps> = ({
             )}
 
             {activeTab === 'distribution' && (
-              <div className="w-full h-full flex flex-col gap-2">
+              <div className="w-full flex flex-col gap-2">
                 <span className="text-[11px] font-semibold text-slate-500 font-mono">★ 합계출산율(선)과 출생아 수(면) 자치구별 비교 분포도</span>
-                <div className="flex-1 w-full min-h-[280px]">
+                <div className="w-full h-[360px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -10, bottom: 80 }}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
@@ -502,9 +502,9 @@ export const StatCharts: React.FC<StatChartsProps> = ({
             )}
 
             {activeTab === 'policy' && (
-              <div className="w-full h-full flex flex-col gap-2">
+              <div className="w-full flex flex-col gap-2">
                 <span className="text-[11px] font-semibold text-slate-500 font-mono">★ 대분류 키워드별 시민 요구(제안 수) vs 행정 공급(등록 정책 수) 매칭 대조 분석</span>
-                <div className="flex-1 w-full min-h-[280px]">
+                <div className="w-full h-[360px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart
                       data={categoryCompareData}
@@ -535,9 +535,9 @@ export const StatCharts: React.FC<StatChartsProps> = ({
             )}
 
             {activeTab === 'scaling' && (
-              <div className="w-full h-full flex flex-col gap-2">
+              <div className="w-full flex flex-col gap-2">
                 <span className="text-[11px] font-semibold text-slate-500 font-mono">★ 자치구별 출생아 수 대비 영유아 보육 인프라(어린이집 개소) 상관도 비교</span>
-                <div className="flex-1 w-full min-h-[280px]">
+                <div className="w-full h-[360px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <ComposedChart data={districtChartData} margin={{ top: 10, right: 10, left: -10, bottom: 80 }}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
