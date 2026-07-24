@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { PolicyProposal } from '../types';
-import { Calendar, Heart, Layers, GitBranch, Filter, Building, Link2, Sparkles } from 'lucide-react';
+import { Calendar, Heart, Layers, GitBranch, Filter, Building, Link2, Sparkles, Sprout } from 'lucide-react';
 
 export interface FilterState {
   year: string;
@@ -316,23 +316,23 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
 
       {/* 1. 제안 연도 */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-        <div className="w-24 shrink-0 font-bold text-slate-700 flex items-center gap-1.5 bg-amber-50/80 px-2.5 py-1 rounded-md border border-amber-100">
-          <Calendar className="w-3.5 h-3.5 text-amber-600" />
+        <div className="w-24 shrink-0 font-bold text-slate-700 flex items-center gap-2 text-[11px]">
+          <Calendar className="w-4 h-4 text-blue-600" />
           <span>제안 연도</span>
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1">
           {['전체년', '2026', '2025', '2024', '2023', '2022이전'].map((yr) => {
             const count = yearCounts[yr] || 0;
             const isSelected = filterState.year === yr;
+            const is2026 = yr === '2026';
+            const badgeStyle = isSelected
+              ? (is2026 ? 'bg-emerald-600 text-white border-emerald-600 shadow-2xs' : 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs')
+              : (is2026 ? 'bg-emerald-50/20 text-emerald-600 border-emerald-200 hover:bg-emerald-50/40' : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50');
             return (
               <button
                 key={yr}
                 onClick={() => onFilterChange({ ...filterState, year: yr })}
-                className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] ${
-                  isSelected
-                    ? 'bg-amber-500 text-white border-amber-600 shadow-xs'
-                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
-                }`}
+                className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] ${badgeStyle}`}
               >
                 {yr === '2026' ? `🔥 2026 최신 (${count}건)` : `${yr} (${count}건)`}
               </button>
@@ -343,8 +343,8 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
 
       {/* 2. 생애주기 (정책흐름) */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-        <div className="w-24 shrink-0 font-bold text-slate-700 flex items-center gap-1.5 bg-blue-50/80 px-2.5 py-1 rounded-md border border-blue-100">
-          <Heart className="w-3.5 h-3.5 text-blue-600" />
+        <div className="w-24 shrink-0 font-bold text-slate-700 flex items-center gap-2 text-[11px]">
+          <Sprout className="w-4 h-4 text-green-600" />
           <span>생애주기</span>
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1">
@@ -356,7 +356,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
                 onClick={() => handleLifecycleClick(lf)}
                 className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] ${
                   isSelected
-                    ? 'bg-blue-600 text-white border-blue-700 shadow-xs ring-2 ring-blue-300'
+                    ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs font-extrabold'
                     : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
                 }`}
               >
@@ -369,8 +369,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
 
       {/* 3. 1차 대분류 (중분류 선택 시 부모 대분류 자동 선택 동기화) */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-        <div className="w-24 shrink-0 font-bold text-slate-700 flex items-center gap-1.5 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200">
-          <Layers className="w-3.5 h-3.5 text-slate-600" />
+        <div className="w-24 shrink-0 font-bold text-slate-700 flex items-center text-[11px]">
           <span>1차 대분류</span>
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1">
@@ -382,8 +381,8 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
                 onClick={() => handleCat1Click(cat)}
                 className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] flex items-center gap-1 ${
                   isSelected
-                    ? 'bg-slate-900 text-white border-slate-900 shadow-xs ring-2 ring-slate-400 font-black'
-                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-100'
+                    ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs font-extrabold'
+                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
                 }`}
               >
                 {isSelected && cat !== '전체' && <Link2 className="w-3 h-3 text-emerald-400" />}
@@ -395,10 +394,9 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       </div>
 
       {/* 4. 2차 중분류 (1차 대분류 선택 시 해당 대분류 연관 중분류만 좁혀 노출, 클릭 시 상위 대분류 자동 연동!) */}
-      <div className="flex flex-col sm:flex-row sm:items-start gap-2 pt-1 border-t border-slate-100 bg-indigo-50/20 p-2 rounded-xl">
-        <div className="w-24 shrink-0 font-bold text-slate-700 flex items-center gap-1.5 bg-indigo-100 px-2.5 py-1 rounded-md border border-indigo-200 mt-0.5">
-          <GitBranch className="w-3.5 h-3.5 text-indigo-700" />
-          <span>2차 중분류</span>
+      <div className="flex flex-col sm:flex-row sm:items-start gap-2 pt-1 border-t border-slate-100">
+        <div className="w-24 shrink-0 font-bold text-slate-500 flex items-center pl-3 pt-0.5 text-[11px]">
+          <span>ㄴ 2차 중분류</span>
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1 max-h-32 overflow-y-auto pr-1">
           {Object.entries(cat2Counts).map(([sub, count]) => {
@@ -409,8 +407,8 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
                 onClick={() => handleCat2Click(sub)}
                 className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] ${
                   isSelected
-                    ? 'bg-indigo-600 text-white border-indigo-700 shadow-xs ring-2 ring-indigo-300'
-                    : 'bg-white text-slate-700 border-slate-200 hover:bg-indigo-100'
+                    ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs font-extrabold'
+                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
                 }`}
                 title={sub !== '전체' && SUB_TO_PARENT_MAP[sub] ? `상위 1차 대분류: ${SUB_TO_PARENT_MAP[sub].cat1}` : ''}
               >
@@ -437,7 +435,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
                   onClick={() => handleCat3Click(micro)}
                   className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] ${
                     isSelected
-                      ? 'bg-emerald-600 text-white border-emerald-700 shadow-xs'
+                      ? 'bg-emerald-600 text-white border-emerald-600 shadow-xs'
                       : 'bg-white text-emerald-900 border-emerald-200 hover:bg-emerald-100'
                   }`}
                 >
@@ -451,8 +449,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
 
       {/* 6. 담당부서 */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-2 pt-1 border-t border-slate-100">
-        <div className="w-24 shrink-0 font-bold text-slate-700 flex items-center gap-1.5 bg-purple-50/80 px-2.5 py-1 rounded-md border border-purple-100">
-          <Building className="w-3.5 h-3.5 text-purple-600" />
+        <div className="w-24 shrink-0 font-bold text-slate-700 flex items-center text-[11px]">
           <span>담당부서</span>
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1 max-h-24 overflow-y-auto pr-1">
@@ -464,8 +461,8 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
                 onClick={() => onFilterChange({ ...filterState, department: dept })}
                 className={`px-2.5 py-1 rounded-full border transition font-bold cursor-pointer text-[11px] ${
                   isSelected
-                    ? 'bg-purple-600 text-white border-purple-700 shadow-xs'
-                    : 'bg-white text-slate-700 border-slate-200 hover:bg-purple-50'
+                    ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs font-extrabold'
+                    : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
                 }`}
               >
                 {dept} ({count}건)

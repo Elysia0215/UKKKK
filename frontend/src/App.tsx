@@ -8,7 +8,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   LayoutDashboard, 
@@ -61,6 +61,24 @@ export default function App() {
   const [selectedDept, setSelectedDept] = useState<string | null>(null);
   const [isExportModalOpen, setIsExportModalOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
+  const [currentTime, setCurrentTime] = useState<Date>(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatTime = (date: Date) => {
+    const yyyy = date.getFullYear();
+    const mm = String(date.getMonth() + 1).padStart(2, '0');
+    const dd = String(date.getDate()).padStart(2, '0');
+    const hh = String(date.getHours()).padStart(2, '0');
+    const min = String(date.getMinutes()).padStart(2, '0');
+    const ss = String(date.getSeconds()).padStart(2, '0');
+    return `${yyyy}.${mm}.${dd} ${hh}:${min}:${ss}`;
+  };
 
   // 공공데이터 지표 서브탭 상태
   const [publicSubTab, setPublicSubTab] = useState<'district' | 'demographics'>('district');
@@ -241,7 +259,7 @@ export default function App() {
             <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
             실시간 분석 중
           </span>
-          <span className="opacity-70 font-mono">2026.07.19 23:10 기준</span>
+          <span className="opacity-70 font-mono notranslate" translate="no">{formatTime(currentTime)} 기준</span>
           <button
             onClick={handleExportData}
             className="text-xs bg-slate-800/80 text-white border border-slate-700 hover:bg-slate-700 font-bold px-3 py-1 rounded flex items-center gap-1.5 transition"

@@ -135,7 +135,7 @@ export const MongttangList: React.FC = () => {
       });
   }, []);
 
-  // 대분류 목록 추출 (건수 많은 순서 내림차순 정렬)
+  // 대분류 목록 추출 (건수 많은 순서 내림차순 정렬, 청년 카테고리는 필터링 제외)
   const categories = useMemo(() => {
     const countMap: Record<string, number> = {};
     policies.forEach(p => {
@@ -144,7 +144,9 @@ export const MongttangList: React.FC = () => {
       }
     });
 
-    const sortedCats = Object.keys(countMap).sort((a, b) => countMap[b] - countMap[a]);
+    const sortedCats = Object.keys(countMap)
+      .filter(cat => cat !== '청년')
+      .sort((a, b) => countMap[b] - countMap[a]);
     return ['전체', ...sortedCats];
   }, [policies]);
 
@@ -162,10 +164,10 @@ export const MongttangList: React.FC = () => {
     return map;
   }, [policies]);
 
-  // 필터링된 정책 목록 (대분류 + 중분류 + 검색어)
+  // 필터링된 정책 목록 (대분류 + 중분류 + 검색어, 전체 조회 시 청년 데이터 강제 예외 처리)
   const filteredPolicies = useMemo(() => {
     return policies.filter(p => {
-      const matchCategory = selectedCategory === '전체' || p.displayCategory === selectedCategory;
+      const matchCategory = selectedCategory === '전체' ? p.displayCategory !== '청년' : p.displayCategory === selectedCategory;
       const matchSubCategory = !selectedSubCategory || p.displaySubCategory === selectedSubCategory;
       const term = searchTerm.trim().toLowerCase();
       const matchSearch = !term || 
@@ -206,7 +208,7 @@ export const MongttangList: React.FC = () => {
             {/* 박스 1: 총 시행 정책 */}
             <div className="bg-white/20 backdrop-blur-md border border-white/35 rounded-xl px-3 py-2 min-w-[100px] shadow-2xs flex flex-col justify-center text-center">
               <span className="text-xs sm:text-sm text-white font-black leading-snug flex items-center gap-1 justify-center">🏛️ 총 시행 정책</span>
-              <span className="text-[11px] sm:text-xs font-bold text-slate-200 leading-tight font-mono mt-0.5 block text-center">{policies.length}<span className="text-[10px] font-normal text-slate-300 ml-0.5">건</span></span>
+              <span className="text-[11px] sm:text-xs font-bold text-slate-200 leading-tight font-mono mt-0.5 block text-center">{policies.filter(p => p.displayCategory !== '청년').length}<span className="text-[10px] font-normal text-slate-300 ml-0.5">건</span></span>
             </div>
 
             {/* 박스 2: 육아·보육 */}
@@ -221,10 +223,10 @@ export const MongttangList: React.FC = () => {
               <span className="text-[11px] sm:text-xs font-bold text-sky-200 leading-tight font-mono mt-0.5 block text-center">{policies.filter(p => p.displayCategory === '임신·준비' || p.displayCategory === '출산').length}<span className="text-[10px] font-normal text-sky-100/90 ml-0.5">건</span></span>
             </div>
 
-            {/* 박스 4: 신혼부부·청년 */}
+            {/* 박스 4: 신혼부부 */}
             <div className="bg-amber-500/30 backdrop-blur-md border border-amber-300/50 rounded-xl px-3 py-2 min-w-[100px] shadow-2xs flex flex-col justify-center text-center">
-              <span className="text-xs sm:text-sm text-amber-100 font-black leading-snug flex items-center gap-1 justify-center">💍 신혼부부·청년</span>
-              <span className="text-[11px] sm:text-xs font-bold text-amber-200 leading-tight font-mono mt-0.5 block text-center">{policies.filter(p => p.displayCategory === '신혼부부' || p.displayCategory === '청년').length}<span className="text-[10px] font-normal text-amber-100/90 ml-0.5">건</span></span>
+              <span className="text-xs sm:text-sm text-amber-100 font-black leading-snug flex items-center gap-1 justify-center">👶 신혼부부</span>
+              <span className="text-[11px] sm:text-xs font-bold text-amber-200 leading-tight font-mono mt-0.5 block text-center">{policies.filter(p => p.displayCategory === '신혼부부').length}<span className="text-[10px] font-normal text-amber-100/90 ml-0.5">건</span></span>
             </div>
           </div>
         </div>
@@ -251,7 +253,7 @@ export const MongttangList: React.FC = () => {
 
           <nav className="space-y-1 text-xs font-semibold">
             {categories.map((cat) => {
-              const count = cat === '전체' ? policies.length : policies.filter(p => p.displayCategory === cat).length;
+              const count = cat === '전체' ? policies.filter(p => p.displayCategory !== '청년').length : policies.filter(p => p.displayCategory === cat).length;
               const isSelected = selectedCategory === cat;
               const isOpen = openAccordion === cat;
               const subMap = subCategoriesMap[cat];
