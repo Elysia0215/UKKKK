@@ -172,12 +172,16 @@ interface Props {
   proposals: PolicyProposal[];
   selectedCategory: string | null;
   onSelectCategory: (category: string | null) => void;
+  selectedDept?: string | null;
+  onSelectDept?: (dept: string | null) => void;
 }
 
 export const CategoryDemand: React.FC<Props> = ({
   proposals,
   selectedCategory,
-  onSelectCategory
+  onSelectCategory,
+  selectedDept,
+  onSelectDept
 }) => {
   const [selectedProposalId, setSelectedProposalId] = useState<string | null>(null);
   const [selectedKeywordModal, setSelectedKeywordModal] = useState<string | null>(null);
@@ -215,12 +219,29 @@ export const CategoryDemand: React.FC<Props> = ({
     }
   }, [selectedCategory]);
 
+  // 상단 부서 셀렉터(selectedDept) 변경 시 담당부서 필터 자동 동기화
+  React.useEffect(() => {
+    if (selectedDept) {
+      setFilterState(prev => ({ ...prev, department: selectedDept }));
+    } else {
+      setFilterState(prev => ({ ...prev, department: '전체' }));
+    }
+  }, [selectedDept]);
+
   const handleFilterChange = (newState: FilterState) => {
     setFilterState(newState);
     if (newState.category1 === '전체') {
       onSelectCategory(null);
     } else {
       onSelectCategory(newState.category1);
+    }
+    // 담당부서 칩 클릭 → 헤더 부서 드롭다운 양방향 연동
+    if (onSelectDept) {
+      if (newState.department === '전체') {
+        onSelectDept(null);
+      } else {
+        onSelectDept(newState.department);
+      }
     }
   };
 

@@ -110,7 +110,7 @@ export default function App() {
   // 시민 제안 목록 필터 상태 (Tab 6)
   const [publicSearchTerm, setPublicSearchTerm] = useState('');
   const [publicSortOrder, setPublicSortOrder] = useState<'latest' | 'oldest' | 'title'>('latest');
-  const [publicCategoryFilter, setPublicCategoryFilter] = useState<'전체' | '임신' | '출산' | '보육' | '다자녀'>('전체');
+  const [publicCategoryFilter, setPublicCategoryFilter] = useState<string>('전체');
 
   // 부서 필터링된 제안 목록 (여러 탭에서 공유)
   const deptFilteredProposals = useMemo(() => {
@@ -122,7 +122,7 @@ export default function App() {
       '영유아담당관': p => p.category === '보육·돌봄 인프라',
       '가족지원팀': p => p.category === '일·가정 양립·부모 노동',
       '주거정비과': p => p.category === '주거·교통·도시생활환경',
-      '가족건강팀': p => p.sub_category?.includes('건강') || p.sub_category?.includes('의료') || p.category === '취약·다양가족 사각지대',
+      '가족건강팀': p => p.category === '정보·상담·교육·거버넌스',
       '아동보호팀': p => p.category === '취약·다양가족 사각지대',
     };
     const filterFn = DEPT_CATEGORY_MAP[selectedDept];
@@ -198,12 +198,12 @@ export default function App() {
     setIsExportModalOpen(true);
   };
 
-  // 시민 제안 목록 필터링 (Tab 6)
+  // 시민 제안 목록 필터링 (Tab 6) — 헤더 부서필터(deptFilteredProposals) 연동 + 8대 대분류 full name 매칭
   const filteredPublicProposals = useMemo(() => {
-    return mockProposals
+    return deptFilteredProposals
       .filter(p => p.district === selectedPublicDistrict.name)
       .filter(p => {
-        const searchMatch = !publicSearchTerm || 
+        const searchMatch = !publicSearchTerm ||
           p.title.toLowerCase().includes(publicSearchTerm.toLowerCase()) ||
           p.content.toLowerCase().includes(publicSearchTerm.toLowerCase());
         const catMatch = publicCategoryFilter === '전체' || p.category === publicCategoryFilter;
@@ -214,7 +214,7 @@ export default function App() {
         if (publicSortOrder === 'oldest') return new Date(a.reg_date).getTime() - new Date(b.reg_date).getTime();
         return a.title.localeCompare(b.title);
       });
-  }, [selectedPublicDistrict.name, publicSearchTerm, publicSortOrder, publicCategoryFilter]);
+  }, [deptFilteredProposals, selectedPublicDistrict.name, publicSearchTerm, publicSortOrder, publicCategoryFilter]);
 
   const handleExportFilteredProposalsCSV = () => {
     const csvHeader = "제안ID,카테고리,등록일,제안명,제안내용\n";
@@ -429,16 +429,19 @@ export default function App() {
                 proposals={deptFilteredProposals}
                 selectedCategory={selectedCategory}
                 onSelectCategory={setSelectedCategory}
+                selectedDept={selectedDept}
+                onSelectDept={setSelectedDept}
               />
             )}
 
             {activeTab === 3 && (
-              <PriorityDetails 
+              <PriorityDetails
                 proposals={mockProposals}
                 initialCategory={selectedCategory || undefined}
                 initialSubCategory={selectedSubCategory || undefined}
                 initialClusterId={selectedClusterId || undefined}
                 selectedDept={selectedDept || undefined}
+                onSelectDept={setSelectedDept}
               />
             )}
 
@@ -623,14 +626,18 @@ export default function App() {
                           <div className="flex items-center gap-2 flex-wrap">
                             <select
                               value={publicCategoryFilter}
-                              onChange={(e) => setPublicCategoryFilter(e.target.value as any)}
+                              onChange={(e) => setPublicCategoryFilter(e.target.value)}
                               className="bg-white border border-slate-200 text-slate-600 rounded-lg px-2.5 py-1.5 text-xs focus:outline-none font-bold"
                             >
                               <option value="전체">카테고리 전체</option>
-                              <option value="임신">임신</option>
-                              <option value="출산">출산</option>
-                              <option value="보육">보육</option>
-                              <option value="다자녀">다자녀</option>
+                              <option value="임신·난임·생식건강">임신·난임</option>
+                              <option value="출산·산후 초기지원">출산·산후</option>
+                              <option value="보육·돌봄 인프라">보육·돌봄</option>
+                              <option value="다자녀·양육비·생활지원">다자녀·양육</option>
+                              <option value="주거·교통·도시생활환경">주거·교통</option>
+                              <option value="일·가정 양립·부모 노동">일·가정 양립</option>
+                              <option value="취약·다양가족 사각지대">취약가족</option>
+                              <option value="정보·상담·교육·거버넌스">정보·상담</option>
                             </select>
 
                             <select

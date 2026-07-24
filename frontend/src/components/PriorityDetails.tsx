@@ -42,6 +42,7 @@ interface Props {
   initialSubCategory?: string;
   initialClusterId?: number;
   selectedDept?: string;
+  onSelectDept?: (dept: string | null) => void;
 }
 
 interface ProposalGroup {
@@ -59,7 +60,8 @@ export const PriorityDetails: React.FC<Props> = ({
   initialCategory,
   initialSubCategory,
   initialClusterId,
-  selectedDept
+  selectedDept,
+  onSelectDept
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isMultiSelectMode, setIsMultiSelectMode] = useState<boolean>(false);
@@ -78,11 +80,28 @@ export const PriorityDetails: React.FC<Props> = ({
   );
 
   // 상단 부서 셀렉터(selectedDept) 변경 시 담당 부서 필터 자동 동기화
+  const deptSyncRef = React.useRef(false);
   React.useEffect(() => {
+    deptSyncRef.current = true;
     if (selectedDept) {
       setSelectedDepts([selectedDept]);
+    } else {
+      setSelectedDepts(['전체']);
     }
+    // 다음 틱에서 플래그 해제
+    const t = setTimeout(() => { deptSyncRef.current = false; }, 0);
+    return () => clearTimeout(t);
   }, [selectedDept]);
+
+  // 담당부서 칩 클릭 → 헤더 부서 드롭다운 양방향 연동
+  React.useEffect(() => {
+    if (deptSyncRef.current || !onSelectDept) return;
+    if (selectedDepts.length === 1 && selectedDepts[0] === '전체') {
+      onSelectDept(null);
+    } else if (selectedDepts.length === 1) {
+      onSelectDept(selectedDepts[0]);
+    }
+  }, [selectedDepts, onSelectDept]);
   const [onlyShowGaps, setOnlyShowGaps] = useState(false); // '정책 공백(미답변+고공감)'만 보기 토글
   const [onlyShow2026Gaps, setOnlyShow2026Gaps] = useState(false); // '2026 최신 정책 공백'만 보기 토글
   const [onlyShowHighVoteNoReply, setOnlyShowHighVoteNoReply] = useState(false); // '공감 500+/댓글 100+ 고공감 미답변' 스마트 모아보기 토글
