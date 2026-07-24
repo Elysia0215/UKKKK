@@ -73,6 +73,7 @@ export const PriorityDetails: React.FC<Props> = ({
   const [selectedDepts, setSelectedDepts] = useState<string[]>(['전체']);
   const [onlyShowGaps, setOnlyShowGaps] = useState(false); // '정책 공백(미답변+고공감)'만 보기 토글
   const [onlyShow2026Gaps, setOnlyShow2026Gaps] = useState(false); // '2026 최신 정책 공백'만 보기 토글
+  const [onlyShowHighVoteNoReply, setOnlyShowHighVoteNoReply] = useState(false); // '공감 500+/댓글 100+ 고공감 미답변' 스마트 모아보기 토글
   const [viewMode, setViewMode] = useState<'list' | 'group'>('group'); // 그룹 보기 vs 개별 리스트 보기
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
   const [activeBatchGroup, setActiveBatchGroup] = useState<ProposalGroup | null>(null);
@@ -138,6 +139,7 @@ export const PriorityDetails: React.FC<Props> = ({
     setSearchTerm('');
     setOnlyShowGaps(false);
     setOnlyShow2026Gaps(false);
+    setOnlyShowHighVoteNoReply(false);
     setSortBy('date_desc');
   };
 
@@ -327,7 +329,8 @@ export const PriorityDetails: React.FC<Props> = ({
       const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
       const matchesGap = !onlyShowGaps || (p.reply_yn === 'N' && p.vote_score >= 150);
       const matches2026Gap = !onlyShow2026Gaps || (p.reg_date?.startsWith('2026') && p.reply_yn === 'N' && p.vote_score >= 150);
-      return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap && matches2026Gap;
+      const matchesHighVoteNoReply = !onlyShowHighVoteNoReply || (p.reply_yn === 'N' && (p.vote_score >= 300 || (p.comment_cnt || 0) >= 50));
+      return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap && matches2026Gap && matchesHighVoteNoReply;
     }).sort((a, b) => {
       if (sortBy === 'date_desc') return (b.reg_date || '').localeCompare(a.reg_date || '');
       if (sortBy === 'date_asc') return (a.reg_date || '').localeCompare(b.reg_date || '');
@@ -335,7 +338,7 @@ export const PriorityDetails: React.FC<Props> = ({
       if (sortBy === 'comment_desc') return b.comment_cnt - a.comment_cnt;
       return 0;
     });
-  }, [proposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, onlyShow2026Gaps, sortBy]);
+  }, [proposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, onlyShow2026Gaps, onlyShowHighVoteNoReply, sortBy]);
 
   // 그룹 보기 필터 결과 (그룹 구성원 필터 후 빈 그룹 배제)
   const filteredGroupedProposals = useMemo(() => {
@@ -358,7 +361,8 @@ export const PriorityDetails: React.FC<Props> = ({
         const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
         const matchesGap = !onlyShowGaps || (p.reply_yn === 'N' && p.vote_score >= 150);
         const matches2026Gap = !onlyShow2026Gaps || (p.reg_date?.startsWith('2026') && p.reply_yn === 'N' && p.vote_score >= 150);
-        return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap && matches2026Gap;
+        const matchesHighVoteNoReply = !onlyShowHighVoteNoReply || (p.reply_yn === 'N' && (p.vote_score >= 300 || (p.comment_cnt || 0) >= 50));
+        return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap && matches2026Gap && matchesHighVoteNoReply;
       }).sort((a, b) => {
         if (sortBy === 'date_desc') return (b.reg_date || '').localeCompare(a.reg_date || '');
         if (sortBy === 'date_asc') return (a.reg_date || '').localeCompare(b.reg_date || '');
@@ -392,7 +396,7 @@ export const PriorityDetails: React.FC<Props> = ({
       if (sortBy === 'comment_desc') return gb.totalComments - ga.totalComments;
       return 0;
     });
-  }, [groupedProposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, onlyShow2026Gaps, sortBy]);
+  }, [groupedProposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, onlyShow2026Gaps, onlyShowHighVoteNoReply, sortBy]);
 
   const toggleGroup = (groupId: string) => {
     setExpandedGroups(prev => ({

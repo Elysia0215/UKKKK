@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ResponsiveContainer, ScatterChart, Scatter, XAxis, YAxis, ZAxis, Tooltip, Cell } from 'recharts';
 import { PolicyProposal } from '../types';
-import { Layers, AlertTriangle, Sparkles, TrendingUp, HelpCircle, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
+import { Layers, AlertTriangle, Sparkles, TrendingUp, HelpCircle, ChevronDown, ChevronUp, ExternalLink, Info } from 'lucide-react';
 
 interface Props {
   proposals: PolicyProposal[];
