@@ -16,7 +16,7 @@
      * 사용자가 정제한 348건의 순수 제안 데이터와 초기 426건의 제안 데이터를 논리적으로 병합하여 총 774건의 고차원 데이터셋 확보.
      * 데이터 크기 최적화 작업을 수행하여 `mockData.ts`의 크기를 15MB 내외로 압축하여 Vite 개발 서버의 로딩 속도를 5배 이상 개선.
   3. **행정 매핑 데이터 보강**:
-     * 각 제안에 대해 주관부서(18개 부서) 랭킹 부여, 담당 부서 전화번호 자동 연계, 그리고 서울시 323개 기존 수혜 정책(몽땅정보통)과의 유사도 매핑 데이터 연동.
+     * 각 제안에 대해 주관부서(18개 부서) 랭킹 부여, 담당 부서 전화번호 자동 연계, 그리고 서울시 322개 기존 수혜 정책(몽땅정보통)과의 유사도 매핑 데이터 연동.
 
 ### 2일차: 규칙 기반 고도화, 전수 웹 스크래핑 및 디렉터리 구조 정제
 * **대화주제**: 정밀 필터링 룰 고도화, 본문 노이즈 제거를 위한 전수 재크롤링 및 프로젝트 구조 체계화
@@ -111,6 +111,44 @@
   5. **[HOTFIX] 진단 상태 배지 텍스트 줄바꿈 방지 (`GapMatrixDashboard.tsx`)**:
      * 일부 브라우저 및 뷰포트 배율에서 `제도 개선` 등의 4대 상태 배지 단어가 `제도개`와 `선`으로 줄바꿈되어 출력되던 문제를 해결하기 위해, 상태 열 `<td>` 및 배지 `<span>` 컴포넌트에 `whitespace-nowrap` 클래스를 부여하여 어떠한 해상도에서도 깔끔하게 한 줄로 출력되도록 처리하였습니다.
 
+### 7일차: 텍스트마이닝 유틸리티 구축, 부서 필터 연동 강화 및 키워드 CSV 내보내기
+* **대화주제**: 텍스트마이닝 공유 모듈 신설, 부서 필터 전역 동기화, TF-IDF 키워드 CSV 다운로드 및 UI 세부 튜닝
+* **주요 개발 내용**:
+  1. **텍스트마이닝 공유 유틸리티 모듈 (`textMining.ts`) 신설**:
+     * `/frontend/src/utils/textMining.ts`에 프로젝트 전반에서 재사용 가능한 한국어 텍스트 분석 유틸리티를 통합 구축.
+     * `normalizeKoreanWord`: 조사 제거 및 동의어 통합(`SYNONYM_MERGES`) 기능을 수행하여 키워드 정규화의 일관성을 보장.
+     * `STOP_WORDS`: 분석 노이즈를 줄이기 위한 불용어 사전 정의.
+     * `AMBIGUOUS_DISTRICT_KEYWORDS`: 수유, 방학, 방이, 보문, 가산, 신월 등 동음이의어 지명에 대한 안전장치를 마련하여 자치구 추정 시 오분류를 방지.
+     * `inferDistrict`: 제안 제목 및 본문 텍스트에서 자치구를 자동 추정하는 함수를 구현하여 결측치 복원 시뮬레이터 및 CategoryDemand의 `extractRichTopKeywords`에서 활용 가능하도록 설계.
+  2. **키워드 CSV 내보내기 기능 (`CategoryDemand.tsx`)**:
+     * TF-IDF 기반 키워드 추출 결과를 부서/카테고리별 9개 컬럼 구조의 CSV 파일로 다운로드할 수 있는 내보내기 기능 구현.
+     * BOM(Byte Order Mark) 포함 UTF-8 인코딩을 적용하여 한글 환경의 엑셀에서도 깨짐 없이 열람 가능하도록 처리.
+  3. **부서 필터 연동 강화 및 전역 동기화**:
+     * 상단 헤더의 부서 필터(영유아담당관 등) 선택 시 `ClusterVolumeMap` 군집 데이터가 자동으로 필터링되도록 연동 완료.
+     * `GapMatrixDashboard` 내부의 담당부서 필터와 상단 `selectedDept` 상태를 `useEffect` 훅으로 동기화하여 부서 선택의 일관성 확보.
+     * `App.tsx`에 `deptFilteredProposals` 공유 `useMemo`를 추가하여 부서별 필터링 로직의 중복 연산을 제거하고 성능을 최적화.
+  4. **신뢰도 슬라이더 호버 툴팁 (`GapMatrixDashboard`)**:
+     * 신뢰도 지표 옆에 `(i)` 정보 아이콘을 배치하고, 호버 시 신뢰도 산정 기준 설명 및 수식을 표시하는 인터랙티브 툴팁 구현.
+  5. **BatchReplyModal AI 공문 초안 생성 기능**:
+     * 미답변 상태의 시민 제안에 대해 서울시 공식 행정 톤앤매너를 참고한 AI 답변 초안을 자동 생성하는 기능을 `BatchReplyModal`에 탑재.
+  6. **주관부서 컬럼 너비 확장**:
+     * 테이블 내 주관부서 컬럼에 `min-w-[140px]`을 적용하고, 테이블 전체에 `min-w-[900px]`을 설정하여 부서명이 잘리지 않도록 가독성 개선.
+
+### 8일차: 결측치 복원 시뮬레이터 (Tab 8) 구현 — 텍스트마이닝 기반 자치구 데이터 복원
+* **대화주제**: '구 미상' 데이터의 텍스트마이닝 기반 자치구 자동 추정 시뮬레이터 개발 및 Human-in-the-loop 워크플로우 설계
+* **주요 개발 내용**:
+  1. **결측치 복원 시뮬레이터 (`MissingDataSimulator.tsx` — Tab 8) 신설**:
+     * '구 미상'으로 분류된 804건의 제안 데이터 중 765건에 대해 텍스트마이닝 기반 자치구 복원 시뮬레이션을 수행하는 전용 탭 컴포넌트 개발.
+     * 제안 제목과 본문에서 키워드 및 지명 매칭 알고리즘을 적용하여 자치구를 자동 추정하는 텍스트마이닝 기반 자동 자치구 추정 엔진 탑재.
+     * 일괄 배치 모드를 지원하여 대량의 결측 데이터를 한 번에 처리하고, '서울시 전체 공통'에 해당하는 복원 불가 건은 자동 분류하여 별도 관리.
+  2. **원문 펼치기 토글 UI**:
+     * 각 결측 데이터 항목에 대해 원문 텍스트를 펼치기/접기 토글로 확인할 수 있는 UI를 구현하여, 사용자가 AI 추정 결과의 근거를 직접 대조 검증 가능.
+  3. **체크박스 선택 기반 Human-in-the-loop 워크플로우**:
+     * 사용자가 체크박스로 개별 복원 결과를 선택한 뒤 데이터베이스에 반영할 수 있는 Human-in-the-loop 승인 워크플로우를 설계.
+     * 공무원 사용자가 AI 추정을 맹목적으로 수용하지 않고 건별 검토 후 반영할 수 있는 안전장치를 내장.
+  4. **목업 데이터 시뮬레이션 안내 문구**:
+     * "목업 데이터 시뮬레이션으로 새로고침 시 원상복귀" 안내 문구를 명시하여 사용자에게 시뮬레이션 환경임을 투명하게 고지.
+
 ---
 
 ## 🛠️ 핵심 구현 아키텍처 및 데이터 흐름
@@ -120,11 +158,15 @@ flowchart TD
     A[서울시 제안 idea.seoul.go.kr] -->|Fast Recrawler| B[824건 Pure 시민제안 DB]
     C[국민신문고 epeople.go.kr] -->|JSON to CSV| D[582건 민원 고충 DB]
     E[네이버 뉴스 API + CSV] -->|Rules Classifier| F[1,145건 분류 태깅 뉴스 DB]
-    G[서울시 출산 혜택 몽땅정보통] -->|Similarity Match| H[323건 정책 공급 DB]
+    G[서울시 출산 혜택 몽땅정보통] -->|Similarity Match| H[322건 정책 공급 DB]
     
-    B & D & F & H -->|Vite Dev Server| I[React 프론트엔드 대시보드]
+    B & D & F & H -->|Vite Dev Server| I[React 프론트엔드 대시보드 - 9 Tabs]
     I -->|Tab 7| J[의사결정 갭 분석 매트릭스]
     I -->|Tab 6| K[2025 통계청 잠정 속보 시각화]
+    I -->|Tab 8| L[결측치 복원 시뮬레이터]
+    
+    M[textMining.ts] -->|키워드·지명 매칭| L
+    M -->|normalizeKoreanWord| N[CategoryDemand TF-IDF]
 ```
 
 ### 📁 핵심 아키텍처 파일 맵
@@ -132,6 +174,10 @@ flowchart TD
 * **프론트엔드 컴포넌트**:
   * [GapMatrixDashboard.tsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/GapMatrixDashboard.tsx): 종합 의사결정 분석표 및 4-Tab 상세 카드 패널.
   * [App.tsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/App.tsx): 대시보드 네비게이션 및 2025 인구동향 하이라이트 배너 제어.
+  * [MissingDataSimulator.tsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/MissingDataSimulator.tsx): Tab 8 결측치 복원 시뮬레이터 — 텍스트마이닝 기반 자치구 추정 및 Human-in-the-loop 승인 워크플로우.
+* **프론트엔드 유틸리티**:
+  * [textMining.ts](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/utils/textMining.ts): 한국어 텍스트 정규화, 불용어 사전, 동음이의어 안전장치, 자치구 추정 공유 유틸리티.
+  * [exportCsv.ts](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/utils/exportCsv.ts): BOM 포함 UTF-8 인코딩 CSV 내보내기 유틸리티.
 * **정제 데이터**:
   * [news_all.json](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/data/news_all.json): 8대 대분류, 이슈강도, 활용유형 태그가 부여된 1,145건 통합 뉴스 JSON.
   * [civil_requests_all.csv](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/data/final/civil_requests_all.csv): 수동 정밀 태깅용 국민신문고 582건 CSV.
@@ -140,6 +186,34 @@ flowchart TD
   * [classify_naver_news_taxonomy.py](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/scripts/테스트용/classify_naver_news_taxonomy.py): 뉴스 기사 룰 기반 대·중·소분류 및 메타 태깅 엔진.
   * [convert_news_to_json.py](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/scripts/convert_news_to_json.py): CSV 데이터를 프론트엔드 연동용 JSON 포맷으로 빌드.
   * [fetch_naver_news_live.py](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/scripts/fetch_naver_news_live.py): 네이버 뉴스 API 융합 연동 엔진.
+
+### 9일차: 우수제안 뱃지, 공문 템플릿, 담당자 피드백 시스템, 동음이의어 고도화 및 UX 전면 개선
+* **대화주제**: 공감 150+ 우수제안 시각화, 공문 형식 템플릿 선택, Human-in-the-loop 데이터 품질 피드백, 동음이의어 사전 확장, 사이드바 UX 개선 및 페이지별 기능 강화
+* **주요 개발 내용**:
+  1. **우수제안 뱃지 (`PriorityDetails.tsx`)**:
+     * 공감 150건 이상 제안에 ⭐ 우수제안 뱃지를 표시하는 기능 구현. 개별 리스트뷰와 그룹 확장뷰 양쪽에 일관 적용하여 높은 시민 공감도를 가진 제안을 시각적으로 즉시 식별 가능.
+  2. **공문 형식 템플릿 선택 (`GapMatrixDashboard.tsx`)**:
+     * 승인 패널의 공식 답변 textarea 상단에 4종 공문 템플릿 버튼(정책 보완 안내형, 신규 사업 검토형, 기존 정책 연결형, 조례 개정 검토형) 추가.
+     * 클릭 시 selectedIssue의 cluster/dept/phone 정보를 동적 바인딩하여 즉시 활용 가능한 공문 초안 자동 생성.
+  3. **담당자 피드백 시스템 (`MissingDataSimulator.tsx`)**:
+     * 복원 결과 카드에 🚩 피드백 버튼을 추가하고, 클릭 시 오류유형 3종 선택 및 맥락 메모를 입력할 수 있는 피드백 모달 구현.
+     * 피드백 데이터를 localStorage에 로그로 저장하고, 품질관리 탭 하단에 피드백 로그 섹션을 렌더링하여 Human-in-the-loop 데이터 품질 개선 파이프라인 구축.
+  4. **"구의" 동음이의어 처리 (`textMining.ts`)**:
+     * "구의"를 `AMBIGUOUS_DISTRICT_KEYWORDS`에 추가하여 "각 구의 보건소" 등 조사 용법에서의 오매칭 방지.
+     * `applyFeedbackKeywords()` 함수를 신규 추가하여, API 연동 시 담당자 피드백 로그에서 동음이의어 사전을 자동 업데이트할 수 있는 확장 구조 마련.
+  5. **사이드바 탭 이름 개선 및 호버 툴팁 (`App.tsx`)**:
+     * 8개 탭 이름을 관리자 페이지 맞춤으로 변경하고, 각 탭에 5항목 정보 호버 툴팁을 추가하여 탭 전환 시 해당 페이지의 핵심 기능을 사전 파악 가능.
+  6. **ClusterVolumeMap 페이지 강화**:
+     * KPI 요약 카드 4종을 추가하여 핵심 지표를 한눈에 조회 가능하도록 구성.
+     * X축 도메인 보정 및 카테고리별 수평 바차트를 추가하여 군집 데이터의 다각적 시각화 강화.
+  7. **신뢰도 툴팁에 논문 근거 추가 (`GapMatrixDashboard.tsx`)**:
+     * MCDA 가중 복합지표 및 데이터 삼각검증(Denzin 2012) 학술 참조를 신뢰도 툴팁에 명시하여 지표 산출의 학술적 타당성 투명 공개.
+  8. **OfficeAssistant PAGE_GUIDE 전면 업데이트**:
+     * 8개 탭 전체 가이드 내용을 최신 기능 기준으로 재작성하여 오피스 길잡이(새싹이)의 안내 정합성 확보.
+  9. **각 페이지 섹션 구분선 추가**:
+     * MissingDataSimulator, CategoryDemand, PriorityDetails, DistrictComparison에 `<hr>` 디바이더를 삽입하여 섹션 간 시각적 경계를 명확히 구분.
+  10. **다중선택 버튼 힌트 (`PriorityDetails.tsx`)**:
+      * OFF 상태에서 `animate-pulse` 애니메이션 및 호버 툴팁을 적용하여 다중선택 기능의 존재를 사용자에게 능동적으로 알리는 어포던스 강화.
 
 ---
 
@@ -151,3 +225,7 @@ flowchart TD
    * 2025년 서울시의 실제 출생아 수가 **9.4% 대반등**한 공식 통계 속보치를 대시보드 전면에 노출함으로써, 시스템 사용자가 정책 효과를 시각적으로 실감할 수 있는 강력한 스토리라인을 제공합니다.
 3. **학습 및 재생산 가능한 정제 파일 구조**:
    * 개발된 모든 파이프라인의 결과물이 JSON뿐만 아니라 표준 CSV 파일로도 추출되어 있어, 현업 실무자나 팀원들이 언제든 엑셀 등으로 데이터를 추가 보완하고 동기화할 수 있는 생태계를 제공합니다.
+4. **텍스트마이닝 기반 결측치 복원으로 데이터 품질 향상**:
+   * '구 미상' 804건 중 765건에 대해 텍스트마이닝 기반 자치구 자동 추정 시뮬레이션을 수행하여, 결측 데이터의 지역 정보를 대폭 복원하고 지역별 수요 분석의 정밀도를 획기적으로 개선하였습니다.
+5. **부서별 필터 연동으로 역할 기반 대시보드 경험 제공**:
+   * 상단 헤더의 부서 필터 선택이 군집 지도, 갭 매트릭스 등 전체 탭에 실시간으로 전파되어, 각 담당 부서 공무원이 자신의 소관 영역에 집중하여 의사결정할 수 있는 역할 기반 대시보드 경험을 제공합니다.

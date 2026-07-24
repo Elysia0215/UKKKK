@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useMemo, useCallback, useEffect } from 'react';
 import {
   Database,
   Sparkles,
@@ -19,7 +19,10 @@ import {
   ExternalLink,
   CheckSquare,
   Square,
-  Save
+  Save,
+  FileText,
+  Trash2,
+  Clock
 } from 'lucide-react';
 import { PolicyProposal } from '../types';
 import { DISTRICT_KEYWORDS, AMBIGUOUS_DISTRICT_KEYWORDS, inferDistrict } from '../utils/textMining';
@@ -111,6 +114,334 @@ const localImpute = (text: string): { district: string; category: string; confid
   };
 };
 
+// ═══════════════ 통합 로그 뷰어 컴포넌트 ═══════════════
+type LogEntry = {
+  id: string;
+  type: 'policy_mismatch' | 'district_feedback' | 'data_apply' | 'approval';
+  timestamp: string;
+  proposalId?: string;
+  proposalTitle?: string;
+  // policy mismatch
+  matchedPolicy?: string;
+  // district feedback
+  feedbackType?: string;
+  memo?: string;
+  originalDistrict?: string;
+  // data apply
+  appliedCount?: number;
+  districts?: string[];
+  // approval
+  cluster?: string;
+  actionType?: string;
+  aiOriginal?: string;
+  finalAction?: string;
+  wasModified?: boolean;
+};
+
+const LOG_TYPE_CONFIG: Record<string, { label: string; color: string; bg: string; border: string; icon: string }> = {
+  policy_mismatch: { label: '정책 오매칭 신고', color: 'text-rose-700', bg: 'bg-rose-50', border: 'border-rose-200', icon: '🚩' },
+  district_feedback: { label: '복원 피드백', color: 'text-amber-700', bg: 'bg-amber-50', border: 'border-amber-200', icon: '📝' },
+  data_apply: { label: '데이터 반영', color: 'text-emerald-700', bg: 'bg-emerald-50', border: 'border-emerald-200', icon: '✅' },
+  approval: { label: '검토·승인', color: 'text-blue-700', bg: 'bg-blue-50', border: 'border-blue-200', icon: '📋' },
+};
+
+const UnifiedLogViewer: React.FC = () => {
+  const [activeLogTab, setActiveLogTab] = useState<'all' | 'policy_mismatch' | 'district_feedback' | 'data_apply' | 'approval'>('all');
+  const [logs, setLogs] = useState<LogEntry[]>([]);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // localStorage에서 모든 로그 수집
+  const loadLogs = useCallback(() => {
+    const allLogs: LogEntry[] = [];
+
+    // 1. 정책 오매칭 신고 로그
+    try {
+      const policyLogs = JSON.parse(localStorage.getItem('policy_mismatch_log') || '[]');
+      policyLogs.forEach((l: { id?: string; proposalId?: string; proposalTitle?: string; matchedPolicy?: string; timestamp?: string }) => {
+        allLogs.push({
+          id: l.id || `PML-${Math.random().toString(36).slice(2, 8)}`,
+          type: 'policy_mismatch',
+          timestamp: l.timestamp || new Date().toISOString(),
+          proposalId: l.proposalId,
+          proposalTitle: l.proposalTitle,
+          matchedPolicy: l.matchedPolicy,
+        });
+      });
+    } catch { /* empty */ }
+
+    // 2. 결측치 복원 피드백 로그
+    try {
+      const districtLogs = JSON.parse(localStorage.getItem('district_feedback_log') || '[]');
+      districtLogs.forEach((l: { id?: string; proposalId?: string; title?: string; type?: string; memo?: string; originalDistrict?: string; timestamp?: string }) => {
+        allLogs.push({
+          id: l.id || `DFL-${Math.random().toString(36).slice(2, 8)}`,
+          type: 'district_feedback',
+          timestamp: l.timestamp || new Date().toISOString(),
+          proposalId: l.proposalId,
+          proposalTitle: l.title,
+          feedbackType: l.type,
+          memo: l.memo,
+          originalDistrict: l.originalDistrict,
+        });
+      });
+    } catch { /* empty */ }
+
+    // 3. 데이터 반영 이력 로그
+    try {
+      const applyLogs = JSON.parse(localStorage.getItem('data_apply_log') || '[]');
+      applyLogs.forEach((l: { id?: string; appliedCount?: number; districts?: string[]; timestamp?: string }) => {
+        allLogs.push({
+          id: l.id || `DAL-${Math.random().toString(36).slice(2, 8)}`,
+          type: 'data_apply',
+          timestamp: l.timestamp || new Date().toISOString(),
+          appliedCount: l.appliedCount,
+          districts: l.districts,
+        });
+      });
+    } catch { /* empty */ }
+
+    // 4. 갭 진단 검토·승인 로그
+    try {
+      const approvalLogs = JSON.parse(localStorage.getItem('approval_log') || '[]');
+      approvalLogs.forEach((l: { id?: string; cluster?: string; actionType?: string; aiOriginal?: string; finalAction?: string; wasModified?: boolean; timestamp?: string }) => {
+        allLogs.push({
+          id: l.id || `APR-${Math.random().toString(36).slice(2, 8)}`,
+          type: 'approval',
+          timestamp: l.timestamp || new Date().toISOString(),
+          cluster: l.cluster,
+          actionType: l.actionType,
+          aiOriginal: l.aiOriginal,
+          finalAction: l.finalAction,
+          wasModified: l.wasModified,
+        });
+      });
+    } catch { /* empty */ }
+
+    // 시간순 정렬 (최신 먼저)
+    allLogs.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+    setLogs(allLogs);
+  }, []);
+
+  useEffect(() => { loadLogs(); }, [loadLogs]);
+
+  const filteredLogs = activeLogTab === 'all' ? logs : logs.filter(l => l.type === activeLogTab);
+
+  // 개별 로그 철회 (해당 건만 삭제)
+  const handleRevokeLog = (log: LogEntry) => {
+    if (log.type === 'policy_mismatch') {
+      try {
+        const existing = JSON.parse(localStorage.getItem('policy_mismatch_log') || '[]');
+        const filtered = existing.filter((l: { id?: string }) => l.id !== log.id);
+        localStorage.setItem('policy_mismatch_log', JSON.stringify(filtered));
+      } catch { /* empty */ }
+    } else if (log.type === 'district_feedback') {
+      try {
+        const existing = JSON.parse(localStorage.getItem('district_feedback_log') || '[]');
+        const filtered = existing.filter((l: { id?: string }) => l.id !== log.id);
+        localStorage.setItem('district_feedback_log', JSON.stringify(filtered));
+      } catch { /* empty */ }
+    } else if (log.type === 'data_apply') {
+      try {
+        const existing = JSON.parse(localStorage.getItem('data_apply_log') || '[]');
+        const filtered = existing.filter((l: { id?: string }) => l.id !== log.id);
+        localStorage.setItem('data_apply_log', JSON.stringify(filtered));
+      } catch { /* empty */ }
+    } else if (log.type === 'approval') {
+      try {
+        const existing = JSON.parse(localStorage.getItem('approval_log') || '[]');
+        const filtered = existing.filter((l: { id?: string }) => l.id !== log.id);
+        localStorage.setItem('approval_log', JSON.stringify(filtered));
+      } catch { /* empty */ }
+    }
+    loadLogs();
+  };
+
+  const handleClearLogs = (type: string) => {
+    if (type === 'all') {
+      localStorage.removeItem('policy_mismatch_log');
+      localStorage.removeItem('district_feedback_log');
+      localStorage.removeItem('data_apply_log');
+      localStorage.removeItem('approval_log');
+    } else if (type === 'policy_mismatch') {
+      localStorage.removeItem('policy_mismatch_log');
+    } else if (type === 'district_feedback') {
+      localStorage.removeItem('district_feedback_log');
+    } else if (type === 'data_apply') {
+      localStorage.removeItem('data_apply_log');
+    } else if (type === 'approval') {
+      localStorage.removeItem('approval_log');
+    }
+    loadLogs();
+  };
+
+  const tabCounts = {
+    all: logs.length,
+    policy_mismatch: logs.filter(l => l.type === 'policy_mismatch').length,
+    district_feedback: logs.filter(l => l.type === 'district_feedback').length,
+    data_apply: logs.filter(l => l.type === 'data_apply').length,
+    approval: logs.filter(l => l.type === 'approval').length,
+  };
+
+  const formatTime = (ts: string) => {
+    try {
+      const d = new Date(ts);
+      return `${d.getMonth() + 1}/${d.getDate()} ${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}`;
+    } catch { return ts; }
+  };
+
+  return (
+    <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+      {/* 탭 헤더 */}
+      <div className="flex items-center gap-1 p-2 bg-slate-50 border-b border-slate-100 overflow-x-auto">
+        {([
+          { key: 'all' as const, label: '전체', icon: '📋' },
+          { key: 'policy_mismatch' as const, label: '정책 오매칭', icon: '🚩' },
+          { key: 'district_feedback' as const, label: '복원 피드백', icon: '📝' },
+          { key: 'data_apply' as const, label: '데이터 반영', icon: '✅' },
+          { key: 'approval' as const, label: '승인 이력', icon: '🔏' },
+        ]).map(tab => (
+          <button
+            key={tab.key}
+            onClick={() => setActiveLogTab(tab.key)}
+            className={`flex items-center gap-1 px-3 py-1.5 text-[11px] font-bold rounded-lg transition cursor-pointer whitespace-nowrap ${
+              activeLogTab === tab.key
+                ? 'bg-indigo-100 text-indigo-800 border border-indigo-200'
+                : 'text-slate-500 hover:bg-slate-100 border border-transparent'
+            }`}
+          >
+            <span>{tab.icon}</span>
+            {tab.label}
+            <span className={`ml-1 px-1.5 py-0.5 rounded-full text-[9px] font-black ${
+              activeLogTab === tab.key ? 'bg-indigo-200 text-indigo-900' : 'bg-slate-200 text-slate-600'
+            }`}>
+              {tabCounts[tab.key]}
+            </span>
+          </button>
+        ))}
+        <div className="flex-1" />
+        {filteredLogs.length > 0 && (
+          <button
+            onClick={() => handleClearLogs(activeLogTab)}
+            className="flex items-center gap-1 px-2 py-1 text-[10px] font-bold text-slate-400 hover:text-rose-500 hover:bg-rose-50 rounded transition cursor-pointer"
+            title="현재 탭 로그 초기화"
+          >
+            <Trash2 className="w-3 h-3" />
+            초기화
+          </button>
+        )}
+      </div>
+
+      {/* 로그 리스트 */}
+      <div className="max-h-[400px] overflow-y-auto">
+        {filteredLogs.length === 0 ? (
+          <div className="p-8 text-center">
+            <div className="text-2xl mb-2">📭</div>
+            <div className="text-xs text-slate-400 font-bold">아직 기록된 로그가 없습니다</div>
+            <div className="text-[10px] text-slate-300 mt-1">
+              대시보드에서 피드백·신고·승인을 수행하면 여기에 자동 기록됩니다
+            </div>
+          </div>
+        ) : (
+          <>
+            {(isExpanded ? filteredLogs : filteredLogs.slice(0, 10)).map(log => {
+              const config = LOG_TYPE_CONFIG[log.type];
+              return (
+                <div key={log.id} className="flex items-start gap-3 px-4 py-3 border-b border-slate-50 hover:bg-slate-50/50 transition text-xs">
+                  {/* 타입 뱃지 */}
+                  <span className={`shrink-0 px-2 py-0.5 rounded-full text-[9px] font-black ${config.bg} ${config.color} border ${config.border}`}>
+                    {config.icon} {config.label}
+                  </span>
+                  {/* 내용 */}
+                  <div className="flex-1 min-w-0">
+                    {log.type === 'policy_mismatch' && (
+                      <>
+                        <div className="font-bold text-slate-800 truncate">{log.proposalTitle || log.proposalId}</div>
+                        <div className="text-[10px] text-slate-400 mt-0.5">
+                          오매칭 정책: <span className="line-through text-rose-400">{log.matchedPolicy}</span>
+                        </div>
+                      </>
+                    )}
+                    {log.type === 'district_feedback' && (
+                      <>
+                        <div className="font-bold text-slate-800 truncate">{log.proposalTitle || log.proposalId}</div>
+                        <div className="text-[10px] text-slate-400 mt-0.5">
+                          유형: <span className="font-bold text-amber-600">{log.feedbackType}</span>
+                          {log.originalDistrict && <> · 복원구: {log.originalDistrict}</>}
+                          {log.memo && <> · 메모: "{log.memo}"</>}
+                        </div>
+                      </>
+                    )}
+                    {log.type === 'data_apply' && (
+                      <>
+                        <div className="font-bold text-slate-800">복원 데이터 {log.appliedCount}건 반영</div>
+                        {log.districts && log.districts.length > 0 && (
+                          <div className="text-[10px] text-slate-400 mt-0.5">
+                            반영 자치구: {log.districts.slice(0, 5).join(', ')}{log.districts.length > 5 ? ` 외 ${log.districts.length - 5}개` : ''}
+                          </div>
+                        )}
+                      </>
+                    )}
+                    {log.type === 'approval' && (
+                      <>
+                        <div className="font-bold text-slate-800">
+                          {log.wasModified ? '🔧 수정 후 승인' : '✅ 답변 승인'} — {log.cluster || log.issueId || '이슈'}
+                        </div>
+                        <div className="text-[10px] text-slate-400 mt-0.5">
+                          {log.actionType && <span>조치: {log.actionType}</span>}
+                          {log.wasModified && log.aiOriginal && (
+                            <span className="ml-2 text-amber-600">AI 원본 → 수정됨</span>
+                          )}
+                          {log.reviewerId && <span className="ml-2">검토자: {log.reviewerId}</span>}
+                        </div>
+                        {log.wasModified && log.editedAnswer && (
+                          <div className="text-[10px] text-blue-500 mt-0.5 truncate max-w-xs">
+                            수정 내용: "{log.editedAnswer.slice(0, 60)}{log.editedAnswer.length > 60 ? '…' : ''}"
+                          </div>
+                        )}
+                      </>
+                    )}
+                  </div>
+                  {/* 시간 + 철회 */}
+                  <div className="shrink-0 flex items-center gap-2">
+                    <span className="flex items-center gap-1 text-[10px] text-slate-300">
+                      <Clock className="w-3 h-3" />
+                      {formatTime(log.timestamp)}
+                    </span>
+                    <button
+                      onClick={() => handleRevokeLog(log)}
+                      className="text-[9px] px-1.5 py-0.5 rounded font-bold text-slate-400 hover:text-rose-600 hover:bg-rose-50 border border-transparent hover:border-rose-200 transition cursor-pointer"
+                      title="이 신고/피드백을 철회합니다 (원래 상태로 복원)"
+                    >
+                      철회
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+            {filteredLogs.length > 10 && (
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="w-full py-2.5 text-[11px] font-bold text-indigo-500 hover:bg-indigo-50 transition cursor-pointer flex items-center justify-center gap-1"
+              >
+                {isExpanded ? (
+                  <><ChevronUp className="w-3.5 h-3.5" /> 접기</>
+                ) : (
+                  <><ChevronDown className="w-3.5 h-3.5" /> 나머지 {filteredLogs.length - 10}건 더보기</>
+                )}
+              </button>
+            )}
+          </>
+        )}
+      </div>
+
+      {/* 하단 안내 */}
+      <div className="px-4 py-2.5 bg-slate-50 border-t border-slate-100 text-[10px] text-slate-400 leading-relaxed">
+        💡 모든 로그는 localStorage 기반으로 영구 저장됩니다. 정책 갭 진단 탭에서의 승인·수정 이력도 <b>승인 이력</b> 탭에서 통합 조회 가능합니다.
+      </div>
+    </div>
+  );
+};
+
 export const MissingDataSimulator: React.FC<Props> = ({ proposals, onApply }) => {
   const [batchResults, setBatchResults] = useState<BatchResult[]>([]);
   const [isBatchRunning, setIsBatchRunning] = useState(false);
@@ -130,6 +461,49 @@ export const MissingDataSimulator: React.FC<Props> = ({ proposals, onApply }) =>
   const [sampleText, setSampleText] = useState('');
   const [singleResult, setSingleResult] = useState<ReturnType<typeof localImpute> | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
+
+  // 담당자 피드백 시스템
+  const [feedbackTarget, setFeedbackTarget] = useState<BatchResult | null>(null);
+  const [feedbackType, setFeedbackType] = useState<string>('district_wrong');
+  const [feedbackMemo, setFeedbackMemo] = useState('');
+  const [feedbackLogs, setFeedbackLogs] = useState<Array<{
+    id: string; proposalId: string; title: string; type: string; memo: string;
+    originalDistrict: string; timestamp: string;
+  }>>(() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem('district_feedback_log') || '[]');
+      if (saved.length > 0) return saved;
+      // 목업: "구의" 오매칭 예시 피드백 1건 (데모용)
+      return [{
+        id: 'FB-DEMO-001',
+        proposalId: 'PROP-DEMO',
+        title: '보건소 난임당담파트를 따로 해주세요',
+        type: 'district_wrong',
+        memo: '"각 구의 보건소"에서 "구의"가 광진구(구의동)로 오매칭됨. 실제로는 "각 구(區)의"라는 조사 용법.',
+        originalDistrict: '광진구',
+        timestamp: '2026-07-24T09:30:00.000Z',
+      }];
+    }
+    catch { return []; }
+  });
+
+  const handleFeedbackSubmit = () => {
+    if (!feedbackTarget) return;
+    const newLog = {
+      id: `FB-${Date.now()}`,
+      proposalId: feedbackTarget.proposal.id,
+      title: feedbackTarget.proposal.title,
+      type: feedbackType,
+      memo: feedbackMemo,
+      originalDistrict: feedbackTarget.district,
+      timestamp: new Date().toISOString(),
+    };
+    const updated = [...feedbackLogs, newLog];
+    setFeedbackLogs(updated);
+    localStorage.setItem('district_feedback_log', JSON.stringify(updated));
+    setFeedbackTarget(null);
+    setFeedbackMemo('');
+  };
 
   // 구 미상 제안 목록
   const missingProposals = useMemo(() =>
@@ -232,6 +606,20 @@ export const MissingDataSimulator: React.FC<Props> = ({ proposals, onApply }) =>
     if (onApply) {
       onApply(updates);
     }
+
+    // 데이터 반영 이력 로그 저장
+    try {
+      const applyLogs = JSON.parse(localStorage.getItem('data_apply_log') || '[]');
+      const districts = [...new Set(updates.map(u => u.district))];
+      applyLogs.push({
+        id: `DAL-${Date.now()}`,
+        appliedCount: updates.length,
+        districts,
+        timestamp: new Date().toISOString(),
+      });
+      localStorage.setItem('data_apply_log', JSON.stringify(applyLogs));
+    } catch { /* empty */ }
+
     setIsApplied(true);
   }, [selectedIds, batchResults, onApply]);
 
@@ -307,6 +695,8 @@ export const MissingDataSimulator: React.FC<Props> = ({ proposals, onApply }) =>
         </div>
       </div>
 
+      <hr className="border-slate-200/60" />
+
       {/* 일괄 배치 실행 버튼 */}
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-4">
@@ -332,10 +722,15 @@ export const MissingDataSimulator: React.FC<Props> = ({ proposals, onApply }) =>
               </button>
             )}
             {isApplied && (
-              <span className="text-xs font-bold text-emerald-600 bg-emerald-50 border border-emerald-200 px-3 py-2.5 rounded-xl flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4" />
-                반영 완료
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-bold text-emerald-600 bg-emerald-50 border border-emerald-200 px-3 py-2.5 rounded-xl flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4" />
+                  반영 완료
+                </span>
+                <span className="text-[9px] text-slate-400 leading-tight max-w-[140px]">
+                  목업 데이터 시뮬레이션으로 새로고침 시 원상복귀됩니다
+                </span>
+              </div>
             )}
             <button
               onClick={() => { handleBatchRun(); setSelectedIds(new Set()); setIsApplied(false); }}
@@ -551,6 +946,20 @@ export const MissingDataSimulator: React.FC<Props> = ({ proposals, onApply }) =>
                           원문
                         </a>
                       )}
+                      {r.status === '복원 성공' && (
+                        <button
+                          onClick={() => { setFeedbackTarget(r); setFeedbackType('district_wrong'); setFeedbackMemo(''); }}
+                          className={`text-[10px] font-bold inline-flex items-center gap-0.5 transition cursor-pointer ${
+                            feedbackLogs.some(l => l.proposalId === r.proposal.id)
+                              ? 'text-amber-500'
+                              : 'text-slate-400 hover:text-amber-500'
+                          }`}
+                          title="복원 결과 피드백"
+                        >
+                          <AlertTriangle className="w-3 h-3" />
+                          {feedbackLogs.some(l => l.proposalId === r.proposal.id) ? '피드백 완료' : '🚩 피드백'}
+                        </button>
+                      )}
                     </div>
                   </div>
                   </div>
@@ -584,6 +993,8 @@ export const MissingDataSimulator: React.FC<Props> = ({ proposals, onApply }) =>
           </div>
         )}
       </div>
+
+      <hr className="border-slate-200/60" />
 
       {/* 단건 테스트 (접이식) */}
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm">
@@ -673,7 +1084,128 @@ export const MissingDataSimulator: React.FC<Props> = ({ proposals, onApply }) =>
             </div>
           </div>
         )}
+
+        {/* 담당자 피드백 로그 요약 */}
+        {feedbackLogs.length > 0 && (
+          <>
+            <hr className="border-slate-200/60" />
+            <div className="bg-amber-50/50 border border-amber-200/60 rounded-xl p-4 space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <AlertTriangle className="w-4 h-4 text-amber-600" />
+                  <span className="text-xs font-black text-amber-900">🚩 담당자 피드백 로그 ({feedbackLogs.length}건)</span>
+                </div>
+                <span className="text-[9px] bg-amber-100 text-amber-700 px-2 py-0.5 rounded font-bold border border-amber-200">
+                  Human-in-the-loop 품질 개선
+                </span>
+              </div>
+              <div className="space-y-1.5 max-h-[200px] overflow-y-auto">
+                {feedbackLogs.slice().reverse().map(log => (
+                  <div key={log.id} className="bg-white rounded-lg p-2.5 border border-amber-100 flex items-start gap-2 text-[10px]">
+                    <span className="shrink-0 mt-0.5">
+                      {log.type === 'district_wrong' ? '📍' : log.type === 'category_wrong' ? '🏷️' : '📝'}
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <div className="font-bold text-slate-800 truncate">{log.title}</div>
+                      <div className="text-slate-500 mt-0.5">
+                        {log.type === 'district_wrong' && `지역 오매칭: "${log.originalDistrict}" 수정 필요`}
+                        {log.type === 'category_wrong' && `분류 오매칭 수정 필요`}
+                        {log.type === 'other' && `기타 피드백`}
+                        {log.memo && ` — ${log.memo}`}
+                      </div>
+                    </div>
+                    <span className="text-[8px] text-slate-400 shrink-0">{new Date(log.timestamp).toLocaleDateString('ko')}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="text-[9px] text-amber-600 bg-amber-100/50 p-2 rounded-lg border border-amber-200/50">
+                💡 피드백 로그는 API 연동 시 동음이의어 사전 및 복원 알고리즘 자동 업데이트에 활용됩니다.
+              </div>
+            </div>
+          </>
+        )}
       </div>
+
+      {/* ═══════════════ 통합 품질 관리 로그 ═══════════════ */}
+      <div className="mt-8 border-t-2 border-dashed border-slate-200 pt-6">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-2">
+            <FileText className="w-5 h-5 text-indigo-500" />
+            <h3 className="text-sm font-black text-slate-800">📋 통합 품질 관리 로그</h3>
+            <span className="text-[10px] bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded-full font-bold border border-indigo-100">
+              Human-in-the-loop
+            </span>
+          </div>
+        </div>
+        <p className="text-[11px] text-slate-500 mb-4 leading-relaxed">
+          대시보드 전체에서 담당자가 기록한 피드백·신고·승인 이력을 한곳에서 조회합니다.
+          로그는 브라우저 localStorage에 저장되며, API 연동 시 서버 DB로 자동 마이그레이션됩니다.
+        </p>
+
+        <UnifiedLogViewer />
+      </div>
+
+      {/* 피드백 모달 */}
+      {feedbackTarget && (
+        <div className="fixed inset-0 bg-slate-900/50 backdrop-blur-xs flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-xl border border-slate-200 shadow-2xl w-full max-w-md overflow-hidden">
+            <div className="p-4 bg-amber-50 border-b border-amber-100 flex justify-between items-center">
+              <span className="text-xs font-black text-amber-900">🚩 복원 결과 피드백</span>
+              <button onClick={() => setFeedbackTarget(null)} className="text-slate-400 hover:text-slate-600 cursor-pointer">✕</button>
+            </div>
+            <div className="p-4 space-y-3 text-xs">
+              <div className="bg-slate-50 p-2.5 rounded-lg border border-slate-200">
+                <div className="font-bold text-slate-800 truncate">{feedbackTarget.proposal.title}</div>
+                <div className="text-[10px] text-slate-500 mt-1">
+                  현재 복원: <strong>{feedbackTarget.district}</strong> ({(feedbackTarget.confidence * 100).toFixed(0)}%) · {feedbackTarget.category}
+                </div>
+              </div>
+
+              <div className="space-y-1.5">
+                <label className="text-[10px] font-bold text-slate-700 block">오류 유형</label>
+                <div className="flex gap-2">
+                  {[
+                    { value: 'district_wrong', label: '📍 지역 오매칭', desc: '다른 구로 잡혔거나 조사 용법' },
+                    { value: 'category_wrong', label: '🏷️ 분류 오매칭', desc: '카테고리가 맞지 않음' },
+                    { value: 'other', label: '📝 기타', desc: '기타 데이터 품질 이슈' },
+                  ].map(opt => (
+                    <button
+                      key={opt.value}
+                      onClick={() => setFeedbackType(opt.value)}
+                      className={`flex-1 p-2 rounded-lg border text-[10px] font-bold text-center transition cursor-pointer ${
+                        feedbackType === opt.value
+                          ? 'border-amber-400 bg-amber-50 text-amber-800'
+                          : 'border-slate-200 bg-white text-slate-500 hover:border-amber-200'
+                      }`}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="space-y-1">
+                <label className="text-[10px] font-bold text-slate-700 block">맥락 메모 (선택)</label>
+                <textarea
+                  value={feedbackMemo}
+                  onChange={e => setFeedbackMemo(e.target.value)}
+                  className="w-full h-16 p-2 rounded-lg border border-slate-200 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 bg-slate-50 text-[11px]"
+                  placeholder="예: '각 구의 보건소'에서 '구의'가 지명으로 잡힘"
+                />
+              </div>
+            </div>
+            <div className="p-3 bg-slate-50 border-t border-slate-100 flex justify-end gap-2">
+              <button onClick={() => setFeedbackTarget(null)} className="px-3 py-1.5 text-xs font-bold text-slate-500 hover:text-slate-700 cursor-pointer">취소</button>
+              <button
+                onClick={handleFeedbackSubmit}
+                className="px-4 py-1.5 text-xs font-bold bg-amber-500 hover:bg-amber-600 text-white rounded-lg transition cursor-pointer"
+              >
+                피드백 제출
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

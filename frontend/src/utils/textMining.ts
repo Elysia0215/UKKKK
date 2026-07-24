@@ -119,7 +119,17 @@ export const AMBIGUOUS_DISTRICT_KEYWORDS = new Set([
   '방이',    // 방이동(송파구) vs 방이/방에
   '보문',    // 보문동(성북구) vs 보문(일반)
   '가산',    // 가산동(금천구) vs 가산점/가산(추가)
+  '구의',    // 구의동(광진구) vs "각 구의 보건소" 등 조사 용법
 ]);
+
+// ─── 담당자 피드백 기반 동음이의어 업데이트 가이드 ──────────────────
+// 담당자 피드백 로그(localStorage 'district_feedback_log')에서 오매칭 유형이
+// 반복되면 이 목록에 추가해야 합니다.
+// API 연동 시: GET /api/feedback/ambiguous-keywords → 이 Set과 머지하여 사용
+// 예시: fetchAmbiguousKeywords().then(kws => kws.forEach(k => AMBIGUOUS_DISTRICT_KEYWORDS.add(k)));
+export function applyFeedbackKeywords(keywords: string[]) {
+  keywords.forEach(kw => AMBIGUOUS_DISTRICT_KEYWORDS.add(kw));
+}
 
 /**
  * 텍스트에서 자치구를 추정합니다.

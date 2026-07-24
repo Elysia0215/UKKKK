@@ -295,6 +295,8 @@ export const DistrictComparison: React.FC<Props> = ({
         </p>
       </div>
 
+      <hr className="border-slate-200/60" />
+
       {/* 25개 자치구 시민 제안수 vs 출생아수 & 보육시설수 이중축 분석 차트 */}
       <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-xs space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200/80">
@@ -353,6 +355,8 @@ export const DistrictComparison: React.FC<Props> = ({
           </ResponsiveContainer>
         </div>
       </div>
+
+      <hr className="border-slate-200/60" />
 
       {/* 25개 자치구 퀵 필터 그리드 */}
       <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-xs space-y-3">

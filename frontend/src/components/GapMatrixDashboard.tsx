@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { 
   AlertOctagon, 
   HelpCircle, 
@@ -34,6 +34,7 @@ import {
   Sliders,
   ChevronDown,
   ChevronUp,
+  ChevronRight,
   AlertCircle
 } from 'lucide-react';
 import { 
@@ -440,6 +441,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
   ]);
   const [showApprovalPanel, setShowApprovalPanel] = useState<boolean>(false);
   const [editedAnswer, setEditedAnswer] = useState<string>('');
+  const [originalAnswer, setOriginalAnswer] = useState<string>('');
   const [feedbackAction, setFeedbackAction] = useState<'승인' | '수정 후 승인' | '반려' | null>(null);
   const [customActions, setCustomActions] = useState<Record<string, { action: string; status: string; overrideSatisfaction?: string }>>({});
   const [lastSubmittedLog, setLastSubmittedLog] = useState<FeedbackLog | null>(null);
@@ -500,6 +502,29 @@ export const GapMatrixDashboard: React.FC<Props> = ({
   const [selectedDeptFilter, setSelectedDeptFilter] = useState<string>('전체');
   const [minConfidence, setMinConfidence] = useState<number>(0);
   const [searchQuery, setSearchQuery] = useState<string>('');
+
+  // 테이블 가로 스크롤 제어용 Ref 및 클릭 시 부드러운 스크롤 핸들러
+  const tableScrollRef = useRef<HTMLDivElement>(null);
+  const handleTableScrollClick = () => {
+    if (tableScrollRef.current) {
+      const el = tableScrollRef.current;
+      const maxScroll = el.scrollWidth - el.clientWidth;
+      if (el.scrollLeft >= maxScroll - 20) {
+        el.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        el.scrollBy({ left: 350, behavior: 'smooth' });
+      }
+    }
+  };
+
+  // 상단 헤더 부서 필터 → 내부 담당 부서 필터 동기화
+  useEffect(() => {
+    if (selectedDept) {
+      setSelectedDeptFilter(selectedDept);
+    } else {
+      setSelectedDeptFilter('전체');
+    }
+  }, [selectedDept]);
 
   // 대분류 테이블 접기/펴기 상태값 (기본적으로 '임신·난임·생식건강'만 펼침)
   const [expandedCats, setExpandedCats] = useState<Record<string, boolean>>({
@@ -632,19 +657,22 @@ export const GapMatrixDashboard: React.FC<Props> = ({
     return { immediateCount, rapidCount, lackEvidenceCount, resolvedCount };
   }, [periodFilteredDiagnoses]);
 
-  // Recharts Scatter용 데이터 변환
+  // Recharts Scatter용 데이터 변환 (선택된 버블은 위치 이탈 없이 Z-radius만 1.4배 보정)
   const scatterData = useMemo(() => {
-    return periodFilteredDiagnoses.map(d => ({
-      x: d.policy_gap,
-      y: d.urgency,
-      z: d.demand,
-      name: d.cluster,
-      category: d.category,
-      status: d.status,
-      confidence: d.evidence_confidence,
-      raw: d
-    }));
-  }, [periodFilteredDiagnoses]);
+    return periodFilteredDiagnoses.map(d => {
+      const isSelected = selectedIssue?.id === d.id;
+      return {
+        x: d.policy_gap,
+        y: d.urgency,
+        z: isSelected ? d.demand * 1.4 : d.demand,
+        name: d.cluster,
+        category: d.category,
+        status: d.status,
+        confidence: d.evidence_confidence,
+        raw: d
+      };
+    });
+  }, [periodFilteredDiagnoses, selectedIssue]);
 
   // 테이블 그룹화 및 내부 클러스터 점수별 정렬
   const groupedDiagnoses = useMemo(() => {
@@ -776,6 +804,25 @@ export const GapMatrixDashboard: React.FC<Props> = ({
 
     setFeedbackLogs(prev => [logRecord, ...prev]);
     setFeedbackAction(actionType);
+
+    // 통합 로그(localStorage)에도 영구 저장
+    try {
+      const approvalLogs = JSON.parse(localStorage.getItem('approval_log') || '[]');
+      approvalLogs.push({
+        id: `APR-${Date.now()}`,
+        type: 'approval',
+        issueId: selectedIssue.id,
+        cluster: selectedIssue.cluster,
+        actionType,
+        aiOriginal: aiOriginalAction,
+        finalAction,
+        wasModified,
+        editedAnswer: wasModified ? editedAnswer : undefined,
+        reviewerId: 'OFFICIAL-SESAC-01',
+        timestamp: new Date().toISOString(),
+      });
+      localStorage.setItem('approval_log', JSON.stringify(approvalLogs));
+    } catch { /* empty */ }
 
     setCustomActions(prev => ({
       ...prev,
@@ -922,7 +969,34 @@ export const GapMatrixDashboard: React.FC<Props> = ({
           {/* 최소 근거 신뢰도 슬라이더 */}
           <div className="space-y-1">
             <div className="flex justify-between items-center text-[9.5px] font-bold text-slate-500">
-              <span className="flex items-center gap-1"><Sliders className="w-3 h-3 text-slate-400" /> 최소 신뢰도</span>
+              <span className="flex items-center gap-1 relative group">
+                <Sliders className="w-3 h-3 text-slate-400" /> 최소 신뢰도
+                <span className="cursor-help ml-0.5">
+                  <Info className="w-3 h-3 text-slate-400 hover:text-blue-500 transition" />
+                </span>
+                {/* 호버 툴팁 */}
+                <div className="hidden group-hover:block absolute left-0 top-full mt-1.5 z-50 w-72 bg-slate-900 text-white text-[10px] p-3 rounded-xl shadow-xl border border-slate-700 leading-relaxed">
+                  <div className="font-black text-[11px] mb-1.5 text-blue-300">📐 근거 신뢰도 산정 기준</div>
+                  <p className="mb-2 text-slate-300">
+                    각 문제 클러스터의 <strong className="text-white">근거가 얼마나 탄탄한지</strong>를 0~100점으로 평가합니다.
+                    점수가 높을수록 실제 데이터에 기반한 확실한 정책 사각지대입니다.
+                  </p>
+                  <div className="space-y-1 text-slate-300">
+                    <div>• <strong className="text-white">시민 제안 건수</strong> — 해당 문제를 언급한 제안이 많을수록 ↑</div>
+                    <div>• <strong className="text-white">교차 출처 검증</strong> — 제안+민원+뉴스 등 다중 출처에서 확인될수록 ↑</div>
+                    <div>• <strong className="text-white">공감 투표 수</strong> — 시민 공감이 집중된 이슈일수록 ↑</div>
+                    <div>• <strong className="text-white">정책 매칭률</strong> — 현행 정책과 대조하여 갭이 실증될수록 ↑</div>
+                  </div>
+                  <div className="mt-2 pt-2 border-t border-slate-700 text-[9px] text-slate-400 font-mono">
+                    신뢰도 = (출처다양성×0.3) + (제안건수 정규화×0.25) + (공감점수 정규화×0.25) + (정책매칭 검증×0.2)
+                  </div>
+                  <div className="mt-1.5 pt-1.5 border-t border-slate-700 text-[8.5px] text-slate-500 leading-relaxed">
+                    <span className="text-blue-400 font-bold">방법론 근거:</span> MCDA(다기준 의사결정 분석) 가중 복합지표 방식 적용.
+                    출처다양성 가중치(0.3)는 데이터 삼각검증(Triangulation) 방법론 기반, 교차 검증된 근거에 최고 가중치 부여.
+                    <span className="block mt-0.5 italic text-slate-600">Rowe & Frewer (2000); Denzin (2012, Triangulation 2.0)</span>
+                  </div>
+                </div>
+              </span>
               <span className="text-blue-600 font-mono">{minConfidence}점 이상</span>
             </div>
             <div className="pt-1.5">
@@ -955,6 +1029,8 @@ export const GapMatrixDashboard: React.FC<Props> = ({
           </div>
         </div>
       </div>
+
+      <hr className="border-slate-200/60" />
 
       {/* 2. 요약 스탯 카드 */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -1056,6 +1132,8 @@ export const GapMatrixDashboard: React.FC<Props> = ({
         </div>
       )}
 
+      <hr className="border-slate-200/60" />
+
       {/* 3. 버블 차트 & 테이블 & 상세패널 복합 레이아웃 (12열 분할로 우측 잘림 100% 원천 해결) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-3.5 items-start">
         
@@ -1150,11 +1228,11 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                         const opacity = isDeptMatch ? baseOpacity : baseOpacity * 0.3;
                         
                         const stroke = isSelected 
-                          ? '#020617' // 아주 어두운 Slate 색상으로 선택된 버블 강조
+                          ? '#090d16' // 어두운 Slate 블랙 테두리로 선택 버블 강조
                           : (isDeptMatch ? (entry.confidence >= 60 ? '#1e293b' : color) : '#cbd5e1');
                         
                         const strokeWidth = isSelected 
-                          ? 4.5 
+                          ? 5 
                           : (isDeptMatch ? (entry.confidence >= 70 ? 2 : 1) : 1);
                         
                         return (
@@ -1164,7 +1242,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                             fillOpacity={opacity}
                             stroke={stroke}
                             strokeWidth={strokeWidth}
-                            className={`cursor-pointer transition-all duration-300 ${isSelected ? 'scale-125 stroke-slate-950 shadow-lg' : ''}`}
+                            className="cursor-pointer transition-colors duration-200"
                           />
                         );
                       })}
@@ -1244,12 +1322,26 @@ export const GapMatrixDashboard: React.FC<Props> = ({
 
           {/* 3b. 대분류 접이식 테이블 */}
           <div className="bg-white rounded-xl border border-slate-200 shadow-2xs overflow-hidden">
-            <div className="p-4 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
+            <div className="p-4 bg-slate-50 border-b border-slate-100 flex flex-wrap items-center justify-between gap-2">
               <h3 className="font-extrabold text-xs text-slate-900 flex items-center gap-1.5">
                 <Layers className="w-4 h-4 text-blue-600" />
                 문제 클러스터 종합 진단 일람표 (우선순위순 정렬)
               </h3>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
+                {/* 글씨가 뚜렷하게 진하고, 반짝반짝 호버 시 블루로 전환되며 클릭 시 실제 스크롤되는 스크롤 버튼 */}
+                <button 
+                  type="button"
+                  onClick={handleTableScrollClick}
+                  className="text-[11.5px] font-black text-slate-700 hover:text-blue-600 transition-colors duration-200 flex items-center gap-1.5 cursor-pointer group/scrollhint select-none bg-transparent border-0 p-0"
+                  title="클릭하면 표가 오른쪽으로 스르륵 스크롤되어 주관 부서를 확인하실 수 있습니다"
+                >
+                  <span className="animate-pulse text-slate-800 group-hover/scrollhint:text-blue-600 font-extrabold">👉 옆으로 스크롤</span>
+                  <div className="flex items-center -space-x-1 animate-pulse">
+                    <ChevronRight className="w-3.5 h-3.5 text-blue-500 group-hover/scrollhint:text-blue-600 font-black" />
+                    <ChevronRight className="w-3.5 h-3.5 text-blue-600 group-hover/scrollhint:text-blue-700 font-black -ml-2" />
+                  </div>
+                </button>
+
                 {selectedDept && (
                   <button
                     onClick={() => setIsLocalExportOpen(true)}
@@ -1263,8 +1355,8 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               </div>
             </div>
 
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse text-[11px]">
+            <div ref={tableScrollRef} className="overflow-x-auto relative scroll-smooth">
+              <table className="w-full min-w-[900px] text-left border-collapse text-[11px]">
                 <thead>
                   <tr className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold text-[10.5px] whitespace-nowrap">
                     <th className="px-4 py-2.5 min-w-[200px]">대분류 및 세부 문제 클러스터</th>
@@ -1274,7 +1366,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                     <th className="px-3 py-2.5 text-center min-w-[60px]">실행성</th>
                     <th className="px-3 py-2.5 text-center min-w-[75px]">근거 신뢰도</th>
                     <th className="px-3 py-2.5 text-center min-w-[100px]">진단 상태</th>
-                    <th className="px-3 py-2.5 min-w-[120px]">주관 부서</th>
+                    <th className="px-3 py-2.5 min-w-[140px]">주관 부서</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
@@ -1783,7 +1875,9 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               <div className="p-3 bg-slate-900 border-t border-slate-800 flex justify-between items-center shrink-0">
                 <button
                   onClick={() => {
-                    setEditedAnswer(`[기존 정책 답변 안내]\n- 문제 클러스터: ${selectedIssue.cluster}\n- 주관부서 조치사항: ${selectedIssue.recommended_action}\n\n시민께서 제안해 주신 요구사항에 대해 서울시 ${selectedIssue.primaryDept}에서 적극 수렴하여 기존 복지 정책을 보완하거나 신속 조례 개정을 검토하겠습니다.`);
+                    const initialText = `[기존 정책 답변 안내]\n- 문제 클러스터: ${selectedIssue.cluster}\n- 주관부서 조치사항: ${selectedIssue.recommended_action}\n\n시민께서 제안해 주신 요구사항에 대해 서울시 ${selectedIssue.primaryDept}에서 적극 수렴하여 기존 복지 정책을 보완하거나 신속 조례 개정을 검토하겠습니다.`;
+                    setEditedAnswer(initialText);
+                    setOriginalAnswer(initialText);
                     setFeedbackAction(null);
                     setShowApprovalPanel(true);
                   }}
@@ -1830,12 +1924,58 @@ export const GapMatrixDashboard: React.FC<Props> = ({
 
               <div className="space-y-1.5">
                 <label className="text-[11px] font-black text-slate-800 block">📝 공식 답변 초안 수정 및 검증</label>
+                <div className="flex flex-wrap gap-1.5 mb-2">
+                  {[
+                    { label: '📋 정책 보완 안내형', template: `[정책 보완 안내]\n\n귀하의 제안에 감사드립니다.\n\n제안하신 【${selectedIssue.cluster}】 관련 사항에 대해 【${selectedIssue.primaryDept}】에서 검토한 결과를 안내드립니다.\n\n○ 현행 정책 현황: 현재 서울시에서는 관련 사업을 운영 중이며, 세부 내용은 몽땅정보통(umppa.seoul.go.kr)에서 확인 가능합니다.\n○ 개선 조치: 제안하신 내용을 반영하여 기존 사업의 지원 범위 확대 및 접근성 개선을 검토하겠습니다.\n○ 향후 계획: 관련 조례 개정 및 예산 반영을 통해 단계적으로 시행할 예정입니다.\n\n추가 문의: 【${selectedIssue.deptPhone}】` },
+                    { label: '🆕 신규 사업 검토형', template: `[신규 사업 검토 안내]\n\n귀하께서 제안하신 【${selectedIssue.cluster}】 관련 정책 수요에 대해 【${selectedIssue.primaryDept}】에서 답변드립니다.\n\n○ 제안 검토 결과: 현재 해당 분야에 직접 대응하는 기존 사업이 부재하여 신규 사업으로의 검토가 필요한 상황입니다.\n○ 추진 방향:\n  - 관련 부서 협의 및 수요조사 실시\n  - 타 지자체 우수사례 벤치마킹\n  - 시범사업 운영 후 본사업 확대 검토\n○ 예상 일정: 수요조사(1개월) → 사업계획 수립(2개월) → 예산 심의 후 시행\n\n추가 문의: 【${selectedIssue.deptPhone}】` },
+                    { label: '🔗 기존 정책 연결형', template: `[기존 정책 안내 및 연결]\n\n귀하의 소중한 제안에 감사드립니다.\n\n【${selectedIssue.cluster}】 관련하여, 현재 서울시에서 운영 중인 유사 지원 정책을 안내드립니다.\n\n○ 관련 기존 정책:\n  - 서울시 몽땅정보통 포털에서 【${selectedIssue.category}】 검색 시 관련 사업 확인 가능\n  - 신청 방법: 온라인(umppa.seoul.go.kr) 또는 주민센터 방문 신청\n○ 추가 보완 사항: 제안하신 내용 중 기존 정책으로 커버되지 않는 부분은 【${selectedIssue.primaryDept}】에서 추가 검토하겠습니다.\n\n추가 문의: 【${selectedIssue.deptPhone}】` },
+                    { label: '⚖️ 조례 개정 검토형', template: `[조례 개정 검토 안내]\n\n귀하의 제안에 감사드립니다.\n\n【${selectedIssue.cluster}】 관련 제안 사항을 검토한 결과, 현행 조례·규정의 개정이 필요한 사안으로 판단됩니다.\n\n○ 현행 규정 한계: 현재 관련 조례에서는 해당 지원 범위가 제한적으로 규정되어 있습니다.\n○ 개정 검토 방향:\n  - 지원 대상 확대 및 자격 기준 완화\n  - 지원 금액·기간 상향 조정\n  - 신청 절차 간소화\n○ 추진 절차: 부서 검토 → 법제처 심사 → 시의회 상정 → 조례 개정 공포\n\n【${selectedIssue.primaryDept}】에서 관련 절차를 신속히 추진하겠습니다.\n추가 문의: 【${selectedIssue.deptPhone}】` },
+                  ].map((tpl, i) => (
+                    <button
+                      key={i}
+                      onClick={() => { setEditedAnswer(tpl.template); setOriginalAnswer(tpl.template); }}
+                      className="text-[9px] font-bold px-2 py-1 rounded-md border border-slate-200 bg-white hover:bg-blue-50 hover:border-blue-300 text-slate-600 hover:text-blue-700 transition-all cursor-pointer"
+                    >
+                      {tpl.label}
+                    </button>
+                  ))}
+                </div>
+                {/* 실시간 미리보기: 항상 표시, 【 】 → 파란 뱃지 렌더링 */}
+                {editedAnswer && (
+                  <div className="w-full max-h-28 overflow-y-auto p-3 rounded-lg border border-blue-200 bg-blue-50/30 text-[11px] leading-relaxed font-sans whitespace-pre-wrap mb-1.5">
+                    <div className="flex items-center gap-1 mb-1.5 text-[9px] text-blue-500 font-bold">
+                      <span>👁️ 미리보기</span>
+                      {editedAnswer.includes('【') && (
+                        <span className="text-slate-400 font-normal">— 파란 뱃지 = AI 자동 매칭 변수</span>
+                      )}
+                      {editedAnswer.trim() !== originalAnswer.trim() && (
+                        <span className="text-amber-500 font-normal ml-1">⚠️ 수정됨</span>
+                      )}
+                    </div>
+                    {editedAnswer.includes('【')
+                      ? editedAnswer.split(/(【[^】]+】)/).map((part, i) =>
+                          part.startsWith('【') && part.endsWith('】') ? (
+                            <span key={i} className="inline-block bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded border border-blue-300 font-bold text-[10px] mx-0.5">
+                              🔗 {part.slice(1, -1)}
+                            </span>
+                          ) : (
+                            <span key={i} className="text-slate-700">{part}</span>
+                          )
+                        )
+                      : <span className="text-slate-700">{editedAnswer}</span>
+                    }
+                  </div>
+                )}
                 <textarea
                   value={editedAnswer}
                   onChange={(e) => setEditedAnswer(e.target.value)}
-                  className="w-full h-32 p-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-slate-50 text-[11px] leading-relaxed font-sans"
-                  placeholder="공식 답변 내용을 입력하세요..."
+                  className="w-full h-28 p-3 rounded-lg border border-slate-200 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-slate-50 text-[11px] leading-relaxed font-sans"
+                  placeholder="위 형식 템플릿을 선택하거나 직접 입력하세요..."
                 />
+                <div className="text-[9px] text-slate-400 mt-1 flex items-center gap-2">
+                  <span className="bg-blue-50 text-blue-600 px-1.5 py-0.5 rounded border border-blue-100 font-bold">【 】= AI 자동 매칭</span>
+                  <span>클러스터·부서·연락처가 자동 삽입됩니다. 내용을 자유롭게 수정하세요.</span>
+                </div>
               </div>
 
               {/* 📌 [신규 추가] 5원 융합 학술·시민·뉴스 종합 근거 참고 레퍼런스 브리핑 카드 */}
@@ -1886,6 +2026,9 @@ export const GapMatrixDashboard: React.FC<Props> = ({
             </div>
 
             <div className="p-3 bg-slate-50 border-t border-slate-100 flex justify-end gap-2 shrink-0">
+              {editedAnswer.trim() !== originalAnswer.trim() && (
+                <span className="flex items-center text-[9px] text-amber-600 font-bold mr-auto">⚠️ 답변이 수정되어 "수정 후 승인"만 가능합니다</span>
+              )}
               <button
                 onClick={() => handleFeedbackSubmit('반려')}
                 className="px-3.5 py-2 text-xs font-bold bg-rose-50 hover:bg-rose-100 text-rose-700 rounded-lg transition"
@@ -1894,13 +2037,22 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               </button>
               <button
                 onClick={() => handleFeedbackSubmit('수정 후 승인')}
-                className="px-3.5 py-2 text-xs font-bold bg-amber-50 hover:bg-amber-100 text-amber-700 rounded-lg transition"
+                className={`px-3.5 py-2 text-xs font-bold rounded-lg transition ${
+                  editedAnswer.trim() !== originalAnswer.trim()
+                    ? 'bg-amber-500 hover:bg-amber-600 text-white shadow-sm animate-pulse'
+                    : 'bg-amber-50 hover:bg-amber-100 text-amber-700'
+                }`}
               >
                 수정 후 승인
               </button>
               <button
                 onClick={() => handleFeedbackSubmit('승인')}
-                className="px-4 py-2 text-xs font-bold bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition shadow-sm animate-pulse"
+                disabled={editedAnswer.trim() !== originalAnswer.trim()}
+                className={`px-4 py-2 text-xs font-bold rounded-lg transition shadow-sm ${
+                  editedAnswer.trim() !== originalAnswer.trim()
+                    ? 'bg-slate-200 text-slate-400 cursor-not-allowed'
+                    : 'bg-blue-600 hover:bg-blue-700 text-white animate-pulse'
+                }`}
               >
                 답변 승인
               </button>
@@ -2229,7 +2381,9 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               <div className="flex gap-2">
                 <button
                   onClick={() => {
-                    setEditedAnswer(`[기존 정책 답변 안내]\n- 문제 클러스터: ${selectedIssue.cluster}\n- 주관부서 조치사항: ${selectedIssue.recommended_action}\n\n시민께서 제안해 주신 요구사항에 대해 서울시 ${selectedIssue.primaryDept}에서 적극 수렴하여 기존 복지 정책을 보완하거나 신속 조례 개정을 검토하겠습니다.`);
+                    const initialText = `[기존 정책 답변 안내]\n- 문제 클러스터: ${selectedIssue.cluster}\n- 주관부서 조치사항: ${selectedIssue.recommended_action}\n\n시민께서 제안해 주신 요구사항에 대해 서울시 ${selectedIssue.primaryDept}에서 적극 수렴하여 기존 복지 정책을 보완하거나 신속 조례 개정을 검토하겠습니다.`;
+                    setEditedAnswer(initialText);
+                    setOriginalAnswer(initialText);
                     setFeedbackAction(null);
                     setShowApprovalPanel(true);
                     setShowComparisonModal(false);

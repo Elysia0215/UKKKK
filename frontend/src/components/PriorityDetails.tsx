@@ -23,6 +23,7 @@ import {
   ExternalLink,
   Download,
   CheckCircle2,
+  Sparkles,
   ShieldAlert,
   RotateCcw
 } from 'lucide-react';
@@ -40,6 +41,7 @@ interface Props {
   initialCategory?: string;
   initialSubCategory?: string;
   initialClusterId?: number;
+  selectedDept?: string;
 }
 
 interface ProposalGroup {
@@ -52,11 +54,12 @@ interface ProposalGroup {
   totalVotes: number;
 }
 
-export const PriorityDetails: React.FC<Props> = ({ 
+export const PriorityDetails: React.FC<Props> = ({
   proposals,
   initialCategory,
   initialSubCategory,
-  initialClusterId
+  initialClusterId,
+  selectedDept
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isMultiSelectMode, setIsMultiSelectMode] = useState<boolean>(false);
@@ -70,7 +73,16 @@ export const PriorityDetails: React.FC<Props> = ({
     initialSubCategory ? [initialSubCategory] : ['전체']
   );
   const [selectedMicroCategory, setSelectedMicroCategory] = useState<string>('전체');
-  const [selectedDepts, setSelectedDepts] = useState<string[]>(['전체']);
+  const [selectedDepts, setSelectedDepts] = useState<string[]>(
+    selectedDept ? [selectedDept] : ['전체']
+  );
+
+  // 상단 부서 셀렉터(selectedDept) 변경 시 담당 부서 필터 자동 동기화
+  React.useEffect(() => {
+    if (selectedDept) {
+      setSelectedDepts([selectedDept]);
+    }
+  }, [selectedDept]);
   const [onlyShowGaps, setOnlyShowGaps] = useState(false); // '정책 공백(미답변+고공감)'만 보기 토글
   const [onlyShow2026Gaps, setOnlyShow2026Gaps] = useState(false); // '2026 최신 정책 공백'만 보기 토글
   const [onlyShowHighVoteNoReply, setOnlyShowHighVoteNoReply] = useState(false); // '공감 500+/댓글 100+ 고공감 미답변' 스마트 모아보기 토글
@@ -181,6 +193,7 @@ export const PriorityDetails: React.FC<Props> = ({
     return rawList.map((item: any) => ({
       id: item.id || item['사업명'],
       biz_nm: item.biz_nm || item['사업명'] || '',
+
       biz_lclsf_nm: item.biz_lclsf_nm || item['사업대분류명'] || item.Category || '기타',
       biz_mclsf_nm: item.biz_mclsf_nm || item['사업중분류명'] || '',
       biz_sclsf_nm: item.biz_sclsf_nm || item['사업소분류명'] || '',
@@ -213,13 +226,21 @@ export const PriorityDetails: React.FC<Props> = ({
 
   const [expandedDetailId, setExpandedDetailId] = useState<string | null>(null);
 
+  // 정책 오매칭 피드백 상태 (localStorage 기반)
+  const [policyFeedbackSet, setPolicyFeedbackSet] = useState<Set<string>>(() => {
+    try {
+      const logs = JSON.parse(localStorage.getItem('policy_mismatch_log') || '[]');
+      return new Set(logs.map((l: { proposalId: string; matchedPolicy: string }) => `policy_fb_${l.proposalId}_${l.matchedPolicy}`));
+    } catch { return new Set(); }
+  });
+
   // 시민 제안 ↔ 국민신문고 연관 민원 정밀 교차 매칭 함수
   const getMatchingCivilRequests = useMemo(() => {
     const topicKeywords = [
-      '신혼부부', '신혼', '주거', '임차보증금', '전세', '이자지원', '주택', '임대', '뱃지', '스마트', 
-      '키움센터', '키즈카페', '신생아', '특례대출', '난임', '시술비', '산후조리', '산모', '유모차', 
-      '엘리베이터', '다자녀', '하수도', '취득세', '자동차', '어린이집', '초등', '늘봄', '아동급식', 
-      '급식카드', '임산부', '배려석', '지하철', '입양', '위기임산부', '휴직', '육아휴직', '아빠', 
+      '신혼부부', '신혼', '주거', '임차보증금', '전세', '이자지원', '주택', '임대', '뱃지', '스마트',
+      '키움센터', '키즈카페', '신생아', '특례대출', '난임', '시술비', '산후조리', '산모', '유모차',
+      '엘리베이터', '다자녀', '하수도', '취득세', '자동차', '어린이집', '초등', '늘봄', '아동급식',
+      '급식카드', '임산부', '배려석', '지하철', '입양', '위기임산부', '휴직', '육아휴직', '아빠',
       '바우처', '결혼', '살림비', '통학', '어린이', '돌봄', '보육', '양육', '출산', '가족', '지원'
     ];
 
@@ -411,7 +432,7 @@ export const PriorityDetails: React.FC<Props> = ({
     proposals.forEach(p => {
       if (p.category) set.add(p.category);
     });
-    return ['전체', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ko'))];
+    return ['전체', ...Array.from(set)];
   }, [proposals]);
 
   // 계층형 중분류 목록 (선택된 대분류에 연동)
@@ -422,7 +443,7 @@ export const PriorityDetails: React.FC<Props> = ({
         set.add(p.sub_category);
       }
     });
-    return ['전체', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ko'))];
+    return ['전체', ...Array.from(set)];
   }, [proposals, selectedCategories]);
 
   // 계층형 세분류 목록 (선택된 중분류에 연동)
@@ -430,12 +451,12 @@ export const PriorityDetails: React.FC<Props> = ({
     const set = new Set<string>();
     proposals.forEach(p => {
       if ((selectedCategories.includes('전체') || selectedCategories.includes(p.category)) &&
-          (selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category))) &&
-          p.micro_category) {
+        (selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category))) &&
+        p.micro_category) {
         set.add(p.micro_category);
       }
     });
-    return ['전체', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ko'))];
+    return ['전체', ...Array.from(set)];
   }, [proposals, selectedCategories, selectedSubCategories]);
 
   // 생애주기 정책 흐름 목록
@@ -444,7 +465,7 @@ export const PriorityDetails: React.FC<Props> = ({
     proposals.forEach(p => {
       if (p.policy_flow) set.add(p.policy_flow);
     });
-    return ['전체', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ko'))];
+    return ['전체', ...Array.from(set)];
   }, [proposals]);
 
   // 1순위 주관부서 동적 목록
@@ -454,7 +475,7 @@ export const PriorityDetails: React.FC<Props> = ({
       const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0];
       if (primaryDept) set.add(primaryDept);
     });
-    return ['전체', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ko'))];
+    return ['전체', ...Array.from(set)];
   }, [proposals]);
 
   // --- 타 필터 선택 시 교차 연동 건수 실시간 계산 맵 ---
@@ -660,27 +681,26 @@ export const PriorityDetails: React.FC<Props> = ({
         <div className="flex flex-wrap items-center gap-2">
           {/* 초기화 버튼 (정렬 좌측에 상시 노출되도록 배치, 필터 활성화 상태에 따라 스타일 변경) */}
           {(() => {
-            const isFilterActive = 
-              !selectedYears.includes('전체') || 
-              !selectedFlows.includes('전체') || 
-              !selectedCategories.includes('전체') || 
-              !selectedSubCategories.includes('전체') || 
-              !selectedDepts.includes('전체') || 
+            const isFilterActive =
+              !selectedYears.includes('전체') ||
+              !selectedFlows.includes('전체') ||
+              !selectedCategories.includes('전체') ||
+              !selectedSubCategories.includes('전체') ||
+              !selectedDepts.includes('전체') ||
               selectedMicroCategory !== '전체' ||
-              searchTerm !== '' || 
-              onlyShowGaps || 
-              onlyShow2026Gaps || 
+              searchTerm !== '' ||
+              onlyShowGaps ||
+              onlyShow2026Gaps ||
               sortBy !== 'date_desc';
 
             return (
               <button
                 onClick={handleResetFilters}
                 disabled={!isFilterActive}
-                className={`text-[11px] px-2 py-1.5 rounded-lg border font-bold transition flex items-center gap-1 cursor-pointer ${
-                  isFilterActive
+                className={`text-[11px] px-2 py-1.5 rounded-lg border font-bold transition flex items-center gap-1 cursor-pointer ${isFilterActive
                     ? 'border-rose-200 bg-rose-50 text-rose-700 hover:bg-rose-100'
                     : 'border-slate-200 bg-slate-50 text-slate-400 cursor-not-allowed opacity-50'
-                }`}
+                  }`}
                 title="모든 검색 및 필터 조건을 초기 상태로 리셋합니다."
               >
                 <RotateCcw className="w-3.5 h-3.5" />
@@ -707,11 +727,10 @@ export const PriorityDetails: React.FC<Props> = ({
           {/* 다중 선택 토글 */}
           <button
             onClick={handleToggleMultiSelectMode}
-            className={`text-[11px] px-2.5 py-1.5 rounded-lg border font-bold transition cursor-pointer ${
-              isMultiSelectMode
+            className={`text-[11px] px-2.5 py-1.5 rounded-lg border font-bold transition cursor-pointer ${isMultiSelectMode
                 ? 'bg-purple-600 text-white border-purple-700 shadow-xs'
                 : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-50'
-            }`}
+              }`}
           >
             <span>{isMultiSelectMode ? '☑️ 다중선택 ON' : '☐ 다중선택 OFF'}</span>
           </button>
@@ -720,22 +739,20 @@ export const PriorityDetails: React.FC<Props> = ({
           <div className="bg-slate-100 p-0.5 rounded-lg border border-slate-200 flex">
             <button
               onClick={() => setViewMode('group')}
-              className={`text-[11px] px-2.5 py-1 rounded-md font-bold transition cursor-pointer ${
-                viewMode === 'group'
+              className={`text-[11px] px-2.5 py-1 rounded-md font-bold transition cursor-pointer ${viewMode === 'group'
                   ? 'bg-white text-slate-800 shadow-2xs'
                   : 'text-slate-500 hover:text-slate-800'
-              }`}
+                }`}
             >
               <Layers className="w-3.5 h-3.5 inline mr-1" />
               그룹화
             </button>
             <button
               onClick={() => setViewMode('list')}
-              className={`text-[11px] px-2.5 py-1 rounded-md font-bold transition cursor-pointer ${
-                viewMode === 'list'
+              className={`text-[11px] px-2.5 py-1 rounded-md font-bold transition cursor-pointer ${viewMode === 'list'
                   ? 'bg-white text-slate-800 shadow-2xs'
                   : 'text-slate-500 hover:text-slate-800'
-              }`}
+                }`}
             >
               <FileSpreadsheet className="w-3.5 h-3.5 inline mr-1" />
               리스트
@@ -757,7 +774,7 @@ export const PriorityDetails: React.FC<Props> = ({
 
       {/* 2. 고정밀 필터 제어판 */}
       <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs space-y-2.5">
-        
+
         {/* 1. 제안 연도 (Moved to the top!) */}
         <div className="flex items-start gap-3 py-1 border-b border-slate-100 pb-1.5">
           <span className="text-xs font-black text-slate-600 w-20 flex-shrink-0 pt-0.5 flex items-center gap-1">
@@ -774,21 +791,73 @@ export const PriorityDetails: React.FC<Props> = ({
                   key={y}
                   disabled={isDisabled}
                   onClick={() => toggleFilterItem(selectedYears, setSelectedYears, y)}
-                  className={`text-[10px] px-2.5 py-0.5 rounded-full border transition font-bold cursor-pointer ${
-                    isDisabled
+                  className={`text-[10px] px-2.5 py-0.5 rounded-full border transition font-bold cursor-pointer ${isDisabled
                       ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
                       : isSelected
-                      ? isNew2026 ? 'bg-[#10B981] text-white border-[#10B981] shadow-2xs' : 'bg-[#0A2351] text-white border-[#0A2351]'
-                      : isNew2026
-                      ? 'bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100'
-                      : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
-                  }`}
+                        ? isNew2026 ? 'bg-[#10B981] text-white border-[#10B981] shadow-2xs' : 'bg-[#0A2351] text-white border-[#0A2351]'
+                        : isNew2026
+                          ? 'bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100'
+                          : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-50'
+                    }`}
                 >
                   {y === '2026' ? '🔥 2026 최신' : y === '2022이전' ? '2022이전 과거제안' : `${y}년`}
                   <span className="text-[9px] opacity-80 font-normal ml-0.5">({count}건)</span>
                 </button>
               );
             })}
+          </div>
+        </div>
+
+        {/* 1.5. 🚨 긴급 정책 공백 및 미답변 전용 필터 (원클릭 토글 칩) */}
+        <div className="flex items-center gap-3 py-1 border-b border-slate-100 pb-1.5 bg-rose-50/40 -mx-3.5 px-3.5 rounded-md">
+          <span className="text-xs font-black text-rose-800 w-20 flex-shrink-0 flex items-center gap-1">
+            🚨 긴급 필터
+          </span>
+          <div className="flex flex-wrap items-center gap-1.5">
+            <button
+              onClick={() => setOnlyShowGaps(!onlyShowGaps)}
+              className={`text-[10.5px] px-2.5 py-1 rounded-full border transition font-extrabold cursor-pointer flex items-center gap-1 shadow-2xs ${
+                onlyShowGaps
+                  ? 'bg-rose-600 text-white border-rose-700 shadow-sm animate-pulse'
+                  : 'bg-white text-rose-700 border-rose-200 hover:bg-rose-50'
+              }`}
+              title="공감 150표 이상 획득했으나 아직 행정 답변이 미완료된 긴급 정책 공백 안건만 필터링"
+            >
+              <AlertTriangle className="w-3 h-3" />
+              <span>🚨 긴급 정책 공백 (150+ 공감 미답변)</span>
+            </button>
+
+            <button
+              onClick={() => setOnlyShow2026Gaps(!onlyShow2026Gaps)}
+              className={`text-[10.5px] px-2.5 py-1 rounded-full border transition font-extrabold cursor-pointer flex items-center gap-1 shadow-2xs ${
+                onlyShow2026Gaps
+                  ? 'bg-emerald-600 text-white border-emerald-700 shadow-sm animate-pulse'
+                  : 'bg-white text-emerald-800 border-emerald-200 hover:bg-emerald-50'
+              }`}
+              title="2026년에 새로 접수된 공감 150표 이상 미답변 신규 안건만 필터링"
+            >
+              <Sparkles className="w-3 h-3 text-yellow-300" />
+              <span>⚡ 2026 최신 긴급 공백</span>
+            </button>
+
+            <button
+              onClick={() => setOnlyShowHighVoteNoReply(!onlyShowHighVoteNoReply)}
+              className={`text-[10.5px] px-2.5 py-1 rounded-full border transition font-extrabold cursor-pointer flex items-center gap-1 shadow-2xs ${
+                onlyShowHighVoteNoReply
+                  ? 'bg-purple-600 text-white border-purple-700 shadow-sm'
+                  : 'bg-white text-purple-800 border-purple-200 hover:bg-purple-50'
+              }`}
+              title="공감 300표 이상 또는 댓글 50개 이상인 시민 집중 관심 미답변 제안 필터링"
+            >
+              <MessageSquare className="w-3 h-3" />
+              <span>💬 고공감·댓글 다수 미답변</span>
+            </button>
+
+            {(onlyShowGaps || onlyShow2026Gaps || onlyShowHighVoteNoReply) && (
+              <span className="text-[10px] text-rose-600 font-bold bg-white px-2 py-0.5 rounded border border-rose-200 animate-pulse">
+                필터 적용 중! (클릭시 필터 해제)
+              </span>
+            )}
           </div>
         </div>
 
@@ -807,13 +876,12 @@ export const PriorityDetails: React.FC<Props> = ({
                   key={flow}
                   disabled={isDisabled}
                   onClick={() => toggleFilterItem(selectedFlows, setSelectedFlows, flow)}
-                  className={`text-[10px] px-2.5 py-0.5 rounded-full border transition font-bold cursor-pointer ${
-                    isDisabled
+                  className={`text-[10px] px-2.5 py-0.5 rounded-full border transition font-bold cursor-pointer ${isDisabled
                       ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
                       : isSelected
-                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
-                      : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
-                  }`}
+                        ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
+                        : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                    }`}
                 >
                   {flow} <span className="text-[9px] opacity-80 font-normal">({count}건)</span>
                 </button>
@@ -839,13 +907,12 @@ export const PriorityDetails: React.FC<Props> = ({
                     setSelectedSubCategories(['전체']);
                     setSelectedMicroCategory('전체');
                   }}
-                  className={`text-[10px] px-2.5 py-0.5 rounded-full border transition font-bold cursor-pointer ${
-                    isDisabled
+                  className={`text-[10px] px-2.5 py-0.5 rounded-full border transition font-bold cursor-pointer ${isDisabled
                       ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
                       : isSelected
-                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
-                      : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
-                  }`}
+                        ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
+                        : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                    }`}
                 >
                   {cat} <span className="text-[9px] opacity-80 font-normal">({count}건)</span>
                 </button>
@@ -871,15 +938,14 @@ export const PriorityDetails: React.FC<Props> = ({
                       toggleFilterItem(selectedSubCategories, setSelectedSubCategories, sub);
                       setSelectedMicroCategory('전체');
                     }}
-                    className={`text-[10px] px-2 py-0.5 rounded-md border transition font-bold cursor-pointer ${
-                      isDisabled
+                    className={`text-[10px] px-2 py-0.5 rounded-md border transition font-bold cursor-pointer ${isDisabled
                         ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
                         : isSelected
-                        ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
-                        : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
-                    }`}
+                          ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
+                          : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
+                      }`}
                   >
-                     {sub} <span className="text-[9px] opacity-80 font-normal">({count}건)</span>
+                    {sub} <span className="text-[9px] opacity-80 font-normal">({count}건)</span>
                   </button>
                 );
               })}
@@ -901,13 +967,12 @@ export const PriorityDetails: React.FC<Props> = ({
                     key={micro}
                     disabled={isDisabled}
                     onClick={() => setSelectedMicroCategory(micro)}
-                    className={`text-[10px] px-2 py-0.5 rounded-md border transition font-bold cursor-pointer ${
-                      isDisabled
+                    className={`text-[10px] px-2 py-0.5 rounded-md border transition font-bold cursor-pointer ${isDisabled
                         ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
                         : isSelected
-                        ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
-                        : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
-                    }`}
+                          ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
+                          : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
+                      }`}
                   >
                     {micro} <span className="text-[9px] opacity-80 font-normal">({count}건)</span>
                   </button>
@@ -930,13 +995,12 @@ export const PriorityDetails: React.FC<Props> = ({
                   key={dept}
                   disabled={isDisabled}
                   onClick={() => toggleFilterItem(selectedDepts, setSelectedDepts, dept)}
-                  className={`text-[10px] px-2 py-0.5 rounded-full border transition font-bold cursor-pointer ${
-                    isDisabled
+                  className={`text-[10px] px-2 py-0.5 rounded-full border transition font-bold cursor-pointer ${isDisabled
                       ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
                       : isSelected
-                      ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
-                      : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
-                  }`}
+                        ? 'bg-[#0A2351] text-white border-[#0A2351] shadow-2xs'
+                        : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                    }`}
                 >
                   {dept} <span className="text-[9px] opacity-80 font-normal">({count}건)</span>
                 </button>
@@ -977,8 +1041,8 @@ export const PriorityDetails: React.FC<Props> = ({
                   key={group.id}
                   layout
                   className={`bg-white rounded-xl border shadow-xs overflow-hidden transition-all duration-200 ${hasGaps && !isSingle
-                      ? 'border-rose-200 ring-1 ring-rose-50/50'
-                      : 'border-slate-200'
+                    ? 'border-rose-200 ring-1 ring-rose-50/50'
+                    : 'border-slate-200'
                     }`}
                 >
                   {/* 그룹 마스터 바 */}
@@ -1063,8 +1127,8 @@ export const PriorityDetails: React.FC<Props> = ({
                               <div
                                 key={item.id}
                                 className={`p-4 rounded-lg border transition ${isGap
-                                    ? 'bg-rose-50/50 border-rose-200 shadow-sm'
-                                    : 'bg-slate-50/50 border-slate-100 hover:border-slate-200'
+                                  ? 'bg-rose-50/50 border-rose-200 shadow-sm'
+                                  : 'bg-slate-50/50 border-slate-100 hover:border-slate-200'
                                   }`}
                               >
                                 <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
@@ -1075,6 +1139,19 @@ export const PriorityDetails: React.FC<Props> = ({
                                       <span className="text-[9px] bg-rose-100 text-rose-800 border border-rose-200 font-extrabold px-1.5 py-0.2 rounded-sm flex items-center gap-0.5 animate-pulse">
                                         <AlertTriangle className="w-2.5 h-2.5" /> 긴급 정책 공백
                                       </span>
+                                    )}
+                                    {item.vote_score >= 150 && (
+                                      <div className="relative group/star inline-block">
+                                        <span className="text-[10.5px] font-black text-amber-500 hover:text-amber-600 transition flex items-center gap-1 cursor-pointer hover:animate-pulse">
+                                          ⭐ 우수제안
+                                        </span>
+                                        {/* 호버 시 즉시 펼쳐지는 럭셔리 툴팁 창 */}
+                                        <div className="hidden group-hover/star:block absolute left-0 top-full mt-1.5 z-50 whitespace-nowrap bg-slate-900 text-white text-[10.5px] font-bold px-2.5 py-1.5 rounded-lg shadow-xl border border-slate-700 pointer-events-none animate-in fade-in duration-150">
+                                          <span className="text-yellow-400 font-extrabold mr-1">🔥 150+ 공감</span>
+                                          <span>시민 공감 150표 이상 획득 우수 제안</span>
+                                          <div className="absolute -top-1 left-3 w-2 h-2 bg-slate-900 border-l border-t border-slate-700 rotate-45" />
+                                        </div>
+                                      </div>
                                     )}
                                   </div>
                                   <div className="flex items-center gap-3">
@@ -1094,26 +1171,63 @@ export const PriorityDetails: React.FC<Props> = ({
                                 <h5 className="text-sm font-bold text-slate-800 mb-1.5">{item.title}</h5>
                                 <p className="text-xs text-slate-600 leading-relaxed mb-3 whitespace-pre-line">{formatProposalContent(item.content)}</p>
 
-                                 {/* 몽땅정보 현행 정책 대조 뱃지 (전략 1) */}
+                                {/* 몽땅정보 현행 정책 대조 뱃지 (전략 1) */}
                                 {(() => {
                                   const match = findMatchingPolicy(item.title, item.content);
                                   if (match) {
+                                    // 해당 제안-정책 매칭이 피드백으로 "관련없음" 처리되었는지 확인
+                                    const fbKey = `policy_fb_${item.id}_${match.biz_nm}`;
+                                    const wasFlagged = policyFeedbackSet.has(fbKey);
                                     return (
-                                      <div className="mb-3 p-2.5 bg-emerald-50/90 border border-emerald-200 rounded-lg text-xs text-emerald-900 flex items-center justify-between gap-2 shadow-2xs">
-                                        <div className="flex items-center gap-1.5 font-bold">
-                                          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                                          <span>✅ 현행 정책 시행 중: <strong className="text-emerald-950">[{match.biz_nm}]</strong></span>
+                                      <div className={`mb-3 p-2.5 border rounded-lg text-xs flex items-center justify-between gap-2 shadow-2xs ${
+                                        wasFlagged
+                                          ? 'bg-slate-50/90 border-slate-300 text-slate-500'
+                                          : 'bg-emerald-50/90 border-emerald-200 text-emerald-900'
+                                      }`}>
+                                        <div className="flex items-center gap-1.5 font-bold min-w-0">
+                                          <CheckCircle2 className={`w-4 h-4 shrink-0 ${wasFlagged ? 'text-slate-400' : 'text-emerald-600'}`} />
+                                          <span className={wasFlagged ? 'line-through' : ''}>
+                                            ✅ 현행 정책 시행 중: <strong className={wasFlagged ? 'text-slate-600' : 'text-emerald-950'}>[{match.biz_nm}]</strong>
+                                          </span>
+                                          {wasFlagged && (
+                                            <span className="text-[8px] bg-rose-100 text-rose-600 px-1 py-0.5 rounded font-black shrink-0">관련없음 신고됨</span>
+                                          )}
                                         </div>
-                                        {match.aply_site_addr && match.aply_site_addr !== '.' && (
-                                          <a 
-                                            href={match.aply_site_addr.startsWith('http') ? match.aply_site_addr : `https://${match.aply_site_addr}`}
-                                            target="_blank"
-                                            rel="noreferrer"
-                                            className="text-[10px] bg-emerald-600 text-white px-2 py-1 rounded-md font-bold hover:bg-emerald-700 transition flex items-center gap-0.5 shrink-0 shadow-2xs"
-                                          >
-                                            신청하기 <ExternalLink className="w-2.5 h-2.5" />
-                                          </a>
-                                        )}
+                                        <div className="flex items-center gap-1 shrink-0">
+                                          {!wasFlagged && (
+                                            <button
+                                              onClick={(e) => {
+                                                e.stopPropagation();
+                                                // localStorage에 피드백 저장
+                                                const log = JSON.parse(localStorage.getItem('policy_mismatch_log') || '[]');
+                                                log.push({
+                                                  id: `PFB-${Date.now()}`,
+                                                  proposalId: item.id,
+                                                  proposalTitle: item.title,
+                                                  matchedPolicy: match.biz_nm,
+                                                  type: 'policy_mismatch',
+                                                  timestamp: new Date().toISOString(),
+                                                });
+                                                localStorage.setItem('policy_mismatch_log', JSON.stringify(log));
+                                                setPolicyFeedbackSet(prev => new Set([...prev, fbKey]));
+                                              }}
+                                              className="text-[9px] bg-rose-50 text-rose-600 border border-rose-200 px-1.5 py-0.5 rounded font-bold hover:bg-rose-100 transition cursor-pointer flex items-center gap-0.5"
+                                              title="이 정책이 실제로 관련 없다면 클릭하여 오매칭을 신고합니다"
+                                            >
+                                              🚩 관련없음
+                                            </button>
+                                          )}
+                                          {match.aply_site_addr && match.aply_site_addr !== '.' && (
+                                            <a
+                                              href={match.aply_site_addr.startsWith('http') ? match.aply_site_addr : `https://${match.aply_site_addr}`}
+                                              target="_blank"
+                                              rel="noreferrer"
+                                              className="text-[10px] bg-emerald-600 text-white px-2 py-1 rounded-md font-bold hover:bg-emerald-700 transition flex items-center gap-0.5 shadow-2xs"
+                                            >
+                                              신청하기 <ExternalLink className="w-2.5 h-2.5" />
+                                            </a>
+                                          )}
+                                        </div>
                                       </div>
                                     );
                                   } else {
@@ -1130,108 +1244,108 @@ export const PriorityDetails: React.FC<Props> = ({
 
                                 {/* 몽땅정보 연관 기존 사업 & 부서 랭킹 정보 */}
                                 {/* 몽땅정보 연관 기존 사업 & 부서 랭킹 정보 (슬림 뷰 + 접기/펼치기 토글 UX) */}
-                                 {(() => {
-                                   const reqs = getMatchingCivilRequests(item);
-                                   const isDetailOpen = expandedDetailId === item.id;
-                                   const primaryRank = item.department_rankings && item.department_rankings.length > 0 ? item.department_rankings[0] : null;
-                                   const primaryPolicy = item.matched_policies && item.matched_policies.length > 0 ? item.matched_policies[0] : null;
+                                {(() => {
+                                  const reqs = getMatchingCivilRequests(item);
+                                  const isDetailOpen = expandedDetailId === item.id;
+                                  const primaryRank = item.department_rankings && item.department_rankings.length > 0 ? item.department_rankings[0] : null;
+                                  const primaryPolicy = item.matched_policies && item.matched_policies.length > 0 ? item.matched_policies[0] : null;
 
-                                   return (
-                                     <div className="bg-slate-50/80 p-2.5 rounded-lg border border-slate-200/60 my-2 space-y-2 text-xs">
-                                       {/* 기본 요약 1줄 바 (주관부서 1개 + 몽땅혜택 1개 + 국민신문고 뱃지 + 상세토글) */}
-                                       <div className="flex flex-wrap items-center justify-between gap-2">
-                                         <div className="flex flex-wrap items-center gap-2">
-                                           {primaryRank && (
-                                             <span className="text-[10px] bg-blue-600 text-white font-black px-2 py-0.5 rounded flex items-center gap-1 shadow-2xs">
-                                               <Building2 className="w-2.5 h-2.5" />
-                                               [주관부서] {primaryRank.dept_name} {primaryRank.phone && `(☎ ${primaryRank.phone})`}
-                                             </span>
-                                           )}
+                                  return (
+                                    <div className="bg-slate-50/80 p-2.5 rounded-lg border border-slate-200/60 my-2 space-y-2 text-xs">
+                                      {/* 기본 요약 1줄 바 (주관부서 1개 + 몽땅혜택 1개 + 국민신문고 뱃지 + 상세토글) */}
+                                      <div className="flex flex-wrap items-center justify-between gap-2">
+                                        <div className="flex flex-wrap items-center gap-2">
+                                          {primaryRank && (
+                                            <span className="text-[10px] bg-blue-600 text-white font-black px-2 py-0.5 rounded flex items-center gap-1 shadow-2xs">
+                                              <Building2 className="w-2.5 h-2.5" />
+                                              [주관부서] {primaryRank.dept_name} {primaryRank.phone && `(☎ ${primaryRank.phone})`}
+                                            </span>
+                                          )}
 
-                                           {primaryPolicy && (
-                                             <a
-                                               href={formatPolicyLink(primaryPolicy.apply_url)}
-                                               target="_blank"
-                                               rel="noopener noreferrer"
-                                               className="text-[10px] bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded font-bold transition flex items-center gap-1"
-                                               title={primaryPolicy.summary}
-                                             >
-                                               🎁 {primaryPolicy.policy_name}
-                                               {item.matched_policies.length > 1 && (
-                                                 <span className="bg-emerald-200/70 text-emerald-900 px-1 py-0.2 rounded text-[8.5px]">
-                                                   +{item.matched_policies.length - 1}개
-                                                 </span>
-                                               )}
-                                             </a>
-                                           )}
-                                         </div>
+                                          {primaryPolicy && (
+                                            <a
+                                              href={formatPolicyLink(primaryPolicy.apply_url)}
+                                              target="_blank"
+                                              rel="noopener noreferrer"
+                                              className="text-[10px] bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded font-bold transition flex items-center gap-1"
+                                              title={primaryPolicy.summary}
+                                            >
+                                              🎁 {primaryPolicy.policy_name}
+                                              {item.matched_policies.length > 1 && (
+                                                <span className="bg-emerald-200/70 text-emerald-900 px-1 py-0.2 rounded text-[8.5px]">
+                                                  +{item.matched_policies.length - 1}개
+                                                </span>
+                                              )}
+                                            </a>
+                                          )}
+                                        </div>
 
-                                         <div className="flex items-center gap-1.5">
-                                           {reqs.length > 0 && (
-                                             <button
-                                               type="button"
-                                               onClick={(e) => {
-                                                 e.stopPropagation();
-                                                 setCivilModalState({ proposal: item, requests: reqs });
-                                               }}
-                                               className="text-[9.5px] bg-indigo-600 hover:bg-indigo-700 text-white px-2 py-0.5 rounded font-black transition flex items-center gap-1 cursor-pointer shadow-2xs"
-                                             >
-                                               <span>📩 민원 {reqs.length}건 ↗</span>
-                                             </button>
-                                           )}
+                                        <div className="flex items-center gap-1.5">
+                                          {reqs.length > 0 && (
+                                            <button
+                                              type="button"
+                                              onClick={(e) => {
+                                                e.stopPropagation();
+                                                setCivilModalState({ proposal: item, requests: reqs });
+                                              }}
+                                              className="text-[9.5px] bg-indigo-600 hover:bg-indigo-700 text-white px-2 py-0.5 rounded font-black transition flex items-center gap-1 cursor-pointer shadow-2xs"
+                                            >
+                                              <span>📩 민원 {reqs.length}건 ↗</span>
+                                            </button>
+                                          )}
 
-                                           <button
-                                             type="button"
-                                             onClick={(e) => {
-                                               e.stopPropagation();
-                                               setExpandedDetailId(isDetailOpen ? null : item.id);
-                                             }}
-                                             className="text-[9.5px] bg-slate-200/80 hover:bg-slate-300/80 text-slate-700 font-extrabold px-2 py-0.5 rounded transition flex items-center gap-0.5 cursor-pointer"
-                                           >
-                                             <span>{isDetailOpen ? '상세 접기 ▴' : '연관 R&R/혜택 ▾'}</span>
-                                           </button>
-                                         </div>
-                                       </div>
+                                          <button
+                                            type="button"
+                                            onClick={(e) => {
+                                              e.stopPropagation();
+                                              setExpandedDetailId(isDetailOpen ? null : item.id);
+                                            }}
+                                            className="text-[9.5px] bg-slate-200/80 hover:bg-slate-300/80 text-slate-700 font-extrabold px-2 py-0.5 rounded transition flex items-center gap-0.5 cursor-pointer"
+                                          >
+                                            <span>{isDetailOpen ? '상세 접기 ▴' : '연관 R&R/혜택 ▾'}</span>
+                                          </button>
+                                        </div>
+                                      </div>
 
-                                       {/* 토글 클릭 시 펼쳐지는 세부 협조부서 및 몽땅혜택 풀목록 */}
-                                       {isDetailOpen && (
-                                         <div className="pt-2 border-t border-slate-200/70 space-y-2 animate-fade-in text-[10px]">
-                                           {item.department_rankings && item.department_rankings.length > 1 && (
-                                             <div className="space-y-1">
-                                               <span className="font-extrabold text-slate-500 block">🏢 협조 부서 랭킹 (2, 3순위):</span>
-                                               <div className="flex flex-wrap gap-1.5">
-                                                 {item.department_rankings.slice(1).map(rank => (
-                                                   <span key={rank.dept_name} className="bg-slate-200/80 text-slate-700 px-2 py-0.5 rounded font-bold">
-                                                     [{rank.role_type}] {rank.dept_name} {rank.phone && `(☎ ${rank.phone})`}
-                                                   </span>
-                                                 ))}
-                                               </div>
-                                             </div>
-                                           )}
+                                      {/* 토글 클릭 시 펼쳐지는 세부 협조부서 및 몽땅혜택 풀목록 */}
+                                      {isDetailOpen && (
+                                        <div className="pt-2 border-t border-slate-200/70 space-y-2 animate-fade-in text-[10px]">
+                                          {item.department_rankings && item.department_rankings.length > 1 && (
+                                            <div className="space-y-1">
+                                              <span className="font-extrabold text-slate-500 block">🏢 협조 부서 랭킹 (2, 3순위):</span>
+                                              <div className="flex flex-wrap gap-1.5">
+                                                {item.department_rankings.slice(1).map(rank => (
+                                                  <span key={rank.dept_name} className="bg-slate-200/80 text-slate-700 px-2 py-0.5 rounded font-bold">
+                                                    [{rank.role_type}] {rank.dept_name} {rank.phone && `(☎ ${rank.phone})`}
+                                                  </span>
+                                                ))}
+                                              </div>
+                                            </div>
+                                          )}
 
-                                           {item.matched_policies && item.matched_policies.length > 0 && (
-                                             <div className="space-y-1">
-                                               <span className="font-extrabold text-emerald-800 block">🎁 몽땅정보 연관혜택 풀목록 ({item.matched_policies.length}건):</span>
-                                               <div className="flex flex-wrap gap-1.5">
-                                                 {item.matched_policies.map(pol => (
-                                                   <a
-                                                     key={pol.policy_id}
-                                                     href={formatPolicyLink(pol.apply_url)}
-                                                     target="_blank"
-                                                     rel="noopener noreferrer"
-                                                     className="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded font-semibold transition"
-                                                   >
-                                                     {pol.policy_name} ↗
-                                                   </a>
-                                                 ))}
-                                               </div>
-                                             </div>
-                                           )}
-                                         </div>
-                                       )}
-                                     </div>
-                                   );
-                                 })()}
+                                          {item.matched_policies && item.matched_policies.length > 0 && (
+                                            <div className="space-y-1">
+                                              <span className="font-extrabold text-emerald-800 block">🎁 몽땅정보 연관혜택 풀목록 ({item.matched_policies.length}건):</span>
+                                              <div className="flex flex-wrap gap-1.5">
+                                                {item.matched_policies.map(pol => (
+                                                  <a
+                                                    key={pol.policy_id}
+                                                    href={formatPolicyLink(pol.apply_url)}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded font-semibold transition"
+                                                  >
+                                                    {pol.policy_name} ↗
+                                                  </a>
+                                                ))}
+                                              </div>
+                                            </div>
+                                          )}
+                                        </div>
+                                      )}
+                                    </div>
+                                  );
+                                })()}
 
                                 <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-100">
                                   <div className="flex items-center gap-2">
@@ -1290,8 +1404,8 @@ export const PriorityDetails: React.FC<Props> = ({
                 <div
                   key={item.id}
                   className={`bg-white p-5 rounded-xl border shadow-xs transition ${isGap
-                      ? 'border-rose-300 ring-1 ring-rose-50 bg-rose-50/5'
-                      : 'border-slate-200'
+                    ? 'border-rose-300 ring-1 ring-rose-50 bg-rose-50/5'
+                    : 'border-slate-200'
                     }`}
                 >
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
@@ -1341,11 +1455,10 @@ export const PriorityDetails: React.FC<Props> = ({
                         {item.department_rankings.map(rank => (
                           <span
                             key={rank.dept_name}
-                            className={`text-[10px] px-2 py-0.5 rounded flex items-center gap-1 font-bold ${
-                              rank.rank === 1
+                            className={`text-[10px] px-2 py-0.5 rounded flex items-center gap-1 font-bold ${rank.rank === 1
                                 ? 'bg-blue-600 text-white shadow-2xs'
                                 : 'bg-slate-200 text-slate-700'
-                            }`}
+                              }`}
                             title={`${rank.full_dept} (☎ ${rank.phone}) - ${rank.duty_summary}`}
                           >
                             <Building2 className="w-2.5 h-2.5" />
@@ -1418,6 +1531,18 @@ export const PriorityDetails: React.FC<Props> = ({
                       <span className="flex items-center gap-1 text-slate-600">
                         <ThumbsUp className="w-3.5 h-3.5 text-blue-500" /> 공감 {item.vote_score}표
                       </span>
+                      {item.vote_score >= 150 && (
+                        <div className="relative group/star inline-block">
+                          <span className="text-[10.5px] font-black text-amber-500 hover:text-amber-600 transition flex items-center gap-1 cursor-pointer hover:animate-pulse">
+                            ⭐ 우수제안
+                          </span>
+                          <div className="hidden group-hover/star:block absolute left-0 bottom-full mb-1.5 z-50 whitespace-nowrap bg-slate-900 text-white text-[10.5px] font-bold px-2.5 py-1.5 rounded-lg shadow-xl border border-slate-700 pointer-events-none animate-in fade-in duration-150">
+                            <span className="text-yellow-400 font-extrabold mr-1">🔥 150+ 공감</span>
+                            <span>시민 공감 150표 이상 획득 우수 제안</span>
+                            <div className="absolute -bottom-1 left-3 w-2 h-2 bg-slate-900 border-r border-b border-slate-700 rotate-45" />
+                          </div>
+                        </div>
+                      )}
                       <span className="flex items-center gap-1">
                         <MessageSquare className="w-3.5 h-3.5" /> 댓글 {item.comment_cnt}개
                       </span>

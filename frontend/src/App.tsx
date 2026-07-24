@@ -25,7 +25,8 @@ import {
   ChevronRight,
   MessageSquare,
   Search,
-  Database
+  Database,
+  Layers
 } from 'lucide-react';
 import rawMongttangData from './data/mongttang.json';
 import { PolicyProposal, DashboardStats } from './types';
@@ -104,12 +105,29 @@ export default function App() {
   };
 
   // 공공데이터 지표 서브탭 상태
-  const [publicSubTab, setPublicSubTab] = useState<'district' | 'demographics'>('district');
+  const [publicSubTab, setPublicSubTab] = useState<'district' | 'demographics' | 'structure'>('district');
 
   // 시민 제안 목록 필터 상태 (Tab 6)
   const [publicSearchTerm, setPublicSearchTerm] = useState('');
   const [publicSortOrder, setPublicSortOrder] = useState<'latest' | 'oldest' | 'title'>('latest');
   const [publicCategoryFilter, setPublicCategoryFilter] = useState<'전체' | '임신' | '출산' | '보육' | '다자녀'>('전체');
+
+  // 부서 필터링된 제안 목록 (여러 탭에서 공유)
+  const deptFilteredProposals = useMemo(() => {
+    if (!selectedDept) return mockProposals;
+    const DEPT_CATEGORY_MAP: Record<string, (p: PolicyProposal) => boolean> = {
+      '건강임신지원팀': p => p.category === '임신·난임·생식건강',
+      '저출생사업1팀': p => p.category === '출산·산후 초기지원',
+      '저출생사업2팀': p => p.category === '다자녀·양육비·생활지원',
+      '영유아담당관': p => p.category === '보육·돌봄 인프라',
+      '가족지원팀': p => p.category === '일·가정 양립·부모 노동',
+      '주거정비과': p => p.category === '주거·교통·도시생활환경',
+      '가족건강팀': p => p.sub_category?.includes('건강') || p.sub_category?.includes('의료') || p.category === '취약·다양가족 사각지대',
+      '아동보호팀': p => p.category === '취약·다양가족 사각지대',
+    };
+    const filterFn = DEPT_CATEGORY_MAP[selectedDept];
+    return filterFn ? mockProposals.filter(filterFn) : mockProposals;
+  }, [mockProposals, selectedDept]);
 
   // 실시간 통계 연산
   const stats = useMemo<DashboardStats>(() => {
@@ -320,125 +338,65 @@ export default function App() {
 
           {/* 세로 메뉴 목록 */}
           <nav className="flex flex-col py-2" aria-label="Sidebar Tabs">
-            <button
-              onClick={() => handleTabClick(0)}
-              title="서울시 출산·육아 시민 제안 전체 현황 및 연도별 민원 트렌드 종합 개요"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
-                activeTab === 0
-                  ? 'bg-[#134074] text-white border-blue-400'
-                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
-              }`}
-            >
-              <LayoutDashboard className="w-4 h-4 shrink-0" />
-              {isSidebarOpen && <span>정책 수요 개요</span>}
-            </button>
-
-
-
-            <button
-              onClick={() => handleTabClick(2)}
-              title="TOP 30 최신 핵심 키워드 태그 클라우드 및 생애주기별 민원 수요 강도 분석"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
-                activeTab === 2
-                  ? 'bg-[#134074] text-white border-blue-400'
-                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
-              }`}
-            >
-              <BarChart3 className="w-4 h-4 shrink-0" />
-              {isSidebarOpen && <span>키워드·수요 강도 분석</span>}
-            </button>
-
-            <button
-              onClick={() => handleTabClick(3)}
-              title="150표 이상 시민 공감을 얻었으나 서울시 공식 답변이 완료되지 않은 긴급 정책 공백 제안 총 4건 검토 및 일괄 답변 처리"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
-                activeTab === 3
-                  ? 'bg-[#134074] text-white border-blue-400'
-                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
-              }`}
-            >
-              <AlertOctagon className="w-4 h-4 text-rose-400 shrink-0" />
-              {isSidebarOpen && (
-                <span className="flex items-center justify-between w-full min-w-0">
-                  <span className="truncate">정책 우선순위 상세</span>
-                  <span className="bg-rose-600 text-white text-[9px] font-black px-1.5 py-0.2 rounded-full shrink-0 ml-1">
-                    {mockProposals.filter(p => p.reply_yn === 'N' && p.vote_score >= 150).length}
-                  </span>
-                </span>
-              )}
-            </button>
-
-            <button
-              onClick={() => handleTabClick(4)}
-              title="몽땅정보 만능키에 등록된 서울시 322개 공식 출산·보육 사업 검색 및 대조"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
-                activeTab === 4
-                  ? 'bg-[#134074] text-white border-blue-400'
-                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
-              }`}
-            >
-              <Building2 className="w-4 h-4 text-blue-400 shrink-0" />
-              {isSidebarOpen && (
-                <span className="flex items-center justify-between w-full min-w-0">
-                  <span className="truncate">서울시 현행 정책</span>
-                  <span className="bg-blue-900 text-slate-300 text-[9px] px-1.5 py-0.2 rounded-full shrink-0 ml-1">
-                    322
-                  </span>
-                </span>
-              )}
-            </button>
-
-            <button
-              onClick={() => handleTabClick(5)}
-              title="BERT Embedding 기반 유사 제안 군집 볼록(Voronoi/3D) 클러스터 시각화 지도"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
-                activeTab === 5
-                  ? 'bg-[#134074] text-white border-blue-400'
-                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
-              }`}
-            >
-              <TrendingUp className="w-4 h-4 text-emerald-400 shrink-0" />
-              {isSidebarOpen && <span className="truncate">군집 볼륨 분석</span>}
-            </button>
-
-            <button
-              onClick={() => handleTabClick(6)}
-              title="KOSIS/KSTAT 서울시 출생아 수, 합계출산율(TFR), 보육시설 통계 지표 분석"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
-                activeTab === 6
-                  ? 'bg-[#134074] text-white border-blue-400'
-                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
-              }`}
-            >
-              <FileSpreadsheet className="w-4 h-4 text-indigo-400 shrink-0" />
-              {isSidebarOpen && <span className="truncate">공공데이터 지표</span>}
-            </button>
-
-            <button
-              onClick={() => handleTabClick(7)}
-              title="수요-공급-민원 통합 갭(Gap) 분석 6대 판단 매트릭스 진단표"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
-                activeTab === 7
-                  ? 'bg-[#134074] text-white border-blue-400'
-                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
-              }`}
-            >
-              <AlertTriangle className="w-4 h-4 text-rose-400 animate-pulse shrink-0" />
-              {isSidebarOpen && <span className="truncate">의사결정 갭 분석표</span>}
-            </button>
-
-            <button
-              onClick={() => handleTabClick(8)}
-              title="상상대로 '구 미상' 결측치를 5원 데이터 교차분석으로 자치구 복원하는 인터랙티브 시뮬레이터"
-              className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
-                activeTab === 8
-                  ? 'bg-[#134074] text-white border-blue-400'
-                  : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
-              }`}
-            >
-              <Database className="w-4 h-4 text-cyan-400 shrink-0" />
-              {isSidebarOpen && <span className="truncate">결측치 복원 시뮬레이터</span>}
-            </button>
+            {[
+              { tab: 0, icon: <LayoutDashboard className="w-4 h-4 shrink-0" />, label: '수요 현황 종합', iconColor: '',
+                info: ['전체 제안 건수 및 답변 현황', '연도별·월별 민원 트렌드', '부서별 분류 현황', '데이터 품질 정제 보고', 'TOP 3 핵심 인사이트'] },
+              { tab: 2, icon: <BarChart3 className="w-4 h-4 shrink-0" />, label: '시민 목소리 분석', iconColor: '',
+                info: ['TOP 30 핵심 키워드 태그 클라우드', 'TF-IDF 기반 키워드 중요도 순위', '5단계 생애주기별 분류 필터', '키워드별 공감도 TOP 5 제안', '2축 복합 분석 차트'] },
+              { tab: 3, icon: <AlertOctagon className="w-4 h-4 text-rose-400 shrink-0" />, label: '긴급 민원 처리', iconColor: 'rose',
+                badge: mockProposals.filter(p => p.reply_yn === 'N' && p.vote_score >= 150).length,
+                info: ['150+ 공감 미답변 긴급 제안', '유사 제안 군집 그룹화 뷰', '다중 필터 (연도·주기·부서)', 'AI 공문 초안 일괄 답변', '원문 펼치기 & 외부 링크'] },
+              { tab: 4, icon: <Building2 className="w-4 h-4 text-blue-400 shrink-0" />, label: '현행 정책 검색', iconColor: 'blue',
+                badge: 322, badgeStyle: 'bg-blue-900 text-slate-300',
+                info: ['몽땅정보 만능키 322개 사업', '정책명·부서·대상 키워드 검색', '지원 대상 및 내용 상세 보기', '시민 제안과 기존 정책 대조'] },
+              { tab: 5, icon: <TrendingUp className="w-4 h-4 text-emerald-400 shrink-0" />, label: '정책 사각지대 탐색', iconColor: 'emerald',
+                info: ['BERT 임베딩 유사 제안 군집', 'TOP 3 핵심 클러스터 분석', '버블 차트 (크기=건수, 색=공감)', '군집 클릭 시 갭 분석 연동', '부서 필터 연동 군집 시각화'] },
+              { tab: 6, icon: <FileSpreadsheet className="w-4 h-4 text-indigo-400 shrink-0" />, label: '자치구 통계 비교', iconColor: 'indigo',
+                info: ['서울시 GeoJSON 행정구역 지도', '25개 자치구 제안수 분포', '출생아수·보육시설수 이중축 차트', 'KOSIS 공공데이터 지표', '자치구별 제안 상세 목록'] },
+              { tab: 7, icon: <AlertTriangle className="w-4 h-4 text-rose-400 animate-pulse shrink-0" />, label: '정책 갭 진단', iconColor: 'rose',
+                info: ['수요-공급 6대 갭 매트릭스', '근거 신뢰도 스코어 필터', '논문·뉴스·공공데이터 교차 검증', '부서별 진단 상태 추적', '정책 승인 패널 연동'] },
+              { tab: 8, icon: <Database className="w-4 h-4 text-cyan-400 shrink-0" />, label: '결측치 복원 & 로그', iconColor: 'cyan',
+                info: ['구 미상 제안 일괄 텍스트마이닝', '5원 데이터 교차분석 자치구 추정', '복원 결과 선택 → 데이터 반영', '정책 오매칭·피드백 통합 로그', '시스템 품질 관리 이력 조회'] },
+            ].map(item => (
+              <div key={item.tab} className="relative group/nav">
+                <button
+                  onClick={() => handleTabClick(item.tab)}
+                  className={`flex items-center gap-3 w-full px-4 py-3 text-[13px] font-black tracking-[0.01em] transition cursor-pointer border-l-4 text-left ${
+                    activeTab === item.tab
+                      ? 'bg-[#134074] text-white border-blue-400'
+                      : 'text-slate-300 hover:text-white hover:bg-[#134074]/30 border-transparent'
+                  }`}
+                >
+                  {item.icon}
+                  {isSidebarOpen && (
+                    <span className="flex items-center justify-between w-full min-w-0">
+                      <span className="truncate">{item.label}</span>
+                      {item.badge !== undefined && (
+                        <span className={`${item.badgeStyle || 'bg-rose-600 text-white'} text-[9px] font-black px-1.5 py-0.2 rounded-full shrink-0 ml-1`}>
+                          {item.badge}
+                        </span>
+                      )}
+                    </span>
+                  )}
+                </button>
+                {/* 호버 정보 툴팁 */}
+                <div className="hidden group-hover/nav:block absolute left-full top-0 ml-2 z-50 w-56 bg-slate-900 text-white text-[11px] p-3 rounded-xl shadow-2xl border border-slate-700 pointer-events-none">
+                  <div className="font-black text-[12px] mb-1.5 text-blue-300 flex items-center gap-1.5">
+                    {item.icon}
+                    {item.label}
+                  </div>
+                  <div className="space-y-1">
+                    {item.info.map((line, i) => (
+                      <div key={i} className="flex items-start gap-1.5 text-slate-300 leading-snug">
+                        <span className="text-blue-400 shrink-0 mt-px">›</span>
+                        <span>{line}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="absolute -left-1 top-3 w-2 h-2 bg-slate-900 border-l border-b border-slate-700 rotate-45" />
+                </div>
+              </div>
+            ))}
           </nav>
         </aside>
 
@@ -467,8 +425,8 @@ export default function App() {
 
 
             {activeTab === 2 && (
-              <CategoryDemand 
-                proposals={mockProposals}
+              <CategoryDemand
+                proposals={deptFilteredProposals}
                 selectedCategory={selectedCategory}
                 onSelectCategory={setSelectedCategory}
               />
@@ -480,6 +438,7 @@ export default function App() {
                 initialCategory={selectedCategory || undefined}
                 initialSubCategory={selectedSubCategory || undefined}
                 initialClusterId={selectedClusterId || undefined}
+                selectedDept={selectedDept || undefined}
               />
             )}
 
@@ -489,7 +448,7 @@ export default function App() {
 
             {activeTab === 5 && (
               <ClusterVolumeMap
-                proposals={mockProposals}
+                proposals={deptFilteredProposals}
                 onSelectCluster={handleSelectCluster}
               />
             )}
@@ -505,6 +464,14 @@ export default function App() {
                     }`}
                   >
                     <MapPin className="w-3.5 h-3.5" /> 자치구별 정책·제안 비교
+                  </button>
+                  <button
+                    onClick={() => setPublicSubTab('structure')}
+                    className={`px-4 py-2 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+                      publicSubTab === 'structure' ? 'bg-[#0A2351] text-white shadow-sm' : 'text-slate-500 hover:text-slate-800'
+                    }`}
+                  >
+                    <Layers className="w-3.5 h-3.5" /> 민원 구조 분석
                   </button>
                   <button
                     onClick={() => setPublicSubTab('demographics')}
@@ -615,7 +582,7 @@ export default function App() {
                         selectedDistrict={selectedPublicDistrict}
                         onSelectDistrict={handleSelectDistrict}
                         colorMetric={publicColorMetric}
-                        proposals={mockProposals}
+                        proposals={deptFilteredProposals}
                       />
                     </div>
 
@@ -716,6 +683,197 @@ export default function App() {
                       </div>
                     </div>
                   </div>
+                ) : publicSubTab === 'structure' ? (
+                  /* ── 민원 구조 분석 인포그래픽 ── */
+                  (() => {
+                    const total = deptFilteredProposals.length;
+                    const withDistrict = deptFilteredProposals.filter(p => p.district && p.district !== '미상' && p.district !== '구 미상' && p.district !== '');
+                    const withoutDistrict = deptFilteredProposals.filter(p => !p.district || p.district === '미상' || p.district === '구 미상' || p.district === '');
+                    const localCount = withDistrict.length;
+                    const commonCount = withoutDistrict.length;
+                    const localPct = ((localCount / total) * 100).toFixed(1);
+                    const commonPct = ((commonCount / total) * 100).toFixed(1);
+
+                    // 구별 특화 민원 분포
+                    const districtCounts: Record<string, number> = {};
+                    withDistrict.forEach(p => {
+                      districtCounts[p.district] = (districtCounts[p.district] || 0) + 1;
+                    });
+                    const sortedDistricts = Object.entries(districtCounts).sort((a, b) => b[1] - a[1]);
+                    const maxDistrictCount = sortedDistricts.length > 0 ? sortedDistricts[0][1] : 1;
+
+                    // 카테고리별 공통 vs 특화 비율
+                    const catMap: Record<string, { common: number; local: number }> = {};
+                    deptFilteredProposals.forEach(p => {
+                      const cat = String(p.category || '기타');
+                      if (!catMap[cat]) catMap[cat] = { common: 0, local: 0 };
+                      if (!p.district || p.district === '미상' || p.district === '구 미상' || p.district === '') {
+                        catMap[cat].common++;
+                      } else {
+                        catMap[cat].local++;
+                      }
+                    });
+                    const catEntries = Object.entries(catMap).sort((a, b) => (b[1].common + b[1].local) - (a[1].common + a[1].local));
+
+                    // 공감도 비교
+                    const avgVoteLocal = withDistrict.length > 0 ? (withDistrict.reduce((s, p) => s + p.vote_score, 0) / withDistrict.length) : 0;
+                    const avgVoteCommon = withoutDistrict.length > 0 ? (withoutDistrict.reduce((s, p) => s + p.vote_score, 0) / withoutDistrict.length) : 0;
+
+                    return (
+                      <div className="space-y-4">
+                        {/* 헤더 */}
+                        <div className="bg-white rounded-xl border border-slate-200 shadow-2xs p-5">
+                          <h3 className="text-sm font-black text-slate-900 mb-1 flex items-center gap-2">
+                            <Layers className="w-4 h-4 text-indigo-500" />
+                            민원 구조 분석 — 서울시 공통 vs 구별 특화
+                          </h3>
+                          <p className="text-[11px] text-slate-500">전체 {total}건 시민 제안을 "서울시 전체 공통 민원"과 "자치구 특화 민원"으로 분리하여 구조적 차이를 분석합니다.</p>
+                        </div>
+
+                        {/* 1단계: 도넛형 비율 + KPI */}
+                        <div className="grid grid-cols-2 gap-3">
+                          {/* 공통 민원 카드 */}
+                          <div className="bg-white rounded-xl border border-slate-200 shadow-2xs p-4 text-center">
+                            <div className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mb-2">서울시 전체 공통 민원</div>
+                            <div className="relative w-28 h-28 mx-auto mb-3">
+                              <svg viewBox="0 0 36 36" className="w-full h-full">
+                                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#e2e8f0" strokeWidth="3" />
+                                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#6366f1" strokeWidth="3" strokeDasharray={`${commonPct}, 100`} strokeLinecap="round" />
+                              </svg>
+                              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                                <span className="text-2xl font-black text-indigo-600">{commonPct}%</span>
+                                <span className="text-[9px] text-slate-500">{commonCount}건</span>
+                              </div>
+                            </div>
+                            <p className="text-[10px] text-slate-600">특정 자치구를 지정하지 않은 서울시 전체 대상 제안</p>
+                            <div className="mt-2 text-[10px] bg-indigo-50 rounded-lg px-2 py-1.5 border border-indigo-100">
+                              <span className="text-slate-500">평균 공감</span>{' '}
+                              <span className="font-black text-indigo-700">{avgVoteCommon.toFixed(1)}표</span>
+                            </div>
+                          </div>
+
+                          {/* 구별 특화 카드 */}
+                          <div className="bg-white rounded-xl border border-slate-200 shadow-2xs p-4 text-center">
+                            <div className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mb-2">자치구 특화 민원</div>
+                            <div className="relative w-28 h-28 mx-auto mb-3">
+                              <svg viewBox="0 0 36 36" className="w-full h-full">
+                                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#e2e8f0" strokeWidth="3" />
+                                <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#f59e0b" strokeWidth="3" strokeDasharray={`${localPct}, 100`} strokeLinecap="round" />
+                              </svg>
+                              <div className="absolute inset-0 flex flex-col items-center justify-center">
+                                <span className="text-2xl font-black text-amber-600">{localPct}%</span>
+                                <span className="text-[9px] text-slate-500">{localCount}건</span>
+                              </div>
+                            </div>
+                            <p className="text-[10px] text-slate-600">특정 자치구를 언급하거나 지정한 지역 특화 제안</p>
+                            <div className="mt-2 text-[10px] bg-amber-50 rounded-lg px-2 py-1.5 border border-amber-100">
+                              <span className="text-slate-500">평균 공감</span>{' '}
+                              <span className="font-black text-amber-700">{avgVoteLocal.toFixed(1)}표</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* 2단계 & 3단계: 2열 grid 레이아웃 (좌: 자치구별 특화 분포, 우: 8대 카테고리별 비율) */}
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch">
+                          
+                          {/* 좌측 열: 구별 특화 민원 바차트 */}
+                          <div className="bg-white rounded-xl border border-slate-200 shadow-2xs p-4 flex flex-col justify-between">
+                            <div>
+                              <h4 className="text-xs font-black text-slate-800 mb-3 flex items-center justify-between">
+                                <span className="flex items-center gap-1.5">
+                                  <MapPin className="w-3.5 h-3.5 text-amber-500" />
+                                  자치구별 특화 민원 분포
+                                </span>
+                                <span className="text-[9px] bg-amber-50 text-amber-700 px-1.5 py-0.5 rounded font-bold border border-amber-200">
+                                  특정구 {localCount}건
+                                </span>
+                              </h4>
+                              <div className="space-y-1.5 max-h-[360px] overflow-y-auto pr-1">
+                                {sortedDistricts.map(([district, count], i) => (
+                                  <div key={district} className="flex items-center gap-2 text-[10px]">
+                                    <span className="w-4 text-right text-slate-400 font-bold">{i + 1}</span>
+                                    <span className="w-14 font-bold text-slate-700 shrink-0">{district}</span>
+                                    <div className="flex-1 bg-slate-100 rounded-full h-4 overflow-hidden">
+                                      <div
+                                        className="h-full rounded-full bg-gradient-to-r from-amber-400 to-amber-500 flex items-center justify-end pr-1.5 shadow-3xs"
+                                        style={{ width: `${Math.max((count / maxDistrictCount) * 100, 8)}%` }}
+                                      >
+                                        <span className="text-[8px] font-black text-amber-950">{count}</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                              {sortedDistricts.length === 0 && (
+                                <p className="text-xs text-slate-400 text-center py-8">구가 특정된 제안이 없습니다</p>
+                              )}
+                            </div>
+                          </div>
+
+                          {/* 우측 열: 카테고리별 공통 vs 특화 스택 바 */}
+                          <div className="bg-white rounded-xl border border-slate-200 shadow-2xs p-4 flex flex-col justify-between">
+                            <div>
+                              <h4 className="text-xs font-black text-slate-800 mb-3 flex items-center justify-between">
+                                <span className="flex items-center gap-1.5">
+                                  <BarChart3 className="w-3.5 h-3.5 text-indigo-500" />
+                                  8대 카테고리별 공통 vs 특화 비율
+                                </span>
+                                <div className="flex items-center gap-2 text-[9px] font-bold">
+                                  <span className="flex items-center gap-0.5 text-indigo-700">
+                                    <span className="w-2 h-2 rounded-full bg-indigo-400 inline-block" /> 공통
+                                  </span>
+                                  <span className="flex items-center gap-0.5 text-amber-700">
+                                    <span className="w-2 h-2 rounded-full bg-amber-400 inline-block" /> 구 특화
+                                  </span>
+                                </div>
+                              </h4>
+                              <div className="space-y-2 max-h-[360px] overflow-y-auto pr-1">
+                                {catEntries.map(([cat, { common, local }]) => {
+                                  const catTotal = common + local;
+                                  const commonW = (common / catTotal) * 100;
+                                  return (
+                                    <div key={cat} className="space-y-0.5">
+                                      <div className="flex items-center justify-between">
+                                        <span className="text-[10px] font-bold text-slate-700 truncate max-w-[200px]">{cat}</span>
+                                        <span className="text-[9px] text-slate-400 font-mono font-bold">{catTotal}건</span>
+                                      </div>
+                                      <div className="flex h-4.5 rounded-md overflow-hidden border border-slate-200 shadow-3xs">
+                                        <div
+                                          className="bg-indigo-400 flex items-center justify-center transition-all duration-300"
+                                          style={{ width: `${commonW}%` }}
+                                        >
+                                          {commonW > 15 && <span className="text-[8px] font-black text-white">{common}</span>}
+                                        </div>
+                                        <div
+                                          className="bg-amber-400 flex items-center justify-center transition-all duration-300"
+                                          style={{ width: `${100 - commonW}%` }}
+                                        >
+                                          {(100 - commonW) > 15 && <span className="text-[8px] font-black text-amber-950">{local}</span>}
+                                        </div>
+                                      </div>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        {/* 인사이트 요약 */}
+                        <div className="bg-gradient-to-r from-indigo-50 to-amber-50 rounded-xl border border-indigo-200/50 p-4">
+                          <h4 className="text-xs font-black text-slate-800 mb-2">📊 구조 분석 인사이트</h4>
+                          <div className="space-y-1.5 text-[10px] text-slate-700">
+                            <p>• 전체 제안의 <strong className="text-indigo-700">{commonPct}%</strong>가 서울시 전체 공통 민원으로, 특정 구를 지정하지 않은 정책 수요입니다.</p>
+                            <p>• 자치구 특화 민원 <strong className="text-amber-700">{localCount}건</strong> 중 상위 3개 구는{' '}
+                              <strong>{sortedDistricts.slice(0, 3).map(d => d[0]).join(', ')}</strong>입니다.
+                            </p>
+                            <p>• 공통 민원 평균 공감 <strong>{avgVoteCommon.toFixed(1)}표</strong> vs 특화 민원 <strong>{avgVoteLocal.toFixed(1)}표</strong> — {avgVoteCommon > avgVoteLocal ? '공통 이슈에 더 많은 시민이 공감하고 있어, 서울시 차원의 광역 정책 대응이 우선적으로 필요합니다.' : '지역 특화 이슈에 공감이 집중되어, 자치구별 맞춤 정책이 효과적입니다.'}</p>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })()
                 ) : (
                   <DemographicsAnalyzer />
                 )}
@@ -770,6 +928,7 @@ export default function App() {
         selectedDept={selectedDept}
         activeTab={activeTab}
         onNavigateToTab={handleNavigateToTab}
+        publicSubTab={publicSubTab}
       />
     </div>
   );

@@ -445,6 +445,8 @@ export const CategoryDemand: React.FC<Props> = ({
         </div>
       </div>
 
+      <hr className="border-slate-200/60" />
+
       {/* 🔻 [상단 2] 5단계 다차원 분류체계 딥 필터링 (제안연도·생애주기·1차대분류·2차중분류·3차세분류·담당부서) */}
       <MultiTierCategoryFilter
         proposals={proposals}

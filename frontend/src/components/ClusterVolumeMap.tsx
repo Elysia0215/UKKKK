@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ResponsiveContainer, ScatterChart, Scatter, XAxis, YAxis, ZAxis, Tooltip, Cell } from 'recharts';
+import { ResponsiveContainer, ScatterChart, Scatter, XAxis, YAxis, ZAxis, Tooltip, Cell, BarChart, Bar, CartesianGrid } from 'recharts';
 import { PolicyProposal } from '../types';
-import { Layers, AlertTriangle, Sparkles, TrendingUp, HelpCircle, ChevronDown, ChevronUp, ExternalLink, Info } from 'lucide-react';
+import { Layers, AlertTriangle, Sparkles, TrendingUp, HelpCircle, ChevronDown, ChevronUp, ExternalLink, Info, Target, Shield, Zap, PieChart } from 'lucide-react';
 
 interface Props {
   proposals: PolicyProposal[];
@@ -79,6 +79,49 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
 
   const topGapClusters = clusterData.slice(0, 3);
 
+  // 요약 통계
+  const summaryStats = useMemo(() => {
+    const highRisk = clusterData.filter(c => c.riskLevel === 'HIGH').length;
+    const medRisk = clusterData.filter(c => c.riskLevel === 'MEDIUM').length;
+    const totalDemand = clusterData.reduce((s, c) => s + c.volume, 0);
+    const totalVotes = clusterData.reduce((s, c) => s + c.totalVotes, 0);
+    const avgGap = clusterData.length > 0 ? Math.round(clusterData.reduce((s, c) => s + c.gapScore, 0) / clusterData.length) : 0;
+    const maxGap = clusterData.length > 0 ? clusterData[0].gapScore : 0;
+    return { highRisk, medRisk, totalDemand, totalVotes, avgGap, maxGap };
+  }, [clusterData]);
+
+  // 카테고리별 분포
+  const categoryBreakdown = useMemo(() => {
+    const catMap = new Map<string, { count: number; totalGap: number; highRisk: number; totalVotes: number }>();
+    clusterData.forEach(c => {
+      const existing = catMap.get(c.category) || { count: 0, totalGap: 0, highRisk: 0, totalVotes: 0 };
+      existing.count++;
+      existing.totalGap += c.gapScore;
+      if (c.riskLevel === 'HIGH') existing.highRisk++;
+      existing.totalVotes += c.totalVotes;
+      catMap.set(c.category, existing);
+    });
+    return Array.from(catMap.entries())
+      .map(([name, data]) => ({
+        name: name.length > 12 ? name.slice(0, 12) + '…' : name,
+        fullName: name,
+        군집수: data.count,
+        평균격차: Math.round(data.totalGap / data.count),
+        고위험: data.highRisk,
+        총공감: data.totalVotes,
+      }))
+      .sort((a, b) => b.평균격차 - a.평균격차);
+  }, [clusterData]);
+
+  // X축 도메인 계산 (데이터에 맞춰 조정)
+  const xDomain = useMemo(() => {
+    if (clusterData.length === 0) return [0, 30];
+    const volumes = clusterData.map(c => c.volume);
+    const minV = Math.min(...volumes);
+    const maxV = Math.max(...volumes);
+    return [Math.max(0, minV - 3), maxV + 2];
+  }, [clusterData]);
+
   return (
     <div className="space-y-2.5">
       {/* 4분면 버블 차트 대시보드 헤더 */}
@@ -140,6 +183,44 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
         </div>
       </div>
 
+      {/* 요약 KPI 카드 */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <div className="bg-white rounded-xl border border-slate-200 p-3 text-center shadow-2xs">
+          <div className="flex items-center justify-center gap-1.5 mb-1">
+            <Target className="w-3.5 h-3.5 text-blue-600" />
+            <span className="text-[10px] font-bold text-slate-500">분석 군집</span>
+          </div>
+          <div className="text-2xl font-black text-slate-800">{clusterData.length}</div>
+          <div className="text-[9px] text-slate-400 font-bold">개 요구 주제</div>
+        </div>
+        <div className="bg-rose-50 rounded-xl border border-rose-200 p-3 text-center shadow-2xs">
+          <div className="flex items-center justify-center gap-1.5 mb-1">
+            <AlertTriangle className="w-3.5 h-3.5 text-rose-600" />
+            <span className="text-[10px] font-bold text-rose-600">고위험 사각지대</span>
+          </div>
+          <div className="text-2xl font-black text-rose-700">{summaryStats.highRisk}</div>
+          <div className="text-[9px] text-rose-500 font-bold">개 (격차≥100)</div>
+        </div>
+        <div className="bg-amber-50 rounded-xl border border-amber-200 p-3 text-center shadow-2xs">
+          <div className="flex items-center justify-center gap-1.5 mb-1">
+            <Shield className="w-3.5 h-3.5 text-amber-600" />
+            <span className="text-[10px] font-bold text-amber-600">보완 권장</span>
+          </div>
+          <div className="text-2xl font-black text-amber-700">{summaryStats.medRisk}</div>
+          <div className="text-[9px] text-amber-500 font-bold">개 (격차 40~99)</div>
+        </div>
+        <div className="bg-blue-50 rounded-xl border border-blue-200 p-3 text-center shadow-2xs">
+          <div className="flex items-center justify-center gap-1.5 mb-1">
+            <Zap className="w-3.5 h-3.5 text-blue-600" />
+            <span className="text-[10px] font-bold text-blue-600">최대 격차점수</span>
+          </div>
+          <div className="text-2xl font-black text-blue-700">{summaryStats.maxGap.toLocaleString()}</div>
+          <div className="text-[9px] text-blue-500 font-bold">점 (평균 {summaryStats.avgGap})</div>
+        </div>
+      </div>
+
+      <hr className="border-slate-200/60" />
+
       {/* Cluster Scatter/Bubble Chart & Legend */}
       <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-2">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 border-b border-slate-200/80">
@@ -179,6 +260,7 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
                 dataKey="volume"
                 name="제안 수량"
                 unit="건"
+                domain={xDomain}
                 tickCount={6}
                 style={{ fontSize: '11px', fontWeight: 'bold' }}
               />
@@ -354,6 +436,71 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
               </motion.div>
             )}
           </AnimatePresence>
+        </div>
+      </div>
+      <hr className="border-slate-200/60" />
+
+      {/* 카테고리별 정책 격차 분포 */}
+      <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2 mb-3 border-b border-slate-200/80">
+          <div>
+            <h4 className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+              <PieChart className="text-indigo-600 w-4 h-4" />
+              생애주기 분류별 정책 사각지대 격차 현황
+            </h4>
+            <p className="text-[10px] text-slate-500 mt-0.5">
+              카테고리별 평균 격차점수를 비교하여 어느 생애주기 영역의 정책 공급이 가장 부족한지 한눈에 파악합니다.
+            </p>
+          </div>
+        </div>
+        <div className="h-[220px] w-full">
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart data={categoryBreakdown} layout="vertical" margin={{ top: 5, right: 30, bottom: 5, left: 10 }}>
+              <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#e2e8f0" />
+              <XAxis type="number" style={{ fontSize: '10px' }} />
+              <YAxis type="category" dataKey="name" width={110} style={{ fontSize: '10px', fontWeight: 'bold' }} />
+              <Tooltip
+                content={({ active, payload }) => {
+                  if (active && payload && payload.length) {
+                    const d = payload[0].payload;
+                    return (
+                      <div className="bg-slate-900 text-white p-2.5 rounded-lg shadow-xl border border-slate-700 text-[11px] space-y-1">
+                        <div className="font-bold text-blue-300">{d.fullName}</div>
+                        <div>군집 수: <b>{d.군집수}</b>개</div>
+                        <div>평균 격차점수: <b className="text-rose-300">{d.평균격차}</b></div>
+                        <div>고위험 군집: <b className="text-rose-400">{d.고위험}</b>개</div>
+                        <div>총 시민 공감: <b className="text-emerald-300">{d.총공감.toLocaleString()}</b>표</div>
+                      </div>
+                    );
+                  }
+                  return null;
+                }}
+              />
+              <Bar dataKey="평균격차" radius={[0, 4, 4, 0]} barSize={16}>
+                {categoryBreakdown.map((entry, idx) => (
+                  <Cell
+                    key={idx}
+                    fill={entry.평균격차 >= 100 ? '#EF4444' : entry.평균격차 >= 40 ? '#F59E0B' : '#3B82F6'}
+                    fillOpacity={0.85}
+                  />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {categoryBreakdown.map((cat, i) => (
+            <span
+              key={i}
+              className={`text-[9px] font-bold px-2 py-0.5 rounded-full border ${
+                cat.평균격차 >= 100 ? 'bg-rose-50 text-rose-700 border-rose-200'
+                : cat.평균격차 >= 40 ? 'bg-amber-50 text-amber-700 border-amber-200'
+                : 'bg-blue-50 text-blue-700 border-blue-200'
+              }`}
+            >
+              {cat.fullName} · 군집 {cat.군집수}개 · 격차 {cat.평균격차}
+            </span>
+          ))}
         </div>
       </div>
     </div>
