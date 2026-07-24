@@ -145,6 +145,100 @@ const LOG_TYPE_CONFIG: Record<string, { label: string; color: string; bg: string
   approval: { label: '검토·승인', color: 'text-blue-700', bg: 'bg-blue-50', border: 'border-blue-200', icon: '📋' },
 };
 
+// 배포 데모용 초기 시드 로그: 실사용 기록이 없는 최초 방문 시에만 1회 채워
+// (담당자가 직접 초기화하면 이후 재시딩되지 않도록 플래그로 관리)
+const seedDemoLogsIfNeeded = () => {
+  try {
+    if (localStorage.getItem('demo_logs_seeded_v1')) return;
+
+    if (!localStorage.getItem('policy_mismatch_log')) {
+      localStorage.setItem('policy_mismatch_log', JSON.stringify([
+        {
+          id: 'PML-DEMO-001',
+          proposalId: 'PROP-DEMO-101',
+          proposalTitle: '서울시 신혼부부 지원',
+          matchedPolicy: '신혼부부 결혼·살림비용 지원',
+          type: 'policy_mismatch',
+          timestamp: '2026-07-24T15:24:00.000Z',
+        },
+        {
+          id: 'PML-DEMO-002',
+          proposalId: 'PROP-DEMO-102',
+          proposalTitle: "저출생 대책이라면서요? 난자동결 지원사업의 '난소수치(AMH)' 기준 철폐를 강력히 촉구합니다.",
+          matchedPolicy: '서울시 소상공인 휴업손실비용 지원사업',
+          type: 'policy_mismatch',
+          timestamp: '2026-07-24T15:17:00.000Z',
+        },
+      ]));
+    }
+
+    if (!localStorage.getItem('district_feedback_log')) {
+      localStorage.setItem('district_feedback_log', JSON.stringify([
+        {
+          id: 'FB-DEMO-001',
+          proposalId: 'PROP-DEMO',
+          title: '보건소 난임당담파트를 따로 해주세요',
+          type: 'district_wrong',
+          memo: '"각 구의 보건소"에서 "구의"가 광진구(구의동)로 오매칭됨. 실제로는 "각 구(區)의"라는 조사 용법.',
+          originalDistrict: '광진구',
+          timestamp: '2026-07-24T09:30:00.000Z',
+        },
+      ]));
+    }
+
+    if (!localStorage.getItem('data_apply_log')) {
+      localStorage.setItem('data_apply_log', JSON.stringify([
+        {
+          id: 'DAL-DEMO-001',
+          appliedCount: 36,
+          districts: ['종로구', '중구', '용산구', '광진구', '강남구'],
+          timestamp: '2026-07-24T14:50:00.000Z',
+        },
+      ]));
+    }
+
+    if (!localStorage.getItem('approval_log')) {
+      localStorage.setItem('approval_log', JSON.stringify([
+        {
+          id: 'APR-DEMO-001',
+          type: 'approval',
+          cluster: '임신·출산 이용기준',
+          actionType: '수정 후 승인',
+          aiOriginal: '해당 제안은 현행 제도상 지원 대상에 해당하지 않아 반려 처리합니다.',
+          finalAction: '임신·출산 이용기준을 완화하여 재검토 후 부분 반영 예정입니다.',
+          wasModified: true,
+          editedAnswer: '임신·출산 이용기준을 완화하여 재검토 후 부분 반영 예정입니다.',
+          reviewerId: 'OFFICIAL-SESAC-01',
+          timestamp: '2026-07-24T15:40:00.000Z',
+        },
+        {
+          id: 'APR-DEMO-002',
+          type: 'approval',
+          cluster: '기타·추가검토',
+          actionType: '수정 후 승인',
+          aiOriginal: '추가 검토가 필요한 사안으로 별도 안내 없이 종결합니다.',
+          finalAction: '관계 부서 협의 후 별도 공지를 통해 재안내할 예정입니다.',
+          wasModified: true,
+          editedAnswer: '관계 부서 협의 후 별도 공지를 통해 재안내할 예정입니다.',
+          reviewerId: 'OFFICIAL-SESAC-01',
+          timestamp: '2026-07-24T15:40:20.000Z',
+        },
+        {
+          id: 'APR-DEMO-003',
+          type: 'approval',
+          cluster: '기타·추가검토',
+          actionType: '반려',
+          wasModified: false,
+          reviewerId: 'OFFICIAL-SESAC-01',
+          timestamp: '2026-07-24T15:40:40.000Z',
+        },
+      ]));
+    }
+
+    localStorage.setItem('demo_logs_seeded_v1', '1');
+  } catch { /* localStorage 접근 불가 시 조용히 무시 */ }
+};
+
 const UnifiedLogViewer: React.FC = () => {
   const [activeLogTab, setActiveLogTab] = useState<'all' | 'policy_mismatch' | 'district_feedback' | 'data_apply' | 'approval'>('all');
   const [logs, setLogs] = useState<LogEntry[]>([]);
@@ -222,7 +316,7 @@ const UnifiedLogViewer: React.FC = () => {
     setLogs(allLogs);
   }, []);
 
-  useEffect(() => { loadLogs(); }, [loadLogs]);
+  useEffect(() => { seedDemoLogsIfNeeded(); loadLogs(); }, [loadLogs]);
 
   const filteredLogs = activeLogTab === 'all' ? logs : logs.filter(l => l.type === activeLogTab);
 
