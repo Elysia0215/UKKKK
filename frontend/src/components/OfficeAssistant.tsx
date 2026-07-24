@@ -221,14 +221,27 @@ export const OfficeAssistant: React.FC<Props> = ({ selectedDept, activeTab, onNa
   const [hasInteracted, setHasInteracted] = useState(false);
   // "지금 화면 안내"에서 기본 3단계를 본 다음, 다음 단계로 고급 활용 팁을 펼쳐 보는 토글
   const [showAdvanced, setShowAdvanced] = useState(false);
+  // 부서 변경 팝업을 처음 한 번만 자동으로 열기 위한 플래그
+  const [hasDeptPopupShown, setHasDeptPopupShown] = useState(false);
+  // 처음 로드 시에만 바운스 애니메이션 재생
+  const [shouldBounce, setShouldBounce] = useState(true);
 
-  // 부서가 바뀔 때 안내 텍스트 자동 갱신 및 말풍선 깜빡임 효과
+  // 3초 뒤 바운스 중지
+  useEffect(() => {
+    const t = setTimeout(() => setShouldBounce(false), 3000);
+    return () => clearTimeout(t);
+  }, []);
+
+  // 부서가 바뀔 때 안내 텍스트 자동 갱신 (처음 한 번만 팝업 자동 오픈)
   useEffect(() => {
     if (selectedDept) {
       setBubbleText(`소속 부서가 [${selectedDept}](으)로 확인되었습니다! 맞춤형 R&R 보고서 기안을 위한 전담 추천 플로우가 준비되었습니다. 아래 버튼을 눌러 확인해 보십시오.`);
-      setIsOpen(true);
       setActiveScreen('flow');
-      setHasInteracted(true);
+      if (!hasDeptPopupShown) {
+        setIsOpen(true);
+        setHasDeptPopupShown(true);
+        setHasInteracted(true);
+      }
     }
   }, [selectedDept]);
 
@@ -519,7 +532,7 @@ export const OfficeAssistant: React.FC<Props> = ({ selectedDept, activeTab, onNa
           setActiveScreen('menu');
           setHasInteracted(true);
         }}
-        className="relative cursor-pointer group drop-shadow-md select-none animate-bounce"
+        className={`relative cursor-pointer group drop-shadow-md select-none ${shouldBounce ? 'animate-bounce' : ''}`}
       >
         {/* 새싹이 말풍선 툴팁: 최초 화면(한 번도 클릭하지 않았을 때)에만 노출, 캐릭터 위쪽으로 배치해 다른 버튼과 겹치지 않도록 함 */}
         {!isOpen && !hasInteracted && (
