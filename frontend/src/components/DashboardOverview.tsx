@@ -57,20 +57,21 @@ export const DashboardOverview: React.FC<Props> = ({
   const [selectedKeywordModal, setSelectedKeywordModal] = React.useState<string | null>(null);
   const [keywordLimit, setKeywordLimit] = React.useState<number>(5);
 
-  // 부서별 필터 매칭 로직
+  // 부서별 필터 매칭 로직 (App.tsx DEPT_CATEGORY_MAP과 동일하게 카테고리 기반 1:1 매핑)
+  const DEPT_CATEGORY_MAP: Record<string, string> = {
+    '건강임신지원팀': '임신·난임·생식건강',
+    '저출생사업1팀': '출산·산후 초기지원',
+    '저출생사업2팀': '다자녀·양육비·생활지원',
+    '영유아담당관': '보육·돌봄 인프라',
+    '가족지원팀': '일·가정 양립·부모 노동',
+    '주거정비과': '주거·교통·도시생활환경',
+    '가족건강팀': '정보·상담·교육·거버넌스',
+    '아동보호팀': '취약·다양가족 사각지대',
+  };
   const filteredProposals = React.useMemo(() => {
     if (!selectedDept) return proposals;
-    return proposals.filter(p => {
-      if (selectedDept === '건강임신지원팀') return p.category === '임신·난임·생식건강';
-      if (selectedDept === '저출생사업1팀') return p.category === '출산·산후 초기지원';
-      if (selectedDept === '저출생사업2팀') return p.category === '다자녀·양육비·생활지원' && (p.sub_category?.includes('양육비') || p.sub_category?.includes('생활비') || p.sub_category?.includes('지원') || p.sub_category?.includes('다자녀'));
-      if (selectedDept === '영유아담당관') return p.category === '보육·돌봄 인프라';
-      if (selectedDept === '가족지원팀') return p.category === '일·가정 양립·부모 노동';
-      if (selectedDept === '주거정비과') return p.category === '주거·교통·도시생활환경';
-      if (selectedDept === '가족건강팀') return p.sub_category?.includes('건강') || p.sub_category?.includes('의료') || p.sub_category?.includes('치료') || p.category === '취약·다양가족 사각지대';
-      if (selectedDept === '아동보호팀') return p.category === '취약·다양가족 사각지대';
-      return true;
-    });
+    const targetCategory = DEPT_CATEGORY_MAP[selectedDept];
+    return targetCategory ? proposals.filter(p => p.category === targetCategory) : proposals;
   }, [proposals, selectedDept]);
 
   const topKeywords = extractTopKeywords(filteredProposals, keywordLimit);
