@@ -100,6 +100,14 @@ interface IssueItem {
   deptPhone: string;
 }
 
+// 공식 답변 초안 템플릿 4종 생성 함수 (AI 답변 승인 패널에서 공용으로 사용)
+const buildAnswerTemplates = (issue: IssueItem) => ([
+  { label: '📋 정책 보완 안내형', template: `[정책 보완 안내]\n\n귀하의 제안에 감사드립니다.\n\n제안하신 【${issue.cluster}】 관련 사항에 대해 【${issue.primaryDept}】에서 검토한 결과를 안내드립니다.\n\n○ 현행 정책 현황: 현재 서울시에서는 관련 사업을 운영 중이며, 세부 내용은 몽땅정보통(umppa.seoul.go.kr)에서 확인 가능합니다.\n○ 개선 조치: 제안하신 내용을 반영하여 기존 사업의 지원 범위 확대 및 접근성 개선을 검토하겠습니다.\n○ 향후 계획: 관련 조례 개정 및 예산 반영을 통해 단계적으로 시행할 예정입니다.\n\n추가 문의: 【${issue.deptPhone}】` },
+  { label: '🆕 신규 사업 검토형', template: `[신규 사업 검토 안내]\n\n귀하께서 제안하신 【${issue.cluster}】 관련 정책 수요에 대해 【${issue.primaryDept}】에서 답변드립니다.\n\n○ 제안 검토 결과: 현재 해당 분야에 직접 대응하는 기존 사업이 부재하여 신규 사업으로의 검토가 필요한 상황입니다.\n○ 추진 방향:\n  - 관련 부서 협의 및 수요조사 실시\n  - 타 지자체 우수사례 벤치마킹\n  - 시범사업 운영 후 본사업 확대 검토\n○ 예상 일정: 수요조사(1개월) → 사업계획 수립(2개월) → 예산 심의 후 시행\n\n추가 문의: 【${issue.deptPhone}】` },
+  { label: '🔗 기존 정책 연결형', template: `[기존 정책 안내 및 연결]\n\n귀하의 소중한 제안에 감사드립니다.\n\n【${issue.cluster}】 관련하여, 현재 서울시에서 운영 중인 유사 지원 정책을 안내드립니다.\n\n○ 관련 기존 정책:\n  - 서울시 몽땅정보통 포털에서 【${issue.category}】 검색 시 관련 사업 확인 가능\n  - 신청 방법: 온라인(umppa.seoul.go.kr) 또는 주민센터 방문 신청\n○ 추가 보완 사항: 제안하신 내용 중 기존 정책으로 커버되지 않는 부분은 【${issue.primaryDept}】에서 추가 검토하겠습니다.\n\n추가 문의: 【${issue.deptPhone}】` },
+  { label: '⚖️ 조례 개정 검토형', template: `[조례 개정 검토 안내]\n\n귀하의 제안에 감사드립니다.\n\n【${issue.cluster}】 관련 제안 사항을 검토한 결과, 현행 조례·규정의 개정이 필요한 사안으로 판단됩니다.\n\n○ 현행 규정 한계: 현재 관련 조례에서는 해당 지원 범위가 제한적으로 규정되어 있습니다.\n○ 개정 검토 방향:\n  - 지원 대상 확대 및 자격 기준 완화\n  - 지원 금액·기간 상향 조정\n  - 신청 절차 간소화\n○ 추진 절차: 부서 검토 → 법제처 심사 → 시의회 상정 → 조례 개정 공포\n\n【${issue.primaryDept}】에서 관련 절차를 신속히 추진하겠습니다.\n추가 문의: 【${issue.deptPhone}】` },
+]);
+
 // 8대 대분류에 매칭되는 담당 부서 및 내선 번호 맵
 const DEPT_MAP: Record<string, { dept: string; phone: string }> = {
   '임신·난임·생식건강': { dept: '건강임신지원팀', phone: '02-2133-5041' },
@@ -442,6 +450,8 @@ export const GapMatrixDashboard: React.FC<Props> = ({
   const [showApprovalPanel, setShowApprovalPanel] = useState<boolean>(false);
   const [editedAnswer, setEditedAnswer] = useState<string>('');
   const [originalAnswer, setOriginalAnswer] = useState<string>('');
+  // 답변 초안 템플릿 4종 중 현재 선택된 항목 (패널을 열면 기본으로 0번째 "정책 보완 안내형"이 선택된 상태로 표시됨)
+  const [activeTemplateIdx, setActiveTemplateIdx] = useState<number>(0);
   const [feedbackAction, setFeedbackAction] = useState<'승인' | '수정 후 승인' | '반려' | null>(null);
   const [customActions, setCustomActions] = useState<Record<string, { action: string; status: string; overrideSatisfaction?: string }>>({});
   const [lastSubmittedLog, setLastSubmittedLog] = useState<FeedbackLog | null>(null);
@@ -1875,9 +1885,11 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               <div className="p-3 bg-slate-900 border-t border-slate-800 flex justify-between items-center shrink-0">
                 <button
                   onClick={() => {
-                    const initialText = `[기존 정책 답변 안내]\n- 문제 클러스터: ${selectedIssue.cluster}\n- 주관부서 조치사항: ${selectedIssue.recommended_action}\n\n시민께서 제안해 주신 요구사항에 대해 서울시 ${selectedIssue.primaryDept}에서 적극 수렴하여 기존 복지 정책을 보완하거나 신속 조례 개정을 검토하겠습니다.`;
-                    setEditedAnswer(initialText);
-                    setOriginalAnswer(initialText);
+                    // 패널을 열 때 4종 템플릿 중 0번째("정책 보완 안내형")를 기본 선택 상태로 미리 채워서 보여줌
+                    const defaultTemplate = buildAnswerTemplates(selectedIssue)[0].template;
+                    setEditedAnswer(defaultTemplate);
+                    setOriginalAnswer(defaultTemplate);
+                    setActiveTemplateIdx(0);
                     setFeedbackAction(null);
                     setShowApprovalPanel(true);
                   }}
@@ -1925,16 +1937,15 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               <div className="space-y-1.5">
                 <label className="text-[11px] font-black text-slate-800 block">📝 공식 답변 초안 수정 및 검증</label>
                 <div className="flex flex-wrap gap-1.5 mb-2">
-                  {[
-                    { label: '📋 정책 보완 안내형', template: `[정책 보완 안내]\n\n귀하의 제안에 감사드립니다.\n\n제안하신 【${selectedIssue.cluster}】 관련 사항에 대해 【${selectedIssue.primaryDept}】에서 검토한 결과를 안내드립니다.\n\n○ 현행 정책 현황: 현재 서울시에서는 관련 사업을 운영 중이며, 세부 내용은 몽땅정보통(umppa.seoul.go.kr)에서 확인 가능합니다.\n○ 개선 조치: 제안하신 내용을 반영하여 기존 사업의 지원 범위 확대 및 접근성 개선을 검토하겠습니다.\n○ 향후 계획: 관련 조례 개정 및 예산 반영을 통해 단계적으로 시행할 예정입니다.\n\n추가 문의: 【${selectedIssue.deptPhone}】` },
-                    { label: '🆕 신규 사업 검토형', template: `[신규 사업 검토 안내]\n\n귀하께서 제안하신 【${selectedIssue.cluster}】 관련 정책 수요에 대해 【${selectedIssue.primaryDept}】에서 답변드립니다.\n\n○ 제안 검토 결과: 현재 해당 분야에 직접 대응하는 기존 사업이 부재하여 신규 사업으로의 검토가 필요한 상황입니다.\n○ 추진 방향:\n  - 관련 부서 협의 및 수요조사 실시\n  - 타 지자체 우수사례 벤치마킹\n  - 시범사업 운영 후 본사업 확대 검토\n○ 예상 일정: 수요조사(1개월) → 사업계획 수립(2개월) → 예산 심의 후 시행\n\n추가 문의: 【${selectedIssue.deptPhone}】` },
-                    { label: '🔗 기존 정책 연결형', template: `[기존 정책 안내 및 연결]\n\n귀하의 소중한 제안에 감사드립니다.\n\n【${selectedIssue.cluster}】 관련하여, 현재 서울시에서 운영 중인 유사 지원 정책을 안내드립니다.\n\n○ 관련 기존 정책:\n  - 서울시 몽땅정보통 포털에서 【${selectedIssue.category}】 검색 시 관련 사업 확인 가능\n  - 신청 방법: 온라인(umppa.seoul.go.kr) 또는 주민센터 방문 신청\n○ 추가 보완 사항: 제안하신 내용 중 기존 정책으로 커버되지 않는 부분은 【${selectedIssue.primaryDept}】에서 추가 검토하겠습니다.\n\n추가 문의: 【${selectedIssue.deptPhone}】` },
-                    { label: '⚖️ 조례 개정 검토형', template: `[조례 개정 검토 안내]\n\n귀하의 제안에 감사드립니다.\n\n【${selectedIssue.cluster}】 관련 제안 사항을 검토한 결과, 현행 조례·규정의 개정이 필요한 사안으로 판단됩니다.\n\n○ 현행 규정 한계: 현재 관련 조례에서는 해당 지원 범위가 제한적으로 규정되어 있습니다.\n○ 개정 검토 방향:\n  - 지원 대상 확대 및 자격 기준 완화\n  - 지원 금액·기간 상향 조정\n  - 신청 절차 간소화\n○ 추진 절차: 부서 검토 → 법제처 심사 → 시의회 상정 → 조례 개정 공포\n\n【${selectedIssue.primaryDept}】에서 관련 절차를 신속히 추진하겠습니다.\n추가 문의: 【${selectedIssue.deptPhone}】` },
-                  ].map((tpl, i) => (
+                  {buildAnswerTemplates(selectedIssue).map((tpl, i) => (
                     <button
                       key={i}
-                      onClick={() => { setEditedAnswer(tpl.template); setOriginalAnswer(tpl.template); }}
-                      className="text-[9px] font-bold px-2 py-1 rounded-md border border-slate-200 bg-white hover:bg-blue-50 hover:border-blue-300 text-slate-600 hover:text-blue-700 transition-all cursor-pointer"
+                      onClick={() => { setEditedAnswer(tpl.template); setOriginalAnswer(tpl.template); setActiveTemplateIdx(i); }}
+                      className={`text-[9px] font-bold px-2 py-1 rounded-md border transition-all cursor-pointer ${
+                        activeTemplateIdx === i
+                          ? 'bg-blue-50 border-blue-300 text-blue-700'
+                          : 'bg-white border-slate-200 text-slate-600 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700'
+                      }`}
                     >
                       {tpl.label}
                     </button>
@@ -2381,9 +2392,11 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               <div className="flex gap-2">
                 <button
                   onClick={() => {
-                    const initialText = `[기존 정책 답변 안내]\n- 문제 클러스터: ${selectedIssue.cluster}\n- 주관부서 조치사항: ${selectedIssue.recommended_action}\n\n시민께서 제안해 주신 요구사항에 대해 서울시 ${selectedIssue.primaryDept}에서 적극 수렴하여 기존 복지 정책을 보완하거나 신속 조례 개정을 검토하겠습니다.`;
-                    setEditedAnswer(initialText);
-                    setOriginalAnswer(initialText);
+                    // 패널을 열 때 4종 템플릿 중 0번째("정책 보완 안내형")를 기본 선택 상태로 미리 채워서 보여줌
+                    const defaultTemplate = buildAnswerTemplates(selectedIssue)[0].template;
+                    setEditedAnswer(defaultTemplate);
+                    setOriginalAnswer(defaultTemplate);
+                    setActiveTemplateIdx(0);
                     setFeedbackAction(null);
                     setShowApprovalPanel(true);
                     setShowComparisonModal(false);
