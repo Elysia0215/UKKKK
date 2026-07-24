@@ -338,7 +338,11 @@ const UnifiedLogViewer: React.FC = () => {
             <div className="text-2xl mb-2">📭</div>
             <div className="text-xs text-slate-400 font-bold">아직 기록된 로그가 없습니다</div>
             <div className="text-[10px] text-slate-300 mt-1">
-              대시보드에서 피드백·신고·승인을 수행하면 여기에 자동 기록됩니다
+              {activeLogTab === 'policy_mismatch' && '긴급민원·정책갭 탭에서 🚩 관련없음 버튼을 누르면 여기에 기록됩니다'}
+              {activeLogTab === 'district_feedback' && '결측치 복원 결과에서 담당자가 오분류 의견을 남기면 여기에 기록됩니다'}
+              {activeLogTab === 'data_apply' && '복원 결과를 선택 후 [데이터 반영] 버튼을 누르면 여기에 기록됩니다'}
+              {activeLogTab === 'approval' && '정책 갭 진단 탭에서 답변 승인·수정후승인·반려를 수행하면 여기에 기록됩니다'}
+              {activeLogTab === 'all' && '대시보드 각 탭에서 신고·피드백·반영·승인을 수행하면 여기에 자동 기록됩니다'}
             </div>
           </div>
         ) : (
@@ -434,9 +438,16 @@ const UnifiedLogViewer: React.FC = () => {
         )}
       </div>
 
-      {/* 하단 안내 */}
-      <div className="px-4 py-2.5 bg-slate-50 border-t border-slate-100 text-[10px] text-slate-400 leading-relaxed">
-        💡 모든 로그는 localStorage 기반으로 영구 저장됩니다. 정책 갭 진단 탭에서의 승인·수정 이력도 <b>승인 이력</b> 탭에서 통합 조회 가능합니다.
+      {/* 하단: 각 로그 타입 설명 */}
+      <div className="px-4 py-3 bg-slate-50 border-t border-slate-100 space-y-1.5">
+        <div className="text-[10px] text-slate-500 font-bold mb-1">📖 로그 유형 안내</div>
+        <div className="grid grid-cols-2 gap-x-4 gap-y-1 text-[9.5px] text-slate-400 leading-snug">
+          <div><span className="font-bold text-rose-500">🚩 정책 오매칭</span> — 긴급민원·정책갭 탭에서 AI가 매칭한 정책이 실제와 다를 때 담당자가 "관련없음" 신고한 기록</div>
+          <div><span className="font-bold text-amber-500">📝 복원 피드백</span> — 결측치 복원 결과(자치구 추정)가 틀렸을 때 담당자가 오분류 사유와 의견을 남긴 기록</div>
+          <div><span className="font-bold text-emerald-500">✅ 데이터 반영</span> — 복원된 자치구 데이터를 검토 후 실제 대시보드에 적용(반영) 버튼을 눌렀을 때의 기록</div>
+          <div><span className="font-bold text-blue-500">🔏 승인 이력</span> — 정책 갭 진단 탭에서 AI 답변 초안을 승인·수정후승인·반려한 의사결정 기록</div>
+        </div>
+        <div className="text-[9px] text-slate-300 mt-1">💾 모든 로그는 브라우저 localStorage에 영구 저장됩니다. 개별 철회 또는 탭별 일괄 초기화가 가능합니다.</div>
       </div>
     </div>
   );
