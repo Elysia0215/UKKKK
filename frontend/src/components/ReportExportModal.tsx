@@ -652,7 +652,7 @@ export const ReportExportModal: React.FC<Props> = ({
                     
                     {/* [PAGE 1] */}
                     <div className="page-break" style={{ pageBreakAfter: 'always' }}>
-                      {/* 2026.05 서울시 상상대로 공식 헤더 심볼 & 브랜딩 */}
+                      {/* 2026.07 서울시 상상대로 공식 헤더 심볼 & 브랜딩 */}
                       <div className="flex justify-between items-end border-b-4 border-emerald-500 pb-3.5">
                         <div className="space-y-1">
                           {/* 상상대로서울 삼각 4색 엠블럼 기호 */}
@@ -666,27 +666,33 @@ export const ReportExportModal: React.FC<Props> = ({
                           <p className="text-sm font-extrabold text-emerald-600 tracking-wide pt-0.5">데이터로 보는 상상대로서울</p>
                         </div>
                         <div className="text-right">
-                          <span className="text-xl font-black text-slate-400 font-mono tracking-wider">2026.05</span>
+                          <span className="text-xl font-black text-slate-400 font-mono tracking-wider">2026.07</span>
                         </div>
                       </div>
 
-                      {/* 성과 브리핑 틴트 카운트 박스 (공식 보고서 비주얼 100% 동기화) */}
-                      <div className="my-6 bg-gradient-to-br from-emerald-50 via-teal-50/40 to-blue-50/30 p-6 rounded-2xl border border-emerald-200/80 flex items-center justify-between shadow-xs">
-                        <div className="space-y-2 max-w-lg">
-                          <span className="bg-emerald-600 text-white font-black text-xs px-3 py-1 rounded-full shadow-2xs inline-block">성과 브리핑</span>
-                          <h3 className="text-2xl font-black text-slate-900 leading-snug tracking-tight">
-                            시민이 제안하고 서울이 답하는<br />
-                            <span className="text-emerald-700">상상대로서울 5월 종합 현황</span>
-                          </h3>
-                          <p className="text-xs text-slate-600 font-medium leading-relaxed pt-1">
-                            본 보고서는 실무진 외부 공유 및 부서 간 의사결정을 위해 시민 제안, 민원 키워드 및 행정 R&R 데이터를 기반으로 가공된 공식 공유 본부 보고서입니다.
-                          </p>
-                        </div>
-                        {/* 차트 시각화 데코 그래픽 */}
-                        <div className="w-24 h-20 bg-white rounded-xl border border-slate-200 p-2.5 flex items-end justify-between shadow-sm shrink-0">
-                          <div className="w-4 bg-emerald-500 rounded-t-sm h-[60%]"></div>
-                          <div className="w-4 bg-rose-500 rounded-t-sm h-[40%]"></div>
-                          <div className="w-4 bg-blue-600 rounded-t-sm h-[90%]"></div>
+                      {/* 성과 브리핑 틴트 카운트 박스 (서울시 3D 캐릭터 해치/몬스터 배경 이미지 100% 연동) */}
+                      <div 
+                        className="my-6 rounded-2xl border border-emerald-200/90 shadow-md relative overflow-hidden bg-cover bg-center"
+                        style={{ backgroundImage: 'url(/report_hero_bg.png)' }}
+                      >
+                        {/* 가독성 보장용 고급 흰색/에메랄드 반투명 틴트 오버레이 */}
+                        <div className="bg-gradient-to-r from-white/95 via-white/85 to-emerald-50/70 p-6 flex items-center justify-between backdrop-blur-[1px]">
+                          <div className="space-y-2 max-w-lg relative z-10">
+                            <span className="bg-emerald-600 text-white font-black text-xs px-3 py-1 rounded-full shadow-2xs inline-block">성과 브리핑</span>
+                            <h3 className="text-2xl font-black text-slate-900 leading-snug tracking-tight">
+                              시민이 제안하고 서울이 답하는<br />
+                              <span className="text-emerald-700">상상대로서울 7월 종합 현황</span>
+                            </h3>
+                            <p className="text-xs text-slate-700 font-bold leading-relaxed pt-1 drop-shadow-2xs">
+                              본 보고서는 실무진 외부 공유 및 부서 간 의사결정을 위해 시민 제안, 민원 키워드 및 행정 R&R 데이터를 기반으로 가공된 공식 공유 본부 보고서입니다.
+                            </p>
+                          </div>
+                          {/* 차트 시각화 데코 그래픽 */}
+                          <div className="w-24 h-20 bg-white/90 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 flex items-end justify-between shadow-lg shrink-0 relative z-10">
+                            <div className="w-4 bg-emerald-500 rounded-t-sm h-[60%]"></div>
+                            <div className="w-4 bg-rose-500 rounded-t-sm h-[40%]"></div>
+                            <div className="w-4 bg-blue-600 rounded-t-sm h-[90%]"></div>
+                          </div>
                         </div>
                       </div>
 
@@ -739,7 +745,7 @@ export const ReportExportModal: React.FC<Props> = ({
                     <div className="page-break pt-4" style={{ pageBreakAfter: 'always' }}>
                       <div className="flex justify-between items-baseline border-b-2 border-slate-200 pb-2 mb-6">
                         <h3 className="text-xl font-black text-slate-900">이런 제안은 어때요? (1/2)</h3>
-                        <span className="text-[10px] font-bold text-slate-400">상상대로서울 5월 우수 제안 리스트</span>
+                        <span className="text-[10px] font-bold text-slate-400">상상대로서울 7월 우수 제안 리스트</span>
                       </div>
 
                       <div className="grid grid-cols-2 gap-4">
