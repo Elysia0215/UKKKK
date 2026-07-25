@@ -20,6 +20,11 @@ import {
 } from 'lucide-react';
 import { PolicyProposal } from '../types';
 import { formatProposalContent } from '../utils/formatText';
+import {
+  getPrimaryDepartment,
+  getProposalDepartmentNames,
+} from '../utils/departments';
+import { getProposalDisplayContent } from '../utils/proposals';
 
 interface Props {
   isOpen: boolean;
@@ -321,10 +326,15 @@ ${matchedPolicies.length > 0
                             <div className="p-3 pt-0 border-t border-slate-100 bg-slate-50/80 rounded-b-xl space-y-2 text-xs">
                               <div className="font-bold text-slate-700 text-[11px] flex items-center justify-between">
                                 <span>📜 시민 제안 원문 본문</span>
-                                <span className="text-slate-400 font-mono text-[10px]">담당부서: {it.department.join(', ')}</span>
+                                <span className="text-slate-400 font-mono text-[10px]">
+                                  주관부서: {getPrimaryDepartment(it)?.dept_name || '미지정'}
+                                  {getProposalDepartmentNames(it).length > 1
+                                    ? ` · 전체 R&R: ${getProposalDepartmentNames(it).join(', ')}`
+                                    : ''}
+                                </span>
                               </div>
                               <div className="bg-white p-3 rounded-lg border border-slate-200 text-slate-700 leading-relaxed whitespace-pre-line max-h-[180px] overflow-y-auto font-sans shadow-2xs">
-                                {formatProposalContent(it.content)}
+                                {formatProposalContent(getProposalDisplayContent(it))}
                               </div>
                               <div className="flex justify-between items-center pt-1.5 border-t border-slate-200/60 text-xs">
                                 <span className="text-[11px] text-slate-500 font-mono">제안번호: {it.id}</span>

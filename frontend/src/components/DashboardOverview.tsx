@@ -25,6 +25,10 @@ import { PolicyProposal, DashboardStats } from '../types';
 import { extractTopKeywords, getDepartmentStats } from '../data/mockData';
 import { KeywordDetailModal } from './KeywordDetailModal';
 import { HoverScrollText } from './HoverScrollText';
+import {
+  getPrimaryDepartment,
+} from '../utils/departments';
+import { getProposalDisplayContent } from '../utils/proposals';
 import { 
   BarChart, 
   Bar, 
@@ -57,22 +61,7 @@ export const DashboardOverview: React.FC<Props> = ({
   const [selectedKeywordModal, setSelectedKeywordModal] = React.useState<string | null>(null);
   const [keywordLimit, setKeywordLimit] = React.useState<number>(5);
 
-  // 부서별 필터 매칭 로직 (App.tsx DEPT_CATEGORY_MAP과 동일하게 카테고리 기반 1:1 매핑)
-  const DEPT_CATEGORY_MAP: Record<string, string> = {
-    '건강임신지원팀': '임신·난임·생식건강',
-    '저출생사업1팀': '출산·산후 초기지원',
-    '저출생사업2팀': '다자녀·양육비·생활지원',
-    '영유아담당관': '보육·돌봄 인프라',
-    '가족지원팀': '일·가정 양립·부모 노동',
-    '주거정비과': '주거·교통·도시생활환경',
-    '가족건강팀': '정보·상담·교육·거버넌스',
-    '아동보호팀': '취약·다양가족 사각지대',
-  };
-  const filteredProposals = React.useMemo(() => {
-    if (!selectedDept) return proposals;
-    const targetCategory = DEPT_CATEGORY_MAP[selectedDept];
-    return targetCategory ? proposals.filter(p => p.category === targetCategory) : proposals;
-  }, [proposals, selectedDept]);
+  const filteredProposals = proposals;
 
   const topKeywords = extractTopKeywords(filteredProposals, keywordLimit);
   const deptStats = getDepartmentStats(filteredProposals);
@@ -124,7 +113,7 @@ export const DashboardOverview: React.FC<Props> = ({
             </div>
             <div>
               <h3 className="text-xs font-extrabold text-slate-900">
-                🏢 {selectedDept} R&R 업무 모니터링 모드 활성화
+                🏷️ {selectedDept} 대분류 담당군 모니터링 모드 활성화
               </h3>
               <p className="text-[10px] text-slate-500 mt-0.5">
                 해당 부서 전담 카테고리에 연관된 총 {filteredProposals.length}건의 제안 및 민원 위주로 필터링되었습니다.
@@ -239,7 +228,7 @@ export const DashboardOverview: React.FC<Props> = ({
               onClick={() => onSelectDept && onSelectDept(null)}
               className="text-[9px] bg-blue-600 hover:bg-blue-700 text-white font-extrabold px-2.5 py-0.5 rounded-full border border-blue-500 shadow-xs transition flex items-center gap-1 cursor-pointer"
             >
-              <span>🏢 {selectedDept} 필터 적용중</span>
+              <span>🏷️ {selectedDept} 담당군 필터 적용중</span>
               <span className="bg-blue-800 text-blue-100 rounded-full w-3 h-3 flex items-center justify-center text-[8px]">✕</span>
             </button>
           ) : (
@@ -684,15 +673,15 @@ export const DashboardOverview: React.FC<Props> = ({
                   <span className="text-[10px] text-slate-500 font-bold font-mono bg-slate-100 px-1.5 py-0.5 rounded">{gap.district} · {gap.category}</span>
                 </div>
                 <h5 className="text-xs font-bold text-slate-900 line-clamp-1 mb-1">{gap.title}</h5>
-                <p className="text-[11px] text-slate-600 line-clamp-2 leading-relaxed">{gap.content}</p>
+                <p className="text-[11px] text-slate-600 line-clamp-2 leading-relaxed">{getProposalDisplayContent(gap)}</p>
               </div>
               <div className="mt-2.5 pt-2 border-t border-slate-100 flex flex-wrap gap-1">
-                {gap.department.map(dept => (
-                  <span key={dept} className="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded flex items-center gap-1 font-semibold">
+                {getPrimaryDepartment(gap) && (
+                  <span className="text-[10px] bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded flex items-center gap-1 font-semibold">
                     <Building2 className="w-2.5 h-2.5 text-slate-400" />
-                    {dept}
+                    주관: {getPrimaryDepartment(gap)?.dept_name}
                   </span>
-                ))}
+                )}
               </div>
             </div>
           ))}

@@ -3,6 +3,11 @@ import { motion, AnimatePresence } from 'motion/react';
 import { X, ExternalLink, ThumbsUp, MessageSquare, Building2, Calendar, FileText } from 'lucide-react';
 import { PolicyProposal } from '../types';
 import { formatProposalContent } from '../utils/formatText';
+import {
+  getCollaboratingDepartments,
+  getPrimaryDepartment,
+} from '../utils/departments';
+import { getProposalDisplayContent } from '../utils/proposals';
 
 interface Props {
   isOpen: boolean;
@@ -88,13 +93,16 @@ export const KeywordDetailModal: React.FC<Props> = ({ isOpen, keyword, proposals
 
                   <h4 className="font-bold text-sm text-slate-900">{item.title}</h4>
                   <p className="text-xs text-slate-600 bg-white p-3 rounded-lg border border-slate-100 leading-relaxed max-h-[140px] overflow-y-auto whitespace-pre-line font-sans">
-                    {formatProposalContent(item.content)}
+                    {formatProposalContent(getProposalDisplayContent(item))}
                   </p>
 
                   <div className="flex justify-between items-center pt-1 text-xs text-slate-500 font-medium">
                     <div className="flex items-center gap-1 text-[11px] text-slate-600">
                       <Building2 className="w-3.5 h-3.5 text-slate-400" />
-                      담당팀: {item.department.join(', ')}
+                      주관: {getPrimaryDepartment(item)?.dept_name || '미지정'}
+                      {getCollaboratingDepartments(item).length > 0
+                        ? ` · 협조: ${getCollaboratingDepartments(item).map((ranking) => ranking.dept_name).join(', ')}`
+                        : ''}
                     </div>
                     <div className="flex items-center gap-3">
                       <span className="flex items-center gap-1 text-blue-600 font-bold">

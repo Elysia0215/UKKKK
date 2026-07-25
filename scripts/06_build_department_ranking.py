@@ -2,7 +2,7 @@
 6단계: 426건 출산·육아 제안 데이터에
 1) 출산정책관련 업무담당.xlsx (18개 실무 분장) 기반 부서 매칭 Top 3 랭킹
 2) classified_policy.json (몽땅정보 322건) 기반 연관 기존 정책 혜택 정보
-를 파싱 매핑하여 proposals.json 및 mockData.ts를 갱신한다.
+를 파싱 매핑하여 frontend/final 제안 JSON을 함께 갱신한다.
 """
 import json
 import ast
@@ -13,6 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 EXCEL_PATH = BASE_DIR / "data" / "출산정책관련 업무담당.xlsx"
 CLASSIFIED_PATH = BASE_DIR / "data" / "classified_policy.json"
 PROPOSALS_PATH = BASE_DIR / "data" / "final" / "proposals.json"
+FRONTEND_PROPOSALS_PATH = BASE_DIR / "frontend" / "src" / "data" / "mongttang.json"
 
 # 1. 엑셀 실무 부서 정보 로드
 dept_df = pd.read_excel(EXCEL_PATH)
@@ -52,19 +53,23 @@ def match_department_rankings(proposal):
     scored_depts = []
     for info in dept_info_list:
         score = 0
+        reasons = []
         # 카테고리 매칭 가중치
         if cat in info["duty"] or cat in info["full_dept"]:
             score += 30
+            reasons.append("카테고리 업무 일치")
         
         # 업무분장 키워드 매칭
         words = title_content.split()
         for w in set(words):
             if len(w) >= 2 and w in info["duty"]:
                 score += 10
+                reasons.append(f"업무 키워드: {w}")
         
         # 지정된 department 배열에 포함되어 있으면 보너스
         if any(info["short_dept"] in d or d in info["short_dept"] for d in proposal["department"]):
             score += 50
+            reasons.append("기존 담당부서 일치")
             
         scored_depts.append({
             "dept_name": info["short_dept"],
@@ -73,15 +78,18 @@ def match_department_rankings(proposal):
             "phone": info["phone"],
             "location": info["location"],
             "position": info["position"],
-            "duty_summary": info["duty"].split("\n")[0] if info["duty"] else ""
+            "duty_summary": info["duty"].split("\n")[0] if info["duty"] else "",
+            "matching_reason": ", ".join(dict.fromkeys(reasons)),
         })
     
-    scored_depts.sort(key=lambda x: x["score"], reverse=True)
+    scored_depts.sort(key=lambda x: (-x["score"], x["dept_name"]))
     
     # 중복 팀 제거 후 Top 3 선택
     unique_depts = []
     seen = set()
     for d in scored_depts:
+        if d["score"] <= 0:
+            continue
         if d["dept_name"] not in seen:
             seen.add(d["dept_name"])
             unique_depts.append(d)
@@ -97,7 +105,9 @@ def match_department_rankings(proposal):
             "full_dept": d["full_dept"],
             "phone": d["phone"],
             "location": d["location"],
-            "duty_summary": d["duty_summary"]
+            "duty_summary": d["duty_summary"],
+            "matching_reason": d["matching_reason"],
+            "score": d["score"],
         })
     return rankings
 
@@ -137,7 +147,8 @@ for p in proposals:
     p["department_rankings"] = match_department_rankings(p)
     p["matched_policies"] = match_policies(p)
 
-with open(PROPOSALS_PATH, "w", encoding="utf-8") as f:
-    json.dump(proposals, f, ensure_ascii=False, indent=2)
+serialized = json.dumps(proposals, ensure_ascii=False, indent=2) + "\n"
+PROPOSALS_PATH.write_text(serialized, encoding="utf-8")
+FRONTEND_PROPOSALS_PATH.write_text(serialized, encoding="utf-8")
 
-print(f"proposals.json 갱신 완료: {len(proposals)}건 (부서 랭킹 Top 3 및 몽땅정보 연관 혜택 포함)")
+print(f"제안 데이터 2개 경로 동기화 완료: {len(proposals)}건 (부서 랭킹 Top 3 및 몽땅정보 연관 혜택 포함)")

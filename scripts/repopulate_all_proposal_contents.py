@@ -7,7 +7,6 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 MONGTTANG_PATH = BASE_DIR / "frontend" / "src" / "data" / "mongttang.json"
-MOCK_DATA_PATH = BASE_DIR / "frontend" / "src" / "data" / "mockData.ts"
 PROPOSALS_PATH = BASE_DIR / "data" / "final" / "proposals.json"
 
 HEADERS = {
@@ -35,6 +34,18 @@ def fetch_real_body(sn_str: str) -> str:
         pass
     return ""
 
+
+def needs_real_body(item: dict) -> bool:
+    title = (item.get("title") or item.get("TITLE") or "").strip()
+    content = (item.get("content") or item.get("CONTENT") or "").strip()
+    return (
+        not content
+        or content == title
+        or len(content) < 30
+        or "접수된 시민 정책 제안입니다" in content
+        or "국민신문고를 통해 접수된" in content
+    )
+
 def main():
     print("=" * 60)
     print("상상대로 서울 824건 전체 실제 시민 작성 원문 본문 100% 복구")
@@ -48,46 +59,21 @@ def main():
 
     for i, item in enumerate(items):
         sn = item.get("SN") or item.get("id", "").replace("PROP-", "")
-        old_content = (item.get("content") or item.get("CONTENT") or "").strip()
-
-        # Fetch real web content if empty or short (< 20 chars)
-        if len(old_content) < 20:
+        if needs_real_body(item):
             real_text = fetch_real_body(sn)
-            if real_text:
+            if real_text and len(real_text) >= 30:
                 item["content"] = real_text
                 item["CONTENT"] = real_text
                 updated_count += 1
                 print(f"[{i+1}/{total}] SN {sn} 원문 복구 성공: {real_text[:40]}...")
                 time.sleep(0.05)
             else:
-                fallback_title = item.get("title") or item.get("TITLE") or ""
-                item["content"] = fallback_title
-                item["CONTENT"] = fallback_title
+                print(f"[{i+1}/{total}] SN {sn} 원문 복구 실패: 기존 값 유지")
 
-    with open(MONGTTANG_PATH, "w", encoding="utf-8") as f:
-        json.dump(items, f, ensure_ascii=False, indent=2)
-    print(f"\n{MONGTTANG_PATH} 원문 복구 완료! (총 {updated_count}건 웹 원문 추가 동기화)")
-
-    if PROPOSALS_PATH.exists():
-        with open(PROPOSALS_PATH, "w", encoding="utf-8") as f:
-            json.dump(items, f, ensure_ascii=False, indent=2)
-
-    # Sync mockData.ts
-    with open(MOCK_DATA_PATH, "r", encoding="utf-8") as f:
-        mock_code = f.read()
-
-    id_content_map = { (it.get("id") or f"PROP-{int(float(it.get('SN', 0)))}"): (it.get("content") or "") for it in items if it.get("id") or it.get("SN") }
-
-    for p_id, content in id_content_map.items():
-        if not content:
-            continue
-        escaped_content = json.dumps(content)[1:-1]
-        pattern = re.compile(rf'("id":\s*"{re.escape(p_id)}",[\s\S]*?"content":\s*")([^"]*)(")')
-        mock_code = pattern.sub(lambda m, c=escaped_content: m.group(1) + c + m.group(3), mock_code)
-
-    with open(MOCK_DATA_PATH, "w", encoding="utf-8") as f:
-        f.write(mock_code)
-    print(f"{MOCK_DATA_PATH} mockData.ts 동기화 완료!")
+    serialized = json.dumps(items, ensure_ascii=False, indent=2) + "\n"
+    MONGTTANG_PATH.write_text(serialized, encoding="utf-8")
+    PROPOSALS_PATH.write_text(serialized, encoding="utf-8")
+    print(f"\n제안 원문 데이터 동기화 완료! (총 {updated_count}건 웹 원문 추가)")
 
 if __name__ == "__main__":
     main()

@@ -8,7 +8,6 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 MONGTTANG_PATH = BASE_DIR / "frontend" / "src" / "data" / "mongttang.json"
-MOCK_DATA_PATH = BASE_DIR / "frontend" / "src" / "data" / "mockData.ts"
 PROPOSALS_PATH = BASE_DIR / "data" / "final" / "proposals.json"
 
 HEADERS = {
@@ -64,28 +63,10 @@ def main():
 
     print(f"\n총 {total}건 중 {updated_count}건 웹 원문 수집 완료!")
 
-    with open(MONGTTANG_PATH, "w", encoding="utf-8") as f:
-        json.dump(items, f, ensure_ascii=False, indent=2)
-    if PROPOSALS_PATH.exists():
-        with open(PROPOSALS_PATH, "w", encoding="utf-8") as f:
-            json.dump(items, f, ensure_ascii=False, indent=2)
-
-    # Sync mockData.ts
-    with open(MOCK_DATA_PATH, "r", encoding="utf-8") as f:
-        mock_code = f.read()
-
-    id_content_map = { (it.get("id") or f"PROP-{int(float(it.get('SN', 0)))}"): (it.get("content") or "") for it in items if it.get("id") or it.get("SN") }
-
-    for p_id, content in id_content_map.items():
-        if not content:
-            continue
-        escaped_content = json.dumps(content)[1:-1]
-        pattern = re.compile(rf'("id":\s*"{re.escape(p_id)}",[\s\S]*?"content":\s*")([^"]*)(")')
-        mock_code = pattern.sub(lambda m, c=escaped_content: m.group(1) + c + m.group(3), mock_code)
-
-    with open(MOCK_DATA_PATH, "w", encoding="utf-8") as f:
-        f.write(mock_code)
-    print(f"{MOCK_DATA_PATH} 동기화 완료!")
+    serialized = json.dumps(items, ensure_ascii=False, indent=2) + "\n"
+    MONGTTANG_PATH.write_text(serialized, encoding="utf-8")
+    PROPOSALS_PATH.write_text(serialized, encoding="utf-8")
+    print("프론트엔드/최종 제안 데이터 동기화 완료!")
 
 if __name__ == "__main__":
     main()

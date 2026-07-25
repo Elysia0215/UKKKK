@@ -1,6 +1,10 @@
 import React, { useMemo } from 'react';
 import { PolicyProposal } from '../types';
 import { Calendar, Heart, Layers, GitBranch, Filter, Building, Link2, Sparkles, Sprout } from 'lucide-react';
+import {
+  getProposalDepartmentNames,
+  proposalMatchesDepartment,
+} from '../utils/departments';
 
 export interface FilterState {
   year: string;
@@ -130,7 +134,11 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       if (excludeKey !== 'category2' && filterState.category2 !== '전체' && p.sub_category !== filterState.category2) {
         return false;
       }
-      if (excludeKey !== 'department' && filterState.department !== '전체' && (!p.department || !p.department.includes(filterState.department))) {
+      if (
+        excludeKey !== 'department'
+        && filterState.department !== '전체'
+        && !proposalMatchesDepartment(p, filterState.department)
+      ) {
         return false;
       }
       return true;
@@ -200,8 +208,9 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
     const base = filterProposalsExcept('department');
     const map: Record<string, number> = { 전체: base.length };
     base.forEach(p => {
-      if (p.department && p.department.length > 0) {
-        p.department.forEach(d => {
+      const departmentNames = getProposalDepartmentNames(p);
+      if (departmentNames.length > 0) {
+        departmentNames.forEach(d => {
           map[d] = (map[d] || 0) + 1;
         });
       } else {

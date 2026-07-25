@@ -1,5 +1,6 @@
 import json
 import html
+import os
 import time
 import requests
 from pathlib import Path
@@ -8,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 CIVIL_JSON_PATH = BASE_DIR / "frontend" / "src" / "data" / "civil_requests_all.json"
 FINAL_JSON_PATH = BASE_DIR / "data" / "final" / "civil_requests_all.json"
 
-SERVICE_KEY = "2BOebv4LMSyFeF371dGJhDpzY4s/1CsQeSR5S+CsdwrNKEd5SP+pvZFwrE4yUH/JkIdO+qBzHdMDzNqClrc2Jg=="
+SERVICE_KEY = os.environ.get("DATA_GO_KR_SERVICE_KEY", "")
 ITEM_URL = "https://apis.data.go.kr/1140100/OpenProposalService2/OpenProposalItem"
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 

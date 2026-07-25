@@ -29,6 +29,15 @@ import {
 } from 'lucide-react';
 import { exportToCsv } from '../utils/exportCsv';
 import { formatProposalContent } from '../utils/formatText';
+import {
+  getCollaboratingDepartments,
+  getDepartmentGroup,
+  getPrimaryDepartment,
+  getProposalDepartmentNames,
+  getSortedDepartmentRankings,
+  proposalMatchesAnyDepartment,
+} from '../utils/departments';
+import { getProposalDisplayContent } from '../utils/proposals';
 import rawMongttangData from '../data/mongttang.json';
 import classifiedPolicyData from '../data/classified_policy.json';
 import civilRequestsData from '../data/civil_requests_all.json';
@@ -112,24 +121,7 @@ export const PriorityDetails: React.FC<Props> = ({
   const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(false);
 
   const checkDeptMatch = React.useCallback((p: PolicyProposal, depts: string[]) => {
-    if (depts.includes('전체')) return true;
-    const DEPT_CAT_MAP: Record<string, string> = {
-      '건강임신지원팀': '임신·난임·생식건강',
-      '저출생사업1팀': '출산·산후 초기지원',
-      '저출생사업2팀': '다자녀·양육비·생활지원',
-      '영유아담당관': '보육·돌봄 인프라',
-      '가족지원팀': '일·가정 양립·부모 노동',
-      '주거정비과': '주거·교통·도시생활환경',
-      '가족건강팀': '정보·상담·교육·거버넌스',
-      '아동보호팀': '취약·다양가족 사각지대',
-    };
-    return depts.some(dept => {
-      if (p.department && p.department.includes(dept)) return true;
-      if (p.department_rankings && p.department_rankings.some(r => r.dept_name?.includes(dept))) return true;
-      const cat = DEPT_CAT_MAP[dept];
-      if (cat && p.category === cat) return true;
-      return false;
-    });
+    return proposalMatchesAnyDepartment(p, depts);
   }, []);
 
   React.useEffect(() => {
@@ -203,8 +195,7 @@ export const PriorityDetails: React.FC<Props> = ({
     yearOptions.forEach(y => { if (y !== '전체') counts[y] = 0; });
 
     proposals.forEach(p => {
-      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
-      const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
+      const matchesDept = checkDeptMatch(p, selectedDepts);
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
       const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
@@ -220,7 +211,7 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories, selectedMicroCategory]);
+  }, [proposals, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories, selectedMicroCategory, checkDeptMatch]);
 
   // 몽땅정보 현행 정책 목록
   const mongttangPolicies: MongttangPolicy[] = useMemo(() => {
@@ -457,7 +448,7 @@ export const PriorityDetails: React.FC<Props> = ({
       if (sortBy === 'comment_desc') return gb.totalComments - ga.totalComments;
       return 0;
     });
-  }, [groupedProposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, onlyShow2026Gaps, onlyShowHighVoteNoReply, sortBy]);
+  }, [groupedProposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, onlyShow2026Gaps, onlyShowHighVoteNoReply, sortBy, checkDeptMatch]);
 
   const toggleGroup = (groupId: string) => {
     setExpandedGroups(prev => ({
@@ -507,14 +498,13 @@ export const PriorityDetails: React.FC<Props> = ({
     return ['전체', ...Array.from(set)];
   }, [proposals]);
 
-  // 1순위 주관부서 동적 목록
+  // 실제 R&R에 포함된 담당부서 동적 목록
   const departments: string[] = useMemo(() => {
     const set = new Set<string>();
     proposals.forEach(p => {
-      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0];
-      if (primaryDept) set.add(primaryDept);
+      getProposalDepartmentNames(p).forEach((department) => set.add(department));
     });
-    return ['전체', ...Array.from(set)];
+    return ['전체', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ko'))];
   }, [proposals]);
 
   // --- 타 필터 선택 시 교차 연동 건수 실시간 계산 맵 ---
@@ -524,8 +514,7 @@ export const PriorityDetails: React.FC<Props> = ({
     proposals.forEach(p => {
       const regYear = p.reg_year || '2022이전';
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
-      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
-      const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
+      const matchesDept = checkDeptMatch(p, selectedDepts);
       const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
@@ -537,7 +526,7 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedYears, selectedDepts, selectedCategories, selectedSubCategories, selectedMicroCategory]);
+  }, [proposals, selectedYears, selectedDepts, selectedCategories, selectedSubCategories, selectedMicroCategory, checkDeptMatch]);
 
   // 2) 타 필터 선택에 따른 1차 대분류별 건수 (연도, 부서, 생애주기, 중분류, 세분류 선택 연동)
   const catCounts = useMemo(() => {
@@ -545,8 +534,7 @@ export const PriorityDetails: React.FC<Props> = ({
     proposals.forEach(p => {
       const regYear = p.reg_year || '2022이전';
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
-      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
-      const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
+      const matchesDept = checkDeptMatch(p, selectedDepts);
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
@@ -558,7 +546,7 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedSubCategories, selectedMicroCategory]);
+  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedSubCategories, selectedMicroCategory, checkDeptMatch]);
 
   // 3) 타 필터 선택에 따른 2차 중분류별 건수 (연도, 부서, 생애주기, 대분류, 세분류 선택 연동)
   const subCatCounts = useMemo(() => {
@@ -566,8 +554,7 @@ export const PriorityDetails: React.FC<Props> = ({
     proposals.forEach(p => {
       const regYear = p.reg_year || '2022이전';
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
-      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
-      const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
+      const matchesDept = checkDeptMatch(p, selectedDepts);
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
       const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
       const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
@@ -579,7 +566,7 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedCategories, selectedMicroCategory]);
+  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedCategories, selectedMicroCategory, checkDeptMatch]);
 
   // 3-1) 타 필터 선택에 따른 3차 세분류별 건수 (연도, 부서, 생애주기, 대분류, 중분류 선택 연동)
   const microCatCounts = useMemo(() => {
@@ -587,8 +574,7 @@ export const PriorityDetails: React.FC<Props> = ({
     proposals.forEach(p => {
       const regYear = p.reg_year || '2022이전';
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
-      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
-      const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
+      const matchesDept = checkDeptMatch(p, selectedDepts);
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
       const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
@@ -600,7 +586,7 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories]);
+  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories, checkDeptMatch]);
 
   // 4) 타 필터 선택에 따른 담당부서별 건수 (연도, 생애주기, 대분류, 중분류, 세분류 선택 연동)
   const deptCounts = useMemo(() => {
@@ -613,9 +599,15 @@ export const PriorityDetails: React.FC<Props> = ({
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
       if (matchesYear && matchesFlow && matchesCat && matchesSubCat && matchesMicroCat) {
-        const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
         counts['전체'] = (counts['전체'] || 0) + 1;
-        counts[primaryDept] = (counts[primaryDept] || 0) + 1;
+        const departmentNames = getProposalDepartmentNames(p);
+        if (departmentNames.length === 0) {
+          counts['미지정'] = (counts['미지정'] || 0) + 1;
+        } else {
+          departmentNames.forEach((department) => {
+            counts[department] = (counts[department] || 0) + 1;
+          });
+        }
       }
     });
     return counts;
@@ -686,7 +678,8 @@ export const PriorityDetails: React.FC<Props> = ({
       '댓글수': p.comment_cnt,
       '답변여부': p.reply_yn === 'Y' ? '답변완료' : '미답변',
       '자치구': p.district,
-      '담당부서': Array.isArray(p.department) ? p.department.join('; ') : p.department,
+      '주관부서': getPrimaryDepartment(p)?.dept_name || '미지정',
+      '협조부서': getCollaboratingDepartments(p).map((ranking) => ranking.dept_name).join('; '),
       '원문URL': p.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${p.id.replace('PROP-', '')}`,
       '연동 권익위 민원수': p.related_civil_requests || 0
     }));
@@ -1218,7 +1211,7 @@ export const PriorityDetails: React.FC<Props> = ({
                                 </div>
 
                                 <h5 className="text-sm font-bold text-slate-800 mb-1.5">{item.title}</h5>
-                                <p className="text-xs text-slate-600 leading-relaxed mb-3 whitespace-pre-line">{formatProposalContent(item.content)}</p>
+                                <p className="text-xs text-slate-600 leading-relaxed mb-3 whitespace-pre-line">{formatProposalContent(getProposalDisplayContent(item))}</p>
 
                                 {/* 몽땅정보 현행 정책 대조 뱃지 (전략 1) */}
                                 {(() => {
@@ -1296,7 +1289,9 @@ export const PriorityDetails: React.FC<Props> = ({
                                 {(() => {
                                   const reqs = getMatchingCivilRequests(item);
                                   const isDetailOpen = expandedDetailId === item.id;
-                                  const primaryRank = item.department_rankings && item.department_rankings.length > 0 ? item.department_rankings[0] : null;
+                                  const primaryRank = getPrimaryDepartment(item);
+                                  const collaboratingRanks = getCollaboratingDepartments(item);
+                                  const departmentGroup = getDepartmentGroup(item);
                                   const primaryPolicy = item.matched_policies && item.matched_policies.length > 0 ? item.matched_policies[0] : null;
 
                                   return (
@@ -1304,6 +1299,10 @@ export const PriorityDetails: React.FC<Props> = ({
                                       {/* 기본 요약 1줄 바 (주관부서 1개 + 몽땅혜택 1개 + 국민신문고 뱃지 + 상세토글) */}
                                       <div className="flex flex-wrap items-center justify-between gap-2">
                                         <div className="flex flex-wrap items-center gap-2">
+                                          <span className="text-[10px] bg-indigo-50 text-indigo-700 border border-indigo-200 font-black px-2 py-0.5 rounded flex items-center gap-1">
+                                            <Layers className="w-2.5 h-2.5" />
+                                            [대분류 담당군] {departmentGroup}
+                                          </span>
                                           {primaryRank && (
                                             <span className="text-[10px] bg-blue-600 text-white font-black px-2 py-0.5 rounded flex items-center gap-1 shadow-2xs">
                                               <Building2 className="w-2.5 h-2.5" />
@@ -1359,11 +1358,11 @@ export const PriorityDetails: React.FC<Props> = ({
                                       {/* 토글 클릭 시 펼쳐지는 세부 협조부서 및 몽땅혜택 풀목록 */}
                                       {isDetailOpen && (
                                         <div className="pt-2 border-t border-slate-200/70 space-y-2 animate-fade-in text-[10px]">
-                                          {item.department_rankings && item.department_rankings.length > 1 && (
+                                          {collaboratingRanks.length > 0 && (
                                             <div className="space-y-1">
                                               <span className="font-extrabold text-slate-500 block">🏢 협조 부서 랭킹 (2, 3순위):</span>
                                               <div className="flex flex-wrap gap-1.5">
-                                                {item.department_rankings.slice(1).map(rank => (
+                                                {collaboratingRanks.map(rank => (
                                                   <span key={rank.dept_name} className="bg-slate-200/80 text-slate-700 px-2 py-0.5 rounded font-bold">
                                                     [{rank.role_type}] {rank.dept_name} {rank.phone && `(☎ ${rank.phone})`}
                                                   </span>
@@ -1396,18 +1395,7 @@ export const PriorityDetails: React.FC<Props> = ({
                                   );
                                 })()}
 
-                                <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-100">
-                                  <div className="flex items-center gap-2">
-                                    <span className="text-[10px] text-slate-400 font-semibold uppercase">관련 담당팀</span>
-                                    <div className="flex flex-wrap gap-1">
-                                      {item.department.map(dept => (
-                                        <span key={dept} className="text-[10px] bg-white border border-slate-200 text-slate-600 px-2 py-0.5 rounded flex items-center gap-1">
-                                          <Building2 className="w-2.5 h-2.5 text-slate-400" />
-                                          {dept}
-                                        </span>
-                                      ))}
-                                    </div>
-                                  </div>
+                                <div className="flex flex-wrap items-center justify-end gap-2 pt-2.5 border-t border-slate-100">
                                   <div className="flex items-center gap-3 text-xs text-slate-500 font-mono">
                                     <span className="flex items-center gap-1 text-slate-600 font-semibold">
                                       <ThumbsUp className="w-3.5 h-3.5 text-blue-500" /> 공감 {item.vote_score}
@@ -1495,14 +1483,18 @@ export const PriorityDetails: React.FC<Props> = ({
                     </div>
 
                     <h5 className="text-sm font-bold text-slate-900 mb-1.5">{item.title}</h5>
-                    <p className="text-xs text-slate-600 leading-relaxed mb-3 whitespace-pre-line">{formatProposalContent(item.content)}</p>
+                    <p className="text-xs text-slate-600 leading-relaxed mb-3 whitespace-pre-line">{formatProposalContent(getProposalDisplayContent(item))}</p>
 
                     {/* 몽땅정보 연관 기존 사업 & 부서 랭킹 정보 */}
                     <div className="bg-slate-50 p-3 rounded-lg border border-slate-100 my-2.5 space-y-2 text-xs">
-                      {item.department_rankings && item.department_rankings.length > 0 && (
+                      {getSortedDepartmentRankings(item).length > 0 && (
                         <div className="flex flex-wrap items-center gap-2">
                           <span className="text-[10px] font-bold text-slate-400 uppercase">매칭 부서 R&R:</span>
-                          {item.department_rankings.map(rank => (
+                          <span className="text-[10px] bg-indigo-50 text-indigo-700 border border-indigo-200 px-2 py-0.5 rounded flex items-center gap-1 font-bold">
+                            <Layers className="w-2.5 h-2.5" />
+                            [대분류 담당군] {getDepartmentGroup(item)}
+                          </span>
+                          {getSortedDepartmentRankings(item).map(rank => (
                             <span
                               key={rank.dept_name}
                               className={`text-[10px] px-2 py-0.5 rounded flex items-center gap-1 font-bold ${rank.rank === 1
@@ -1565,18 +1557,7 @@ export const PriorityDetails: React.FC<Props> = ({
                       })()}
                     </div>
 
-                    <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-200/80">
-                      <div className="flex items-center gap-2">
-                        <span className="text-[10px] text-slate-400 font-bold uppercase">담당 유관팀</span>
-                        <div className="flex flex-wrap gap-1">
-                          {item.department.map(dept => (
-                            <span key={dept} className="text-[10px] bg-slate-50 border border-slate-200 text-slate-600 px-2 py-0.5 rounded flex items-center gap-1 font-semibold">
-                              <Building2 className="w-2.5 h-2.5 text-slate-400" />
-                              {dept}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+                    <div className="flex flex-wrap items-center justify-end gap-2 pt-2.5 border-t border-slate-200/80">
                       <div className="flex items-center gap-3 text-xs text-slate-500 font-mono font-bold">
                         <span className="flex items-center gap-1 text-slate-600">
                           <ThumbsUp className="w-3.5 h-3.5 text-blue-500" /> 공감 {item.vote_score}표

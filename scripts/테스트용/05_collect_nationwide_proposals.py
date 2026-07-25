@@ -7,11 +7,12 @@
 출력: data/processed/국민신문고_서울관련_제안.csv
 """
 import requests
+import os
 import pandas as pd
 import time
 from pathlib import Path
 
-SERVICE_KEY = "2BOebv4LMSyFeF371dGJhDpzY4s/1CsQeSR5S+CsdwrNKEd5SP+pvZFwrE4yUH/JkIdO+qBzHdMDzNqClrc2Jg=="
+SERVICE_KEY = os.environ.get("DATA_GO_KR_SERVICE_KEY", "")
 LIST_URL = "https://apis.data.go.kr/1140100/OpenProposalService2/OpenProposalList"
 ITEM_URL = "https://apis.data.go.kr/1140100/OpenProposalService2/OpenProposalItem"
 

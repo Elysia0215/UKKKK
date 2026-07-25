@@ -8,6 +8,10 @@ import { motion, AnimatePresence } from 'motion/react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Line, ComposedChart } from 'recharts';
 import { PolicyCategory, PolicyProposal } from '../types';
 import { KeywordDetailModal } from './KeywordDetailModal';
+import {
+  getPrimaryDepartment,
+  proposalMatchesDepartment,
+} from '../utils/departments';
 
 function cleanKoreanWord(word: string): string {
   const suffixes = [
@@ -82,7 +86,7 @@ function extractRichTopKeywords(proposals: PolicyProposal[], count: number = 30)
 
           // Dept & Cat mapping
           if (!keywordDeptMap[cleaned]) keywordDeptMap[cleaned] = {};
-          const dept = (p.department && p.department[0]) || '저출생사업1팀';
+          const dept = getPrimaryDepartment(p)?.dept_name || '미지정';
           keywordDeptMap[cleaned][dept] = (keywordDeptMap[cleaned][dept] || 0) + 1;
 
           if (!keywordCatMap[cleaned]) keywordCatMap[cleaned] = {};
@@ -184,6 +188,7 @@ export const CategoryDemand: React.FC<Props> = ({
   onSelectDept
 }) => {
   const [selectedProposalId, setSelectedProposalId] = useState<string | null>(null);
+  const [modalProposal, setModalProposal] = useState<PolicyProposal | null>(null); // 원문 상세 미리보기 모달
   const [selectedKeywordModal, setSelectedKeywordModal] = useState<string | null>(null);
   const [selectedKeywordYear, setSelectedKeywordYear] = useState<string>('전체');
   const [selectedTagKeyword, setSelectedTagKeyword] = useState<string | null>(null);
@@ -294,7 +299,10 @@ export const CategoryDemand: React.FC<Props> = ({
       if (filterState.category1 !== '전체' && p.category !== filterState.category1) return false;
       if (filterState.category2 !== '전체' && p.sub_category !== filterState.category2) return false;
       if (filterState.category3 !== '전체' && p.micro_category !== filterState.category3) return false;
-      if (filterState.department !== '전체' && (!p.department || !p.department.includes(filterState.department))) return false;
+      if (
+        filterState.department !== '전체'
+        && !proposalMatchesDepartment(p, filterState.department)
+      ) return false;
 
       return true;
     });
@@ -563,12 +571,16 @@ export const CategoryDemand: React.FC<Props> = ({
                 return (
                   <div
                     key={prop.id}
-                    onClick={() => setSelectedProposalId(prop.id)}
-                    className={`p-2.5 rounded-lg border transition cursor-pointer flex items-center gap-2.5 ${
+                    onClick={() => {
+                      setSelectedProposalId(prop.id);
+                      setModalProposal(prop);
+                    }}
+                    className={`p-2.5 rounded-lg border transition cursor-pointer flex items-center gap-2.5 hover:scale-[1.01] active:scale-95 ${
                       isActive 
                         ? 'bg-[#0a2351]/5 border-[#0A2351] ring-1 ring-[#0A2351]/20' 
-                        : 'bg-slate-50/80 border-slate-200/70 hover:border-slate-300 hover:bg-white'
+                        : 'bg-slate-50/80 border-slate-200/70 hover:border-blue-400 hover:bg-blue-50/20'
                     }`}
+                    title="클릭하여 제안 원문 상세 보기 및 상상대로 사이트 이동"
                   >
                     <span className={`w-5 h-5 rounded-full font-black text-[10px] flex items-center justify-center flex-shrink-0 ${
                       idx === 0 ? 'bg-amber-100 text-amber-800' :
@@ -579,7 +591,7 @@ export const CategoryDemand: React.FC<Props> = ({
                       {idx + 1}
                     </span>
                     <div className="min-w-0 flex-1">
-                      <h5 className="text-[11.5px] font-bold text-slate-800 line-clamp-1">{prop.title}</h5>
+                      <h5 className="text-[11.5px] font-bold text-slate-800 line-clamp-1 group-hover:text-blue-600">{prop.title}</h5>
                       <div className="flex items-center gap-2 mt-0.5 text-[9.5px] text-slate-500 font-bold">
                         <span>{prop.district}</span>
                         <span>•</span>
@@ -587,7 +599,7 @@ export const CategoryDemand: React.FC<Props> = ({
                       </div>
                     </div>
                     <div className="text-right flex-shrink-0">
-                      <span className="text-[11px] font-bold text-slate-700 font-mono flex items-center gap-1 bg-white border border-slate-200 px-1.5 py-0.5 rounded">
+                      <span className="text-[11px] font-bold text-slate-700 font-mono flex items-center gap-1 bg-white border border-slate-200 px-1.5 py-0.5 rounded shadow-2xs">
                         <ThumbsUp className="w-2.5 h-2.5 text-blue-500" />
                         {prop.vote_score}표
                       </span>
@@ -606,6 +618,109 @@ export const CategoryDemand: React.FC<Props> = ({
         proposals={proposals}
         onClose={() => setSelectedKeywordModal(null)}
       />
+
+      {/* 팝업 모달: 선택한 시민 제안 원문 상세 보기 & 상상대로 사이트 이동 */}
+      <AnimatePresence>
+        {modalProposal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 p-4 backdrop-blur-xs animate-fade-in">
+            <motion.div 
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              className="bg-white rounded-2xl max-w-2xl w-full border border-slate-200 shadow-2xl overflow-hidden flex flex-col max-h-[85vh]"
+            >
+              {/* 모달 헤더 */}
+              <div className="bg-[#0A2351] text-white p-4.5 px-6 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs bg-blue-600 text-white font-bold px-2 py-0.5 rounded">시민 제안 원문</span>
+                  <span className="text-xs text-blue-200 font-mono font-bold">{modalProposal.id}</span>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setModalProposal(null)}
+                  className="text-slate-300 hover:text-white transition cursor-pointer p-1"
+                >
+                  ✕
+                </button>
+              </div>
+
+              {/* 모달 본문 */}
+              <div className="p-6 overflow-y-auto space-y-4">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-xs font-black bg-blue-50 text-blue-800 border border-blue-200 px-2.5 py-0.5 rounded-full">
+                    {modalProposal.category}
+                  </span>
+                  {modalProposal.sub_category && (
+                    <span className="text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-200 px-2.5 py-0.5 rounded-full">
+                      {modalProposal.sub_category}
+                    </span>
+                  )}
+                  <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2.5 py-0.5 rounded-full">
+                    📍 자치구: {modalProposal.district}
+                  </span>
+                </div>
+
+                <h3 className="text-lg font-black text-slate-900 leading-snug">
+                  {modalProposal.title}
+                </h3>
+
+                <div className="flex flex-wrap items-center justify-between gap-2 p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs text-slate-600">
+                  <div className="flex items-center gap-4 font-mono font-semibold">
+                    <span>📅 등록일: {modalProposal.reg_date || '2026.05.12'}</span>
+                    <span className="flex items-center gap-1 text-blue-700 font-extrabold">
+                      <ThumbsUp className="w-3.5 h-3.5" /> 공감 {modalProposal.vote_score}표
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-1 font-bold text-slate-700">
+                    <span>🏢 소관 부서: {Array.isArray(modalProposal.department) ? modalProposal.department.join(', ') : modalProposal.department}</span>
+                  </div>
+                </div>
+
+                <div className="space-y-1.5 pt-2">
+                  <span className="text-xs font-black text-slate-700 block">📝 시민 제안 본문 내용</span>
+                  <div className="p-4 bg-slate-50/80 rounded-xl border border-slate-200 text-xs text-slate-800 leading-relaxed whitespace-pre-line font-normal">
+                    {modalProposal.content}
+                  </div>
+                </div>
+
+                {/* 몽땅정보 연관 혜택 정보 */}
+                {modalProposal.matched_policies && modalProposal.matched_policies.length > 0 && (
+                  <div className="p-3 bg-emerald-50/60 rounded-xl border border-emerald-200/80 space-y-1 text-xs">
+                    <span className="font-extrabold text-emerald-800 block">🎁 몽땅정보통 연관 공식 정책 혜택 ({modalProposal.matched_policies.length}건):</span>
+                    <div className="flex flex-wrap gap-1.5 pt-1">
+                      {modalProposal.matched_policies.map(pol => (
+                        <span key={pol.policy_id} className="bg-white text-emerald-900 border border-emerald-300 px-2 py-0.5 rounded font-bold text-[11px]">
+                          {pol.policy_name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* 모달 하단 액션 버튼 */}
+              <div className="p-4 bg-slate-50 border-t border-slate-200 flex items-center justify-between gap-3">
+                <button
+                  type="button"
+                  onClick={() => setModalProposal(null)}
+                  className="px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 font-bold text-xs rounded-xl transition cursor-pointer"
+                >
+                  닫기
+                </button>
+                <a
+                  href={modalProposal.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${modalProposal.id.replace('PROP-', '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 bg-[#0A2351] hover:bg-blue-900 text-white font-black text-xs rounded-xl shadow-md transition cursor-pointer flex items-center gap-2 active:scale-95"
+                >
+                  <span>🔗 서울시 상상대로 원문 사이트 방문하기 (새 창)</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

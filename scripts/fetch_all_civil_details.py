@@ -1,4 +1,5 @@
 import json
+import os
 import time
 import requests
 from pathlib import Path
@@ -14,7 +15,7 @@ collect_module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(collect_module)
 classify_birth_policy_category = collect_module.classify_birth_policy_category
 
-SERVICE_KEY = "2BOebv4LMSyFeF371dGJhDpzY4s/1CsQeSR5S+CsdwrNKEd5SP+pvZFwrE4yUH/JkIdO+qBzHdMDzNqClrc2Jg=="
+SERVICE_KEY = os.environ.get("DATA_GO_KR_SERVICE_KEY", "")
 ITEM_URL = "https://apis.data.go.kr/1140100/OpenProposalService2/OpenProposalItem"
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 

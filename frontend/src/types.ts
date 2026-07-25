@@ -44,6 +44,7 @@ export interface DepartmentRanking {
   location?: string;
   duty_summary: string;
   matching_reason?: string;
+  score?: number;
 }
 
 export interface MatchedPolicy {

@@ -6,10 +6,11 @@
 """
 import requests
 import pandas as pd
+import os
 import time
 from pathlib import Path
 
-API_KEY = "6a564a7772746e6532306861565169"
+API_KEY = os.environ.get("SEOUL_OPEN_API_KEY", "")
 SERVICE = "ChunmanFreeSuggestions"
 BASE_URL = f"http://openapi.seoul.go.kr:8088/{API_KEY}/json/{SERVICE}"
 

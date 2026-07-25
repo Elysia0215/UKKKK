@@ -3,7 +3,6 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 MONGTTANG_PATH = BASE_DIR / "frontend" / "src" / "data" / "mongttang.json"
-MOCK_DATA_PATH = BASE_DIR / "frontend" / "src" / "data" / "mockData.ts"
 PROPOSALS_PATH = BASE_DIR / "data" / "final" / "proposals.json"
 
 SEOUL_DISTRICTS = [
@@ -75,30 +74,11 @@ def main():
             item["district"] = assigned
             balanced_count += 1
 
-    with open(MONGTTANG_PATH, "w", encoding="utf-8") as f:
-        json.dump(items, f, ensure_ascii=False, indent=2)
+    serialized = json.dumps(items, ensure_ascii=False, indent=2) + "\n"
+    MONGTTANG_PATH.write_text(serialized, encoding="utf-8")
     print(f"{MONGTTANG_PATH} 자치구 재배치 완료! (직접장소: {explicit_count}건, 자치구 균등배분: {balanced_count}건)")
-
-    if PROPOSALS_PATH.exists():
-        with open(PROPOSALS_PATH, "w", encoding="utf-8") as f:
-            json.dump(items, f, ensure_ascii=False, indent=2)
-
-    # mockData.ts 파일 내 district 속성 갱신
-    with open(MOCK_DATA_PATH, "r", encoding="utf-8") as f:
-        mock_code = f.read()
-
-    id_dist_map = { (it.get("id") or f"PROP-{int(float(it.get('SN', 0)))}"): it.get("district") for it in items if it.get("id") or it.get("SN") }
-
-    import re
-    for p_id, dist in id_dist_map.items():
-        if not dist:
-            continue
-        pattern = re.compile(rf'("id":\s*"{re.escape(p_id)}",[\s\S]*?"district":\s*")([^"]+)(")')
-        mock_code = pattern.sub(rf'\g<1>{dist}\g<3>', mock_code)
-
-    with open(MOCK_DATA_PATH, "w", encoding="utf-8") as f:
-        f.write(mock_code)
-    print(f"{MOCK_DATA_PATH} 자치구 동기화 완료!")
+    PROPOSALS_PATH.write_text(serialized, encoding="utf-8")
+    print("프론트엔드/최종 제안 데이터 동기화 완료!")
 
 if __name__ == "__main__":
     main()

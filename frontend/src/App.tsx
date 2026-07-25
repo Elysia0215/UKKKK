@@ -30,6 +30,10 @@ import {
 } from 'lucide-react';
 import rawMongttangData from './data/mongttang.json';
 import { PolicyProposal, DashboardStats } from './types';
+import {
+  DEPARTMENT_GROUPS,
+  proposalMatchesDepartmentGroup,
+} from './utils/departments';
 
 const initialProposals = rawMongttangData as unknown as PolicyProposal[];
 import { DashboardOverview } from './components/DashboardOverview';
@@ -115,18 +119,9 @@ export default function App() {
   // 부서 필터링된 제안 목록 (여러 탭에서 공유)
   const deptFilteredProposals = useMemo(() => {
     if (!selectedDept) return mockProposals;
-    const DEPT_CATEGORY_MAP: Record<string, (p: PolicyProposal) => boolean> = {
-      '건강임신지원팀': p => p.category === '임신·난임·생식건강',
-      '저출생사업1팀': p => p.category === '출산·산후 초기지원',
-      '저출생사업2팀': p => p.category === '다자녀·양육비·생활지원',
-      '영유아담당관': p => p.category === '보육·돌봄 인프라',
-      '가족지원팀': p => p.category === '일·가정 양립·부모 노동',
-      '주거정비과': p => p.category === '주거·교통·도시생활환경',
-      '가족건강팀': p => p.category === '정보·상담·교육·거버넌스',
-      '아동보호팀': p => p.category === '취약·다양가족 사각지대',
-    };
-    const filterFn = DEPT_CATEGORY_MAP[selectedDept];
-    return filterFn ? mockProposals.filter(filterFn) : mockProposals;
+    return mockProposals.filter((proposal) => (
+      proposalMatchesDepartmentGroup(proposal, selectedDept)
+    ));
   }, [mockProposals, selectedDept]);
 
   // 실시간 통계 연산
@@ -143,7 +138,7 @@ export default function App() {
       unansweredCount,
       unansweredRate
     };
-  }, []);
+  }, [mockProposals]);
 
   const publicStats = useMemo(() => {
     const totalProposals = mockProposals.length;
@@ -280,17 +275,8 @@ export default function App() {
               onChange={(e) => setSelectedDept(e.target.value || null)}
               className="bg-transparent text-white font-bold text-xs focus:outline-none cursor-pointer pr-1"
             >
-              <option value="" className="bg-[#0A2351] text-slate-300">🏢 전체 부서 (R&R 통합)</option>
-              {[
-                '건강임신지원팀',
-                '저출생사업1팀',
-                '저출생사업2팀',
-                '영유아담당관',
-                '가족지원팀',
-                '주거정비과',
-                '가족건강팀',
-                '아동보호팀'
-              ].map((dept) => (
+              <option value="" className="bg-[#0A2351] text-slate-300">🏷️ 전체 대분류 담당군</option>
+              {DEPARTMENT_GROUPS.map((dept) => (
                 <option key={dept} value={dept} className="bg-[#0A2351] text-white">
                   🏢 {dept}
                 </option>
@@ -413,12 +399,11 @@ export default function App() {
               >
             {activeTab === 0 && (
               <DashboardOverview 
-                proposals={mockProposals}
+                proposals={deptFilteredProposals}
                 stats={stats}
                 onNavigateToTab={handleNavigateToTab}
                 onSelectCategory={handleSelectCategoryFromOverview}
                 selectedDept={selectedDept}
-                onSelectDept={setSelectedDept}
               />
             )}
 
@@ -429,19 +414,15 @@ export default function App() {
                 proposals={deptFilteredProposals}
                 selectedCategory={selectedCategory}
                 onSelectCategory={setSelectedCategory}
-                selectedDept={selectedDept}
-                onSelectDept={setSelectedDept}
               />
             )}
 
             {activeTab === 3 && (
               <PriorityDetails
-                proposals={mockProposals}
+                proposals={deptFilteredProposals}
                 initialCategory={selectedCategory || undefined}
                 initialSubCategory={selectedSubCategory || undefined}
                 initialClusterId={selectedClusterId || undefined}
-                selectedDept={selectedDept || undefined}
-                onSelectDept={setSelectedDept}
               />
             )}
 

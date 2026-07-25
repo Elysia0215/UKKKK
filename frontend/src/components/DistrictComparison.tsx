@@ -23,6 +23,8 @@ import { districtStats } from '../data/mockData';
 import { districtMapLayout } from '../data/seoul_districts_geo';
 import { exportToCsv } from '../utils/exportCsv';
 import { formatProposalContent } from '../utils/formatText';
+import { getPrimaryDepartment } from '../utils/departments';
+import { getProposalDisplayContent } from '../utils/proposals';
 
 interface Props {
   proposals: PolicyProposal[];
@@ -469,17 +471,15 @@ export const DistrictComparison: React.FC<Props> = ({
                     </div>
 
                     <h5 className="text-sm font-bold text-slate-800 mb-1.5">{prop.title}</h5>
-                    <p className="text-xs text-slate-600 leading-relaxed mb-3 whitespace-pre-line">{prop.content}</p>
+                    <p className="text-xs text-slate-600 leading-relaxed mb-3 whitespace-pre-line">{getProposalDisplayContent(prop)}</p>
 
                     <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-100">
                       <div className="flex items-center gap-2">
                         <span className="text-[10px] text-slate-400 font-semibold uppercase">배정부서</span>
                         <div className="flex flex-wrap gap-1">
-                          {prop.department.map(dept => (
-                            <span key={dept} className="text-[10px] bg-white border border-slate-200 text-slate-600 px-2 py-0.5 rounded">
-                              {dept}
-                            </span>
-                          ))}
+                          <span className="text-[10px] bg-blue-50 border border-blue-200 text-blue-700 px-2 py-0.5 rounded">
+                            주관: {getPrimaryDepartment(prop)?.dept_name || '미지정'}
+                          </span>
                         </div>
                       </div>
                       <div className="flex items-center gap-3 text-xs text-slate-500 font-mono">
