@@ -11,6 +11,7 @@ import ast
 import pandas as pd
 from pathlib import Path
 from proposal_quality import normalize_policy_tags, prepare_proposals, validate_proposals
+from pipeline_hooks import rebuild_proposal_connections
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 IN_PATH = BASE_DIR / "data" / "processed" / "상상대로_서울_출산육아_분류완료_v2.csv"
@@ -135,3 +136,5 @@ if __name__ == "__main__":
     print(f"proposals.json 저장 완료: {len(proposals)}건 (url 필드 포함)")
     print("dashboard_stats.json:", stats)
     print(f"district_stats.json 저장 완료: {len(district_stats)}개 자치구")
+    rebuild_proposal_connections()
+    print("분류·R&R·정책 후보 및 프론트엔드 JSON 자동 동기화 완료!")

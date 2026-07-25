@@ -15,6 +15,10 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
 
+from proposal_quality import (
+    classify_birth_policy_category,
+    is_safe_policy_match,
+)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 FRONTEND_PATH = BASE_DIR / "frontend" / "src" / "data" / "mongttang.json"
@@ -64,6 +68,19 @@ EXPECTED_TAXONOMY_HINTS = (
     (("어린이집", "유치원", "돌봄", "보육"), "보육·돌봄 인프라"),
     (("다자녀", "양육비", "아동수당", "부모급여"), "다자녀·양육비·생활지원"),
 )
+
+SPECIALIZED_DEPARTMENT_TERMS = {
+    "다문화지원팀": (
+        "다문화", "다문화가족", "결혼이민", "결혼이주", "이주여성",
+        "외국인주민", "외국인가족", "중도입국", "통번역", "다누리",
+    ),
+    "장애인가족지원팀": (
+        "장애인", "장애아", "장애", "발달장애", "특수교육", "특수학교", "휠체어",
+    ),
+    "고령사회정책팀": (
+        "노인", "어르신", "고령", "노약자", "경로",
+    ),
+}
 
 
 def normalize(value: Any) -> str:
@@ -195,10 +212,23 @@ def load_policies() -> list[dict[str, str]]:
     for row in rows:
         name = normalize(row.get("biz_nm") or row.get("사업명"))
         if name:
+            content = " ".join(
+                normalize(row.get(field))
+                for field in (
+                    "사업내용", "지원대상", "이용대상", "사업대상",
+                    "사업대분류명", "사업중분류명", "사업소분류명",
+                    "Category", "Department",
+                )
+            )
             policies.append(
                 {
                     "name": name,
                     "department": normalize(row.get("Department")),
+                    "content": content,
+                    "major_category": classify_birth_policy_category(
+                        name,
+                        content,
+                    )[0],
                 }
             )
     return policies
@@ -284,14 +314,17 @@ def audit() -> tuple[list[dict[str, Any]], dict[str, Any]]:
         if placeholder and local_body and local_body[0] == title:
             add_issue(issues, item, "CONTENT_RECOVERABLE", "high", f"{local_body[2]}에서 {len(local_body[1])}자 본문 복구 가능", "제목·ID 검증 후 본문 복원")
 
-        if item_id in exclusions:
+        if (
+            item_id in exclusions
+            and item.get("connection_status") != "out_of_scope"
+        ):
             add_issue(issues, item, "CORRECTED_EXCLUSION_STALE", "high", exclusions[item_id], "최종 데이터에서 제외 또는 별도 범위 밖 보관")
 
         outside, outside_reason = is_outside_scope(title, content)
         if outside:
             add_issue(issues, item, "OUT_OF_SCOPE", "high", outside_reason, "출산·양육 분석 및 공백 집계에서 제외")
 
-        expected_category = taxonomy_hint(title, content)
+        expected_category = classify_birth_policy_category(title, content)[0]
         actual_category = normalize(item.get("category"))
         if expected_category and expected_category != actual_category:
             add_issue(
@@ -308,25 +341,89 @@ def audit() -> tuple[list[dict[str, Any]], dict[str, Any]]:
             add_issue(issues, item, "DEPARTMENT_UNVERIFIABLE", "high", "본문 없이 주관·협조부서가 지정됨", "원문 복구 전 부서 판정 보류")
         if outside and (item.get("department") or departments):
             add_issue(issues, item, "DEPARTMENT_OUT_OF_SCOPE", "high", "범위 밖 제안에 출산 관련 부서가 연결됨", "소관 분야 재분류")
+        for ranking in departments:
+            if ranking.get("rank", 0) > 1 and int(ranking.get("score") or 0) < 40:
+                add_issue(
+                    issues,
+                    item,
+                    "DEPARTMENT_WEAK_EVIDENCE",
+                    "medium",
+                    (
+                        f"{ranking.get('dept_name')} 협조후보 점수 "
+                        f"{ranking.get('score')}"
+                    ),
+                    "일반어 기반 협조후보 제거",
+                )
+            department_name = normalize(ranking.get("dept_name"))
+            required_terms = SPECIALIZED_DEPARTMENT_TERMS.get(department_name)
+            if (
+                ranking.get("rank", 0) > 1
+                and required_terms
+                and not any(term in title for term in required_terms)
+            ):
+                add_issue(
+                    issues,
+                    item,
+                    "DEPARTMENT_CONTEXT_MISMATCH",
+                    "high",
+                    f"제목에 고유 문맥 없이 {department_name} 협조후보가 연결됨",
+                    "제목의 명시적 소관 문맥이 없으면 특수 협조후보 제거",
+                )
 
         stored_policies = item.get("matched_policies") or []
         if placeholder and stored_policies:
             add_issue(issues, item, "POLICY_UNVERIFIABLE", "high", "본문 없이 현행 정책이 저장 연결됨", "정책 연결 제거·보류")
 
-        if not placeholder and not outside:
-            policy_name, shared_count = best_policy_match(title, content, policies)
-            if stored_policies:
-                stored_names = {
-                    normalize(policy.get("policy_name")) for policy in stored_policies
-                }
-                if policy_name and policy_name not in stored_names:
+        if not placeholder and not outside and stored_policies:
+            policies_by_name = {policy["name"]: policy for policy in policies}
+            proposal_is_multi_child = any(
+                term in f"{title} {content}"
+                for term in ("다둥이", "다자녀", "자녀의 수", "자녀 수")
+            )
+            for stored_policy in stored_policies:
+                stored_name = normalize(stored_policy.get("policy_name"))
+                reference = policies_by_name.get(stored_name)
+                if reference is None:
                     add_issue(
                         issues,
                         item,
-                        "POLICY_REVIEW",
+                        "POLICY_REFERENCE_MISSING",
+                        "high",
+                        f"저장 정책이 공식 정책 원본에 없음: {stored_name}",
+                        "정책 원본 ID·이름 재동기화",
+                    )
+                    continue
+                if reference["major_category"] != actual_category:
+                    add_issue(
+                        issues,
+                        item,
+                        "POLICY_CATEGORY_MISMATCH",
+                        "high",
+                        (
+                            f"제안={actual_category}, 정책="
+                            f"{reference['major_category']}: {stored_name}"
+                        ),
+                        "서로 다른 정책 대분류 연결 제거",
+                    )
+                    continue
+                multi_child_domain_match = (
+                    proposal_is_multi_child
+                    and any(
+                        term in stored_name
+                        for term in ("다둥이", "다자녀", "세자녀", "자녀 2명", "자녀 3명")
+                    )
+                )
+                if not (
+                    is_safe_policy_match(title, content, stored_name)
+                    or multi_child_domain_match
+                ):
+                    add_issue(
+                        issues,
+                        item,
+                        "POLICY_WEAK_EVIDENCE",
                         "medium",
-                        f"저장 정책과 안전 매칭 후보 불일치; 후보={policy_name}, 핵심어={shared_count}개",
-                        "정책 목적·대상·수단 수동 확인",
+                        f"정책명 직접 근거가 약함: {stored_name}",
+                        "직접 핵심어 또는 영역별 강한 근거가 없으면 연결 보류",
                     )
 
     type_counts = Counter(issue["issue_type"] for issue in issues)

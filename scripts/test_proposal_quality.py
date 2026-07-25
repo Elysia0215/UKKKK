@@ -77,6 +77,22 @@ class ProposalQualityTests(unittest.TestCase):
         self.assertEqual(item["department_rankings"], [])
         self.assertEqual(item["matched_policies"], [])
 
+    def test_curated_scope_exclusion_survives_rebuild(self) -> None:
+        item = {
+            "id": "PROP-1",
+            "title": "어린이 보호구역 속도 제한",
+            "content": "일반 교통안전 규정을 조정해 달라는 제안입니다.",
+            "department": ["저출생사업1팀"],
+            "department_rankings": [{"rank": 1}],
+            "matched_policies": [{"policy_name": "무관 정책"}],
+            "curated_scope_exclusion_reason": "출산·양육 직접 맥락 부족",
+        }
+        apply_quality_gate(item)
+        self.assertEqual(item["connection_status"], "out_of_scope")
+        self.assertIn("CURATED_OUT_OF_SCOPE", item["quality_flags"])
+        self.assertEqual(item["department_rankings"], [])
+        self.assertEqual(item["matched_policies"], [])
+
     def test_prepare_excludes_out_of_scope(self) -> None:
         prepared = prepare_proposals(
             [
@@ -140,6 +156,29 @@ class ProposalQualityTests(unittest.TestCase):
         normalize_policy_tags(item)
         self.assertEqual(item["category"], "보육·돌봄 인프라")
         self.assertEqual(item["policy_flow"], "영유아기")
+
+    def test_specific_title_intent_beats_generic_birth_wording(self) -> None:
+        self.assertEqual(
+            classify_birth_policy_category(
+                "다둥이카드 지원대상 확대",
+                "저출산 대책으로 출산 지원을 강화해 주세요.",
+            )[0],
+            "다자녀·양육비·생활지원",
+        )
+        self.assertEqual(
+            classify_birth_policy_category(
+                "임산부 스마트 배려 뱃지 도입",
+                "임신과 출산을 지원하는 교통 정책입니다.",
+            )[0],
+            "주거·교통·도시생활환경",
+        )
+        self.assertEqual(
+            classify_birth_policy_category(
+                "서울시 초등돌봄센터 이용대상 확대",
+                "출산율 제고를 위해 맞벌이 가정의 돌봄을 지원합니다.",
+            )[0],
+            "보육·돌봄 인프라",
+        )
 
 
 if __name__ == "__main__":

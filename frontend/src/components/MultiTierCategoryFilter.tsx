@@ -22,6 +22,7 @@ interface Props {
   filterState: FilterState;
   onFilterChange: (newState: FilterState) => void;
   departmentMatchMode?: 'primary' | 'any';
+  forcedCategory?: string | null;
 }
 
 // 100% 하드코딩 정밀 룩업 매핑 (2차 중분류 ➔ 1차 대분류 & 생애주기)
@@ -85,23 +86,23 @@ export const SUB_TO_PARENT_MAP: Record<string, { cat1: string; lifecycle: string
 export const CAT1_TO_LIFECYCLE: Record<string, string> = {
   '임신·난임·생식건강': '임신 전·임신 중',
   '출산·산후 초기지원': '출산 직후',
-  '보육·돌봄 인프라': '영유아·초등 돌봄',
-  '다자녀·양육비·생활지원': '양육기 생활지원',
+  '보육·돌봄 인프라': '영유아기',
+  '다자녀·양육비·생활지원': '양육기',
   '주거·교통·도시생활환경': '도시생활 기반',
   '일·가정 양립·부모 노동': '부모 노동·돌봄 병행',
   '취약·다양가족 사각지대': '사각지대 보호',
-  '정보·상담·교육·거버넌스': '공통 행정·정보',
+  '정보·상담·교육·거버넌스': '전 주기 정보·상담',
 };
 
 export const LIFECYCLE_TO_CAT1: Record<string, string> = {
   '임신 전·임신 중': '임신·난임·생식건강',
   '출산 직후': '출산·산후 초기지원',
-  '영유아·초등 돌봄': '보육·돌봄 인프라',
-  '양육기 생활지원': '다자녀·양육비·생활지원',
+  '영유아기': '보육·돌봄 인프라',
+  '양육기': '다자녀·양육비·생활지원',
   '도시생활 기반': '주거·교통·도시생활환경',
   '부모 노동·돌봄 병행': '일·가정 양립·부모 노동',
   '사각지대 보호': '취약·다양가족 사각지대',
-  '공통 행정·정보': '정보·상담·교육·거버넌스',
+  '전 주기 정보·상담': '정보·상담·교육·거버넌스',
 };
 
 const sortKoreanWithTotalFirst = (a: [string, number], b: [string, number]) => {
@@ -115,9 +116,13 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
   filterState,
   onFilterChange,
   departmentMatchMode = 'primary',
+  forcedCategory = null,
 }) => {
   const [isCat2Expanded, setIsCat2Expanded] = React.useState<boolean>(false);
-  const hasParentFilter = filterState.category1 !== '전체' || filterState.lifecycle !== '전체';
+  const forcedLifecycle = forcedCategory ? CAT1_TO_LIFECYCLE[forcedCategory] || null : null;
+  const effectiveCategory1 = forcedCategory || filterState.category1;
+  const effectiveLifecycle = forcedLifecycle || filterState.lifecycle;
+  const hasParentFilter = effectiveCategory1 !== '전체' || effectiveLifecycle !== '전체';
 
   // 공통 헬퍼: 특정한 필터 축들을 제외하고 나머지 조건으로 필터링된 proposals 반환
   const filterProposalsExcept = (excludeKey?: keyof FilterState) => {
@@ -129,10 +134,10 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
         if (filterState.year === '2023' && !p.reg_date?.startsWith('2023')) return false;
         if (filterState.year === '2022이전' && (!p.reg_date || p.reg_date >= '2023')) return false;
       }
-      if (excludeKey !== 'lifecycle' && filterState.lifecycle !== '전체' && p.policy_flow !== filterState.lifecycle) {
+      if (excludeKey !== 'lifecycle' && effectiveLifecycle !== '전체' && p.policy_flow !== effectiveLifecycle) {
         return false;
       }
-      if (excludeKey !== 'category1' && filterState.category1 !== '전체' && p.category !== filterState.category1) {
+      if (excludeKey !== 'category1' && effectiveCategory1 !== '전체' && p.category !== effectiveCategory1) {
         return false;
       }
       if (excludeKey !== 'category2' && filterState.category2 !== '전체' && p.sub_category !== filterState.category2) {
@@ -163,7 +168,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       '2022이전': base.filter(p => p.reg_date && p.reg_date < '2023').length,
     };
     return counts;
-  }, [proposals, filterState, departmentMatchMode]);
+  }, [proposals, filterState, departmentMatchMode, effectiveCategory1, effectiveLifecycle]);
 
   // 2. 생애주기 수량 (생애주기 축 제외 나머지 조건 교차 적용)
   const lifecycleCounts = useMemo(() => {
@@ -174,7 +179,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       map[flow] = (map[flow] || 0) + 1;
     });
     return map;
-  }, [proposals, filterState, departmentMatchMode]);
+  }, [proposals, filterState, departmentMatchMode, effectiveCategory1, effectiveLifecycle]);
 
   // 3. 1차 대분류 수량 (대분류 축 제외 나머지 조건 교차 적용)
   const cat1Counts = useMemo(() => {
@@ -185,7 +190,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       map[cat] = (map[cat] || 0) + 1;
     });
     return map;
-  }, [proposals, filterState, departmentMatchMode]);
+  }, [proposals, filterState, departmentMatchMode, effectiveCategory1, effectiveLifecycle]);
 
   // 4. 2차 중분류 수량 (중분류 축 제외 나머지 조건 교차 적용)
   const cat2Counts = useMemo(() => {
@@ -196,7 +201,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       map[sub] = (map[sub] || 0) + 1;
     });
     return map;
-  }, [proposals, filterState, departmentMatchMode]);
+  }, [proposals, filterState, departmentMatchMode, effectiveCategory1, effectiveLifecycle]);
 
   // 5. 3차 세분류 수량
   const cat3Counts = useMemo(() => {
@@ -207,7 +212,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       map[micro] = (map[micro] || 0) + 1;
     });
     return map;
-  }, [proposals, filterState, departmentMatchMode]);
+  }, [proposals, filterState, departmentMatchMode, effectiveCategory1, effectiveLifecycle]);
 
   // 6. 담당부서 수량 (부서 축 제외 나머지 조건 교차 적용)
   const deptCounts = useMemo(() => {
@@ -226,24 +231,24 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       }
     });
     return map;
-  }, [proposals, filterState, departmentMatchMode]);
+  }, [proposals, filterState, departmentMatchMode, effectiveCategory1, effectiveLifecycle]);
 
   const activeFilterCount = useMemo(() => {
     let count = 0;
     if (filterState.year !== '전체년') count++;
-    if (filterState.lifecycle !== '전체') count++;
-    if (filterState.category1 !== '전체') count++;
+    if (effectiveLifecycle !== '전체') count++;
+    if (effectiveCategory1 !== '전체') count++;
     if (filterState.category2 !== '전체') count++;
     if (filterState.category3 !== '전체') count++;
     if (filterState.department !== '전체') count++;
     return count;
-  }, [filterState]);
+  }, [filterState, effectiveCategory1, effectiveLifecycle]);
 
   const handleReset = () => {
     onFilterChange({
       year: '전체년',
-      lifecycle: '전체',
-      category1: '전체',
+      lifecycle: forcedLifecycle || '전체',
+      category1: forcedCategory || '전체',
       category2: '전체',
       category3: '전체',
       department: '전체',
@@ -252,6 +257,16 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
 
   // 생애주기 클릭 핸들러 (1차 대분류 자동 선택 동기화)
   const handleLifecycleClick = (lf: string) => {
+    if (forcedLifecycle) {
+      onFilterChange({
+        ...filterState,
+        lifecycle: forcedLifecycle,
+        category1: forcedCategory || filterState.category1,
+        category2: '전체',
+        category3: '전체',
+      });
+      return;
+    }
     if (lf === '전체' || filterState.lifecycle === lf) {
       onFilterChange({
         ...filterState,
@@ -274,6 +289,16 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
 
   // 1차 대분류 클릭 핸들러 (전체 선택 시 생애주기도 함께 '전체'로 동기화 리셋)
   const handleCat1Click = (cat: string) => {
+    if (forcedCategory) {
+      onFilterChange({
+        ...filterState,
+        category1: forcedCategory,
+        category2: '전체',
+        category3: '전체',
+        lifecycle: forcedLifecycle || filterState.lifecycle,
+      });
+      return;
+    }
     if (cat === '전체' || filterState.category1 === cat) {
       onFilterChange({
         ...filterState,
@@ -387,10 +412,10 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1">
           {Object.entries(lifecycleCounts)
-            .filter(([lf, count]: [string, number]) => lf === '전체' || count > 0 || filterState.lifecycle === lf)
+            .filter(([lf, count]: [string, number]) => lf === '전체' || count > 0 || effectiveLifecycle === lf)
             .sort(sortKoreanWithTotalFirst)
             .map(([lf, count]) => {
-              const isSelected = filterState.lifecycle === lf;
+              const isSelected = effectiveLifecycle === lf;
               return (
                 <button
                   key={lf}
@@ -415,10 +440,10 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
         </div>
         <div className="flex flex-wrap gap-1.5 flex-1">
           {Object.entries(cat1Counts)
-            .filter(([cat, count]: [string, number]) => cat === '전체' || count > 0 || filterState.category1 === cat)
+            .filter(([cat, count]: [string, number]) => cat === '전체' || count > 0 || effectiveCategory1 === cat)
             .sort(sortKoreanWithTotalFirst)
             .map(([cat, count]) => {
-              const isSelected = filterState.category1 === cat;
+              const isSelected = effectiveCategory1 === cat;
               return (
                 <button
                   key={cat}

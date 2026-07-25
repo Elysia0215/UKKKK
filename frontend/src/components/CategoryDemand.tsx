@@ -487,6 +487,7 @@ export const CategoryDemand: React.FC<Props> = ({
         filterState={filterState}
         onFilterChange={handleFilterChange}
         departmentMatchMode={departmentMatchMode}
+        forcedCategory={selectedCategory && selectedCategory !== '전체' ? selectedCategory : null}
       />
 
       {/* ── [구분선 2] 상단 필터존 <-> 하단 가로 2열 분석존 ── */}

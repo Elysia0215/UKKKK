@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 from pathlib import Path
 
 from proposal_quality import apply_quality_gate, validate_proposals
+from pipeline_hooks import rebuild_proposal_connections
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 MONGTTANG_PATH = BASE_DIR / "frontend" / "src" / "data" / "mongttang.json"
@@ -74,6 +75,8 @@ def main():
     MONGTTANG_PATH.write_text(serialized, encoding="utf-8")
     PROPOSALS_PATH.write_text(serialized, encoding="utf-8")
     print("프론트엔드/최종 제안 데이터 동기화 완료!")
+    rebuild_proposal_connections()
+    print("분류·R&R·정책 후보 자동 재생성 완료!")
 
 if __name__ == "__main__":
     main()

@@ -6,10 +6,13 @@
 """
 import json
 import ast
+import csv
+import re
 import pandas as pd
 from pathlib import Path
 from proposal_quality import (
     apply_quality_gate,
+    classify_birth_policy_category,
     is_safe_policy_match,
     normalize_policy_tags,
     validate_proposals,
@@ -20,6 +23,7 @@ EXCEL_PATH = BASE_DIR / "data" / "mongttang" / "출산정책관련_업무담당.
 CLASSIFIED_PATH = BASE_DIR / "frontend" / "src" / "data" / "classified_policy.json"
 PROPOSALS_PATH = BASE_DIR / "data" / "final" / "proposals.json"
 FRONTEND_PROPOSALS_PATH = BASE_DIR / "frontend" / "src" / "data" / "mongttang.json"
+PROCESSED_ROOT = BASE_DIR / "data" / "processed"
 
 WORK_LIFE_TERMS = [
     "육아휴직", "근로시간", "근로단축", "단축근무", "출산휴가", "돌봄휴가",
@@ -70,6 +74,28 @@ MULTI_CHILD_PROPOSAL_TERMS = [
 MULTI_CHILD_POLICY_TERMS = [
     "다둥이", "다자녀", "세자녀", "자녀 2명", "자녀 3명",
 ]
+DEPARTMENT_STOP_WORDS = {
+    "서울", "서울시", "시민", "정책", "사업", "지원", "관련", "대한",
+    "위한", "대상", "운영", "관리", "업무", "정보", "서비스", "제안",
+    "필요", "확대", "개선", "추진", "검토", "경우", "통해", "있는",
+    "없는", "않은", "않는", "하지", "되지", "생활", "예산", "평가",
+}
+DEPARTMENT_CONTEXT_TERMS = {
+    "다문화지원팀": MULTICULTURAL_TERMS,
+    "장애인가족지원팀": DISABILITY_TERMS,
+    "고령사회정책팀": ["노인", "어르신", "고령", "노약자", "경로"],
+    "건강임신지원팀": [
+        "난임", "가임력", "난자동결", "임신준비", "산전검사", "AMH",
+    ],
+    "가족지원팀": [
+        "육아휴직", "근로시간", "단축근무", "출산휴가", "돌봄휴가",
+        "한부모", "미혼모", "미혼부", "양육비", "가족지원",
+    ],
+    "돌봄사업팀": [
+        "아이돌봄", "초등돌봄", "긴급돌봄", "시간제보육", "어린이집",
+        "키움센터", "방과후", "보육교사",
+    ],
+}
 
 CATEGORY_PRIMARY_DEPT = {
     "임신·난임·생식건강": "건강임신지원팀",
@@ -91,6 +117,34 @@ def policy_text(pol):
         "사업대분류명", "사업중분류명", "사업소분류명", "Department"
     ]
     return " ".join(str(pol.get(field, "") or "") for field in fields)
+
+
+def load_curated_scope_exclusions():
+    """Load authoritative final exclusion decisions from collection review."""
+    exclusions = {}
+    for path in PROCESSED_ROOT.rglob("*보정제외로그_ver3.csv"):
+        try:
+            with path.open(encoding="utf-8-sig", newline="") as handle:
+                for row in csv.DictReader(handle):
+                    raw_id = str(
+                        row.get("제안ID") or row.get("id") or row.get("SN") or ""
+                    ).strip()
+                    match = re.search(r"(\d+)", raw_id)
+                    if not match:
+                        continue
+                    item_id = f"PROP-{match.group(1)}"
+                    reason = str(row.get("제외사유") or "최종 보정 제외").strip()
+                    status = str(
+                        row.get("출산양육관련여부")
+                        or row.get("보정판정")
+                        or row.get("판정")
+                        or ""
+                    ).strip()
+                    if reason or status == "제외":
+                        exclusions[item_id] = reason or "최종 보정 제외"
+        except (UnicodeDecodeError, csv.Error):
+            continue
+    return exclusions
 
 # 1. 엑셀 실무 부서 정보 로드
 dept_df = pd.read_excel(EXCEL_PATH)
@@ -128,6 +182,7 @@ def match_department_rankings(proposal):
     if proposal.get("connection_status") != "reviewable":
         return []
     title_content = proposal["title"] + " " + proposal["content"]
+    title = proposal["title"]
     cat = proposal["category"]
     
     scored_depts = []
@@ -140,11 +195,29 @@ def match_department_rankings(proposal):
             reasons.append("카테고리 업무 일치")
         
         # 업무분장 키워드 매칭
-        words = title_content.split()
-        for w in set(words):
+        words = {
+            word for word in re.findall(r"[0-9A-Za-z가-힣]+", title_content)
+            if len(word) >= 2 and word not in DEPARTMENT_STOP_WORDS
+        }
+        for w in words:
             if len(w) >= 2 and w in info["duty"]:
                 score += 10
                 reasons.append(f"업무 키워드: {w}")
+
+        context_terms = DEPARTMENT_CONTEXT_TERMS.get(info["short_dept"], [])
+        # 다문화·장애·고령은 본문 속 비교·사례 언급만으로 협조부서가
+        # 되기 쉬우므로 제목에서 핵심 의제로 명시된 경우만 가산한다.
+        context_source = (
+            title
+            if info["short_dept"] in {
+                "다문화지원팀", "장애인가족지원팀", "고령사회정책팀",
+            }
+            else title_content
+        )
+        context_hits = [term for term in context_terms if term in context_source]
+        if context_hits:
+            score += 60
+            reasons.append(f"부서 고유 문맥: {', '.join(context_hits[:3])}")
         
         # 지정된 department 배열에 포함되어 있으면 보너스
         if any(info["short_dept"] in d or d in info["short_dept"] for d in proposal["department"]):
@@ -168,7 +241,9 @@ def match_department_rankings(proposal):
     unique_depts = []
     seen = set()
     for d in scored_depts:
-        if d["score"] <= 0:
+        # 협조부서는 일반어 한두 개가 아니라 최소한 기존 담당 근거,
+        # 카테고리 일치 또는 부서 고유 문맥이 있을 때만 후보로 남긴다.
+        if d["score"] < 40:
             continue
         if d["dept_name"] not in seen:
             seen.add(d["dept_name"])
@@ -194,8 +269,9 @@ def match_department_rankings(proposal):
 def apply_department_override(proposal, rankings):
     """Remove detailed-team matches that only look related by generic wording."""
     title_content = f"{proposal.get('title', '')} {proposal.get('content', '')}"
+    title = proposal.get("title", "")
     has_disability_context = any(
-        kw in title_content
+        kw in title
         for kw in ["장애인", "장애아", "장애", "발달장애", "특수교육", "특수학교", "휠체어"]
     )
     family_support_context = any(
@@ -210,7 +286,7 @@ def apply_department_override(proposal, rankings):
         for kw in ["서울시 직원", "시 공무원", "출산직원", "시청 직원", "구청 직원"]
     )
     has_elderly_context = any(
-        kw in title_content
+        kw in title
         for kw in ["노인", "어르신", "고령", "노약자", "경로"]
     )
     has_pregnancy_health_context = any(
@@ -221,7 +297,7 @@ def apply_department_override(proposal, rankings):
         ]
     )
     has_multicultural_context = any(
-        kw in title_content
+        kw in title
         for kw in MULTICULTURAL_TERMS
     )
     blocked_departments = set()
@@ -308,12 +384,21 @@ def match_policies(proposal):
         pol_title = pol.get("사업명", "")
         pol_content = pol.get("사업내용", "") or ""
         full_policy_text = policy_text(pol)
+        policy_major_category = classify_birth_policy_category(
+            pol_title,
+            full_policy_text,
+        )[0]
+
+        # 서로 다른 정책 대분류를 일반 단어 몇 개만으로 연결하지 않는다.
+        # 예: 다둥이카드 개선 요구 ↔ 외국인 가사관리사.
+        if policy_major_category != cat:
+            continue
 
         # 다둥이·다자녀 제안은 본문에 '맞벌이' 같은 일반 생활어가 있어도
         # 돌봄사업보다 다자녀 정책을 직접 대조해야 한다.
         if (
             is_multi_child_proposal
-            and not has_any(full_policy_text, MULTI_CHILD_POLICY_TERMS)
+            and not has_any(pol_title, MULTI_CHILD_POLICY_TERMS)
         ):
             continue
         if not has_disability_context and has_any(full_policy_text, DISABILITY_POLICY_TERMS):
@@ -341,8 +426,8 @@ def match_policies(proposal):
                 continue
         
         score = 0
-        if pol_cat == cat:
-            score += 20
+        if policy_major_category == cat:
+            score += 40
         
         for kw in GENERAL_POLICY_TERMS:
             if kw in title_content and kw in full_policy_text:
@@ -354,16 +439,25 @@ def match_policies(proposal):
 
         if is_work_life_proposal and has_any(full_policy_text, WORK_POLICY_TERMS):
             score += 25
-        if is_multi_child_proposal and has_any(full_policy_text, MULTI_CHILD_POLICY_TERMS):
+        if is_multi_child_proposal and has_any(pol_title, MULTI_CHILD_POLICY_TERMS):
             score += 80
+            if "다둥이" in title_content and "다둥이" in pol_title:
+                score += 50
+            if "카드" in title_content and "카드" in pol_title:
+                score += 40
         if is_pregnant_transport_proposal and has_any(full_policy_text, PREGNANT_TRANSPORT_POLICY_TERMS):
             score += 40
                 
-        if score >= 30 and is_safe_policy_match(
+        safe_text_match = is_safe_policy_match(
             proposal["title"],
             proposal["content"],
-            full_policy_text,
-        ):
+            pol_title,
+        )
+        safe_domain_match = (
+            is_multi_child_proposal
+            and has_any(pol_title, MULTI_CHILD_POLICY_TERMS)
+        )
+        if score >= 40 and (safe_text_match or safe_domain_match):
             matched.append({
                 "policy_id": pol.get("사업소분류명") or pol_title,
                 "policy_name": pol_title,
@@ -377,7 +471,13 @@ def match_policies(proposal):
     return matched[:5]
 
 # Proposals 갱신
+curated_scope_exclusions = load_curated_scope_exclusions()
 for p in proposals:
+    exclusion_reason = curated_scope_exclusions.get(p.get("id"))
+    if exclusion_reason:
+        p["curated_scope_exclusion_reason"] = exclusion_reason
+    else:
+        p.pop("curated_scope_exclusion_reason", None)
     normalize_policy_tags(p)
     apply_quality_gate(p)
     p["department_rankings"] = match_department_rankings(p)

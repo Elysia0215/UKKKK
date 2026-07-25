@@ -46,6 +46,7 @@ import { isOutsideBirthPolicyScope } from '../utils/policyMatching';
 import civilRequestsData from '../data/civil_requests_all.json';
 import { BatchReplyModal } from './BatchReplyModal';
 import { CivilRequestDetailModal, CivilRequestItem } from './CivilRequestDetailModal';
+import { CAT1_TO_LIFECYCLE } from './MultiTierCategoryFilter';
 
 interface Props {
   proposals: PolicyProposal[];
@@ -187,9 +188,23 @@ export const PriorityDetails: React.FC<Props> = ({
       : proposalMatchesAnyDepartment(p, depts);
   }, [departmentMatchMode]);
 
+  const lockedCategory = initialCategory && initialCategory !== '전체'
+    ? initialCategory
+    : null;
+  const lockedFlow = lockedCategory
+    ? CAT1_TO_LIFECYCLE[lockedCategory] || null
+    : null;
+  const effectiveSelectedCategories = lockedCategory
+    ? [lockedCategory]
+    : selectedCategories;
+  const effectiveSelectedFlows = lockedFlow
+    ? [lockedFlow]
+    : selectedFlows;
+
   React.useEffect(() => {
-    if (initialCategory) {
-      setSelectedCategories([initialCategory]);
+    if (lockedCategory) {
+      setSelectedCategories([lockedCategory]);
+      setSelectedFlows(lockedFlow ? [lockedFlow] : ['전체']);
     } else {
       setSelectedCategories(['전체']);
     }
@@ -198,7 +213,8 @@ export const PriorityDetails: React.FC<Props> = ({
     } else {
       setSelectedSubCategories(['전체']);
     }
-  }, [initialCategory, initialSubCategory, initialClusterId]);
+    setSelectedMicroCategory('전체');
+  }, [lockedCategory, lockedFlow, initialSubCategory, initialClusterId]);
 
   const handleToggleMultiSelectMode = () => {
     const nextMode = !isMultiSelectMode;
@@ -333,8 +349,8 @@ export const PriorityDetails: React.FC<Props> = ({
 
     proposals.forEach(p => {
       const matchesDept = checkDeptMatch(p, selectedDepts);
-      const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
-      const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
+      const matchesFlow = effectiveSelectedFlows.includes('전체') || (p.policy_flow && effectiveSelectedFlows.includes(p.policy_flow));
+      const matchesCat = effectiveSelectedCategories.includes('전체') || effectiveSelectedCategories.includes(p.category);
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
       if (matchesDept && matchesFlow && matchesCat && matchesSubCat && matchesMicroCat && matchesUrgentFilters(p)) {
@@ -343,7 +359,7 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories, selectedMicroCategory, checkDeptMatch, matchesUrgentFilters]);
+  }, [proposals, selectedDepts, effectiveSelectedFlows, effectiveSelectedCategories, selectedSubCategories, selectedMicroCategory, checkDeptMatch, matchesUrgentFilters]);
 
   // 몽땅정보통 링크 검증 및 헬퍼
   const formatPolicyLink = (url?: string) => {
@@ -467,10 +483,10 @@ export const PriorityDetails: React.FC<Props> = ({
     return proposals.filter(p => {
       const matchesSearch = p.title.includes(searchTerm) || p.content.includes(searchTerm);
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(getProposalYear(p));
-      const matchesCategory = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
+      const matchesCategory = effectiveSelectedCategories.includes('전체') || effectiveSelectedCategories.includes(p.category);
       const matchesSubCategory = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCategory = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
-      const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
+      const matchesFlow = effectiveSelectedFlows.includes('전체') || (p.policy_flow && effectiveSelectedFlows.includes(p.policy_flow));
       const matchesDept = checkDeptMatch(p, selectedDepts);
       return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesUrgentFilters(p);
     }).sort((a, b) => {
@@ -480,7 +496,7 @@ export const PriorityDetails: React.FC<Props> = ({
       if (sortBy === 'comment_desc') return b.comment_cnt - a.comment_cnt;
       return 0;
     });
-  }, [proposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, sortBy, checkDeptMatch, matchesUrgentFilters]);
+  }, [proposals, searchTerm, selectedYears, effectiveSelectedCategories, selectedSubCategories, selectedMicroCategory, effectiveSelectedFlows, selectedDepts, sortBy, checkDeptMatch, matchesUrgentFilters]);
 
   // 그룹 보기 필터 결과 (그룹 구성원 필터 후 빈 그룹 배제)
   const filteredGroupedProposals = useMemo(() => {
@@ -488,10 +504,10 @@ export const PriorityDetails: React.FC<Props> = ({
       const filteredItems = g.items.filter(p => {
         const matchesSearch = p.title.includes(searchTerm) || p.content.includes(searchTerm);
         const matchesYear = selectedYears.includes('전체') || selectedYears.includes(getProposalYear(p));
-        const matchesCategory = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
+        const matchesCategory = effectiveSelectedCategories.includes('전체') || effectiveSelectedCategories.includes(p.category);
         const matchesSubCategory = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
         const matchesMicroCategory = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
-        const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
+        const matchesFlow = effectiveSelectedFlows.includes('전체') || (p.policy_flow && effectiveSelectedFlows.includes(p.policy_flow));
         const matchesDept = checkDeptMatch(p, selectedDepts);
         return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesUrgentFilters(p);
       }).sort((a, b) => {
@@ -527,7 +543,7 @@ export const PriorityDetails: React.FC<Props> = ({
       if (sortBy === 'comment_desc') return gb.totalComments - ga.totalComments;
       return 0;
     });
-  }, [groupedProposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, sortBy, checkDeptMatch, matchesUrgentFilters]);
+  }, [groupedProposals, searchTerm, selectedYears, effectiveSelectedCategories, selectedSubCategories, selectedMicroCategory, effectiveSelectedFlows, selectedDepts, sortBy, checkDeptMatch, matchesUrgentFilters]);
 
   const toggleGroup = (groupId: string) => {
     setExpandedGroups(prev => ({
@@ -548,25 +564,25 @@ export const PriorityDetails: React.FC<Props> = ({
   const subCategories: string[] = useMemo(() => {
     const set = new Set<string>();
     proposals.forEach(p => {
-      if ((selectedCategories.includes('전체') || selectedCategories.includes(p.category)) && p.sub_category) {
+      if ((effectiveSelectedCategories.includes('전체') || effectiveSelectedCategories.includes(p.category)) && p.sub_category) {
         set.add(p.sub_category);
       }
     });
     return ['전체', ...Array.from(set)];
-  }, [proposals, selectedCategories]);
+  }, [proposals, effectiveSelectedCategories]);
 
   // 계층형 세분류 목록 (선택된 중분류에 연동)
   const microCategories: string[] = useMemo(() => {
     const set = new Set<string>();
     proposals.forEach(p => {
-      if ((selectedCategories.includes('전체') || selectedCategories.includes(p.category)) &&
+      if ((effectiveSelectedCategories.includes('전체') || effectiveSelectedCategories.includes(p.category)) &&
         (selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category))) &&
         p.micro_category) {
         set.add(p.micro_category);
       }
     });
     return ['전체', ...Array.from(set)];
-  }, [proposals, selectedCategories, selectedSubCategories]);
+  }, [proposals, effectiveSelectedCategories, selectedSubCategories]);
 
   // 생애주기 정책 흐름 목록
   const policyFlows: string[] = useMemo(() => {
@@ -599,7 +615,7 @@ export const PriorityDetails: React.FC<Props> = ({
       const regYear = getProposalYear(p);
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
       const matchesDept = checkDeptMatch(p, selectedDepts);
-      const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
+      const matchesCat = effectiveSelectedCategories.includes('전체') || effectiveSelectedCategories.includes(p.category);
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
       if (matchesYear && matchesDept && matchesCat && matchesSubCat && matchesMicroCat && matchesUrgentFilters(p)) {
@@ -610,7 +626,7 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedYears, selectedDepts, selectedCategories, selectedSubCategories, selectedMicroCategory, checkDeptMatch, matchesUrgentFilters]);
+  }, [proposals, selectedYears, selectedDepts, effectiveSelectedCategories, selectedSubCategories, selectedMicroCategory, checkDeptMatch, matchesUrgentFilters]);
 
   // 2) 타 필터 선택에 따른 1차 대분류별 건수 (연도, 부서, 생애주기, 중분류, 세분류 선택 연동)
   const catCounts = useMemo(() => {
@@ -619,7 +635,7 @@ export const PriorityDetails: React.FC<Props> = ({
       const regYear = getProposalYear(p);
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
       const matchesDept = checkDeptMatch(p, selectedDepts);
-      const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
+      const matchesFlow = effectiveSelectedFlows.includes('전체') || (p.policy_flow && effectiveSelectedFlows.includes(p.policy_flow));
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
       if (matchesYear && matchesDept && matchesFlow && matchesSubCat && matchesMicroCat && matchesUrgentFilters(p)) {
@@ -630,7 +646,7 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedSubCategories, selectedMicroCategory, checkDeptMatch, matchesUrgentFilters]);
+  }, [proposals, selectedYears, selectedDepts, effectiveSelectedFlows, selectedSubCategories, selectedMicroCategory, checkDeptMatch, matchesUrgentFilters]);
 
   // 3) 타 필터 선택에 따른 2차 중분류별 건수 (연도, 부서, 생애주기, 대분류, 세분류 선택 연동)
   const subCatCounts = useMemo(() => {
@@ -639,8 +655,8 @@ export const PriorityDetails: React.FC<Props> = ({
       const regYear = getProposalYear(p);
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
       const matchesDept = checkDeptMatch(p, selectedDepts);
-      const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
-      const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
+      const matchesFlow = effectiveSelectedFlows.includes('전체') || (p.policy_flow && effectiveSelectedFlows.includes(p.policy_flow));
+      const matchesCat = effectiveSelectedCategories.includes('전체') || effectiveSelectedCategories.includes(p.category);
       const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
       if (matchesYear && matchesDept && matchesFlow && matchesCat && matchesMicroCat && matchesUrgentFilters(p)) {
         counts['전체'] = (counts['전체'] || 0) + 1;
@@ -650,7 +666,7 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedCategories, selectedMicroCategory, checkDeptMatch, matchesUrgentFilters]);
+  }, [proposals, selectedYears, selectedDepts, effectiveSelectedFlows, effectiveSelectedCategories, selectedMicroCategory, checkDeptMatch, matchesUrgentFilters]);
 
   // 3-1) 타 필터 선택에 따른 3차 세분류별 건수 (연도, 부서, 생애주기, 대분류, 중분류 선택 연동)
   const microCatCounts = useMemo(() => {
@@ -659,8 +675,8 @@ export const PriorityDetails: React.FC<Props> = ({
       const regYear = getProposalYear(p);
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
       const matchesDept = checkDeptMatch(p, selectedDepts);
-      const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
-      const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
+      const matchesFlow = effectiveSelectedFlows.includes('전체') || (p.policy_flow && effectiveSelectedFlows.includes(p.policy_flow));
+      const matchesCat = effectiveSelectedCategories.includes('전체') || effectiveSelectedCategories.includes(p.category);
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       if (matchesYear && matchesDept && matchesFlow && matchesCat && matchesSubCat && matchesUrgentFilters(p)) {
         counts['전체'] = (counts['전체'] || 0) + 1;
@@ -670,7 +686,7 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories, checkDeptMatch, matchesUrgentFilters]);
+  }, [proposals, selectedYears, selectedDepts, effectiveSelectedFlows, effectiveSelectedCategories, selectedSubCategories, checkDeptMatch, matchesUrgentFilters]);
 
   // 4) 타 필터 선택에 따른 담당부서별 건수 (연도, 생애주기, 대분류, 중분류, 세분류 선택 연동)
   const deptCounts = useMemo(() => {
@@ -678,8 +694,8 @@ export const PriorityDetails: React.FC<Props> = ({
     proposals.forEach(p => {
       const regYear = getProposalYear(p);
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
-      const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
-      const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
+      const matchesFlow = effectiveSelectedFlows.includes('전체') || (p.policy_flow && effectiveSelectedFlows.includes(p.policy_flow));
+      const matchesCat = effectiveSelectedCategories.includes('전체') || effectiveSelectedCategories.includes(p.category);
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
       if (matchesYear && matchesFlow && matchesCat && matchesSubCat && matchesMicroCat && matchesUrgentFilters(p)) {
@@ -697,7 +713,7 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedYears, selectedFlows, selectedCategories, selectedSubCategories, selectedMicroCategory, departmentMatchMode, matchesUrgentFilters]);
+  }, [proposals, selectedYears, effectiveSelectedFlows, effectiveSelectedCategories, selectedSubCategories, selectedMicroCategory, departmentMatchMode, matchesUrgentFilters]);
 
   // 자동으로 0건이 된 필터 선택을 제외(pruning)해주는 반응형 이펙트 추가
   React.useEffect(() => {
@@ -801,8 +817,8 @@ export const PriorityDetails: React.FC<Props> = ({
           {(() => {
             const isFilterActive =
               !selectedYears.includes('전체') ||
-              !selectedFlows.includes('전체') ||
-              !selectedCategories.includes('전체') ||
+              !effectiveSelectedFlows.includes('전체') ||
+              !effectiveSelectedCategories.includes('전체') ||
               !selectedSubCategories.includes('전체') ||
               !selectedDepts.includes('전체') ||
               selectedMicroCategory !== '전체' ||
@@ -1003,12 +1019,18 @@ export const PriorityDetails: React.FC<Props> = ({
             {policyFlows.map(flow => {
               const count = flowCounts[flow] || 0;
               const isDisabled = flow !== '전체' && count === 0;
-              const isSelected = selectedFlows.includes(flow);
+              const isSelected = effectiveSelectedFlows.includes(flow);
               return (
                 <button
                   key={flow}
                   disabled={isDisabled}
-                  onClick={() => toggleFilterItem(selectedFlows, setSelectedFlows, flow)}
+                  onClick={() => {
+                    if (lockedFlow) {
+                      setSelectedFlows([lockedFlow]);
+                      return;
+                    }
+                    toggleFilterItem(selectedFlows, setSelectedFlows, flow);
+                  }}
                   className={`text-[10px] px-2.5 py-0.5 rounded-full border transition font-bold cursor-pointer ${isDisabled
                       ? 'bg-slate-100 text-slate-300 border-slate-200 opacity-40 cursor-not-allowed line-through'
                       : isSelected
@@ -1030,12 +1052,19 @@ export const PriorityDetails: React.FC<Props> = ({
             {categories.map(cat => {
               const count = catCounts[cat] || 0;
               const isDisabled = cat !== '전체' && count === 0;
-              const isSelected = selectedCategories.includes(cat);
+              const isSelected = effectiveSelectedCategories.includes(cat);
               return (
                 <button
                   key={cat}
                   disabled={isDisabled}
                   onClick={() => {
+                    if (lockedCategory) {
+                      setSelectedCategories([lockedCategory]);
+                      setSelectedFlows(lockedFlow ? [lockedFlow] : ['전체']);
+                      setSelectedSubCategories(['전체']);
+                      setSelectedMicroCategory('전체');
+                      return;
+                    }
                     toggleFilterItem(selectedCategories, setSelectedCategories, cat);
                     setSelectedSubCategories(['전체']);
                     setSelectedMicroCategory('전체');

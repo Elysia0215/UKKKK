@@ -108,6 +108,13 @@ python scripts/clean_civil_titles_and_contents.py
 python scripts/06_build_department_ranking.py
 ```
 
+`04_build_dashboard_json.py`, `fetch_real_proposal_contents.py`,
+`recrawl_all_by_sn_fast.py`는 저장 직후 공통 후처리 훅을 자동 실행합니다.
+따라서 신규 API·크롤링 본문에도 동일한 품질 게이트, 8대 분류, 보수적
+R&R 주관·협조 후보, 정책 후보 규칙이 적용되며
+`data/final/proposals.json`과 `frontend/src/data/mongttang.json`이 함께
+검증·동기화됩니다. 수동 데이터 수정 대신 이 파이프라인을 사용해야 합니다.
+
 ---
 
 ## 🏷️ 4. 출산·양육 대분류 8개 축 체계

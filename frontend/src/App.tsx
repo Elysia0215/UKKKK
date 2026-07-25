@@ -34,11 +34,9 @@ import { PolicyProposal, DashboardStats } from './types';
 import {
   DEPARTMENT_GROUPS,
   getDepartmentGroup,
-  getPrimaryDepartment,
   getProposalDepartmentNames,
   proposalMatchesDepartment,
   proposalMatchesDepartmentGroup,
-  proposalMatchesPrimaryDepartment,
 } from './utils/departments';
 
 const initialProposals = rawMongttangData as unknown as PolicyProposal[];
@@ -56,9 +54,21 @@ import { GapMatrixDashboard } from './components/GapMatrixDashboard';
 import { MissingDataSimulator } from './components/MissingDataSimulator';
 import { ReportExportModal } from './components/ReportExportModal';
 import { OfficeAssistant } from './components/OfficeAssistant';
+import { DeveloperLogCenter } from './components/DeveloperLogCenter';
 import { SEOUL_DISTRICTS_DATA, DistrictData } from './data/seoulData';
 
 import { exportToCsv } from './utils/exportCsv';
+
+const TAB_LABELS: Record<number, string> = {
+  0: '수요 현황 종합',
+  2: '시민 목소리 분석',
+  3: '긴급 민원 처리',
+  4: '현행 정책 검색',
+  5: '정책 사각지대 탐색',
+  6: '자치구 통계 비교',
+  7: '정책 갭 진단',
+  8: '결측치 복원 & 로그',
+};
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<number>(0);
@@ -151,11 +161,7 @@ export default function App() {
   }, [mockProposals, activeDeptGroup]);
   const rrDepartmentOptions = useMemo(() => (
     Array.from(new Set(
-      activeDeptGroup
-        ? groupFilteredProposals
-          .map((proposal) => getPrimaryDepartment(proposal)?.dept_name)
-          .filter((department): department is string => Boolean(department))
-        : groupFilteredProposals.flatMap(getProposalDepartmentNames),
+      groupFilteredProposals.flatMap(getProposalDepartmentNames),
     )).sort()
   ), [groupFilteredProposals, activeDeptGroup]);
   const activeScopedRrDept = activeRrDept && rrDepartmentOptions.includes(activeRrDept)
@@ -172,11 +178,9 @@ export default function App() {
   const deptFilteredProposals = useMemo(() => {
     if (!activeScopedRrDept) return groupFilteredProposals;
     return groupFilteredProposals.filter((proposal) => (
-      activeDeptGroup
-        ? proposalMatchesPrimaryDepartment(proposal, activeScopedRrDept)
-        : proposalMatchesDepartment(proposal, activeScopedRrDept)
+      proposalMatchesDepartment(proposal, activeScopedRrDept)
     ));
-  }, [groupFilteredProposals, activeScopedRrDept, activeDeptGroup]);
+  }, [groupFilteredProposals, activeScopedRrDept]);
 
   // 실시간 통계 연산
   const stats = useMemo<DashboardStats>(() => {
@@ -351,7 +355,7 @@ export default function App() {
               aria-label={activeDeptGroup ? '관련 R&R 팀 선택' : '전체 R&R 팀 선택'}
             >
               <option value="" className="bg-[#0A2351] text-slate-300">
-                {activeDeptGroup ? '🏢 전체 주관 R&R 팀' : '🏢 전체 실제 R&R 팀'}
+                {activeDeptGroup ? '🏢 전체 관련 R&R 팀' : '🏢 전체 실제 R&R 팀'}
               </option>
               {rrDepartmentOptions.map((dept) => (
                 <option key={dept} value={dept} className="bg-[#0A2351] text-white">
@@ -388,6 +392,13 @@ export default function App() {
             <Download className="w-3.5 h-3.5" />
             <span translate="no" className="notranslate">보고서 다운로드</span>
           </button>
+          <DeveloperLogCenter
+            activeTab={activeTab}
+            pageLabel={TAB_LABELS[activeTab] || `화면 ${activeTab}`}
+            departmentGroup={activeDeptGroup}
+            rrDepartment={activeScopedRrDept}
+            district={selectedDistrict}
+          />
         </div>
       </header>
 
@@ -524,7 +535,7 @@ export default function App() {
             {activeTab === 3 && (
               <PriorityDetails
                 proposals={deptFilteredProposals}
-                initialCategory={selectedCategory || undefined}
+                initialCategory={activeDeptGroup || selectedCategory || undefined}
                 initialSubCategory={selectedSubCategory || undefined}
                 initialClusterId={selectedClusterId || undefined}
                 selectedDept={activeScopedRrDept || undefined}
