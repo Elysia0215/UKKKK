@@ -47,6 +47,8 @@ interface Props {
   onNavigateToTab: (tabIndex: number) => void;
   onSelectCategory: (category: string) => void;
   selectedDept?: string | null;
+  selectedRrDept?: string | null;
+  groupTotalCount?: number;
   onSelectDept?: (dept: string | null) => void;
 }
 
@@ -56,6 +58,8 @@ export const DashboardOverview: React.FC<Props> = ({
   onNavigateToTab,
   onSelectCategory,
   selectedDept,
+  selectedRrDept,
+  groupTotalCount,
   onSelectDept
 }) => {
   const [selectedKeywordModal, setSelectedKeywordModal] = React.useState<string | null>(null);
@@ -113,10 +117,13 @@ export const DashboardOverview: React.FC<Props> = ({
             </div>
             <div>
               <h3 className="text-xs font-extrabold text-slate-900">
-                🏷️ {selectedDept} 대분류 담당군 모니터링 모드 활성화
+                🏷️ {selectedDept} 담당군
+                {selectedRrDept ? ` → 🏢 ${selectedRrDept} 주관팀` : ''} 모니터링 모드
               </h3>
               <p className="text-[10px] text-slate-500 mt-0.5">
-                해당 부서 전담 카테고리에 연관된 총 {filteredProposals.length}건의 제안 및 민원 위주로 필터링되었습니다.
+                {selectedRrDept
+                  ? `해당 대분류에서 ${selectedRrDept}이(가) 1순위 주관으로 매칭된 ${filteredProposals.length}건입니다.`
+                  : `해당 정책 대분류에 속한 총 ${filteredProposals.length}건의 제안 및 민원입니다.`}
               </p>
             </div>
           </div>
@@ -139,7 +146,7 @@ export const DashboardOverview: React.FC<Props> = ({
               <span className="text-[9px] text-slate-500 font-medium">건</span>
               {selectedDept && (
                 <span className="text-[8px] text-slate-400 font-medium ml-1">
-                  / {proposals.length.toLocaleString()}건 (전체)
+                  / {(groupTotalCount ?? proposals.length).toLocaleString()}건 (담당군 전체)
                 </span>
               )}
             </div>
@@ -217,7 +224,7 @@ export const DashboardOverview: React.FC<Props> = ({
           <div>
             <h3 className="text-xs font-black text-slate-900 flex items-center gap-1.5">
               <Building2 className="w-3.5 h-3.5 text-blue-600" />
-              서울시 18개 저출생·보육 실무 부서별 제안 수 & 답변율 수치 현황
+              서울시 저출생·보육 실무 R&R 부서별 제안 수 & 답변율
             </h3>
             <p className="text-[10px] text-slate-500 mt-0.5">
               각 부서 소관 제안의 처리 현황을 실시간 파악하고, 부서 답변 불균형 및 미답변 공백을 시스템적으로 관리합니다.
@@ -234,7 +241,7 @@ export const DashboardOverview: React.FC<Props> = ({
           ) : (
             <span className="text-[9px] bg-blue-50 text-blue-700 font-extrabold px-2 py-0.5 rounded-full border border-blue-100 self-start sm:self-auto flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-ping" />
-              부서 카드 클릭 시 실시간 필터 연동
+              제안별 1순위 주관부서 기준 집계
             </span>
           )}
         </div>
@@ -243,25 +250,15 @@ export const DashboardOverview: React.FC<Props> = ({
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
           {deptStatsProcessed.slice(0, 5).map((d) => {
             const answerRate = d.total > 0 ? Math.round((d.answered / d.total) * 100) : 0;
-            const isSelected = selectedDept === d.dept;
             return (
               <div
                 key={d.dept}
-                onClick={() => {
-                  if (onSelectDept) {
-                    onSelectDept(isSelected ? null : d.dept);
-                  }
-                }}
-                title={isSelected ? `${d.dept} 필터 해제` : `${d.dept} 업무 대시보드로 연동 필터링`}
-                className={`p-2 rounded-lg border transition cursor-pointer flex flex-col justify-between ${
-                  isSelected 
-                    ? 'bg-blue-950 text-white border-blue-600 shadow-md ring-1 ring-blue-400 scale-[1.01]' 
-                    : 'bg-slate-50/80 hover:bg-white border-slate-200 hover:border-blue-400 hover:shadow-xs'
-                }`}
+                title={`${d.dept} 제안 처리 현황`}
+                className="p-2 rounded-lg border flex flex-col justify-between bg-slate-50/80 border-slate-200"
               >
                 <div>
                   <div className="flex items-center justify-between gap-1 mb-0.5">
-                    <span className={`text-[10.5px] font-black truncate ${isSelected ? 'text-blue-200' : 'text-slate-800'}`}>
+                    <span className="text-[10.5px] font-black truncate text-slate-800">
                       {d.dept}
                     </span>
                     <span className={`text-[8.5px] font-extrabold px-1 py-0.2 rounded font-mono ${
@@ -273,16 +270,16 @@ export const DashboardOverview: React.FC<Props> = ({
                     </span>
                   </div>
                   <div className="flex items-baseline gap-1 mt-0.5">
-                    <span className={`text-sm font-black font-mono ${isSelected ? 'text-white' : 'text-slate-900'}`}>
+                    <span className="text-sm font-black font-mono text-slate-900">
                       {d.total}
                     </span>
-                    <span className={`text-[9px] ${isSelected ? 'text-slate-300' : 'text-slate-500'}`}>건</span>
+                    <span className="text-[9px] text-slate-500">건</span>
                   </div>
                 </div>
 
                 <div className="mt-1 pt-1 border-t border-slate-200/50 flex items-center justify-between text-[8.5px] font-mono">
-                  <span className={isSelected ? 'text-emerald-300' : 'text-emerald-600'}>답변 {d.answered}</span>
-                  <span className={isSelected ? 'text-rose-300' : 'text-rose-600 font-bold'}>미답변 {d.unanswered}</span>
+                  <span className="text-emerald-600">답변 {d.answered}</span>
+                  <span className="text-rose-600 font-bold">미답변 {d.unanswered}</span>
                 </div>
               </div>
             );

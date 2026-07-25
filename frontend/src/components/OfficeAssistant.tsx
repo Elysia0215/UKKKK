@@ -8,33 +8,34 @@ import { Sparkles, HelpCircle, X, ArrowLeft, ArrowRight, Play, BookOpen, MapPin 
 
 interface Props {
   selectedDept: string | null;
+  selectedDeptGroup?: string | null;
   activeTab: number;
   onNavigateToTab: (tabIndex: number) => void;
   publicSubTab?: 'district' | 'demographics' | 'structure';
 }
 
-// 최신 6대 탭(메뉴)별 "이 화면은 왜 있는지" + "지금 할 수 있는 일" + "고급 활용 팁" 단계별 안내
+// 실제 사이드바 탭 번호와 일치하는 페이지별 최신 기능 안내
 const PAGE_GUIDE: Record<number, { title: string; purpose: string; steps: string[]; advanced: string[]; footnotes?: Record<string, string> }> = {
   0: {
     title: '1. 수요 현황 종합',
     purpose: '서울시 출산·육아 시민 제안 824건의 전체 현황, 연도별 트렌드, 부서별 분류, 데이터 품질 보고를 한눈에 파악하는 종합 대시보드입니다.',
     steps: [
       '상단 4대 KPI 카드(전체 제안·답변 완료·미답변·평균 공감)에서 현재 현황을 확인합니다.',
-      '부서별 현황 섹션에서 8대 대분류(보육·돌봄, 주거·교통, 일·가정 양립 등) 소관 부서의 분류 비중과 처리 상태를 확인합니다.',
-      '부서 수치 카드를 클릭하면 해당 부서의 소관 카테고리로 대시보드가 실시간 필터링됩니다.'
+      '실무부서 현황에서 제안별 1순위 주관부서의 처리 건수와 답변률을 확인합니다.',
+      '상단 전체 R&R 필터에서 8대 정책 담당군을 선택하면 모든 분석 화면의 데이터 범위가 함께 좁혀집니다.'
     ],
     advanced: [
       '데이터 품질 정제 보고 섹션에서 텍스트마이닝 전처리(조사 제거·불용어 필터링) 현황을 확인할 수 있습니다.',
-      '상단 헤더의 부서 필터를 지정하면 전체 대시보드가 해당 부서 소관 카테고리로 실시간 필터링됩니다.',
+      '8대 정책 담당군과 실제 1·2·3순위 실무부서는 별도 계층으로 표시됩니다.',
       '카드 안 개별 항목 클릭 시 해당 카테고리가 필터링된 채로 다른 탭으로 자동 이동합니다.'
     ],
     footnotes: {
       'KPI': 'Key Performance Indicator — 핵심 성과 지표. 정책 현황을 한눈에 보여주는 요약 수치',
       '텍스트마이닝': '비정형 텍스트에서 의미 있는 패턴·키워드를 자동 추출하는 NLP 기법',
-      '8대 R&R 분류': '서울시 여성가족실 조직도 기반 출산·보육·돌봄 관련 8개 소관 부서 역할 분류 체계'
+      '8대 정책 담당군': '제안을 8개 정책 대분류로 묶는 상위 분석 단위. 실제 조직명과 실무 R&R 순위는 별도로 표시'
     }
   },
-  1: {
+  2: {
     title: '2. 시민 목소리 분석',
     purpose: 'TF-IDF 기반 TOP 30 핵심 키워드 태그 클라우드와 5단계 생애주기별 수요 강도를 분석하는 화면입니다.',
     steps: [
@@ -53,7 +54,7 @@ const PAGE_GUIDE: Record<number, { title: string; purpose: string; steps: string
       '5단계 생애주기': '임신준비 → 임신·출산 → 영아(0~2세) → 유아(3~5세) → 초등 이후의 정책 수요 분류 체계'
     }
   },
-  2: {
+  3: {
     title: '3. 긴급 민원 처리',
     purpose: '시민 제안(824건) 및 민원 데이터를 유사 제안 군집별(KR-SBERT 의미 유사도 기준)로 묶어, 미답변 제안과 긴급 안건을 한눈에 검토하고 일괄 답변하는 실무 화면입니다.',
     steps: [
@@ -72,7 +73,7 @@ const PAGE_GUIDE: Record<number, { title: string; purpose: string; steps: string
       'AI 공문 초안': 'Gemini/GPT 모델이 행정 공문체로 사전 생성한 답변 초안'
     }
   },
-  3: {
+  4: {
     title: '4. 몽땅정보 현행사업',
     purpose: '몽땅정보 만능키에 등록된 서울시 322개 공식 출산·보육 사업을 검색하여 시민 제안과 대조하는 화면입니다.',
     steps: [
@@ -82,7 +83,7 @@ const PAGE_GUIDE: Record<number, { title: string; purpose: string; steps: string
     ],
     advanced: [
       '정책명뿐 아니라 이용대상·지원내용 텍스트로도 검색되므로, 대상(예: "다자녀", "한부모")으로 찾으면 더 빠르게 걸립니다.',
-      '"없는 정책"으로 확인되면 [5. 정책 갭 진단] 탭에서 해당 카테고리의 공백 점수를 대조해 보십시오.',
+      '"없는 정책"으로 확인되면 [정책 갭 진단] 탭에서 해당 카테고리의 공백 점수를 대조해 보십시오.',
       '지자체별 혜택 주소 링크를 클릭하면 몽땅정보통 공식 사이트로 이동합니다.'
     ],
     footnotes: {
@@ -90,26 +91,86 @@ const PAGE_GUIDE: Record<number, { title: string; purpose: string; steps: string
       '정책 공백': '시민 수요는 있지만 대응하는 공식 지원 사업이 없거나 부족한 영역'
     }
   },
-  4: {
-    title: '5. 정책 갭 진단',
-    purpose: '수요·공급·민원 통합 6대 갭 매트릭스 진단표로 정책 공백을 진단하고 AI 답변 승인까지 처리하는 최종 의사결정 화면입니다.',
+  5: {
+    title: '5. 정책 사각지대 탐색',
+    purpose: '내용이 유사한 시민 제안을 군집으로 묶고, 반복 수요가 큰데 기존 정책 대응이 약한 사각지대를 탐색하는 화면입니다.',
     steps: [
-      '좌측 필터에서 부서·신뢰도 기준을 설정합니다.',
+      '버블의 크기와 색으로 군집별 제안 건수와 평균 공감도를 비교합니다.',
+      '관심 군집을 선택해 대표 제안·핵심 키워드·미답변 비율을 확인합니다.',
+      '선택한 군집을 시민 목소리 분석으로 넘겨 개별 제안과 R&R을 검토합니다.'
+    ],
+    advanced: [
+      '상단 8대 정책 담당군 선택이 군집 데이터 범위에도 동일하게 적용됩니다.',
+      '건수는 작아도 공감도와 미답변률이 높은 군집은 긴급 검토 후보입니다.',
+      '군집은 행정 부서가 아니라 텍스트 의미 유사도 기준의 분석 단위입니다.'
+    ],
+    footnotes: {
+      '의미 유사 군집': '문장의 표면 단어가 달라도 요구 취지가 비슷한 제안을 임베딩 유사도로 묶은 그룹',
+      '정책 사각지대': '반복되는 시민 수요에 비해 기존 사업이나 행정 답변이 부족한 영역'
+    }
+  },
+  6: {
+    title: '6. 자치구별 정책·제안 비교',
+    purpose: '25개 자치구의 출생·보육 공공지표와 시민 제안을 같은 화면에서 비교해 지역별 수요·공급 격차를 확인합니다.',
+    steps: [
+      '지도 또는 자치구 선택기로 분석 지역을 지정합니다.',
+      '출생아수·보육시설수·합계출산율·정책수요점수를 비교합니다.',
+      '선택 자치구의 지원사업과 시민 제안 목록을 나란히 검토합니다.'
+    ],
+    advanced: [
+      '수치순·자치구명순 정렬과 지표 색상 기준을 바꿔 분포를 비교할 수 있습니다.',
+      '자치구가 미상인 제안은 특정 자치구 실적으로 임의 합산하지 않습니다.',
+      'CSV 내보내기로 현재 25개 자치구 비교표를 저장할 수 있습니다.'
+    ]
+  },
+  6.5: {
+    title: '6-2. 인구·보육 지표 분석',
+    purpose: '출생아수·합계출산율·보육시설 등 공공데이터 지표의 자치구별 격차와 추세를 비교하는 화면입니다.',
+    steps: [
+      '비교할 자치구와 지표를 선택합니다.',
+      '차트에서 출생 규모와 보육 공급 수준을 함께 확인합니다.',
+      '시민 제안 수요가 공공지표 변화와 같은 방향인지 대조합니다.'
+    ],
+    advanced: [
+      '출생아수와 합계출산율은 의미가 다르므로 절대 규모와 비율을 분리해서 해석합니다.',
+      '보육시설 수만으로 공급 충분성을 판단하지 말고 아동 인구와 함께 비교합니다.',
+      '화면에 표시된 기준연도와 잠정치 여부를 보고서에 함께 기록합니다.'
+    ]
+  },
+  6.7: {
+    title: '6-3. 서울 공통·자치구 특화 구조',
+    purpose: '시민 제안을 서울시 전체 공통 수요와 특정 자치구 특화 수요로 나눠 대응 주체와 정책 범위를 판단합니다.',
+    steps: [
+      '전체 공통 제안과 자치구 특화 제안의 건수·비중을 비교합니다.',
+      '자치구 특화 제안의 지역 분포와 8대 정책 대분류 구성을 확인합니다.',
+      '공통 수요는 서울시 단위, 특화 수요는 자치구 협업 대상으로 구분합니다.'
+    ],
+    advanced: [
+      '본문에 지역명이 없다는 이유만으로 임의 자치구를 배정하지 않습니다.',
+      '공통·특화 집단의 평균 공감도를 비교해 광역 대응 우선도를 판단합니다.',
+      '결측치 복원 결과는 원본과 추정값을 구분해 품질 로그에서 확인합니다.'
+    ]
+  },
+  7: {
+    title: '7. 정책 갭 진단',
+    purpose: '수요·공백·시급성·실행성·근거 신뢰도의 5대 진단축으로 정책 공백을 비교하고 AI 답변 초안을 담당자가 검토·승인하는 최종 의사결정 화면입니다.',
+    steps: [
+      '필터에서 진단 상태·실제 담당부서·근거 신뢰도 기준을 설정합니다.',
       '진단표에서 진단 상태(정책 공백·보완 필요·모니터링 등)를 확인합니다.',
       '[AI 답변 검토·승인] 버튼을 클릭해 공문 초안과 5원 학술·뉴스 근거를 검토 후 승인합니다.'
     ],
     advanced: [
       '근거 신뢰도 슬라이더를 높이면 데이터 기반이 확실한 이슈만 필터링됩니다.',
-      '소속 부서를 지정하면 해당 부서 소관 카테고리 행이 자동 필터링됩니다.',
+      '상단 정책 담당군으로 분석 범위를 좁힌 뒤 화면 내부에서 실제 담당부서를 추가 선택할 수 있습니다.',
       '승인 패널에서 답변 초안을 수정하면 자동으로 "수정 후 승인"만 활성화됩니다.'
     ],
     footnotes: {
-      '6대 갭 매트릭스': '시민수요 강도, 정책공급 공백, 민원 시급성, 뉴스 여론, 학술 근거, 인프라 통계를 교차 분석하는 6축 진단표',
+      '5대 진단축': '시민수요 강도, 정책공급 공백, 민원 시급성, 실행 가능성, 근거 신뢰도를 가중 결합하는 우선순위 비교 기준',
       '5원 데이터': '상상대로 제안 + 국민신문고 민원 + 몽땅정보통 정책 + 뉴스 기사 + 공공통계, 5개 출처 융합'
     }
   },
-  5: {
-    title: '6. 결측치 복원 & 통합 로그',
+  8: {
+    title: '8. 결측치 복원 & 통합 로그',
     purpose: '"구 미상" 시민 제안의 자치구 결측치를 텍스트마이닝으로 일괄 복원하고, 대시보드 전체에서 발생한 피드백·신고·반영 이력을 통합 조회하는 화면입니다.',
     steps: [
       '상단 배너에서 결측 현황(구 미상 비율 90.4%, 5원 데이터 소스)을 확인합니다.',
@@ -128,7 +189,13 @@ const PAGE_GUIDE: Record<number, { title: string; purpose: string; steps: string
   }
 };
 
-export const OfficeAssistant: React.FC<Props> = ({ selectedDept, activeTab, onNavigateToTab, publicSubTab }) => {
+export const OfficeAssistant: React.FC<Props> = ({
+  selectedDept,
+  selectedDeptGroup = null,
+  activeTab,
+  onNavigateToTab,
+  publicSubTab,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeScreen, setActiveScreen] = useState<'menu' | 'flow' | 'guide' | 'page'>('menu');
   const [bubbleText, setBubbleText] = useState('안녕하세요! 저는 서울시 오피스 길잡이 새싹이입니다. 공직 업무 수행을 위한 맞춤형 분석 동선을 추천해 드립니다.');
@@ -147,10 +214,18 @@ export const OfficeAssistant: React.FC<Props> = ({ selectedDept, activeTab, onNa
     return () => clearTimeout(t);
   }, []);
 
-  // 부서가 바뀔 때 안내 텍스트 자동 갱신 (처음 한 번만 팝업 자동 오픈)
+  // 8대 정책 담당군이 바뀔 때 안내 텍스트 자동 갱신 (처음 한 번만 팝업 자동 오픈)
   useEffect(() => {
     if (selectedDept) {
-      setBubbleText(`소속 부서가 [${selectedDept}](으)로 확인되었습니다! 맞춤형 R&R 보고서 기안을 위한 전담 추천 플로우가 준비되었습니다. 아래 버튼을 눌러 확인해 보십시오.`);
+      setBubbleText(`실제 R&R 팀 [${selectedDept}] 기준으로 제안과 보고서 범위를 좁혔습니다.`);
+      setActiveScreen('flow');
+      if (!hasDeptPopupShown) {
+        setIsOpen(true);
+        setHasDeptPopupShown(true);
+        setHasInteracted(true);
+      }
+    } else if (selectedDeptGroup) {
+      setBubbleText(`[${selectedDeptGroup}] 대분류 담당군 기준으로 제안을 모았습니다. 필요하면 옆 필터에서 실제 R&R 팀을 추가 선택하세요.`);
       setActiveScreen('flow');
       if (!hasDeptPopupShown) {
         setIsOpen(true);
@@ -158,49 +233,45 @@ export const OfficeAssistant: React.FC<Props> = ({ selectedDept, activeTab, onNa
         setHasInteracted(true);
       }
     }
-  }, [selectedDept]);
+  }, [selectedDept, selectedDeptGroup]);
 
   // 추천 업무 플로우 텍스트 생성
   const getFlowSteps = () => {
-    if (!selectedDept) {
+    const scopeText = selectedDept
+      ? selectedDeptGroup
+        ? `[${selectedDeptGroup}]에서 [${selectedDept}]이 1순위 주관인 제안`
+        : `전체 분야에서 [${selectedDept}]이 주관 또는 협조로 참여한 제안`
+      : selectedDeptGroup
+        ? `[${selectedDeptGroup}] 대분류 제안`
+        : '전체 출산·양육 제안';
+
+    if (!selectedDept && !selectedDeptGroup) {
       return [
-        '1. GNB 우측 상단의 [소속 부서 선택] 드롭다운에서 담당 부서를 먼저 지정해 주십시오.',
-        '2. [수요 현황 종합]에서 전체 현황과 부서별 분류 비중을 확인합니다.',
-        '3. [정책 갭 진단]으로 이동하여 6대 갭 매트릭스 진단표에서 정책 공백을 확인합니다.',
-        '4. [긴급 민원 처리]에서 미답변 제안을 확인하고 맞춤 CSV로 데이터를 내보냅니다.'
+        '1. [수요 현황 종합] — 전체 KPI, 답변 현황, 정책 대분류와 실제 주관팀 분포를 확인합니다.',
+        '2. [시민 목소리 분석] — 연도·생애주기·분류별 키워드와 시민 공감 수요를 찾습니다.',
+        '3. [긴급 민원 처리] — 미답변·고공감·최신 안건을 한 건 또는 다중 조건으로 검토합니다.',
+        '4. [현행 정책 검색] — 몽땅정보통 322개 공식 사업에서 기존 대응 정책을 대조합니다.',
+        '5. [정책 사각지대 탐색] — 반복되는 유사 제안 군집과 공급이 약한 영역을 찾습니다.',
+        '6. [자치구 통계 비교] — 25개 자치구의 출생·보육 지표와 지역 확인 제안을 비교합니다.',
+        '7. [정책 갭 진단] — 수요·공백·시급성·실행성·신뢰도를 보고 조치안을 검토·승인합니다.',
+        '8. [결측치 복원 & 로그] — 자치구 미상 복원 후보와 오매칭·반영·승인 이력을 관리합니다.'
       ];
     }
 
-    switch (selectedDept) {
-      case '가족건강팀':
-        return [
-          '1. [의료·건강·심리 지원] 카테고리가 가족건강팀 전담 R&R 영역입니다.',
-          '2. [정책 갭 진단] 탭으로 이동하면 해당 카테고리가 부서 필터로 자동 정렬됩니다.',
-          '3. 매핑 제안 중 답변 수립 여부를 검토하고 AI 답변 승인/수정 처리를 진행합니다.',
-          '4. [긴급 민원 처리] 탭에서 미답변 고공감 제안을 확인하고 일괄 답변합니다.'
-        ];
-      case '저출생사업1팀':
-        return [
-          '1. [출산·산후 초기지원] 및 [양육비·금융지원]이 저출생사업1팀 소관 업무입니다.',
-          '2. [수요 현황 종합] 상단 KPI 카드에서 부서 필터링 비중과 미답변 건수를 점검합니다.',
-          '3. [정책 갭 진단] 화면에서 해당 카테고리의 갭 상태를 확인합니다.',
-          '4. [긴급 민원 처리]에서 맞춤 CSV로 엑셀 데이터를 받아 정밀 분석합니다.'
-        ];
-      case '저출생사업2팀':
-        return [
-          '1. [육아지원·돌봄] 및 [일·가정 양립] 카테고리가 저출생사업2팀 담당입니다.',
-          '2. [수요 현황 종합] 우측 핵심 인사이트 TOP 3에서 돌봄 수요 변화를 모니터링합니다.',
-          '3. [정책 갭 진단] 진단표에서 돌봄 관련 정책 공백·보완 상태를 확인합니다.',
-          '4. AI 답변 승인 패널에서 공문 초안 검토 후 승인 처리합니다.'
-        ];
-      default:
-        return [
-          `1. [${selectedDept}]의 소관 카테고리가 대시보드 전체에 실시간 동기화되었습니다.`,
-          '2. [수요 현황 종합] 상단 KPI를 통해 부서 담당 지표를 실시간 확인합니다.',
-          '3. [정책 갭 진단]에서 소속 부서 담당 카테고리가 자동 필터링됩니다.',
-          '4. [긴급 민원 처리]에서 미답변 제안을 확인하고 일괄 답변 처리합니다.'
-        ];
-    }
+    return [
+      `적용 범위: ${scopeText}`,
+      `1. [수요 현황 종합] — ${scopeText}의 KPI와 미답변 현황을 확인합니다.`,
+      '2. [시민 목소리 분석] — 현재 범위의 핵심 키워드·연도·생애주기 수요를 확인합니다.',
+      '3. [긴급 민원 처리] — 현재 범위의 미답변·고공감·최신 안건과 1·2·3순위 R&R을 검토합니다.',
+      '4. [현행 정책 검색] — 공식 사업 322개에서 대응 정책을 검색해 제안과 대조합니다.',
+      '5. [정책 사각지대 탐색] — 현재 범위에서 반복되는 유사 제안 군집을 확인합니다.',
+      '6. [자치구 통계 비교] — 지역 확인 제안과 25개 자치구 공공지표를 함께 봅니다.',
+      '7. [정책 갭 진단] — 현재 범위의 정책 공백과 추천 조치안을 검토·수정·승인합니다.',
+      '8. [결측치 복원 & 로그] — 데이터 복원 후보와 오매칭·반영·승인 이력을 확인합니다.',
+      selectedDeptGroup && !selectedDept
+        ? '다음 행동: 상단 두 번째 필터에서 실제 R&R 팀을 선택하면 1순위 주관 안건으로 더 좁힐 수 있습니다.'
+        : '다음 행동: 우측 보고서 다운로드에서 현재 범위를 HWP 텍스트·PDF 요약·CSV로 내보냅니다.'
+    ];
   };
 
   return (
@@ -269,7 +340,12 @@ export const OfficeAssistant: React.FC<Props> = ({ selectedDept, activeTab, onNa
             )}
 
             {activeScreen === 'page' && (() => {
-              const guide = PAGE_GUIDE[activeTab] ?? PAGE_GUIDE[0];
+              const guideKey = activeTab === 6 && publicSubTab === 'demographics'
+                ? 6.5
+                : activeTab === 6 && publicSubTab === 'structure'
+                  ? 6.7
+                  : activeTab;
+              const guide = PAGE_GUIDE[guideKey] ?? PAGE_GUIDE[0];
               return (
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
@@ -334,7 +410,11 @@ export const OfficeAssistant: React.FC<Props> = ({ selectedDept, activeTab, onNa
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="font-extrabold text-blue-900 text-[11px] flex items-center gap-1">
-                    💡 {selectedDept ? `${selectedDept} 전용 플로우` : '기본 행정 업무 동선'}
+                    💡 {selectedDept
+                      ? `${selectedDept} 실제 팀 플로우`
+                      : selectedDeptGroup
+                        ? `${selectedDeptGroup} 대분류 플로우`
+                        : '기본 행정 업무 동선'}
                   </span>
                   <span className="text-[9px] bg-blue-100 text-blue-800 px-1 rounded font-bold">R&R 매핑</span>
                 </div>
@@ -353,7 +433,7 @@ export const OfficeAssistant: React.FC<Props> = ({ selectedDept, activeTab, onNa
                     <ArrowLeft className="w-3 h-3" />
                     <span>이전 메뉴</span>
                   </button>
-                  {selectedDept && (
+                  {(selectedDept || selectedDeptGroup) && (
                     <button
                       onClick={() => {
                         onNavigateToTab(7); // Gap Matrix 탭으로 이동

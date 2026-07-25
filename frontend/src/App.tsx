@@ -32,6 +32,10 @@ import rawMongttangData from './data/mongttang.json';
 import { PolicyProposal, DashboardStats } from './types';
 import {
   DEPARTMENT_GROUPS,
+  getProposalDepartmentNames,
+  getPrimaryDepartment,
+  proposalMatchesDepartment,
+  proposalMatchesPrimaryDepartment,
   proposalMatchesDepartmentGroup,
 } from './utils/departments';
 
@@ -66,6 +70,7 @@ export default function App() {
   const [publicColorMetric, setPublicColorMetric] = useState<'proposals' | 'births' | 'daycare' | 'fertility' | 'demand' | 'demandScore'>('fertility');
   const [publicSortBy, setPublicSortBy] = useState<'name' | 'value'>('value');
   const [selectedDept, setSelectedDept] = useState<string | null>(null);
+  const [selectedRrDept, setSelectedRrDept] = useState<string | null>(null);
   const [isExportModalOpen, setIsExportModalOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
   const [currentTime, setCurrentTime] = useState<Date>(new Date());
@@ -115,14 +120,38 @@ export default function App() {
   const [publicSearchTerm, setPublicSearchTerm] = useState('');
   const [publicSortOrder, setPublicSortOrder] = useState<'latest' | 'oldest' | 'title'>('latest');
   const [publicCategoryFilter, setPublicCategoryFilter] = useState<string>('전체');
+  const activeDeptGroup = selectedDept && DEPARTMENT_GROUPS.includes(selectedDept)
+    ? selectedDept
+    : null;
 
-  // 부서 필터링된 제안 목록 (여러 탭에서 공유)
-  const deptFilteredProposals = useMemo(() => {
-    if (!selectedDept) return mockProposals;
+  const groupFilteredProposals = useMemo(() => {
+    if (!activeDeptGroup) return mockProposals;
     return mockProposals.filter((proposal) => (
-      proposalMatchesDepartmentGroup(proposal, selectedDept)
+      proposalMatchesDepartmentGroup(proposal, activeDeptGroup)
     ));
-  }, [mockProposals, selectedDept]);
+  }, [mockProposals, activeDeptGroup]);
+  const rrDepartmentOptions = useMemo(() => (
+    Array.from(new Set(
+      activeDeptGroup
+        ? groupFilteredProposals
+          .map((proposal) => getPrimaryDepartment(proposal)?.dept_name)
+          .filter((dept): dept is string => Boolean(dept))
+        : groupFilteredProposals.flatMap(getProposalDepartmentNames),
+    )).sort()
+  ), [groupFilteredProposals, activeDeptGroup]);
+  const activeRrDept = selectedRrDept && rrDepartmentOptions.includes(selectedRrDept)
+    ? selectedRrDept
+    : null;
+
+  // 8대 정책 담당군과 실제 R&R 실무팀을 차례로 적용한다.
+  const deptFilteredProposals = useMemo(() => {
+    if (!activeRrDept) return groupFilteredProposals;
+    return groupFilteredProposals.filter((proposal) => (
+      activeDeptGroup
+        ? proposalMatchesPrimaryDepartment(proposal, activeRrDept)
+        : proposalMatchesDepartment(proposal, activeRrDept)
+    ));
+  }, [groupFilteredProposals, activeDeptGroup, activeRrDept]);
 
   // 실시간 통계 연산
   const stats = useMemo<DashboardStats>(() => {
@@ -266,17 +295,39 @@ export default function App() {
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-4 text-xs">
-          {/* 부서 선택 필터 */}
+        <div className="flex flex-1 flex-wrap items-center justify-end gap-3 text-xs">
+          {/* 8대 정책 담당군 → 실제 R&R 실무팀 2단계 필터 */}
           <div className="flex items-center gap-1.5 bg-slate-800/80 border border-slate-700 rounded px-2.5 py-1">
             <Building2 className="w-3.5 h-3.5 text-blue-400" />
             <select
-              value={selectedDept || ''}
-              onChange={(e) => setSelectedDept(e.target.value || null)}
+              value={activeDeptGroup || ''}
+              onChange={(e) => {
+                setSelectedDept(e.target.value || null);
+                setSelectedRrDept(null);
+              }}
               className="bg-transparent text-white font-bold text-xs focus:outline-none cursor-pointer pr-1"
+              aria-label="정책 담당군 선택"
             >
               <option value="" className="bg-[#0A2351] text-slate-300">🏷️ 전체 대분류 담당군</option>
               {DEPARTMENT_GROUPS.map((dept) => (
+                <option key={dept} value={dept} className="bg-[#0A2351] text-white">
+                  🏷️ {dept} 담당군
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="flex items-center gap-1.5 bg-slate-800/80 border border-slate-700 rounded px-2.5 py-1">
+            <Building2 className="w-3.5 h-3.5 text-cyan-300" />
+            <select
+              value={activeRrDept || ''}
+              onChange={(e) => setSelectedRrDept(e.target.value || null)}
+              className="bg-transparent text-white font-bold text-xs focus:outline-none cursor-pointer pr-1"
+              aria-label={activeDeptGroup ? '1순위 주관 R&R 팀 선택' : '전체 R&R 팀 선택'}
+            >
+              <option value="" className="bg-[#0A2351] text-slate-300">
+                {activeDeptGroup ? '🏢 전체 주관 R&R 팀' : '🏢 전체 실제 R&R 팀'}
+              </option>
+              {rrDepartmentOptions.map((dept) => (
                 <option key={dept} value={dept} className="bg-[#0A2351] text-white">
                   🏢 {dept}
                 </option>
@@ -291,7 +342,7 @@ export default function App() {
           <span className="opacity-70 font-mono notranslate" translate="no">{formatTime(currentTime)} 기준</span>
           <button
             onClick={handleExportData}
-            className="text-xs bg-slate-800/80 text-white border border-slate-700 hover:bg-slate-700 font-bold px-3 py-1 rounded flex items-center gap-1.5 transition"
+            className="ml-auto text-xs bg-slate-800/80 text-white border border-slate-700 hover:bg-slate-700 font-bold px-3 py-1 rounded flex items-center gap-1.5 transition shrink-0"
           >
             <Download className="w-3.5 h-3.5" />
             <span translate="no" className="notranslate">보고서 다운로드</span>
@@ -403,7 +454,13 @@ export default function App() {
                 stats={stats}
                 onNavigateToTab={handleNavigateToTab}
                 onSelectCategory={handleSelectCategoryFromOverview}
-                selectedDept={selectedDept}
+                selectedDept={activeDeptGroup}
+                selectedRrDept={activeRrDept}
+                groupTotalCount={groupFilteredProposals.length}
+                onSelectDept={(group) => {
+                  setSelectedDept(group);
+                  if (!group) setSelectedRrDept(null);
+                }}
               />
             )}
 
@@ -414,6 +471,9 @@ export default function App() {
                 proposals={deptFilteredProposals}
                 selectedCategory={selectedCategory}
                 onSelectCategory={setSelectedCategory}
+                selectedDept={activeRrDept}
+                onSelectDept={setSelectedRrDept}
+                departmentMatchMode={activeDeptGroup ? 'primary' : 'any'}
               />
             )}
 
@@ -423,6 +483,9 @@ export default function App() {
                 initialCategory={selectedCategory || undefined}
                 initialSubCategory={selectedSubCategory || undefined}
                 initialClusterId={selectedClusterId || undefined}
+                selectedDept={activeRrDept || undefined}
+                onSelectDept={setSelectedRrDept}
+                departmentMatchMode={activeDeptGroup ? 'primary' : 'any'}
               />
             )}
 
@@ -870,14 +933,14 @@ export default function App() {
 
             {activeTab === 7 && (
               <GapMatrixDashboard
-                proposals={mockProposals}
+                proposals={deptFilteredProposals}
                 onNavigateToTab={handleNavigateToTab}
-                selectedDept={selectedDept}
+                selectedDept={activeRrDept}
               />
             )}
 
             {activeTab === 8 && (
-              <MissingDataSimulator proposals={mockProposals} onApply={handleImputeApply} />
+              <MissingDataSimulator proposals={deptFilteredProposals} onApply={handleImputeApply} />
             )}
           </motion.div>
         </AnimatePresence>
@@ -905,15 +968,16 @@ export default function App() {
       <ReportExportModal
         isOpen={isExportModalOpen}
         onClose={() => setIsExportModalOpen(false)}
-        selectedDept={selectedDept}
+        selectedDept={activeRrDept}
         selectedDistrict={activeTab === 'publicData' ? (selectedDistrict || selectedPublicDistrict?.name) : selectedDistrict}
         selectedCategory={selectedCategory}
-        proposals={mockProposals}
+        proposals={deptFilteredProposals}
       />
 
       {/* 오피스 길잡이 (새싹이) */}
       <OfficeAssistant
-        selectedDept={selectedDept}
+        selectedDept={activeRrDept}
+        selectedDeptGroup={activeDeptGroup}
         activeTab={activeTab}
         onNavigateToTab={handleNavigateToTab}
         publicSubTab={publicSubTab}

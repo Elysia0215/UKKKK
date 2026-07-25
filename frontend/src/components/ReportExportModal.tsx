@@ -264,7 +264,7 @@ export const ReportExportModal: React.FC<Props> = ({
               '본 보고서는 시민 제안, 민원, 정책 공급, 뉴스, 실측 통계를 함께 검토해 출산·양육 정책의 수요와 공급 공백을 판단하기 위한 기안 초안입니다.',
               '개별 클러스터 하나를 세분화하기보다 전체 수요 흐름을 기준으로 부서 R&R과 결재 검토에 필요한 종합 판단을 제시합니다.',
               '■ [AS-IS] 기존 수작업 행정 한계: 담당자가 다수의 시민 게시판 및 복지 포털 데이터를 개별 취합·집계하느라 R&R 소관 판단에 평균 3.5일이 소요되었으며, 정책 갭에 대한 과학적 실증 근거를 제공하기 어려웠음.',
-              '■ [TO-BE] UKKKK 시스템 도입 혁신 효과: NLP 자동 분류 및 3대 학술 방법론(기본/박미경/KICCE) 가중치 엔진을 통해 실시간으로 사각지대를 진단하고, 18개 실무부서 1·2·3순위 R&R 자동 라우팅 및 1클릭 행정 공문 초안 기안 연동으로 행정 처리 시간을 단 10분 이내로 감축(약 98% 이상 업무 리소스 절감)함.',
+              '■ [TO-BE] UKKKK 시스템 도입 기대 효과: NLP·규칙 기반 분류와 3대 가중치 모델을 통해 정책 사각지대 검토 순서를 제시하고, 원본 업무분장 기반 실제 팀의 1·2·3순위 R&R 후보와 행정 답변 초안을 함께 제공하여 담당자의 탐색·대조·기안 업무를 지원함. 실제 시간 절감률과 추천 정확도는 후속 실무자 과업 테스트로 검증할 예정임.',
             ]
           : [
               `◈ [여성가족실 브리핑] 시민 정책 수요 진단 및 시장단 신속 의사결정 지원`,
@@ -272,7 +272,7 @@ export const ReportExportModal: React.FC<Props> = ({
               `◈ 목적: 파편화된 다차원 정책 데이터 결합 기반 R&R 우선 조치 및 자치구별 정책 자원 배분 활용`,
               `◈ 행정 혁신 대비 (Before vs After):`,
               `  - 기존(Before): 단순 엑셀 수작업 모니터링 및 민원 1:1 대면 소동으로 기획안 마련에 장시간 적체`,
-              `  - 현행(After): UKKKK 다차원 연동 분석 모형 적용, AI 실시간 R&R 라우팅 및 1클릭 기안 도입으로 98% 행정 리소스 혁신적 세이브`,
+              `  - 개선안(After): UKKKK 다차원 연동 분석과 R&R 후보·기안 초안을 활용해 탐색과 대조 단계를 단축하고, 담당자가 최종 검토·수정·승인`,
             ],
       },
       {
@@ -431,6 +431,156 @@ export const ReportExportModal: React.FC<Props> = ({
     setEnabledSections((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
+  const printPdfReport = () => {
+    const printableArea = document.getElementById('printable-report-area');
+    if (!printableArea) return;
+
+    // 앱의 fixed 모달·flex·overflow·transform 스타일이 인쇄 레이아웃에 섞이지 않도록
+    // 보고서 DOM만 숨김 iframe에 복제해 A4 문서로 인쇄한다.
+    const printFrame = document.createElement('iframe');
+    printFrame.setAttribute('aria-hidden', 'true');
+    printFrame.style.position = 'fixed';
+    printFrame.style.left = '-10000px';
+    printFrame.style.top = '0';
+    printFrame.style.width = '1px';
+    printFrame.style.height = '1px';
+    printFrame.style.border = '0';
+    printFrame.style.opacity = '0';
+    printFrame.style.pointerEvents = 'none';
+    document.body.appendChild(printFrame);
+
+    const printWindow = printFrame.contentWindow;
+    if (!printWindow) {
+      printFrame.remove();
+      return;
+    }
+
+    const sharedStyles = Array.from(
+      document.head.querySelectorAll('link[rel="stylesheet"], style'),
+    )
+      .map((node) => node.outerHTML)
+      .join('\n');
+
+    const titleScope = selectedDept || selectedCategory || selectedDistrict || '여성가족실';
+    printWindow.document.open();
+    printWindow.document.write(`<!doctype html>
+      <html lang="ko">
+        <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <base href="${document.baseURI}" />
+          <title>[${titleScope}] 출산·양육 정책 보고서</title>
+          ${sharedStyles}
+          <style>
+            @page { size: A4 portrait; margin: 0; }
+            * { box-sizing: border-box !important; }
+            html, body {
+              width: auto !important;
+              min-height: auto !important;
+              margin: 0 !important;
+              padding: 0 !important;
+              overflow: visible !important;
+              background: white !important;
+            }
+            #printable-report-area {
+              width: 100% !important;
+              height: auto !important;
+              min-height: 0 !important;
+              margin: 0 !important;
+              padding: 0 !important;
+              overflow: visible !important;
+              border: 0 !important;
+              border-radius: 0 !important;
+              box-shadow: none !important;
+              background: white !important;
+              color: black !important;
+            }
+            .document-print #printable-report-area {
+              width: 210mm !important;
+              padding: 12mm !important;
+            }
+            #printable-report-area > div:not(.public-share-report) > section,
+            #printable-report-area > section,
+            #printable-report-area li {
+              break-inside: avoid-page !important;
+              page-break-inside: avoid !important;
+            }
+            #printable-report-area .public-share-report {
+              display: block !important;
+              width: 210mm !important;
+              margin: 0 !important;
+              padding: 0 !important;
+            }
+            .public-print #printable-report-area {
+              width: 210mm !important;
+              padding: 0 !important;
+            }
+            .report-print-page {
+              width: 210mm !important;
+              max-width: none !important;
+              min-height: 297mm !important;
+              height: 297mm !important;
+              margin: 0 !important;
+              overflow: hidden !important;
+              box-shadow: none !important;
+              break-after: page !important;
+              page-break-after: always !important;
+              break-inside: avoid-page !important;
+              page-break-inside: avoid !important;
+              print-color-adjust: exact !important;
+              -webkit-print-color-adjust: exact !important;
+            }
+            .report-print-page:last-child {
+              break-after: auto !important;
+              page-break-after: auto !important;
+            }
+            @media print {
+              @page { size: A4 portrait; margin: 0; }
+              @page :first { size: A4 portrait; }
+              .public-print #printable-report-area {
+                position: relative !important;
+                left: auto !important;
+                top: auto !important;
+                width: 210mm !important;
+                padding: 0 !important;
+              }
+              .public-print {
+                width: 210mm !important;
+              }
+            }
+          </style>
+        </head>
+        <body class="${reportType === 'public-share' ? 'public-print' : 'document-print'}">${printableArea.outerHTML}</body>
+      </html>`);
+    printWindow.document.close();
+
+    const openPrintDialog = async () => {
+      const images = Array.from(printWindow.document.images);
+      await Promise.all(images.map((image) => (
+        image.complete
+          ? Promise.resolve()
+          : new Promise<void>((resolve) => {
+              image.addEventListener('load', () => resolve(), { once: true });
+              image.addEventListener('error', () => resolve(), { once: true });
+            })
+      )));
+      printWindow.focus();
+      printWindow.print();
+    };
+
+    printWindow.addEventListener('afterprint', () => {
+      window.setTimeout(() => printFrame.remove(), 500);
+    }, { once: true });
+
+    if (printWindow.document.readyState === 'complete') {
+      window.setTimeout(openPrintDialog, 300);
+    } else {
+      printWindow.addEventListener('load', () => {
+        window.setTimeout(openPrintDialog, 300);
+      }, { once: true });
+    }
+  };
+
   const handleDownload = () => {
     if (format === 'excel') {
       const blob = new Blob(['\uFEFF' + createCsv(scopedProposals, selectedDept)], {
@@ -448,7 +598,7 @@ export const ReportExportModal: React.FC<Props> = ({
     }
 
     if (format === 'pdf') {
-      window.print();
+      printPdfReport();
       return;
     }
 

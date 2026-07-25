@@ -75,11 +75,10 @@ export const PublicShareReport: React.FC<Props> = ({
           <ReportHeader period={period} />
         </div>
 
-        <div
-          className="h-[465px] bg-cover bg-center"
-          style={{ backgroundImage: 'url(/report_hero_bg.jpg)' }}
-          role="img"
-          aria-label="상상대로서울 캐릭터들이 데이터를 살펴보는 밝은 사무실"
+        <img
+          src="/report_hero_bg.jpg"
+          alt="상상대로서울 캐릭터들이 데이터를 살펴보는 밝은 사무실"
+          className="block h-[465px] w-full object-cover object-center"
         />
 
         <div className="relative z-10 mx-[36px] mt-[-34px] grid grid-cols-4 gap-[10px]">

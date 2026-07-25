@@ -36,6 +36,7 @@ import {
   getProposalDepartmentNames,
   getSortedDepartmentRankings,
   proposalMatchesAnyDepartment,
+  proposalMatchesAnyPrimaryDepartment,
 } from '../utils/departments';
 import { getProposalDisplayContent } from '../utils/proposals';
 import rawMongttangData from '../data/mongttang.json';
@@ -52,6 +53,7 @@ interface Props {
   initialClusterId?: number;
   selectedDept?: string;
   onSelectDept?: (dept: string | null) => void;
+  departmentMatchMode?: 'primary' | 'any';
 }
 
 interface ProposalGroup {
@@ -64,13 +66,25 @@ interface ProposalGroup {
   totalVotes: number;
 }
 
+type UrgentFilter = 'gap' | 'latest2026' | 'highEngagement';
+
+const getProposalYear = (proposal: PolicyProposal): string => {
+  const date = proposal.reg_date || '';
+  if (date.startsWith('2026')) return '2026';
+  if (date.startsWith('2025')) return '2025';
+  if (date.startsWith('2024')) return '2024';
+  if (date.startsWith('2023')) return '2023';
+  return '2022이전';
+};
+
 export const PriorityDetails: React.FC<Props> = ({
   proposals,
   initialCategory,
   initialSubCategory,
   initialClusterId,
   selectedDept,
-  onSelectDept
+  onSelectDept,
+  departmentMatchMode = 'primary'
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [isMultiSelectMode, setIsMultiSelectMode] = useState<boolean>(false);
@@ -112,7 +126,7 @@ export const PriorityDetails: React.FC<Props> = ({
     }
   }, [selectedDepts, onSelectDept]);
   const [onlyShowGaps, setOnlyShowGaps] = useState(false); // '정책 공백(미답변+고공감)'만 보기 토글
-  const [onlyShow2026Gaps, setOnlyShow2026Gaps] = useState(false); // '2026 최신 정책 공백'만 보기 토글
+  const [onlyShow2026Gaps, setOnlyShow2026Gaps] = useState(false); // '2026 최신 미답변'만 보기 토글
   const [onlyShowHighVoteNoReply, setOnlyShowHighVoteNoReply] = useState(false); // '공감 500+/댓글 100+ 고공감 미답변' 스마트 모아보기 토글
   const [viewMode, setViewMode] = useState<'list' | 'group'>('group'); // 그룹 보기 vs 개별 리스트 보기
   const [listDisplayLimit, setListDisplayLimit] = useState<number>(30); // 개별 리스트 렌더링 슬라이싱 한도 (과부하 방지)
@@ -121,8 +135,10 @@ export const PriorityDetails: React.FC<Props> = ({
   const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(false);
 
   const checkDeptMatch = React.useCallback((p: PolicyProposal, depts: string[]) => {
-    return proposalMatchesAnyDepartment(p, depts);
-  }, []);
+    return departmentMatchMode === 'primary'
+      ? proposalMatchesAnyPrimaryDepartment(p, depts)
+      : proposalMatchesAnyDepartment(p, depts);
+  }, [departmentMatchMode]);
 
   React.useEffect(() => {
     if (initialCategory) {
@@ -141,13 +157,26 @@ export const PriorityDetails: React.FC<Props> = ({
     const nextMode = !isMultiSelectMode;
     setIsMultiSelectMode(nextMode);
 
-    // 다중 선택 모드를 켰다가 끄면(OFF), 2개 이상 중복 선택되어 있던 필터들을 '전체'로 즉시 초기화
+    // 다중 선택 모드를 끄면 각 필터 차원마다 하나만 남긴다.
     if (!nextMode) {
       if (selectedYears.length > 1) setSelectedYears(['전체']);
       if (selectedFlows.length > 1) setSelectedFlows(['전체']);
       if (selectedCategories.length > 1) setSelectedCategories(['전체']);
       if (selectedSubCategories.length > 1) setSelectedSubCategories(['전체']);
       if (selectedDepts.length > 1) setSelectedDepts(['전체']);
+
+      const activeUrgentFilters = [
+        onlyShowGaps ? 'gap' : null,
+        onlyShow2026Gaps ? 'latest2026' : null,
+        onlyShowHighVoteNoReply ? 'highEngagement' : null,
+      ].filter(Boolean);
+      if (activeUrgentFilters.length > 1) {
+        setOnlyShowGaps(Boolean(onlyShowGaps));
+        setOnlyShow2026Gaps(!onlyShowGaps && Boolean(onlyShow2026Gaps));
+        setOnlyShowHighVoteNoReply(
+          !onlyShowGaps && !onlyShow2026Gaps && Boolean(onlyShowHighVoteNoReply),
+        );
+      }
     }
   };
 
@@ -173,6 +202,67 @@ export const PriorityDetails: React.FC<Props> = ({
       setList([...next, val]);
     }
   };
+
+  const handleUrgentFilterClick = (filter: UrgentFilter) => {
+    const isCurrentActive =
+      filter === 'gap'
+        ? onlyShowGaps
+        : filter === 'latest2026'
+          ? onlyShow2026Gaps
+          : onlyShowHighVoteNoReply;
+
+    if (!isMultiSelectMode) {
+      setOnlyShowGaps(filter === 'gap' && !isCurrentActive);
+      setOnlyShow2026Gaps(filter === 'latest2026' && !isCurrentActive);
+      setOnlyShowHighVoteNoReply(filter === 'highEngagement' && !isCurrentActive);
+      return;
+    }
+
+    if (filter === 'gap') setOnlyShowGaps((current) => !current);
+    if (filter === 'latest2026') setOnlyShow2026Gaps((current) => !current);
+    if (filter === 'highEngagement') setOnlyShowHighVoteNoReply((current) => !current);
+  };
+
+  const clearUrgentFilters = () => {
+    setOnlyShowGaps(false);
+    setOnlyShow2026Gaps(false);
+    setOnlyShowHighVoteNoReply(false);
+  };
+
+  const matchesUrgentFilters = React.useCallback((proposal: PolicyProposal) => {
+    const activeConditions: boolean[] = [];
+    if (onlyShowGaps) {
+      activeConditions.push(proposal.reply_yn === 'N' && proposal.vote_score >= 150);
+    }
+    if (onlyShow2026Gaps) {
+      activeConditions.push(
+        getProposalYear(proposal) === '2026'
+        && proposal.reply_yn === 'N',
+      );
+    }
+    if (onlyShowHighVoteNoReply) {
+      activeConditions.push(
+        proposal.reply_yn === 'N'
+        && (proposal.vote_score >= 300 || (proposal.comment_cnt || 0) >= 50),
+      );
+    }
+
+    // 같은 "긴급 필터" 차원에서 다중 선택한 항목은 OR로 결합한다.
+    return activeConditions.length === 0 || activeConditions.some(Boolean);
+  }, [onlyShowGaps, onlyShow2026Gaps, onlyShowHighVoteNoReply]);
+
+  const urgentFilterCounts = useMemo(() => ({
+    gap: proposals.filter(
+      (proposal) => proposal.reply_yn === 'N' && proposal.vote_score >= 150,
+    ).length,
+    latest2026: proposals.filter(
+      (proposal) => getProposalYear(proposal) === '2026' && proposal.reply_yn === 'N',
+    ).length,
+    highEngagement: proposals.filter(
+      (proposal) => proposal.reply_yn === 'N'
+        && (proposal.vote_score >= 300 || (proposal.comment_cnt || 0) >= 50),
+    ).length,
+  }), [proposals]);
 
   const handleResetFilters = () => {
     setSelectedYears(['전체']);
@@ -200,18 +290,13 @@ export const PriorityDetails: React.FC<Props> = ({
       const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
-      if (matchesDept && matchesFlow && matchesCat && matchesSubCat && matchesMicroCat) {
+      if (matchesDept && matchesFlow && matchesCat && matchesSubCat && matchesMicroCat && matchesUrgentFilters(p)) {
         counts['전체'] = (counts['전체'] || 0) + 1;
-        if (!p.reg_date) return;
-        if (p.reg_date.startsWith('2026')) counts['2026']++;
-        else if (p.reg_date.startsWith('2025')) counts['2025']++;
-        else if (p.reg_date.startsWith('2024')) counts['2024']++;
-        else if (p.reg_date.startsWith('2023')) counts['2023']++;
-        else counts['2022이전']++;
+        counts[getProposalYear(p)]++;
       }
     });
     return counts;
-  }, [proposals, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories, selectedMicroCategory, checkDeptMatch]);
+  }, [proposals, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories, selectedMicroCategory, checkDeptMatch, matchesUrgentFilters]);
 
   // 몽땅정보 현행 정책 목록
   const mongttangPolicies: MongttangPolicy[] = useMemo(() => {
@@ -367,23 +452,13 @@ export const PriorityDetails: React.FC<Props> = ({
   const filteredProposals = useMemo(() => {
     return proposals.filter(p => {
       const matchesSearch = p.title.includes(searchTerm) || p.content.includes(searchTerm);
-      const matchesYear = selectedYears.includes('전체') || selectedYears.some(y => {
-        if (y === '2026') return p.reg_date?.startsWith('2026');
-        if (y === '2025') return p.reg_date?.startsWith('2025');
-        if (y === '2024') return p.reg_date?.startsWith('2024');
-        if (y === '2023') return p.reg_date?.startsWith('2023');
-        if (y === '2022이전') return p.reg_date && p.reg_date < '2023';
-        return false;
-      });
+      const matchesYear = selectedYears.includes('전체') || selectedYears.includes(getProposalYear(p));
       const matchesCategory = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
       const matchesSubCategory = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCategory = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
       const matchesDept = checkDeptMatch(p, selectedDepts);
-      const matchesGap = !onlyShowGaps || (p.reply_yn === 'N' && p.vote_score >= 150);
-      const matches2026Gap = !onlyShow2026Gaps || (p.reg_date?.startsWith('2026') && p.reply_yn === 'N' && p.vote_score >= 150);
-      const matchesHighVoteNoReply = !onlyShowHighVoteNoReply || (p.reply_yn === 'N' && (p.vote_score >= 300 || (p.comment_cnt || 0) >= 50));
-      return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap && matches2026Gap && matchesHighVoteNoReply;
+      return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesUrgentFilters(p);
     }).sort((a, b) => {
       if (sortBy === 'date_desc') return (b.reg_date || '').localeCompare(a.reg_date || '');
       if (sortBy === 'date_asc') return (a.reg_date || '').localeCompare(b.reg_date || '');
@@ -391,30 +466,20 @@ export const PriorityDetails: React.FC<Props> = ({
       if (sortBy === 'comment_desc') return b.comment_cnt - a.comment_cnt;
       return 0;
     });
-  }, [proposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, onlyShow2026Gaps, onlyShowHighVoteNoReply, sortBy, checkDeptMatch]);
+  }, [proposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, sortBy, checkDeptMatch, matchesUrgentFilters]);
 
   // 그룹 보기 필터 결과 (그룹 구성원 필터 후 빈 그룹 배제)
   const filteredGroupedProposals = useMemo(() => {
     const list = groupedProposals.map(g => {
       const filteredItems = g.items.filter(p => {
         const matchesSearch = p.title.includes(searchTerm) || p.content.includes(searchTerm);
-        const matchesYear = selectedYears.includes('전체') || selectedYears.some(y => {
-          if (y === '2026') return p.reg_date?.startsWith('2026');
-          if (y === '2025') return p.reg_date?.startsWith('2025');
-          if (y === '2024') return p.reg_date?.startsWith('2024');
-          if (y === '2023') return p.reg_date?.startsWith('2023');
-          if (y === '2022이전') return p.reg_date && p.reg_date < '2023';
-          return false;
-        });
+        const matchesYear = selectedYears.includes('전체') || selectedYears.includes(getProposalYear(p));
         const matchesCategory = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
         const matchesSubCategory = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
         const matchesMicroCategory = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
         const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
         const matchesDept = checkDeptMatch(p, selectedDepts);
-        const matchesGap = !onlyShowGaps || (p.reply_yn === 'N' && p.vote_score >= 150);
-        const matches2026Gap = !onlyShow2026Gaps || (p.reg_date?.startsWith('2026') && p.reply_yn === 'N' && p.vote_score >= 150);
-        const matchesHighVoteNoReply = !onlyShowHighVoteNoReply || (p.reply_yn === 'N' && (p.vote_score >= 300 || (p.comment_cnt || 0) >= 50));
-        return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesGap && matches2026Gap && matchesHighVoteNoReply;
+        return matchesSearch && matchesYear && matchesCategory && matchesSubCategory && matchesMicroCategory && matchesFlow && matchesDept && matchesUrgentFilters(p);
       }).sort((a, b) => {
         if (sortBy === 'date_desc') return (b.reg_date || '').localeCompare(a.reg_date || '');
         if (sortBy === 'date_asc') return (a.reg_date || '').localeCompare(b.reg_date || '');
@@ -448,7 +513,7 @@ export const PriorityDetails: React.FC<Props> = ({
       if (sortBy === 'comment_desc') return gb.totalComments - ga.totalComments;
       return 0;
     });
-  }, [groupedProposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, onlyShow2026Gaps, onlyShowHighVoteNoReply, sortBy, checkDeptMatch]);
+  }, [groupedProposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, sortBy, checkDeptMatch, matchesUrgentFilters]);
 
   const toggleGroup = (groupId: string) => {
     setExpandedGroups(prev => ({
@@ -498,27 +563,32 @@ export const PriorityDetails: React.FC<Props> = ({
     return ['전체', ...Array.from(set)];
   }, [proposals]);
 
-  // 실제 R&R에 포함된 담당부서 동적 목록
+  // 상단 필터와 같은 기준의 R&R 담당부서 동적 목록
   const departments: string[] = useMemo(() => {
     const set = new Set<string>();
     proposals.forEach(p => {
-      getProposalDepartmentNames(p).forEach((department) => set.add(department));
+      if (departmentMatchMode === 'primary') {
+        const department = getPrimaryDepartment(p)?.dept_name;
+        if (department) set.add(department);
+      } else {
+        getProposalDepartmentNames(p).forEach((department) => set.add(department));
+      }
     });
     return ['전체', ...Array.from(set).sort((a, b) => a.localeCompare(b, 'ko'))];
-  }, [proposals]);
+  }, [proposals, departmentMatchMode]);
 
   // --- 타 필터 선택 시 교차 연동 건수 실시간 계산 맵 ---
   // 1) 타 필터 선택에 따른 생애주기별 건수 (연도, 부서, 대분류, 중분류, 세분류 선택 연동)
   const flowCounts = useMemo(() => {
     const counts: Record<string, number> = { '전체': 0 };
     proposals.forEach(p => {
-      const regYear = p.reg_year || '2022이전';
+      const regYear = getProposalYear(p);
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
       const matchesDept = checkDeptMatch(p, selectedDepts);
       const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
-      if (matchesYear && matchesDept && matchesCat && matchesSubCat && matchesMicroCat) {
+      if (matchesYear && matchesDept && matchesCat && matchesSubCat && matchesMicroCat && matchesUrgentFilters(p)) {
         counts['전체'] = (counts['전체'] || 0) + 1;
         if (p.policy_flow) {
           counts[p.policy_flow] = (counts[p.policy_flow] || 0) + 1;
@@ -526,19 +596,19 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedYears, selectedDepts, selectedCategories, selectedSubCategories, selectedMicroCategory, checkDeptMatch]);
+  }, [proposals, selectedYears, selectedDepts, selectedCategories, selectedSubCategories, selectedMicroCategory, checkDeptMatch, matchesUrgentFilters]);
 
   // 2) 타 필터 선택에 따른 1차 대분류별 건수 (연도, 부서, 생애주기, 중분류, 세분류 선택 연동)
   const catCounts = useMemo(() => {
     const counts: Record<string, number> = { '전체': 0 };
     proposals.forEach(p => {
-      const regYear = p.reg_year || '2022이전';
+      const regYear = getProposalYear(p);
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
       const matchesDept = checkDeptMatch(p, selectedDepts);
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
-      if (matchesYear && matchesDept && matchesFlow && matchesSubCat && matchesMicroCat) {
+      if (matchesYear && matchesDept && matchesFlow && matchesSubCat && matchesMicroCat && matchesUrgentFilters(p)) {
         counts['전체'] = (counts['전체'] || 0) + 1;
         if (p.category) {
           counts[p.category] = (counts[p.category] || 0) + 1;
@@ -546,19 +616,19 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedSubCategories, selectedMicroCategory, checkDeptMatch]);
+  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedSubCategories, selectedMicroCategory, checkDeptMatch, matchesUrgentFilters]);
 
   // 3) 타 필터 선택에 따른 2차 중분류별 건수 (연도, 부서, 생애주기, 대분류, 세분류 선택 연동)
   const subCatCounts = useMemo(() => {
     const counts: Record<string, number> = { '전체': 0 };
     proposals.forEach(p => {
-      const regYear = p.reg_year || '2022이전';
+      const regYear = getProposalYear(p);
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
       const matchesDept = checkDeptMatch(p, selectedDepts);
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
       const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
       const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
-      if (matchesYear && matchesDept && matchesFlow && matchesCat && matchesMicroCat) {
+      if (matchesYear && matchesDept && matchesFlow && matchesCat && matchesMicroCat && matchesUrgentFilters(p)) {
         counts['전체'] = (counts['전체'] || 0) + 1;
         if (p.sub_category) {
           counts[p.sub_category] = (counts[p.sub_category] || 0) + 1;
@@ -566,19 +636,19 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedCategories, selectedMicroCategory, checkDeptMatch]);
+  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedCategories, selectedMicroCategory, checkDeptMatch, matchesUrgentFilters]);
 
   // 3-1) 타 필터 선택에 따른 3차 세분류별 건수 (연도, 부서, 생애주기, 대분류, 중분류 선택 연동)
   const microCatCounts = useMemo(() => {
     const counts: Record<string, number> = { '전체': 0 };
     proposals.forEach(p => {
-      const regYear = p.reg_year || '2022이전';
+      const regYear = getProposalYear(p);
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
       const matchesDept = checkDeptMatch(p, selectedDepts);
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
       const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
-      if (matchesYear && matchesDept && matchesFlow && matchesCat && matchesSubCat) {
+      if (matchesYear && matchesDept && matchesFlow && matchesCat && matchesSubCat && matchesUrgentFilters(p)) {
         counts['전체'] = (counts['전체'] || 0) + 1;
         if (p.micro_category) {
           counts[p.micro_category] = (counts[p.micro_category] || 0) + 1;
@@ -586,21 +656,23 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories, checkDeptMatch]);
+  }, [proposals, selectedYears, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories, checkDeptMatch, matchesUrgentFilters]);
 
   // 4) 타 필터 선택에 따른 담당부서별 건수 (연도, 생애주기, 대분류, 중분류, 세분류 선택 연동)
   const deptCounts = useMemo(() => {
     const counts: Record<string, number> = { '전체': 0 };
     proposals.forEach(p => {
-      const regYear = p.reg_year || '2022이전';
+      const regYear = getProposalYear(p);
       const matchesYear = selectedYears.includes('전체') || selectedYears.includes(regYear);
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
       const matchesCat = selectedCategories.includes('전체') || selectedCategories.includes(p.category);
       const matchesSubCat = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCat = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
-      if (matchesYear && matchesFlow && matchesCat && matchesSubCat && matchesMicroCat) {
+      if (matchesYear && matchesFlow && matchesCat && matchesSubCat && matchesMicroCat && matchesUrgentFilters(p)) {
         counts['전체'] = (counts['전체'] || 0) + 1;
-        const departmentNames = getProposalDepartmentNames(p);
+        const departmentNames = departmentMatchMode === 'primary'
+          ? [getPrimaryDepartment(p)?.dept_name].filter((dept): dept is string => Boolean(dept))
+          : getProposalDepartmentNames(p);
         if (departmentNames.length === 0) {
           counts['미지정'] = (counts['미지정'] || 0) + 1;
         } else {
@@ -611,7 +683,7 @@ export const PriorityDetails: React.FC<Props> = ({
       }
     });
     return counts;
-  }, [proposals, selectedYears, selectedFlows, selectedCategories, selectedSubCategories, selectedMicroCategory]);
+  }, [proposals, selectedYears, selectedFlows, selectedCategories, selectedSubCategories, selectedMicroCategory, departmentMatchMode, matchesUrgentFilters]);
 
   // 자동으로 0건이 된 필터 선택을 제외(pruning)해주는 반응형 이펙트 추가
   React.useEffect(() => {
@@ -857,48 +929,53 @@ export const PriorityDetails: React.FC<Props> = ({
           </span>
           <div className="flex flex-wrap items-center gap-1.5">
             <button
-              onClick={() => setOnlyShowGaps(!onlyShowGaps)}
+              onClick={() => handleUrgentFilterClick('gap')}
               className={`text-[10.5px] px-2.5 py-1 rounded-full border transition font-extrabold cursor-pointer flex items-center gap-1 shadow-2xs ${
                 onlyShowGaps
                   ? 'bg-rose-600 text-white border-rose-700 shadow-sm animate-pulse'
                   : 'bg-white text-rose-700 border-rose-200 hover:bg-rose-50'
               }`}
-              title="공감 150표 이상 획득했으나 아직 행정 답변이 미완료된 긴급 정책 공백 안건만 필터링"
+              title={`공감 150표 이상 획득했으나 아직 행정 답변이 미완료된 ${urgentFilterCounts.gap}건만 필터링`}
             >
               <AlertTriangle className="w-3 h-3" />
-              <span>🚨 긴급 정책 공백 (150+ 공감 미답변)</span>
+              <span>🚨 긴급 정책 공백 (150+ 공감 미답변) · {urgentFilterCounts.gap}건</span>
             </button>
 
             <button
-              onClick={() => setOnlyShow2026Gaps(!onlyShow2026Gaps)}
+              onClick={() => handleUrgentFilterClick('latest2026')}
               className={`text-[10.5px] px-2.5 py-1 rounded-full border transition font-extrabold cursor-pointer flex items-center gap-1 shadow-2xs ${
                 onlyShow2026Gaps
                   ? 'bg-emerald-600 text-white border-emerald-700 shadow-sm animate-pulse'
                   : 'bg-white text-emerald-800 border-emerald-200 hover:bg-emerald-50'
               }`}
-              title="2026년에 새로 접수된 공감 150표 이상 미답변 신규 안건만 필터링"
+              title={`2026년에 새로 접수된 미답변 제안 ${urgentFilterCounts.latest2026}건만 필터링`}
             >
               <Sparkles className="w-3 h-3 text-yellow-300" />
-              <span>⚡ 2026 최신 긴급 공백</span>
+              <span>⚡ 2026 최신 미답변 · {urgentFilterCounts.latest2026}건</span>
             </button>
 
             <button
-              onClick={() => setOnlyShowHighVoteNoReply(!onlyShowHighVoteNoReply)}
+              onClick={() => handleUrgentFilterClick('highEngagement')}
               className={`text-[10.5px] px-2.5 py-1 rounded-full border transition font-extrabold cursor-pointer flex items-center gap-1 shadow-2xs ${
                 onlyShowHighVoteNoReply
                   ? 'bg-purple-600 text-white border-purple-700 shadow-sm'
                   : 'bg-white text-purple-800 border-purple-200 hover:bg-purple-50'
               }`}
-              title="공감 300표 이상 또는 댓글 50개 이상인 시민 집중 관심 미답변 제안 필터링"
+              title={`공감 300표 이상 또는 댓글 50개 이상인 시민 집중 관심 미답변 ${urgentFilterCounts.highEngagement}건 필터링`}
             >
               <MessageSquare className="w-3 h-3" />
-              <span>💬 고공감·댓글 다수 미답변</span>
+              <span>💬 고공감·댓글 다수 미답변 · {urgentFilterCounts.highEngagement}건</span>
             </button>
 
             {(onlyShowGaps || onlyShow2026Gaps || onlyShowHighVoteNoReply) && (
-              <span className="text-[10px] text-rose-600 font-bold bg-white px-2 py-0.5 rounded border border-rose-200 animate-pulse">
+              <button
+                type="button"
+                onClick={clearUrgentFilters}
+                className="text-[10px] text-rose-600 font-bold bg-white px-2 py-0.5 rounded border border-rose-200 hover:bg-rose-50 transition cursor-pointer animate-pulse"
+                title="적용된 긴급 필터를 모두 해제합니다."
+              >
                 필터 적용 중! (클릭시 필터 해제)
-              </span>
+              </button>
             )}
           </div>
         </div>

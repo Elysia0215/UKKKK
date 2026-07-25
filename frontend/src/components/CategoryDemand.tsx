@@ -11,6 +11,7 @@ import { KeywordDetailModal } from './KeywordDetailModal';
 import {
   getPrimaryDepartment,
   proposalMatchesDepartment,
+  proposalMatchesPrimaryDepartment,
 } from '../utils/departments';
 
 function cleanKoreanWord(word: string): string {
@@ -178,6 +179,7 @@ interface Props {
   onSelectCategory: (category: string | null) => void;
   selectedDept?: string | null;
   onSelectDept?: (dept: string | null) => void;
+  departmentMatchMode?: 'primary' | 'any';
 }
 
 export const CategoryDemand: React.FC<Props> = ({
@@ -185,7 +187,8 @@ export const CategoryDemand: React.FC<Props> = ({
   selectedCategory,
   onSelectCategory,
   selectedDept,
-  onSelectDept
+  onSelectDept,
+  departmentMatchMode = 'primary'
 }) => {
   const [selectedProposalId, setSelectedProposalId] = useState<string | null>(null);
   const [modalProposal, setModalProposal] = useState<PolicyProposal | null>(null); // 원문 상세 미리보기 모달
@@ -301,12 +304,14 @@ export const CategoryDemand: React.FC<Props> = ({
       if (filterState.category3 !== '전체' && p.micro_category !== filterState.category3) return false;
       if (
         filterState.department !== '전체'
-        && !proposalMatchesDepartment(p, filterState.department)
+        && !(departmentMatchMode === 'primary'
+          ? proposalMatchesPrimaryDepartment(p, filterState.department)
+          : proposalMatchesDepartment(p, filterState.department))
       ) return false;
 
       return true;
     });
-  }, [proposals, selectedKeywordYear, selectedTagKeyword, selectedCategory, filterState]);
+  }, [proposals, selectedKeywordYear, selectedTagKeyword, selectedCategory, filterState, departmentMatchMode]);
 
   // 3. [실시간 연동] 카테고리별 통계 데이터 가공
   const categoryChartData = useMemo(() => {
@@ -481,6 +486,7 @@ export const CategoryDemand: React.FC<Props> = ({
         proposals={proposals}
         filterState={filterState}
         onFilterChange={handleFilterChange}
+        departmentMatchMode={departmentMatchMode}
       />
 
       {/* ── [구분선 2] 상단 필터존 <-> 하단 가로 2열 분석존 ── */}

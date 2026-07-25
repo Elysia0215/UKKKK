@@ -3,7 +3,9 @@ import { PolicyProposal } from '../types';
 import { Calendar, Heart, Layers, GitBranch, Filter, Building, Link2, Sparkles, Sprout } from 'lucide-react';
 import {
   getProposalDepartmentNames,
+  getPrimaryDepartment,
   proposalMatchesDepartment,
+  proposalMatchesPrimaryDepartment,
 } from '../utils/departments';
 
 export interface FilterState {
@@ -19,6 +21,7 @@ interface Props {
   proposals: PolicyProposal[];
   filterState: FilterState;
   onFilterChange: (newState: FilterState) => void;
+  departmentMatchMode?: 'primary' | 'any';
 }
 
 // 100% 하드코딩 정밀 룩업 매핑 (2차 중분류 ➔ 1차 대분류 & 생애주기)
@@ -111,6 +114,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
   proposals,
   filterState,
   onFilterChange,
+  departmentMatchMode = 'primary',
 }) => {
   const [isCat2Expanded, setIsCat2Expanded] = React.useState<boolean>(false);
   const hasParentFilter = filterState.category1 !== '전체' || filterState.lifecycle !== '전체';
@@ -137,7 +141,9 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       if (
         excludeKey !== 'department'
         && filterState.department !== '전체'
-        && !proposalMatchesDepartment(p, filterState.department)
+        && !(departmentMatchMode === 'primary'
+          ? proposalMatchesPrimaryDepartment(p, filterState.department)
+          : proposalMatchesDepartment(p, filterState.department))
       ) {
         return false;
       }
@@ -157,7 +163,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       '2022이전': base.filter(p => p.reg_date && p.reg_date < '2023').length,
     };
     return counts;
-  }, [proposals, filterState]);
+  }, [proposals, filterState, departmentMatchMode]);
 
   // 2. 생애주기 수량 (생애주기 축 제외 나머지 조건 교차 적용)
   const lifecycleCounts = useMemo(() => {
@@ -168,7 +174,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       map[flow] = (map[flow] || 0) + 1;
     });
     return map;
-  }, [proposals, filterState]);
+  }, [proposals, filterState, departmentMatchMode]);
 
   // 3. 1차 대분류 수량 (대분류 축 제외 나머지 조건 교차 적용)
   const cat1Counts = useMemo(() => {
@@ -179,7 +185,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       map[cat] = (map[cat] || 0) + 1;
     });
     return map;
-  }, [proposals, filterState]);
+  }, [proposals, filterState, departmentMatchMode]);
 
   // 4. 2차 중분류 수량 (중분류 축 제외 나머지 조건 교차 적용)
   const cat2Counts = useMemo(() => {
@@ -190,7 +196,7 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       map[sub] = (map[sub] || 0) + 1;
     });
     return map;
-  }, [proposals, filterState]);
+  }, [proposals, filterState, departmentMatchMode]);
 
   // 5. 3차 세분류 수량
   const cat3Counts = useMemo(() => {
@@ -201,24 +207,26 @@ export const MultiTierCategoryFilter: React.FC<Props> = ({
       map[micro] = (map[micro] || 0) + 1;
     });
     return map;
-  }, [proposals, filterState]);
+  }, [proposals, filterState, departmentMatchMode]);
 
   // 6. 담당부서 수량 (부서 축 제외 나머지 조건 교차 적용)
   const deptCounts = useMemo(() => {
     const base = filterProposalsExcept('department');
     const map: Record<string, number> = { 전체: base.length };
     base.forEach(p => {
-      const departmentNames = getProposalDepartmentNames(p);
+      const departmentNames = departmentMatchMode === 'primary'
+        ? [getPrimaryDepartment(p)?.dept_name].filter((dept): dept is string => Boolean(dept))
+        : getProposalDepartmentNames(p);
       if (departmentNames.length > 0) {
-        departmentNames.forEach(d => {
-          map[d] = (map[d] || 0) + 1;
+        departmentNames.forEach((department) => {
+          map[department] = (map[department] || 0) + 1;
         });
       } else {
         map['미지정'] = (map['미지정'] || 0) + 1;
       }
     });
     return map;
-  }, [proposals, filterState]);
+  }, [proposals, filterState, departmentMatchMode]);
 
   const activeFilterCount = useMemo(() => {
     let count = 0;
