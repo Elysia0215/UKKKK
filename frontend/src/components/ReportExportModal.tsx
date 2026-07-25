@@ -652,28 +652,42 @@ export const ReportExportModal: React.FC<Props> = ({
                     
                     {/* [PAGE 1] */}
                     <div className="page-break" style={{ pageBreakAfter: 'always' }}>
-                      {/* 헤더 */}
-                      <div className="flex justify-between items-baseline border-b-4 border-emerald-500 pb-3">
-                        <div>
-                          <h2 className="text-3xl font-black text-slate-900 tracking-tight">상상대로서울</h2>
-                          <p className="text-sm font-extrabold text-emerald-600 mt-1">데이터로 보는 상상대로서울</p>
+                      {/* 2026.05 서울시 상상대로 공식 헤더 심볼 & 브랜딩 */}
+                      <div className="flex justify-between items-end border-b-4 border-emerald-500 pb-3.5">
+                        <div className="space-y-1">
+                          {/* 상상대로서울 삼각 4색 엠블럼 기호 */}
+                          <div className="flex items-center gap-1 mb-1">
+                            <span className="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[12px] border-b-emerald-500 inline-block"></span>
+                            <span className="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[12px] border-b-rose-500 inline-block"></span>
+                            <span className="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[12px] border-b-amber-500 inline-block"></span>
+                            <span className="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[12px] border-b-teal-400 inline-block rotate-90"></span>
+                          </div>
+                          <h2 className="text-3.5xl font-black text-slate-900 tracking-tight leading-none">상상대로서울</h2>
+                          <p className="text-sm font-extrabold text-emerald-600 tracking-wide pt-0.5">데이터로 보는 상상대로서울</p>
                         </div>
-                        <span className="text-lg font-black text-slate-400 font-mono">2026.05</span>
+                        <div className="text-right">
+                          <span className="text-xl font-black text-slate-400 font-mono tracking-wider">2026.05</span>
+                        </div>
                       </div>
 
-                      {/* 3D 느낌의 메인 일러스트레이션 엠블럼 데코 */}
-                      <div className="my-8 bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-blue-500/10 p-6 rounded-2xl border border-emerald-100 flex items-center justify-between shadow-xs">
-                        <div className="space-y-2 max-w-md">
-                          <span className="bg-emerald-600 text-white font-bold text-[10px] px-2.5 py-0.5 rounded-full">성과 브리핑</span>
-                          <h3 className="text-xl font-black text-slate-800 leading-snug">
+                      {/* 성과 브리핑 틴트 카운트 박스 (공식 보고서 비주얼 100% 동기화) */}
+                      <div className="my-6 bg-gradient-to-br from-emerald-50 via-teal-50/40 to-blue-50/30 p-6 rounded-2xl border border-emerald-200/80 flex items-center justify-between shadow-xs">
+                        <div className="space-y-2 max-w-lg">
+                          <span className="bg-emerald-600 text-white font-black text-xs px-3 py-1 rounded-full shadow-2xs inline-block">성과 브리핑</span>
+                          <h3 className="text-2xl font-black text-slate-900 leading-snug tracking-tight">
                             시민이 제안하고 서울이 답하는<br />
-                            상상대로서울 5월 종합 현황
+                            <span className="text-emerald-700">상상대로서울 5월 종합 현황</span>
                           </h3>
-                          <p className="text-[10.5px] text-slate-500 font-medium leading-relaxed">
+                          <p className="text-xs text-slate-600 font-medium leading-relaxed pt-1">
                             본 보고서는 실무진 외부 공유 및 부서 간 의사결정을 위해 시민 제안, 민원 키워드 및 행정 R&R 데이터를 기반으로 가공된 공식 공유 본부 보고서입니다.
                           </p>
                         </div>
-                        <div className="text-6xl select-none shrink-0">📊</div>
+                        {/* 차트 시각화 데코 그래픽 */}
+                        <div className="w-24 h-20 bg-white rounded-xl border border-slate-200 p-2.5 flex items-end justify-between shadow-sm shrink-0">
+                          <div className="w-4 bg-emerald-500 rounded-t-sm h-[60%]"></div>
+                          <div className="w-4 bg-rose-500 rounded-t-sm h-[40%]"></div>
+                          <div className="w-4 bg-blue-600 rounded-t-sm h-[90%]"></div>
+                        </div>
                       </div>
 
                       {/* 4대 주요 핵심 지표 카드 */}
