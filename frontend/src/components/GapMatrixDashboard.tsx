@@ -225,7 +225,7 @@ const getFilteredPapers = (issue: IssueItem) => {
   const targeted = ALL_PAPERS.filter(paper =>
     paper.categoryTags.some(tag => cat.includes(tag) || tag.includes(cat))
   );
-  const primary = targeted.length > 0 ? targeted : ALL_PAPERS.slice(0, 2);
+  const primary = targeted;
   const rest = ALL_PAPERS.filter(p => !primary.includes(p));
   return { primary, rest, total: ALL_PAPERS.length };
 };
@@ -237,6 +237,11 @@ const AcademicProofSection: React.FC<{ issue: IssueItem; onOpenModal: (title: st
 
   return (
     <div className="space-y-2 flex-1 overflow-y-auto pr-1">
+      {displayPapers.length === 0 && (
+        <p className="text-slate-400 text-center py-4 text-[10px]">
+          해당 분야에 직접 연결된 핵심 학술 근거가 없습니다.
+        </p>
+      )}
       {displayPapers.map((paper, idx) => (
         <div key={idx} className="bg-slate-50 hover:bg-indigo-50/40 p-2.5 rounded-xl border border-slate-200 hover:border-indigo-200 transition duration-150 relative shadow-2xs">
           <div className="flex justify-between items-start gap-2">
@@ -262,7 +267,7 @@ const AcademicProofSection: React.FC<{ issue: IssueItem; onOpenModal: (title: st
           </div>
         </div>
       ))}
-      {rest.length > 0 && (
+      {primary.length > 0 && rest.length > 0 && (
         <button
           onClick={() => setShowAll(!showAll)}
           className="w-full text-center py-1.5 text-[9px] font-bold text-indigo-600 hover:text-indigo-800 hover:bg-indigo-50 rounded-lg border border-dashed border-indigo-200 transition"
@@ -576,9 +581,13 @@ export const GapMatrixDashboard: React.FC<Props> = ({
           proposal.category === d.category
           && classifyCluster(proposal.title, proposal.content) === d.cluster
       );
-      const matchedProposals = exactMatchedProposals.length > 0
-        ? exactMatchedProposals
-        : proposals.filter(proposal => proposal.category === d.category);
+      const exactMatchedCivils = (civilRequestsData as any[]).filter(
+        request =>
+          request.category === d.category
+          && classifyCluster(request.title, request.content) === d.cluster
+      );
+      const matchedProposals = exactMatchedProposals;
+      const demandSourceCount = exactMatchedProposals.length + exactMatchedCivils.length;
 
       const primaryDepartmentCounts = new Map<string, { count: number; phone: string }>();
       const relatedDepartmentNames = new Set<string>();
@@ -637,8 +646,10 @@ export const GapMatrixDashboard: React.FC<Props> = ({
         id: `GAP-${idx + 1}`,
         category: d.category,
         cluster: d.cluster,
-        item_count: d.item_count,
-        source_count: d.source_count,
+        item_count: demandSourceCount,
+        source_count: demandSourceCount,
+        proposal_count: exactMatchedProposals.length,
+        civil_count: exactMatchedCivils.length,
         demand: d.demand,
         policy_gap: d.policy_gap,
         urgency: d.urgency,
@@ -652,7 +663,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
         deptPhone: deptInfo.phone,
         relatedDepts: [...relatedDepartmentNames]
       };
-    });
+    }).filter((diagnosis: any) => diagnosis.source_count > 0);
   }, [rawDiagnoses, appliedMethod, customActions, proposals]);
 
   const diagnosisCategories = useMemo(
@@ -797,8 +808,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
     // 4. 뉴스 매핑
     const matchedNews = (newsAllData as any[]).filter(n => 
       n.category === selectedIssue.category &&
-      (selectedIssue.cluster === '기타·추가 검토' || 
-       (CLUSTER_RULES[selectedIssue.cluster] || []).some(w => (n.title + ' ' + n.snippet).toLowerCase().includes(w)))
+      (CLUSTER_RULES[selectedIssue.cluster] || []).some(w => (n.title + ' ' + n.snippet).toLowerCase().includes(w))
     ).slice(0, 5);
 
     return {

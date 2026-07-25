@@ -5,6 +5,8 @@ import requests
 from bs4 import BeautifulSoup
 from pathlib import Path
 
+from proposal_quality import apply_quality_gate, validate_proposals
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 MONGTTANG_PATH = BASE_DIR / "frontend" / "src" / "data" / "mongttang.json"
 PROPOSALS_PATH = BASE_DIR / "data" / "final" / "proposals.json"
@@ -67,6 +69,11 @@ def main():
             time.sleep(0.15)
 
     if updated_count > 0:
+        for item in items:
+            apply_quality_gate(item)
+        errors = validate_proposals(items)
+        if errors:
+            raise RuntimeError("품질 검증 실패: " + "; ".join(errors[:10]))
         serialized = json.dumps(items, ensure_ascii=False, indent=2) + "\n"
         MONGTTANG_PATH.write_text(serialized, encoding="utf-8")
         PROPOSALS_PATH.write_text(serialized, encoding="utf-8")

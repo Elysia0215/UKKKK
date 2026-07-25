@@ -38,11 +38,12 @@ import {
   proposalMatchesAnyDepartment,
   proposalMatchesAnyPrimaryDepartment,
 } from '../utils/departments';
-import { getProposalDisplayContent } from '../utils/proposals';
-import rawMongttangData from '../data/mongttang.json';
-import classifiedPolicyData from '../data/classified_policy.json';
+import {
+  getProposalDisplayContent,
+  isPlaceholderProposalContent,
+} from '../utils/proposals';
+import { isOutsideBirthPolicyScope } from '../utils/policyMatching';
 import civilRequestsData from '../data/civil_requests_all.json';
-import { MongttangPolicy } from '../types';
 import { BatchReplyModal } from './BatchReplyModal';
 import { CivilRequestDetailModal, CivilRequestItem } from './CivilRequestDetailModal';
 
@@ -75,6 +76,52 @@ const getProposalYear = (proposal: PolicyProposal): string => {
   if (date.startsWith('2024')) return '2024';
   if (date.startsWith('2023')) return '2023';
   return '2022이전';
+};
+
+const BROAD_GROUP_LABELS = new Set([
+  '일반 출산정책 안건',
+  '정보 접근성',
+  '저출산 정책 일반',
+]);
+
+const getSpecificGroupTopic = (proposal: PolicyProposal): string | null => {
+  const title = proposal.title || '';
+  const text = `${proposal.title || ''} ${proposal.content || ''}`;
+  if (/유아숲|숲체험|유아체험/.test(text)) return '유아숲체험원';
+  if (/예비맘|예비맘\s*키트|임신\s*키트|임산부\s*키트|임신축하/.test(title)) return '예비맘 지원 키트';
+  if (/난임|난임시술|난임주사/.test(text)) return '난임 지원';
+  if (/예비맘|예비맘\s*키트|임신\s*키트|임산부\s*키트|임신축하/.test(text)) return '예비맘 지원 키트';
+  if (/임산부\s*배려석|임산부배려석|임산부석|배려석/.test(text)) return '임산부 배려석';
+  if (/육아휴직|근로시간|근로단축|단축근무/.test(text)) return '육아휴직·근로시간';
+  if (/다자녀|다둥이|세자녀|3명.*자녀/.test(text)) return '다자녀 지원';
+  if (/유모차|유아차|엘리베이터/.test(text)) return '유모차 이동편의';
+  if (/수유실|기저귀교환대|기저귀갈이대|유아휴게실/.test(text)) return '육아 편의시설';
+  return null;
+};
+
+const getProposalGroupKey = (proposal: PolicyProposal): string => {
+  if (isOutsideBirthPolicyScope(proposal.title, proposal.content)) {
+    return `분석범위밖-${proposal.id}`;
+  }
+
+  const groupLabel = proposal.micro_category || proposal.sub_category || proposal.category || '';
+  const specificTopic = getSpecificGroupTopic(proposal);
+  if (specificTopic) {
+    return [
+      proposal.category,
+      proposal.sub_category,
+      proposal.micro_category,
+      specificTopic,
+    ].filter(Boolean).join('|');
+  }
+
+  if (BROAD_GROUP_LABELS.has(groupLabel)) {
+    return `단독-${proposal.id}`;
+  }
+
+  return [proposal.category, proposal.sub_category, proposal.micro_category]
+    .filter(Boolean)
+    .join('|') || `단독-${proposal.id}`;
 };
 
 export const PriorityDetails: React.FC<Props> = ({
@@ -298,32 +345,6 @@ export const PriorityDetails: React.FC<Props> = ({
     return counts;
   }, [proposals, selectedDepts, selectedFlows, selectedCategories, selectedSubCategories, selectedMicroCategory, checkDeptMatch, matchesUrgentFilters]);
 
-  // 몽땅정보 현행 정책 목록
-  const mongttangPolicies: MongttangPolicy[] = useMemo(() => {
-    let rawList: any[] = [];
-    if (rawMongttangData && Array.isArray((rawMongttangData as any).DATA)) {
-      rawList = (rawMongttangData as any).DATA;
-    } else if (Array.isArray(classifiedPolicyData)) {
-      rawList = classifiedPolicyData;
-    }
-
-    return rawList.map((item: any) => ({
-      id: item.id || item['사업명'],
-      biz_nm: item.biz_nm || item['사업명'] || '',
-
-      biz_lclsf_nm: item.biz_lclsf_nm || item['사업대분류명'] || item.Category || '기타',
-      biz_mclsf_nm: item.biz_mclsf_nm || item['사업중분류명'] || '',
-      biz_sclsf_nm: item.biz_sclsf_nm || item['사업소분류명'] || '',
-      biz_cn: item.biz_cn || item['사업내용'] || '',
-      utztn_trpr_cn: item.utztn_trpr_cn || item['이용대상내용'] || '',
-      utztn_mthd_cn: item.utztn_mthd_cn || item['이용방법내용'] || '',
-      aref_cn: item.aref_cn || item['문의처내용'] || '',
-      aply_site_addr: item.aply_site_addr || item['신청하기사이트주소'] || '',
-      deviw_site_addr: item.deviw_site_addr || item['자세히보기사이트주소'] || '',
-      trgt_rgn: item.trgt_rgn || item['대상지역'] || ''
-    }));
-  }, []);
-
   // 몽땅정보통 링크 검증 및 헬퍼
   const formatPolicyLink = (url?: string) => {
     if (!url || url.trim() === '.' || url.trim() === '' || url.trim() === 'null' || url.trim() === 'undefined') {
@@ -394,24 +415,13 @@ export const PriorityDetails: React.FC<Props> = ({
     };
   }, []);
 
-  // 시민 제안 ↔ 몽땅정보 정책 매칭 함수
-  const findMatchingPolicy = (title: string, content: string): MongttangPolicy | undefined => {
-    const text = (title + ' ' + content).toLowerCase();
-    return mongttangPolicies.find(p => {
-      if (!p.biz_nm) return false;
-      const bizNm = p.biz_nm.toLowerCase();
-      const words = bizNm.split(/[\s,·\(\)\-]+/).filter(w => w.length >= 2 && !['지원', '사업', '서울시', '서울형'].includes(w));
-      return words.length > 0 && words.some(w => text.includes(w));
-    });
-  };
-
   // 1. 유사 제안 그룹핑 로직 (같은 카테고리 + 비슷한 키워드 핵심 단어 매칭)
   const groupedProposals = useMemo(() => {
     const groups: ProposalGroup[] = [];
     const subCatMap = new Map<string, PolicyProposal[]>();
 
     proposals.forEach(p => {
-      const key = p.sub_category || p.category || '기타';
+      const key = getProposalGroupKey(p);
       const list = subCatMap.get(key) || [];
       list.push(p);
       subCatMap.set(key, list);
@@ -423,11 +433,15 @@ export const PriorityDetails: React.FC<Props> = ({
       const representative = [...items].sort((a, b) => b.vote_score - a.vote_score)[0];
 
       if (items.length > 1) {
+        const groupLabel = representative.micro_category
+          || representative.sub_category
+          || representative.category
+          || '기타';
         groups.push({
           id: `GROUP-SUB-${key}`,
           category: representative.category,
-          keyword: key,
-          name: `${key} - ${representative.title}`,
+          keyword: groupLabel,
+          name: `${groupLabel} - ${representative.title}`,
           items: items.sort((a, b) => b.vote_score - a.vote_score),
           unansweredCount,
           totalVotes,
@@ -1290,12 +1304,25 @@ export const PriorityDetails: React.FC<Props> = ({
                                 <h5 className="text-sm font-bold text-slate-800 mb-1.5">{item.title}</h5>
                                 <p className="text-xs text-slate-600 leading-relaxed mb-3 whitespace-pre-line">{formatProposalContent(getProposalDisplayContent(item))}</p>
 
-                                {/* 몽땅정보 현행 정책 대조 뱃지 (전략 1) */}
+                                {/* 몽땅정보 유사 정책 대조 뱃지 */}
                                 {(() => {
-                                  const match = findMatchingPolicy(item.title, item.content);
-                                  if (match) {
+                                  const isSourceMissing = isPlaceholderProposalContent(item);
+                                  const match = (!isSourceMissing && item.matched_policies && item.matched_policies.length > 0)
+                                    ? item.matched_policies[0]
+                                    : undefined;
+                                  const isOutOfScope = isOutsideBirthPolicyScope(item.title, item.content);
+                                  if (isSourceMissing) {
+                                    return (
+                                      <div className="mb-3 p-2.5 bg-blue-50/90 border border-blue-200 rounded-lg text-xs text-blue-900 flex items-center justify-between gap-2 shadow-2xs">
+                                        <div className="flex items-center gap-1.5 font-bold">
+                                          <HelpCircle className="w-4 h-4 text-blue-600 shrink-0" />
+                                          <span>상세 원문이 없어 유사 정책 대조를 보류했습니다. 제목만으로 정책 시행·공백을 판정하지 않습니다.</span>
+                                        </div>
+                                      </div>
+                                    );
+                                  } else if (match) {
                                     // 해당 제안-정책 매칭이 피드백으로 "관련없음" 처리되었는지 확인
-                                    const fbKey = `policy_fb_${item.id}_${match.biz_nm}`;
+                                    const fbKey = `policy_fb_${item.id}_${match.policy_name}`;
                                     const wasFlagged = policyFeedbackSet.has(fbKey);
                                     return (
                                       <div className={`mb-3 p-2.5 border rounded-lg text-xs flex items-center justify-between gap-2 shadow-2xs ${
@@ -1306,7 +1333,7 @@ export const PriorityDetails: React.FC<Props> = ({
                                         <div className="flex items-center gap-1.5 font-bold min-w-0">
                                           <CheckCircle2 className={`w-4 h-4 shrink-0 ${wasFlagged ? 'text-slate-400' : 'text-emerald-600'}`} />
                                           <span className={wasFlagged ? 'line-through' : ''}>
-                                            ✅ 현행 정책 시행 중: <strong className={wasFlagged ? 'text-slate-600' : 'text-emerald-950'}>[{match.biz_nm}]</strong>
+                                            🔎 몽땅정보 유사 정책 후보: <strong className={wasFlagged ? 'text-slate-600' : 'text-emerald-950'}>[{match.policy_name}]</strong>
                                           </span>
                                           {wasFlagged && (
                                             <span className="text-[8px] bg-rose-100 text-rose-600 px-1 py-0.5 rounded font-black shrink-0">관련없음 신고됨</span>
@@ -1323,7 +1350,7 @@ export const PriorityDetails: React.FC<Props> = ({
                                                   id: `PFB-${Date.now()}`,
                                                   proposalId: item.id,
                                                   proposalTitle: item.title,
-                                                  matchedPolicy: match.biz_nm,
+                                                  matchedPolicy: match.policy_name,
                                                   type: 'policy_mismatch',
                                                   timestamp: new Date().toISOString(),
                                                 });
@@ -1336,9 +1363,9 @@ export const PriorityDetails: React.FC<Props> = ({
                                               🚩 관련없음
                                             </button>
                                           )}
-                                          {match.aply_site_addr && match.aply_site_addr !== '.' && (
+                                          {match.apply_url && match.apply_url !== '.' && (
                                             <a
-                                              href={match.aply_site_addr.startsWith('http') ? match.aply_site_addr : `https://${match.aply_site_addr}`}
+                                              href={formatPolicyLink(match.apply_url)}
                                               target="_blank"
                                               rel="noreferrer"
                                               className="text-[10px] bg-emerald-600 text-white px-2 py-1 rounded-md font-bold hover:bg-emerald-700 transition flex items-center gap-0.5 shadow-2xs"
@@ -1349,27 +1376,46 @@ export const PriorityDetails: React.FC<Props> = ({
                                         </div>
                                       </div>
                                     );
+                                  } else if (isOutOfScope) {
+                                    return (
+                                      <div className="mb-3 p-2.5 bg-slate-50/90 border border-slate-300 rounded-lg text-xs text-slate-700 flex items-center justify-between gap-2 shadow-2xs">
+                                        <div className="flex items-center gap-1.5 font-bold">
+                                          <ShieldAlert className="w-4 h-4 text-slate-500 shrink-0" />
+                                          <span>출산·양육 정책 분석 범위 밖의 제안입니다. 정책 공백으로 집계하지 않습니다.</span>
+                                        </div>
+                                      </div>
+                                    );
                                   } else {
                                     return (
                                       <div className="mb-3 p-2.5 bg-amber-50/90 border border-amber-200 rounded-lg text-xs text-amber-900 flex items-center justify-between gap-2 shadow-2xs">
                                         <div className="flex items-center gap-1.5 font-bold">
                                           <ShieldAlert className="w-4 h-4 text-amber-600 shrink-0" />
-                                          <span>⚠️ 정책 공백: 서울시 몽땅정보 323개 공식 사업과 대조 결과 <strong className="text-amber-950 font-black">미시행 신규 요구</strong></span>
+                                          <span>⚠️ 정책 공백: 서울시 몽땅정보 323개 공식 사업에서 직접 대응 정책을 찾지 못한 <strong className="text-amber-950 font-black">신규·보완 요구</strong></span>
                                         </div>
                                       </div>
                                     );
                                   }
                                 })()}
 
-                                {/* 몽땅정보 연관 기존 사업 & 부서 랭킹 정보 */}
-                                {/* 몽땅정보 연관 기존 사업 & 부서 랭킹 정보 (슬림 뷰 + 접기/펼치기 토글 UX) */}
+                                {/* 몽땅정보 유사 정책 후보 & 부서 랭킹 정보 */}
+                                {/* 몽땅정보 유사 정책 후보 & 부서 랭킹 정보 (슬림 뷰 + 접기/펼치기 토글 UX) */}
                                 {(() => {
-                                  const reqs = getMatchingCivilRequests(item);
+                                  const connectionReviewRequired = (
+                                    isPlaceholderProposalContent(item)
+                                    || isOutsideBirthPolicyScope(item.title, item.content)
+                                  );
+                                  const reqs = connectionReviewRequired
+                                    ? []
+                                    : getMatchingCivilRequests(item);
                                   const isDetailOpen = expandedDetailId === item.id;
                                   const primaryRank = getPrimaryDepartment(item);
                                   const collaboratingRanks = getCollaboratingDepartments(item);
                                   const departmentGroup = getDepartmentGroup(item);
-                                  const primaryPolicy = item.matched_policies && item.matched_policies.length > 0 ? item.matched_policies[0] : null;
+                                  const primaryPolicy = (
+                                    !connectionReviewRequired
+                                    && item.matched_policies
+                                    && item.matched_policies.length > 0
+                                  ) ? item.matched_policies[0] : null;
 
                                   return (
                                     <div className="bg-slate-50/80 p-2.5 rounded-lg border border-slate-200/60 my-2 space-y-2 text-xs">
@@ -1448,9 +1494,9 @@ export const PriorityDetails: React.FC<Props> = ({
                                             </div>
                                           )}
 
-                                          {item.matched_policies && item.matched_policies.length > 0 && (
+                                          {!connectionReviewRequired && item.matched_policies && item.matched_policies.length > 0 && (
                                             <div className="space-y-1">
-                                              <span className="font-extrabold text-emerald-800 block">🎁 몽땅정보 연관혜택 풀목록 ({item.matched_policies.length}건):</span>
+                                              <span className="font-extrabold text-emerald-800 block">🎁 몽땅정보 유사 정책 후보 풀목록 ({item.matched_policies.length}건):</span>
                                               <div className="flex flex-wrap gap-1.5">
                                                 {item.matched_policies.map(pol => (
                                                   <a
@@ -1587,7 +1633,10 @@ export const PriorityDetails: React.FC<Props> = ({
                         </div>
                       )}
 
-                      {item.matched_policies && item.matched_policies.length > 0 && (
+                      {!isPlaceholderProposalContent(item)
+                        && !isOutsideBirthPolicyScope(item.title, item.content)
+                        && item.matched_policies
+                        && item.matched_policies.length > 0 && (
                         <div className="flex flex-wrap items-center gap-2 pt-1.5 border-t border-slate-200/60">
                           <span className="text-[10px] font-bold text-emerald-700 uppercase">몽땅정보 연관혜택:</span>
                           {item.matched_policies.map(pol => (
@@ -1606,7 +1655,13 @@ export const PriorityDetails: React.FC<Props> = ({
                       )}
 
                       {(() => {
-                        const reqs = getMatchingCivilRequests(item);
+                        const connectionReviewRequired = (
+                          isPlaceholderProposalContent(item)
+                          || isOutsideBirthPolicyScope(item.title, item.content)
+                        );
+                        const reqs = connectionReviewRequired
+                          ? []
+                          : getMatchingCivilRequests(item);
                         if (reqs.length > 0) {
                           return (
                             <div className="pt-1.5 border-t border-slate-200/60 flex items-center justify-between flex-wrap gap-1">

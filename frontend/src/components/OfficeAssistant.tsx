@@ -18,21 +18,21 @@ interface Props {
 const PAGE_GUIDE: Record<number, { title: string; purpose: string; steps: string[]; advanced: string[]; footnotes?: Record<string, string> }> = {
   0: {
     title: '1. 수요 현황 종합',
-    purpose: '현재 선택한 8대 정책 담당군과 실제 R&R 팀 범위에서 시민 제안 현황, 연도별 추이, 주관부서별 처리 현황과 자치구 데이터 품질을 확인하는 종합 대시보드입니다.',
+    purpose: '현재 선택한 정책 대분류와 세부 태그 기반 R&R 팀 범위에서 시민 제안 현황, 연도별 추이, 주관부서별 처리 현황과 자치구 데이터 품질을 확인하는 종합 대시보드입니다.',
     steps: [
       '상단 4대 KPI 카드(전체 제안·답변 완료·미답변·평균 공감)에서 현재 현황을 확인합니다.',
       '실무부서 현황에서 제안별 1순위 주관부서의 처리 건수와 답변률을 확인합니다.',
-      '상단 첫 번째 필터에서 8대 정책 담당군을, 두 번째 필터에서 실제 R&R 팀을 선택하면 모든 분석 화면의 데이터 범위가 함께 좁혀집니다.'
+      '상단 첫 번째 필터에서 실제 정책 대분류를, 두 번째 필터에서 세부 태그에 매칭된 R&R 팀을 선택하면 모든 분석 화면의 데이터 범위가 함께 좁혀집니다.'
     ],
     advanced: [
       '자치구 데이터 품질 현황에서 현재 분석 범위의 특정 자치구 지정 건과 구 미상 건을 확인할 수 있습니다.',
-      '8대 정책 담당군과 실제 1·2·3순위 실무부서는 별도 계층으로 표시됩니다.',
+      '실제 정책 대분류와 세부 태그 기반 1·2·3순위 실무부서는 별도 계층으로 표시됩니다.',
       '분류 카드와 부서 항목을 선택하면 해당 조건을 유지한 채 관련 분석 화면으로 이동할 수 있습니다.'
     ],
     footnotes: {
       'KPI': 'Key Performance Indicator — 핵심 성과 지표. 정책 현황을 한눈에 보여주는 요약 수치',
       '텍스트마이닝': '비정형 텍스트에서 의미 있는 패턴·키워드를 자동 추출하는 NLP 기법',
-      '8대 정책 담당군': '제안을 8개 정책 대분류로 묶는 상위 분석 단위. 실제 조직명과 실무 R&R 순위는 별도로 표시'
+      '정책 대분류': '제안에 실제로 부여된 8개 정책 대분류. 세부 태그에 매칭된 실무 R&R 순위는 별도로 표시'
     }
   },
   2: {
@@ -100,7 +100,7 @@ const PAGE_GUIDE: Record<number, { title: string; purpose: string; steps: string
       '선택한 군집을 시민 목소리 분석으로 넘겨 개별 제안과 R&R을 검토합니다.'
     ],
     advanced: [
-      '상단 8대 정책 담당군 선택이 군집 데이터 범위에도 동일하게 적용됩니다.',
+      '상단 정책 대분류 선택이 군집 데이터 범위에도 동일하게 적용됩니다.',
       '건수는 작아도 공감도와 미답변률이 높은 군집은 긴급 검토 후보입니다.',
       '군집은 행정 부서가 아니라 텍스트 의미 유사도 기준의 분석 단위입니다.'
     ],
@@ -214,7 +214,7 @@ export const OfficeAssistant: React.FC<Props> = ({
     return () => clearTimeout(t);
   }, []);
 
-  // 8대 정책 담당군이 바뀔 때 안내 텍스트 자동 갱신 (처음 한 번만 팝업 자동 오픈)
+  // 정책 대분류가 바뀔 때 안내 텍스트 자동 갱신 (처음 한 번만 팝업 자동 오픈)
   useEffect(() => {
     if (selectedDept) {
       setBubbleText(`실제 R&R 팀 [${selectedDept}] 기준으로 제안과 보고서 범위를 좁혔습니다.`);
@@ -225,7 +225,7 @@ export const OfficeAssistant: React.FC<Props> = ({
         setHasInteracted(true);
       }
     } else if (selectedDeptGroup) {
-      setBubbleText(`[${selectedDeptGroup}] 대분류 담당군 기준으로 제안을 모았습니다. 필요하면 옆 필터에서 실제 R&R 팀을 추가 선택하세요.`);
+      setBubbleText(`[${selectedDeptGroup}] 대분류 기준으로 제안을 모았습니다. 필요하면 옆 필터에서 세부 태그에 매칭된 R&R 팀을 추가 선택하세요.`);
       setActiveScreen('flow');
       if (!hasDeptPopupShown) {
         setIsOpen(true);

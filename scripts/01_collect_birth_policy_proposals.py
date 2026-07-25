@@ -14,6 +14,7 @@ import json
 import pandas as pd
 from pathlib import Path
 from typing import Dict, List, Tuple
+from proposal_quality import detect_outside_scope
 
 BASE_DIR = Path('/Users/parkcy/Desktop/sesac_pjt/UKKKK')
 RAW_CSV_PATH = BASE_DIR / 'data' / 'processed' / '상상대로_서울_전체_최신.csv'
@@ -133,6 +134,18 @@ def check_birth_policy_candidate(title: str, content: str = "") -> Dict[str, str
     content = normalize_text(content)
     text = f"{title} {content}"
 
+    # 공통 품질 게이트를 가장 먼저 적용한다. 임산부·어린이가 단순 피해
+    # 대상으로 언급된 흡연·노인교통 제안을 출산정책으로 수집하지 않는다.
+    outside_scope, outside_reason = detect_outside_scope(title, content)
+    if outside_scope:
+        return {
+            "출산양육관련여부": "제외",
+            "분류근거_키워드": "",
+            "분류신뢰도": "하",
+            "수집방식": "공통품질게이트",
+            "제외사유": outside_reason,
+        }
+
     # 1. 핵심 직접 키워드 확인
     core_hits = find_keywords(text, CORE_DIRECT_KEYWORDS)
     if core_hits:
@@ -232,8 +245,8 @@ def classify_birth_policy_category(title: str, content: str = "") -> Tuple[str, 
         return "보육·돌봄 인프라", "긴급·시간제 돌봄", "야간·주말·아픈아이 돌봄"
     if any(kw in text for kw in ["소아과", "소아청소년과", "소아응급", "소아응급실", "달빛어린이병원", "어린이병원", "아동병원", "야간진료", "휴일진료", "영유아검진", "예방접종"]):
         return "보육·돌봄 인프라", "아동 건강·의료 접근성", "소아응급·야간진료·영유아검진"
-    if any(kw in text for kw in ["공공키즈카페", "서울형키즈카페", "장난감도서관", "유아휴게실", "수유실", "모유수유실", "기저귀교환대", "기저귀갈이대", "키즈존"]):
-        return "보육·돌봄 인프라", "아동 놀이·체험공간", "공공키즈카페·수유실·유아휴게실"
+    if any(kw in text for kw in ["공공키즈카페", "서울형키즈카페", "장난감도서관", "유아숲", "숲체험", "유아체험", "유아휴게실", "수유실", "모유수유실", "기저귀교환대", "기저귀갈이대", "키즈존"]):
+        return "보육·돌봄 인프라", "아동 놀이·체험공간", "공공키즈카페·유아숲·수유실"
     if any(kw in text for kw in ["초등돌봄", "키움센터", "방과후", "방학돌봄", "초등학생", "등하원", "하원", "등원"]):
         return "보육·돌봄 인프라", "초등돌봄", "초등돌봄·방과후"
     if any(kw in text for kw in ["어린이집", "유치원", "보육교사", "보육", "특별보육", "시간제보육"]):

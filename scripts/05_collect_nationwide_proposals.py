@@ -1,17 +1,20 @@
 """
-국민신문고 공개제안조회서비스(OpenProposalService2)에서 전국 데이터를 키워드로 수집하고,
-처리기관명(ancName)에 '서울'이 포함된 것만 걸러서 상상대로 서울 데이터와 합칠 수 있는
-형태로 정리한다.
+국민신문고 공개제안조회서비스(OpenProposalService2)에서 출산·양육 후보를 별도 수집한다.
 
-실행 위치: class_pjt/scripts/
-출력: data/processed/국민신문고_서울관련_제안.csv
+상상대로 서울 824건과 병합하지 않고, source="국민신문고" CSV로만 저장한다.
+네트워크가 불안정하거나 API 에러가 반복되면 대체 데이터를 만들지 않고 중단한다.
 """
-import requests
-import pandas as pd
-import json
+from __future__ import annotations
+
 import os
 import time
+from collections import Counter
 from pathlib import Path
+from typing import Any
+
+import pandas as pd
+import requests
+from proposal_quality import classify_birth_policy_category, classify_birth_relevance, POLICY_FLOW_BY_CATEGORY
 
 SERVICE_KEY = os.environ.get("DATA_GO_KR_SERVICE_KEY", "")
 LIST_URL = "https://apis.data.go.kr/1140100/OpenProposalService2/OpenProposalList"
@@ -31,6 +34,45 @@ KEYWORDS = [
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 OUT_PATH = BASE_DIR / "data" / "processed" / "국민신문고_서울관련_제안.csv"
+REVIEW_PATH = BASE_DIR / "data" / "processed" / "국민신문고_서울관련_수동검토후보.csv"
+EXCLUDED_PATH = BASE_DIR / "data" / "processed" / "국민신문고_서울관련_제외로그.csv"
+MAX_RETRIES = 2
+MAX_REPEATED_API_ERRORS = 3
+REQUEST_TIMEOUT = 10
+
+class StopCollection(RuntimeError):
+    pass
+
+
+def request_json(url: str, params: dict[str, Any]) -> dict[str, Any]:
+    last_error: Exception | None = None
+    for attempt in range(MAX_RETRIES + 1):
+        try:
+            res = requests.get(url, params=params, headers=HEADERS, timeout=REQUEST_TIMEOUT)
+            res.raise_for_status()
+            return res.json()
+        except (requests.Timeout, requests.ConnectionError) as exc:
+            last_error = exc
+            if attempt >= MAX_RETRIES:
+                raise StopCollection(f"네트워크 문제로 중단: {exc}") from exc
+            time.sleep(1)
+        except requests.RequestException as exc:
+            raise RuntimeError(f"API 요청 실패: {exc}") from exc
+    raise StopCollection(f"네트워크 문제로 중단: {last_error}")
+
+
+def smoke_test() -> None:
+    if not SERVICE_KEY:
+        raise StopCollection("실패: DATA_GO_KR_SERVICE_KEY 환경변수가 없습니다.")
+    params = {
+        "serviceKey": SERVICE_KEY,
+        "keyword": KEYWORDS[0],
+        "searchType": "title",
+        "firstIndex": 1,
+        "recordCountPerPage": 1,
+    }
+    request_json(LIST_URL, params)
+    print("API 테스트 호출 1건 정상 응답")
 
 
 def fetch_list(keyword: str, max_pages: int = 5, per_page: int = 100) -> list[dict]:
@@ -43,55 +85,51 @@ def fetch_list(keyword: str, max_pages: int = 5, per_page: int = 100) -> list[di
             "firstIndex": page,
             "recordCountPerPage": per_page,
         }
-        try:
-            res = requests.get(LIST_URL, params=params, headers=HEADERS, timeout=10)
-            res.raise_for_status()
-            data = res.json()
-            items = data.get("resultList", []) or data.get("response", {}).get("body", {}).get("items", []) or []
-            if not items:
-                break
-            results.extend(items)
-            time.sleep(0.1)
-        except Exception as e:
-            print(f"Fetch list error ({keyword} page {page}): {e}")
+        data = request_json(LIST_URL, params)
+        items = data.get("resultList", []) or data.get("response", {}).get("body", {}).get("items", []) or []
+        if not items:
             break
+        results.extend(items)
+        time.sleep(0.1)
     return results
 
 
 def fetch_detail(peti_no: str) -> str | None:
     params = {"serviceKey": SERVICE_KEY, "petiNo": peti_no}
-    try:
-        res = requests.get(ITEM_URL, params=params, headers=HEADERS, timeout=10)
-        res.raise_for_status()
-        data = res.json()
-        item = data.get("resultData") or data.get("result") or data.get("item") or data.get("response", {}).get("body", {}).get("item", {})
-        content = item.get("content") or item.get("improveIdea") or item.get("contents") or item.get("petiCntn")
-        return content
-    except Exception as e:
-        return None
+    data = request_json(ITEM_URL, params)
+    item = data.get("resultData") or data.get("result") or data.get("item") or data.get("response", {}).get("body", {}).get("item", {})
+    content = item.get("content") or item.get("improveIdea") or item.get("contents") or item.get("petiCntn")
+    return str(content) if content else None
 
 
 if __name__ == "__main__":
+    started_at = time.monotonic()
+    smoke_test()
+
     all_rows = []
+    error_count = 0
     for kw in KEYWORDS:
         try:
             rows = fetch_list(kw, max_pages=5)
             print(f"'{kw}' 검색 (페이지 1~5): {len(rows)}건")
             all_rows.extend(rows)
         except Exception as e:
+            error_count += 1
             print(f"'{kw}' 검색 실패: {e}")
+            if error_count >= MAX_REPEATED_API_ERRORS:
+                raise StopCollection("API 에러 3회 이상 반복으로 중단")
         time.sleep(0.2)
+        if time.monotonic() - started_at > 30 * 60:
+            print("30분 제한 도달로 수집 종료")
+            break
+
+    if not all_rows:
+        raise StopCollection("실패: API에서 수집된 데이터가 없습니다.")
 
     df = pd.DataFrame(all_rows).drop_duplicates(subset="petiNo")
     print(f"\n전체 수집(중복제거): {len(df)}건")
-
-    # 전국 단위 전체 수집 결과도 별도 데이터셋으로 저장 (데이터 근거 증명용)
-    NATIONWIDE_OUT_PATH = BASE_DIR / "data" / "processed" / "국민신문고_전국_제안_303건.csv"
-    FINAL_JSON_PATH = BASE_DIR / "data" / "final" / "civil_requests_all.json"
     
     df["source"] = "국민신문고"
-    df.to_csv(NATIONWIDE_OUT_PATH, index=False, encoding="utf-8-sig")
-    print(f"\n전국 303건 저장 완료: {NATIONWIDE_OUT_PATH}")
 
     # 처리기관명에 '서울' 포함된 것만 필터링
     df_seoul = df[df["ancName"].str.contains("서울", na=False)].copy()
@@ -100,34 +138,58 @@ if __name__ == "__main__":
     # 상세 본문 수집
     contents = []
     for i, peti_no in enumerate(df_seoul["petiNo"]):
-        contents.append(fetch_detail(peti_no))
+        try:
+            contents.append(fetch_detail(str(peti_no)))
+        except Exception as e:
+            error_count += 1
+            contents.append(None)
+            print(f"본문 수집 실패 ({peti_no}): {e}")
+            if error_count >= MAX_REPEATED_API_ERRORS:
+                raise StopCollection("API 에러 3회 이상 반복으로 중단")
         if (i + 1) % 20 == 0:
             print(f"본문 수집 {i + 1}/{len(df_seoul)}")
         time.sleep(0.3)
+        if time.monotonic() - started_at > 30 * 60:
+            print("30분 제한 도달로 본문 수집 종료")
+            break
+
+    df_seoul = df_seoul.iloc[:len(contents)].copy()
     df_seoul["content"] = contents
-
     df_seoul["source"] = "국민신문고"
-    df_seoul.to_csv(OUT_PATH, index=False, encoding="utf-8-sig")
-    print(f"서울관련 저장 완료: {OUT_PATH}")
+
+    decisions = df_seoul.apply(
+        lambda row: classify_birth_relevance(
+            str(row.get("title", "")),
+            str(row.get("content", "") or ""),
+        ),
+        axis=1,
+    )
+    df_seoul["review_status"] = [decision[0] for decision in decisions]
+    df_seoul["review_reason"] = [decision[1] for decision in decisions]
+
+    categories = df_seoul.apply(
+        lambda row: classify_birth_policy_category(
+            str(row.get("title", "")),
+            str(row.get("content", "") or ""),
+        ),
+        axis=1,
+    )
+    df_seoul["category"] = [category[0] for category in categories]
+    df_seoul["sub_category"] = [category[1] for category in categories]
+    df_seoul["micro_category"] = [category[2] for category in categories]
+    df_seoul["policy_flow"] = df_seoul["category"].map(POLICY_FLOW_BY_CATEGORY).fillna("전 주기")
+
+    included = df_seoul[df_seoul["review_status"] == "include"].copy()
+    manual_review = df_seoul[df_seoul["review_status"] == "review"].copy()
+    excluded = df_seoul[df_seoul["review_status"] == "exclude"].copy()
+
+    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    included.to_csv(OUT_PATH, index=False, encoding="utf-8-sig")
+    manual_review.to_csv(REVIEW_PATH, index=False, encoding="utf-8-sig")
+    excluded.to_csv(EXCLUDED_PATH, index=False, encoding="utf-8-sig")
+
+    print(f"서울관련 출산·양육 확정 저장: {OUT_PATH}")
+    print(f"수동검토 후보 저장: {REVIEW_PATH}")
+    print(f"제외로그 저장: {EXCLUDED_PATH}")
     print(f"본문 확보: {df_seoul['content'].notna().sum()}/{len(df_seoul)}")
-
-    # 대시보드 모달 연동용 303건 JSON 구성
-    civil_json = []
-    for _, row in df.iterrows():
-        peti_no = str(row.get("petiNo", ""))
-        title = str(row.get("title", ""))
-        reg_date = str(row.get("regDate", "")).split(" ")[0]
-        anc_name = str(row.get("ancName", "국민권익위원회"))
-        civil_json.append({
-            "id": f"EPEO-{peti_no}",
-            "title": title,
-            "content": f"[{anc_name}] {title} - 국민신문고 전국 단위 수집 제안 원문입니다.",
-            "reg_date": reg_date,
-            "category": "보육" if "보육" in title or "육아" in title or "어린이집" in title else "임신" if "임신" in title or "난임" in title else "출산",
-            "dept": anc_name,
-            "url": "https://www.epeople.go.kr/nep/pttn/gnrlPttn/pttnSgstnLst.npaid"
-        })
-
-    with open(FINAL_JSON_PATH, "w", encoding="utf-8") as f:
-        json.dump(civil_json, f, ensure_ascii=False, indent=2)
-    print(f"civil_requests_all.json ({len(civil_json)}건) 저장 완료!")
+    print(f"판정 분포: {dict(Counter(df_seoul['review_status']))}")

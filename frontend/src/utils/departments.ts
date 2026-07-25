@@ -1,7 +1,9 @@
 import type { DepartmentRanking, PolicyProposal } from '../types';
+import { isOutsideBirthPolicyScope } from './policyMatching';
+import { isPlaceholderProposalContent } from './proposals';
 
 /**
- * 상단 R&R 필터의 8개 담당군은 서울시 조직명이 아니라 정책 8대 대분류다.
+ * 상단 첫 번째 필터의 8개 값은 서울시 조직명이 아니라 실제 정책 대분류다.
  * 과거에는 각 분류를 임의의 대표 부서명(예: 주거정비과)으로 표시했지만,
  * 원본 업무분장과 혼동되므로 검증 가능한 대분류명을 그대로 사용한다.
  */
@@ -22,7 +24,13 @@ export const DEPARTMENT_GROUPS = Array.from(
 
 export const getDepartmentGroup = (
   proposal: PolicyProposal,
-): string => DEPARTMENT_GROUP_BY_CATEGORY[proposal.category] || '미지정';
+): string => (
+  isPlaceholderProposalContent(proposal)
+    ? '원문 확인 필요'
+    : isOutsideBirthPolicyScope(proposal.title, proposal.content)
+    ? '분석 범위 밖'
+    : DEPARTMENT_GROUP_BY_CATEGORY[proposal.category] || '미지정'
+);
 
 const fallbackRanking = (proposal: PolicyProposal): DepartmentRanking[] => {
   const deptName = proposal.department?.[0];
@@ -41,6 +49,14 @@ const fallbackRanking = (proposal: PolicyProposal): DepartmentRanking[] => {
 export const getSortedDepartmentRankings = (
   proposal: PolicyProposal,
 ): DepartmentRanking[] => {
+  // 제목만 있는 제안은 실제 요구사항을 확인할 수 없으므로 담당부서를
+  // 확정적으로 표시하지 않는다.
+  if (isPlaceholderProposalContent(proposal)) return [];
+
+  // 출산·양육 범위 밖의 제안에 출산 관련 부서를 표시하지 않는다.
+  // 이런 제안은 원 소관 분야에서 별도로 재분류해야 한다.
+  if (isOutsideBirthPolicyScope(proposal.title, proposal.content)) return [];
+
   const rankings = proposal.department_rankings?.length
     ? proposal.department_rankings
     : fallbackRanking(proposal);

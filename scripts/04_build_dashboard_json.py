@@ -10,6 +10,7 @@ import json
 import ast
 import pandas as pd
 from pathlib import Path
+from proposal_quality import normalize_policy_tags, prepare_proposals, validate_proposals
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 IN_PATH = BASE_DIR / "data" / "processed" / "상상대로_서울_출산육아_분류완료_v2.csv"
@@ -41,8 +42,7 @@ def build_proposals(path: Path) -> list:
             department = ["미지정"]
 
         sn = int(row["SN"])
-        cat = row.get("category", "기타")
-        proposals.append({
+        proposal = {
             "id": f"PROP-{sn}",
             "title": row["TITLE"],
             "content": row.get("content_full") or row["TITLE"],
@@ -51,14 +51,18 @@ def build_proposals(path: Path) -> list:
             "comment_cnt": int(row.get("USER_COMMENT_CNT") or 0),
             "reply_yn": row.get("REPLY_YN", "N"),
             "district": district,
-            "category": cat,
+            "category": row.get("category", "기타"),
+            "sub_category": row.get("sub_category") or row.get("category_sub"),
+            "micro_category": row.get("micro_category") or row.get("category_micro"),
+            "policy_flow": row.get("policy_flow"),
             "department": department,
             "url": IDEA_BASE_URL.format(sn),
             "source": "상상대로서울",
             "cluster_id": int(row.get("cluster_id", -1)),
             "cluster_size": int(row.get("cluster_size", 1)),
             "negative_signal": bool(row.get("negative_signal", False)),
-        })
+        }
+        proposals.append(normalize_policy_tags(proposal))
     return proposals
 
 
@@ -107,7 +111,15 @@ def build_district_stats() -> list:
 if __name__ == "__main__":
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    proposals = build_proposals(IN_PATH)
+    proposals = prepare_proposals(
+        build_proposals(IN_PATH),
+        exclude_out_of_scope=True,
+    )
+    validation_errors = validate_proposals(proposals)
+    if validation_errors:
+        raise ValueError(
+            "제안 품질검증 실패:\n- " + "\n- ".join(validation_errors)
+        )
     stats = build_dashboard_stats(proposals)
     district_stats = build_district_stats()
 

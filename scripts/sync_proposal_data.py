@@ -14,6 +14,11 @@ import json
 import re
 from pathlib import Path
 from typing import Any
+from proposal_quality import (
+    apply_quality_gate,
+    is_placeholder_content,
+    validate_proposals,
+)
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,16 +38,25 @@ def normalize(value: Any) -> str:
 def is_placeholder(item: dict[str, Any]) -> bool:
     title = normalize(item.get("title") or item.get("TITLE"))
     content = normalize(item.get("content") or item.get("CONTENT"))
-    return (
-        not content
-        or content == title
-        or len(content) < 30
-        or any(phrase in content for phrase in PLACEHOLDER_PHRASES)
-    )
+    return is_placeholder_content(title, content)
 
 
 def proposal_id(row: dict[str, Any]) -> str:
-    return normalize(row.get("제안ID") or row.get("id") or row.get("ID"))
+    raw = normalize(
+        row.get("제안ID")
+        or row.get("id")
+        or row.get("ID")
+        or row.get("SN")
+    )
+    if not raw:
+        return ""
+    if raw.startswith("PROP-"):
+        return raw
+    try:
+        return f"PROP-{int(float(raw))}"
+    except ValueError:
+        match = re.search(r"(\d+)", raw)
+        return f"PROP-{match.group(1)}" if match else ""
 
 
 def proposal_title(row: dict[str, Any]) -> str:
@@ -50,7 +64,8 @@ def proposal_title(row: dict[str, Any]) -> str:
 
 
 def detailed_body(row: dict[str, Any]) -> str:
-    return normalize(row.get("웹크롤링_상세본문") or row.get("content_full"))
+    body = normalize(row.get("웹크롤링_상세본문") or row.get("content_full"))
+    return "" if body.startswith(("http://", "https://")) else body
 
 
 def load_best_local_bodies() -> dict[str, tuple[str, str, str]]:
@@ -164,20 +179,28 @@ def main() -> int:
                 continue
             candidate_title, body, _source = candidate
             current = normalize(item.get("content"))
+            # 실제 데이터끼리도 ID가 잘못 결합될 수 있으므로 제목이 같은
+            # 원문만 복원한다. 제목이 다른 후보로 현재 데이터를 덮어쓰지 않는다.
             if candidate_title != title:
-                item["title"] = candidate_title
-                item["content"] = body
-                restored_titles += 1
-                restored += 1
-            elif len(body) > len(current):
+                continue
+            if len(body) > len(current):
                 item["content"] = body
                 restored += 1
+            apply_quality_gate(item)
+
+    # 신규 API·크롤링 데이터에도 동일한 품질 게이트를 항상 적용한다.
+    # --check 모드에서도 메모리상으로 적용하여 실제 저장 예정 상태를 검사한다.
+    for item in items:
+        apply_quality_gate(item)
 
     errors = validate(items)
+    errors.extend(validate_proposals(items))
     placeholder_count = sum(is_placeholder(item) for item in items)
 
     if args.check:
         final_items = json.loads(FINAL_PATH.read_text(encoding="utf-8"))
+        for item in final_items:
+            apply_quality_gate(item)
         if items != final_items:
             errors.append("frontend and final proposal datasets differ")
     elif not errors:

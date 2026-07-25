@@ -689,10 +689,10 @@ export const CategoryDemand: React.FC<Props> = ({
                   </div>
                 </div>
 
-                {/* 몽땅정보 연관 혜택 정보 */}
+                {/* 몽땅정보 유사 정책 후보 정보 */}
                 {modalProposal.matched_policies && modalProposal.matched_policies.length > 0 && (
                   <div className="p-3 bg-emerald-50/60 rounded-xl border border-emerald-200/80 space-y-1 text-xs">
-                    <span className="font-extrabold text-emerald-800 block">🎁 몽땅정보통 연관 공식 정책 혜택 ({modalProposal.matched_policies.length}건):</span>
+                    <span className="font-extrabold text-emerald-800 block">🎁 몽땅정보통 유사 정책 후보 ({modalProposal.matched_policies.length}건):</span>
                     <div className="flex flex-wrap gap-1.5 pt-1">
                       {modalProposal.matched_policies.map(pol => (
                         <span key={pol.policy_id} className="bg-white text-emerald-900 border border-emerald-300 px-2 py-0.5 rounded font-bold text-[11px]">

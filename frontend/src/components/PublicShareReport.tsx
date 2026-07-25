@@ -9,17 +9,14 @@ interface PublicShareProposal {
 
 interface Props {
   proposalCount: number;
+  proposalLabel?: string;
+  unansweredCount: number;
+  totalVotes: number;
+  replyRate: number;
   topCategoryName: string;
   topVotedCategory: string;
   proposals: PublicShareProposal[];
 }
-
-const METRICS = [
-  { label: '총 활성 사용자', value: '7,259', change: '26.1% 감소' },
-  { label: '재방문자', value: '3,592명', change: '19.43% 감소' },
-  { label: '신규 방문자', value: '6,648명', change: '26.08% 감소' },
-  { label: '조회수', value: '110,015', change: '25% 감소' },
-];
 
 const categoryClass = (category: string) => {
   if (category.includes('출산') || category.includes('임신')) return 'bg-rose-500';
@@ -60,6 +57,10 @@ const PageNumber: React.FC<{ value: number }> = ({ value }) => (
 
 export const PublicShareReport: React.FC<Props> = ({
   proposalCount,
+  proposalLabel = '선택 범위 제안',
+  unansweredCount,
+  totalVotes,
+  replyRate,
   topCategoryName,
   topVotedCategory,
   proposals,
@@ -67,6 +68,12 @@ export const PublicShareReport: React.FC<Props> = ({
   const now = new Date();
   const period = `${now.getFullYear()}.${String(now.getMonth() + 1).padStart(2, '0')}`;
   const proposalPages = [proposals.slice(0, 6), proposals.slice(6, 12)].filter((items) => items.length > 0);
+  const metrics = [
+    { label: proposalLabel, value: `${proposalCount.toLocaleString()}건`, note: '현재 필터 기준' },
+    { label: '미답변 제안', value: `${unansweredCount.toLocaleString()}건`, note: '현재 필터 기준' },
+    { label: '누적 공감', value: `${totalVotes.toLocaleString()}표`, note: '선택 제안 합계' },
+    { label: '답변 진행률', value: `${replyRate}%`, note: '답변 완료 비율' },
+  ];
 
   return (
     <div className="public-share-report mx-auto flex w-full flex-col items-center gap-5 text-[#343c3e]">
@@ -82,7 +89,7 @@ export const PublicShareReport: React.FC<Props> = ({
         />
 
         <div className="relative z-10 mx-[36px] mt-[-34px] grid grid-cols-4 gap-[10px]">
-          {METRICS.map((metric) => (
+          {metrics.map((metric) => (
             <article
               key={metric.label}
               className="flex h-[150px] flex-col rounded-[11px] bg-white px-[18px] py-[20px]"
@@ -90,8 +97,7 @@ export const PublicShareReport: React.FC<Props> = ({
               <span className="text-[11px] font-black">{metric.label}</span>
               <span className="mt-1 text-[12px] font-bold text-[#556265]">{metric.value}</span>
               <span className="mt-auto flex items-center gap-1 whitespace-nowrap text-[10px] font-black text-[#4c91d8]">
-                <span className="shrink-0 text-[18px] leading-none" aria-hidden="true">↓</span>
-                <span className="whitespace-nowrap">{metric.change}</span>
+                <span className="whitespace-nowrap">{metric.note}</span>
               </span>
             </article>
           ))}
@@ -101,7 +107,7 @@ export const PublicShareReport: React.FC<Props> = ({
           <article className="flex h-[148px] flex-col rounded-[11px] bg-white px-[18px] py-[18px]">
             <span className="text-[11px] font-black">제안 수</span>
             <span className="mt-auto text-right text-[31px] font-black">
-              {(proposalCount || 144).toLocaleString()}
+              {proposalCount.toLocaleString()}
             </span>
           </article>
           <article className="flex h-[148px] flex-col rounded-[11px] bg-white px-[18px] py-[18px]">

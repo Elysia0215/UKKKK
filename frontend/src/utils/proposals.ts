@@ -21,6 +21,6 @@ export const getProposalDisplayContent = (
   proposal: Pick<PolicyProposal, 'title' | 'content'>,
 ): string => (
   isPlaceholderProposalContent(proposal)
-    ? '상세 원문이 아직 수집되지 않았습니다. 아래 원문 링크에서 전체 내용을 확인할 수 있습니다.'
+    ? '상세 원문이 현재 화면 데이터에 연결되지 않았습니다. 아래 원문 링크에서 전체 내용을 확인할 수 있습니다.'
     : proposal.content
 );

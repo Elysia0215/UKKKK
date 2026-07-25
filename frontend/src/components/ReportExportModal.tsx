@@ -16,62 +16,6 @@ import {
 } from 'lucide-react';
 import { PolicyProposal } from '../types';
 import { PublicShareReport } from './PublicShareReport';
-const FALLBACK_PROPOSALS = [
-  {
-    category: '임신·출산',
-    title: '임산부 스마트 배려 뱃지 도입 제안',
-    quote: '“대중교통 이용 시 눈치 보지 않고 배려받고 싶습니다”',
-    content: '초기 임산부는 외관상 구분이 어려워 대중교통 교통약자석 이용에 큰 불편을 겪습니다. 블루투스 비콘 기반의 스마트 배려 뱃지를 도입하여 임산부가 접근 시 좌석 LED 표시등이 켜지는 뱃지 태그 시스템을 구축해 주시기 바랍니다.'
-  },
-  {
-    category: '보육·돌봄',
-    title: '아동식당 및 키즈 오케이존 지정 확대',
-    quote: '“아이와 함께 안심하고 외식할 수 있는 환경을”',
-    content: '노키즈존 확산으로 영유아 동반 부모들이 외식 시 겪는 심리적 위축이 큽니다. 서울시가 친아동 인증(키즈 오케이존) 식당을 전폭적으로 확대 지원하고 혜택을 부여하여 가족 친화적 지역 문화를 조성해야 합니다.'
-  },
-  {
-    category: '보육·돌봄',
-    title: '초등 돌봄교실 셔틀버스 원스톱 운영 건의',
-    quote: '“방과 후 학원과 돌봄교실 이동을 안전하게”',
-    content: '맞벌이 부부의 가장 큰 고민은 방과 후 아이의 돌봄 교실과 사설 학원 간의 이동 공백입니다. 권역별 초등 돌봄 원스톱 안심 셔틀버스를 운행하여 아동 교통사고 예방과 학부모의 인계 부담을 해소해 주시길 바랍니다.'
-  },
-  {
-    category: '임신·출산',
-    title: '다자녀 기준 완화 및 공공시설 할인 통합 제안',
-    quote: '“두 자녀 가구도 실질적인 다자녀 혜택을”',
-    content: '현행 다자녀 혜택이 3자녀 위주로 묶여 있어 체감 효과가 낮습니다. 서울시 다자녀 기준을 2자녀로 명확히 통일하고, 공영주차장, 박물관, 문화시설 등 공공 요금 감면 혜택을 모바일 다둥이 카드로 즉시 자동 적용해 주십시오.'
-  },
-  {
-    category: '일·생활 균형',
-    title: '남성 육아휴직 장려금 지급 기준 완화',
-    quote: '“아빠의 육아 참여가 자연스러운 사회를 위해”',
-    content: '중소기업에 재직 중인 남성 근로자는 소득 감소 우려와 사내 눈치로 육아휴직 사용율이 극히 저조합니다. 남성 육아휴직 동반 사용 시 서울시 차원의 추가 장려금 지원 요건을 대폭 완화하여 소득 공백을 메워주시기 바랍니다.'
-  },
-  {
-    category: '보육·돌봄',
-    title: '야간·주말 긴급 돌봄 거점 어린이집 증설',
-    quote: '“갑작스러운 야근이나 경조사에도 안심 돌봄을”',
-    content: '야간이나 주말에 긴급한 사정이 생겼을 때 아이를 맡길 곳이 없어 난감한 경우가 많습니다. 자치구별 최소 3개소 이상의 24시간 시간제 보육 지정 어린이집을 확보하고 모바일 예약 플랫폼 기능을 강화해 주시기 바랍니다.'
-  },
-  {
-    category: '주거·생활',
-    title: '신혼부부 임차보증금 이자 지원 한도 확대',
-    quote: '“높은 전세자금 대출 이자 장벽을 허물어 주세요”',
-    content: '주거 비용 부담은 청년층이 결혼과 출산을 기피하는 가장 큰 원인입니다. 서울시 신혼부부 전세자금 대출 이자 지원 한도를 확대하고 소득 요건을 합산 1억 2천만 원 이하로 상향하여 주거 안정을 우선 보장해야 합니다.'
-  },
-  {
-    category: '정보·상담',
-    title: '출산양육 지원금 원스톱 자동 신청 시스템 구축',
-    quote: '“몰라서 신청 못 하는 혜택이 없도록”',
-    content: '출산축하금, 첫만남이용권, 아동수당 등 지급 주체와 신청 경로가 너무 파편화되어 있습니다. 주민등록 출생 신고와 동시에 모든 수당 및 서비스가 원스톱으로 일괄 자동 신청·지급되도록 행정 전산망을 연계해 주십시오.'
-  },
-  {
-    category: '임신·출산',
-    title: '임산부 교통비 및 친환경 농산물 꾸러미 통합 지원',
-    quote: '“건강한 출산 준비를 서울시가 함께”',
-    content: '임산부를 위한 교통비 바우처와 영양 지원을 위한 친환경 꾸러미 사업 신청 절차가 복잡합니다. 보건소 임산부 등록과 동시에 이 두 혜택이 원스톱 자동 배송 및 포인트 지급이 연동되도록 대민 안내를 개편해야 합니다.'
-  }
-];
 
 interface Props {
   isOpen: boolean;
@@ -97,9 +41,9 @@ interface ReportSection {
 const SECTION_LABELS: Record<SectionKey, string> = {
   background: '추진 배경 및 목적',
   stats: '전체 수요/현장 데이터 현황',
-  gaps: '종합 Gap 진단 및 정책 가설',
-  ai: 'AI 기반 행정 종합의견',
-  academic: '학술 연구 및 통계 근거 대조',
+  gaps: '검토 우선순위 및 판단 근거',
+  ai: '행정 검토 제안',
+  academic: '분석 방법 및 근거 사용 범위',
   logs: '행정 조치 피드백 로그',
 };
 
@@ -109,6 +53,11 @@ const getDepartmentNames = (proposal: PolicyProposal) => {
     ? proposal.department_rankings.map((ranking) => ranking.dept_name)
     : [];
   return [...departments, ...rankingNames].filter(Boolean);
+};
+
+const getDepartmentRank = (proposal: PolicyProposal, department: string | null) => {
+  if (!department || !Array.isArray(proposal.department_rankings)) return null;
+  return proposal.department_rankings.find((ranking) => ranking.dept_name === department)?.rank ?? null;
 };
 
 const createCsv = (proposals: PolicyProposal[], selectedDept: string | null) => {
@@ -150,25 +99,35 @@ export const ReportExportModal: React.FC<Props> = ({
   const [copySuccess, setCopySuccess] = useState(false);
   const [selectedAcademicEvidenceForModal, setSelectedAcademicEvidenceForModal] = useState(null);
 
-  const { scopedProposals, isDistrictFallback } = useMemo(() => {
-    const directMatches = proposals.filter((proposal) => {
+  const { scopedProposals, isDistrictFallback, districtDirectCount } = useMemo(() => {
+    const scopeMatches = proposals.filter((proposal) => {
       if (selectedDept && !getDepartmentNames(proposal).includes(selectedDept)) return false;
       if (selectedCategory && proposal.category !== selectedCategory) return false;
-      if (selectedDistrict && proposal.district !== selectedDistrict) return false;
       return true;
     });
 
-    if (selectedDistrict && directMatches.length === 0) {
-      const fallbackMatches = proposals.filter((proposal) => {
-        if (selectedDept && !getDepartmentNames(proposal).includes(selectedDept)) return false;
-        if (selectedCategory && proposal.category !== selectedCategory) return false;
-        if (proposal.district !== '미상') return false;
-        return true;
-      });
-      return { scopedProposals: fallbackMatches, isDistrictFallback: true };
+    if (selectedDistrict) {
+      const directMatches = scopeMatches.filter((proposal) => proposal.district === selectedDistrict);
+      if (directMatches.length > 0) {
+        return {
+          scopedProposals: directMatches,
+          isDistrictFallback: false,
+          districtDirectCount: directMatches.length,
+        };
+      }
+      const fallbackMatches = scopeMatches.filter((proposal) => proposal.district === '미상');
+      return {
+        scopedProposals: fallbackMatches,
+        isDistrictFallback: true,
+        districtDirectCount: 0,
+      };
     }
 
-    return { scopedProposals: directMatches, isDistrictFallback: false };
+    return {
+      scopedProposals: scopeMatches,
+      isDistrictFallback: false,
+      districtDirectCount: scopeMatches.length,
+    };
   }, [proposals, selectedCategory, selectedDept, selectedDistrict]);
 
   const reportData = useMemo(() => {
@@ -190,13 +149,31 @@ export const ReportExportModal: React.FC<Props> = ({
     const topCategories = (Object.entries(categoryCounts) as Array<[string, number]>)
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5);
-    const topProposal = [...scopedProposals].sort((a, b) => (b.vote_score || 0) - (a.vote_score || 0))[0];
+    const topProposals = [...scopedProposals]
+      .sort((a, b) => (b.vote_score || 0) - (a.vote_score || 0))
+      .slice(0, 3);
+    const topProposal = topProposals[0];
     const scopeLabel = selectedDept
-      ? `${selectedDept} 소관`
+      ? `${selectedDept} R&R 후보`
       : selectedDistrict || selectedCategory
         ? '선택 조건'
         : '여성가족실 전체';
-    const gapScore = scopedProposals.length > 0 ? Math.min(100, Math.round((unansweredCount / scopedProposals.length) * 70 + 20)) : 0;
+    const unansweredRate = scopedProposals.length > 0 ? unansweredCount / scopedProposals.length : 0;
+    const urgentRate = scopedProposals.length > 0 ? urgentCount / scopedProposals.length : 0;
+    const negativeRate = scopedProposals.length > 0 ? negativeCount / scopedProposals.length : 0;
+    const reviewScore = scopedProposals.length > 0
+      ? Math.min(100, Math.round(unansweredRate * 70 + urgentRate * 20 + negativeRate * 10))
+      : 0;
+    const primaryCount = selectedDept
+      ? scopedProposals.filter((proposal) => getDepartmentRank(proposal, selectedDept) === 1).length
+      : 0;
+    const collaborationCount = selectedDept
+      ? scopedProposals.filter((proposal) => {
+          const rank = getDepartmentRank(proposal, selectedDept);
+          return rank === 2 || rank === 3;
+        }).length
+      : 0;
+    const confidenceLabel = scopedProposals.length < 10 ? '소표본·해석 주의' : '탐색적 검토';
 
     return {
       totalVotes,
@@ -205,29 +182,33 @@ export const ReportExportModal: React.FC<Props> = ({
       urgentCount,
       negativeCount,
       topCategories,
+      topProposals,
       topProposal,
       scopeLabel,
-      gapScore,
+      reviewScore,
+      primaryCount,
+      collaborationCount,
+      confidenceLabel,
     };
   }, [scopedProposals, selectedCategory, selectedDept, selectedDistrict]);
 
-  const mergedProposals = useMemo(() => {
-    const dynamicItems = scopedProposals.map((p) => ({
+  const publicShareProposals = useMemo(() => {
+    return scopedProposals.slice(0, 12).map((p) => ({
       category: String(p.category || '보육·돌봄'),
       title: String(p.title),
       quote: p.title.length > 25 ? `“${p.title.slice(0, 25)}...”` : `“${p.title}”`,
-      content: String(p.content || '지원 조건 및 상세 추진 방안을 수렴하여 개선 조치를 검토합니다.')
+      content: p.content && p.content.trim() !== p.title.trim()
+        ? String(p.content)
+        : '상세 원문이 현재 화면 데이터에 연결되지 않아 원문 링크 확인이 필요합니다.',
     }));
-    const combined = [...dynamicItems, ...FALLBACK_PROPOSALS];
-    return combined.slice(0, 9);
   }, [scopedProposals]);
 
   const topCategoryName = useMemo(() => {
-    return reportData.topCategories[0]?.[0] || '보육·돌봄';
+    return reportData.topCategories[0]?.[0] || '자료 없음';
   }, [reportData.topCategories]);
 
   const topVotedCategory = useMemo(() => {
-    return reportData.topProposal?.category || '임신·출산';
+    return reportData.topProposal?.category || '자료 없음';
   }, [reportData.topProposal]);
 
   const sections = useMemo<ReportSection[]>(() => {
@@ -236,21 +217,34 @@ export const ReportExportModal: React.FC<Props> = ({
       month: 'long',
       day: 'numeric',
     });
-    const filterText = [
+    const baseFilterText = [
       selectedDept ? `부서: ${selectedDept}` : '부서: 전체',
       selectedCategory ? `분야: ${selectedCategory}` : null,
-      selectedDistrict ? `지역: ${selectedDistrict}${isDistrictFallback ? ' (미상 데이터 연계)' : ''}` : null,
     ]
       .filter(Boolean)
       .join(' / ');
-
-    const policyHypothesis =
-      scopedProposals.length === 0
-        ? '현재 선택 조건에서는 분석 가능한 시민 제안 표본이 부족합니다. 추가 데이터 확보 후 정책 가설을 보완해야 합니다.'
-        : `시민 수요 ${scopedProposals.length.toLocaleString()}건, 공감 ${reportData.totalVotes.toLocaleString()}표, 미답변 ${reportData.unansweredCount.toLocaleString()}건을 종합하면 현재 필요한 정책은 단일 사업 신설보다 신청 기준, 정보 접근성, 돌봄 공급, 주거·노동 장벽을 함께 낮추는 통합 보완 정책입니다. 이러한 정책이 발행된다면 시민은 제도 존재 여부를 찾는 부담과 실제 신청 단계의 탈락 가능성을 동시에 줄일 수 있습니다.`;
-
-    const recommendedPolicy =
-      '우선 검토 정책 가설은 난임·임신 지원 기준 완화, 야간·긴급 돌봄 공급 보강, 주거·노동·생활비 조건 연계 지원, 신청 절차 안내 통합입니다.';
+    const districtScopeText = selectedDistrict
+      ? isDistrictFallback
+        ? `선택 지역: ${selectedDistrict} / 직접 확인: 0건 / 참고자료: 지역 미상 ${scopedProposals.length.toLocaleString()}건`
+        : `지역: ${selectedDistrict} / 직접 확인: ${districtDirectCount.toLocaleString()}건`
+      : null;
+    const filterText = [baseFilterText, districtScopeText].filter(Boolean).join(' / ');
+    const actualProposalLines = reportData.topProposals.length > 0
+      ? reportData.topProposals.map(
+          (proposal, index) =>
+            `${index + 1}순위 검토 안건: "${proposal.title}" / 공감 ${(proposal.vote_score || 0).toLocaleString()}표 / ${
+              proposal.reply_yn === 'Y' ? '답변완료' : '미답변'
+            }`,
+        )
+      : ['검토 안건: 현재 선택 조건에 해당하는 제안이 없습니다.'];
+    const rrSummary = selectedDept
+      ? `R&R 구성: 주관 1순위 ${reportData.primaryCount.toLocaleString()}건 / 협조 2·3순위 ${reportData.collaborationCount.toLocaleString()}건`
+      : 'R&R 구성: 실제 팀을 선택하면 주관 1순위와 협조 2·3순위를 구분해 표시합니다.';
+    const dataLimitNote = isDistrictFallback
+      ? `${selectedDistrict} 직접 확인 자료는 0건입니다. 아래 ${scopedProposals.length.toLocaleString()}건은 지역 미상 참고자료이며 ${selectedDistrict} 발생 건으로 해석할 수 없습니다.`
+      : scopedProposals.length < 10
+        ? `현재 표본은 ${scopedProposals.length.toLocaleString()}건으로 작아 정책 효과나 지역 전체 수요를 일반화할 수 없습니다.`
+        : '본 결과는 현재 화면에 적재된 시민 제안의 탐색적 집계이며 최종 정책 판단 전 원문과 업무분장 확인이 필요합니다.';
 
     return [
       {
@@ -261,18 +255,16 @@ export const ReportExportModal: React.FC<Props> = ({
           ? [
               `보고일자: ${today}`,
               `분석범위: ${filterText}`,
-              '본 보고서는 시민 제안, 민원, 정책 공급, 뉴스, 실측 통계를 함께 검토해 출산·양육 정책의 수요와 공급 공백을 판단하기 위한 기안 초안입니다.',
-              '개별 클러스터 하나를 세분화하기보다 전체 수요 흐름을 기준으로 부서 R&R과 결재 검토에 필요한 종합 판단을 제시합니다.',
-              '■ [AS-IS] 기존 수작업 행정 한계: 담당자가 다수의 시민 게시판 및 복지 포털 데이터를 개별 취합·집계하느라 R&R 소관 판단에 평균 3.5일이 소요되었으며, 정책 갭에 대한 과학적 실증 근거를 제공하기 어려웠음.',
-              '■ [TO-BE] UKKKK 시스템 도입 기대 효과: NLP·규칙 기반 분류와 3대 가중치 모델을 통해 정책 사각지대 검토 순서를 제시하고, 원본 업무분장 기반 실제 팀의 1·2·3순위 R&R 후보와 행정 답변 초안을 함께 제공하여 담당자의 탐색·대조·기안 업무를 지원함. 실제 시간 절감률과 추천 정확도는 후속 실무자 과업 테스트로 검증할 예정임.',
+              '본 보고서는 현재 화면에서 선택된 실제 시민 제안을 기준으로 수요·답변 상태·공감·R&R 후보를 정리한 행정 검토 초안입니다.',
+              '정책 공급·뉴스·통계의 직접 매칭 결과는 이 보고서 점수에 포함하지 않았으며, 현행 정책 검색과 자치구 통계 화면에서 별도 대조해야 합니다.',
+              rrSummary,
+              `데이터 해석 주의: ${dataLimitNote}`,
             ]
           : [
-              `◈ [여성가족실 브리핑] 시민 정책 수요 진단 및 시장단 신속 의사결정 지원`,
-              `◈ 분석대상: ${filterText} (${today} 기준 최신 융합 현황)`,
-              `◈ 목적: 파편화된 다차원 정책 데이터 결합 기반 R&R 우선 조치 및 자치구별 정책 자원 배분 활용`,
-              `◈ 행정 혁신 대비 (Before vs After):`,
-              `  - 기존(Before): 단순 엑셀 수작업 모니터링 및 민원 1:1 대면 소동으로 기획안 마련에 장시간 적체`,
-              `  - 개선안(After): UKKKK 다차원 연동 분석과 R&R 후보·기안 초안을 활용해 탐색과 대조 단계를 단축하고, 담당자가 최종 검토·수정·승인`,
+              `◈ 보고 목적: 선택 범위의 시민 제안과 R&R 후보를 간부 검토용으로 요약`,
+              `◈ 분석 범위: ${filterText} (${today} 기준)`,
+              `◈ 핵심 판단: ${rrSummary}`,
+              `◈ 데이터 한계: ${dataLimitNote}`,
             ],
       },
       {
@@ -294,65 +286,66 @@ export const ReportExportModal: React.FC<Props> = ({
               reportData.topProposal
                 ? `최상위 공감 제안: "${reportData.topProposal.title}" (${reportData.topProposal.vote_score || 0}표)`
                 : '최상위 공감 제안: 분석 대상 없음',
+              ...actualProposalLines,
             ]
           : [
-              `◈ 시민 수요 총량: 총 ${scopedProposals.length.toLocaleString()}건의 정책 수요 및 민원 안건 식별`,
-              `◈ 공감 및 전파: 시민 추천/공감 누적 ${reportData.totalVotes.toLocaleString()}표 획득으로 적극적 요구 판정`,
+              `◈ 시민 제안: ${scopedProposals.length.toLocaleString()}건 / 누적 공감 ${reportData.totalVotes.toLocaleString()}표`,
               `◈ 미해결 사각지대: 미답변 안건 ${reportData.unansweredCount.toLocaleString()}건 확인 (답변 진행률 ${reportData.replyRate}%)`,
-              `◈ 긴급 경고 신호: 부정 민원 및 고공감 누적 장기 방치 안건 ${reportData.urgentCount.toLocaleString()}건 즉시 조치 요망`,
+              `◈ 고공감 미답변: 공감 100표 이상이면서 미답변인 안건 ${reportData.urgentCount.toLocaleString()}건`,
+              `◈ 우선 확인: ${reportData.topProposal ? `"${reportData.topProposal.title}" (${reportData.topProposal.vote_score || 0}표)` : '해당 없음'}`,
             ],
       },
       {
         key: 'gaps',
-        title: SECTION_LABELS.gaps,
-        summary: '데이터와 논문을 합쳐 현재 필요한 정책 가설을 제안합니다.',
+        title: '검토 우선순위 및 판단 근거',
+        summary: '실제 제안의 미답변·공감·부정 신호를 기준으로 검토 순서를 제시합니다.',
         body: reportType === 'detailed'
           ? [
-              `종합 Gap 점수: ${reportData.gapScore}점`,
-              `정책 가설: ${policyHypothesis}`,
-              `결론: ${recommendedPolicy}`,
-              '근거: 고공감·미답변 수요는 시민 체감 공백의 선행 신호이며, 직접 매칭되는 정책 공급이 부족하거나 조건이 좁은 분야는 보완 정책의 우선 검토 대상입니다.',
-              '권고: 기존 사업의 대상 조건, 신청 절차, 홍보 채널, 부서 간 이관 기준을 먼저 정비한 뒤 신규 사업 또는 예산 편성 필요성을 판단합니다.',
+              `미답변 중심 검토 경고점수: ${reportData.reviewScore}점 / 신뢰 수준: ${reportData.confidenceLabel}`,
+              '산식: 미답변 비율 70% + 공감 100표 이상 미답변 비율 20% + 부정 신호 비율 10%. 이 점수에는 정책 공급량이 포함되지 않습니다.',
+              ...actualProposalLines,
+              '권고 절차: 원문 확인 → 주관·협조 순위 검토 → 현행 정책 직접 매칭 → 미답변 사유 기록 → 답변 또는 이관 결정.',
+              `해석 제한: ${dataLimitNote}`,
             ]
           : [
-              `◈ 종합 Gap 지수: ${reportData.gapScore}점 (시민 불일치 및 정책 공백 수준 진단)`,
-              `◈ 의사결정 가설: 현행 저출생 지원책의 신청 소득 제한 철폐 및 24시간 긴급 보육 인프라의 양적 보강이 급선무임`,
-              `◈ 정책 제안: 난임 시술비 지원 횟수 완화, 야간 긴급어린이집 증설, 신혼부부 전세자금 지원 조건 보완 등 3대 현안 우선 추진 권고`,
+              `◈ 검토 경고점수: ${reportData.reviewScore}점 (${reportData.confidenceLabel})`,
+              '◈ 점수 성격: 미답변·고공감·부정 신호 기반 참고값이며 공급 Gap 확정값이 아님',
+              `◈ 우선 조치: ${reportData.topProposal ? `"${reportData.topProposal.title}" 원문과 R&R 후보 우선 확인` : '추가 데이터 확보 후 판단'}`,
             ],
       },
       {
         key: 'ai',
-        title: SECTION_LABELS.ai,
-        summary: 'AI 분석 결과를 행정 검토 언어로 요약합니다.',
+        title: '행정 검토 제안',
+        summary: '선택된 실제 제안에 대해 담당자가 확인할 다음 절차를 정리합니다.',
         body: reportType === 'detailed'
           ? [
-              `AI 종합의견은 ${reportData.scopeLabel} 전체 수요 흐름을 기준으로 작성했습니다.`,
-              '현재 수요는 특정 세부 클러스터만의 문제가 아니라 임신·난임, 보육·돌봄, 주거·노동, 정보 접근 문제가 연결된 복합 공백으로 해석됩니다.',
-              '단순 민원 답변보다 부서별 기존 정책 매칭 검수, 미답변 사유 기록, 신청 단계 병목 파악, 정책 안내 문안 표준화가 우선 필요합니다.',
-              '결재 검토 시에는 수요 강도, 정책 공백, 시급성, 실행가능성, 근거 신뢰도 5대 축을 함께 반영하는 방식이 적합합니다.',
+              `검토 대상은 ${reportData.scopeLabel} 시민 제안 ${scopedProposals.length.toLocaleString()}건입니다.`,
+              rrSummary,
+              '시스템은 정책을 자동 확정하지 않습니다. 담당자는 각 제안의 원문, 주관·협조 후보, 현행 정책 검색 결과를 확인한 뒤 답변·이관·추가 검토 여부를 결정해야 합니다.',
+              reportData.unansweredCount > 0
+                ? `미답변 ${reportData.unansweredCount.toLocaleString()}건은 답변 지연 사유와 담당 이관 이력을 우선 기록해야 합니다.`
+                : '현재 선택 범위에는 미답변 제안이 없습니다.',
             ]
           : [
-              `◈ [AI 행정 권고] 민원 1:1 회신 단계를 넘어, 소관 부서별 현행 조례 시행규칙 개정의 거시적 접근 필요`,
-              `◈ [부서 협동 지시] 여성가족실, 시민건강국 등 다부서 공동 검토 TF 구성을 통해 종합 신청 안내 창구 일원화 추진`,
-              `◈ [재원 배분 권장] 갭 분석 결과 예산 대비 편익 효과가 높은 기존 양육수당 확대 편성을 최우선 검토 권장`,
+              `◈ 결재 요청사항: 상위 제안 원문 및 ${selectedDept ? `${selectedDept} R&R 순위` : '주관·협조 후보'} 검토`,
+              `◈ 후속 조치: 미답변 ${reportData.unansweredCount.toLocaleString()}건의 답변·이관·보류 사유 기록`,
+              '◈ 유의사항: 신규 사업·조례 개정·예산 편성은 현행 정책과 통계 대조 후 별도 판단',
             ],
       },
       {
         key: 'academic',
-        title: SECTION_LABELS.academic,
-        summary: '우리가 적용한 논문·통계 근거와 분석 로직을 연결합니다.',
+        title: '분석 방법 및 근거 사용 범위',
+        summary: '연구 문헌은 분류·진단 방법의 참고 근거이며 개별 정책 효과를 확정하지 않습니다.',
         body: reportType === 'detailed'
           ? [
-              '가. [오신휘·김혜진 (2020) / 방법론] 가설: 텍스트마이닝이 저출산 정책 분야의 비정형 텍스트 분류에 유효할 것이다. ➔ 검증: 학술 논문 752편 대상 동시출현단어 네트워크 분석 ➔ 결과: 정책 시기별 키워드 군집이 대분류와 부합하게 뚜렷이 구분됨을 확인 ➔ 결론: 비정형 데이터 기반 자동 분류·분석의 행정적 유효성 및 타당성을 증명.',
-              '나. [성낙일·박선권 (2012) / 수요·공급] 가설: 지역 단위 보육 인프라 공급 규모가 합계출산율을 제고하는 유의미한 경제적 기여를 할 것이다. ➔ 검증: 전국 232개 시군구의 2009년 횡단면 자료 대상 다중 회귀 분석(Regression Analysis) ➔ 결과: 보육시설 접근성 및 밀도가 지역 합계출산율에 통계적으로 유의미한 양(+)의 효과(p < 0.05)를 냄을 실증 ➔ 결론: 인프라 불균형 지점에 국공립 자원을 우선 배치하는 개입 지지.',
-              '다. [배기련 외 (2021) / 정책공백] 가설: 정부의 정책과 대중이 체감하는 핵심 장벽 사이에 구조적 괴리가 존재할 것이다. ➔ 검증: 제1~4차 기본계획 문서 및 발표 직후 2주간 뉴스 댓글 대상 빈도·동시출현·CONCOR 분석 ➔ 결과: 정책의 단절성과 대비하여 대중은 주거 및 고용 영역에서 연속적이고 깊은 격차 체감을 실증 ➔ 결론: 체감 여론을 분석해 공백(Gap)을 상시 보완하는 모니터링 체계 도입 지지.',
-              '라. [육아정책연구소 (KICCE, 2023) / 공간분석] 목적: 전국 시군구의 보육 현황 조사를 통해 수요-공급 불균형 진단 ➔ 검증: 2023 영유아 주요 통계 보고서(ES2401) 수록 자치구별 보육 인프라 및 보육 이용율 통계 대조 ➔ 결과: 지역 간 보육시설 접근성 및 이용률에 뚜렷한 수급 편차와 공간적 불일치 실증 ➔ 결론: 자치구 수준의 수요-공급 갭 분석 지도의 시각화 타당성 보증.',
-              '마. [박미경 (2022) / 우선순위] 가설: MZ세자가 지각하는 저출산 대응정책 요구도에 영역 간 뚜렷한 우선순위가 존재할 것이다. ➔ 검증: 청년 세대 설문 기반 Borich 요구도 분석 및 IPA(중요도-수행도) 분석 ➔ 결과: 자녀양육지원(1순위) > 출산지원(2순위) > 일·가정양립 지원(3순위) 순으로 요구도가 높음을 실증 ➔ 결론: 대시보드 내 카테고리별 시급성 및 공감수 결합 가중합 점수 모델링 지지.',
-              '바. [국회예산정책처 (NABO, 2025) / 부서협업] 목적: 저출생 대응 재정사업의 집행 구조 및 정책 전달체계 파편화 문제 평가 ➔ 검증: 2025 저출생 대응 사업 분석·평가 시리즈(주거지원 종합평가 + 일·생활 균형 지원정책 평가) ➔ 결과: 42조 원의 대규모 예산 대비 여러 부서로 분절 운영되어 정책 연속성 및 수혜 전달 왜곡 발생을 진단 ➔ 결론: 산재된 저출생 정책을 통합 분류 모니터링하고 부서 R&R 라우팅을 지원하는 시스템 도입 입증.'
+              '텍스트마이닝·공간통계·요구도 분석 관련 선행 연구는 분류 체계와 검토 지표를 설계할 때 참고했습니다.',
+              '해당 연구가 현재 선택된 제안의 정책 효과, 예산 편익 또는 특정 사업의 필요성을 직접 입증하는 것은 아닙니다.',
+              '개별 정책 판단에는 원문, 공식 통계, 현행 사업 지침, 예산·법령 자료를 별도로 대조해야 합니다.',
+              `현재 보고서의 직접 근거는 선택된 시민 제안 ${scopedProposals.length.toLocaleString()}건과 화면에 저장된 R&R 후보입니다.`,
             ]
           : [
-              `◈ 학술적 타당성: KCI 학술지 등 저출산 연구 문헌 7대 주요 선행 연구 및 국책기관(KICCE, NABO) 보고서와 모델 일치도 검증 완료`,
-              `◈ 모델 신뢰성: 텍스트 마이닝 기반 여론 분류 기법(오신휘 등, 2020) 및 지역 보육 인프라 경제 편익 모델(성낙일 등, 2012)에 준하는 타당성 정당화 확보`,
+              '◈ 근거 범위: 연구 문헌은 분석 방법 참고용이며 개별 정책 효과를 확정하지 않음',
+              '◈ 추가 확인: 현행 사업·예산·법령·공식 통계를 결재 전 별도 대조',
             ],
       },
       {
@@ -379,6 +372,7 @@ export const ReportExportModal: React.FC<Props> = ({
     ];
   }, [
     customActions,
+    districtDirectCount,
     isDistrictFallback,
     reportData,
     reportType,
@@ -397,11 +391,15 @@ export const ReportExportModal: React.FC<Props> = ({
     const subtitle = [
       selectedDept ? selectedDept : '여성가족실 전체',
       selectedCategory ? selectedCategory : null,
-      selectedDistrict ? `${selectedDistrict}${isDistrictFallback ? ' (미상 연계)' : ''}` : null,
+      selectedDistrict
+        ? isDistrictFallback
+          ? `${selectedDistrict} 직접 0건·지역 미상 참고`
+          : selectedDistrict
+        : null,
     ]
       .filter(Boolean)
       .join(' / ');
-    const title = `[${subtitle}] 출산·양육 정책 수요 및 공급 Gap 종합보고서`;
+    const title = `[${subtitle}] 출산·양육 정책 수요 및 R&R 검토보고서`;
     const header = [
       '============================================================',
       `   ${title}`,
@@ -416,7 +414,7 @@ export const ReportExportModal: React.FC<Props> = ({
     ]);
     const footer = [
       '------------------------------------------------------------',
-      '본 문서는 UKKKK 대시보드의 시민 제안, 민원, 정책 공급, 뉴스, 통계, 논문 근거를 통합해 자동 생성한 공식 보고서 초안입니다.',
+      '본 문서는 현재 화면에서 선택한 시민 제안과 R&R 후보를 정리한 행정 검토 초안입니다. 현행 정책·통계·예산·법령은 결재 전 별도 대조가 필요합니다.',
     ];
 
     return [...header, ...body, ...footer].join('\n');
@@ -606,7 +604,7 @@ export const ReportExportModal: React.FC<Props> = ({
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `[${selectedDept || '여성가족실'}]_정책수요_Gap_보고서_${new Date().toISOString().slice(0, 10)}.hwp.txt`;
+    link.download = `[${selectedDept || '여성가족실'}]_정책수요_RR_검토보고서_${new Date().toISOString().slice(0, 10)}.hwp.txt`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -802,7 +800,7 @@ export const ReportExportModal: React.FC<Props> = ({
             <div className="flex gap-2 rounded-xl border border-amber-100 bg-amber-50 p-3 text-amber-900">
               <AlertCircle className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" />
               <p className="text-xs leading-relaxed">
-                선택한 추천 섹션만 오른쪽 미리보기와 다운로드 본문에 반영됩니다. 이 보고서는 세부 클러스터가 아니라 전체 수요 흐름과 정책 가설 중심으로 구성됩니다.
+                선택한 섹션만 오른쪽 미리보기와 다운로드 본문에 반영됩니다. 모든 수치와 제안 문구는 현재 화면의 실제 선택 데이터만 사용합니다.
               </p>
             </div>
           </div>
@@ -838,29 +836,33 @@ export const ReportExportModal: React.FC<Props> = ({
                 {reportType === 'public-share' ? (
                   <PublicShareReport
                     proposalCount={scopedProposals.length}
+                    proposalLabel={isDistrictFallback ? '지역 미상 참고' : '선택 범위 제안'}
+                    unansweredCount={reportData.unansweredCount}
+                    totalVotes={reportData.totalVotes}
+                    replyRate={reportData.replyRate}
                     topCategoryName={topCategoryName}
                     topVotedCategory={String(topVotedCategory)}
-                    proposals={mergedProposals}
+                    proposals={publicShareProposals}
                   />
                 ) : (
                   /* 기존 담당자/간부 줄글 문서 보고서 템플릿 */
                   <>
                     <div className="border-b border-slate-200 pb-4">
                       <p className="text-xs font-bold uppercase tracking-[0.2em] text-blue-700">
-                        {reportType === 'detailed' ? '실무자 상세 보고용' : '시장단 및 간부 브리핑용'}
+                        {reportType === 'detailed' ? '실무자 상세 보고용' : '간부 브리핑용'}
                       </p>
                       <h3 className="mt-2 text-xl font-black leading-snug text-slate-950">
-                        [{selectedDept || selectedCategory || (selectedDistrict ? `${selectedDistrict}${isDistrictFallback ? ' (미상 연계)' : ''}` : '여성가족실 전체')}] 출산·양육 정책 수요 및 공급 Gap 종합보고서
+                        [{selectedDept || selectedCategory || (selectedDistrict ? `${selectedDistrict}${isDistrictFallback ? ' 직접 0건·지역 미상 참고' : ''}` : '여성가족실 전체')}] 출산·양육 정책 수요 및 R&R 검토보고서
                       </h3>
                       <div className="mt-3 flex flex-wrap gap-2 text-xs">
                         <span className="rounded-full bg-slate-100 px-3 py-1 font-bold text-slate-700">
-                          수요 {scopedProposals.length.toLocaleString()}건
+                          {isDistrictFallback ? '지역 미상 참고' : '수요'} {scopedProposals.length.toLocaleString()}건
                         </span>
                         <span className="rounded-full bg-slate-100 px-3 py-1 font-bold text-slate-700">
                           미답변 {reportData.unansweredCount.toLocaleString()}건
                         </span>
                         <span className="rounded-full bg-slate-100 px-3 py-1 font-bold text-slate-700">
-                          Gap {reportData.gapScore}점
+                          검토경고 {reportData.reviewScore}점
                         </span>
                       </div>
                     </div>

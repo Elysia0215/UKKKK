@@ -1,0 +1,23 @@
+{
+  "frontend_records": 824,
+  "final_records": 824,
+  "frontend_final_identical": true,
+  "affected_proposals": 440,
+  "total_issue_flags": 841,
+  "issue_type_counts": {
+    "TAXONOMY_MISMATCH": 221,
+    "CONTENT_MISSING": 186,
+    "DEPARTMENT_UNVERIFIABLE": 186,
+    "POLICY_UNVERIFIABLE": 126,
+    "CORRECTED_EXCLUSION_STALE": 74,
+    "POLICY_REVIEW": 36,
+    "OUT_OF_SCOPE": 6,
+    "DEPARTMENT_OUT_OF_SCOPE": 6
+  },
+  "severity_counts": {
+    "high": 584,
+    "medium": 257
+  },
+  "corrected_exclusion_ids": 7300,
+  "recoverable_body_ids": 0
+}
