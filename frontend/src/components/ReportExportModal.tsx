@@ -15,6 +15,7 @@ import {
   HelpCircle,
 } from 'lucide-react';
 import { PolicyProposal } from '../types';
+import { PublicShareReport } from './PublicShareReport';
 const FALLBACK_PROPOSALS = [
   {
     category: '임신·출산',
@@ -472,6 +473,10 @@ export const ReportExportModal: React.FC<Props> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 p-4 backdrop-blur-xs animate-fade-in">
       <style>{`
         @media print {
+          @page {
+            size: A4;
+            margin: 0;
+          }
           body * {
             visibility: hidden !important;
           }
@@ -490,6 +495,31 @@ export const ReportExportModal: React.FC<Props> = ({
             box-shadow: none !important;
             background: white !important;
             color: black !important;
+          }
+          #printable-report-area:has(.public-share-report) {
+            padding: 0 !important;
+            background: white !important;
+          }
+          .public-share-report {
+            display: block !important;
+            width: 210mm !important;
+            margin: 0 !important;
+          }
+          .report-print-page {
+            width: 210mm !important;
+            max-width: none !important;
+            min-height: 297mm !important;
+            height: 297mm !important;
+            margin: 0 !important;
+            box-shadow: none !important;
+            break-after: page !important;
+            page-break-after: always !important;
+            print-color-adjust: exact !important;
+            -webkit-print-color-adjust: exact !important;
+          }
+          .report-print-page:last-child {
+            break-after: auto !important;
+            page-break-after: auto !important;
           }
         }
       `}</style>
@@ -563,16 +593,23 @@ export const ReportExportModal: React.FC<Props> = ({
                     key={item.id}
                     type="button"
                     onClick={() => setFormat(item.id)}
+                    disabled={reportType === 'public-share' && item.id !== 'pdf'}
                     className={`rounded-xl border px-2 py-3 text-center transition ${
                       format === item.id
                         ? item.id === 'excel'
                           ? 'border-emerald-400 bg-emerald-50 text-emerald-700'
                           : 'border-blue-400 bg-blue-50 text-blue-700'
-                        : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-100'
+                        : reportType === 'public-share' && item.id !== 'pdf'
+                          ? 'cursor-not-allowed border-slate-200 bg-slate-100 text-slate-300'
+                          : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-100'
                     }`}
                   >
-                    <span className="block text-xs font-extrabold">{item.title}</span>
-                    <span className="mt-1 block text-[10px] font-bold opacity-70">{item.sub}</span>
+                    <span className="block text-xs font-extrabold">
+                      {reportType === 'public-share' && item.id === 'pdf' ? 'PDF 인포그래픽' : item.title}
+                    </span>
+                    <span className="mt-1 block text-[10px] font-bold opacity-70">
+                      {reportType === 'public-share' && item.id === 'pdf' ? 'A4 보고서' : item.sub}
+                    </span>
                   </button>
                 ))}
               </div>
@@ -628,7 +665,9 @@ export const ReportExportModal: React.FC<Props> = ({
                   ? 'csv_preview.csv'
                   : format === 'hwp'
                     ? 'official_report_draft.hwp.txt'
-                    : 'document_summary.pdf.txt'}
+                    : reportType === 'public-share'
+                      ? 'sangsang_public_report.pdf'
+                      : 'document_summary.pdf.txt'}
               </span>
               <button
                 type="button"
@@ -647,169 +686,12 @@ export const ReportExportModal: React.FC<Props> = ({
             ) : (
               <div id="printable-report-area" className="mt-4 min-h-0 flex-1 overflow-y-auto rounded-xl bg-white p-6 text-slate-900">
                 {reportType === 'public-share' ? (
-                  /* 2026년 5월 성과 인포그래픽 공유 보고서 템플릿 */
-                  <div className="space-y-10 text-slate-800" style={{ fontFamily: 'Pretendard, Inter, sans-serif' }}>
-                    
-                    {/* [PAGE 1] */}
-                    <div className="page-break" style={{ pageBreakAfter: 'always' }}>
-                      {/* 2026.07 서울시 상상대로 공식 헤더 심볼 & 브랜딩 */}
-                      <div className="flex justify-between items-end border-b-4 border-emerald-500 pb-3.5">
-                        <div className="space-y-1">
-                          {/* 상상대로서울 삼각 4색 엠블럼 기호 */}
-                          <div className="flex items-center gap-1 mb-1">
-                            <span className="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[12px] border-b-emerald-500 inline-block"></span>
-                            <span className="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[12px] border-b-rose-500 inline-block"></span>
-                            <span className="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[12px] border-b-amber-500 inline-block"></span>
-                            <span className="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[12px] border-b-teal-400 inline-block rotate-90"></span>
-                          </div>
-                          <h2 className="text-3.5xl font-black text-slate-900 tracking-tight leading-none">상상대로서울</h2>
-                          <p className="text-sm font-extrabold text-emerald-600 tracking-wide pt-0.5">데이터로 보는 상상대로서울</p>
-                        </div>
-                        <div className="text-right">
-                          <span className="text-xl font-black text-slate-400 font-mono tracking-wider">2026.07</span>
-                        </div>
-                      </div>
-
-                      {/* 성과 브리핑 틴트 카운트 박스 (서울시 3D 캐릭터 해치/몬스터 배경 이미지 100% 연동) */}
-                      <div 
-                        className="my-6 rounded-2xl border border-emerald-200/90 shadow-md relative overflow-hidden bg-cover bg-center"
-                        style={{ backgroundImage: 'url(/report_hero_bg.png)' }}
-                      >
-                        {/* 가독성 보장용 고급 흰색/에메랄드 반투명 틴트 오버레이 */}
-                        <div className="bg-gradient-to-r from-white/95 via-white/85 to-emerald-50/70 p-6 flex items-center justify-between backdrop-blur-[1px]">
-                          <div className="space-y-2 max-w-lg relative z-10">
-                            <span className="bg-emerald-600 text-white font-black text-xs px-3 py-1 rounded-full shadow-2xs inline-block">성과 브리핑</span>
-                            <h3 className="text-2xl font-black text-slate-900 leading-snug tracking-tight">
-                              시민이 제안하고 서울이 답하는<br />
-                              <span className="text-emerald-700">상상대로서울 7월 종합 현황</span>
-                            </h3>
-                            <p className="text-xs text-slate-700 font-bold leading-relaxed pt-1 drop-shadow-2xs">
-                              본 보고서는 실무진 외부 공유 및 부서 간 의사결정을 위해 시민 제안, 민원 키워드 및 행정 R&R 데이터를 기반으로 가공된 공식 공유 본부 보고서입니다.
-                            </p>
-                          </div>
-                          {/* 차트 시각화 데코 그래픽 */}
-                          <div className="w-24 h-20 bg-white/90 backdrop-blur-md rounded-xl border border-slate-200/90 p-2.5 flex items-end justify-between shadow-lg shrink-0 relative z-10">
-                            <div className="w-4 bg-emerald-500 rounded-t-sm h-[60%]"></div>
-                            <div className="w-4 bg-rose-500 rounded-t-sm h-[40%]"></div>
-                            <div className="w-4 bg-blue-600 rounded-t-sm h-[90%]"></div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* 4대 주요 핵심 지표 카드 */}
-                      <div className="grid grid-cols-4 gap-3 my-6">
-                        {[
-                          { title: '총 활성 사용자', value: '7,259명', stat: '▼ 26.1% 감소', color: 'border-blue-200 bg-blue-50/30 text-blue-700' },
-                          { title: '재방문자', value: '3,592명', stat: '▼ 19.43% 감소', color: 'border-cyan-200 bg-cyan-50/30 text-cyan-700' },
-                          { title: '신규 방문자', value: '6,648명', stat: '▼ 26.08% 감소', color: 'border-emerald-200 bg-emerald-50/30 text-emerald-700' },
-                          { title: '조회수', value: '110,015건', stat: '▼ 25% 감소', color: 'border-slate-200 bg-slate-50 text-slate-700' }
-                        ].map((card, idx) => (
-                          <div key={idx} className={`p-4 rounded-xl border flex flex-col justify-between h-28 shadow-3xs ${card.color}`}>
-                            <span className="text-[10px] font-black opacity-80">{card.title}</span>
-                            <div>
-                              <div className="text-lg font-black tracking-tight">{card.value}</div>
-                              <span className="text-[9px] font-bold block mt-1 opacity-90">{card.stat}</span>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* 제안 현황 분석 카드 */}
-                      <div className="grid grid-cols-3 gap-4 my-6">
-                        <div className="col-span-1 p-4 rounded-xl border border-slate-200 bg-slate-50/50 flex flex-col justify-between h-28">
-                          <span className="text-[10px] font-black text-slate-500">제안 수</span>
-                          <div className="text-3xl font-black text-slate-800 tracking-tight">
-                            {scopedProposals.length > 0 ? scopedProposals.length.toLocaleString() : '144'}
-                          </div>
-                          <span className="text-[9.5px] font-semibold text-slate-400">신규 등록 건수</span>
-                        </div>
-                        <div className="col-span-1 p-4 rounded-xl border border-emerald-100 bg-emerald-50/20 flex flex-col justify-between h-28">
-                          <span className="text-[10px] font-black text-emerald-700">제안이 가장 많은 정책 분야</span>
-                          <div className="text-2xl font-black text-emerald-900 tracking-tight">{topCategoryName}</div>
-                          <span className="text-[9.5px] font-semibold text-emerald-600">지표 및 키워드 집중 분석</span>
-                        </div>
-                        <div className="col-span-1 p-4 rounded-xl border border-amber-100 bg-amber-50/20 flex flex-col justify-between h-28">
-                          <span className="text-[10px] font-black text-amber-700">공감이 가장 많은 정책 분야</span>
-                          <div className="text-2xl font-black text-amber-900 tracking-tight">{topVotedCategory}</div>
-                          <span className="text-[9.5px] font-semibold text-amber-600">시민 여론 핵심 채널</span>
-                        </div>
-                      </div>
-
-                      <div className="border-t border-slate-150 pt-3 text-[10px] text-slate-400 flex justify-between font-medium">
-                        <span>상상대로서울 — 데이터로 보는 상상대로서울</span>
-                        <span>Page 01</span>
-                      </div>
-                    </div>
-
-                    {/* [PAGE 2] */}
-                    <div className="page-break pt-4" style={{ pageBreakAfter: 'always' }}>
-                      <div className="flex justify-between items-baseline border-b-2 border-slate-200 pb-2 mb-6">
-                        <h3 className="text-xl font-black text-slate-900">이런 제안은 어때요? (1/2)</h3>
-                        <span className="text-[10px] font-bold text-slate-400">상상대로서울 7월 우수 제안 리스트</span>
-                      </div>
-
-                      <div className="grid grid-cols-2 gap-4">
-                        {mergedProposals.slice(0, 4).map((prop, idx) => (
-                          <div key={idx} className="bg-slate-50/50 p-4.5 rounded-xl border border-slate-200/60 flex flex-col justify-between min-h-[160px]">
-                            <div>
-                              <span className={`inline-block text-[8.5px] font-bold px-2 py-0.5 rounded-full mb-2 ${
-                                prop.category.includes('출산') || prop.category.includes('임신') 
-                                  ? 'bg-rose-50 text-rose-700 border border-rose-150' 
-                                  : prop.category.includes('돌봄') || prop.category.includes('보육')
-                                    ? 'bg-blue-50 text-blue-700 border border-blue-150' 
-                                    : 'bg-emerald-50 text-emerald-700 border border-emerald-150'
-                              }`}>
-                                {prop.category}
-                              </span>
-                              <h4 className="font-black text-[12px] text-slate-800 leading-snug">{prop.title}</h4>
-                              <p className="text-[10px] font-extrabold text-indigo-700 mt-1.5 leading-relaxed">{prop.quote}</p>
-                            </div>
-                            <p className="text-[9.5px] text-slate-600 mt-2 font-medium leading-relaxed">{prop.content}</p>
-                          </div>
-                        ))}
-                      </div>
-
-                      <div className="border-t border-slate-150 pt-3 mt-16 text-[10px] text-slate-400 flex justify-between font-medium">
-                        <span>상상대로서울 — 데이터로 보는 상상대로서울</span>
-                        <span>Page 02</span>
-                      </div>
-                    </div>
-
-                    {/* [PAGE 3] */}
-                    <div className="page-break pt-4">
-                      <div className="flex justify-between items-baseline border-b-2 border-slate-200 pb-2 mb-6">
-                        <h3 className="text-xl font-black text-slate-900">이런 제안은 어때요? (2/2)</h3>
-                        <span className="text-[10px] font-bold text-slate-400">상상대로서울 5월 우수 제안 리스트</span>
-                      </div>
-
-                      <div className="grid grid-cols-2 gap-4">
-                        {mergedProposals.slice(4, 9).map((prop, idx) => (
-                          <div key={idx} className="bg-slate-50/50 p-4.5 rounded-xl border border-slate-200/60 flex flex-col justify-between min-h-[160px]">
-                            <div>
-                              <span className={`inline-block text-[8.5px] font-bold px-2 py-0.5 rounded-full mb-2 ${
-                                prop.category.includes('출산') || prop.category.includes('임신') 
-                                  ? 'bg-rose-50 text-rose-700 border border-rose-150' 
-                                  : prop.category.includes('돌봄') || prop.category.includes('보육')
-                                    ? 'bg-blue-50 text-blue-700 border border-blue-150' 
-                                    : 'bg-emerald-50 text-emerald-700 border border-emerald-150'
-                              }`}>
-                                {prop.category}
-                              </span>
-                              <h4 className="font-black text-[12px] text-slate-800 leading-snug">{prop.title}</h4>
-                              <p className="text-[10px] font-extrabold text-indigo-700 mt-1.5 leading-relaxed">{prop.quote}</p>
-                            </div>
-                            <p className="text-[9.5px] text-slate-600 mt-2 font-medium leading-relaxed">{prop.content}</p>
-                          </div>
-                        ))}
-                      </div>
-
-                      <div className="border-t border-slate-150 pt-3 mt-8 text-[10px] text-slate-400 flex justify-between font-medium">
-                        <span>상상대로서울 — 데이터로 보는 상상대로서울</span>
-                        <span>Page 03</span>
-                      </div>
-                    </div>
-
-                  </div>
+                  <PublicShareReport
+                    proposalCount={scopedProposals.length}
+                    topCategoryName={topCategoryName}
+                    topVotedCategory={String(topVotedCategory)}
+                    proposals={mergedProposals}
+                  />
                 ) : (
                   /* 기존 담당자/간부 줄글 문서 보고서 템플릿 */
                   <>
