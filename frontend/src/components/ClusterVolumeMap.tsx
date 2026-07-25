@@ -134,19 +134,21 @@ export const ClusterVolumeMap: React.FC<Props> = ({ proposals, onSelectCluster }
             <h2 className="text-sm sm:text-base font-black text-white">시민 요구(체감·인권) 대비 행정 정책(공급) 사각지대 군집 시각화</h2>
           </div>
           <p className="text-[10.5px] text-slate-300 mt-0.5">
-            시민 제안 426건을 의미적으로 묶은 49개 요구 주제별 **시민 관심도(요청량)**와 서울시가 실제 공급 중인 **양육 정책 수** 간 격차를 시각화합니다.
+            현재 분석 범위 {proposals.length.toLocaleString()}건에서 확인된 {clusterData.length.toLocaleString()}개 유사 제안 군집의 시민 관심도와 연결 정책 수 간 격차를 시각화합니다.
           </p>
         </div>
 
         <div className="flex items-center gap-3 text-xs bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">
           <div>
             <span className="block text-[9px] text-slate-300 font-sans">분석 대분류 주제</span>
-            <span className="font-bold text-sm text-white">30개 분야</span>
+            <span className="font-bold text-sm text-white">{clusterData.length.toLocaleString()}개 군집</span>
           </div>
           <div className="w-px h-6 bg-white/20" />
           <div>
             <span className="block text-[9px] text-blue-200 font-sans">최다 지지 제안</span>
-            <span className="font-bold text-sm text-emerald-300">5,346표 (군집 #10)</span>
+            <span className="font-bold text-sm text-emerald-300">
+              {(clusterData.length > 0 ? Math.max(...clusterData.map(cluster => cluster.totalVotes)) : 0).toLocaleString()}표
+            </span>
           </div>
         </div>
       </div>

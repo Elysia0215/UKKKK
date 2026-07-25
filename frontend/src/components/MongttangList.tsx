@@ -194,7 +194,7 @@ export const MongttangList: React.FC = () => {
             <div className="flex items-center gap-2">
               <span className="bg-blue-500/20 text-blue-300 border border-blue-400/30 text-[11px] font-bold px-2.5 py-0.5 rounded-full flex items-center gap-1.5 backdrop-blur-xs">
                 <Sparkles className="w-3 h-3 text-blue-400" />
-                서울시 공식 출산·육아 정책 (몽땅정보 만능키 DB 100% 연동)
+                서울시 공식 출산·육아 정책 (몽땅정보통 적재 데이터 기준)
               </span>
             </div>
             

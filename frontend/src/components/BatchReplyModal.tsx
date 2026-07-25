@@ -70,7 +70,7 @@ export const BatchReplyModal: React.FC<Props> = ({
 본 제안 묶음(${selectedItems.length}건)에 제출해주신 시민분들의 귀중한 의견을 면밀히 검토하였습니다.
 
 1. 서울시 현황 및 추진 방향:
-서울특별시는 시민 여러분께서 요구해주신 '${representative?.title || '관련 안건'}'과 관련하여 몽땅정보 만능키 공식 사업과 연계한 정책 강화를 적극 추진 중입니다.
+서울특별시는 시민 여러분께서 요구해주신 '${representative?.title || '관련 안건'}'과 관련하여 몽땅정보통에서 확인되는 기존 사업과 연계한 정책 보완을 검토하고 있습니다.
 
 2. 연계 정책 및 지원 서비스:
 ${matchedPolicies.length > 0 

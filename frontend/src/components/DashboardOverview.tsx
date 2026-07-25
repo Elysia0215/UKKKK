@@ -66,6 +66,20 @@ export const DashboardOverview: React.FC<Props> = ({
   const [keywordLimit, setKeywordLimit] = React.useState<number>(5);
 
   const filteredProposals = proposals;
+  const districtQuality = useMemo(() => {
+    const total = filteredProposals.length;
+    const missing = filteredProposals.filter(
+      proposal =>
+        !proposal.district
+        || proposal.district === '구 미상'
+        || proposal.district === '미상'
+        || proposal.district === ''
+    ).length;
+    const specified = Math.max(0, total - missing);
+    const missingRate = total > 0 ? (missing / total) * 100 : 0;
+
+    return { total, missing, specified, missingRate };
+  }, [filteredProposals]);
 
   const topKeywords = extractTopKeywords(filteredProposals, keywordLimit);
   const deptStats = getDepartmentStats(filteredProposals);
@@ -294,36 +308,46 @@ export const DashboardOverview: React.FC<Props> = ({
         </div>
       </div>
 
-      {/* 📊 상상대로 자치구 미상 결측치 명확화 & 데이터 융합 복원율 안내 카드 */}
+      {/* 📊 현재 분석 범위의 자치구 결측 현황 */}
       <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white p-2.5 rounded-xl shadow-sm border border-indigo-900/50 flex flex-col md:flex-row items-start md:items-center justify-between gap-2.5">
         <div className="space-y-0.5 max-w-2xl">
           <div className="flex items-center gap-1.5">
             <span className="bg-amber-500/20 text-amber-300 text-[9px] font-extrabold px-1.5 py-0.2 rounded border border-amber-500/30">
-              데이터 품질 정제 보고
+              자치구 데이터 품질 현황
             </span>
             <h4 className="text-[11px] font-black text-slate-100">
-              상상대로 제안의 거주 자치구 결측치(90.4%) 명확화 및 데이터 융합 복원
+              현재 R&R 필터 범위의 자치구 지정·미상 데이터 점검
             </h4>
           </div>
           <p className="text-[10px] text-slate-300 leading-relaxed">
-            상상대로 시민 제안 426건 중 <strong className="text-amber-300">385건(90.4%)이 자치구 '미상(서울시 전체)'</strong>으로 작성되었습니다. UKKKK는 텍스트 위치 추정 및 5원 융합을 통해 자치구별 실제 정책 공백을 명확히 복원하여 시각화합니다.
+            현재 분석 중인 시민 제안 {districtQuality.total.toLocaleString()}건 중{' '}
+            <strong className="text-amber-300">
+              {districtQuality.missing.toLocaleString()}건({districtQuality.missingRate.toFixed(1)}%)의 자치구가 미상
+            </strong>
+            입니다. 결측치 복원 화면에서 제목·본문의 지명 단서를 기반으로 추정 결과를 검토하고 선택 반영할 수 있습니다.
           </p>
         </div>
 
         <div className="flex items-center gap-2 shrink-0 bg-white/5 p-1.5 rounded-lg border border-white/10 w-full md:w-auto justify-around md:justify-start">
           <div className="text-center px-1.5">
             <span className="text-[8.5px] text-slate-400 block font-semibold">구 미상 (서울 전체)</span>
-            <span className="text-xs font-black font-mono text-amber-400">385건 (90.4%)</span>
+            <span className="text-xs font-black font-mono text-amber-400">
+              {districtQuality.missing.toLocaleString()}건 ({districtQuality.missingRate.toFixed(1)}%)
+            </span>
           </div>
           <div className="h-5 w-px bg-white/20" />
           <div className="text-center px-1.5">
             <span className="text-[8.5px] text-slate-400 block font-semibold">특정 자치구 지정</span>
-            <span className="text-xs font-black font-mono text-blue-400">41건 (9.6%)</span>
+            <span className="text-xs font-black font-mono text-blue-400">
+              {districtQuality.specified.toLocaleString()}건 ({(100 - districtQuality.missingRate).toFixed(1)}%)
+            </span>
           </div>
           <div className="h-5 w-px bg-white/20" />
           <div className="text-center px-1.5">
-            <span className="text-[8.5px] text-slate-400 block font-semibold">5원 융합 복원율</span>
-            <span className="text-xs font-black font-mono text-emerald-400">100% 보완</span>
+            <span className="text-[8.5px] text-slate-400 block font-semibold">현재 분석 범위</span>
+            <span className="text-xs font-black font-mono text-emerald-400">
+              {districtQuality.total.toLocaleString()}건
+            </span>
           </div>
         </div>
       </div>

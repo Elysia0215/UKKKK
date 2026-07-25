@@ -571,7 +571,40 @@ export const GapMatrixDashboard: React.FC<Props> = ({
 
   const allDiagnoses = useMemo(() => {
     return rawDiagnoses.map((d, idx) => {
-      const deptInfo = DEPT_MAP[d.category] || { dept: '가족지원팀', phone: '02-2133-5040' };
+      const exactMatchedProposals = proposals.filter(
+        proposal =>
+          proposal.category === d.category
+          && classifyCluster(proposal.title, proposal.content) === d.cluster
+      );
+      const matchedProposals = exactMatchedProposals.length > 0
+        ? exactMatchedProposals
+        : proposals.filter(proposal => proposal.category === d.category);
+
+      const primaryDepartmentCounts = new Map<string, { count: number; phone: string }>();
+      const relatedDepartmentNames = new Set<string>();
+      matchedProposals.forEach(proposal => {
+        (proposal.department_rankings || []).forEach(ranking => {
+          if (!ranking.dept_name) return;
+          relatedDepartmentNames.add(ranking.dept_name);
+          if (ranking.rank === 1) {
+            const current = primaryDepartmentCounts.get(ranking.dept_name) || {
+              count: 0,
+              phone: ranking.phone || ''
+            };
+            primaryDepartmentCounts.set(ranking.dept_name, {
+              count: current.count + 1,
+              phone: ranking.phone || current.phone
+            });
+          }
+        });
+      });
+
+      const dominantPrimaryDepartment = [...primaryDepartmentCounts.entries()]
+        .sort((a, b) => b[1].count - a[1].count || a[0].localeCompare(b[0], 'ko'))[0];
+      const fallbackDept = DEPT_MAP[d.category] || { dept: '가족지원팀', phone: '02-2133-5040' };
+      const deptInfo = dominantPrimaryDepartment
+        ? { dept: dominantPrimaryDepartment[0], phone: dominantPrimaryDepartment[1].phone || fallbackDept.phone }
+        : fallbackDept;
 
       // 가중치 방법론에 맞춰 실시간 우선순위 점수 계산
       const method = PAPER_METHODS[appliedMethod] || PAPER_METHODS['default'];
@@ -616,17 +649,32 @@ export const GapMatrixDashboard: React.FC<Props> = ({
         recommended_action: d.recommended_action,
         representative_titles: d.representative_titles || [],
         primaryDept: deptInfo.dept,
-        deptPhone: deptInfo.phone
+        deptPhone: deptInfo.phone,
+        relatedDepts: [...relatedDepartmentNames]
       };
     });
-  }, [rawDiagnoses, appliedMethod, customActions]);
+  }, [rawDiagnoses, appliedMethod, customActions, proposals]);
+
+  const diagnosisCategories = useMemo(
+    () => Array.from(new Set<string>(allDiagnoses.map((diagnosis: any) => String(diagnosis.category))))
+      .sort((a, b) => a.localeCompare(b, 'ko')),
+    [allDiagnoses]
+  );
+
+  const diagnosisDepartmentOptions = useMemo(
+    () => Array.from(new Set<string>(
+      allDiagnoses.flatMap((diagnosis: any) => (diagnosis.relatedDepts || []).map((dept: unknown) => String(dept)))
+    ))
+      .sort((a, b) => a.localeCompare(b, 'ko')),
+    [allDiagnoses]
+  );
 
   // 필터링 적용 로직
   const filteredDiagnoses = useMemo(() => {
     return allDiagnoses.filter(d => {
       if (selectedCategory !== '전체' && d.category !== selectedCategory) return false;
       if (selectedStatus !== '전체' && d.status !== selectedStatus) return false;
-      if (selectedDeptFilter !== '전체' && d.primaryDept !== selectedDeptFilter) return false;
+      if (selectedDeptFilter !== '전체' && !d.relatedDepts.includes(selectedDeptFilter)) return false;
       if (d.evidence_confidence < minConfidence) return false;
       if (searchQuery.trim() !== '') {
         const q = searchQuery.toLowerCase();
@@ -768,7 +816,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
     if (selectedCategory !== '전체' && selectedCategory !== issue.category) {
       setSelectedCategory('전체');
     }
-    if (selectedDeptFilter !== '전체' && selectedDeptFilter !== issue.primaryDept) {
+    if (selectedDeptFilter !== '전체' && !issue.relatedDepts.includes(selectedDeptFilter)) {
       setSelectedDeptFilter('전체');
     }
     if (selectedStatus !== '전체' && selectedStatus !== issue.status) {
@@ -935,7 +983,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               className="w-full text-[11px] p-2 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white text-slate-700 outline-hidden font-medium"
             >
               <option value="전체">전체 대분류</option>
-              {Object.keys(DEPT_MAP).sort((a, b) => a.localeCompare(b, 'ko')).map(cat => (
+              {diagnosisCategories.map(cat => (
                 <option key={cat} value={cat}>{cat}</option>
               ))}
             </select>
@@ -970,7 +1018,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
               className="w-full text-[11px] p-2 rounded-lg border border-slate-200 bg-slate-50 focus:bg-white text-slate-700 outline-hidden font-medium"
             >
               <option value="전체">전체 부서</option>
-              {Array.from(new Set(Object.values(DEPT_MAP).map(v => v.dept))).sort((a, b) => a.localeCompare(b, 'ko')).map(dept => (
+              {diagnosisDepartmentOptions.map(dept => (
                 <option key={dept} value={dept}>{dept}</option>
               ))}
             </select>
@@ -1231,7 +1279,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
                         const color = entry.status === '즉시 검토' ? '#ef4444' :
                                       entry.status === '제도 개선' ? '#f59e0b' :
                                       entry.status === '빠른 개선' ? '#10b981' : '#64748b';
-                        const isDeptMatch = !selectedDept || entry.raw?.primaryDept === selectedDept;
+                        const isDeptMatch = !selectedDept || entry.raw?.relatedDepts?.includes(selectedDept);
                         
                         // 선택된 버블은 불투명도를 최대화하여 강조
                         const baseOpacity = isSelected ? 1.0 : (0.35 + 0.65 * (entry.confidence / 100));
@@ -1447,7 +1495,7 @@ export const GapMatrixDashboard: React.FC<Props> = ({
 
                         {/* 펼쳐졌을 경우 렌더링될 세부 클러스터들 */}
                         {isExpanded && children.map(d => {
-                          const isDeptMatch = !selectedDept || d.primaryDept === selectedDept;
+                          const isDeptMatch = !selectedDept || d.relatedDepts.includes(selectedDept);
                           const isSelected = selectedIssue?.id === d.id;
                           return (
                             <tr 

@@ -377,23 +377,23 @@ export default function App() {
           <nav className="flex flex-col py-2" aria-label="Sidebar Tabs">
             {[
               { tab: 0, icon: <LayoutDashboard className="w-4 h-4 shrink-0" />, label: '수요 현황 종합', iconColor: '',
-                info: ['전체 제안 건수 및 답변 현황', '연도별·월별 민원 트렌드', '부서별 분류 현황', '데이터 품질 정제 보고', 'TOP 3 핵심 인사이트'] },
+                info: ['현재 R&R 범위의 제안·답변 현황', '연도별·월별 제안 추이', '주관부서별 처리 현황', '자치구 데이터 품질 현황', '핵심 정책 인사이트'] },
               { tab: 2, icon: <BarChart3 className="w-4 h-4 shrink-0" />, label: '시민 목소리 분석', iconColor: '',
-                info: ['TOP 30 핵심 키워드 태그 클라우드', 'TF-IDF 기반 키워드 중요도 순위', '5단계 생애주기별 분류 필터', '키워드별 공감도 TOP 5 제안', '2축 복합 분석 차트'] },
+                info: ['연도별 TOP 30 핵심 키워드', 'TF-IDF 기반 키워드 중요도 순위', '6개 축 다차원 분류 필터', '키워드별 공감도 TOP 5 제안', '수요·공감 2축 복합 분석'] },
               { tab: 3, icon: <AlertOctagon className="w-4 h-4 text-rose-400 shrink-0" />, label: '긴급 민원 처리', iconColor: 'rose',
                 badge: mockProposals.filter(p => p.reply_yn === 'N' && p.vote_score >= 150).length,
                 info: ['150+ 공감 미답변 긴급 제안', '유사 제안 군집 그룹화 뷰', '다중 필터 (연도·주기·부서)', 'AI 공문 초안 일괄 답변', '원문 펼치기 & 외부 링크'] },
               { tab: 4, icon: <Building2 className="w-4 h-4 text-blue-400 shrink-0" />, label: '현행 정책 검색', iconColor: 'blue',
                 badge: 322, badgeStyle: 'bg-blue-900 text-slate-300',
-                info: ['몽땅정보 만능키 322개 사업', '정책명·부서·대상 키워드 검색', '지원 대상 및 내용 상세 보기', '시민 제안과 기존 정책 대조'] },
+                info: ['몽땅정보통 공식 사업 검색', '정책명·부서·대상 키워드 검색', '지원 대상 및 내용 상세 보기', '시민 제안과 기존 정책 대조'] },
               { tab: 5, icon: <TrendingUp className="w-4 h-4 text-emerald-400 shrink-0" />, label: '정책 사각지대 탐색', iconColor: 'emerald',
                 info: ['BERT 임베딩 유사 제안 군집', 'TOP 3 핵심 클러스터 분석', '버블 차트 (크기=건수, 색=공감)', '군집 클릭 시 갭 분석 연동', '부서 필터 연동 군집 시각화'] },
               { tab: 6, icon: <FileSpreadsheet className="w-4 h-4 text-indigo-400 shrink-0" />, label: '자치구 통계 비교', iconColor: 'indigo',
                 info: ['서울시 GeoJSON 행정구역 지도', '25개 자치구 제안수 분포', '출생아수·보육시설수 이중축 차트', 'KOSIS 공공데이터 지표', '자치구별 제안 상세 목록'] },
               { tab: 7, icon: <AlertTriangle className="w-4 h-4 text-rose-400 animate-pulse shrink-0" />, label: '정책 갭 진단', iconColor: 'rose',
-                info: ['수요-공급 6대 갭 매트릭스', '근거 신뢰도 스코어 필터', '논문·뉴스·공공데이터 교차 검증', '부서별 진단 상태 추적', '정책 승인 패널 연동'] },
+                info: ['수요·공백·시급성·실행성·근거 5대 진단축', '근거 신뢰도 스코어 필터', '제안·민원·정책·뉴스 근거 대조', '4단계 진단 상태 추적', '정책 승인 패널 연동'] },
               { tab: 8, icon: <Database className="w-4 h-4 text-cyan-400 shrink-0" />, label: '결측치 복원 & 로그', iconColor: 'cyan',
-                info: ['구 미상 제안 일괄 텍스트마이닝', '5원 데이터 교차분석 자치구 추정', '복원 결과 선택 → 데이터 반영', '정책 오매칭·피드백 통합 로그', '시스템 품질 관리 이력 조회'] },
+                info: ['현재 R&R 범위의 구 미상 제안 분석', '본문 지명 키워드 기반 자치구 추정', '복원 결과 선택 → 데이터 반영', '정책 오매칭·피드백 통합 로그', '브라우저 로컬 품질 관리 이력'] },
             ].map(item => (
               <div key={item.tab} className="relative group/nav">
                 <button
@@ -953,9 +953,9 @@ export default function App() {
         <div className="flex items-center space-x-2">
           <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           <span className="font-semibold text-slate-700">시스템 연동 상태:</span>
-          <span>상상대로서울 민원제안 실시간 모니터링 중</span>
+          <span>상상대로서울 제안 적재 데이터 분석 중</span>
           <span className="text-slate-300">|</span>
-          <span className="text-slate-400">데이터 수집 주기: 15분</span>
+          <span className="text-slate-400">화면 상단 기준시각 기준</span>
         </div>
         <div className="flex items-center space-x-4 mt-2 md:mt-0">
           <span className="text-slate-400">여성가족실 양육정책 분석관 전용</span>

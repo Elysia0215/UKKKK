@@ -52,7 +52,7 @@ export const KeywordDetailModal: React.FC<Props> = ({ isOpen, keyword, proposals
               <div>
                 <h3 className="font-bold text-base">키워드 연관 제안 원문 견본 분석</h3>
                 <p className="text-xs text-blue-100 font-medium">
-                  핵심 키워드: <span className="font-bold text-yellow-300 underline">#{keyword}</span> | 전체 426건 중 <span className="font-bold text-emerald-300">{relatedProposals.length}건 제안</span>에 포함됨
+                  핵심 키워드: <span className="font-bold text-yellow-300 underline">#{keyword}</span> | 현재 분석 범위 {proposals.length.toLocaleString()}건 중 <span className="font-bold text-emerald-300">{relatedProposals.length.toLocaleString()}건 제안</span>에 포함됨
                 </p>
               </div>
             </div>
