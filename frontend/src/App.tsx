@@ -266,7 +266,7 @@ export default function App() {
               <span className="text-[10px] bg-blue-600 text-white px-1.5 py-0.5 rounded font-bold">MVP</span>
             </h1>
             <p className="text-xs text-slate-300 font-semibold">
-              Unified Key-Knowledge Kit — 서울시 출산·양육 정책 수요 분석 시스템
+              Unified Key-Knowledge Kit for Kid — 서울시 출산·양육 정책 수요 분석 시스템
             </p>
           </div>
         </div>

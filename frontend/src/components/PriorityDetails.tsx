@@ -106,9 +106,31 @@ export const PriorityDetails: React.FC<Props> = ({
   const [onlyShow2026Gaps, setOnlyShow2026Gaps] = useState(false); // '2026 최신 정책 공백'만 보기 토글
   const [onlyShowHighVoteNoReply, setOnlyShowHighVoteNoReply] = useState(false); // '공감 500+/댓글 100+ 고공감 미답변' 스마트 모아보기 토글
   const [viewMode, setViewMode] = useState<'list' | 'group'>('group'); // 그룹 보기 vs 개별 리스트 보기
+  const [listDisplayLimit, setListDisplayLimit] = useState<number>(30); // 개별 리스트 렌더링 슬라이싱 한도 (과부하 방지)
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({});
   const [activeBatchGroup, setActiveBatchGroup] = useState<ProposalGroup | null>(null);
   const [isFilterExpanded, setIsFilterExpanded] = useState<boolean>(false);
+
+  const checkDeptMatch = React.useCallback((p: PolicyProposal, depts: string[]) => {
+    if (depts.includes('전체')) return true;
+    const DEPT_CAT_MAP: Record<string, string> = {
+      '건강임신지원팀': '임신·난임·생식건강',
+      '저출생사업1팀': '출산·산후 초기지원',
+      '저출생사업2팀': '다자녀·양육비·생활지원',
+      '영유아담당관': '보육·돌봄 인프라',
+      '가족지원팀': '일·가정 양립·부모 노동',
+      '주거정비과': '주거·교통·도시생활환경',
+      '가족건강팀': '정보·상담·교육·거버넌스',
+      '아동보호팀': '취약·다양가족 사각지대',
+    };
+    return depts.some(dept => {
+      if (p.department && p.department.includes(dept)) return true;
+      if (p.department_rankings && p.department_rankings.some(r => r.dept_name?.includes(dept))) return true;
+      const cat = DEPT_CAT_MAP[dept];
+      if (cat && p.category === cat) return true;
+      return false;
+    });
+  }, []);
 
   React.useEffect(() => {
     if (initialCategory) {
@@ -366,8 +388,7 @@ export const PriorityDetails: React.FC<Props> = ({
       const matchesSubCategory = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
       const matchesMicroCategory = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
       const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
-      const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
-      const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
+      const matchesDept = checkDeptMatch(p, selectedDepts);
       const matchesGap = !onlyShowGaps || (p.reply_yn === 'N' && p.vote_score >= 150);
       const matches2026Gap = !onlyShow2026Gaps || (p.reg_date?.startsWith('2026') && p.reply_yn === 'N' && p.vote_score >= 150);
       const matchesHighVoteNoReply = !onlyShowHighVoteNoReply || (p.reply_yn === 'N' && (p.vote_score >= 300 || (p.comment_cnt || 0) >= 50));
@@ -379,7 +400,7 @@ export const PriorityDetails: React.FC<Props> = ({
       if (sortBy === 'comment_desc') return b.comment_cnt - a.comment_cnt;
       return 0;
     });
-  }, [proposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, onlyShow2026Gaps, onlyShowHighVoteNoReply, sortBy]);
+  }, [proposals, searchTerm, selectedYears, selectedCategories, selectedSubCategories, selectedMicroCategory, selectedFlows, selectedDepts, onlyShowGaps, onlyShow2026Gaps, onlyShowHighVoteNoReply, sortBy, checkDeptMatch]);
 
   // 그룹 보기 필터 결과 (그룹 구성원 필터 후 빈 그룹 배제)
   const filteredGroupedProposals = useMemo(() => {
@@ -398,8 +419,7 @@ export const PriorityDetails: React.FC<Props> = ({
         const matchesSubCategory = selectedSubCategories.includes('전체') || (p.sub_category && selectedSubCategories.includes(p.sub_category));
         const matchesMicroCategory = selectedMicroCategory === '전체' || p.micro_category === selectedMicroCategory;
         const matchesFlow = selectedFlows.includes('전체') || (p.policy_flow && selectedFlows.includes(p.policy_flow));
-        const primaryDept = p.department_rankings?.[0]?.dept_name || p.department[0] || '미지정';
-        const matchesDept = selectedDepts.includes('전체') || selectedDepts.includes(primaryDept) || p.department.some(d => selectedDepts.includes(d));
+        const matchesDept = checkDeptMatch(p, selectedDepts);
         const matchesGap = !onlyShowGaps || (p.reply_yn === 'N' && p.vote_score >= 150);
         const matches2026Gap = !onlyShow2026Gaps || (p.reg_date?.startsWith('2026') && p.reply_yn === 'N' && p.vote_score >= 150);
         const matchesHighVoteNoReply = !onlyShowHighVoteNoReply || (p.reply_yn === 'N' && (p.vote_score >= 300 || (p.comment_cnt || 0) >= 50));
@@ -755,26 +775,36 @@ export const PriorityDetails: React.FC<Props> = ({
           </button>
 
           {/* 보기 모드 (Segmented Control) */}
-          <div className="bg-slate-100 p-0.5 rounded-lg border border-slate-200 flex">
+          <div className="bg-slate-200 p-1 rounded-lg border border-slate-300 flex gap-1 shrink-0 relative z-20 pointer-events-auto">
             <button
-              onClick={() => setViewMode('group')}
-              className={`text-[11px] px-2.5 py-1 rounded-md font-bold transition cursor-pointer ${viewMode === 'group'
-                  ? 'bg-white text-slate-800 shadow-2xs'
-                  : 'text-slate-500 hover:text-slate-800'
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setViewMode('group');
+              }}
+              className={`text-xs px-3 py-1.5 rounded-md font-extrabold transition cursor-pointer flex items-center gap-1.5 active:scale-95 ${viewMode === 'group'
+                  ? 'bg-[#0A2351] text-white shadow-md ring-1 ring-blue-900'
+                  : 'bg-white/60 text-slate-700 hover:text-slate-900 hover:bg-white'
                 }`}
             >
-              <Layers className="w-3.5 h-3.5 inline mr-1" />
-              그룹화
+              <Layers className="w-4 h-4 shrink-0" />
+              <span>📚 그룹화</span>
             </button>
             <button
-              onClick={() => setViewMode('list')}
-              className={`text-[11px] px-2.5 py-1 rounded-md font-bold transition cursor-pointer ${viewMode === 'list'
-                  ? 'bg-white text-slate-800 shadow-2xs'
-                  : 'text-slate-500 hover:text-slate-800'
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setViewMode('list');
+              }}
+              className={`text-xs px-3 py-1.5 rounded-md font-extrabold transition cursor-pointer flex items-center gap-1.5 active:scale-95 ${viewMode === 'list'
+                  ? 'bg-[#0A2351] text-white shadow-md ring-1 ring-blue-900'
+                  : 'bg-white/60 text-slate-700 hover:text-slate-900 hover:bg-white'
                 }`}
             >
-              <FileSpreadsheet className="w-3.5 h-3.5 inline mr-1" />
-              리스트
+              <FileSpreadsheet className="w-4 h-4 shrink-0" />
+              <span>📑 리스트</span>
             </button>
           </div>
 
@@ -1415,173 +1445,188 @@ export const PriorityDetails: React.FC<Props> = ({
             </div>
           )
         ) : (
-          /* 2. 일반 개별 목록 뷰 */
+          /* 2. 일반 개별 목록 뷰 (성능 최적화 30건 슬라이싱 + 더보기) */
           filteredProposals.length > 0 ? (
-            filteredProposals.map((item) => {
-              const isGap = item.reply_yn === 'N' && item.vote_score >= 150;
-              return (
-                <div
-                  key={item.id}
-                  className={`bg-white p-5 rounded-xl border shadow-xs transition ${isGap
-                    ? 'border-rose-300 ring-1 ring-rose-50 bg-rose-50/5'
-                    : 'border-slate-200'
-                    }`}
-                >
-                  <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                    <div className="flex items-center gap-2">
-                      {item.reg_date?.startsWith('2026') ? (
-                        <span className="text-[10px] bg-emerald-600 text-white font-black px-2 py-0.5 rounded shadow-2xs">
-                          🔥 NEW 2026
-                        </span>
-                      ) : (
-                        <span className="text-[10px] bg-slate-100 text-slate-700 font-bold border border-slate-200 px-2 py-0.5 rounded">
-                          {item.reg_date ? item.reg_date.substring(0, 4) + '년' : '과거'}
-                        </span>
-                      )}
-                      <span className="text-[10px] font-bold bg-[#0A2351] text-white px-2 py-0.5 rounded">
-                        {item.category}
-                      </span>
-                      <span className="text-xs text-slate-400 font-mono font-bold">{item.id}</span>
-                      <span className="text-xs text-slate-500 font-bold">{item.district}</span>
-                      {isGap && (
-                        <span className="text-[10px] bg-rose-100 text-rose-800 border border-rose-200 font-extrabold px-1.5 py-0.2 rounded-sm flex items-center gap-0.5 animate-pulse">
-                          <AlertTriangle className="w-3 h-3 text-rose-600" /> 긴급 정책 공백
-                        </span>
-                      )}
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <span className="text-xs text-slate-400 font-mono">{item.reg_date}</span>
-                      {item.reply_yn === 'Y' ? (
-                        <span className="text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-100 px-2 py-0.5 rounded flex items-center gap-1 font-bold">
-                          <CheckCircle className="w-3 h-3" /> 답변완료
-                        </span>
-                      ) : (
-                        <span className="text-[10px] bg-amber-50 text-amber-700 border border-amber-100 px-2 py-0.5 rounded flex items-center gap-1 font-bold">
-                          <HelpCircle className="w-3 h-3" /> 미답변 검토중
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  <h5 className="text-sm font-bold text-slate-900 mb-1.5">{item.title}</h5>
-                  <p className="text-xs text-slate-600 leading-relaxed mb-3 whitespace-pre-line">{formatProposalContent(item.content)}</p>
-
-                  {/* 몽땅정보 연관 기존 사업 & 부서 랭킹 정보 */}
-                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-100 my-2.5 space-y-2 text-xs">
-                    {item.department_rankings && item.department_rankings.length > 0 && (
-                      <div className="flex flex-wrap items-center gap-2">
-                        <span className="text-[10px] font-bold text-slate-400 uppercase">매칭 부서 R&R:</span>
-                        {item.department_rankings.map(rank => (
-                          <span
-                            key={rank.dept_name}
-                            className={`text-[10px] px-2 py-0.5 rounded flex items-center gap-1 font-bold ${rank.rank === 1
-                                ? 'bg-blue-600 text-white shadow-2xs'
-                                : 'bg-slate-200 text-slate-700'
-                              }`}
-                            title={`${rank.full_dept} (☎ ${rank.phone}) - ${rank.duty_summary}`}
-                          >
-                            <Building2 className="w-2.5 h-2.5" />
-                            [{rank.role_type}] {rank.dept_name} {rank.phone && `(☎ ${rank.phone})`}
+            <div className="space-y-3">
+              {filteredProposals.slice(0, listDisplayLimit).map((item) => {
+                const isGap = item.reply_yn === 'N' && item.vote_score >= 150;
+                return (
+                  <div
+                    key={item.id}
+                    className={`bg-white p-5 rounded-xl border shadow-xs transition ${isGap
+                      ? 'border-rose-300 ring-1 ring-rose-50 bg-rose-50/5'
+                      : 'border-slate-200'
+                      }`}
+                  >
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                      <div className="flex items-center gap-2">
+                        {item.reg_date?.startsWith('2026') ? (
+                          <span className="text-[10px] bg-emerald-600 text-white font-black px-2 py-0.5 rounded shadow-2xs">
+                            🔥 NEW 2026
                           </span>
-                        ))}
+                        ) : (
+                          <span className="text-[10px] bg-slate-100 text-slate-700 font-bold border border-slate-200 px-2 py-0.5 rounded">
+                            {item.reg_date ? item.reg_date.substring(0, 4) + '년' : '과거'}
+                          </span>
+                        )}
+                        <span className="text-[10px] font-bold bg-[#0A2351] text-white px-2 py-0.5 rounded">
+                          {item.category}
+                        </span>
+                        <span className="text-xs text-slate-400 font-mono font-bold">{item.id}</span>
+                        <span className="text-xs text-slate-500 font-bold">{item.district}</span>
+                        {isGap && (
+                          <span className="text-[10px] bg-rose-100 text-rose-800 border border-rose-200 font-extrabold px-1.5 py-0.2 rounded-sm flex items-center gap-0.5 animate-pulse">
+                            <AlertTriangle className="w-3 h-3 text-rose-600" /> 긴급 정책 공백
+                          </span>
+                        )}
                       </div>
-                    )}
-
-                    {item.matched_policies && item.matched_policies.length > 0 && (
-                      <div className="flex flex-wrap items-center gap-2 pt-1.5 border-t border-slate-200/60">
-                        <span className="text-[10px] font-bold text-emerald-700 uppercase">몽땅정보 연관혜택:</span>
-                        {item.matched_policies.map(pol => (
-                          <a
-                            key={pol.policy_id}
-                            href={formatPolicyLink(pol.apply_url)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-[10px] bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded flex items-center gap-1 font-semibold transition"
-                            title={pol.summary}
-                          >
-                            🎁 {pol.policy_name} ↗
-                          </a>
-                        ))}
+                      <div className="flex items-center gap-3">
+                        <span className="text-xs text-slate-400 font-mono">{item.reg_date}</span>
+                        {item.reply_yn === 'Y' ? (
+                          <span className="text-[10px] bg-emerald-50 text-emerald-700 border border-emerald-100 px-2 py-0.5 rounded flex items-center gap-1 font-bold">
+                            <CheckCircle className="w-3 h-3" /> 답변완료
+                          </span>
+                        ) : (
+                          <span className="text-[10px] bg-amber-50 text-amber-700 border border-amber-100 px-2 py-0.5 rounded flex items-center gap-1 font-bold">
+                            <HelpCircle className="w-3 h-3" /> 미답변 검토중
+                          </span>
+                        )}
                       </div>
-                    )}
+                    </div>
 
-                    {(() => {
-                      const reqs = getMatchingCivilRequests(item);
-                      if (reqs.length > 0) {
-                        return (
-                          <div className="pt-1.5 border-t border-slate-200/60 flex items-center justify-between flex-wrap gap-1">
-                            <div className="flex items-center gap-1.5">
-                              <span className="text-[10px] font-bold text-indigo-700 uppercase">국민신문고 연관 민원:</span>
-                              <span className="text-[10px] bg-indigo-50 text-indigo-800 border border-indigo-200 px-2 py-0.5 rounded font-bold">
-                                실시간 접수 민원 {reqs.length}건 매칭 완료
-                              </span>
-                            </div>
-                            <button
-                              type="button"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setCivilModalState({ proposal: item, requests: reqs });
-                              }}
-                              className="text-[10px] bg-indigo-600 hover:bg-indigo-700 text-white px-2.5 py-0.5 rounded-md font-extrabold transition flex items-center gap-1 cursor-pointer shadow-2xs"
+                    <h5 className="text-sm font-bold text-slate-900 mb-1.5">{item.title}</h5>
+                    <p className="text-xs text-slate-600 leading-relaxed mb-3 whitespace-pre-line">{formatProposalContent(item.content)}</p>
+
+                    {/* 몽땅정보 연관 기존 사업 & 부서 랭킹 정보 */}
+                    <div className="bg-slate-50 p-3 rounded-lg border border-slate-100 my-2.5 space-y-2 text-xs">
+                      {item.department_rankings && item.department_rankings.length > 0 && (
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="text-[10px] font-bold text-slate-400 uppercase">매칭 부서 R&R:</span>
+                          {item.department_rankings.map(rank => (
+                            <span
+                              key={rank.dept_name}
+                              className={`text-[10px] px-2 py-0.5 rounded flex items-center gap-1 font-bold ${rank.rank === 1
+                                  ? 'bg-blue-600 text-white shadow-2xs'
+                                  : 'bg-slate-200 text-slate-700'
+                                }`}
+                              title={`${rank.full_dept} (☎ ${rank.phone}) - ${rank.duty_summary}`}
                             >
-                              <span>📩 국민신문고 민원 원문 보기 ({reqs.length}건)</span>
-                              <ExternalLink className="w-2.5 h-2.5" />
-                            </button>
-                          </div>
-                        );
-                      }
-                      return null;
-                    })()}
-                  </div>
-
-                  <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-200/80">
-                    <div className="flex items-center gap-2">
-                      <span className="text-[10px] text-slate-400 font-bold uppercase">담당 유관팀</span>
-                      <div className="flex flex-wrap gap-1">
-                        {item.department.map(dept => (
-                          <span key={dept} className="text-[10px] bg-slate-50 border border-slate-200 text-slate-600 px-2 py-0.5 rounded flex items-center gap-1 font-semibold">
-                            <Building2 className="w-2.5 h-2.5 text-slate-400" />
-                            {dept}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3 text-xs text-slate-500 font-mono font-bold">
-                      <span className="flex items-center gap-1 text-slate-600">
-                        <ThumbsUp className="w-3.5 h-3.5 text-blue-500" /> 공감 {item.vote_score}표
-                      </span>
-                      {item.vote_score >= 150 && (
-                        <div className="relative group/star inline-block">
-                          <span className="text-[10.5px] font-black text-amber-500 hover:text-amber-600 transition flex items-center gap-1 cursor-pointer hover:animate-pulse">
-                            ⭐ 우수제안
-                          </span>
-                          <div className="hidden group-hover/star:block absolute left-0 bottom-full mb-1.5 z-50 whitespace-nowrap bg-slate-900 text-white text-[10.5px] font-bold px-2.5 py-1.5 rounded-lg shadow-xl border border-slate-700 pointer-events-none animate-in fade-in duration-150">
-                            <span className="text-yellow-400 font-extrabold mr-1">🔥 150+ 공감</span>
-                            <span>시민 공감 150표 이상 획득 우수 제안</span>
-                            <div className="absolute -bottom-1 left-3 w-2 h-2 bg-slate-900 border-r border-b border-slate-700 rotate-45" />
-                          </div>
+                              <Building2 className="w-2.5 h-2.5" />
+                              [{rank.role_type}] {rank.dept_name} {rank.phone && `(☎ ${rank.phone})`}
+                            </span>
+                          ))}
                         </div>
                       )}
-                      <span className="flex items-center gap-1">
-                        <MessageSquare className="w-3.5 h-3.5" /> 댓글 {item.comment_cnt}개
-                      </span>
-                      <a
-                        href={item.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${item.id.replace('PROP-', '')}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline font-medium text-xs bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100 transition-colors"
-                        title={item.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${item.id.replace('PROP-', '')}`}
-                      >
-                        <ExternalLink className="w-3.5 h-3.5 shrink-0" />
-                        <span className="truncate max-w-[240px]">
-                          {item.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${item.id.replace('PROP-', '')}`}
+
+                      {item.matched_policies && item.matched_policies.length > 0 && (
+                        <div className="flex flex-wrap items-center gap-2 pt-1.5 border-t border-slate-200/60">
+                          <span className="text-[10px] font-bold text-emerald-700 uppercase">몽땅정보 연관혜택:</span>
+                          {item.matched_policies.map(pol => (
+                            <a
+                              key={pol.policy_id}
+                              href={formatPolicyLink(pol.apply_url)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[10px] bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded flex items-center gap-1 font-semibold transition"
+                              title={pol.summary}
+                            >
+                              🎁 {pol.policy_name} ↗
+                            </a>
+                          ))}
+                        </div>
+                      )}
+
+                      {(() => {
+                        const reqs = getMatchingCivilRequests(item);
+                        if (reqs.length > 0) {
+                          return (
+                            <div className="pt-1.5 border-t border-slate-200/60 flex items-center justify-between flex-wrap gap-1">
+                              <div className="flex items-center gap-1.5">
+                                <span className="text-[10px] font-bold text-indigo-700 uppercase">국민신문고 연관 민원:</span>
+                                <span className="text-[10px] bg-indigo-50 text-indigo-800 border border-indigo-200 px-2 py-0.5 rounded font-bold">
+                                  실시간 접수 민원 {reqs.length}건 매칭 완료
+                                </span>
+                              </div>
+                              <button
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setCivilModalState({ proposal: item, requests: reqs });
+                                }}
+                                className="text-[10px] bg-indigo-600 hover:bg-indigo-700 text-white px-2.5 py-0.5 rounded-md font-extrabold transition flex items-center gap-1 cursor-pointer shadow-2xs"
+                              >
+                                <span>📩 국민신문고 민원 원문 보기 ({reqs.length}건)</span>
+                                <ExternalLink className="w-2.5 h-2.5" />
+                              </button>
+                            </div>
+                          );
+                        }
+                        return null;
+                      })()}
+                    </div>
+
+                    <div className="flex flex-wrap items-center justify-between gap-2 pt-2.5 border-t border-slate-200/80">
+                      <div className="flex items-center gap-2">
+                        <span className="text-[10px] text-slate-400 font-bold uppercase">담당 유관팀</span>
+                        <div className="flex flex-wrap gap-1">
+                          {item.department.map(dept => (
+                            <span key={dept} className="text-[10px] bg-slate-50 border border-slate-200 text-slate-600 px-2 py-0.5 rounded flex items-center gap-1 font-semibold">
+                              <Building2 className="w-2.5 h-2.5 text-slate-400" />
+                              {dept}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3 text-xs text-slate-500 font-mono font-bold">
+                        <span className="flex items-center gap-1 text-slate-600">
+                          <ThumbsUp className="w-3.5 h-3.5 text-blue-500" /> 공감 {item.vote_score}표
                         </span>
-                      </a>
+                        {item.vote_score >= 150 && (
+                          <div className="relative group/star inline-block">
+                            <span className="text-[10.5px] font-black text-amber-500 hover:text-amber-600 transition flex items-center gap-1 cursor-pointer hover:animate-pulse">
+                              ⭐ 우수제안
+                            </span>
+                            <div className="hidden group-hover/star:block absolute left-0 bottom-full mb-1.5 z-50 whitespace-nowrap bg-slate-900 text-white text-[10.5px] font-bold px-2.5 py-1.5 rounded-lg shadow-xl border border-slate-700 pointer-events-none animate-in fade-in duration-150">
+                              <span className="text-yellow-400 font-extrabold mr-1">🔥 150+ 공감</span>
+                              <span>시민 공감 150표 이상 획득 우수 제안</span>
+                              <div className="absolute -bottom-1 left-3 w-2 h-2 bg-slate-900 border-r border-b border-slate-700 rotate-45" />
+                            </div>
+                          </div>
+                        )}
+                        <span className="flex items-center gap-1">
+                          <MessageSquare className="w-3.5 h-3.5" /> 댓글 {item.comment_cnt}개
+                        </span>
+                        <a
+                          href={item.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${item.id.replace('PROP-', '')}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-1.5 text-blue-600 hover:text-blue-800 hover:underline font-medium text-xs bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100 transition-colors"
+                          title={item.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${item.id.replace('PROP-', '')}`}
+                        >
+                          <ExternalLink className="w-3.5 h-3.5 shrink-0" />
+                          <span className="truncate max-w-[240px]">
+                            {item.url || `https://idea.seoul.go.kr/front/freeSuggest/view.do?sn=${item.id.replace('PROP-', '')}`}
+                          </span>
+                        </a>
+                      </div>
                     </div>
                   </div>
+                );
+              })}
+
+              {/* 30건씩 더보기 버튼 */}
+              {filteredProposals.length > listDisplayLimit && (
+                <div className="text-center pt-3 pb-6">
+                  <button
+                    type="button"
+                    onClick={() => setListDisplayLimit(prev => prev + 30)}
+                    className="px-6 py-2.5 bg-[#0A2351] hover:bg-blue-900 text-white font-extrabold text-xs rounded-xl shadow-md transition cursor-pointer flex items-center gap-2 mx-auto active:scale-95"
+                  >
+                    <span>⬇️ 개별 제안 30건 더보기 (현재 {Math.min(listDisplayLimit, filteredProposals.length)} / 총 {filteredProposals.length}건)</span>
+                  </button>
                 </div>
-              );
-            })
+              )}
+            </div>
           ) : (
             <div className="bg-white p-12 text-center text-slate-500 text-xs border border-slate-200 rounded-xl shadow-xs">
               지정한 필터 조건에 부합하는 개별 제안이 존재하지 않습니다.

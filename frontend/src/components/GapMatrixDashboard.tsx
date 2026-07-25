@@ -2683,7 +2683,7 @@ const PriorityStandardModal: React.FC<PriorityStandardModalProps> = ({ isOpen, o
             <span className="text-base">📊</span>
             <div>
               <h3 className="font-extrabold text-sm leading-none text-white">의사결정 우선순위 판정 기준</h3>
-              <p className="text-[10px] text-slate-300 mt-1">Unified Key-Knowledge Kit (UKKKK) Decision Matrix</p>
+              <p className="text-[10px] text-slate-300 mt-1">Unified Key-Knowledge Kit for Kid (UKKKK) Decision Matrix</p>
             </div>
           </div>
           <button 
