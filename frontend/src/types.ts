@@ -81,6 +81,8 @@ export interface PolicyProposal {
   negative_signal?: boolean;
   department_rankings?: DepartmentRanking[];
   matched_policies?: MatchedPolicy[];
+  connection_status?: 'reviewable' | 'out_of_scope' | 'source_missing' | string;
+  quality_flags?: string[];
 }
 
 export interface DistrictStat {

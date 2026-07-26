@@ -17,10 +17,12 @@ import {
   YAxis,
 } from 'recharts';
 import {
+  ArrowLeft,
   BarChart3,
   Building2,
   CheckCircle,
   Database,
+  ExternalLink,
   HelpCircle,
   Layers,
   Maximize2,
@@ -30,7 +32,6 @@ import {
 } from 'lucide-react';
 import { PolicyProposal } from '../types';
 import { getProposalDepartmentNames, getSortedDepartmentRankings } from '../utils/departments';
-import { isPlaceholderProposalContent } from '../utils/proposals';
 
 interface Props {
   proposals: PolicyProposal[];
@@ -40,6 +41,12 @@ interface Props {
 }
 
 type PanelId = 'category' | 'rr' | 'year' | 'answer' | 'subcategory' | 'quality';
+type CountRow = { name: string; count: number };
+type Drilldown = {
+  title: string;
+  items: PolicyProposal[];
+};
+type ChartClickEntry = CountRow & { payload?: CountRow };
 
 const CATEGORY_COLORS = ['#0A2351', '#2563eb', '#059669', '#d97706', '#7c3aed', '#e11d48', '#0f766e', '#64748b'];
 const STATUS_COLORS = ['#10b981', '#f59e0b'];
@@ -85,6 +92,7 @@ export const AllDataStats: React.FC<Props> = ({
   selectedRrDept,
 }) => {
   const [activePanel, setActivePanel] = useState<PanelId | null>(null);
+  const [drilldown, setDrilldown] = useState<Drilldown | null>(null);
 
   const summary = useMemo(() => {
     const categoryCounter = new Map<string, number>();
@@ -96,7 +104,7 @@ export const AllDataStats: React.FC<Props> = ({
     let totalVotes = 0;
     let highVoteNoReply = 0;
     let policyMatched = 0;
-    let missingContent = 0;
+    let sourceMissing = 0;
 
     proposals.forEach((proposal) => {
       categoryCounter.set(proposal.category, (categoryCounter.get(proposal.category) || 0) + 1);
@@ -115,7 +123,7 @@ export const AllDataStats: React.FC<Props> = ({
       if (proposal.reply_yn === 'N') unanswered += 1;
       if (proposal.reply_yn === 'N' && proposal.vote_score >= 150) highVoteNoReply += 1;
       if (proposal.matched_policies?.length) policyMatched += 1;
-      if (isPlaceholderProposalContent(proposal)) missingContent += 1;
+      if (proposal.connection_status === 'source_missing') sourceMissing += 1;
       totalVotes += proposal.vote_score || 0;
     });
 
@@ -131,7 +139,7 @@ export const AllDataStats: React.FC<Props> = ({
       highVoteNoReply,
       policyMatched,
       policyMatchedRate: proposals.length ? (policyMatched / proposals.length) * 100 : 0,
-      missingContent,
+      sourceMissing,
     };
   }, [proposals]);
 
@@ -141,24 +149,63 @@ export const AllDataStats: React.FC<Props> = ({
   ];
   const qualityRows = [
     { name: '유사 정책 후보 있음', count: summary.policyMatched },
-    { name: '상세 원문 없음', count: summary.missingContent },
+    { name: '원문 보강 필요', count: summary.sourceMissing },
     { name: '고공감 미답변', count: summary.highVoteNoReply },
   ];
   const qualityTopRow = [...qualityRows].sort((a, b) => b.count - a.count)[0];
+  const yearTopRow = [...summary.yearRows].sort((a, b) => b.count - a.count || b.name.localeCompare(a.name))[0];
   const qualityTopIndex = Math.max(0, qualityRows.findIndex((row) => row.name === qualityTopRow?.name));
   const scopeLabel = [
     selectedCategory || '전체 대분류',
     selectedRrDept || '전체 관련 R&R 팀',
   ].join(' / ');
 
-  const renderBarHorizontal = (data: Array<{ name: string; count: number }>, color = '#0A2351') => (
+  const openDrilldown = (title: string, predicate: (proposal: PolicyProposal) => boolean) => {
+    setDrilldown({
+      title,
+      items: proposals.filter(predicate),
+    });
+  };
+
+  const handleRowClick = (panelId: PanelId, row?: CountRow) => {
+    if (!row) return;
+
+    const predicates: Record<PanelId, (proposal: PolicyProposal) => boolean> = {
+      category: (proposal) => proposal.category === row.name,
+      rr: (proposal) => getProposalDepartmentNames(proposal).includes(row.name),
+      year: (proposal) => getYear(proposal) === row.name,
+      answer: (proposal) => row.name === '답변완료' ? proposal.reply_yn === 'Y' : proposal.reply_yn === 'N',
+      subcategory: (proposal) => proposal.sub_category === row.name,
+      quality: (proposal) => {
+        if (row.name === '유사 정책 후보 있음') return Boolean(proposal.matched_policies?.length);
+        if (row.name === '원문 보강 필요') return proposal.connection_status === 'source_missing';
+        return proposal.reply_yn === 'N' && proposal.vote_score >= 150;
+      },
+    };
+
+    openDrilldown(`${row.name} · ${row.count.toLocaleString()}건`, predicates[panelId]);
+  };
+
+  const getClickedRow = (entry: ChartClickEntry): CountRow => entry.payload || entry;
+
+  const renderBarHorizontal = (
+    panelId: PanelId,
+    data: CountRow[],
+    color = '#0A2351',
+  ) => (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart data={data} layout="vertical" margin={{ left: 12, right: 18, top: 8, bottom: 8 }}>
         <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#e2e8f0" />
         <XAxis type="number" tick={{ fontSize: 10, fill: '#64748b' }} />
         <YAxis type="category" dataKey="name" width={148} tick={{ fontSize: 10, fill: '#334155', fontWeight: 700 }} />
         <Tooltip />
-        <Bar dataKey="count" fill={color} radius={[0, 5, 5, 0]} />
+        <Bar
+          dataKey="count"
+          fill={color}
+          radius={[0, 5, 5, 0]}
+          cursor="pointer"
+          onClick={(entry) => handleRowClick(panelId, getClickedRow(entry as ChartClickEntry))}
+        />
       </BarChart>
     </ResponsiveContainer>
   );
@@ -188,7 +235,7 @@ export const AllDataStats: React.FC<Props> = ({
           <TopLegend row={summary.categoryRows[0]} color={CATEGORY_COLORS[0]} />
         </div>
       ),
-      detail: renderBarHorizontal(summary.categoryRows),
+      detail: renderBarHorizontal('category', summary.categoryRows),
     },
     rr: {
       title: '관련 R&R 팀 분포',
@@ -205,7 +252,7 @@ export const AllDataStats: React.FC<Props> = ({
           <TopLegend row={summary.rrRows[0]} color="#0891b2" />
         </div>
       ),
-      detail: renderBarHorizontal(summary.rrRows, '#0891b2'),
+      detail: renderBarHorizontal('rr', summary.rrRows, '#0891b2'),
     },
     year: {
       title: '연도별 제안 분포',
@@ -219,7 +266,7 @@ export const AllDataStats: React.FC<Props> = ({
               </BarChart>
             </ResponsiveContainer>
           </div>
-          <TopLegend row={summary.yearRows[0]} color="#2563eb" label="최다" />
+          <TopLegend row={yearTopRow} color="#2563eb" label="최다" />
         </div>
       ),
       detail: (
@@ -229,7 +276,13 @@ export const AllDataStats: React.FC<Props> = ({
             <XAxis dataKey="name" tick={{ fontSize: 11, fill: '#64748b', fontWeight: 700 }} />
             <YAxis tick={{ fontSize: 11, fill: '#64748b' }} />
             <Tooltip />
-            <Bar dataKey="count" fill="#2563eb" radius={[6, 6, 0, 0]} />
+            <Bar
+              dataKey="count"
+              fill="#2563eb"
+              radius={[6, 6, 0, 0]}
+              cursor="pointer"
+              onClick={(entry) => handleRowClick('year', getClickedRow(entry as ChartClickEntry))}
+            />
           </BarChart>
         </ResponsiveContainer>
       ),
@@ -261,7 +314,16 @@ export const AllDataStats: React.FC<Props> = ({
         <div className="grid h-full grid-cols-1 gap-4 lg:grid-cols-[1.1fr_0.9fr]">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
-              <Pie data={answerRows} dataKey="count" nameKey="name" innerRadius={72} outerRadius={118} paddingAngle={4}>
+              <Pie
+                data={answerRows}
+                dataKey="count"
+                nameKey="name"
+                innerRadius={72}
+                outerRadius={118}
+                paddingAngle={4}
+                cursor="pointer"
+                onClick={(entry) => handleRowClick('answer', getClickedRow(entry as ChartClickEntry))}
+              >
                 {answerRows.map((_, index) => (
                   <Cell key={index} fill={STATUS_COLORS[index]} />
                 ))}
@@ -296,11 +358,11 @@ export const AllDataStats: React.FC<Props> = ({
           ))}
         </div>
       ),
-      detail: renderBarHorizontal(summary.subCategoryRows, '#7c3aed'),
+      detail: renderBarHorizontal('subcategory', summary.subCategoryRows, '#7c3aed'),
     },
     quality: {
       title: '검토 필요 데이터',
-      description: '상세 원문 없음, 고공감 미답변, 정책 후보 연결 상태를 같이 봅니다.',
+      description: '원문 보강 필요, 고공감 미답변, 정책 후보 연결 상태를 같이 봅니다.',
       preview: (
         <div className="flex h-full flex-col">
           <div className="grid min-h-0 flex-1 grid-cols-3 items-end gap-3 px-3 pb-1">
@@ -324,7 +386,7 @@ export const AllDataStats: React.FC<Props> = ({
           />
         </div>
       ),
-      detail: renderBarHorizontal(qualityRows, '#e11d48'),
+      detail: renderBarHorizontal('quality', qualityRows, '#e11d48'),
     },
   };
 
@@ -334,7 +396,7 @@ export const AllDataStats: React.FC<Props> = ({
     { label: '고공감 미답변', value: summary.highVoteNoReply.toLocaleString(), note: '150+ 공감', icon: ThumbsUp, tone: 'bg-rose-50 text-rose-700' },
     { label: '평균 공감', value: summary.avgVotes.toFixed(1), note: '표 / 건', icon: BarChart3, tone: 'bg-emerald-50 text-emerald-700' },
     { label: '유사 정책 후보', value: `${summary.policyMatchedRate.toFixed(1)}%`, note: `${summary.policyMatched.toLocaleString()}건`, icon: CheckCircle, tone: 'bg-violet-50 text-violet-700' },
-    { label: '상세 원문 없음', value: summary.missingContent.toLocaleString(), note: '정책 대조 보류', icon: ShieldAlert, tone: 'bg-slate-100 text-slate-700' },
+    { label: '원문 보강 필요', value: summary.sourceMissing.toLocaleString(), note: '정책 대조 보류', icon: ShieldAlert, tone: 'bg-slate-100 text-slate-700' },
   ];
 
   const panelOrder: PanelId[] = ['category', 'rr', 'year', 'answer', 'subcategory', 'quality'];
@@ -397,7 +459,10 @@ export const AllDataStats: React.FC<Props> = ({
               <button
                 key={panelId}
                 type="button"
-                onClick={() => setActivePanel(panelId)}
+                onClick={() => {
+                  setDrilldown(null);
+                  setActivePanel(panelId);
+                }}
                 className="group min-h-[230px] rounded-lg border border-slate-200 bg-white p-4 text-left shadow-xs transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md"
               >
                 <div className="mb-3 flex items-start justify-between gap-3">
@@ -449,7 +514,10 @@ export const AllDataStats: React.FC<Props> = ({
               </div>
               <button
                 type="button"
-                onClick={() => setActivePanel(null)}
+                onClick={() => {
+                  setDrilldown(null);
+                  setActivePanel(null);
+                }}
                 className="rounded-lg bg-white/10 p-2 text-white transition hover:bg-white/20"
                 aria-label="확대 보기 닫기"
               >
@@ -457,7 +525,64 @@ export const AllDataStats: React.FC<Props> = ({
               </button>
             </div>
             <div className="h-[560px] overflow-y-auto p-5">
-              {active.detail}
+              {drilldown ? (
+                <div className="space-y-4">
+                  <div className="sticky top-0 z-10 flex items-center justify-between gap-3 border-b border-slate-200 bg-white pb-3">
+                    <button
+                      type="button"
+                      onClick={() => setDrilldown(null)}
+                      className="flex items-center gap-1.5 rounded-lg border border-slate-200 px-3 py-2 text-xs font-black text-slate-700 transition hover:border-blue-300 hover:text-blue-700"
+                    >
+                      <ArrowLeft className="h-4 w-4" />
+                      차트로 돌아가기
+                    </button>
+                    <strong className="text-sm font-black text-slate-900">{drilldown.title}</strong>
+                  </div>
+                  {drilldown.items.length ? drilldown.items.map((proposal) => (
+                    <article key={proposal.id} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                      <div className="flex flex-wrap items-center gap-2 text-[11px] font-black text-slate-500">
+                        <span>{proposal.id}</span>
+                        <span>·</span>
+                        <span>{getYear(proposal)}</span>
+                        <span className="rounded-full bg-blue-50 px-2 py-0.5 text-blue-700">{proposal.category}</span>
+                        <span className={proposal.reply_yn === 'Y' ? 'text-emerald-700' : 'text-amber-700'}>
+                          {proposal.reply_yn === 'Y' ? '답변완료' : '미답변'}
+                        </span>
+                      </div>
+                      <h4 className="mt-2 text-sm font-black text-slate-950">{proposal.title}</h4>
+                      <p className="mt-2 line-clamp-3 whitespace-pre-line text-xs font-semibold leading-relaxed text-slate-600">
+                        {proposal.content || '원문 보강 필요'}
+                      </p>
+                      <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
+                        <span className="text-[11px] font-bold text-slate-500">
+                          공감 {(proposal.vote_score || 0).toLocaleString()} · 댓글 {(proposal.comment_cnt || 0).toLocaleString()}
+                        </span>
+                        {proposal.url && (
+                          <a
+                            href={proposal.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="flex items-center gap-1 rounded-md border border-blue-200 bg-white px-2.5 py-1.5 text-[11px] font-black text-blue-700 hover:bg-blue-50"
+                          >
+                            원문 보기 <ExternalLink className="h-3.5 w-3.5" />
+                          </a>
+                        )}
+                      </div>
+                    </article>
+                  )) : (
+                    <div className="rounded-lg border border-dashed border-slate-300 p-10 text-center text-sm font-bold text-slate-500">
+                      해당 조건의 제안이 없습니다.
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className="h-full">
+                  <p className="mb-2 text-right text-[11px] font-bold text-blue-600">
+                    막대 또는 원형 조각을 누르면 해당 제안 목록을 확인할 수 있습니다.
+                  </p>
+                  <div className="h-[500px]">{active.detail}</div>
+                </div>
+              )}
             </div>
           </div>
         </div>
