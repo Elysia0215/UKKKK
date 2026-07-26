@@ -84,12 +84,23 @@ export const DashboardOverview: React.FC<Props> = ({
   const topKeywords = extractTopKeywords(filteredProposals, keywordLimit);
   const deptStats = getDepartmentStats(filteredProposals);
   const deptStatsProcessed = React.useMemo(() => {
+    if (selectedRrDept) {
+      const unanswered = filteredProposals.filter(p => p.reply_yn === 'N').length;
+      return [{
+        dept: selectedRrDept,
+        name: selectedRrDept,
+        total: filteredProposals.length,
+        unanswered,
+        answered: Math.max(0, filteredProposals.length - unanswered)
+      }];
+    }
+
     return deptStats.map(d => ({
       ...d,
       name: d.dept,
       answered: Math.max(0, d.total - d.unanswered)
     }));
-  }, [deptStats]);
+  }, [deptStats, filteredProposals, selectedRrDept]);
 
   // 카테고리별 데이터 산출
   const categoryCount = filteredProposals.reduce((acc, curr) => {
@@ -132,11 +143,11 @@ export const DashboardOverview: React.FC<Props> = ({
             <div>
               <h3 className="text-xs font-extrabold text-slate-900">
                 🏷️ {selectedDept} 담당군
-                {selectedRrDept ? ` → 🏢 ${selectedRrDept} 주관팀` : ''} 모니터링 모드
+                {selectedRrDept ? ` → 🏢 ${selectedRrDept} 관련 R&R` : ''} 모니터링 모드
               </h3>
               <p className="text-[10px] text-slate-500 mt-0.5">
                 {selectedRrDept
-                  ? `해당 대분류에서 ${selectedRrDept}이(가) 1순위 주관으로 매칭된 ${filteredProposals.length}건입니다.`
+                  ? `해당 대분류에서 ${selectedRrDept}이(가) 주관·협조 R&R로 연결된 ${filteredProposals.length}건입니다.`
                   : `해당 정책 대분류에 속한 총 ${filteredProposals.length}건의 제안 및 민원입니다.`}
               </p>
             </div>
@@ -255,7 +266,7 @@ export const DashboardOverview: React.FC<Props> = ({
           ) : (
             <span className="text-[9px] bg-blue-50 text-blue-700 font-extrabold px-2 py-0.5 rounded-full border border-blue-100 self-start sm:self-auto flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-ping" />
-              제안별 1순위 주관부서 기준 집계
+              {selectedRrDept ? '선택한 관련 R&R 팀 기준 집계' : '제안별 1순위 주관부서 기준 집계'}
             </span>
           )}
         </div>

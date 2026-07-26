@@ -189,11 +189,19 @@ export function IntegratedEvidenceDashboard({
     selectedCategory || '전체 대분류',
     selectedTeam || '전체 R&R 팀',
   ].join(' · ');
+  const civilCollectedYears = useMemo(() => {
+    return new Set(
+      scopedCivil
+        .map((item) => String(item.reg_date || '').match(/\d{4}/)?.[0])
+        .filter((year): year is string => Boolean(year))
+    );
+  }, [scopedCivil]);
   const yearlyTrend = useMemo(() => ['2022', '2023', '2024', '2025', '2026'].map((year) => ({
     year,
     proposals: proposals.filter((item) => item.reg_date?.startsWith(year)).length,
     civil: scopedCivil.filter((item) => item.reg_date?.includes(year)).length,
-  })), [proposals, scopedCivil]);
+    civilCollected: civilCollectedYears.has(year),
+  })), [proposals, scopedCivil, civilCollectedYears]);
   const sortedTaxonomyRows = useMemo(() => {
     const direction = taxonomySort.direction === 'asc' ? 1 : -1;
     return [...taxonomyRows].sort((a, b) => {
@@ -648,6 +656,9 @@ export function IntegratedEvidenceDashboard({
                 <span className="inline-flex items-center gap-1 rounded-full bg-violet-50 px-2 py-0.5 text-violet-600">
                   <span className="h-2 w-2 rounded-full bg-violet-500" /> 국민 민원
                 </span>
+                <span className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2 py-0.5 text-slate-500">
+                  국민민원 2022~2024는 현재 로컬 원천 미수집
+                </span>
               </div>
             </div>
             <div className="mt-8 grid h-72 grid-cols-5 items-end gap-5 border-b border-l border-slate-200 px-5">
@@ -659,9 +670,15 @@ export function IntegratedEvidenceDashboard({
                       <div className="group relative w-8 rounded-t bg-blue-500" style={{ height: `${Math.max((row.proposals / max) * 100, 1)}%` }}>
                         <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-[9px] font-black text-blue-700">{row.proposals}</span>
                       </div>
-                      <div className="group relative w-8 rounded-t bg-violet-500" style={{ height: `${Math.max((row.civil / max) * 100, 1)}%` }}>
-                        <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-[9px] font-black text-violet-700">{row.civil}</span>
-                      </div>
+                      {row.civilCollected ? (
+                        <div className="group relative w-8 rounded-t bg-violet-500" style={{ height: `${Math.max((row.civil / max) * 100, 1)}%` }}>
+                          <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-[9px] font-black text-violet-700">{row.civil}</span>
+                        </div>
+                      ) : (
+                        <div className="group relative flex h-5 w-8 items-end justify-center rounded-t border border-dashed border-slate-300 bg-slate-50">
+                          <span className="absolute -top-5 left-1/2 -translate-x-1/2 whitespace-nowrap text-[8px] font-black text-slate-400">미수집</span>
+                        </div>
+                      )}
                     </div>
                     <strong className="py-2 text-center text-[10px]">{row.year}</strong>
                   </div>
