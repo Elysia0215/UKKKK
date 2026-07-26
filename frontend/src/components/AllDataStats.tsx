@@ -50,6 +50,17 @@ type ChartClickEntry = CountRow & { payload?: CountRow };
 
 const CATEGORY_COLORS = ['#0A2351', '#2563eb', '#059669', '#d97706', '#7c3aed', '#e11d48', '#0f766e', '#64748b'];
 const STATUS_COLORS = ['#10b981', '#f59e0b'];
+const CONTENT_APPROVAL_STORAGE_KEY = 'ukkkk-content-quality-approved-ids';
+
+const loadApprovedContentIds = (): string[] => {
+  if (typeof window === 'undefined') return [];
+  try {
+    const value = JSON.parse(window.localStorage.getItem(CONTENT_APPROVAL_STORAGE_KEY) || '[]');
+    return Array.isArray(value) ? value.filter((id): id is string => typeof id === 'string') : [];
+  } catch {
+    return [];
+  }
+};
 
 const getYear = (proposal: PolicyProposal): string => {
   const year = proposal.reg_date?.slice(0, 4);
@@ -93,6 +104,22 @@ export const AllDataStats: React.FC<Props> = ({
 }) => {
   const [activePanel, setActivePanel] = useState<PanelId | null>(null);
   const [drilldown, setDrilldown] = useState<Drilldown | null>(null);
+  const [approvedContentIds, setApprovedContentIds] = useState<string[]>(loadApprovedContentIds);
+  const approvedContentIdSet = useMemo(() => new Set(approvedContentIds), [approvedContentIds]);
+
+  const needsContentReview = (proposal: PolicyProposal) => (
+    proposal.connection_status === 'source_missing' && !approvedContentIdSet.has(proposal.id)
+  );
+
+  const updateContentApproval = (proposalId: string, approved: boolean) => {
+    setApprovedContentIds((current) => {
+      const next = approved
+        ? Array.from(new Set([...current, proposalId]))
+        : current.filter((id) => id !== proposalId);
+      window.localStorage.setItem(CONTENT_APPROVAL_STORAGE_KEY, JSON.stringify(next));
+      return next;
+    });
+  };
 
   const summary = useMemo(() => {
     const categoryCounter = new Map<string, number>();
@@ -123,7 +150,7 @@ export const AllDataStats: React.FC<Props> = ({
       if (proposal.reply_yn === 'N') unanswered += 1;
       if (proposal.reply_yn === 'N' && proposal.vote_score >= 150) highVoteNoReply += 1;
       if (proposal.matched_policies?.length) policyMatched += 1;
-      if (proposal.connection_status === 'source_missing') sourceMissing += 1;
+      if (needsContentReview(proposal)) sourceMissing += 1;
       totalVotes += proposal.vote_score || 0;
     });
 
@@ -141,7 +168,7 @@ export const AllDataStats: React.FC<Props> = ({
       policyMatchedRate: proposals.length ? (policyMatched / proposals.length) * 100 : 0,
       sourceMissing,
     };
-  }, [proposals]);
+  }, [proposals, approvedContentIdSet]);
 
   const answerRows = [
     { name: '답변완료', count: summary.answered },
@@ -149,7 +176,7 @@ export const AllDataStats: React.FC<Props> = ({
   ];
   const qualityRows = [
     { name: '유사 정책 후보 있음', count: summary.policyMatched },
-    { name: '원문 보강 필요', count: summary.sourceMissing },
+    { name: '원문 확인 필요', count: summary.sourceMissing },
     { name: '고공감 미답변', count: summary.highVoteNoReply },
   ];
   const qualityTopRow = [...qualityRows].sort((a, b) => b.count - a.count)[0];
@@ -178,7 +205,7 @@ export const AllDataStats: React.FC<Props> = ({
       subcategory: (proposal) => proposal.sub_category === row.name,
       quality: (proposal) => {
         if (row.name === '유사 정책 후보 있음') return Boolean(proposal.matched_policies?.length);
-        if (row.name === '원문 보강 필요') return proposal.connection_status === 'source_missing';
+        if (row.name === '원문 확인 필요') return needsContentReview(proposal);
         return proposal.reply_yn === 'N' && proposal.vote_score >= 150;
       },
     };
@@ -362,7 +389,7 @@ export const AllDataStats: React.FC<Props> = ({
     },
     quality: {
       title: '검토 필요 데이터',
-      description: '원문 보강 필요, 고공감 미답변, 정책 후보 연결 상태를 같이 봅니다.',
+      description: '원문 확인 필요, 고공감 미답변, 정책 후보 연결 상태를 같이 봅니다.',
       preview: (
         <div className="flex h-full flex-col">
           <div className="grid min-h-0 flex-1 grid-cols-3 items-end gap-3 px-3 pb-1">
@@ -396,7 +423,7 @@ export const AllDataStats: React.FC<Props> = ({
     { label: '고공감 미답변', value: summary.highVoteNoReply.toLocaleString(), note: '150+ 공감', icon: ThumbsUp, tone: 'bg-rose-50 text-rose-700' },
     { label: '평균 공감', value: summary.avgVotes.toFixed(1), note: '표 / 건', icon: BarChart3, tone: 'bg-emerald-50 text-emerald-700' },
     { label: '유사 정책 후보', value: `${summary.policyMatchedRate.toFixed(1)}%`, note: `${summary.policyMatched.toLocaleString()}건`, icon: CheckCircle, tone: 'bg-violet-50 text-violet-700' },
-    { label: '원문 보강 필요', value: summary.sourceMissing.toLocaleString(), note: '정책 대조 보류', icon: ShieldAlert, tone: 'bg-slate-100 text-slate-700' },
+    { label: '원문 확인 필요', value: summary.sourceMissing.toLocaleString(), note: '원문 대조 후 승인', icon: ShieldAlert, tone: 'bg-slate-100 text-slate-700' },
   ];
 
   const panelOrder: PanelId[] = ['category', 'rr', 'year', 'answer', 'subcategory', 'quality'];
@@ -557,16 +584,37 @@ export const AllDataStats: React.FC<Props> = ({
                         <span className="text-[11px] font-bold text-slate-500">
                           공감 {(proposal.vote_score || 0).toLocaleString()} · 댓글 {(proposal.comment_cnt || 0).toLocaleString()}
                         </span>
-                        {proposal.url && (
-                          <a
-                            href={proposal.url}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="flex items-center gap-1 rounded-md border border-blue-200 bg-white px-2.5 py-1.5 text-[11px] font-black text-blue-700 hover:bg-blue-50"
-                          >
-                            원문 보기 <ExternalLink className="h-3.5 w-3.5" />
-                          </a>
-                        )}
+                        <div className="flex flex-wrap items-center gap-2">
+                          {proposal.url && (
+                            <a
+                              href={proposal.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="flex items-center gap-1 rounded-md border border-blue-200 bg-white px-2.5 py-1.5 text-[11px] font-black text-blue-700 hover:bg-blue-50"
+                            >
+                              원문 대조 <ExternalLink className="h-3.5 w-3.5" />
+                            </a>
+                          )}
+                          {proposal.connection_status === 'source_missing' && (
+                            approvedContentIdSet.has(proposal.id) ? (
+                              <button
+                                type="button"
+                                onClick={() => updateContentApproval(proposal.id, false)}
+                                className="rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-[11px] font-black text-slate-600 hover:bg-slate-100"
+                              >
+                                정상 승인 취소
+                              </button>
+                            ) : (
+                              <button
+                                type="button"
+                                onClick={() => updateContentApproval(proposal.id, true)}
+                                className="rounded-md border border-emerald-300 bg-emerald-50 px-2.5 py-1.5 text-[11px] font-black text-emerald-700 hover:bg-emerald-100"
+                              >
+                                원문과 동일 · 정상 승인
+                              </button>
+                            )
+                          )}
+                        </div>
                       </div>
                     </article>
                   )) : (

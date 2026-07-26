@@ -139,6 +139,23 @@ export function DeveloperLogCenter({
     void syncDeveloperLogsFromDisk().then(setLogs);
   }, []);
 
+  // AI/Codex가 상태 갱신 스크립트로 로그 파일을 변경하면 열린 패널에도
+  // 별도 새로고침 없이 반영되도록 디스크/API 상태를 주기적으로 동기화한다.
+  useEffect(() => {
+    if (!logPanelOpen) return;
+
+    const sync = () => {
+      void syncDeveloperLogsFromDisk().then(setLogs);
+    };
+    sync();
+    const timer = window.setInterval(sync, 3000);
+    window.addEventListener('focus', sync);
+    return () => {
+      window.clearInterval(timer);
+      window.removeEventListener('focus', sync);
+    };
+  }, [logPanelOpen]);
+
   useEffect(() => {
     const handleOpen = (event: Event) => {
       const custom = event as CustomEvent<DeveloperLogDraft>;

@@ -1,0 +1,46 @@
+{
+  "id": "DEVLOG-1784994758747-r78ce",
+  "issueType": "other",
+  "status": "ai_applied_rule",
+  "summary": "또 대분류 필터랑 아래 대분류 필터 선택값이랑 매칭 안되있음",
+  "description": "또 대분류 필터랑 아래 대분류 필터 선택값이랑 매칭 안되있음",
+  "pageKey": "tab-3",
+  "pageLabel": "긴급 민원 처리",
+  "scope": {
+    "departmentGroup": "출산·산후 초기지원",
+    "rrDepartment": null,
+    "district": null
+  },
+  "entity": {
+    "entityType": "screen",
+    "content": "또 대분류 필터랑 아래 대분류 필터 선택값이랑 매칭 안되있음"
+  },
+  "createdAt": "2026-07-25T15:52:38.744Z",
+  "updatedAt": "2026-07-25T19:40:28.828112Z",
+  "history": [
+    {
+      "status": "team_suggestion",
+      "at": "2026-07-25T15:52:38.744Z",
+      "actor": "team",
+      "memo": "팀원 테스트 제안 접수"
+    },
+    {
+      "status": "ai_in_progress",
+      "at": "2026-07-25T15:56:39.852Z",
+      "actor": "team",
+      "memo": "AI 교차검증용 로그 내보내기"
+    },
+    {
+      "status": "ai_in_progress",
+      "at": "2026-07-25T19:30:47.168Z",
+      "actor": "team",
+      "memo": "AI 교차검증용 로그 내보내기"
+    },
+    {
+      "status": "ai_applied_rule",
+      "at": "2026-07-25T19:40:28.828112Z",
+      "actor": "ai",
+      "memo": "App.tsx와 PriorityDetails.tsx에서 상단 대분류 선택값을 하단 상세 필터에 실시간 동기화하고 전체 복귀 시 잔존 하위 필터를 초기화. npm run lint와 npm run build 통과; API 재조회 후에도 유지되는 UI 규칙 반영."
+    }
+  ]
+}
