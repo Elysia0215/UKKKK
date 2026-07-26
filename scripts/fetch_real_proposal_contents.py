@@ -1,9 +1,10 @@
 import json
 import re
 import time
-import requests
-from bs4 import BeautifulSoup
+from html.parser import HTMLParser
 from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
 from proposal_quality import apply_quality_gate, validate_proposals
 from pipeline_hooks import rebuild_proposal_connections
@@ -18,6 +19,33 @@ HEADERS = {
                   "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 }
 
+class TxtBlockParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.capture_depth = 0
+        self.parts = []
+
+    def handle_starttag(self, tag, attrs):
+        attrs_dict = dict(attrs)
+        classes = attrs_dict.get("class", "")
+        if self.capture_depth > 0:
+            self.capture_depth += 1
+        elif tag == "div" and "txt-block" in classes.split():
+            self.capture_depth = 1
+
+    def handle_endtag(self, tag):
+        if self.capture_depth > 0:
+            self.capture_depth -= 1
+
+    def handle_data(self, data):
+        if self.capture_depth > 0:
+            text = data.strip()
+            if text:
+                self.parts.append(text)
+
+    def text(self):
+        return "\n".join(self.parts)
+
 def clean_content(text):
     if not text:
         return ""
@@ -30,13 +58,13 @@ def fetch_detail(sn_str: str) -> str:
         return ""
     url = f"https://idea.seoul.go.kr/front/freeSuggest/view.do?sn={sn}"
     try:
-        res = requests.get(url, headers=HEADERS, timeout=8)
-        res.raise_for_status()
-        soup = BeautifulSoup(res.text, "html.parser")
-        block = soup.select_one("div.txt-block")
-        if block:
-            return clean_content(block.get_text(separator="\n", strip=True))
-    except Exception as e:
+        req = Request(url, headers=HEADERS)
+        with urlopen(req, timeout=8) as res:
+            html = res.read().decode("utf-8", errors="replace")
+        parser = TxtBlockParser()
+        parser.feed(html)
+        return clean_content(parser.text())
+    except (HTTPError, URLError, TimeoutError, OSError) as e:
         print(f"Error fetching {sn}: {e}")
     return ""
 
@@ -56,7 +84,13 @@ def main():
         content = item.get("CONTENT", "") or item.get("content", "")
         sn_id = item.get("SN", "") or item.get("id", "")
 
-        is_fallback = "접수된 시민 정책 제안입니다" in content or content == title or len(content.strip()) < 30
+        is_fallback = (
+            not content.strip()
+            or "상세 원문이 현재 화면 데이터에 연결되지 않았습니다" in content
+            or "접수된 시민 정책 제안입니다" in content
+            or content == title
+            or len(content.strip()) < 50
+        )
 
         if is_fallback:
             real_text = fetch_detail(sn_id)

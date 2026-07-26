@@ -56,6 +56,28 @@ const toCountRows = (counter: Map<string, number>, limit = 12) => (
     .slice(0, limit)
 );
 
+const TopLegend = ({
+  row,
+  color,
+  label = 'TOP',
+}: {
+  row?: { name: string; count: number };
+  color: string;
+  label?: string;
+}) => {
+  if (!row) return null;
+  return (
+    <div className="mt-2 flex min-h-6 items-center justify-between gap-2 rounded-md border border-slate-200 bg-white/90 px-2 py-1 text-[10px] font-black text-slate-600">
+      <span className="flex min-w-0 items-center gap-1.5">
+        <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ backgroundColor: color }} />
+        <span className="shrink-0 text-slate-400">{label}</span>
+        <span className="truncate text-slate-800">{row.name}</span>
+      </span>
+      <span className="shrink-0 font-mono text-slate-900">{row.count}건</span>
+    </div>
+  );
+};
+
 export const AllDataStats: React.FC<Props> = ({
   proposals,
   totalCount,
@@ -122,6 +144,8 @@ export const AllDataStats: React.FC<Props> = ({
     { name: '상세 원문 없음', count: summary.missingContent },
     { name: '고공감 미답변', count: summary.highVoteNoReply },
   ];
+  const qualityTopRow = [...qualityRows].sort((a, b) => b.count - a.count)[0];
+  const qualityTopIndex = Math.max(0, qualityRows.findIndex((row) => row.name === qualityTopRow?.name));
   const scopeLabel = [
     selectedCategory || '전체 대분류',
     selectedRrDept || '전체 관련 R&R 팀',
@@ -149,15 +173,20 @@ export const AllDataStats: React.FC<Props> = ({
       title: '대분류 분포',
       description: '현재 상단 필터 범위의 8대 정책 대분류별 제안 수입니다.',
       preview: (
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={summary.categoryRows.slice(0, 7)}>
-            <Bar dataKey="count" radius={[4, 4, 0, 0]}>
-              {summary.categoryRows.slice(0, 7).map((_, index) => (
-                <Cell key={index} fill={CATEGORY_COLORS[index % CATEGORY_COLORS.length]} />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
+        <div className="flex h-full flex-col">
+          <div className="min-h-0 flex-1">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={summary.categoryRows.slice(0, 7)}>
+                <Bar dataKey="count" radius={[4, 4, 0, 0]}>
+                  {summary.categoryRows.slice(0, 7).map((_, index) => (
+                    <Cell key={index} fill={CATEGORY_COLORS[index % CATEGORY_COLORS.length]} />
+                  ))}
+                </Bar>
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+          <TopLegend row={summary.categoryRows[0]} color={CATEGORY_COLORS[0]} />
+        </div>
       ),
       detail: renderBarHorizontal(summary.categoryRows),
     },
@@ -165,11 +194,16 @@ export const AllDataStats: React.FC<Props> = ({
       title: '관련 R&R 팀 분포',
       description: '1·2·3순위에 걸쳐 연결된 관련 R&R 팀별 제안 수입니다.',
       preview: (
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={summary.rrRows.slice(0, 7)}>
-            <Bar dataKey="count" fill="#0891b2" radius={[4, 4, 0, 0]} />
-          </BarChart>
-        </ResponsiveContainer>
+        <div className="flex h-full flex-col">
+          <div className="min-h-0 flex-1">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={summary.rrRows.slice(0, 7)}>
+                <Bar dataKey="count" fill="#0891b2" radius={[4, 4, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+          <TopLegend row={summary.rrRows[0]} color="#0891b2" />
+        </div>
       ),
       detail: renderBarHorizontal(summary.rrRows, '#0891b2'),
     },
@@ -177,11 +211,16 @@ export const AllDataStats: React.FC<Props> = ({
       title: '연도별 제안 분포',
       description: '현재 범위의 등록 연도별 제안 추이를 확인합니다.',
       preview: (
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={summary.yearRows}>
-            <Bar dataKey="count" fill="#2563eb" radius={[4, 4, 0, 0]} />
-          </BarChart>
-        </ResponsiveContainer>
+        <div className="flex h-full flex-col">
+          <div className="min-h-0 flex-1">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={summary.yearRows}>
+                <Bar dataKey="count" fill="#2563eb" radius={[4, 4, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+          <TopLegend row={summary.yearRows[0]} color="#2563eb" label="최다" />
+        </div>
       ),
       detail: (
         <ResponsiveContainer width="100%" height="100%">
@@ -199,15 +238,24 @@ export const AllDataStats: React.FC<Props> = ({
       title: '답변 상태',
       description: '답변완료와 미답변 비중을 바로 확인합니다.',
       preview: (
-        <ResponsiveContainer width="100%" height="100%">
-          <PieChart>
-            <Pie data={answerRows} dataKey="count" nameKey="name" innerRadius={34} outerRadius={62} paddingAngle={3}>
-              {answerRows.map((_, index) => (
-                <Cell key={index} fill={STATUS_COLORS[index]} />
-              ))}
-            </Pie>
-          </PieChart>
-        </ResponsiveContainer>
+        <div className="flex h-full flex-col">
+          <div className="min-h-0 flex-1">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie data={answerRows} dataKey="count" nameKey="name" innerRadius={34} outerRadius={62} paddingAngle={3}>
+                  {answerRows.map((_, index) => (
+                    <Cell key={index} fill={STATUS_COLORS[index]} />
+                  ))}
+                </Pie>
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+          <TopLegend
+            row={[...answerRows].sort((a, b) => b.count - a.count)[0]}
+            color={STATUS_COLORS[answerRows[0].count >= answerRows[1].count ? 0 : 1]}
+            label="다수"
+          />
+        </div>
       ),
       detail: (
         <div className="grid h-full grid-cols-1 gap-4 lg:grid-cols-[1.1fr_0.9fr]">
@@ -254,19 +302,26 @@ export const AllDataStats: React.FC<Props> = ({
       title: '검토 필요 데이터',
       description: '상세 원문 없음, 고공감 미답변, 정책 후보 연결 상태를 같이 봅니다.',
       preview: (
-        <div className="grid h-full grid-cols-3 items-end gap-3 px-3 pb-4">
-          {qualityRows.map((row, index) => (
-            <div key={row.name} className="flex flex-col items-center gap-2">
-              <div
-                className="w-full rounded-t-md"
-                style={{
-                  height: `${Math.max(18, (row.count / Math.max(1, proposals.length)) * 150)}px`,
-                  backgroundColor: ['#10b981', '#64748b', '#e11d48'][index],
-                }}
-              />
-              <span className="text-center text-[9px] font-black text-slate-500">{row.count}건</span>
-            </div>
-          ))}
+        <div className="flex h-full flex-col">
+          <div className="grid min-h-0 flex-1 grid-cols-3 items-end gap-3 px-3 pb-1">
+            {qualityRows.map((row, index) => (
+              <div key={row.name} className="flex flex-col items-center gap-2">
+                <div
+                  className="w-full rounded-t-md"
+                  style={{
+                    height: `${Math.max(18, (row.count / Math.max(1, proposals.length)) * 120)}px`,
+                    backgroundColor: ['#10b981', '#64748b', '#e11d48'][index],
+                  }}
+                />
+                <span className="text-center text-[9px] font-black text-slate-500">{row.count}건</span>
+              </div>
+            ))}
+          </div>
+          <TopLegend
+            row={qualityTopRow}
+            color={['#10b981', '#64748b', '#e11d48'][qualityTopIndex]}
+            label="최다"
+          />
         </div>
       ),
       detail: renderBarHorizontal(qualityRows, '#e11d48'),
@@ -292,10 +347,10 @@ export const AllDataStats: React.FC<Props> = ({
           <div>
             <div className="flex items-center gap-2 text-[#0A2351]">
               <Database className="h-5 w-5" />
-              <h2 className="text-lg font-black">전체 데이터 통계</h2>
+              <h2 className="text-lg font-black">필터 검증 통계</h2>
             </div>
             <p className="mt-1 text-xs font-semibold text-slate-500">
-              상단 대분류와 관련 R&R 팀 필터가 적용된 데이터를 카드별로 확인하고 확대 조회합니다.
+              상단 대분류와 관련 R&R 팀 필터가 실제 제안 데이터에 어떻게 적용됐는지 확인합니다.
             </p>
           </div>
           <span className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-black text-blue-800">
@@ -327,10 +382,10 @@ export const AllDataStats: React.FC<Props> = ({
           <div>
             <h3 className="flex items-center gap-2 text-base font-black text-slate-900">
               <Layers className="h-4 w-4 text-blue-600" />
-              필터 연동 통계 카드
+              제안 데이터 검증 카드
             </h3>
             <p className="mt-1 text-xs font-semibold text-slate-500">
-              원하는 카드를 누르면 확대 화면에서 자세히 볼 수 있습니다.
+              제안 원본만 기준으로 분류·연도·답변·R&R·품질 상태를 점검합니다.
             </p>
           </div>
         </div>

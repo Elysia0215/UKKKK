@@ -361,12 +361,17 @@ export function IntegratedEvidenceDashboard({
                   통합 정책 근거 분석
                   <HelpTip label="시민 제안·국민 민원·뉴스·연결 정책을 같은 대·중·소분류로 묶어 수요와 정책 공급의 관계를 확인하는 화면입니다." />
                 </h2>
-                <p className="text-xs text-slate-500">제안·민원·뉴스·정책·자치구 통계를 같은 분류체계로 검토합니다.</p>
+                <p className="text-xs text-slate-500">제안 단독 통계가 아니라 국민민원·뉴스·정책 공급까지 묶어 교차 근거를 검토합니다.</p>
               </div>
             </div>
-            <p className="mt-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-[11px] font-bold text-slate-600">
-              현재 범위: {scopeLabel}
-            </p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              <p className="inline-flex rounded-full bg-slate-100 px-3 py-1 text-[11px] font-bold text-slate-600">
+                현재 범위: {scopeLabel}
+              </p>
+              <p className="inline-flex rounded-full bg-violet-50 px-3 py-1 text-[11px] font-bold text-violet-700">
+                제안 분포·필터 검증은 10번 탭에서 확인
+              </p>
+            </div>
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <label className="flex items-center gap-1.5 rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-2 text-xs font-bold text-slate-600">
@@ -407,9 +412,9 @@ export function IntegratedEvidenceDashboard({
         </div>
         <nav className="mt-4 flex flex-wrap gap-1 rounded-xl bg-slate-100 p-1" aria-label="통합 근거 분석 화면">
           {[
-            ['home', '통합 개요', '핵심 건수와 분석 진입 카드를 한 번에 봅니다.'],
+            ['home', '교차근거 개요', '제안·민원·뉴스·정책 공급이 함께 있는지 먼저 봅니다.'],
             ['trends', '기간별 트렌드', '연도별 제안·민원 증감을 비교해 수요가 커진 시점을 찾습니다.'],
-            ['taxonomy', '분류별 근거', '대·중·소분류마다 제안·민원·뉴스가 얼마나 모였는지 비교합니다.'],
+            ['taxonomy', '분류별 교차근거', '대·중·소분류마다 제안·민원·뉴스가 얼마나 모였는지 비교합니다.'],
             ['sources', '출처 원문', '집계 숫자의 근거가 된 제안·민원·뉴스 원문을 직접 확인합니다.'],
             ['districts', '자치구·인프라', '자치구별 제안 수요를 출생아·보육시설 통계와 대조합니다.'],
             ['gaps', '정책 공백', '수요는 있지만 미답변이거나 연결 정책이 부족한 분류를 찾습니다.'],
@@ -529,8 +534,8 @@ export function IntegratedEvidenceDashboard({
           <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div>
-                <h3 className="font-black text-slate-900">통계 기반 통합 분석 및 트렌드</h3>
-                <p className="mt-1 text-xs text-slate-500">기존 자치구 통계 화면처럼 요약 차트를 보고 원하는 분석을 확대합니다.</p>
+                <h3 className="font-black text-slate-900">교차근거 기반 분석 및 트렌드</h3>
+                <p className="mt-1 text-xs text-slate-500">제안만 보지 않고 민원·뉴스·정책 공급이 같은 주제를 뒷받침하는지 확인합니다.</p>
               </div>
               <span className="rounded-full bg-blue-50 px-3 py-1 text-[10px] font-black text-blue-700">
                 {selectedPeriod === '전체' ? '전체 기간' : `${selectedPeriod}년`} · 뉴스는 날짜 필드가 없어 누적 기준
