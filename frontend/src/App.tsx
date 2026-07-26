@@ -55,6 +55,8 @@ import { MissingDataSimulator } from './components/MissingDataSimulator';
 import { ReportExportModal } from './components/ReportExportModal';
 import { OfficeAssistant } from './components/OfficeAssistant';
 import { DeveloperLogCenter } from './components/DeveloperLogCenter';
+import { IntegratedEvidenceDashboard } from './components/IntegratedEvidenceDashboard';
+import { AllDataStats } from './components/AllDataStats';
 import { SEOUL_DISTRICTS_DATA, DistrictData } from './data/seoulData';
 
 import { exportToCsv } from './utils/exportCsv';
@@ -68,6 +70,8 @@ const TAB_LABELS: Record<number, string> = {
   6: '자치구 통계 비교',
   7: '정책 갭 진단',
   8: '결측치 복원 & 로그',
+  9: '통합 정책 근거 분석',
+  10: '전체 데이터 통계',
 };
 
 export default function App() {
@@ -334,6 +338,7 @@ export default function App() {
                 const category = e.target.value || null;
                 setSelectedDept(category);
                 setSelectedCategory(category);
+                setSelectedSubCategory(null);
               }}
               className="bg-transparent text-white font-bold text-xs focus:outline-none cursor-pointer pr-1"
               aria-label="정책 대분류 선택"
@@ -370,6 +375,7 @@ export default function App() {
               setSelectedDept(null);
               setSelectedRrDept(null);
               setSelectedCategory(null);
+              setSelectedSubCategory(null);
             }}
             disabled={!activeDeptGroup && !activeScopedRrDept}
             className="flex items-center gap-1.5 rounded border border-slate-700 bg-slate-800/80 px-2.5 py-1 font-bold text-slate-200 transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:opacity-40"
@@ -446,6 +452,10 @@ export default function App() {
                 info: ['수요·공백·시급성·실행성·근거 5대 진단축', '근거 신뢰도 스코어 필터', '제안·민원·정책·뉴스 근거 대조', '4단계 진단 상태 추적', '정책 승인 패널 연동'] },
               { tab: 8, icon: <Database className="w-4 h-4 text-cyan-400 shrink-0" />, label: '결측치 복원 & 로그', iconColor: 'cyan',
                 info: ['현재 R&R 범위의 구 미상 제안 분석', '본문 지명 키워드 기반 자치구 추정', '복원 결과 선택 → 데이터 반영', '정책 오매칭·피드백 통합 로그', '브라우저 로컬 품질 관리 이력'] },
+              { tab: 9, icon: <Layers className="w-4 h-4 text-violet-300 shrink-0" />, label: '통합 정책 근거 분석', iconColor: 'violet',
+                info: ['대·중·소분류 통합 검토 홈', '제안·민원·뉴스 교차 근거', '자치구 수요·인프라 비교', '정책 공백·R&R 검토', '상단 대분류·팀 필터 연동'] },
+              { tab: 10, icon: <BarChart3 className="w-4 h-4 text-sky-300 shrink-0" />, label: '전체 데이터 통계', iconColor: 'sky',
+                info: ['상단 대분류·R&R 팀 조합 기준 전체 통계', '대분류·중분류·연도·답변 현황', '관련 R&R 팀과 주관부서 분포', '상세 원문 없음 검토 건수', '필터 검증용 통합 현황판'] },
             ].map(item => (
               <div key={item.tab} className="relative group/nav">
                 <button
@@ -996,6 +1006,24 @@ export default function App() {
 
             {activeTab === 8 && (
               <MissingDataSimulator proposals={deptFilteredProposals} onApply={handleImputeApply} />
+            )}
+
+            {activeTab === 9 && (
+              <IntegratedEvidenceDashboard
+                proposals={deptFilteredProposals}
+                selectedCategory={activeDeptGroup}
+                selectedTeam={activeScopedRrDept}
+                onClearTeam={() => setSelectedRrDept(null)}
+              />
+            )}
+
+            {activeTab === 10 && (
+              <AllDataStats
+                proposals={deptFilteredProposals}
+                totalCount={mockProposals.length}
+                selectedCategory={activeDeptGroup}
+                selectedRrDept={activeScopedRrDept}
+              />
             )}
           </motion.div>
         </AnimatePresence>

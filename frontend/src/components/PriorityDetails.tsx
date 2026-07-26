@@ -207,6 +207,7 @@ export const PriorityDetails: React.FC<Props> = ({
       setSelectedFlows(lockedFlow ? [lockedFlow] : ['전체']);
     } else {
       setSelectedCategories(['전체']);
+      setSelectedFlows(['전체']);
     }
     if (initialSubCategory) {
       setSelectedSubCategories([initialSubCategory]);

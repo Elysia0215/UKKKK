@@ -29,6 +29,45 @@ export function formatProposalContent(content: string): string {
 
   let formatted = decodeHTMLEntities(content);
 
+  // PDF/문서 복사 과정에서 단어 단위로 줄바꿈된 원문은 화면에서 문장형으로 복원한다.
+  const lines = formatted.split('\n').map(line => line.trim());
+  const nonEmptyLines = lines.filter(Boolean);
+  const shortLineCount = nonEmptyLines.filter(line => line.length <= 14).length;
+  const symbolOnlyLineCount = nonEmptyLines.filter(line => /^[○□◇※ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ\-ㆍ·,.:()0-9\s]+$/.test(line)).length;
+  const looksHardWrapped = (
+    nonEmptyLines.length >= 20
+    && (shortLineCount / nonEmptyLines.length >= 0.55 || symbolOnlyLineCount >= 5)
+  );
+
+  if (looksHardWrapped) {
+    formatted = nonEmptyLines.reduce((acc, line) => {
+      const isHeading = /^[ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ]+$/.test(line)
+        || /^[□◇○※]/.test(line)
+        || /^(배경|현황 및 문제점|추진방안|추진일정|개선방안|기대효과|문제 상황|보유 현황)$/.test(line);
+      const prev = acc[acc.length - 1] || '';
+      const prevEndsSentence = /[.!?。]|다$|요$|함$/.test(prev);
+      const lineIsPunctuation = /^[,.:;)\]]+$/.test(line);
+
+      if (!acc.length) return [line];
+      if (isHeading) return [...acc, '', line];
+      if (lineIsPunctuation) {
+        acc[acc.length - 1] = `${prev}${line}`;
+        return acc;
+      }
+      if (prevEndsSentence) return [...acc, line];
+
+      acc[acc.length - 1] = `${prev} ${line}`;
+      return acc;
+    }, [] as string[]).join('\n');
+
+    formatted = formatted
+      .replace(/\s+([,.:;!?%）)\]])/g, '$1')
+      .replace(/([（([])\s+/g, '$1')
+      .replace(/([0-9])\s+([.)])\s*/g, '$1$2 ')
+      .replace(/\b([가-힣])\s+([)）])/g, '$1$2')
+      .replace(/[ \t]{2,}/g, ' ');
+  }
+
   // 1. 이중/삼중 공백("  ")을 줄바꿈 \n\n 으로 복원
   formatted = formatted.replace(/ {2,}/g, '\n\n');
 

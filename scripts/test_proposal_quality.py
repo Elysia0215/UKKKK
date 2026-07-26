@@ -16,6 +16,23 @@ from proposal_quality import (
 
 
 class ProposalQualityTests(unittest.TestCase):
+    def test_reproductive_labor_is_not_childcare_supply(self) -> None:
+        self.assertEqual(
+            classify_birth_policy_category(
+                "저출산 고령화 문제에 관한 제안",
+                (
+                    "현금 지급이나 어린이집 확충 같은 임시방편의 한계를 지적한다. "
+                    "아이를 키우는 재생산 노동이 무임금으로 방치되고 "
+                    "경력 공백과 연금 공백이 개인의 손해가 되는 구조를 바꿔야 한다."
+                ),
+            ),
+            (
+                "일·가정 양립·부모 노동",
+                "부모 노동·돌봄 가치",
+                "재생산 노동·경력·연금 공백",
+            ),
+        )
+
     def test_placeholder_detects_title_repeat_and_url(self) -> None:
         self.assertTrue(is_placeholder_content("제목", "제목"))
         self.assertTrue(

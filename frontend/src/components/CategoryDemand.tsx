@@ -13,6 +13,7 @@ import {
   proposalMatchesDepartment,
   proposalMatchesPrimaryDepartment,
 } from '../utils/departments';
+import { formatProposalContent } from '../utils/formatText';
 
 function cleanKoreanWord(word: string): string {
   const suffixes = [
@@ -686,7 +687,7 @@ export const CategoryDemand: React.FC<Props> = ({
                 <div className="space-y-1.5 pt-2">
                   <span className="text-xs font-black text-slate-700 block">📝 시민 제안 본문 내용</span>
                   <div className="p-4 bg-slate-50/80 rounded-xl border border-slate-200 text-xs text-slate-800 leading-relaxed whitespace-pre-line font-normal">
-                    {modalProposal.content}
+                    {formatProposalContent(modalProposal.content)}
                   </div>
                 </div>
 

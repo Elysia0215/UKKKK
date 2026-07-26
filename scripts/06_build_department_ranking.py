@@ -79,6 +79,8 @@ DEPARTMENT_STOP_WORDS = {
     "위한", "대상", "운영", "관리", "업무", "정보", "서비스", "제안",
     "필요", "확대", "개선", "추진", "검토", "경우", "통해", "있는",
     "없는", "않은", "않는", "하지", "되지", "생활", "예산", "평가",
+    "자녀", "아이", "가정", "부모", "출산", "임신", "협력", "사항",
+    "이상", "거주", "양육", "감면", "부담", "기준", "제도",
 }
 DEPARTMENT_CONTEXT_TERMS = {
     "다문화지원팀": MULTICULTURAL_TERMS,
@@ -94,6 +96,10 @@ DEPARTMENT_CONTEXT_TERMS = {
     "돌봄사업팀": [
         "아이돌봄", "초등돌봄", "긴급돌봄", "시간제보육", "어린이집",
         "키움센터", "방과후", "보육교사",
+    ],
+    "결혼문화팀": [
+        "결혼문화", "결혼식", "예식", "웨딩", "만남", "미혼남녀",
+        "청춘만남", "결혼장려", "신혼부부 결혼", "살림비용",
     ],
 }
 
@@ -300,6 +306,13 @@ def apply_department_override(proposal, rankings):
         kw in title
         for kw in MULTICULTURAL_TERMS
     )
+    has_marriage_culture_context = any(
+        kw in title_content
+        for kw in [
+            "결혼문화", "결혼식", "예식", "웨딩", "만남", "미혼남녀",
+            "청춘만남", "결혼장려", "신혼부부 결혼", "살림비용",
+        ]
+    )
     blocked_departments = set()
 
     if not has_disability_context:
@@ -314,6 +327,8 @@ def apply_department_override(proposal, rankings):
     # 협조부서에 포함되지 않도록 명시적인 다문화 문맥을 요구한다.
     if not has_multicultural_context:
         blocked_departments.add("다문화지원팀")
+    if not has_marriage_culture_context:
+        blocked_departments.add("결혼문화팀")
 
     if blocked_departments:
         rankings = [
