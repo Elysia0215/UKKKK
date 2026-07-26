@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import {
   ArrowLeft,
   ArrowRight,
+  ArrowUpDown,
   BarChart3,
   Building2,
   CalendarRange,
@@ -36,6 +37,8 @@ type TaxonomyRecord = {
 };
 
 type ViewKey = 'home' | 'trends' | 'taxonomy' | 'sources' | 'districts' | 'gaps';
+type TaxonomySortKey = 'category' | 'subCategory' | 'microCategory' | 'proposals' | 'civil' | 'news' | 'unanswered' | 'votes';
+type SortDirection = 'asc' | 'desc';
 
 type Props = {
   proposals: PolicyProposal[];
@@ -81,6 +84,10 @@ export function IntegratedEvidenceDashboard({
 }: Props) {
   const [activeView, setActiveView] = useState<ViewKey>('home');
   const [selectedPeriod, setSelectedPeriod] = useState('전체');
+  const [taxonomySort, setTaxonomySort] = useState<{ key: TaxonomySortKey; direction: SortDirection }>({
+    key: 'proposals',
+    direction: 'desc',
+  });
 
   const allowedTaxonomy = useMemo(
     () => new Set(proposals.map(taxonomyKey)),
@@ -187,6 +194,36 @@ export function IntegratedEvidenceDashboard({
     proposals: proposals.filter((item) => item.reg_date?.startsWith(year)).length,
     civil: scopedCivil.filter((item) => item.reg_date?.includes(year)).length,
   })), [proposals, scopedCivil]);
+  const sortedTaxonomyRows = useMemo(() => {
+    const direction = taxonomySort.direction === 'asc' ? 1 : -1;
+    return [...taxonomyRows].sort((a, b) => {
+      const aValue = a[taxonomySort.key];
+      const bValue = b[taxonomySort.key];
+      if (typeof aValue === 'number' && typeof bValue === 'number') {
+        return (aValue - bValue) * direction;
+      }
+      return String(aValue).localeCompare(String(bValue), 'ko') * direction;
+    });
+  }, [taxonomyRows, taxonomySort]);
+  const handleTaxonomySort = (key: TaxonomySortKey) => {
+    setTaxonomySort((prev) => ({
+      key,
+      direction: prev.key === key && prev.direction === 'desc' ? 'asc' : 'desc',
+    }));
+  };
+  const renderSortLabel = (key: TaxonomySortKey, label: string) => (
+    <button
+      type="button"
+      onClick={() => handleTaxonomySort(key)}
+      className="inline-flex items-center gap-1 rounded px-1 py-0.5 transition hover:bg-white/10"
+    >
+      <span>{label}</span>
+      <ArrowUpDown className="h-3 w-3 opacity-70" />
+      {taxonomySort.key === key && (
+        <span className="text-[9px] text-blue-200">{taxonomySort.direction === 'desc' ? '↓' : '↑'}</span>
+      )}
+    </button>
+  );
   const exportDate = new Date().toISOString().slice(0, 10);
 
   const exportCurrentView = () => {
@@ -599,12 +636,19 @@ export function IntegratedEvidenceDashboard({
       {activeView === 'trends' && (
         <div className="space-y-4">
           <div className="rounded-2xl border border-slate-200 bg-white p-5">
-            <div className="flex flex-wrap items-end justify-between gap-3">
+            <div className="space-y-3">
               <div>
                 <h3 className="font-black">기간별 제안·민원 수요 트렌드</h3>
                 <p className="mt-1 text-xs text-slate-500">동일 대·중·소분류 범위에서 연도별 시민 제안과 국민 민원의 변화를 비교합니다.</p>
               </div>
-              <div className="flex gap-3 text-[10px] font-bold"><span className="text-blue-600">● 시민 제안</span><span className="text-violet-600">● 국민 민원</span></div>
+              <div className="flex flex-wrap gap-3 text-[10px] font-bold">
+                <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-0.5 text-blue-600">
+                  <span className="h-2 w-2 rounded-full bg-blue-500" /> 시민 제안
+                </span>
+                <span className="inline-flex items-center gap-1 rounded-full bg-violet-50 px-2 py-0.5 text-violet-600">
+                  <span className="h-2 w-2 rounded-full bg-violet-500" /> 국민 민원
+                </span>
+              </div>
             </div>
             <div className="mt-8 grid h-72 grid-cols-5 items-end gap-5 border-b border-l border-slate-200 px-5">
               {yearlyTrend.map((row) => {
@@ -654,10 +698,19 @@ export function IntegratedEvidenceDashboard({
           <div className="max-h-[620px] overflow-auto">
             <table className="w-full min-w-[900px] text-left text-[11px]">
               <thead className="sticky top-0 bg-slate-900 text-white">
-                <tr>{['대분류', '중분류', '소분류', '제안', '민원', '뉴스', '미답변', '공감'].map((label) => <th key={label} className="px-3 py-2.5">{label}</th>)}</tr>
+                <tr>
+                  <th className="px-3 py-2.5">{renderSortLabel('category', '대분류')}</th>
+                  <th className="px-3 py-2.5">{renderSortLabel('subCategory', '중분류')}</th>
+                  <th className="px-3 py-2.5">{renderSortLabel('microCategory', '소분류')}</th>
+                  <th className="px-3 py-2.5">{renderSortLabel('proposals', '제안')}</th>
+                  <th className="px-3 py-2.5">{renderSortLabel('civil', '민원')}</th>
+                  <th className="px-3 py-2.5">{renderSortLabel('news', '뉴스')}</th>
+                  <th className="px-3 py-2.5">{renderSortLabel('unanswered', '미답변')}</th>
+                  <th className="px-3 py-2.5">{renderSortLabel('votes', '공감')}</th>
+                </tr>
               </thead>
               <tbody>
-                {taxonomyRows.map((row) => (
+                {sortedTaxonomyRows.map((row) => (
                   <tr key={`${row.category}-${row.subCategory}-${row.microCategory}`} className="border-b border-slate-100 hover:bg-blue-50/50">
                     <td className="px-3 py-2.5 font-bold">{row.category}</td>
                     <td className="px-3 py-2.5">{row.subCategory}</td>
