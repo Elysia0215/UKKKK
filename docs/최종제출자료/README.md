@@ -60,18 +60,15 @@
 
 ---
 
-## 💡 12대 머신러닝·딥러닝·NLP·AI 파이프라인 풀 스택 (Full Stack)
+## 💡 코드 검증 7대 핵심 기술 하이브리드 파이프라인 (Code-Verified)
 
-1. **`KR-SBERT`** (`snunlp/KR-SBERT-V40K`): 한국어 RoBERTa 768차원 밀집 문장 임베딩 생성
-2. **`Gemini 1.5 Pro / GPT-4o`**: 57개 군집 요약 및 1클릭 행정 공문 초안 자동 생성
-3. **`K-Means Clustering`**: 768차원 공간 거리 기반 57개 유사 수요 군집 형성
-4. **`HDBSCAN`**: 노이즈 데이터를 스스로 걸러내는 차세대 밀도 기반 최적 군집 파싱
-5. **`Agglomerative Clustering`**: Cosine 유사도 기준 2차 덴드로그램 계층 트리 군집화
-6. **`UMAP`**: 768차원 임베딩 고차원 공간의 저차원 매니폴드 차원 축소
-7. **`BERTopic`**: Transformer + UMAP + HDBSCAN 결합 다차원 잠재 토픽 분해
-8. **`NMF`**: 비정형 행렬 분해 기반 잠재 세부 주제 키워드 분해 추출
-9. **`KoNLPy / Kiwi / Okt`**: 한국어 형태소 파싱 및 불용어 텍스트 정제
-10. **`TF-IDF Vectorizer`**: 단어 희소성 가중치 기반 TOP 30 핵심 키워드 클라우드 추출
-11. **`MCDA & AHP`**: 6축 다기준 평가 및 계층적 가중치 산정 (정책 검토 우선순위)
-12. **`Regex & Guardrail Engine`**: 중의성 단어 가드레일로 97.6% 자치구 결측치 안전 복원
+1. **`KR-SBERT`** (`snunlp/KR-SBERT-V40K-klueNLI-augSTS`): 824건 제안 & 582건 민원 비정형 텍스트의 768차원 문장 밀집 임베딩 및 의미 기반 분류
+2. **`계층적 군집화`** (`Agglomerative Clustering`): 코사인 거리 기준 유사 제안 및 현장 고충을 57개 문제 군집(Cluster)으로 형성
+3. **`코사인 유사도`** (`Cosine Similarity`): 문장 임베딩 벡터와 정책 분류 설명 간의 의미적 유사도/거리 정밀 계산
+4. **`Gemini 2.5 Flash`** (`gemini-2.5-flash`): 1클릭 행정 공문 초안 자동 생성 (담당자 수정·승인 전제)
+5. **`TF-IDF`**: 프런트엔드에서 TF·DF·IDF 직접 산출 기반 TOP 30 핵심 키워드 중요도 파싱
+6. **`MCDA 가중합`**: 수요·공백·시급성·실행가능성·근거 신뢰도 5축 가중합 기반 검토 우선순위 계산
+7. **`Regex · 행정 규칙 엔진`**: `AMBIGUOUS_DISTRICT_KEYWORDS` 자치구 중의어 방지, 정책 계층 분류, 11개 팀 R&R 라우팅
+
+> 📌 **NMF 연계:** 기존 사전 생성된 토픽별 키워드 결과를 뉴스 분류 규칙에 보조 연계 활용함.
 
