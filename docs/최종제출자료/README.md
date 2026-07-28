@@ -1,6 +1,7 @@
 # 🏆 UKKKK (Unified Key-Knowledge Kit for Kid) 프로젝트 최종 제출 자료집
 
-서울시 출산·양육 정책 수요 분석 및 갭 진단 시스템 **UKKKK**의 최종 제출 자료 모음입니다.
+서울시 출산·양육 정책 수요 분석 및 갭 진단 시스템 **UKKKK**의 최종 제출 자료 모음입니다.  
+본 자료집은 **선욱님의 중간/최종 공식 제출 문서(데이터분석정의서 & 대시보드 서비스기획서)**와 **시스템 PRD, 발표자료, 학술 논문 및 실증 보고서**를 100% 통합·정리한 최종 산출물 패키지입니다.
 
 ---
 
@@ -9,11 +10,11 @@
 | 번호 | 구분 | 최종본 파일명 (클릭 가능) | 설명 및 주요 내용 |
 | :---: | :--- | :--- | :--- |
 | **01** | **PRD & 시스템 기획서** | 📄 [01_PRD_시스템기획서_최종본_ver3.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/01_PRD_시스템기획서_최종본_ver3.md) | 서비스 정의, 문제정의, 6대 메인 탭 명세, 8대 R&R 부서 라우팅 설계서 (최종 ver3) |
-| **02** | **서비스 기획서** | 📄 [02_대시보드_서비스기획서_최종본_ver4.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/02_대시보드_서비스기획서_최종본_ver4.md) | 출산·양육 백오피스 대시보드 서비스 상세 기획서 (최종 ver4) |
-| **03** | **데이터 분석 정의서** | 📄 [03_데이터분석정의서_최종본_ver3.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/03_데이터분석정의서_최종본_ver3.md)<br />📝 [03_데이터분석정의서_최종본_ver3.docx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/03_데이터분석정의서_최종본_ver3.docx) | 5원 데이터(제안·민원·정책 DB·뉴스·KOSIS 공공통계) 분석 방법론 및 파이프라인 정의서 |
+| **02** | **대시보드 서비스 기획서 (통합본)** | 📄 [02_대시보드_서비스기획서_최종본_ver4.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/02_대시보드_서비스기획서_최종본_ver4.md)<br />📝 [02_대시보드_서비스기획서_선욱님원본_4조.docx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/02_대시보드_서비스기획서_선욱님원본_4조.docx) | **선욱님의 출산정책 대시보드 기획서 통합본** (상상대로 백오피스 포지셔닝, 6대 탭 상세 명세, 오피스 길잡이 새싹이, 보고서 다운로드 시스템) |
+| **03** | **데이터 분석 정의서 (선욱님 공식)** | 📄 [03_데이터분석정의서_최종본_ver3.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/03_데이터분석정의서_최종본_ver3.md)<br />📝 [03_데이터분석정의서_최종본_ver3.docx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/03_데이터분석정의서_최종본_ver3.docx) | **선욱님의 데이터 분석 정의서 100% 동기화본** (5원 데이터 Multi-API 융합, MCDA 가중치 방법론, 답변 불균형 실증 관측) |
 | **04** | **EDA 데이터 분석 보고서** | 📄 [04_EDA_데이터분석보고서_ver1.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/04_EDA_데이터분석보고서_ver1.md) | 상상대로 824건 제안 및 민원 데이터 탐색적 데이터 분석(EDA) 종합 보고서 |
 | **05** | **발표 대본 & PPT 구성** | 📄 [05_발표대본_PPT구성_최종본_ver15.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/05_발표대본_PPT구성_최종본_ver15.md) | 15분 발표용 슬라이드별 팩트 검증 발표 대본 & PPT 구성안 (ver15 축약본) |
-| **06** | **발표 슬라이드 PPTX** | 📊 [06_발표슬라이드_PPTX_최종본_ver17.pptx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/06_발표슬라이드_PPTX_최종본_ver17.pptx) | 시각화 캡처 및 대본 연동이 완료된 최신 최종 발표 슬라이드 덱 (ver17) |
+| **06** | **발표 슬라이드 PPTX** | 📊 [06_발표슬라이드_PPTX_최종본.pptx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/06_발표슬라이드_PPTX_최종본.pptx) | 시각화 캡처 및 대본 연동이 완료된 최신 최종 발표 슬라이드 덱 |
 | **07** | **개발 일지 종합 보고서** | 📄 [07_개발일지_종합보고서.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/07_개발일지_종합보고서.md) | 프로젝트 전체 구현 이력, 버그 수정 및 백오피스 고도화 종합 일지 |
 | **08** | **제출자료 정합성 점검표** | 📄 [08_제출자료_정합성_점검표.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/08_제출자료_정합성_점검표.md) | 수치·용어·기능 정합성 100% 검증 체크리스트 |
 
