@@ -1,61 +1,69 @@
 # 🏆 UKKKK (Unified Key-Knowledge Kit for Kid) 프로젝트 최종 제출 자료집
 
-서울시 출산·양육 정책 수요 분석 및 갭 진단 시스템 **UKKKK**의 최종 제출 자료 모음입니다.  
-본 자료집은 **선욱님의 공식 데이터분석정의서 & 대시보드 기획서**, **실제 적용된 AI/ML/DL 알고리즘 & KPI 수식 명세**, **시스템 PRD, 발표자료, 학술 논문 및 실증 보고서**를 100% 통합·정리한 최종 산출물 패키지입니다.
+서울시 출산·양육 정책 수요 분석 및 갭 진단 시스템 **UKKKK** 프로젝트의 **최종 6대 산출물 분류 통합 제출 패키지**입니다.
 
 ---
 
-## 📂 최종 제출 산출물 목록 (Final Assets)
+## 📂 6대 제출 분류 및 서브 폴더 구조 (Final 6 Categories)
 
-| 번호 | 구분 | 최종본 파일명 (클릭 가능) | 설명 및 주요 내용 |
-| :---: | :--- | :--- | :--- |
-| **01** | **PRD & 시스템 기획서** | 📄 [01_PRD_시스템기획서_최종본_ver3.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/01_PRD_시스템기획서_최종본_ver3.md) | 서비스 정의, 문제정의, 6대 메인 탭 명세, 8대 R&R 부서 라우팅 설계서 (최종 ver3) |
-| **02** | **대시보드 서비스 기획서 (통합본)** | 📄 [02_대시보드_서비스기획서_최종본_ver4.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/02_대시보드_서비스기획서_최종본_ver4.md)<br />📝 [02_대시보드_서비스기획서_선욱님원본_4조.docx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/02_대시보드_서비스기획서_선욱님원본_4조.docx) | **선욱님의 출산정책 대시보드 기획서 통합본** (상상대로 백오피스 포지셔닝, 6대 탭 상세 명세, 오피스 길잡이 새싹이, 보고서 다운로드 시스템) |
-| **03** | **데이터 분석 정의서 (선욱님 공식)** | 📄 [03_데이터분석정의서_최종본_ver3.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/03_데이터분석정의서_최종본_ver3.md)<br />📝 [03_데이터분석정의서_최종본_ver3.docx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/03_데이터분석정의서_최종본_ver3.docx) | **선욱님의 데이터 분석 정의서 100% 동기화본** (5원 데이터 Multi-API 융합, MCDA 가중치 방법론, 답변 불균형 실증 관측) |
-| **04** | **EDA 데이터 분석 보고서** | 📄 [04_EDA_데이터분석보고서_ver1.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/04_EDA_데이터분석보고서_ver1.md) | 상상대로 824건 제안 및 민원 데이터 탐색적 데이터 분석(EDA) 종합 보고서 |
-| **05** | **발표 대본 & PPT 구성** | 📄 [05_발표대본_PPT구성_최종본_ver15.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/05_발표대본_PPT구성_최종본_ver15.md) | 15분 발표용 슬라이드별 팩트 검증 발표 대본 & PPT 구성안 (ver15 축약본) |
-| **06** | **발표 슬라이드 PPTX** | 📊 [06_발표슬라이드_PPTX_최종본.pptx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/06_발표슬라이드_PPTX_최종본.pptx) | 시각화 캡처 및 대본 연동이 완료된 최신 최종 발표 슬라이드 덱 |
-| **07** | **개발 일지 종합 보고서** | 📄 [07_개발일지_종합보고서.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/07_개발일지_종합보고서.md) | 프로젝트 전체 구현 이력, 버그 수정 및 백오피스 고도화 종합 일지 |
-| **08** | **제출자료 정합성 점검표** | 📄 [08_제출자료_정합성_점검표.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/08_제출자료_정합성_점검표.md) | 수치·용어·기능 정합성 100% 검증 체크리스트 |
-| **09** | **AI/ML 모델 & KPI 세부 명세서** | 🤖 [09_AI_ML_알고리즘_및_KPI_산정기준서.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/09_AI_ML_알고리즘_및_KPI_산정기준서.md) | **실제 쓰인 AI/ML/DL/NLP 모델 명세** (KR-SBERT, TF-IDF, NMF, textMining.ts, Gemini 1.5 Pro) & **KPI 공식 수식** (MCDA 6대 갭 매트릭스) |
-
----
-
-## 🤖 프로젝트에 실제 쓰인 AI/ML/DL 모델 및 KPI 산정 위치 안내
-
-1. **KR-SBERT (`snunlp/KR-SBERT-V40K-klue-subword-aug`)**: 768차원 문장 임베딩 기반 유사 제안 군집화 (0.70~0.80 Cosine Similarity)
-   * 📄 [09_AI_ML_알고리즘_및_KPI_산정기준서.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/09_AI_ML_알고리즘_및_KPI_산정기준서.md)
-   * 📄 [01_PRD_시스템기획서_최종본_ver3.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/01_PRD_시스템기획서_최종본_ver3.md) (`3. 데이터 파이프라인 및 AI/ML 모델 아키텍처`)
-2. **TF-IDF & NMF 토픽 모델링**: 비정형 텍스트 TOP 30 키워드 스코어링 & 57개 주제 추출
-   * 📄 [04_EDA_데이터분석보고서_ver1.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/04_EDA_데이터분석보고서_ver1.md)
-3. **Google Gemini 1.5 Pro / GPT-4o**: 1클릭 행정 공문 초안 자동 생성 (AI Auto-Drafting)
-   * 📄 [05_발표대본_PPT구성_최종본_ver15.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/05_발표대본_PPT구성_최종본_ver15.md) (슬라이드 12)
-4. **MCDA 6대 갭 매트릭스 & KPI 수식**:
-   $$\text{Policy Gap Score} = \frac{\text{Demand}}{\text{Supply} + 1} \times \log(1 + \text{공감수})$$
-   $$\text{Confidence Score} = \sum_{i=1}^{6} w_i \times S_i \quad \text{(기본/박미경2022/KICCE2023 가중치 3종)}$$
-   * 📄 [03_데이터분석정의서_최종본_ver3.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/03_데이터분석정의서_최종본_ver3.md) (`4. KPI 가설`)
+```text
+docs/최종제출자료/
+├── 1_PPT/
+│   ├── 01_UKKKK_발표슬라이드_최종본.pptx
+│   └── 02_발표대본_및_PPT구성_ver15.md
+├── 2_참고논문/
+│   ├── 01_국민신문고_저출산_민원게시글_내용분석_논문.pdf
+│   ├── 02_텍스트마이닝_활용_저출산정책_대중인식비교_논문.pdf
+│   ├── 03_2025년_출생사망통계_잠정속보치_통계청.pdf
+│   ├── 04_데이터구조_및_모델설명.md
+│   └── 05_출산양육_신규데이터_필터링_분석.md
+├── 3_기획안/
+│   ├── 01_서울시_출산정책_대시보드_서비스기획서_선욱님원본_4조.docx
+│   └── 02_서울시_출산정책_대시보드_서비스기획서_최종통합본_ver4.md
+├── 4_PRD/
+│   └── 01_SYSTEM_DESIGN_PRD_최종본_ver3.md
+├── 5_데이터분석정의서_및_보고서(EDA)/
+│   ├── 01_데이터분석정의서_최종본_ver3.docx
+│   ├── 02_데이터분석정의서_최종본_ver3.md
+│   └── 03_EDA_데이터분석보고서_ver1.md
+└── 6_대시보드MVP/
+    └── README_대시보드MVP.md (로컬 실행 주소 http://localhost:3000/ & 소스 구조)
+```
 
 ---
 
-## 📑 학술 참고 논문 & 데이터 모델링 분석서 모음 (`docs/최종제출자료/참고논문_및_학술자료/`)
+## 📋 6대 제출 분류 상세 파일 목록 및 링크
 
-| 번호 | 문서 및 논문 제목 | 파일명 (클릭하여 열기) | 학술적 및 행정적 활용 근거 |
-| :---: | :--- | :--- | :--- |
-| **01** | **국민신문고 저출산 민원 분석** | 📄 [01_국민신문고_저출산_민원게시글_내용분석_논문.pdf](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/참고논문_및_학술자료/01_국민신문고_저출산_민원게시글_내용분석_논문.pdf) | 국민신문고 영유아 정책 민원 텍스트마이닝 및 시급성 분류 근거 논문 |
-| **02** | **텍스트마이닝 저출산 정책 비교** | 📄 [02_텍스트마이닝_활용_저출산정책_대중인식비교_논문.pdf](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/참고논문_및_학술자료/02_텍스트마이닝_활용_저출산정책_대중인식비교_논문.pdf) | 시민 수요와 기존 정책 공급 불일치(Gap) 파악 텍스트마이닝 연구 논문 |
-| **03** | **2025년 출생·사망 통계(잠정)** | 📄 [03_2025년_출생사망통계_잠정속보치_통계청.pdf](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/참고논문_및_학술자료/03_2025년_출생사망통계_잠정속보치_통계청.pdf) | 통계청 KOSIS 서울시 25개 자치구별 합계출산율(0.630명) 공식 통계 속보치 |
-| **04** | **데이터 구조 및 모델 설명서** | 📄 [04_데이터구조_및_모델설명.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/참고논문_및_학술자료/04_데이터구조_및_모델설명.md) | `scripts/테스트용` 데이터 구조, KR-SBERT 임베딩 및 부서 매칭 모델링 가이드 |
-| **05** | **신규데이터 필터링 분석** | 📄 [05_출산양육_신규데이터_필터링_분석.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/참고논문_및_학술자료/05_출산양육_신규데이터_필터링_분석.md) | `scripts/테스트용` 출산·양육 관련 상상대로 제안 필터링 및 오매칭 검증 보고서 |
+### 1️⃣ **PPT (발표 슬라이드 & 발표 대본)**
+* 📊 [01_UKKKK_발표슬라이드_최종본.pptx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/1_PPT/01_UKKKK_발표슬라이드_최종본.pptx) : 15분 데모데이 팩트 시각화 발표 슬라이드 덱
+* 📄 [02_발표대본_및_PPT구성_ver15.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/1_PPT/02_발표대본_및_PPT구성_ver15.md) : 15분 발표용 슬라이드별 팩트 검증 발표 대본 (ver15 축약본)
+
+### 2️⃣ **참고논문 (학술 연구 & 공공통계 PDF & 모델링)**
+* 📄 [01_국민신문고_저출산_민원게시글_내용분석_논문.pdf](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/2_참고논문/01_국민신문고_저출산_민원게시글_내용분석_논문.pdf) : 국민신문고 영유아 정책 민원 텍스트마이닝 및 시급성 분류 근거 논문
+* 📄 [02_텍스트마이닝_활용_저출산정책_대중인식비교_논문.pdf](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/2_참고논문/02_텍스트마이닝_활용_저출산정책_대중인식비교_논문.pdf) : 시민 수요와 기존 정책 공급 불일치(Gap) 파악 텍스트마이닝 연구 논문
+* 📄 [03_2025년_출생사망통계_잠정속보치_통계청.pdf](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/2_참고논문/03_2025년_출생사망통계_잠정속보치_통계청.pdf) : 통계청 KOSIS 서울시 25개 자치구별 합계출산율(0.630명) 공식 통계 속보치
+* 📄 [04_데이터구조_및_모델설명.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/2_참고논문/04_데이터구조_및_모델설명.md) : KR-SBERT 임베딩 및 부서 매칭 모델링 구조 설명서
+* 📄 [05_출산양육_신규데이터_필터링_분석.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/2_참고논문/05_출산양육_신규데이터_필터링_분석.md) : 출산·양육 신규 제안 필터링 및 오매칭 검증 보고서
+
+### 3️⃣ **기획안 (대시보드 서비스기획서)**
+* 📝 [01_서울시_출산정책_대시보드_서비스기획서_선욱님원본_4조.docx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/3_기획안/01_서울시_출산정책_대시보드_서비스기획서_선욱님원본_4조.docx) : 선욱님 공식 출산정책 대시보드 기획서 Word 원본
+* 📄 [02_서울시_출산정책_대시보드_서비스기획서_최종통합본_ver4.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/3_기획안/02_서울시_출산정책_대시보드_서비스기획서_최종통합본_ver4.md) : **선욱님 기획서 + 대시보드 백오피스 종합 통합본**
+
+### 4️⃣ **PRD (System Design PRD)**
+* 📄 [01_SYSTEM_DESIGN_PRD_최종본_ver3.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/4_PRD/01_SYSTEM_DESIGN_PRD_최종본_ver3.md) : 서비스 정의, 6대 탭 아키텍처, 8대 R&R 라우팅, MCDA 6대 갭 매트릭스 수식 명세서 (ver3)
+
+### 5️⃣ **데이터분석 정의서 & 보고서(EDA)**
+* 📝 [01_데이터분석정의서_최종본_ver3.docx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/5_데이터분석정의서_및_보고서(EDA)/01_데이터분석정의서_최종본_ver3.docx) : **선욱님 공식 데이터분석정의서 Word 원본**
+* 📄 [02_데이터분석정의서_최종본_ver3.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/5_데이터분석정의서_및_보고서(EDA)/02_데이터분석정의서_최종본_ver3.md) : **선욱님 공식 데이터분석정의서 100% 동기화 마크다운**
+* 📄 [03_EDA_데이터분석보고서_ver1.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/5_데이터분석정의서_및_보고서(EDA)/03_EDA_데이터분석보고서_ver1.md) : 상상대로 824건 및 민원 데이터 탐색적 데이터 분석(EDA) 종합 보고서
+
+### 6️⃣ **대시보드 MVP (웹 소스코드 & 실행 가이드)**
+* 📄 [README_대시보드MVP.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/6_대시보드MVP/README_대시보드MVP.md) : **로컬 웹 대시보드 실행 주소 (`http://localhost:3000/`)** 및 6대 탭 소스코드 아키텍처 가이드
 
 ---
 
-## 💻 대시보드 MVP 실행 주소 및 소스코드 위치
-
-* **웹 대시보드 MVP 로컬 실행 주소**: `http://localhost:3000/`
-* **프론트엔드 소스코드 루트**: `frontend/src/`
-  * **[1. 수요 현황 종합]**: [DashboardOverview.tsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/DashboardOverview.tsx)
-  * **[2. 시민 목소리 분석]**: [CategoryDemand.tsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/CategoryDemand.tsx)
-  * **[3. 긴급 민원 처리]**: [PriorityDetails.tsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/PriorityDetails.tsx)
-  * **[4. 몽땅정보 현행사업]**: [MongttangList.tsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/MongttangList.tsx)
-  * **[5. 정책 갭 진단]**: [ClusterVolumeMap.tsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/ClusterVolumeMap.tsx)
-  * **[6. 결측치 복원 & 통합 로그]**: [MissingDataSimulator.tsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/MissingDataSimulator.tsx)
+## 💡 주요 구현 기술 요약
+1. **5원 데이터 Multi-API 융합**: 상상대로(824건) + 국민신문고(582건) + 몽땅정보통(323건) + 네이버뉴스(1,145건) + KOSIS 통계.
+2. **KR-SBERT 의미 유사도 군집화 & MCDA 6대 갭 매트릭스**: 768차원 임베딩 ➔ 시민 수요와 기존 정책 공급 불일치 수치화.
+3. **8대 실무 부서 1:1 R&R 라우팅**: 서울시 조직도 기반 1·2·3순위 담당 부서 유연 라우팅.
+4. **1클릭 행정 공문 AI 생성 & Human-in-the-loop 이력 관리**: Gemini 1.5 Pro / GPT-4o 공문 초안 자동 생성 & 통합 로그 뷰어.
