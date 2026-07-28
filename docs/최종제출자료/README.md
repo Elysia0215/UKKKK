@@ -1,7 +1,7 @@
 # 🏆 UKKKK (Unified Key-Knowledge Kit for Kid) 프로젝트 최종 제출 자료집
 
 서울시 출산·양육 정책 수요 분석 및 갭 진단 시스템 **UKKKK**의 최종 제출 자료 모음입니다.  
-본 자료집은 **선욱님의 중간/최종 공식 제출 문서(데이터분석정의서 & 대시보드 서비스기획서)**와 **시스템 PRD, 발표자료, 학술 논문 및 실증 보고서**를 100% 통합·정리한 최종 산출물 패키지입니다.
+본 자료집은 **선욱님의 공식 데이터분석정의서 & 대시보드 기획서**, **실제 적용된 AI/ML/DL 알고리즘 & KPI 수식 명세**, **시스템 PRD, 발표자료, 학술 논문 및 실증 보고서**를 100% 통합·정리한 최종 산출물 패키지입니다.
 
 ---
 
@@ -17,6 +17,23 @@
 | **06** | **발표 슬라이드 PPTX** | 📊 [06_발표슬라이드_PPTX_최종본.pptx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/06_발표슬라이드_PPTX_최종본.pptx) | 시각화 캡처 및 대본 연동이 완료된 최신 최종 발표 슬라이드 덱 |
 | **07** | **개발 일지 종합 보고서** | 📄 [07_개발일지_종합보고서.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/07_개발일지_종합보고서.md) | 프로젝트 전체 구현 이력, 버그 수정 및 백오피스 고도화 종합 일지 |
 | **08** | **제출자료 정합성 점검표** | 📄 [08_제출자료_정합성_점검표.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/08_제출자료_정합성_점검표.md) | 수치·용어·기능 정합성 100% 검증 체크리스트 |
+| **09** | **AI/ML 모델 & KPI 세부 명세서** | 🤖 [09_AI_ML_알고리즘_및_KPI_산정기준서.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/09_AI_ML_알고리즘_및_KPI_산정기준서.md) | **실제 쓰인 AI/ML/DL/NLP 모델 명세** (KR-SBERT, TF-IDF, NMF, textMining.ts, Gemini 1.5 Pro) & **KPI 공식 수식** (MCDA 6대 갭 매트릭스) |
+
+---
+
+## 🤖 프로젝트에 실제 쓰인 AI/ML/DL 모델 및 KPI 산정 위치 안내
+
+1. **KR-SBERT (`snunlp/KR-SBERT-V40K-klue-subword-aug`)**: 768차원 문장 임베딩 기반 유사 제안 군집화 (0.70~0.80 Cosine Similarity)
+   * 📄 [09_AI_ML_알고리즘_및_KPI_산정기준서.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/09_AI_ML_알고리즘_및_KPI_산정기준서.md)
+   * 📄 [01_PRD_시스템기획서_최종본_ver3.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/01_PRD_시스템기획서_최종본_ver3.md) (`3. 데이터 파이프라인 및 AI/ML 모델 아키텍처`)
+2. **TF-IDF & NMF 토픽 모델링**: 비정형 텍스트 TOP 30 키워드 스코어링 & 57개 주제 추출
+   * 📄 [04_EDA_데이터분석보고서_ver1.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/04_EDA_데이터분석보고서_ver1.md)
+3. **Google Gemini 1.5 Pro / GPT-4o**: 1클릭 행정 공문 초안 자동 생성 (AI Auto-Drafting)
+   * 📄 [05_발표대본_PPT구성_최종본_ver15.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/05_발표대본_PPT구성_최종본_ver15.md) (슬라이드 12)
+4. **MCDA 6대 갭 매트릭스 & KPI 수식**:
+   $$\text{Policy Gap Score} = \frac{\text{Demand}}{\text{Supply} + 1} \times \log(1 + \text{공감수})$$
+   $$\text{Confidence Score} = \sum_{i=1}^{6} w_i \times S_i \quad \text{(기본/박미경2022/KICCE2023 가중치 3종)}$$
+   * 📄 [03_데이터분석정의서_최종본_ver3.md](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/docs/최종제출자료/03_데이터분석정의서_최종본_ver3.md) (`4. KPI 가설`)
 
 ---
 
@@ -42,11 +59,3 @@
   * **[4. 몽땅정보 현행사업]**: [MongttangList.tsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/MongttangList.tsx)
   * **[5. 정책 갭 진단]**: [ClusterVolumeMap.tsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/ClusterVolumeMap.tsx)
   * **[6. 결측치 복원 & 통합 로그]**: [MissingDataSimulator.tsx](file:///Users/parkcy/Desktop/sesac_pjt/UKKKK/frontend/src/components/MissingDataSimulator.tsx)
-
----
-
-## 💡 주요 기술적 특징
-1. **5원 데이터 융합 파이프라인**: 상상대로 제안(824건) + 국민신문고 민원(582건) + 몽땅정보통 정책DB(323건) + 네이버 뉴스(1,145건) + KOSIS 자치구 통계.
-2. **KR-SBERT 기반 유사 제안 군집화 & 6대 갭 매트릭스**: 시민 수요와 기존 정책 공급 불일치를 다기준 의사결정(MCDA)으로 수치화.
-3. **서울시 8대 실무 부서 1:1 라우팅 매핑**: 조직도 기반 1·2·3순위 R&R 매칭.
-4. **1클릭 행정 공문 AI 생성 & Human-in-the-loop 이력 관리**: 담당자 수정 승인 보장 및 통합 로그 기록.
